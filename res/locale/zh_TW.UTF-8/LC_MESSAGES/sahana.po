@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-04-08 20:19+0800\n"
-"PO-Revision-Date: 2010-04-08 20:24+0800\n"
+"PO-Revision-Date: 2010-04-08 20:49+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -283,46 +283,41 @@ msgid "Volunteer has been successfully assigned"
 msgstr "已經成功地指派志工"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:10
-#, fuzzy
 msgid "Personal Information"
-msgstr "輸入資料"
+msgstr "個人資訊"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:13
-#, fuzzy
 msgid "Any ID Number:"
-msgstr "銀行帳號"
+msgstr "任意編號："
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:14
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:18
-#, fuzzy
 msgid "Name:"
-msgstr "名稱"
+msgstr "名稱："
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:15
-#, fuzzy
 msgid "Loose Name Matching"
-msgstr "[銀行存款]查詢存款"
+msgstr "寬鬆的名稱查詢"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:15
 msgid "(May return many unrelated results)"
-msgstr ""
+msgstr "(也許傳回了許多不相關的結果)"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:18
 msgid "Skills"
-msgstr ""
+msgstr "技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
 msgid "Require ALL skills below"
-msgstr ""
+msgstr "需要下面所有技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
 msgid "Require ANY skills below"
-msgstr ""
+msgstr "需要下面任意技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
-#, fuzzy
 msgid "Skills Matching:"
-msgstr "更新配對"
+msgstr "查詢技能："
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:24
 #: mod/or/search.inc:49
@@ -5995,9 +5990,8 @@ msgid "Field was successfully deleted."
 msgstr "已成功刪除欄位。"
 
 #: mod/mpr/admin.inc:286
-#, fuzzy
 msgid " was successfully added."
-msgstr "稅已新增"
+msgstr "已經加入"
 
 #: mod/mpr/admin.inc:315
 msgid "Please  enter the code"
@@ -8104,9 +8098,8 @@ msgid "Search Shelter by Address"
 msgstr "依地址搜尋庇護所"
 
 #: mod/cr/search.inc:204
-#, fuzzy
 msgid " Address "
-msgstr "地址 1"
+msgstr "地址"
 
 #: mod/cr/edit.inc:28
 msgid "Update Existing Shelter"
@@ -9630,7 +9623,6 @@ msgid "Description should not be empty."
 msgstr "說明不應該是空白的。"
 
 #: mod/dvr/admin.inc:73
-#, fuzzy
 msgid " changed to "
 msgstr "更改到"
 
@@ -10459,19 +10451,16 @@ msgid "Please Enter a valid Quantity"
 msgstr "請輸入有效的數量"
 
 #: mod/rms/lib_rms.inc:485
-#, fuzzy
 msgid "Do you really want to delete this request?"
-msgstr "您確定要刪除？"
+msgstr "確定要刪除這個請求？"
 
 #: mod/rms/lib_rms.inc:511
-#, fuzzy
 msgid "Request deleted."
-msgstr "分公司已刪除"
+msgstr "請求已刪除"
 
 #: mod/rms/lib_rms.inc:515
-#, fuzzy
 msgid "Action cancelled."
-msgstr "行動受權"
+msgstr "行動取消了"
 
 #: mod/rms/lib_rms.inc:692
 #: inc/lib_misc.inc:23
@@ -10781,9 +10770,8 @@ msgid "Customized Messaging"
 msgstr "客製化訊息"
 
 #: mod/msg/class_cap_area.inc:48
-#, fuzzy
 msgid "The first and last pairs of coordinates MUST be the same."
-msgstr "The first and last pairs of coordinates MUST be the "
+msgstr "開始與結束座標組合必須一樣"
 
 #: mod/msg/class_cap_area.inc:58
 msgid "areaDesc is a required value"
@@ -11050,33 +11038,28 @@ msgid "When the Scope = Private, An Address is needed"
 msgstr "當 範圍 = 私人，就需要一個地址"
 
 #: mod/msg/errors.inc:18
-#, fuzzy
 msgid "Group Name is essential. Please Complete and Submit again"
-msgstr "需要填寫日期，請填寫完成再重新送出"
+msgstr "群組名稱是必須的，請填入後再次送出"
 
 #: mod/msg/errors.inc:19
-#, fuzzy
 msgid "E-mails or mobile numbers are is essential. Please Complete and Submit again"
-msgstr "需要授權人。請填寫完成再重新送出"
+msgstr "信箱與手機是必填的，請填入後再次送出"
 
 #: mod/msg/errors.inc:20
-#, fuzzy
 msgid "is not a numeric value"
-msgstr "輸入的總額不是數值"
+msgstr "輸入的不是數值"
 
 #: mod/msg/errors.inc:21
-#, fuzzy
 msgid "E-mail address is of the wrong format"
 msgstr "電子郵件位址的格式錯誤"
 
 #: mod/msg/errors.inc:22
-#, fuzzy
 msgid "Message is essential. Please Complete and Submit again"
-msgstr "需要填寫日期，請填寫完成再重新送出"
+msgstr "訊息是必須的，請填入後再次送出"
 
 #: mod/msg/errors.inc:23
 msgid "Kannel has not been started. Please start kannel"
-msgstr ""
+msgstr "Kannel 還沒開始，請開始 kannel"
 
 #: mod/msg/handler_cap_view.inc:25
 msgid "CAP Message Viewer"
@@ -11359,237 +11342,203 @@ msgstr "增加區域"
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:2
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:2
 msgid "The Volunteer Management module keeps track of projects and volunteers."
-msgstr ""
+msgstr "志工管理模組用來追蹤專案與志工"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:3
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:3
-#, fuzzy
 msgid "Volunteer Portal"
-msgstr "志工"
+msgstr "志工站"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:5
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:5
-#, fuzzy
 msgid "My information page"
-msgstr "頁分隔於(之後)"
+msgstr "我的資訊"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:5
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:5
 msgid "Personal information and time logging."
-msgstr ""
+msgstr "個人資訊與時間記錄"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:7
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:7
-#, fuzzy
 msgid "Manage volunteer assignments"
-msgstr "志工管理"
+msgstr "管理志工分派"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:10
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:10
 msgid "View all volunteers assigned to projects"
-msgstr ""
+msgstr "檢視所有已分派專案的志工"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:13
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:13
-#, fuzzy
 msgid "View All Volunteers"
-msgstr "檢視所有採購訂單"
+msgstr "檢視所有志工"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:13
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:13
-#, fuzzy
 msgid "View all registered volunteers"
-msgstr "檢視所有採購訂單"
+msgstr "檢視所有註冊的志工"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:16
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:16
-#, fuzzy
 msgid "Search for a volunteer"
-msgstr "搜尋產品"
+msgstr "搜尋志工"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:19
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:19
-#, fuzzy
 msgid "Add New Project"
-msgstr "新增客戶"
+msgstr "新增專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:19
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:19
-#, fuzzy
 msgid "Start a new project"
-msgstr "新地區編號"
+msgstr "開始一個新專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:22
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:22
 msgid "View all projects you are currently assigned to"
-msgstr ""
+msgstr "檢視所有參與的專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:25
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:25
-#, fuzzy
 msgid "View All Projects"
-msgstr "檢視所有採購訂單"
+msgstr "檢視所有專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:25
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:25
 msgid "View all projects being tracked"
-msgstr ""
+msgstr "檢視所有被追蹤的專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:28
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:28
-#, fuzzy
 msgid "Generate report"
-msgstr "問題報表"
+msgstr "產生報表"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:28
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:28
 msgid "Generate customized report on volunteers and projects"
-msgstr ""
+msgstr "產生志工與專案的自訂報表"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:31
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:31
-#, fuzzy
 msgid "Register to VM"
-msgstr "返回目錄"
+msgstr "註冊到志工管理"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:31
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:31
 msgid "Register yourself in Volunteer Management module"
-msgstr ""
+msgstr "在志工管理模組註冊你自己"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:35
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:35
-#, fuzzy
 msgid "Send messages"
-msgstr "發出到"
+msgstr "發送訊息"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:37
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:37
 msgid "Send messages to other users"
-msgstr ""
+msgstr "發送訊息給其他使用者"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:43
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:43
-#, fuzzy
 msgid "Current projects"
-msgstr "現在的或是停售"
+msgstr "目前專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:46
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:46
-#, fuzzy
 msgid "You are not assigned to any project."
-msgstr "您已被分派到"
+msgstr "你目前沒有被指派任何專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:48
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:48
-#, fuzzy
 msgid "Click here"
-msgstr "按這兒"
+msgstr "點選這裡"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:48
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:48
-#, fuzzy
 msgid "to view your projects"
-msgstr "檢視BOM成本"
+msgstr "檢視你的專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:54
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:54
-#, fuzzy
 msgid "Manage volunteer assignment"
-msgstr "志工管理"
+msgstr "管理志工分派"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:55
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:55
 msgid "Start and view projects"
-msgstr ""
+msgstr "開始與檢視專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:56
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:56
-#, fuzzy
 msgid "Search volunteers"
-msgstr "現在搜尋"
+msgstr "搜尋志工"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:57
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:57
-#, fuzzy
 msgid "Send and receive messages"
-msgstr "接收採購到和賣自"
+msgstr "發送與接收訊息"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:60
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:60
-#, fuzzy
 msgid "Last Modified"
-msgstr "最新列印"
+msgstr "最後更新"
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:47
-#, fuzzy
 msgid "Date of Birth:"
-msgstr "派送日期"
+msgstr "生日："
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:54
-#, fuzzy
 msgid "Contact Info"
-msgstr "聯繫電子信箱"
+msgstr "連絡資訊"
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:70
-#, fuzzy
 msgid "Work Begin:"
-msgstr "工作中心"
+msgstr "工作開始："
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:74
-#, fuzzy
 msgid "Work End:"
-msgstr "結束日期"
+msgstr "工作結束："
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:79
-#, fuzzy
 msgid "Work Hour Begin:"
-msgstr "每小時經常費用"
+msgstr "工作開始時間："
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:85
-#, fuzzy
 msgid "Work Hour End:"
-msgstr "每小時經常費用"
+msgstr "工作結束時間："
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:92
-#, fuzzy
 msgid "Work Details"
-msgstr "詳細資料"
+msgstr "工作細節"
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:96
-#, fuzzy
 msgid "Occupation:"
-msgstr "職業"
+msgstr "職業："
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:102
-#, fuzzy
 msgid "Affiliation:"
-msgstr "最佳化："
+msgstr "會籍："
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:111
-#, fuzzy
 msgid "Project"
 msgstr "專案"
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:112
-#, fuzzy
 msgid "Position"
 msgstr "職稱"
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:113
-#, fuzzy
 msgid "Log Time"
-msgstr "交貨需時"
+msgstr "記錄時間"
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:127
-#, fuzzy
 msgid "Log time"
-msgstr "交貨需時"
+msgstr "記錄時間"
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:151
-#, fuzzy
 msgid "Special Needs:"
-msgstr "特殊訂單"
+msgstr "特殊需求："
 
 #: inst/setup.inc:126
 msgid "Sahana Web Setup - Step 1"
