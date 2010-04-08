@@ -202,7 +202,7 @@ function shn_main_web_installer() {
         shn_stream_close();
     } else {
         // include the sysconfig template for basic conf dependancies
-        require_once ($APPROOT . 'conf/sysconf.inc.tpl');
+        require_once ($APPROOT . 'conf/sysconf.inc.tpl.php');
         // launch the web setup wizard
         require ($APPROOT . 'inst/setup.inc');
     }

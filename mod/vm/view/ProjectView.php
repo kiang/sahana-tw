@@ -53,7 +53,7 @@ class ProjectView extends View {
         $this->engine->assign('add_pos_auth', $ac->isAuthorized(false, $ac->buildURLParams('project', 'add_position', array('proj_id' => $p->proj_id))));
         $this->engine->assign('delete_pos_auth', $ac->isAuthorized(false, $ac->buildURLParams('project', 'remove_position', array('proj_id' => $p->proj_id))));
         $this->engine->assign('assign_auth', $ac->isAuthorized(false, $ac->buildURLParams('project', 'display_assign', array('proj_id' => $p->proj_id))));
-        $this->engine->display('project/display.tpl');
+        $this->engine->display('project/display.tpl.php');
         if ($showVolunteersAssigned && $numVolunteers > 0) {
             $extra_opts = array('showPictures' => true, 'showLocation' => true, 'showRemove' => true, 'modifyProjId' => $p->proj_id, 'showPositions' => true, 'showHours' => true);
             $vView = new VolunteerView();
@@ -72,7 +72,7 @@ class ProjectView extends View {
     function listProjects($p_uuid = null) {
         $p = new Project();
         $this->engine->assign('projects', $p->getProjects($p_uuid, false, false, true));
-        $this->engine->display('project/list.tpl');
+        $this->engine->display('project/list.tpl.php');
     }
     /**
      * Add a new Project
@@ -93,7 +93,7 @@ class ProjectView extends View {
         $hidden = array();
         if ($p != null) $hidden["proj_id"] = $p->proj_id;
         $this->engine->assign('hidden', $hidden);
-        $this->engine->display('project/add.tpl');
+        $this->engine->display('project/add.tpl.php');
     }
     /**
      * Displays a form for assigning volunteers to a project
@@ -102,7 +102,7 @@ class ProjectView extends View {
         $p = new Project($proj_id);
         $this->engine->assign('proj_id', $proj_id);
         $this->displayProject($p, false);
-        $this->engine->display('volunteer/assign_header.tpl');
+        $this->engine->display('volunteer/assign_header.tpl.php');
         $this->engine->assign('proj_name', $p->info['name']);
         $getvars = array_merge($_REQUEST, array('act' => 'volunteer', 'vm_action' => 'process_search', 'assigning' => true, 'proj_id' => $p->proj_id, 'positions' => $positions));
         $vc = new VolunteerController();
@@ -118,7 +118,7 @@ class ProjectView extends View {
         $p = new Project($proj_id);
         $this->engine->assign('proj_id', $proj_id);
         $this->engine->assign('name', $p->info['name']);
-        $this->engine->display('project/confirm_delete.tpl');
+        $this->engine->display('project/confirm_delete.tpl.php');
     }
     /**
      * Displays a form for selecting a project to assign volunteers to
@@ -129,7 +129,7 @@ class ProjectView extends View {
         $projects = array();
         foreach($project_list as $key => $info) $projects[$key] = $info['name'];
         $this->engine->assign('projects', $projects);
-        $this->engine->display('project/assign.tpl');
+        $this->engine->display('project/assign.tpl.php');
     }
     /*
     *Adds a new Position to a project
@@ -147,7 +147,7 @@ class ProjectView extends View {
             $this->engine->assign('payrate', $p->payrate);
         }
         $this->engine->assign('position_types', $dao->getSkillList());
-        $this->engine->display('project/position.tpl');
+        $this->engine->display('project/position.tpl.php');
     }
 }
 ?>

@@ -575,7 +575,7 @@ function shn_setup_config_update($tmp_configfile) {
     $opt_test = !(isset($_POST['use_ex_db']) && ($_POST['use_ex_db'] == '' || strlen(trim($_POST['use_ex_db'])) == 0));
     //var_dump(($opt_test)?$_POST['ex_dbuser']:$_POST['shndbuser']);
     $modify = array('/\'theme\'/' => '$conf[\'theme\'] = \'' . $_POST['theme'] . '\';', '/\'db_host\'/' => '$conf[\'db_host\'] = \'' . $_POST['dbhost'] . '\';', '/\'db_name\'/' => '$conf[\'db_name\'] = \'' . (($opt_test) ? $_POST['ex_dbname'] : $_POST['dbname']) . '\';', '/\'base_uuid\'/' => '$conf[\'base_uuid\'] = \'' . $_POST['base_uuid'] . '\';', '/\'root_name\'/' => '$conf[\'root_name\'] = \'' . $_POST['root_name'] . '\';', '/\'root_tel\'/' => '$conf[\'root_tel\'] = \'' . $_POST['root_tel'] . '\';', '/\'root_email\'/' => '$conf[\'root_email\'] = \'' . $_POST['root_email'] . '\';', '/\'db_user\'/' => '$conf[\'db_user\'] = \'' . (($opt_test) ? $_POST['ex_dbuser'] : $_POST['shndbuser']) . '\';', '/\'db_pass\'/' => '$conf[\'db_pass\'] = \'' . (($opt_test) ? $_POST['ex_dbpass'] : $_POST['shndbpass']) . '\';', '/\'storage_engine\'/' => '$conf[\'storage_engine\'] = \'' . $_POST['engine_type'] . '\';');
-    if (@shn_config_file_update($modify, $global['approot'] . 'conf/sysconf.inc.tpl', $tmp_configfile)) {
+    if (@shn_config_file_update($modify, $global['approot'] . 'conf/sysconf.inc.tpl.php', $tmp_configfile)) {
         return true;
     } else {
         add_error(_('Could not write to file $tmp_configfile. Try another location'));

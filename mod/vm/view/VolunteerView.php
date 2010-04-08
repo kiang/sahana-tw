@@ -89,7 +89,7 @@ class VolunteerView extends View {
             if ($ac->dataAccessIsAuthorized($ac->access['volunteer']['display_single']['tables'], false) || $_REQUEST['p_uuid'] == $_SESSION['user_id']) $this->engine->assign('view_auth', VM_ACCESS_ALL);
             else if ($dao->isSiteManager($_SESSION['user_id'])) $this->engine->assign('view_auth', VM_ACCESS_PARTIAL);
             else $this->engine->assign('view_auth', VM_ACCESS_MINIMAL);
-            $this->engine->display('volunteer/display.tpl');
+            $this->engine->display('volunteer/display.tpl.php');
         }
     }
     /**
@@ -168,7 +168,7 @@ class VolunteerView extends View {
         if ($ac->dataAccessIsAuthorized($ac->access['volunteer']['display_single']['tables'], false)) $this->engine->assign('view_auth', VM_ACCESS_ALL);
         else if ($dao->isSiteManager($_SESSION['user_id'])) $this->engine->assign('view_auth', VM_ACCESS_PARTIAL);
         else $this->engine->assign('view_auth', VM_ACCESS_MINIMAL);
-        $this->engine->display('volunteer/list.tpl');
+        $this->engine->display('volunteer/list.tpl.php');
     }
     /**
      * Displays the form to either add a new volunteer or edit an existing one.
@@ -238,7 +238,7 @@ class VolunteerView extends View {
         //Handle whether or not the user must register a Sahana account
         $this->engine->assign('reg_account', !$_SESSION['logged_in']);
         //Display the template
-        $this->engine->display('volunteer/add.tpl');
+        $this->engine->display('volunteer/add.tpl.php');
     }
     /**
      * Tells the user to login (after registering as a volunteer)
@@ -246,7 +246,7 @@ class VolunteerView extends View {
      * @return void
      */
     function displayPleaseLogin() {
-        $this->engine->display('volunteer/please_login.tpl');
+        $this->engine->display('volunteer/please_login.tpl.php');
     }
     /**
      * Displays a confirmation page asking if you really want to delete the volunteer.
@@ -259,7 +259,7 @@ class VolunteerView extends View {
         $name = $v->info['full_name'];
         $this->engine->assign('p_uuid', $p_uuid);
         $this->engine->assign('name', $name);
-        $this->engine->display('volunteer/confirm_delete.tpl');
+        $this->engine->display('volunteer/confirm_delete.tpl.php');
     }
     /**
      * Displays the home screen for a volunteer
@@ -283,7 +283,7 @@ class VolunteerView extends View {
         $this->engine->assign('projects', $this->model->proj_id);
         $this->engine->assign('p_uuid', $this->model->p_uuid);
         $this->engine->assign('messages', $this->model->info['messages']);
-        $this->engine->display('volunteer/portal.tpl');
+        $this->engine->display('volunteer/portal.tpl.php');
     }
     /**
      * Displays a form for changing user's password.
@@ -294,7 +294,7 @@ class VolunteerView extends View {
      */
     function changePass($p_uuid) {
         $this->engine->assign('p_uuid', $p_uuid);
-        $this->engine->display('volunteer/change_pass.tpl');
+        $this->engine->display('volunteer/change_pass.tpl.php');
     }
     /**
      * Displays a volunteer's inbox or outbox
@@ -328,7 +328,7 @@ class VolunteerView extends View {
         $this->engine->assign('messages', $messages);
         $this->engine->assign('box', $box != 'outbox');
         $this->engine->assign('box_name', ($box != 'outbox') ? 'inbox' : $box);
-        $this->engine->display('message/mailbox.tpl');
+        $this->engine->display('message/mailbox.tpl.php');
         $this->showPagingNavigation("index.php?mod=vm&amp;act=volunteer&amp;vm_action=display_mailbox&amp;box=$box");
     }
     /**
@@ -365,7 +365,7 @@ class VolunteerView extends View {
         }
         $this->engine->assign('box', $box != 'outbox');
         $this->engine->assign('message', $message);
-        $this->engine->display('message/message.tpl');
+        $this->engine->display('message/message.tpl.php');
     }
     /**
      * Displays a form to send a message
@@ -378,7 +378,7 @@ class VolunteerView extends View {
         global $dao;
         $this->engine->assign('to_list', $dao->getVolunteerNames());
         $this->engine->assign('to', $to);
-        $this->engine->display('message/send_message.tpl');
+        $this->engine->display('message/send_message.tpl.php');
     }
     /**
      * Opens the search form. Calling this function early on in the page is important to
@@ -404,7 +404,7 @@ class VolunteerView extends View {
         }
         $this->engine->assign('skills', $dao->getSelectSkillsTree(null, null, $skills));
         $this->engine->assign('assigning', $assigning);
-        $this->engine->display('volunteer/search.tpl');
+        $this->engine->display('volunteer/search.tpl.php');
     }
     /**
      * Displays the search results for a particular volunteer search
@@ -427,14 +427,14 @@ class VolunteerView extends View {
         $this->engine->assign('projects', $projects);
         $this->engine->assign('orgs', $orgs);
         $this->engine->assign('vols', $vols);
-        $this->engine->display('volunteer/custom_report_select.tpl');
+        $this->engine->display('volunteer/custom_report_select.tpl.php');
     }
     /**
      * Displays a form to filter report information intended for only site managers
      */
     function displayCustomReportFilterForMgrs($projects) {
         $this->engine->assign('projects', $projects);
-        $this->engine->display('volunteer/custom_report_select_for_mgrs.tpl');
+        $this->engine->display('volunteer/custom_report_select_for_mgrs.tpl.php');
     }
     /**
      * Displays a volunteer report
@@ -453,7 +453,7 @@ class VolunteerView extends View {
         $this->engine->assign('reportProjName', isset($extra_opts['reportProjName']) ? $extra_opts['reportProjName'] : null);
         $this->engine->assign('reportOrgName', isset($extra_opts['reportOrgName']) ? $extra_opts['reportOrgName'] : null);
         $this->engine->assign('reportingSpecificVolunteers', isset($extra_opts['reportingSpecificVolunteers']) ? $extra_opts['reportingSpecificVolunteers'] : false);
-        $this->engine->display('volunteer/report.tpl');
+        $this->engine->display('volunteer/report.tpl.php');
     }
     /**
      * Displays a form to handle adding/removing skills
@@ -461,7 +461,7 @@ class VolunteerView extends View {
     function displayModifySkills() {
         $v = new Volunteer();
         $this->engine->assign('skills', $v->getSkillList());
-        $this->engine->display('volunteer/modify_skills.tpl');
+        $this->engine->display('volunteer/modify_skills.tpl.php');
     }
     /**
      * Displays a form to approve site managers (later credential approval should be added)
@@ -469,7 +469,7 @@ class VolunteerView extends View {
     function displayApprovalForm($vols, $mgrs) {
         $this->engine->assign('managers', $mgrs);
         $this->engine->assign('volunteers', $vols);
-        $this->engine->display('volunteer/approve.tpl');
+        $this->engine->display('volunteer/approve.tpl.php');
     }
     function showLogTime($p_uuid, $pos_id) {
         if (!empty($p_uuid) && !empty($pos_id)) {
@@ -483,7 +483,7 @@ class VolunteerView extends View {
             $this->engine->assign('nowDate', date('Y/m/d'));
             $this->engine->assign('startTime', date('g:00 a'));
             $this->engine->assign('nowTime', date('g:i a'));
-            $this->engine->display('volunteer/log_time.tpl');
+            $this->engine->display('volunteer/log_time.tpl.php');
         } else {
             echo "Invalid user or position.";
         }
@@ -491,11 +491,11 @@ class VolunteerView extends View {
     function displayReviewHours($proj_id) {
         if (!empty($proj_id)) {
             $this->engine->assign('proj_id', $proj_id);
-            $this->engine->display('volunteer/reviewListHours.tpl');
+            $this->engine->display('volunteer/reviewListHours.tpl.php');
         }
     }
     function displaySelectReviewHours() {
-        $this->engine->display('volunteer/showListHours.tpl');
+        $this->engine->display('volunteer/showListHours.tpl.php');
     }
 }
 ?>

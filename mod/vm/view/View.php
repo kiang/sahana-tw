@@ -100,7 +100,7 @@ class View {
         $this->engine->assign('rpp', $rpp);
         $this->engine->assign('start', $start);
         $this->engine->assign('end', $end);
-        $this->engine->display('volunteer/paging_navigation.tpl');
+        $this->engine->display('volunteer/paging_navigation.tpl.php');
     }
 }
 ?>

@@ -35,7 +35,7 @@ class AdminView extends View {
         $this->engine->assign('search_registry', $ac->isAuthorized(false, array('act' => 'adm_default', 'vm_action' => 'process_update_phonetics')));
         $this->engine->assign('clear_cache', $ac->isAuthorized(false, array('act' => 'adm_default', 'vm_action' => 'process_clear_cache')));
         $this->engine->assign('audit_acl', $ac->isAuthorized(false, array('act' => 'adm_default', 'vm_action' => 'process_audit_acl')));
-        $this->engine->display('admin/hmenu.tpl');
+        $this->engine->display('admin/hmenu.tpl.php');
     }
     /**
      * Displays a form for choosing an access request situation to modify access to
@@ -50,7 +50,7 @@ class AdminView extends View {
         asort($partial_descriptions);
         foreach($partial_descriptions as $key => $value) $sorted_requests[$key] = $requests[$key];
         $this->engine->assign('requests', $sorted_requests);
-        $this->engine->display('admin/acl.tpl');
+        $this->engine->display('admin/acl.tpl.php');
     }
     /**
      * Displays a form for handling changes to ACL specific to the VM module
@@ -62,7 +62,7 @@ class AdminView extends View {
         $this->engine->assign('request_constraints', $req_constraints);
         $this->engine->assign('possible_constraints', $pos_constraints);
         $this->engine->assign('tables', $tables);
-        $this->engine->display('admin/acl_modify.tpl');
+        $this->engine->display('admin/acl_modify.tpl.php');
     }
     /**
      * Displays the default admin page, which simply contains instructions on what each administrative function does
@@ -73,7 +73,7 @@ class AdminView extends View {
         $this->engine->assign('search_registry', $ac->isAuthorized(false, array('act' => 'adm_default', 'vm_action' => 'process_update_phonetics')));
         $this->engine->assign('clear_cache', $ac->isAuthorized(false, array('act' => 'adm_default', 'vm_action' => 'process_clear_cache')));
         $this->engine->assign('audit_acl', $ac->isAuthorized(false, array('act' => 'adm_default', 'vm_action' => 'process_audit_acl')));
-        $this->engine->display('admin/default.tpl');
+        $this->engine->display('admin/default.tpl.php');
     }
     /**
      * Displays the result from auditing the ACL system
@@ -102,7 +102,7 @@ class AdminView extends View {
         $this->engine->assign('extra_requests', $extra_requests);
         $this->engine->assign('unclassified_tables', $unclassified_tables);
         $this->engine->assign('classification_levels', $classification_levels);
-        $this->engine->display('admin/acl_audit.tpl');
+        $this->engine->display('admin/acl_audit.tpl.php');
     }
 }
 ?>
