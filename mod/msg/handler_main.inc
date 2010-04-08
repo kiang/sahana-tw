@@ -19,7 +19,9 @@
 
 
 global $global;
-print $global['msg_jabber']->$connected;
+if(!empty($global['msg_jabber'])) {
+    print $global['msg_jabber']->$connected;
+}
 ?>
 
 
@@ -27,7 +29,7 @@ print $global['msg_jabber']->$connected;
 <div id="home">
     <div>
     <p><?= (_("Messaging module is the main communicative root of the sahana system. It is used to send sms,E-mail alerts and/or messages to various groups and individuals before, after and during a disaster. It also provides a convenient way of grouping mobile phone numbers and E-mail addresses.")) ?></p></div>
-    <br></br>
+    <br />
     <div><h3><b><em><?= (_("Features Include:")) ?></em></b></h3></div>
       
     <ul>

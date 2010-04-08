@@ -137,7 +137,7 @@ function _shn_lc_issetsession()
  */
 function _shn_lc_lang_list($mode=1)
 {
-	if ($_REQUEST['act'] == 'default' || $_REQUEST['act'] == '' || $_REQUEST['act'] == 'lc_set')
+        if (!isset($_REQUEST['act']) || ($_REQUEST['act'] == 'default' || $_REQUEST['act'] == '' || $_REQUEST['act'] == 'lc_set'))
 	{
 		$lc_list = _shn_get_lang_list();
 

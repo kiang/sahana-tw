@@ -23,18 +23,18 @@ $error  = false;
  * List of tables that should exist
  */
 $tables = array (
-                    rms_request,
-                    rms_req_item,
-                    rms_priority,
-                    rms_status,
-                    rms_pledge,
-                    rms_plg_item,
-                    rms_fulfil,
-                    rms_tmp_sch,
-                    ct_catalogue,
-                    ct_unit,
-                    ct_unit_type,
-                    ct_cat_unit
+                    'rms_request',
+                    'rms_req_item',
+                    'rms_priority',
+                    'rms_status',
+                    'rms_pledge',
+                    'rms_plg_item',
+                    'rms_fulfil',
+                    'rms_tmp_sch',
+                    'ct_catalogue',
+                    'ct_unit',
+                    'ct_unit_type',
+                    'ct_cat_unit'
                 );
 $error  =  __check_tables($tables);
 
@@ -50,10 +50,10 @@ if($error)
  * List of tables that should not be empty
  */
 $tables = array (
-                    ct_catalogue,
-                    ct_unit,
-                    ct_unit_type,
-                    ct_cat_unit
+                    'ct_catalogue',
+                    'ct_unit',
+                    'ct_unit_type',
+                    'ct_cat_unit'
                 );
 $error  = __check_empty_tables($tables);
 

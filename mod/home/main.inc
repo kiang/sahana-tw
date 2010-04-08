@@ -78,7 +78,7 @@ function _shn_home_module_info($module, $description)
 {
     global $conf;
 
-    if ($conf['mod_'.$module.'_enabled']) {
+    if (isset($conf['mod_'.$module.'_enabled']) && $conf['mod_'.$module.'_enabled']) {
         echo "<li><a href=\"index.php?mod=$module\" ><strong>".$conf['mod_'.$module.'_name'].'</strong></a> - ';
         echo _($description)."</li>\n";
     }

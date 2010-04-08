@@ -67,7 +67,7 @@ function shn_admin_default()
 	$result = $db->Execute("SELECT * FROM location");
 	$isLocationsEntered = ((isset($result) && $result)?($result->RecordCount() > 0):false);
 
-	$isSecurityEnabled = $conf['acl_enabled'];
+	$isSecurityEnabled = !$conf['acl_base'];
 
 
 	$result = $db->Execute("SELECT * FROM ct_catalogue");

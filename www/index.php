@@ -80,7 +80,7 @@ if (!file_exists($APPROOT.'conf/sysconf.inc')){
 	 foreach ($mods as $mod){
 	 $conf['mod_'.$mod.'_enabled']=true;
 	 }*/
-	if(($_GET["mod"]="admin")&&($_GET["act"]=="acl_enable_acl_cr")){
+	if((isset($_GET["mod"]) && $_GET["mod"]="admin")&&(isset($_GET["act"]) && $_GET["act"]=="acl_enable_acl_cr")){
 		if( shn_acl_check_perms("admin","acl_enable_acl_cr")==true){
 			include_once ($APPROOT.'mod/admin/acl.inc');
 			_shn_admin_acl_enable_acl_cr(false);
@@ -178,7 +178,7 @@ function shn_main_front_controller()
 	// this includes the inclusion of various sections in XHTML including the HTTP header,
 	// content header, menubar, login
 	shn_stream_init();
-	if($_SESSION['first_time_run']==true){
+	if(isset($_SESSION['first_time_run']) && $_SESSION['first_time_run']==true){
 		include_once($APPROOT.'mod/home/main.inc');
 		// first time welcome view.
 		// the first time flag will be cleared inside the method.

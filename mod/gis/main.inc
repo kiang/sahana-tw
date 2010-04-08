@@ -127,7 +127,11 @@ function shn_gis_wm_edit()
 
 function shn_gis_swik()
 {
-	show_wiki_map($_POST['opt_wikimap_type']);
+    $opt_wikimap_type = '';
+    if(!empty($_POST['opt_wikimap_type'])) {
+        $opt_wikimap_type = $_POST['opt_wikimap_type'];
+    }
+    show_wiki_map($opt_wikimap_type);
 }
 
 function shn_gis_ewik()

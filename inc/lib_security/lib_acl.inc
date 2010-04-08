@@ -152,7 +152,7 @@ function shn_acl_check_perms($mod,$module_function){
 				}
 			}
 		}
-		if($tables!=null){
+		if(!empty($tables)){
 			return shn_acl_check_table_only_perms($tables);
 		}else{
 			return ALLOWED;
