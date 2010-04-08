@@ -103,7 +103,7 @@ function shn_config_module_conf_fetch($module = 'all')
                 include_once($approot.'mod/'.$f.'/conf.inc');
 
                 // if module enabled flag is not set add it to conf
-                if (!defined($conf['shn_'.$f.'_enabled'])) {
+                if (isset($conf['shn_'.$f.'_enabled']) && !defined($conf['shn_'.$f.'_enabled'])) {
                     $conf['mod_'.$f.'_enabled'] = true;
                 }
             }

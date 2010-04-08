@@ -26,7 +26,7 @@ $global['previous'] = false;
 require_once($APPROOT.'inc/lib_errors.inc');
 
 // handle error reporting seperately and set our own error handler
-if (true) { // set to false if you want to develop without the custom error handler
+if (false) { // set to false if you want to develop without the custom error handler
 	error_reporting(0);
 	set_error_handler('shn_sahana_error_handler');
 }

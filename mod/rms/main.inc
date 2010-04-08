@@ -50,7 +50,7 @@ function shn_rms_default()
 function shn_rms_mainmenu()
 {
 	global $global;
-    $module = $global['modlue'];
+    $module = $global['module'];
     
     shn_mod_menuopen(shn_get_module_name());
     shn_mod_menuitem("default", _("Home"), $module);
