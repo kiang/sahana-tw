@@ -1,6 +1,6 @@
 <?php
 /**
- * AJAX Library of catalog system  
+ * AJAX Library of catalog system
  *
  * PHP version 4 and 5
  *
@@ -14,15 +14,13 @@
  * @subpackage cs
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  */
-
 /**
  * This function prints the ajax function to get an array of unit list in add.inc
  * called in shn_cs_additem_form1_result() in add.inc
  * @access private
  * @return void
  */
-function shn_cs_additem_form1_result_ajax()
-{
+function shn_cs_additem_form1_result_ajax() {
 ?>
 <script type="text/javascript">
     var url = "xml.php?"; 

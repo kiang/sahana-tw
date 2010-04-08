@@ -16,5 +16,4 @@
 <?php
 // Sahana-ASP messaging lib
 
-
 ?>

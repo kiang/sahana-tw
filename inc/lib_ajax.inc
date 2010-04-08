@@ -10,15 +10,14 @@
  * http://www.gnu.org/copyleft/lesser.html
  *
  * @package    moduleAPI
- * @subpackage form 
+ * @subpackage form
  * @author     Ishan Liyanage <ishanul@gmail.com>
  * @copyright  Lanka Software Foundation - http://www.opensource.lk
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  *
  */
-
 function _shn_ajax_create_ajax_call() {
-	?>
+?>
     <script>
     var xmlHttp;
 	var ids = new Array();
@@ -192,9 +191,8 @@ function _shn_ajax_create_ajax_call() {
     </script>
 <?php
 }
-
-function _shn_ajax_create_suggest($input_element,$print_element){
-	?>
+function _shn_ajax_create_suggest($input_element, $print_element) {
+?>
     <script>
     
     //Mouse over function
@@ -211,11 +209,10 @@ function _shn_ajax_create_suggest($input_element,$print_element){
 	}
 
     </script>
-   <?php 
+   <?php
 }
-
-function _shn_ajax_set_common_styles(){
-	?>
+function _shn_ajax_set_common_styles() {
+?>
 	<style type="text/css" media="screen">
     body1 {
     font: 11px arial;
@@ -239,9 +236,8 @@ function _shn_ajax_set_common_styles(){
     </style>
     <?php
 }
-
-function _shn_ajax_create_xml_http_object(){
-	?>
+function _shn_ajax_create_xml_http_object() {
+?>
 	<script>
 	function GetXmlHttpObject(){
 		var xmlHttp=null;
@@ -268,19 +264,19 @@ return xmlHttp;
     </script>
 	<?php
 }
-
-function _shn_ajax_set_result_to_element($input_element,$print_element,$hidden,$reset){
-	?>
+function _shn_ajax_set_result_to_element($input_element, $print_element, $hidden, $reset) {
+?>
 	<script>
 	function setSearch(value,id,print,input) {
 		document.getElementById(print).innerHTML = '';
 			
-		if(null!=<?php echo $reset;?>){
+		if(null!=<?php echo $reset; ?>){
 			if(document.getElementById("text"+input).value!=value){
-				<?php foreach($reset as $rs){?>
-					document.getElementById('text<?php echo $rs;?>').value= ''
-					document.getElementById('<?php echo $rs;?>').value= '';
-				<?php }?>
+				<?php foreach($reset as $rs) { ?>
+					document.getElementById('text<?php echo $rs; ?>').value= ''
+					document.getElementById('<?php echo $rs; ?>').value= '';
+				<?php
+    } ?>
 			}
 		}
 		document.getElementById("text"+input).value = value;
@@ -289,12 +285,11 @@ function _shn_ajax_set_result_to_element($input_element,$print_element,$hidden,$
 	</script>
 	<?php
 }
-
-function _shn_ajax_set_div_styles($print_element){
-	?>
+function _shn_ajax_set_div_styles($print_element) {
+?>
     <style type="text/css" media="screen">
     
-    #<?php echo $print_element;?>{
+    #<?php echo $print_element; ?>{
 				z-index: 100; 
 				position:absolute; 
 				background-color: #CCCCCC;
@@ -307,94 +302,81 @@ function _shn_ajax_set_div_styles($print_element){
 	}
 
     </style>
- <?php   
+ <?php
 }
-
-function _shn_ajax_hide_popup($print_element){
-	?>
+function _shn_ajax_hide_popup($print_element) {
+?>
 	<script>
 	window.onclick=test;
 	function test(){
 		<?php
-		foreach($print_element as $ele){
-		?>	
-		document.getElementById('<?php echo $ele;?>').innerHTML = '';
+    foreach($print_element as $ele) {
+?>	
+		document.getElementById('<?php echo $ele; ?>').innerHTML = '';
 		<?php
-		}
-		?>
+    }
+?>
 	}
 	</script>
 	<?php
 }
-
-
-function shn_ajax_add_suggest($input_element,$print_element,$hidden,$reset=null){
-	
-    _shn_ajax_create_suggest($input_element,$print_element); 
-    
-    _shn_ajax_set_result_to_element($input_element,$print_element,$hidden,$reset); 
+function shn_ajax_add_suggest($input_element, $print_element, $hidden, $reset = null) {
+    _shn_ajax_create_suggest($input_element, $print_element);
+    _shn_ajax_set_result_to_element($input_element, $print_element, $hidden, $reset);
     _shn_ajax_set_div_styles($print_element);
 }
-function shn_ajax_initiate_request(){
-	_shn_ajax_create_xml_http_object();
-	_shn_ajax_create_ajax_call(); 
-	_shn_ajax_set_common_styles();
+function shn_ajax_initiate_request() {
+    _shn_ajax_create_xml_http_object();
+    _shn_ajax_create_ajax_call();
+    _shn_ajax_set_common_styles();
 }
-function shn_ajax_text_look_up($label,$name,$hint=null,$url,$value=null,$flag,$extra_opts=null){
+function shn_ajax_text_look_up($label, $name, $hint = null, $url, $value = null, $flag, $extra_opts = null) {
     global $global;
-    if(NULL==$hint){
-        $hint=array('hint');
+    if (NULL == $hint) {
+        $hint = array('hint');
     }
-    if($global["initiate_ajax"]==false){
-	    shn_ajax_initiate_request();
-	    $global["initiate_ajax"]=true;
+    if ($global["initiate_ajax"] == false) {
+        shn_ajax_initiate_request();
+        $global["initiate_ajax"] = true;
     }
-
-	_shn_ajax_hide_popup($hint);
-    for($index=0;$index<count($name);$index++){
-	    if(true==$flag){
-            if(0==$index){
-		        $reset=array_slice($name,1);	
-		        shn_ajax_add_suggest($name[0],$hint[0],$name[0],$reset);
-		        $extra_opts['value']=$value[0];
-		        shn_form_text($label[0],'text'.$name[0],"size=\"30\" autocomplete=off  onclick=\"get_data('*',event,'".$hint[0]."','".$name[0]."','".$url."','NULL')\" onkeyup=\"get_data(this.value,event,'".$hint[0]."','".$name[0]."','".$url."','NULL')\" onkeypress=\"return noenter(event)\"" ,$extra_opts);
-                $extra_opts['help']=null;
-		        echo "<div id='".$hint[0]."' style='left: 442px'></div>";
-		        ?>
-                <input type="hidden" id="<?=$name[0]?>" name="<?=$name[0]?>"  value= />
+    _shn_ajax_hide_popup($hint);
+    for ($index = 0;$index < count($name);$index++) {
+        if (true == $flag) {
+            if (0 == $index) {
+                $reset = array_slice($name, 1);
+                shn_ajax_add_suggest($name[0], $hint[0], $name[0], $reset);
+                $extra_opts['value'] = $value[0];
+                shn_form_text($label[0], 'text' . $name[0], "size=\"30\" autocomplete=off  onclick=\"get_data('*',event,'" . $hint[0] . "','" . $name[0] . "','" . $url . "','NULL')\" onkeyup=\"get_data(this.value,event,'" . $hint[0] . "','" . $name[0] . "','" . $url . "','NULL')\" onkeypress=\"return noenter(event)\"", $extra_opts);
+                $extra_opts['help'] = null;
+                echo "<div id='" . $hint[0] . "' style='left: 442px'></div>";
+?>
+                <input type="hidden" id="<?=$name[0] ?>" name="<?=$name[0] ?>"  value= />
 	
 	            <?php
-		        }
-		        else
-		        {
-	//$url=$url.'&parent_id=2';//=document.getElementById(\'hidden_'.$name[$index-1].'\').value';
-                    $reset=array_slice($name,$index+1);
-                    shn_ajax_add_suggest($name[$index],$hint[$index],$name[$index],$reset);
-                    $extra_opts['value']=$value[$index];
-                    shn_form_text($label[$index],'text'.$name[$index],"size=\"30\" autocomplete=off onclick=\"get_data('*',event,'".$hint[$index]."','".$name[$index]."','".$url."','".$name[$index-1]."')\" onkeyup=\"get_data(this.value,event,'".$hint[$index]."','".$name[$index]."','".$url."','".$name[$index-1]."')\" onkeypress=\"return noenter(event)\"" ,$extra_opts);
-     				//echo $name[$index-1];
-                    echo "<div id='".$hint[$index]."' style='left: 442px'></div>";
-                    ?>
-                    <input type="hidden" id="<?=$name[$index]?>" name="<?=$name[$index]?>"  value= />
+            } else {
+                //$url=$url.'&parent_id=2';//=document.getElementById(\'hidden_'.$name[$index-1].'\').value';
+                $reset = array_slice($name, $index + 1);
+                shn_ajax_add_suggest($name[$index], $hint[$index], $name[$index], $reset);
+                $extra_opts['value'] = $value[$index];
+                shn_form_text($label[$index], 'text' . $name[$index], "size=\"30\" autocomplete=off onclick=\"get_data('*',event,'" . $hint[$index] . "','" . $name[$index] . "','" . $url . "','" . $name[$index - 1] . "')\" onkeyup=\"get_data(this.value,event,'" . $hint[$index] . "','" . $name[$index] . "','" . $url . "','" . $name[$index - 1] . "')\" onkeypress=\"return noenter(event)\"", $extra_opts);
+                //echo $name[$index-1];
+                echo "<div id='" . $hint[$index] . "' style='left: 442px'></div>";
+?>
+                    <input type="hidden" id="<?=$name[$index] ?>" name="<?=$name[$index] ?>"  value= />
 	
 	                <?php
-		        }
-        }
-		else{
-			$reset=array_slice($name,$index+1);
-            shn_ajax_add_suggest($name[$index],$hint[$index],$name[$index],$reset);
-            $extra_opts['value']=$value[$index];
-            shn_form_text($label[$index],'text'.$name[$index],"size=\"30\" autocomplete=off onclick=\"get_data('*',event,'".$hint[$index]."','".$name[$index]."','".$url."','".($name[$index-1])."')\" onkeyup=\"get_data(this.value,event,'".$hint[$index]."','".$name[$index]."','".$url."','".$name[$index-1]."')\" onkeypress=\"return noenter(event)\"" ,$extra_opts);
-
-            echo "<div id='".$hint[$index]."' style='left: 442px'></div>";
-            ?>
-            <input type="hidden" id="<?=$name[$index]?>" name="<?=$name[$index]?>"  value= />
+            }
+        } else {
+            $reset = array_slice($name, $index + 1);
+            shn_ajax_add_suggest($name[$index], $hint[$index], $name[$index], $reset);
+            $extra_opts['value'] = $value[$index];
+            shn_form_text($label[$index], 'text' . $name[$index], "size=\"30\" autocomplete=off onclick=\"get_data('*',event,'" . $hint[$index] . "','" . $name[$index] . "','" . $url . "','" . ($name[$index - 1]) . "')\" onkeyup=\"get_data(this.value,event,'" . $hint[$index] . "','" . $name[$index] . "','" . $url . "','" . $name[$index - 1] . "')\" onkeypress=\"return noenter(event)\"", $extra_opts);
+            echo "<div id='" . $hint[$index] . "' style='left: 442px'></div>";
+?>
+            <input type="hidden" id="<?=$name[$index] ?>" name="<?=$name[$index] ?>"  value= />
 	
 	<?php
-		}
-	}
-
+        }
+    }
 }
-
-
 ?>

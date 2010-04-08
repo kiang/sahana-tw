@@ -1,6 +1,5 @@
 <?php
 /* $Id: images.inc,v 1.1 2006/05/29 08:22:29 mahesh_kks Exp $ */
-
 /**
  *
  * <Description goes here>
@@ -15,23 +14,17 @@
  * @author     Janaka Wickramasinghe <janaka@opensource.lk>
  * @copyright  Lanka Software Foundation - http://www.opensource.lk
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
- * 
+ *
  */
-
-function shn_mpr_manage_images_form($id,$url)
-{
-    if($errors)
-        display_errors();
-
-    shn_form_fopen("addmp",null,array('enctype'=>'enctype="multipart/form-data"'));
-
-    shn_form_hidden(array('seq'=>'upload_pic'));
+function shn_mpr_manage_images_form($id, $url) {
+    if ($errors) display_errors();
+    shn_form_fopen("addmp", null, array('enctype' => 'enctype="multipart/form-data"'));
+    shn_form_hidden(array('seq' => 'upload_pic'));
     shn_form_fsopen(_('Add Another Picture'));
-    shn_form_upload(_('Upload Picture'),"picture");
+    shn_form_upload(_('Upload Picture'), "picture");
     shn_form_fsclose();
     shn_form_submit(_('Next'));
     shn_form_fclose();
-
 ?>
 <table>
 <tr>
@@ -44,6 +37,5 @@ function shn_mpr_manage_images_form($id,$url)
 </tr>
 </table>
 <?php
-
 }
 ?>

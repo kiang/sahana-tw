@@ -1,24 +1,22 @@
 <?php
 /**
-* The Sahana Resquest Management System
-*
-* PHP version 4 and 5
-*
-* LICENSE: This source file is subject to LGPL license
-* that is available through the world-wide-web at the following URI:
-* http://www.gnu.org/copyleft/lesser.html
-*
-* @author		Sudheera R. Fernando <sudheera@opensource.lk>
-* @copyright    Lanka Software Foundation - http://www.opensource.lk
-* @package		sahana
-* @subpackage	rms
-* @tutorial
-* @license		http://www.gnu.org/copyleft/lesser.html GNU Lesser General
-* Public License (LGPL)
-*/
-
-function _shn_rms_js_requester($newreqstr=false)
-{
+ * The Sahana Resquest Management System
+ *
+ * PHP version 4 and 5
+ *
+ * LICENSE: This source file is subject to LGPL license
+ * that is available through the world-wide-web at the following URI:
+ * http://www.gnu.org/copyleft/lesser.html
+ *
+ * @author		Sudheera R. Fernando <sudheera@opensource.lk>
+ * @copyright    Lanka Software Foundation - http://www.opensource.lk
+ * @package		sahana
+ * @subpackage	rms
+ * @tutorial
+ * @license		http://www.gnu.org/copyleft/lesser.html GNU Lesser General
+ * Public License (LGPL)
+ */
+function _shn_rms_js_requester($newreqstr = false) {
 ?>
 <script language="JavaScript" type="text/javascript">
     function hideNewReqster()
@@ -35,17 +33,13 @@ function _shn_rms_js_requester($newreqstr=false)
         document.getElementById('reqstr_new').style.visibility = 'visible';
     }
 <?php
-    if($newreqstr)
-        print "showNewReqster();";
-    else
-        print "hideNewReqster();";
+    if ($newreqstr) print "showNewReqster();";
+    else print "hideNewReqster();";
 ?>
 </script>
 <?php
 }
-
-function _shn_rms_js_category()
-{
+function _shn_rms_js_category() {
 ?>
 <script language="JavaScript" type="text/javascript">
     function selectCat()
@@ -57,9 +51,7 @@ function _shn_rms_js_category()
 </script>
 <?php
 }
-
-function _shn_rms_js_donor($newdonor=false)
-{
+function _shn_rms_js_donor($newdonor = false) {
 ?>
 <script language="JavaScript" type="text/javascript">
     function hideNewDonor()
@@ -75,10 +67,8 @@ function _shn_rms_js_donor($newdonor=false)
         document.getElementById('donor_new').style.visibility = 'visible';
     }
 <?php
-    if($newdonor)
-        print "showNewDonor();";
-    else
-        print "hideNewDonor();";
+    if ($newdonor) print "showNewDonor();";
+    else print "hideNewDonor();";
 ?>
 </script>
 <?php

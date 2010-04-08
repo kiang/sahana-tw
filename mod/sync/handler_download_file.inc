@@ -17,53 +17,43 @@
  */
 global $global;
 global $conf;
-include_once('lib_sync_file.inc');
-include_once('lib_dump_data.inc');
-
-
-
+include_once ('lib_sync_file.inc');
+include_once ('lib_dump_data.inc');
 //table array
-$tables=array();
+$tables = array();
 //modules
-$modules=shn_get_module_names();
-
+$modules = shn_get_module_names();
 //get the table names from selected modules
-if(isset($_POST['modules'])){
-    foreach($_POST['modules'] as $module){
-        $tables=_shn_sync_file_tables($module,$tables);
+if (isset($_POST['modules'])) {
+    foreach($_POST['modules'] as $module) {
+        $tables = _shn_sync_file_tables($module, $tables);
     }
 }
-
 //get the tables from selected data blocks
-foreach($modules as $module){
-    if(isset($_POST[$module])){
-        $tables=_shn_sync_data_tables($module,$_POST[$module],$tables);
+foreach($modules as $module) {
+    if (isset($_POST[$module])) {
+        $tables = _shn_sync_data_tables($module, $_POST[$module], $tables);
     }
 }
-
-
 //dependancy algorithem
-foreach($tables as $table){
-    $keys=$global['db']->MetaForeignKeys($table);
+foreach($tables as $table) {
+    $keys = $global['db']->MetaForeignKeys($table);
     //_shn_add_reference_tables($table,$tables);
-    foreach($keys as $table=>$k){
-        if(in_array($table,$tables));
-        else
-            array_push($tables,$table);
+    foreach($keys as $table => $k) {
+        if (in_array($table, $tables));
+        else array_push($tables, $table);
     }
 }
-
-require_once('compressor.inc');
+require_once ('compressor.inc');
 $fp = fopen($tmp_file, 'rb');
-switch ($_POST['file_type']){
+switch ($_POST['file_type']) {
     case 'xml':
         //creating headers
         header("Content-type: text/xml");
-        header("Content-Disposition: attachment; filename=sahana_data_dump_".$conf['base_uuid']."_".time().".xml".$com);
+        header("Content-Disposition: attachment; filename=sahana_data_dump_" . $conf['base_uuid'] . "_" . time() . ".xml" . $com);
         header("Cache-Control: no-cache, must-revalidate");
         fpassthru($fp);
         //dump the data in the tables
-        
         exit();
     case 'csv':
         echo "csv";
@@ -75,6 +65,4 @@ switch ($_POST['file_type']){
         echo "sqlite";
         exit();
 }
-
-
 ?>

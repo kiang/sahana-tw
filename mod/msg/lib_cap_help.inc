@@ -1,22 +1,21 @@
 <?php
 /**
-* The Sahana Messaging Module
-*
-* PHP version 5
-*
-* LICENSE: This source file is subject to LGPL license
-* that is available through the world-wide-web at the following URI:
-* http://www.gnu.org/copyleft/lesser.html
-*
-* @author		Sudheera R. Fernando <sudheera@opensource.lk>
-* @copyright    Lanka Software Foundation - http://www.opensource.lk
-* @package		sahana
-* @subpackage	rms
-* @tutorial
-* @license		http://www.gnu.org/copyleft/lesser.html GNU Lesser General
-* Public License (LGPL)
-*/
-
+ * The Sahana Messaging Module
+ *
+ * PHP version 5
+ *
+ * LICENSE: This source file is subject to LGPL license
+ * that is available through the world-wide-web at the following URI:
+ * http://www.gnu.org/copyleft/lesser.html
+ *
+ * @author		Sudheera R. Fernando <sudheera@opensource.lk>
+ * @copyright    Lanka Software Foundation - http://www.opensource.lk
+ * @package		sahana
+ * @subpackage	rms
+ * @tutorial
+ * @license		http://www.gnu.org/copyleft/lesser.html GNU Lesser General
+ * Public License (LGPL)
+ */
 /**
  * Main help
  */
@@ -26,8 +25,6 @@ $help_status = _("Code Values: <br /> 'Actual' - Actionable by all targeted reci
 $help_msgType = _("Code Values: <br /> 'Alert' - Initial information requiring attention by targeted recipients <br />'Update' - Updates and supercedes the earlier message(s) identified in &lt;references&gt;<br />'Cancel' - Cancels the earlier message(s) identified in &lt;references&gt;<br />'Ack' - Acknowledges receipt and acceptance of the message(s)) identified in &lt;references&gt;<br />'Error' indicates rejection of the message(s) identified in &lt;references&gt; explanation SHOULD appear in &lt;note&gt;");
 $help_source = _("The particular source of this alert; e.g., an operator or a specific device.");
 $help_scope = _("Code Values:<br />'Public' - For general dissemination to unrestricted audiences <br />'Restricted' - For dissemination only to users with a known operational requirement <br />'Private' - For dissemination only to specified addresses");
-
-
 /**
  * Info help
  */

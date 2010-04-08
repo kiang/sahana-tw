@@ -1,8 +1,6 @@
 <?php
-
-
 /**
- * Main Configuration of the catalog System. 
+ * Main Configuration of the catalog System.
  *
  * PHP version 4 and 5
  *
@@ -17,13 +15,11 @@
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  *
  */
-
 /**
  * Gives the nice name of the module
  * @global string $conf['mod_cs_name']
  */
 #global $conf;
-
 $conf['mod_cs_name'] = _("Aid Catalog");
 $conf['mod_cs_menuorder'] = 16;
 ?>

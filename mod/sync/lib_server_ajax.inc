@@ -15,37 +15,36 @@
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  *
  */
-
 /**Function connect to a sahana server and get details
- * @param form_data
- * @return string  - xajax out put
- */
-
-function _shn_server_ajax_connect($url){
+* @param form_data
+* @return string  - xajax out put
+*/
+function _shn_server_ajax_connect($url) {
     _print_xajax_headers();
     echo "<cmd n='as' t='status' p='innerHTML'><![CDATA[";
     global $global;
-    $para="?mod=sync&act=info&stream=text";
-    try{
-        $xml=file($url.$para);
-    } catch (Exception $e) {
-    echo 'Caught exception: ',  $e->getMessage(), "\n";
+    $para = "?mod=sync&act=info&stream=text";
+    try {
+        $xml = file($url . $para);
     }
-    $connect=$xml;
-//access the web service
-    if($connect){
+    catch(Exception $e) {
+        echo 'Caught exception: ', $e->getMessage(), "\n";
+    }
+    $connect = $xml;
+    //access the web service
+    if ($connect) {
 ?>
-        <ul><li>Instance ID:<?=$xml[0]?></li>
-                <li>Owner:<?=$xml[1]?></li>
-                <li>Contact:<?=$xml[2]?></li>
+        <ul><li>Instance ID:<?=$xml[0] ?></li>
+                <li>Owner:<?=$xml[1] ?></li>
+                <li>Contact:<?=$xml[2] ?></li>
                 </ul>
         <form action="" method="post">
                 <input type="submit" value="Add Server">
         </form>
 <?php
         //$global['xajax']->addAssign("status", "innerHTML", $html);
-    }
-    else{
+        
+    } else {
 ?>
         <b>Can not connect to server...</b><br/>
         <form action='#' onSubmit='connect(\"".$url."\");return false;'><input type='submit' value='Retry'></form>
@@ -54,19 +53,14 @@ function _shn_server_ajax_connect($url){
     echo "]]></cmd>";
     _print_xajax_close();
 }
-
-
-
-function _print_xajax_headers(){
-        header("Content-type: text/xml");
-        header("Cache-Control: no-cache, must-revalidate");
-        echo "<?xml version='1.0' ?>";
-        echo "<xjx>";
+function _print_xajax_headers() {
+    header("Content-type: text/xml");
+    header("Cache-Control: no-cache, must-revalidate");
+    echo "<?xml version='1.0' ?>";
+    echo "<xjx>";
 }
-
-function _print_xajax_close(){
+function _print_xajax_close() {
     echo "</xjx>";
     exit(0);
 }
-
 ?>

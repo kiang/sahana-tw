@@ -1,4 +1,4 @@
-<?php 
+<?php
 /* $Id: handler_header.inc,v 1.17 2006/12/04 16:31:14 priyanga Exp $ */
 /**
  *
@@ -11,7 +11,7 @@
  * http://www.gnu.org/copyleft/lesser.html
  *
  * @package    moduleAPI
- * @subpackage form 
+ * @subpackage form
  * @author     Chamindra de Silva (chamindra@opensource.lk>
  * @author     Janaka Wickramasinghe <janaka@opensource.lk>
  * @copyright  Lanka Software Foundation - http://www.opensource.lk
@@ -20,16 +20,15 @@
  */
 ?>
     <div id="header" class="clearfix">
-        <?php  ?>
-        <h1><?=_("Sahana FOSS Disaster Management System")?></h1>
-        <?php 
-            global $conf;
-            if(file_exists($global['approot'].'conf/sysconf.inc'))
-            {
-                shn_db_get_incident_select();
-                _shn_lc_lang_list(); 
-            }
-        ?>
+        <?php ?>
+        <h1><?=_("Sahana FOSS Disaster Management System") ?></h1>
+        <?php
+global $conf;
+if (file_exists($global['approot'] . 'conf/sysconf.inc')) {
+    shn_db_get_incident_select();
+    _shn_lc_lang_list();
+}
+?>
     </div>
     <!-- /header -->
 

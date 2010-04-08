@@ -17,155 +17,132 @@
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  *
  */
-
 global $global;
-include_once $global['approot']."/inc/lib_errors.inc";
-include_once $global['approot']. 'inc/lib_security/lib_acl.inc';
-include_once $global['approot']. 'inc/lib_security/lib_auth.inc';
-
-
+include_once $global['approot'] . "/inc/lib_errors.inc";
+include_once $global['approot'] . 'inc/lib_security/lib_acl.inc';
+include_once $global['approot'] . 'inc/lib_security/lib_auth.inc';
 /**
  * Generates a form to enable/disable ACL
  * @access public
  * @return void
  */
-
-function shn_acl_form_enable_acl()
-{
-	global $global;
-	$db=$global['db'];
-	?>
+function shn_acl_form_enable_acl() {
+    global $global;
+    $db = $global['db'];
+?>
 <h3><?php echo _("Enable/Disable ACL") ?></h3>
 	<?php
-	shn_form_fopen("acl_enable_acl_cr","admin",array('req_message'=>false));
-	$acl=shn_acl_is_enabled();
-	if($acl==true){
-		shn_form_hidden(array("action"=>'disable'));
-		shn_form_submit(_("Disable ACL"));
-	}else{
-		shn_form_hidden(array("action"=>'enable'));
-		shn_form_submit(_("Enable ACL"));
-	}
-	shn_form_fclose();
+    shn_form_fopen("acl_enable_acl_cr", "admin", array('req_message' => false));
+    $acl = shn_acl_is_enabled();
+    if ($acl == true) {
+        shn_form_hidden(array("action" => 'disable'));
+        shn_form_submit(_("Disable ACL"));
+    } else {
+        shn_form_hidden(array("action" => 'enable'));
+        shn_form_submit(_("Enable ACL"));
+    }
+    shn_form_fclose();
 }
-
 /**
  * Generates a form to enable/disable self signup
  * @access public
  * @return void
  */
-
-function shn_acl_form_enable_signup()
-{
-	global $global;
-	$db=$global['db'];
-	?>
+function shn_acl_form_enable_signup() {
+    global $global;
+    $db = $global['db'];
+?>
 <h3><?php echo _("Enable/Disable Self Signup") ?></h3>
 	<?php
-	shn_form_fopen("acl_enable_signup_cr","admin",array('req_message'=>false));
-	$acl=shn_acl_is_signup_enabled();
-	if($acl==true){
-		shn_form_hidden(array("action"=>'disable'));
-		shn_form_submit(_("Disable Self Signup"));
-	}else{
-		shn_form_hidden(array("action"=>'enable'));
-		shn_form_submit(_("Enable Self Signup"));
-	}
-	shn_form_fclose();
+    shn_form_fopen("acl_enable_signup_cr", "admin", array('req_message' => false));
+    $acl = shn_acl_is_signup_enabled();
+    if ($acl == true) {
+        shn_form_hidden(array("action" => 'disable'));
+        shn_form_submit(_("Disable Self Signup"));
+    } else {
+        shn_form_hidden(array("action" => 'enable'));
+        shn_form_submit(_("Enable Self Signup"));
+    }
+    shn_form_fclose();
 }
-
-
 /**
  * Generates a form to enable/disable password locking
  * @access public
  * @return void
  */
-
-function shn_acl_form_enable_locking()
-{
-	global $global;
-	$db=$global['db'];
-	?>
+function shn_acl_form_enable_locking() {
+    global $global;
+    $db = $global['db'];
+?>
 <h3><?php echo _("Enable/Disable User Locking") ?></h3>
 	<?php
-	shn_form_fopen("acl_enable_locking_cr","admin",array('req_message'=>false));
-	echo "<p>"._("You may enable or disable automatic locking of user accounts, if the user attempts to login with invalid credentials 3 times in a row.")."</p><br/><br/>";
-	$acl=shn_acl_is_locking_enabled();
-	if($acl==true){
-		shn_form_hidden(array("action"=>'disable'));
-		shn_form_submit(_("Disable User Locking"));
-	}else{
-		shn_form_hidden(array("action"=>'enable'));
-		shn_form_submit(_("Enable User Locking"));
-	}
-	shn_form_fclose();
+    shn_form_fopen("acl_enable_locking_cr", "admin", array('req_message' => false));
+    echo "<p>" . _("You may enable or disable automatic locking of user accounts, if the user attempts to login with invalid credentials 3 times in a row.") . "</p><br/><br/>";
+    $acl = shn_acl_is_locking_enabled();
+    if ($acl == true) {
+        shn_form_hidden(array("action" => 'disable'));
+        shn_form_submit(_("Disable User Locking"));
+    } else {
+        shn_form_hidden(array("action" => 'enable'));
+        shn_form_submit(_("Enable User Locking"));
+    }
+    shn_form_fclose();
 }
-
 /**
  * Generates a form to enable/disable modules
  * @access public
  * @return void
  */
-
-function shn_acl_form_enable_mods()
-{
-	global $global;
-	$db=$global['db'];
-	?>
+function shn_acl_form_enable_mods() {
+    global $global;
+    $db = $global['db'];
+?>
 <h3><?php echo _("Enable/Disable Modules") ?></h3>
 <div id="home"><strong>
 <?php echo _("Rows are Modules ,Columns are Roles ,Intersection shows
 whether the module is enabled for that role or not") ?></strong></div>
 
 <div id="formcontainer"><?php
-shn_form_fopen("acl_enable_mods_cr","admin",array('req_message'=>false));
+    shn_form_fopen("acl_enable_mods_cr", "admin", array('req_message' => false));
 ?>
 <div id="result">
 <table>
 	<thead>
 		<td><strong><?php echo _("Role"); ?></strong></td>
 		<?php
-
-		$roles=_shn_acl_get_roles();
-		foreach ($roles as $role=>$role_name){
-			echo "<td>".$role_name."</td>";
-		}
-		?>
+    $roles = _shn_acl_get_roles();
+    foreach($roles as $role => $role_name) {
+        echo "<td>" . $role_name . "</td>";
+    }
+?>
 	</thead>
 	<tbody>
 	<?php
-
-	$mods=shn_get_all_modules();
-
-	foreach($mods as $mod=>$mod_arr){
-		
-		?>
+    $mods = shn_get_all_modules();
+    foreach($mods as $mod => $mod_arr) {
+?>
 		<tr>
-			<td><?php echo $mod_arr[1];?></td>
+			<td><?php echo $mod_arr[1]; ?></td>
 			<?php
-
-			foreach ($roles as $role=>$role_name){
-				
-				$perms=$perms.$mod_arr[0].":".$role.";";
-				$name=trim($mod_arr[0].$role);
-				$allow=false;
-				if ( _shn_acl_is_module_role( $mod_arr[0],$role)==true) {
-					$allow=true;
-				}else{
-					$allow=false;
-				}
-				?>
-			<td><input type="checkbox" name="<?php echo $name?>"
-			<?php if (($role==ADMIN)&&($mod_arr[0]=="admin")) echo "disabled=true";?>
-			<?php if ($allow==true) echo "checked=true";?> align="right" /></td>
+        foreach($roles as $role => $role_name) {
+            $perms = $perms . $mod_arr[0] . ":" . $role . ";";
+            $name = trim($mod_arr[0] . $role);
+            $allow = false;
+            if (_shn_acl_is_module_role($mod_arr[0], $role) == true) {
+                $allow = true;
+            } else {
+                $allow = false;
+            }
+?>
+			<td><input type="checkbox" name="<?php echo $name ?>"
+			<?php if (($role == ADMIN) && ($mod_arr[0] == "admin")) echo "disabled=true"; ?>
+			<?php if ($allow == true) echo "checked=true"; ?> align="right" /></td>
 			<?php
-			}
-
+        }
 ?>
 		</tr>
 		<?php
-
-}
+    }
 ?>
 	</tbody>
 </table>
@@ -173,85 +150,71 @@ shn_form_fopen("acl_enable_mods_cr","admin",array('req_message'=>false));
 <br />
 
 <center><?php
-shn_form_hidden(array("perms"=>$perms));
-
-shn_form_submit(_("Save"));
+    shn_form_hidden(array("perms" => $perms));
+    shn_form_submit(_("Save"));
 ?></center>
 <?php
-//close the form
-shn_form_fclose();
+    //close the form
+    shn_form_fclose();
 ?></div>
 <?php
 }
-
 /**
  * Generates a form to edit roles of an user
  * @access public
  * @return void
  */
-
-function shn_acl_form_user_edit_roles()
-{
-	global $global;
-	$db=$global['db'];
-	?>
-<h3><?php echo _("Edit User-Role Assignments")?></h3>
+function shn_acl_form_user_edit_roles() {
+    global $global;
+    $db = $global['db'];
+?>
+<h3><?php echo _("Edit User-Role Assignments") ?></h3>
 <div id="home"><?php echo _("Rows are User ,Columns are Roles ,Intersection shows
-whether the User is a member of the Role or not.");?></div>
+whether the User is a member of the Role or not."); ?></div>
 
 <div id="formcontainer"><?php
-shn_form_fopen("acl_user_edit_roles_cr","admin",array('req_message'=>false));
+    shn_form_fopen("acl_user_edit_roles_cr", "admin", array('req_message' => false));
 ?>
 <div id="result">
 <table>
 	<thead>
 		<td><strong><?php _("User"); ?></strong></td>
 		<?php
-		$roles=_shn_acl_get_roles();
-
-		foreach($roles as $role=>$role_name){
-			echo "<td>".$role_name."</td>";
-		}
-		?>
+    $roles = _shn_acl_get_roles();
+    foreach($roles as $role => $role_name) {
+        echo "<td>" . $role_name . "</td>";
+    }
+?>
 	</thead>
 	<tbody>
 	<?php
-
-	$users=shn_auth_user_list(false,true);
-
-
-	foreach ($users as $user=>$uname){
-		//this will be used in a hidden field to identify all the checkboxes
-		$user=$user;
-			
-		$users=$user.":".$users;
-		?>
+    $users = shn_auth_user_list(false, true);
+    foreach($users as $user => $uname) {
+        //this will be used in a hidden field to identify all the checkboxes
+        $user = $user;
+        $users = $user . ":" . $users;
+?>
 		<tr>
-			<td><?php echo $uname;?></td>
+			<td><?php echo $uname; ?></td>
 			<?php
-
-			foreach($roles as $role=>$role_name){
-				$perms=$perms.$user.":".$role.";";
-				$name=trim($user.$role);
-				if ( _shn_acl_is_user_role($user,$role)) {
-					$allow=true;
-				}else{
-					$allow=false;
-				}
-					
-				?>
-			<td><input type="checkbox" name="<?php echo $name?>"
-			<?php if (($user==ADMINUSER)&&(($role==ADMIN))) echo "disabled=true";?>
-			<?php if ($allow==true) echo "checked=true";?> algin="right" /></td>
+        foreach($roles as $role => $role_name) {
+            $perms = $perms . $user . ":" . $role . ";";
+            $name = trim($user . $role);
+            if (_shn_acl_is_user_role($user, $role)) {
+                $allow = true;
+            } else {
+                $allow = false;
+            }
+?>
+			<td><input type="checkbox" name="<?php echo $name ?>"
+			<?php if (($user == ADMINUSER) && (($role == ADMIN))) echo "disabled=true"; ?>
+			<?php if ($allow == true) echo "checked=true"; ?> algin="right" /></td>
 			<?php
-
-
-}
-
+        }
 ?>
 		</tr>
 		<?php
-}
+    }
 ?>
 	</tbody>
 </table>
@@ -259,114 +222,93 @@ shn_form_fopen("acl_user_edit_roles_cr","admin",array('req_message'=>false));
 <br />
 
 <center><?php
-shn_form_hidden(array("perms"=>$perms));
-shn_form_hidden(array("users"=>$users));
-shn_form_submit(_("Save"));
+    shn_form_hidden(array("perms" => $perms));
+    shn_form_hidden(array("users" => $users));
+    shn_form_submit(_("Save"));
 ?></center>
 <?php
-//close the form
-shn_form_fclose();
+    //close the form
+    shn_form_fclose();
 ?></div>
 <?php
 }
-
-function shn_acl_form_role_select()
-{
-	global $global;
-	$db=$global['db'];
-	?>
+function shn_acl_form_role_select() {
+    global $global;
+    $db = $global['db'];
+?>
 <div id="home"><?php echo _("Select the Role you want to edit permissions of ") ?></div>
 
 <div id="formcontainer"><?php
-shn_form_fopen("acl_role_edit_perms","admin");
-$extra_opts['req']=true;
-$roles=_shn_acl_get_roles();
-shn_form_fsopen(_("Select Role"));
-shn_form_select($roles,_("Roles"),'roles',null,$extra_opts);
-shn_form_fsclose();
-shn_form_submit(_("Continue"));
+    shn_form_fopen("acl_role_edit_perms", "admin");
+    $extra_opts['req'] = true;
+    $roles = _shn_acl_get_roles();
+    shn_form_fsopen(_("Select Role"));
+    shn_form_select($roles, _("Roles"), 'roles', null, $extra_opts);
+    shn_form_fsclose();
+    shn_form_submit(_("Continue"));
 ?>
 </center>
 <?php
-//close the form
-shn_form_fclose();
+    //close the form
+    shn_form_fclose();
 ?></div>
 <?php
 }
-
-function shn_acl_form_role_perms_grid($role)
-{
-	global $global;
-	$db=$global['db'];
-	?>
+function shn_acl_form_role_perms_grid($role) {
+    global $global;
+    $db = $global['db'];
+?>
 <div id="home"><strong><?php echo _("Rows are Data Classificatons ,Columns are
 Create,Read,Update,Delete ,Intersection shows whether the Role has
-Create,Read,Update,Delete permissions to the Data Classificatons");?></strong></div>
+Create,Read,Update,Delete permissions to the Data Classificatons"); ?></strong></div>
 
 <div id="formcontainer"><?php
-shn_form_fopen("acl_role_edit_perms_cr","admin",array('req_message'=>false));
-
-echo "<br/><p>"._(sprintf("The selected role is <em>%s</em>",shn_acl_get_group_name($role)))."</p><br/>";
-
+    shn_form_fopen("acl_role_edit_perms_cr", "admin", array('req_message' => false));
+    echo "<br/><p>" . _(sprintf("The selected role is <em>%s</em>", shn_acl_get_group_name($role))) . "</p><br/>";
 ?>
 <div id="result">
 <table>
 	<thead>
 		<td><strong><?php echo _("Data Classifications"); ?></strong></td>
 		<?php
-		$cruds=array(
-     			"create"=>_("Create"),
-     			"read"=>_("Read"),
-     			"update"=>_("Update"),
-     			"delete"=>_("Delete")
-     			);
-
-     			foreach($cruds as $crud=>$crud_name){
-     				echo "<td>".$crud_name."</td>";
-     			}
-     			?>
+    $cruds = array("create" => _("Create"), "read" => _("Read"), "update" => _("Update"), "delete" => _("Delete"));
+    foreach($cruds as $crud => $crud_name) {
+        echo "<td>" . $crud_name . "</td>";
+    }
+?>
 
 	</thead>
 	<tbody>
 	<?php
-
-	$levels=shn_acl_data_classifications_list();
-
-
-	foreach ($levels as $level=>$level_name){
-		//this will be used in a hidden field to identify all the checkboxes
-
-		$levels=$level.":".$levels;
-		$perms=$perms.";".$level;
-		?>
+    $levels = shn_acl_data_classifications_list();
+    foreach($levels as $level => $level_name) {
+        //this will be used in a hidden field to identify all the checkboxes
+        $levels = $level . ":" . $levels;
+        $perms = $perms . ";" . $level;
+?>
 		<tr>
-			<td><?php echo $level_name?></td>
+			<td><?php echo $level_name ?></td>
 			<?php
-			$crud_value=_shn_acl_get_role_data_classification_crud($role,$level);
-			foreach($cruds as $crud=>$crud_name){
-				$perms=$perms.":".$crud;
-				$name=trim($level.$crud);
-					
-				if ( _shn_acl_is_crud_group($crud,$crud_value)) {
-
-					$allow=true;
-				}else{
-					$allow=false;
-				}
-					
-				?>
-			<td><input type="checkbox" name="<?php echo $name?>"
-			<?php if ($allow==true) echo "checked=true";?> algin="right" /></td>
+        $crud_value = _shn_acl_get_role_data_classification_crud($role, $level);
+        foreach($cruds as $crud => $crud_name) {
+            $perms = $perms . ":" . $crud;
+            $name = trim($level . $crud);
+            if (_shn_acl_is_crud_group($crud, $crud_value)) {
+                $allow = true;
+            } else {
+                $allow = false;
+            }
+?>
+			<td><input type="checkbox" name="<?php echo $name ?>"
+			<?php if ($allow == true) echo "checked=true"; ?> algin="right" /></td>
 			<?php
-
-
-}
-
+        }
 ?>
 		</tr>
 		<?php
-		//$perms=$perms.";";
-}
+        //$perms=$perms.";";
+        
+    }
 ?>
 	</tbody>
 </table>
@@ -374,53 +316,47 @@ echo "<br/><p>"._(sprintf("The selected role is <em>%s</em>",shn_acl_get_group_n
 <br />
 
 <center><?php
-shn_form_hidden(array("perms"=>$perms));
-shn_form_hidden(array("role"=>$role));
-shn_form_submit(_("Save"));
+    shn_form_hidden(array("perms" => $perms));
+    shn_form_hidden(array("role" => $role));
+    shn_form_submit(_("Save"));
 ?></center>
 <?php
-//close the form
-shn_form_fclose();
+    //close the form
+    shn_form_fclose();
 ?></div>
 <?php
 }
-
-function shn_acl_form_classifications_to_data(){
-	global $global;
-	$db=$global['db'];
-	?>
+function shn_acl_form_classifications_to_data() {
+    global $global;
+    $db = $global['db'];
+?>
 <div id="home"><?php echo _("Edit the Data Classification for each table") ?></div>
 
 <div id="formcontainer"><?php
-shn_form_fopen("acl_data_classifications_tables_cr","admin",array('req_message'=>false));
-//$extra_opts['req']=true;
-$levels=shn_acl_data_classifications_list();
-$tables=shn_acl_sys_data_tables();
-foreach ($tables as $table=>$level){
-	shn_form_fsopen();
-	
-	$extra_opts["value"]=$level;
-	$extra_opts['br'] = false;
-	shn_form_select($levels,$table,$table,null,$extra_opts);
-	shn_form_submit(_("Save"));
-	
-	shn_form_fsclose();
-}
-
-
+    shn_form_fopen("acl_data_classifications_tables_cr", "admin", array('req_message' => false));
+    //$extra_opts['req']=true;
+    $levels = shn_acl_data_classifications_list();
+    $tables = shn_acl_sys_data_tables();
+    foreach($tables as $table => $level) {
+        shn_form_fsopen();
+        $extra_opts["value"] = $level;
+        $extra_opts['br'] = false;
+        shn_form_select($levels, $table, $table, null, $extra_opts);
+        shn_form_submit(_("Save"));
+        shn_form_fsclose();
+    }
 ?>
 </center>
 <?php
-//close the form
-shn_form_fclose();
+    //close the form
+    shn_form_fclose();
 ?></div>
 <?php
 }
-
-function shn_acl_form_change_user_status(){
-	global $global;
-	$db=$global['db'];
-	?>
+function shn_acl_form_change_user_status() {
+    global $global;
+    $db = $global['db'];
+?>
 <div id="home"><?php echo _("Rows are Users ,Columns are the possible status values") ?></div>
 <ul>
     <li><?php echo _("<strong>Active</strong> - The user can login and perform operations."); ?></li>
@@ -429,7 +365,7 @@ function shn_acl_form_change_user_status(){
 </ul>
 
 <div id="formcontainer"><?php
-shn_form_fopen("acl_change_user_status_cr","admin",array('req_message'=>false));
+    shn_form_fopen("acl_change_user_status_cr", "admin", array('req_message' => false));
 ?>
 <div id="result">
 <table>
@@ -441,38 +377,34 @@ shn_form_fopen("acl_change_user_status_cr","admin",array('req_message'=>false));
 	</thead>
 	<tbody>
 	<?php
-
-	$users=shn_auth_user_list_and_status();
-	$locked = shn_auth_locked_user_list();
-	// check if locking is disabled and the users are locked.
-	if(count($locked)>0 && shn_acl_is_locking_enabled()==false){
-		add_warning(_("Password locking is disabled system wide. Locks will not take any effect until it is enabled.").
-    	"<br/><a href='index.php?mod=admin&act=acl_enable_locking'>"._("Click here to enable locking")."</a>");
-	}
-
-	foreach ($users as $user=>$uarray){
-		//this will be used in a hidden field to identify all the checkboxes
-		$user=$user;
-			
-		$uname=$uarray[0];
-		?>
+    $users = shn_auth_user_list_and_status();
+    $locked = shn_auth_locked_user_list();
+    // check if locking is disabled and the users are locked.
+    if (count($locked) > 0 && shn_acl_is_locking_enabled() == false) {
+        add_warning(_("Password locking is disabled system wide. Locks will not take any effect until it is enabled.") . "<br/><a href='index.php?mod=admin&act=acl_enable_locking'>" . _("Click here to enable locking") . "</a>");
+    }
+    foreach($users as $user => $uarray) {
+        //this will be used in a hidden field to identify all the checkboxes
+        $user = $user;
+        $uname = $uarray[0];
+?>
 		<tr>
-			<td><?php echo $uname;?></td>
-			<td><?php 
-			$options=array("active"=>"");
-			shn_form_radio($options,"", $user,$select_opts = "", array('value'=>$uarray[1]));?>
+			<td><?php echo $uname; ?></td>
+			<td><?php
+        $options = array("active" => "");
+        shn_form_radio($options, "", $user, $select_opts = "", array('value' => $uarray[1])); ?>
 			</td>
-			<td><?php 
-			$options=array("locked"=>"");
-			shn_form_radio($options,"", $user,$select_opts = "", array('value'=>$uarray[1]));?>
+			<td><?php
+        $options = array("locked" => "");
+        shn_form_radio($options, "", $user, $select_opts = "", array('value' => $uarray[1])); ?>
 			</td>
-			<td><?php 
-			$options=array("banned"=>"");
-			shn_form_radio($options,"", $user,$select_opts = "", array('value'=>$uarray[1]));?>
+			<td><?php
+        $options = array("banned" => "");
+        shn_form_radio($options, "", $user, $select_opts = "", array('value' => $uarray[1])); ?>
 			</td>
 		</tr>
 		<?php
-}
+    }
 ?>
 	</tbody>
 </table>
@@ -480,70 +412,63 @@ shn_form_fopen("acl_change_user_status_cr","admin",array('req_message'=>false));
 <br />
 
 <center><?php
-shn_form_hidden(array("perms"=>$perms));
-shn_form_hidden(array("users"=>$users));
-shn_form_submit(_("Save"));
+    shn_form_hidden(array("perms" => $perms));
+    shn_form_hidden(array("users" => $users));
+    shn_form_submit(_("Save"));
 ?></center>
 <?php
-//close the form
-shn_form_fclose();
+    //close the form
+    shn_form_fclose();
 ?></div>
 <?php
 }
-
-
-function shn_acl_form_unlock_user(){
-	global $global;
-	$db=$global['db'];
-	?>
+function shn_acl_form_unlock_user() {
+    global $global;
+    $db = $global['db'];
+?>
 <div id="home"><?php echo _("Rows are Locked Users ,Columns are the possible status
 values") ?></div>
 
 <div id="formcontainer"><?php
-shn_form_fopen("acl_unlock_user_cr","admin");
+    shn_form_fopen("acl_unlock_user_cr", "admin");
 ?>
 <div id="result">
 <table>
 	<thead>
-		<td><strong><?php echo _("Locked User")?></strong></td>
-		<td><?php echo _("Active")?></td>
-		<td><?php echo _("Locked")?></td>
-		<td><?php echo _("Banned")?></td>
+		<td><strong><?php echo _("Locked User") ?></strong></td>
+		<td><?php echo _("Active") ?></td>
+		<td><?php echo _("Locked") ?></td>
+		<td><?php echo _("Banned") ?></td>
 	</thead>
 	<tbody>
 	<?php
-
-	$users=shn_auth_locked_user_list();
-
-	// check if locking is disabled and the users are locked.
-	if(count($users)>0 && shn_acl_is_locking_enabled()==false){
-		add_warning(_("Password locking is disabled system wide. Locks will not take any effect until it is enabled.").
-    	"<br/><a href='index.php?mod=admin&act=acl_enable_locking'>"._("Click here to enable locking")."</a>");
-	}
-
-	foreach ($users as $user=>$uarray){
-		//this will be used in a hidden field to identify all the checkboxes
-		$user=$user;
-			
-		$uname=$uarray[0];
-		?>
+    $users = shn_auth_locked_user_list();
+    // check if locking is disabled and the users are locked.
+    if (count($users) > 0 && shn_acl_is_locking_enabled() == false) {
+        add_warning(_("Password locking is disabled system wide. Locks will not take any effect until it is enabled.") . "<br/><a href='index.php?mod=admin&act=acl_enable_locking'>" . _("Click here to enable locking") . "</a>");
+    }
+    foreach($users as $user => $uarray) {
+        //this will be used in a hidden field to identify all the checkboxes
+        $user = $user;
+        $uname = $uarray[0];
+?>
 		<tr>
-			<td><?php echo $uname;?></td>
-			<td><?php 
-			$options=array("active"=>"");
-			shn_form_radio($options,"", $user,$select_opts = "", array('value'=>$uarray[1]));?>
+			<td><?php echo $uname; ?></td>
+			<td><?php
+        $options = array("active" => "");
+        shn_form_radio($options, "", $user, $select_opts = "", array('value' => $uarray[1])); ?>
 			</td>
-			<td><?php 
-			$options=array("locked"=>"");
-			shn_form_radio($options,"", $user,$select_opts = "", array('value'=>$uarray[1]));?>
+			<td><?php
+        $options = array("locked" => "");
+        shn_form_radio($options, "", $user, $select_opts = "", array('value' => $uarray[1])); ?>
 			</td>
-			<td><?php 
-			$options=array("banned"=>"");
-			shn_form_radio($options,"", $user,$select_opts = "", array('value'=>$uarray[1]));?>
+			<td><?php
+        $options = array("banned" => "");
+        shn_form_radio($options, "", $user, $select_opts = "", array('value' => $uarray[1])); ?>
 			</td>
 		</tr>
 		<?php
-}
+    }
 ?>
 	</tbody>
 </table>
@@ -551,22 +476,20 @@ shn_form_fopen("acl_unlock_user_cr","admin");
 <br />
 
 <center><?php
-shn_form_hidden(array("perms"=>$perms));
-shn_form_hidden(array("users"=>$users));
-shn_form_submit(_("Save"));
+    shn_form_hidden(array("perms" => $perms));
+    shn_form_hidden(array("users" => $users));
+    shn_form_submit(_("Save"));
 ?></center>
 <?php
-//close the form
-shn_form_fclose();
+    //close the form
+    shn_form_fclose();
 ?></div>
 <?php
 }
-
-function shn_acl_form_event_log()
-{
-	global $global;
-	$db=$global['db'];
-	?>
+function shn_acl_form_event_log() {
+    global $global;
+    $db = $global['db'];
+?>
 
 <div id="result">
 <table>
@@ -580,34 +503,29 @@ function shn_acl_form_event_log()
 	</thead>
 	<tbody>
 	<?php
-
-	$sql="SELECT * FROM password_event_log ORDER BY changed_timestamp DESC";
-	$res=$db->Execute($sql);
-	while(($res!=null) &&(!$res->EOF)){
-		$timestamp=$res->fields["changed_timestamp"];
-		$full_name=shn_get_user_details($res->fields["p_uuid"]);
-		$date=date("m.d.y",$timestamp);
-		$time=date("H:m:s",$timestamp);
-		$type=($res->fields["event_type"]==null)?1:$res->fields["event_type"];
-		$sql="SELECT option_description FROM field_options WHERE option_code='{$type}' AND field_name='opt_acl_event_type'";
-		$res2=$db->Execute($sql);
-		$type=$res2->fields["option_description"];
-		?>
+    $sql = "SELECT * FROM password_event_log ORDER BY changed_timestamp DESC";
+    $res = $db->Execute($sql);
+    while (($res != null) && (!$res->EOF)) {
+        $timestamp = $res->fields["changed_timestamp"];
+        $full_name = shn_get_user_details($res->fields["p_uuid"]);
+        $date = date("m.d.y", $timestamp);
+        $time = date("H:m:s", $timestamp);
+        $type = ($res->fields["event_type"] == null) ? 1 : $res->fields["event_type"];
+        $sql = "SELECT option_description FROM field_options WHERE option_code='{$type}' AND field_name='opt_acl_event_type'";
+        $res2 = $db->Execute($sql);
+        $type = $res2->fields["option_description"];
+?>
 		<tr>
-			<td><?php echo $date;?></td>
-			<td><?php echo $time;?></td>
-			<td><?php echo $res->fields["user_name"];?></td>
-			<td><?php echo $full_name;?></td>
-			<td style="color: red; font-weight: bold;"><?php echo $type;?></td>
-			<td><?php echo $res->fields["comment"];?></td>
+			<td><?php echo $date; ?></td>
+			<td><?php echo $time; ?></td>
+			<td><?php echo $res->fields["user_name"]; ?></td>
+			<td><?php echo $full_name; ?></td>
+			<td style="color: red; font-weight: bold;"><?php echo $type; ?></td>
+			<td><?php echo $res->fields["comment"]; ?></td>
 		</tr>
 		<?php
-		$res->MoveNext();
-}
-
-
-
-
+        $res->MoveNext();
+    }
 ?>
 	</tbody>
 </table>
@@ -617,6 +535,4 @@ function shn_acl_form_event_log()
 
 <?php
 }
-
-
 ?>

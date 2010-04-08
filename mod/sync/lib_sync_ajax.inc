@@ -15,14 +15,13 @@
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  *
  */
-
-function process_file(){
+function process_file() {
     global $global;
-    try{
-        require_once("decompressor.inc");
-        switch('xml'){
+    try {
+        require_once ("decompressor.inc");
+        switch ('xml') {
             case 'xml':
-                require('process_xml_dump.inc');
+                require ('process_xml_dump.inc');
             break;
             case 'csv':
             break;
@@ -31,43 +30,43 @@ function process_file(){
             case 'sqlite':
             break;
         }
-        $global['xajax']->addAssign('console','innerHTML', _('Combining Data.....'));
+        $global['xajax']->addAssign('console', 'innerHTML', _('Combining Data.....'));
         $global['xajax']->addScript('xajax_start_sync();');
         //creating the report object
-        $_SESSION['report']=new report();
-        $_SESSION['report']=serialize($_SESSION['report']);
-    }catch(Exception $e){
-        $global['xajax']->addAssign("console","innerHTML", display_errors(true));
+        $_SESSION['report'] = new report();
+        $_SESSION['report'] = serialize($_SESSION['report']);
+    }
+    catch(Exception $e) {
+        $global['xajax']->addAssign("console", "innerHTML", display_errors(true));
         return $global['xajax']->getXML();
     }
     return $global['xajax']->getXML();
 }
-
 //function to synchronize
-function start_sync($form=array()){
+function start_sync($form = array()) {
     global $global;
-    try{
-        $global['form_post']=$form;
-        $_SESSION['report']=unserialize($_SESSION['report']);
+    try {
+        $global['form_post'] = $form;
+        $_SESSION['report'] = unserialize($_SESSION['report']);
         $_SESSION['report']->set_tables($_SESSION['sync']['tables']);
         $_SESSION['report']->set_all_number();
-        include_once('sync_tmp_data.inc');
+        include_once ('sync_tmp_data.inc');
         $global['xajax']->addAssign('console', 'innerHTML', _('Finish Synchronizing.....'));
         $global['xajax']->addScript('xajax_get_report();');
-        $_SESSION['report']=serialize($_SESSION['report']);
-    }catch(Exception $e){
-        $global['xajax']->addAssign("console","innerHTML", display_errors(true));
+        $_SESSION['report'] = serialize($_SESSION['report']);
+    }
+    catch(Exception $e) {
+        $global['xajax']->addAssign("console", "innerHTML", display_errors(true));
         return $global['xajax']->getXML();
     }
     return $global['xajax']->getXML();
 }
-
-function get_report(){
+function get_report() {
     global $global;
-    $_SESSION['report']=unserialize($_SESSION['report']);
-    $report=$_SESSION['report']->print_report();
-    $global['xajax']->addAssign('head','innerHTML', 'Synchronize Report');
-    $global['xajax']->addAssign('console','innerHTML', $report);
+    $_SESSION['report'] = unserialize($_SESSION['report']);
+    $report = $_SESSION['report']->print_report();
+    $global['xajax']->addAssign('head', 'innerHTML', 'Synchronize Report');
+    $global['xajax']->addAssign('console', 'innerHTML', $report);
     return $global['xajax']->getXML();
 }
 ?>

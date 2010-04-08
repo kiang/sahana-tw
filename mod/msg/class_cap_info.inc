@@ -1,25 +1,22 @@
 <?php
 /**
-* The Sahana Messaging Module
-*
-* PHP version 5
-*
-* LICENSE: This source file is subject to LGPL license
-* that is available through the world-wide-web at the following URI:
-* http://www.gnu.org/copyleft/lesser.html
-*
-* @author		Sudheera R. Fernando <sudheera@opensource.lk>
-* @copyright    Lanka Software Foundation - http://www.opensource.lk
-* @package		sahana
-* @subpackage	rms
-* @tutorial
-* @license		http://www.gnu.org/copyleft/lesser.html GNU Lesser General
-* Public License (LGPL)
-*/
-
-	
-class Msg_CapInfo
-{
+ * The Sahana Messaging Module
+ *
+ * PHP version 5
+ *
+ * LICENSE: This source file is subject to LGPL license
+ * that is available through the world-wide-web at the following URI:
+ * http://www.gnu.org/copyleft/lesser.html
+ *
+ * @author		Sudheera R. Fernando <sudheera@opensource.lk>
+ * @copyright    Lanka Software Foundation - http://www.opensource.lk
+ * @package		sahana
+ * @subpackage	rms
+ * @tutorial
+ * @license		http://www.gnu.org/copyleft/lesser.html GNU Lesser General
+ * Public License (LGPL)
+ */
+class Msg_CapInfo {
     private $language;
     private $category;
     private $event;
@@ -41,351 +38,212 @@ class Msg_CapInfo
     private $parameter;
     private $resource;
     private $area;
-    
-    function isValid()
-    {
-            //add validation code
+    function isValid() {
+        //add validation code
         return true;
     }
-    
-    function addCategory($category)
-    {
-    	    if(isset($category) && $category != '')
-        {
-        	    $this->category[] = $category;
+    function addCategory($category) {
+        if (isset($category) && $category != '') {
+            $this->category[] = $category;
         }
     }
-    
-    function addResponseType($responseType)
-    {
-    	    if(isset($responseType) && $responseType != '')
-        {
-        	    $this->responseType[] = $responseType;
+    function addResponseType($responseType) {
+        if (isset($responseType) && $responseType != '') {
+            $this->responseType[] = $responseType;
         }
     }
-    
-    function addEventCode($valueName, $value)
-    {
-    	    $ec['valueName'] = $valueName;
+    function addEventCode($valueName, $value) {
+        $ec['valueName'] = $valueName;
         $ec['value'] = $value;
         $this->eventCode[] = $ec;
     }
-    
-    function addParameter($valueName, $value)
-    {
+    function addParameter($valueName, $value) {
         $param['valueName'] = $valueName;
         $param['value'] = $value;
         $this->parameter[] = $param;
     }
-
-    function addResource($resource)
-    {
-	    if($resource->isValid())
-            $this->resource[] = $resource;
+    function addResource($resource) {
+        if ($resource->isValid()) $this->resource[] = $resource;
     }
-    
-    function delResource($resource_index)
-    {
+    function delResource($resource_index) {
         $res = $this->getResource();
-        
-        for ($i = 0; $i < count ($res); $i++)
-        {
-            if ($i != $resource_index)
-               $tmp_res[] = $res[$i];
+        for ($i = 0;$i < count($res);$i++) {
+            if ($i != $resource_index) $tmp_res[] = $res[$i];
         }
-        
         $this->setResource($tmp_res);
-        
         return true;
     }
-    
-    function addArea($area)
-    {
-	    if($area->isValid())
-            $this->area[] = $area;
+    function addArea($area) {
+        if ($area->isValid()) $this->area[] = $area;
     }
-    
-    function delArea($area_index)
-    {
+    function delArea($area_index) {
         $ar = $this->getArea();
-
-        for ($i = 0; $i < count ($ar); $i++)
-        {
-            if ($i != $area_index)
-               $tmp_ar[] = $ar[$i];
+        for ($i = 0;$i < count($ar);$i++) {
+            if ($i != $area_index) $tmp_ar[] = $ar[$i];
         }
-        
         $this->setArea($tmp_ar);
-        
         return true;
     }
-    
     /**
      * Setter functions
-     */       
-    function setLanguage($language)
-    {
-        if(isset($language) && $language != '')
-        {
+     */
+    function setLanguage($language) {
+        if (isset($language) && $language != '') {
             $this->language = $language;
-        }
-        else
-        {
-        	    $this->language = 'en-US';
+        } else {
+            $this->language = 'en-US';
         }
     }
-    
-    function setCategory($category)
-    {
+    function setCategory($category) {
         $this->category = $category;
     }
-    
-    function setEvent($event)
-    {
-        if(isset($event) && $event != '')
-        {
+    function setEvent($event) {
+        if (isset($event) && $event != '') {
             $this->event = $event;
-        }
-        else
-        {
-        	    add_error(_("The subject event of the alert message is required"));        	
+        } else {
+            add_error(_("The subject event of the alert message is required"));
         }
     }
-    
-    function setResponseType($responseType)
-    {
+    function setResponseType($responseType) {
         $this->responseType = $responseType;
     }
-    
-    function setUrgency($urgency)
-    {
-        if(isset($urgency) && $urgency != '')
-        {
-        	    $this->urgency = $urgency;
-        }
-        else
-        {
-        	    add_error(_("urgency is a required value"));
+    function setUrgency($urgency) {
+        if (isset($urgency) && $urgency != '') {
+            $this->urgency = $urgency;
+        } else {
+            add_error(_("urgency is a required value"));
         }
     }
-    
-    function setSeverity($severity)
-    {
-        if(isset($severity) && $severity != '')
-        {
+    function setSeverity($severity) {
+        if (isset($severity) && $severity != '') {
             $this->severity = $severity;
-        }
-        else
-        {
+        } else {
             add_error(_("severity is a required value"));
         }
     }
-
-    function setCertainty($certainty)
-    {
-        if(isset($certainty) && $certainty != '')
-        {
-        	    $this->certainty = $certainty;
-        }
-        else
-        {
-        	    add_error(_("certainty is a required value"));
+    function setCertainty($certainty) {
+        if (isset($certainty) && $certainty != '') {
+            $this->certainty = $certainty;
+        } else {
+            add_error(_("certainty is a required value"));
         }
     }
-    
-    function setAudience($audience)
-    {
+    function setAudience($audience) {
         $this->audience = $audience;
     }
-    
-    function setEventCode($eventCode)
-    {
+    function setEventCode($eventCode) {
         $this->eventCode = $eventCode;
     }
-    
-    function setEffective($effective = null, $sent = null)
-    {
-        if (isset($effective) && $effective != '')
-        {
+    function setEffective($effective = null, $sent = null) {
+        if (isset($effective) && $effective != '') {
             $this->effective = $effective;
-        }
-        elseif(isset($sent) && $sent != '')
-        {
-        	    $this->effective = $sent;
+        } elseif (isset($sent) && $sent != '') {
+            $this->effective = $sent;
         }
     }
-    
-    function setOnset($onset)
-    {
+    function setOnset($onset) {
         $this->onset = $onset;
     }
-    
-    function setExpires($expires)
-    {
+    function setExpires($expires) {
         $this->expires = $expires;
     }
-    
-    function setSendername($sendername)
-    {
+    function setSendername($sendername) {
         $this->sendername = $sendername;
     }
-    
-    function setHeadline($headline)
-    {
+    function setHeadline($headline) {
         $this->headline = $headline;
     }
-    
-    function setDescription($description)
-    {
+    function setDescription($description) {
         $this->description = $description;
     }
-    
-    function setInstruction($instruction)
-    {
+    function setInstruction($instruction) {
         $this->instruction = $instruction;
     }
-    
-    function setWeb($web)
-    {
+    function setWeb($web) {
         $this->web = $web;
     }
-    
-    function setContact($contact)
-    {
+    function setContact($contact) {
         $this->contact = $contact;
     }
-    
-    function setParameter($parameter)
-    {
+    function setParameter($parameter) {
         $this->parameter = $parameter;
     }
-    
-    function setResource($resource)
-    {
+    function setResource($resource) {
         $this->resource = $resource;
     }
-    
-    function setArea($area)
-    {
+    function setArea($area) {
         $this->area = $area;
     }
-    
     /**
      * Getter functions
      */
-    function getLanguage()
-    {
+    function getLanguage() {
         return $this->language;
     }
-    
-    function getCategory()
-    {
+    function getCategory() {
         //return $this->category;
         $categories = $this->category;
-        if (is_array($categories))
-        {
-            foreach ($categories as $category)
-                $cat_str .= $category . ',';
+        if (is_array($categories)) {
+            foreach($categories as $category) $cat_str.= $category . ',';
         }
-            
         return $cat_str;
     }
-    
-    function getEvent()
-    {
+    function getEvent() {
         return $this->event;
     }
-    
-    function getResponseType()
-    {
+    function getResponseType() {
         return $this->responseType;
     }
-    
-    function getUrgency()
-    {
+    function getUrgency() {
         return $this->urgency;
     }
-    
-    function getSeverity()
-    {
+    function getSeverity() {
         return $this->severity;
     }
-    
-    function getCertainty()
-    {
+    function getCertainty() {
         return $this->certainty;
     }
-    
-    function getAudience()
-    {
+    function getAudience() {
         return $this->audience;
     }
-    
-    function getEventCode()
-    {
+    function getEventCode() {
         return $this->eventCode;
     }
-    
-    function getEffective()
-    {
+    function getEffective() {
         return $this->effective;
     }
-    
-    function getOnset()
-    {
+    function getOnset() {
         return $this->onset;
     }
-    
-    function getExpires()
-    {
+    function getExpires() {
         return $this->expires;
     }
-    
-    function getSendername()
-    {
+    function getSendername() {
         return $this->sendername;
     }
-    
-    function getHeadline()
-    {
+    function getHeadline() {
         return $this->headline;
     }
-    
-    function getDescription()
-    {
+    function getDescription() {
         return $this->description;
     }
-    
-    function getInstruction()
-    {
+    function getInstruction() {
         return $this->instruction;
     }
-    
-    function getWeb()
-    {
+    function getWeb() {
         return $this->web;
     }
-    
-    function getContact()
-    {
+    function getContact() {
         return $this->contact;
     }
-    
-    function getParameter()
-    {
+    function getParameter() {
         return $this->parameter;
     }
-    
-    function getResource()
-    {
+    function getResource() {
         return $this->resource;
     }
-    
-    function getArea()
-    {
+    function getArea() {
         return $this->area;
     }
-
 }
-
 ?>

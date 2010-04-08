@@ -14,14 +14,12 @@
  * @subpackage rs
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  */
-
 /**
  * This function contain a javascript that submits the content of mod_select. this is called by the function _show_mod_select_form() in sample.inc
  * @access public
  * @return void
  */
-function shn_sample_change_form_js()
-{
+function shn_sample_change_form_js() {
 ?>
 <script type="text/javascript">
     function changeform()
@@ -35,14 +33,12 @@ function shn_sample_change_form_js()
 </script>
 <?php
 }
-
 /**
  * This function contain a javascript that submits the content of sample_rep_form. this is called by the function shn_rs_sample_report() in sample.inc
  * @access public
  * @return void
  */
-function shn_sample_change_action_js()
-{
+function shn_sample_change_action_js() {
 ?>
 <script type="text/javascript">
     function change_action(action){
@@ -54,14 +50,12 @@ function shn_sample_change_action_js()
 </script>
 <?php
 }
-
 /**
  * This function contain a javascript that submits the content of sample_rep_form. this is called by the function shn_rs_search_type_select() in 	search.inc
  * @access public
  * @return void
  */
-function shn_rs_search_cat_js()
-{
+function shn_rs_search_cat_js() {
 ?>
 <script type="text/javascript">
     function changeform()

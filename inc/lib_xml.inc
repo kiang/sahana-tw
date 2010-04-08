@@ -1,6 +1,5 @@
 <?php
 /* $Id: lib_xml.inc,v 1.1 2007/08/27 02:55:40 ravids Exp $ */
-
 /**
  *
  * <Description goes here>
@@ -15,21 +14,16 @@
  * @author     Ravindra De Silva <ravindra@opensource.lk><http://r4vi.org>
  * @copyright  Lanka Software Foundation - http://www.opensource.lk
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
- * 
+ *
  */
- 
- 
-
 function findAttribute($object, $attribute) {
-  foreach($object->attributes() as $a => $b) {
-    if ($a == $attribute) {
-      $return = $b;
+    foreach($object->attributes() as $a => $b) {
+        if ($a == $attribute) {
+            $return = $b;
+        }
     }
-  }
-  if($return) {
-    return (string)$return;
-  }
+    if ($return) {
+        return (string)$return;
+    }
 }
-
- 
 ?>

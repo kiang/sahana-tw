@@ -1,45 +1,39 @@
 <?php
 /**
-* The Sahana
-*
-* PHP version 4 and 5
-*
-* LICENSE: This source file is subject to LGPL license
-* that is available through the world-wide-web at the following URI:
-* http://www.gnu.org/copyleft/lesser.html
-*
-* @author		Sudheera R. Fernando <sudheera@opensource.lk>
-* @author		Ravindra De Silva <ravindra@opensource.lk><ravi@computer.org>
-* @copyright    Lanka Software Foundation - http://www.opensource.lk
-* @package		framework
-* @subpackage	rms
-* @tutorial
-* @license		http://www.gnu.org/copyleft/lesser.html GNU Lesser General
-* Public License (LGPL)
-*/
-
-function _shn_html_print_alert($alert)
-{
+ * The Sahana
+ *
+ * PHP version 4 and 5
+ *
+ * LICENSE: This source file is subject to LGPL license
+ * that is available through the world-wide-web at the following URI:
+ * http://www.gnu.org/copyleft/lesser.html
+ *
+ * @author		Sudheera R. Fernando <sudheera@opensource.lk>
+ * @author		Ravindra De Silva <ravindra@opensource.lk><ravi@computer.org>
+ * @copyright    Lanka Software Foundation - http://www.opensource.lk
+ * @package		framework
+ * @subpackage	rms
+ * @tutorial
+ * @license		http://www.gnu.org/copyleft/lesser.html GNU Lesser General
+ * Public License (LGPL)
+ */
+function _shn_html_print_alert($alert) {
 ?>
 <div class="alert"> <!-- TODO: change style -->
-    <strong><?php print _("Alert") . " : $alert"?></strong>
+    <strong><?php print _("Alert") . " : $alert" ?></strong>
 </div>
 <?php
 }
-
-function _shn_html_print_message($msg,$br = false)
-{
+function _shn_html_print_message($msg, $br = false) {
     $br_str = '';
-    if ($br == true)
-        $br_str = '<br />';
+    if ($br == true) $br_str = '<br />';
 ?>
     <div class="message">
-    <strong><?php print $msg?></strong>
+    <strong><?php print $msg ?></strong>
     <?php print $br_str ?>
     </div>
 <?php
 }
-
 /**
  * _shn_create_unique_database_field_value
  *
@@ -50,40 +44,33 @@ function _shn_html_print_message($msg,$br = false)
  * @access protected
  * @return string
  */
-
-function shn_create_unique_database_field_value($base,$width,$table,$field,$constraints=null){
-	global $global;
-	$db=$global["db"];
-	$not_done=true;
-	$retry_limit=10;
-
-	$count=0;
-	while (($not_done)and ($count<$retry_limit)){
-		$uuid = explode(" ", $base);
-		$uuid = substr($uuid[0],0,3);
-
-		for($i=0;$i<$width;$i++){
-        		if(($num = rand(0,36)) < 27 )
-            		$uuid .= chr($num+97);
-        		else
-            		$uuid .= 36 - $num;
-    		}
-
-    		$q="select $field from $table where $field='$uuid'";
-    		$res=$db->Execute($q);
-    		if(($res==NULL)or($res->EOF==true)){
-    			$not_done=false;
-    		}
-    		$count++;
-	}
-	return $uuid;
+function shn_create_unique_database_field_value($base, $width, $table, $field, $constraints = null) {
+    global $global;
+    $db = $global["db"];
+    $not_done = true;
+    $retry_limit = 10;
+    $count = 0;
+    while (($not_done) and ($count < $retry_limit)) {
+        $uuid = explode(" ", $base);
+        $uuid = substr($uuid[0], 0, 3);
+        for ($i = 0;$i < $width;$i++) {
+            if (($num = rand(0, 36)) < 27) $uuid.= chr($num + 97);
+            else $uuid.= 36 - $num;
+        }
+        $q = "select $field from $table where $field='$uuid'";
+        $res = $db->Execute($q);
+        if (($res == NULL) or ($res->EOF == true)) {
+            $not_done = false;
+        }
+        $count++;
+    }
+    return $uuid;
 }
-
-function shn_reset_form_javascript($form,$reset_what){
+function shn_reset_form_javascript($form, $reset_what) {
 ?>
 <script type="text/javascript">
     function change_action(action){
-    		var x=document.getElementsByName("<?php echo $reset_what?>");
+    		var x=document.getElementsByName("<?php echo $reset_what ?>");
     		if(action=="reset"){
             for (i=0; i<=(x[0].options.length); i++){
 	            x[0].options[0]=null;
@@ -103,32 +90,32 @@ function shn_reset_form_javascript($form,$reset_what){
 		    add[0].value=",";
 		    remove[0].value=",";
     		}else{
-         	document.<?php echo $form?>.submit();
+         	document.<?php echo $form ?>.submit();
          	return;
     		}
     }
 </script>
 <?
 }
-
-function shn_add_remove_javascript($name,$db_arr,$sort=true)
-{
-	$count=0;
-	foreach ($db_arr as $x) {
-		if($count==0){
-        			$db_str.=$x;
-        		}else{
-        			$db_str.=",".$x;
-        		}
-        	$count++;
-	}
-	$db_str.=",";
-
-
+function shn_add_remove_javascript($name, $db_arr, $sort = true) {
+    $count = 0;
+    foreach($db_arr as $x) {
+        if ($count == 0) {
+            $db_str.= $x;
+        } else {
+            $db_str.= "," . $x;
+        }
+        $count++;
+    }
+    $db_str.= ",";
 ?>
 <script type="text/javascript">
-var db_str="<?php echo $db_str;?>";
-var sort=<?php if($sort==true) {echo "true";}else{ echo "false";}?>;
+var db_str="<?php echo $db_str; ?>";
+var sort=<?php if ($sort == true) {
+        echo "true";
+    } else {
+        echo "false";
+    } ?>;
  // sort function - ascending (case-insensitive)
         function sortFuncAsc(record1, record2) {
             var value1 = record1.optText.toLowerCase();
@@ -204,7 +191,7 @@ var sort=<?php if($sort==true) {echo "true";}else{ echo "false";}?>;
                 		return;
             		}
             	}
-            var x=document.getElementsByName("<?php echo $name?>");
+            var x=document.getElementsByName("<?php echo $name ?>");
             opt = document.createElement("option") ;
             opt.text = y[0].value ;
             opt.value = y[0].value ;
@@ -219,7 +206,7 @@ var sort=<?php if($sort==true) {echo "true";}else{ echo "false";}?>;
         }
 
         function remove_types(){
-            var x=document.getElementsByName("<?php echo $name?>");
+            var x=document.getElementsByName("<?php echo $name ?>");
             removeSelectedOptions(x[0]);
             if(sort==true){
             		sortSelect(x[0], true) ;
@@ -292,19 +279,16 @@ var sort=<?php if($sort==true) {echo "true";}else{ echo "false";}?>;
 </script>
 <?php
 }
-
-function shn_action_change_javascript($form,$change)
-{
+function shn_action_change_javascript($form, $change) {
 ?>
 <script type="text/javascript">
     function change_action(action){
-        var x=document.getElementsByName("<?php echo $change?>");
+        var x=document.getElementsByName("<?php echo $change ?>");
          x[0].value=action;
-         document.<?php echo $form?>.submit();
+         document.<?php echo $form ?>.submit();
          return;
     }
 </script>
 <?php
 }
-
 ?>

@@ -1,5 +1,5 @@
 <?php
-/**SMTP settings for sending mail 
+/**SMTP settings for sending mail
 *
 * PHP version 4 and 5
 *
@@ -19,12 +19,11 @@ global $sit;
 $sit['from_name'] = "sri"; // from email name
 $sit['from_email'] = "sri@opensource.lk"; // from email address
 //$sit['reply_tol']('kushi223344@yahoo.com', 'sri')
-// Just in case we need to relay to a different server, 
+// Just in case we need to relay to a different server,
 // provide an option to use external mail server.
-
-$sit['smtp_mode'] = "enabled"; 
+$sit['smtp_mode'] = "enabled";
 $sit['smtp_host'] = "";
 $sit['smtp_port'] = 25;
-$sit['smtp_username'] ="";
-$sit['smtp_password'] ="";
+$sit['smtp_username'] = "";
+$sit['smtp_password'] = "";
 ?>

@@ -1,6 +1,5 @@
 <?php
 global $conf;
-
 /* $Id: handler_footer.inc,v 1.6.24.3 2009/01/04 17:02:24 franboon Exp $ */
 /**
  *

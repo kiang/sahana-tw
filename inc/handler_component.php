@@ -1,9 +1,8 @@
 <?php
 /* $Id: handler_component.php,v 1.5 2006/11/13 17:46:26 chamindra Exp $ */
-
 /**
  *
- * This is simple component handler that creates a box where you can 
+ * This is simple component handler that creates a box where you can
  * put some informations, great for watches.. Still under development..
  *
  * PHP version 4 and 5
@@ -19,19 +18,17 @@
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  * @todo make is better
  */
-
 /**
- * 
- * Shows the component box 
  *
- * @param body $body 
- * @param string $title 
- * @param string $options 
+ * Shows the component box
+ *
+ * @param body $body
+ * @param string $title
+ * @param string $options
  * @access public
  * @return void
  */
-function show_component($body, $title='Component', $options=array('title'=>true))
-{
+function show_component($body, $title = 'Component', $options = array('title' => true)) {
     global $conf;
 ?>
 <!-- Component Begin -->
@@ -40,15 +37,13 @@ function show_component($body, $title='Component', $options=array('title'=>true)
     <table cellpadding=0 cellspacing=0>
     <tr>
     <td class="com_title">
-    <?= ($options['title']?''.$title.
-    '</td><td class="com_title" align="right"><img src="theme/'.$conf['theme'].'/img/x.gif"></td>'
-    :''); ?>
+    <?=($options['title'] ? '' . $title . '</td><td class="com_title" align="right"><img src="theme/' . $conf['theme'] . '/img/x.gif"></td>' : ''); ?>
     </tr>
     <!-- Component Title End -->
     <tr height="5px"><td colspan="2"></td></tr>
     <!-- Body Content Begin -->
     <tr><td colspan="2">
-    <?= $body; ?>
+    <?=$body; ?>
     </td>
     </tr>
     <!-- Body Content End -->

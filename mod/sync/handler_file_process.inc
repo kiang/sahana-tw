@@ -1,6 +1,6 @@
 <?php
 /**
- * Library to process files 
+ * Library to process files
  *
  * PHP version 4 and 5
  *
@@ -15,18 +15,13 @@
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  *
  */
-
-
-
-switch($type){
+switch ($type) {
     case 'xml':
-       // include_once("");
-    break;
-    case 'csv':
+        // include_once("");
         
     break;
+    case 'csv':
+    break;
 }
-
-
 ?>
 
