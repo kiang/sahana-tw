@@ -1,0 +1,52 @@
+Change Log for Sahana 0.6.2.2 Update release.
+
+Sahana Setup
+
+    * Fixed password re-appearance on form in the setup if a page has errors.
+    * Added support for hosted environments.
+
+Home 
+
+    * Added an About Sahana page.
+
+Disaster Victims Registry
+
+    * Added validations for the group head when adding new individuals.
+    * Added validation to check numeric values.
+    * Added a block image when person image is not available.
+    * Added confirmation messages with person name instead of person id.
+
+
+Missing Person Registry
+
+    * Fixed image loosing bug when updating a missing person
+    * Re-edit button added to confirmation page of edit missing person
+    * Fixed address loosing bug when updating a missing person
+    * Confirmation message added to remove tracker in edit missing person
+
+Inventory Management System
+
+    * Fixed an unnecessary ACL check when the user wasn't logged in.
+
+
+Organization Registry
+
+    * The organization search now displays [ALL] as the default option in drop down boxes.
+
+
+Volunteer Management
+
+    * Added Internationalization support.
+    * Added option to enable/disable soundex search under 'Advanced Search'.
+    * Fixed skills tree to support non-native language with utf8 character delimiters.
+    * Added paging support to pages which return large number of records.
+    * Added tool to convert template (tpl) files to inc files to support xgettext scripting.
+    * Fixed minor Internet Explorer browser incompatibility problem.
+    * Modified context help messages to be clearer to the user.
+    * Fixed ACL issue with dbsetup.sql script
+
+GIS
+
+    * Show which plugin is selected
+    * Map Display error in Windows
+

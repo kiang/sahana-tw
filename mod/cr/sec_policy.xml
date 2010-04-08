@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<sec_policy xmlns="http://www.sahana.lk/security/policy"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sahana.lk/security/policy sec_policy.xsd">
+	<usercase name="Add Shelter">
+		<functions>
+			<function>shn_cr_cadd_commit_db</function>
+			<function>shn_cr_home_newcmp</function>	
+			<function>shn_cr_rpt_all</function>
+			<function>shn_cr_rpt_rst</function>
+			<function>shn_cr_rpt_loc</function>
+			<function>shn_cr_srch_rst</function>
+			<function>shn_cr_srch_rst_address</function>
+		</functions>
+		<tables>
+			<table perm="cr">camp_general</table>
+			<table perm="cr">camp_reg</table>
+			<table perm="cr">camp_admin</table>
+			<table perm="cr">camp_services</table>
+			<table perm="cr">person_details</table>
+			<table perm="cr">contact</table>			
+			<table perm="cr">field_options</table>
+			<table perm="cr">location</table>			
+		</tables>
+	</usercase>
+
+	<usercase name="Edit Hospital Beds">
+		<functions>			
+			<function>shn_cr_cedt_commit</function>	
+			<function>shn_cr_get_session</function>	
+			<function>_shn_cr_cedt_commit</function>			
+		</functions>
+		<tables>
+			<table perm="rud">hospital_beds</table>	 
+			<table perm="rud">camp_reg</table>
+			<table perm="rud">camp_general</table>	
+			<table perm="rud">contact</table>
+			<table perm="rud">person_details</table>	
+			<table perm="rud">camp_services</table>	
+			<table perm="r">field_options</table>	
+		</tables>
+	</usercase>
+
+	<usercase name="Read Camp Information">
+		<functions>
+			<function>shn_cr_cedt_start</function>			
+		</functions>
+		<tables>
+			<table perm="r">camp_general</table>					
+		</tables>
+	</usercase>
+
+	<usercase name="Location Fetching">
+		<functions>
+			<function>shn_cr_location_string</function>
+			<function>shn_cr_all_view</function>		
+			<function>shn_cr_location_string</function>	
+		</functions>
+		<tables>
+			<table perm="cr">location</table>	
+			<table perm="cr">field_options</table>					
+		</tables>
+	</usercase>
+	
+	<usercase name="Shelter Checklist">
+		<functions>
+			<function>shn_cr_cedt_chk</function>			
+		</functions>
+		<tables>
+			<table perm="r">camp_services</table>					
+		</tables>
+	</usercase>
+
+	<usercase name="Delete Camp">
+		<functions>
+			<function>shn_cr_del_camp</function>
+		</functions>
+		<tables>
+			<table perm="d">camp_general</table>
+			<table perm="d">camp_reg</table>
+			<table perm="d">camp_services</table>			
+		</tables>
+	</usercase>
+	
+</sec_policy>

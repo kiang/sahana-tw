@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<sec_policy xmlns="http://www.sahana.lk/security/policy"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sahana.lk/security/policy sec_policy.xsd">
+
+	<usercase name="Disaster Victim Registration">
+		<functions>
+			<function>shn_dvr_default</function>
+			
+		</functions>
+		<tables>
+				<table perm="r">incident</table>
+		</tables>
+	</usercase>
+	<usercase name="Search For A Person">
+		<functions>
+			<function>shn_dvr_search_individual</function>
+			<function>shn_dvr_search_group</function>
+		</functions>
+		<tables>
+				<table perm="r">person_uuid</table>
+				<table perm="r">person_status</table>
+				<table perm="r">group_details</table>
+				<table perm="r">person_details</table>
+				<table perm="r">identity_to_person</table>
+		</tables>
+	</usercase>
+	<usercase name="Add new individual">
+		<functions>
+			<function>shn_dvr_add_new_indv</function>
+			<function>shn_dvr_add_new_grp</function>
+		</functions>
+		<tables>
+				<table perm="r">resource_to_incident</table>
+				<table perm="r">person_uuid</table>
+				<table perm="r">pgroup</table>
+				<table perm="r">location_details</table>
+				<table perm="r">identity_to_person</table>
+				<table perm="r">person_to_pgroup</table>
+				<table perm="r">group_details</table>
+		</tables>
+	</usercase>
+	<usercase name="Edit an individual">
+		<functions>
+			<function>_shn_dvr_update_individual</function>
+			<function>_shn_dvr_update_group</function>
+		</functions>
+		<tables>
+				<table perm="u">identity_to_person</table>
+				<table perm="u">person_physical</table>
+				<table perm="u">person_uuid</table>
+				<table perm="u">resource_to_shelter</table>
+				<table perm="u">person_details</table>
+				<table perm="u">person_to_report</table>
+				<table perm="u">location_details</table>
+				<table perm="u">pgroup"</table>
+				<table perm="u">gis_location"</table>
+				<table perm="u">group_details></table>
+			
+				
+		</tables>
+	</usercase>
+	<usercase name="Duplicate search">
+		<functions>
+			<function>_shn_duplicate_search_default</function>
+		</functions>
+		<tables>
+				<table perm="r">person_uuid</table>
+				<table perm="r">person_status</table>
+				<table perm="r">group_details</table>
+				<table perm="r">person_details</table>
+				<table perm="r">identity_to_person</table>
+		</tables>
+	</usercase>
+	<usercase name="List groups">
+		<functions>
+			<function>shn_dvr_list_groups</function>
+			
+			
+		</functions>
+		<tables>
+				<table perm="r">group_detsils</table>
+				
+		</tables>
+	</usercase>
+	
+	
+</sec_policy>
+
+ 	  	 
