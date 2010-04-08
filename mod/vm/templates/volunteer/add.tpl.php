@@ -1,7 +1,6 @@
 {if $action!='Save'}
 <h2>_("Volunteer Registry - Thank you for your help!")</h2>
-<b style="color: #369; font-size: 16px">_("To register, fill in as many of the below fields as possible. When you are finished, click \"Submit\".
-Your registration will be confirmed via phone or email.")</b>
+<b style="color: #369; font-size: 16px">_("To register, fill in as many of the below fields as possible. When you are finished, click \"Submit\". Your registration will be confirmed via phone or email.")</b>
 <br /><br />
 {else}
 <h2>_("Edit details")</h2><br />

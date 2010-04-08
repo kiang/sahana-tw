@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-08 20:19+0800\n"
-"PO-Revision-Date: 2010-04-08 20:49+0800\n"
+"POT-Creation-Date: 2010-04-08 21:52+0800\n"
+"PO-Revision-Date: 2010-04-08 21:53+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -189,6 +189,7 @@ msgstr "這是一個自動訊息。"
 #: mod/vm/model/dao.php:823
 #: mod/vm/model/dao.php:883
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:144
+#: tpl_languages.php:116
 msgid "Skills and Work Restrictions"
 msgstr "技能與工作限制"
 
@@ -283,19 +284,28 @@ msgid "Volunteer has been successfully assigned"
 msgstr "已經成功地指派志工"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:10
+#: tpl_languages.php:205
+#: tpl_languages.php:221
 msgid "Personal Information"
 msgstr "個人資訊"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:13
+#: tpl_languages.php:206
+#: tpl_languages.php:222
 msgid "Any ID Number:"
 msgstr "任意編號："
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:14
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:18
+#: tpl_languages.php:100
+#: tpl_languages.php:207
+#: tpl_languages.php:223
 msgid "Name:"
 msgstr "名稱："
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:15
+#: tpl_languages.php:208
+#: tpl_languages.php:226
 msgid "Loose Name Matching"
 msgstr "寬鬆的名稱查詢"
 
@@ -304,18 +314,26 @@ msgid "(May return many unrelated results)"
 msgstr "(也許傳回了許多不相關的結果)"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:18
+#: tpl_languages.php:188
+#: tpl_languages.php:209
+#: tpl_languages.php:230
 msgid "Skills"
 msgstr "技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
+#: tpl_languages.php:210
+#: tpl_languages.php:231
 msgid "Require ALL skills below"
 msgstr "需要下面所有技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
+#: tpl_languages.php:211
+#: tpl_languages.php:232
 msgid "Require ANY skills below"
 msgstr "需要下面任意技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
+#: tpl_languages.php:212
 msgid "Skills Matching:"
 msgstr "查詢技能："
 
@@ -350,21 +368,26 @@ msgstr "查詢技能："
 #: mod/rms/handler_plg_sch.inc:68
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:16
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:16
+#: tpl_languages.php:143
+#: tpl_languages.php:213
 msgid "Search"
 msgstr "搜尋"
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:46
 #: inc/lib_paging.inc:129
+#: tpl_languages.php:244
 msgid "Go to Page No "
 msgstr "前往頁碼："
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:61
 #: inc/lib_paging.inc:137
+#: tpl_languages.php:245
 msgid "Go to Last Page"
 msgstr "前往最後一頁"
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:62
 #: inc/lib_paging.inc:139
+#: tpl_languages.php:246
 msgid "Go to Next Page"
 msgstr "前往下一頁"
 
@@ -428,6 +451,7 @@ msgstr "前往下一頁"
 #: mod/msg/handler_cap_new.inc:187
 #: inc/lib_paging.inc:139
 #: inc/lib_paging.inc:222
+#: tpl_languages.php:247
 msgid "Next"
 msgstr "下一頁"
 
@@ -647,6 +671,8 @@ msgstr "組織領域"
 #: mod/ims/reg_inv.inc:92
 #: mod/ims/view_inv.inc:198
 #: inc/lib_location.inc:1056
+#: tpl_languages.php:56
+#: tpl_languages.php:198
 msgid "Base Location"
 msgstr "基本位置"
 
@@ -715,6 +741,8 @@ msgstr "從下面的按鈕，請點選"
 #: mod/or/process_org.inc:32
 #: mod/or/process_org.inc:37
 #: inc/lib_security/acl_form.inc:248
+#: tpl_languages.php:63
+#: tpl_languages.php:336
 msgid "Continue"
 msgstr "繼續"
 
@@ -730,6 +758,9 @@ msgstr "繼續"
 #: mod/cr/camp.inc:617
 #: mod/msg/handler_cap_edit.inc:46
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:4
+#: tpl_languages.php:7
+#: tpl_languages.php:23
+#: tpl_languages.php:98
 msgid "Edit"
 msgstr "編輯"
 
@@ -826,6 +857,7 @@ msgstr "除了階層式的位置之外，你也可在此填寫組織的詳細地
 #: mod/ims/view_inv.inc:202
 #: mod/dvr/edt_indv.inc:420
 #: mod/dvr/add_new_indv.inc:397
+#: tpl_languages.php:199
 msgid "Contact Information"
 msgstr "聯絡資訊"
 
@@ -1021,6 +1053,8 @@ msgstr "提供服務"
 #: mod/rms/handler_mng_ff.inc:200
 #: mod/rms/lib_rms.inc:843
 #: mod/rms/lib_rms.inc:1336
+#: tpl_languages.php:86
+#: tpl_languages.php:229
 msgid "Location"
 msgstr "地點"
 
@@ -1123,6 +1157,12 @@ msgstr "關閉"
 #: mod/msg/message_forms.inc:233
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:7
 #: inc/lib_security/acl_form.inc:274
+#: tpl_languages.php:6
+#: tpl_languages.php:24
+#: tpl_languages.php:73
+#: tpl_languages.php:99
+#: tpl_languages.php:342
+#: tpl_languages.php:374
 msgid "Delete"
 msgstr "刪除"
 
@@ -1192,6 +1232,7 @@ msgstr "請輸入出生日期 (yyyy-mm-dd) "
 #: mod/or/lib_or.inc:562
 #: mod/ims/lib_ims.inc:297
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:22
+#: tpl_languages.php:101
 msgid "Gender:"
 msgstr "性別："
 
@@ -1235,6 +1276,11 @@ msgstr "選擇您的組織所能提供的服務，也就是您的組織可以在
 #: mod/dvr/search_individual.inc:132
 #: mod/dvr/search_group.inc:136
 #: mod/dvr/search_group.inc:137
+#: tpl_languages.php:20
+#: tpl_languages.php:52
+#: tpl_languages.php:75
+#: tpl_languages.php:251
+#: tpl_languages.php:298
 msgid "Name"
 msgstr "名稱"
 
@@ -1488,6 +1534,7 @@ msgstr "組織登錄會記錄所有在災難地區工作的救難組織。不僅
 #: mod/cr/main_fns.inc:29
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:51
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:51
+#: tpl_languages.php:161
 msgid "Current features include:"
 msgstr "目前的功能包括： "
 
@@ -1678,6 +1725,8 @@ msgstr "新增並移除類型"
 #: mod/msg/class_cap_alert.inc:421
 #: mod/msg/class_cap_alert.inc:438
 #: mod/msg/class_cap_alert.inc:442
+#: tpl_languages.php:287
+#: tpl_languages.php:365
 msgid "Remove"
 msgstr "刪除"
 
@@ -1703,6 +1752,9 @@ msgstr "新增更多"
 #: mod/admin/lc_ui_translate_update.inc:25
 #: mod/dvr/admin.inc:105
 #: inc/lib_security/acl_form.inc:274
+#: tpl_languages.php:19
+#: tpl_languages.php:249
+#: tpl_languages.php:341
 msgid "Update"
 msgstr "更新"
 
@@ -2217,6 +2269,8 @@ msgstr "如果您要選的組織不在這個清單裡，請到組織註冊模組
 #: mod/rms/handler_mng_ff.inc:291
 #: inc/lib_security/auth_form.inc:102
 #: inc/lib_security/auth_form.inc:150
+#: tpl_languages.php:15
+#: tpl_languages.php:57
 msgid "Submit"
 msgstr "送出"
 
@@ -2404,6 +2458,9 @@ msgstr "存貨清單"
 #: mod/rms/handler_mng_ff.inc:199
 #: mod/msg/handler_cap_edit.inc:90
 #: mod/msg/handler_cap_new.inc:81
+#: tpl_languages.php:77
+#: tpl_languages.php:299
+#: tpl_languages.php:314
 msgid "Status"
 msgstr "狀態"
 
@@ -2684,6 +2741,7 @@ msgstr "重新訂購的標準"
 #: mod/ims/optimize.inc:495
 #: mod/ims/view_inv.inc:65
 #: mod/mpr/search.inc:268
+#: tpl_languages.php:39
 msgid "Actions"
 msgstr "動作"
 
@@ -2698,6 +2756,8 @@ msgstr "圓餅圖預測，since"
 #: mod/ims/optimize.inc:1046
 #: mod/ims/ims_report.inc:667
 #: mod/ims/transfer_inv.inc:462
+#: tpl_languages.php:376
+#: tpl_languages.php:387
 msgid "To"
 msgstr "到"
 
@@ -2932,6 +2992,7 @@ msgstr "Inventory From"
 
 #: mod/ims/ims_report.inc:668
 #: mod/ims/transfer_inv.inc:463
+#: tpl_languages.php:377
 msgid "Date Sent"
 msgstr "發送日期"
 
@@ -3415,6 +3476,7 @@ msgstr "駕駛者駕照號碼"
 
 #: mod/ims/transfer_inv.inc:336
 #: mod/msg/message_forms.inc:446
+#: tpl_languages.php:394
 msgid "Send"
 msgstr "發送"
 
@@ -3696,6 +3758,8 @@ msgid "File Name"
 msgstr "檔案名稱"
 
 #: mod/rs/search.inc:138
+#: tpl_languages.php:10
+#: tpl_languages.php:34
 msgid "Title"
 msgstr "標題"
 
@@ -3833,6 +3897,7 @@ msgstr "報表檔案格式"
 
 #: mod/rs/sample.inc:49
 #: mod/rs/sample.inc:117
+#: tpl_languages.php:260
 msgid "Create Report"
 msgstr "建立報表"
 
@@ -3878,6 +3943,13 @@ msgstr "進行精確搜尋"
 #: mod/dvr/add_new_grp.inc:354
 #: mod/dvr/admin.inc:56
 #: mod/msg/handler_cap_new.inc:134
+#: tpl_languages.php:14
+#: tpl_languages.php:21
+#: tpl_languages.php:35
+#: tpl_languages.php:46
+#: tpl_languages.php:55
+#: tpl_languages.php:357
+#: tpl_languages.php:363
 msgid "Description"
 msgstr "描述"
 
@@ -3967,6 +4039,7 @@ msgstr " - 可以設定更新報表和圖表的頻率"
 #: mod/vm/menu.inc:102
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:1
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:1
+#: tpl_languages.php:132
 msgid "Volunteer Management"
 msgstr "志工管理"
 
@@ -3993,12 +4066,14 @@ msgstr "志工"
 #: mod/vm/menu.inc:35
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:7
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:7
+#: tpl_languages.php:137
 msgid "Assign to Project"
 msgstr "指派到專案"
 
 #: mod/vm/menu.inc:36
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:10
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:10
+#: tpl_languages.php:139
 msgid "Show Assigned"
 msgstr "顯示指派狀況"
 
@@ -4026,6 +4101,7 @@ msgstr "新增"
 #: mod/vm/menu.inc:50
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:22
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:22
+#: tpl_languages.php:147
 msgid "View My Projects"
 msgstr "檢視我的專案"
 
@@ -4034,10 +4110,12 @@ msgid "Messaging"
 msgstr "傳訊"
 
 #: mod/vm/menu.inc:62
+#: tpl_languages.php:372
 msgid "Inbox"
 msgstr "收信箱"
 
 #: mod/vm/menu.inc:63
+#: tpl_languages.php:373
 msgid "Outbox"
 msgstr "寄信箱"
 
@@ -4685,6 +4763,12 @@ msgstr "當您在此子目錄下新增了子目錄或子項時，請輸入一個
 #: mod/admin/location.inc:133
 #: mod/rms/handler_req_new.inc:301
 #: mod/rms/handler_plg_new.inc:127
+#: tpl_languages.php:285
+#: tpl_languages.php:358
+#: tpl_languages.php:359
+#: tpl_languages.php:370
+#: tpl_languages.php:371
+#: tpl_languages.php:391
 msgid "Add"
 msgstr "增加"
 
@@ -5222,6 +5306,7 @@ msgstr "備註："
 #: mod/rms/handler_req_sch.inc:216
 #: mod/rms/handler_plg_ls.inc:95
 #: mod/rms/handler_plg_sch.inc:291
+#: tpl_languages.php:304
 msgid "Details"
 msgstr "細節"
 
@@ -5615,6 +5700,7 @@ msgstr "所有事故"
 #: mod/mpr/search.inc:52
 #: mod/dvr/search_individual.inc:124
 #: mod/dvr/search_group.inc:111
+#: tpl_languages.php:217
 msgid "Advanced Search"
 msgstr "進階搜尋"
 
@@ -5652,6 +5738,7 @@ msgstr "記錄"
 #: mod/rms/handler_plg_ls.inc:48
 #: inc/lib_paging.inc:117
 #: inc/lib_paging.inc:208
+#: tpl_languages.php:241
 msgid "Previous"
 msgstr "前一筆"
 
@@ -5708,6 +5795,8 @@ msgstr "稽核"
 
 #: mod/mpr/search.inc:351
 #: mod/mpr/edit.inc:458
+#: tpl_languages.php:76
+#: tpl_languages.php:200
 msgid "Picture"
 msgstr "圖片"
 
@@ -6424,6 +6513,7 @@ msgstr "上傳檔案錯誤：無法繼續匯入。"
 
 #: mod/sync/lib_report.inc:46
 #: mod/admin/lc_db.inc:81
+#: tpl_languages.php:338
 msgid "Table Name"
 msgstr "資料表名稱"
 
@@ -6767,6 +6857,8 @@ msgstr "多重事故管理"
 
 #: mod/pref/ims_menu.inc:9
 #: inc/lib_security/auth_form.inc:204
+#: tpl_languages.php:272
+#: tpl_languages.php:276
 msgid "Change Password"
 msgstr "變更密碼"
 
@@ -6870,6 +6962,7 @@ msgstr "模組名稱"
 #: mod/admin/mmc_main.inc:12
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:60
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:60
+#: tpl_languages.php:166
 msgid "Version"
 msgstr "版本"
 
@@ -8073,6 +8166,7 @@ msgstr "庇護所容量"
 
 #: mod/cr/search.inc:66
 #: mod/cr/search.inc:143
+#: tpl_languages.php:40
 msgid "edit"
 msgstr "編輯"
 
@@ -8330,6 +8424,11 @@ msgstr "服務類型"
 #: mod/cr/edit.inc:436
 #: mod/cr/camp.inc:500
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:67
+#: tpl_languages.php:80
+#: tpl_languages.php:82
+#: tpl_languages.php:104
+#: tpl_languages.php:195
+#: tpl_languages.php:234
 msgid "Availability"
 msgstr "可利用性"
 
@@ -10354,6 +10453,10 @@ msgstr "取消滿足需求的程序"
 
 #: mod/rms/handler_mng_ff.inc:267
 #: mod/rms/lib_rms.inc:490
+#: tpl_languages.php:5
+#: tpl_languages.php:16
+#: tpl_languages.php:58
+#: tpl_languages.php:72
 msgid "Cancel"
 msgstr "取消"
 
@@ -10647,6 +10750,7 @@ msgstr "另存為"
 
 #: mod/msg/handler_cap_edit.inc:109
 #: mod/msg/handler_cap_new.inc:372
+#: tpl_languages.php:392
 msgid "Message"
 msgstr "訊息"
 
@@ -11341,202 +11445,249 @@ msgstr "增加區域"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:2
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:2
+#: tpl_languages.php:133
 msgid "The Volunteer Management module keeps track of projects and volunteers."
 msgstr "志工管理模組用來追蹤專案與志工"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:3
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:3
+#: tpl_languages.php:134
 msgid "Volunteer Portal"
 msgstr "志工站"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:5
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:5
+#: tpl_languages.php:135
 msgid "My information page"
 msgstr "我的資訊"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:5
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:5
+#: tpl_languages.php:136
 msgid "Personal information and time logging."
 msgstr "個人資訊與時間記錄"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:7
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:7
+#: tpl_languages.php:138
 msgid "Manage volunteer assignments"
 msgstr "管理志工分派"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:10
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:10
+#: tpl_languages.php:140
 msgid "View all volunteers assigned to projects"
 msgstr "檢視所有已分派專案的志工"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:13
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:13
+#: tpl_languages.php:141
 msgid "View All Volunteers"
 msgstr "檢視所有志工"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:13
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:13
+#: tpl_languages.php:142
 msgid "View all registered volunteers"
 msgstr "檢視所有註冊的志工"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:16
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:16
+#: tpl_languages.php:144
 msgid "Search for a volunteer"
 msgstr "搜尋志工"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:19
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:19
+#: tpl_languages.php:145
 msgid "Add New Project"
 msgstr "新增專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:19
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:19
+#: tpl_languages.php:146
 msgid "Start a new project"
 msgstr "開始一個新專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:22
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:22
+#: tpl_languages.php:148
 msgid "View all projects you are currently assigned to"
 msgstr "檢視所有參與的專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:25
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:25
+#: tpl_languages.php:149
 msgid "View All Projects"
 msgstr "檢視所有專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:25
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:25
+#: tpl_languages.php:150
 msgid "View all projects being tracked"
 msgstr "檢視所有被追蹤的專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:28
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:28
+#: tpl_languages.php:151
 msgid "Generate report"
 msgstr "產生報表"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:28
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:28
+#: tpl_languages.php:152
 msgid "Generate customized report on volunteers and projects"
 msgstr "產生志工與專案的自訂報表"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:31
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:31
+#: tpl_languages.php:153
 msgid "Register to VM"
 msgstr "註冊到志工管理"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:31
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:31
+#: tpl_languages.php:154
 msgid "Register yourself in Volunteer Management module"
 msgstr "在志工管理模組註冊你自己"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:35
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:35
+#: tpl_languages.php:155
 msgid "Send messages"
 msgstr "發送訊息"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:37
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:37
+#: tpl_languages.php:156
 msgid "Send messages to other users"
 msgstr "發送訊息給其他使用者"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:43
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:43
+#: tpl_languages.php:157
 msgid "Current projects"
 msgstr "目前專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:46
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:46
+#: tpl_languages.php:158
 msgid "You are not assigned to any project."
 msgstr "你目前沒有被指派任何專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:48
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:48
+#: tpl_languages.php:159
 msgid "Click here"
 msgstr "點選這裡"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:48
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:48
+#: tpl_languages.php:160
 msgid "to view your projects"
 msgstr "檢視你的專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:54
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:54
+#: tpl_languages.php:162
 msgid "Manage volunteer assignment"
 msgstr "管理志工分派"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:55
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:55
+#: tpl_languages.php:163
 msgid "Start and view projects"
 msgstr "開始與檢視專案"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:56
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:56
+#: tpl_languages.php:164
 msgid "Search volunteers"
 msgstr "搜尋志工"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:57
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:57
+#: tpl_languages.php:165
 msgid "Send and receive messages"
 msgstr "發送與接收訊息"
 
 #: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:60
 #: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:60
+#: tpl_languages.php:167
 msgid "Last Modified"
 msgstr "最後更新"
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:47
+#: tpl_languages.php:102
 msgid "Date of Birth:"
 msgstr "生日："
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:54
+#: tpl_languages.php:103
 msgid "Contact Info"
 msgstr "連絡資訊"
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:70
+#: tpl_languages.php:105
 msgid "Work Begin:"
 msgstr "工作開始："
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:74
+#: tpl_languages.php:106
 msgid "Work End:"
 msgstr "工作結束："
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:79
+#: tpl_languages.php:107
 msgid "Work Hour Begin:"
 msgstr "工作開始時間："
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:85
+#: tpl_languages.php:108
 msgid "Work Hour End:"
 msgstr "工作結束時間："
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:92
+#: tpl_languages.php:109
+#: tpl_languages.php:184
 msgid "Work Details"
 msgstr "工作細節"
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:96
+#: tpl_languages.php:110
 msgid "Occupation:"
 msgstr "職業："
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:102
+#: tpl_languages.php:111
 msgid "Affiliation:"
 msgstr "會籍："
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:111
+#: tpl_languages.php:50
+#: tpl_languages.php:112
+#: tpl_languages.php:252
 msgid "Project"
 msgstr "專案"
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:112
+#: tpl_languages.php:113
+#: tpl_languages.php:253
 msgid "Position"
 msgstr "職稱"
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:113
+#: tpl_languages.php:114
 msgid "Log Time"
 msgstr "記錄時間"
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:127
+#: tpl_languages.php:115
 msgid "Log time"
 msgstr "記錄時間"
 
 #: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:151
+#: tpl_languages.php:117
 msgid "Special Needs:"
 msgstr "特殊需求："
 
@@ -11728,6 +11879,8 @@ msgid "Enable"
 msgstr "啟用"
 
 #: inst/setup.inc:299
+#: tpl_languages.php:334
+#: tpl_languages.php:337
 msgid "Access Control"
 msgstr "權限控制"
 
@@ -12038,10 +12191,12 @@ msgid "Data Classifications"
 msgstr "資料分類"
 
 #: inc/lib_security/acl_form.inc:274
+#: tpl_languages.php:339
 msgid "Create"
 msgstr "新建"
 
 #: inc/lib_security/acl_form.inc:274
+#: tpl_languages.php:340
 msgid "Read"
 msgstr "讀取"
 
@@ -12067,6 +12222,8 @@ msgstr "<strong>禁用</strong> - 該使用者無法使用本系統，直到永�
 
 #: inc/lib_security/acl_form.inc:374
 #: inc/lib_security/acl_form.inc:439
+#: tpl_languages.php:305
+#: tpl_languages.php:315
 msgid "Active"
 msgstr "活動中"
 
@@ -12339,6 +12496,8 @@ msgid "Submission Successful"
 msgstr "送出成功"
 
 #: inc/lib_stream_html.inc:80
+#: tpl_languages.php:361
+#: tpl_languages.php:366
 msgid "Warning"
 msgstr "警告"
 
@@ -12353,19 +12512,23 @@ msgid "Page "
 msgstr "頁"
 
 #: inc/lib_paging.inc:117
+#: tpl_languages.php:240
 msgid "Go to Previous Page"
 msgstr "到前一頁"
 
 #: inc/lib_paging.inc:118
+#: tpl_languages.php:242
 msgid "Go to First Page"
 msgstr "前往第一頁"
 
 #: inc/lib_paging.inc:118
+#: tpl_languages.php:243
 msgid "1"
 msgstr "1"
 
 #: inc/lib_paging.inc:147
 #: inc/lib_paging.inc:227
+#: tpl_languages.php:248
 msgid "Records per page"
 msgstr "每頁資料筆數"
 
@@ -12610,6 +12773,1000 @@ msgstr "Sahana 主選單"
 msgid "Switch back to"
 msgstr "切換到"
 
+#: tpl_languages.php:2
+#, fuzzy
+msgid "Delete Project"
+msgstr "刪除客戶"
+
+#: tpl_languages.php:3
+#, fuzzy
+msgid "Are you sure you want to remove"
+msgstr "您確定要登出？"
+
+#: tpl_languages.php:4
+#, fuzzy
+msgid "from the system?"
+msgstr "系統設置"
+
+#: tpl_languages.php:8
+#, fuzzy
+msgid "Add Position"
+msgstr "新增到"
+
+#: tpl_languages.php:9
+#, fuzzy
+msgid "Position Information"
+msgstr "輸入資料"
+
+#: tpl_languages.php:11
+#, fuzzy
+msgid "Position Type :"
+msgstr "銷售類別"
+
+#: tpl_languages.php:12
+#, fuzzy
+msgid "Hourly Pay Rate"
+msgstr "每公斤費率"
+
+#: tpl_languages.php:13
+#, fuzzy
+msgid "Target Number of Volunteers"
+msgstr "銀行帳號"
+
+#: tpl_languages.php:17
+#, fuzzy
+msgid "Modify Task"
+msgstr "修改列"
+
+#: tpl_languages.php:18
+msgid "Task"
+msgstr ""
+
+#: tpl_languages.php:22
+#, fuzzy
+msgid "no projects"
+msgstr "沒有開發中發票"
+
+#: tpl_languages.php:25
+#: tpl_languages.php:59
+#, fuzzy
+msgid "Assign Volunteers"
+msgstr "志工"
+
+#: tpl_languages.php:26
+#, fuzzy
+msgid "Refresh"
+msgstr "刷新查詢"
+
+#: tpl_languages.php:27
+#, fuzzy
+msgid "Project Name :"
+msgstr "科目名稱"
+
+#: tpl_languages.php:28
+#: tpl_languages.php:196
+#, fuzzy
+msgid "Start Date :"
+msgstr "開始日期"
+
+#: tpl_languages.php:29
+#: tpl_languages.php:197
+#, fuzzy
+msgid "End Date :"
+msgstr "結束日期"
+
+#: tpl_languages.php:30
+#, fuzzy
+msgid "Location :"
+msgstr "地點"
+
+#: tpl_languages.php:31
+#, fuzzy
+msgid "Volunteers assigned :"
+msgstr "指定稅"
+
+#: tpl_languages.php:32
+#: tpl_languages.php:43
+#: tpl_languages.php:318
+#, fuzzy
+msgid "Positions"
+msgstr "職稱"
+
+#: tpl_languages.php:33
+#, fuzzy
+msgid "# Volunteers"
+msgstr "志工"
+
+#: tpl_languages.php:36
+#, fuzzy
+msgid "Pay Rate"
+msgstr "匯率"
+
+#: tpl_languages.php:37
+msgid "Target"
+msgstr ""
+
+#: tpl_languages.php:38
+#: tpl_languages.php:90
+#, fuzzy
+msgid "Assigned"
+msgstr "指定稅"
+
+#: tpl_languages.php:41
+#, fuzzy
+msgid "remove"
+msgstr "移除"
+
+#: tpl_languages.php:42
+#: tpl_languages.php:45
+#, fuzzy
+msgid "Add a position"
+msgstr "新增到"
+
+#: tpl_languages.php:44
+#, fuzzy
+msgid "There are no positions assigned to"
+msgstr "還沒有設定任何報表！"
+
+#: tpl_languages.php:47
+#, fuzzy
+msgid "Specialties needed"
+msgstr "特殊需求："
+
+#: tpl_languages.php:48
+#, fuzzy
+msgid "Volunteers working on"
+msgstr "受約帳號"
+
+#: tpl_languages.php:49
+#, fuzzy
+msgid "No volunteers are currently assigned to"
+msgstr "檢視所有參與的專案"
+
+#: tpl_languages.php:51
+#, fuzzy
+msgid "Project Information"
+msgstr "輸入資料"
+
+#: tpl_languages.php:53
+#: tpl_languages.php:237
+#, fuzzy
+msgid "Start date :"
+msgstr "開始日期"
+
+#: tpl_languages.php:54
+#: tpl_languages.php:238
+#, fuzzy
+msgid "End date :"
+msgstr "結束日期"
+
+#: tpl_languages.php:60
+#, fuzzy
+msgid "You are currently not assigned as a site manager to any projects."
+msgstr "你目前沒有被指派任何專案"
+
+#: tpl_languages.php:61
+#, fuzzy
+msgid "First please select a project to assign to:"
+msgstr "請選擇一個專案"
+
+#: tpl_languages.php:62
+#, fuzzy
+msgid "Project to assign to"
+msgstr "返回目錄"
+
+#: tpl_languages.php:64
+#: tpl_languages.php:66
+#, fuzzy
+msgid "Date:"
+msgstr "日期"
+
+#: tpl_languages.php:65
+#: tpl_languages.php:67
+#, fuzzy
+msgid "Time:"
+msgstr "交貨需時"
+
+#: tpl_languages.php:68
+#, fuzzy
+msgid "now"
+msgstr "現在搜尋"
+
+#: tpl_languages.php:69
+#, fuzzy
+msgid "or # hours:"
+msgstr "或這個字元"
+
+#: tpl_languages.php:70
+#, fuzzy
+msgid "Delete Volunteer"
+msgstr "刪除客戶"
+
+#: tpl_languages.php:71
+#, fuzzy
+msgid "Are you sure you want to retire"
+msgstr "您確定要登出？"
+
+#: tpl_languages.php:74
+#, fuzzy
+msgid "Volunteers to Assign"
+msgstr "返回目錄"
+
+#: tpl_languages.php:78
+#: tpl_languages.php:300
+#: tpl_languages.php:317
+#, fuzzy
+msgid "Affiliation"
+msgstr "會籍："
+
+#: tpl_languages.php:79
+#, fuzzy
+msgid "Project - Position"
+msgstr "專案"
+
+#: tpl_languages.php:81
+#, fuzzy
+msgid "Start"
+msgstr "開始日期"
+
+#: tpl_languages.php:83
+#, fuzzy
+msgid "End"
+msgstr "完結:"
+
+#: tpl_languages.php:84
+#, fuzzy
+msgid "Hours"
+msgstr "遊客"
+
+#: tpl_languages.php:85
+#, fuzzy
+msgid "Identification"
+msgstr "資訊"
+
+#: tpl_languages.php:87
+#, fuzzy
+msgid "Specialties"
+msgstr "特殊需求："
+
+#: tpl_languages.php:88
+#, fuzzy
+msgid "Assign"
+msgstr "顯示指派狀況"
+
+#: tpl_languages.php:89
+#, fuzzy
+msgid "Remove From Project"
+msgstr "客戶編號開始"
+
+#: tpl_languages.php:91
+#, fuzzy
+msgid "Unassigned"
+msgstr "顯示指派狀況"
+
+#: tpl_languages.php:92
+#: tpl_languages.php:307
+#, fuzzy
+msgid "Position:"
+msgstr "職稱"
+
+#: tpl_languages.php:93
+#, fuzzy
+msgid "Assign this Volunteer"
+msgstr "請補償此"
+
+#: tpl_languages.php:94
+msgid "To assign another volunteer, you must perform another search because no other volunteers match the current search criteria"
+msgstr ""
+
+#: tpl_languages.php:95
+msgid "No volunteers were found. Please refine your criteria and try again"
+msgstr ""
+
+#: tpl_languages.php:96
+msgid "Alternatively, you can try the"
+msgstr ""
+
+#: tpl_languages.php:97
+#, fuzzy
+msgid "specifying 'Loose Name Matching'"
+msgstr "寬鬆的名稱查詢"
+
+#: tpl_languages.php:118
+#, fuzzy
+msgid "Approve Site Managers"
+msgstr "網站管理者"
+
+#: tpl_languages.php:119
+msgid "Current or Previous Applicants"
+msgstr ""
+
+#: tpl_languages.php:120
+msgid "There are no managers to approve or revoke manager approval from."
+msgstr ""
+
+#: tpl_languages.php:121
+#, fuzzy
+msgid "Current Status"
+msgstr "狀況代號"
+
+#: tpl_languages.php:122
+msgid "Approve"
+msgstr ""
+
+#: tpl_languages.php:123
+msgid "Deny / Revoke"
+msgstr ""
+
+#: tpl_languages.php:124
+#, fuzzy
+msgid "Volunteer"
+msgstr "志工"
+
+#: tpl_languages.php:125
+msgid "Approved"
+msgstr ""
+
+#: tpl_languages.php:126
+#, fuzzy
+msgid "Denied"
+msgstr "允可被拒報表"
+
+#: tpl_languages.php:127
+#, fuzzy
+msgid "Unapproved"
+msgstr "已經審核通過"
+
+#: tpl_languages.php:128
+#, fuzzy
+msgid "Revoke"
+msgstr "刪除"
+
+#: tpl_languages.php:129
+msgid "Deny"
+msgstr ""
+
+#: tpl_languages.php:130
+#, fuzzy
+msgid "Upgrade Non-Applicants"
+msgstr "不存在項目"
+
+#: tpl_languages.php:131
+msgid "Upgrade this Volunteer to Site Manager Status"
+msgstr ""
+
+#: tpl_languages.php:168
+msgid "Volunteer Registry - Thank you for your help!"
+msgstr ""
+
+#: tpl_languages.php:169
+msgid "To register, fill in as many of the below fields as possible. When you are finished, click \"Submit\". Your registration will be confirmed via phone or email."
+msgstr ""
+
+#: tpl_languages.php:170
+#, fuzzy
+msgid "Edit details"
+msgstr "詳細資料"
+
+#: tpl_languages.php:171
+#, fuzzy
+msgid "Personal Details"
+msgstr "詳細資料"
+
+#: tpl_languages.php:172
+#, fuzzy
+msgid "Name in Full :"
+msgstr "名稱內的文字"
+
+#: tpl_languages.php:173
+#, fuzzy
+msgid "Date of Birth :"
+msgstr "派送日期"
+
+#: tpl_languages.php:174
+msgid "Male"
+msgstr "男性"
+
+#: tpl_languages.php:175
+msgid "Female"
+msgstr "女性"
+
+#: tpl_languages.php:176
+#, fuzzy
+msgid "Gender :"
+msgstr "性別："
+
+#: tpl_languages.php:177
+#, fuzzy
+msgid "Type of Identification :"
+msgstr "銷售類別"
+
+#: tpl_languages.php:178
+#, fuzzy
+msgid "Identification Number :"
+msgstr "科目代號"
+
+#: tpl_languages.php:179
+#, fuzzy
+msgid "Create a Sahana account"
+msgstr "檢閱二級科目"
+
+#: tpl_languages.php:180
+msgid "Remember this information, because you will use it to log into Sahana."
+msgstr ""
+
+#: tpl_languages.php:181
+#, fuzzy
+msgid "Username :"
+msgstr "使用者名稱"
+
+#: tpl_languages.php:182
+#, fuzzy
+msgid "Password :"
+msgstr "密碼"
+
+#: tpl_languages.php:183
+#, fuzzy
+msgid "Re-Type Password :"
+msgstr "FTP 伺服器密碼"
+
+#: tpl_languages.php:185
+#, fuzzy
+msgid "Affiliation :"
+msgstr "會籍："
+
+#: tpl_languages.php:186
+msgid "Organizations are populated through the Organization Registry module. Contact an administrator if you do not see your organization."
+msgstr ""
+
+#: tpl_languages.php:187
+#, fuzzy
+msgid "Occupation :"
+msgstr "職業："
+
+#: tpl_languages.php:189
+#, fuzzy
+msgid "Please select your skills and limitations below."
+msgstr "請選擇目前的位置"
+
+#: tpl_languages.php:190
+msgid "NOTE: Selecting a category will select all options below it."
+msgstr ""
+
+#: tpl_languages.php:191
+msgid "When you select a checkbox that has a "
+msgstr ""
+
+#: tpl_languages.php:192
+msgid " next to it, you are selecting all options that fall under that category. For this reason, make sure that you review the options you select by expanding until you see a "
+msgstr ""
+
+#: tpl_languages.php:193
+msgid "Optionally, you may enter any special needs. Please use commas to separate multiple needs:"
+msgstr ""
+
+#: tpl_languages.php:194
+#, fuzzy
+msgid "Special needs:"
+msgstr "特殊訂單"
+
+#: tpl_languages.php:201
+msgid "Optionally, you may upload a picture to identify yourself."
+msgstr ""
+
+#: tpl_languages.php:202
+#, fuzzy
+msgid "Image file:"
+msgstr "圖片檔案 (.JPG)"
+
+#: tpl_languages.php:203
+#, fuzzy
+msgid "Current picture"
+msgstr "現在的或是停售"
+
+#: tpl_languages.php:204
+#: tpl_languages.php:219
+#, fuzzy
+msgid "Please enter at least one field below:"
+msgstr "請輸入至少一個搜尋欄位"
+
+#: tpl_languages.php:214
+#, fuzzy
+msgid "Advanced Search Criteria"
+msgstr "搜尋採購訂單"
+
+#: tpl_languages.php:215
+#, fuzzy
+msgid "Back to Basic Search"
+msgstr "返回銷售訂單"
+
+#: tpl_languages.php:216
+#, fuzzy
+msgid "Basic Search Criteria"
+msgstr "搜尋採購訂單"
+
+#: tpl_languages.php:218
+msgid "Search results are returned only if they match ALL selected fields."
+msgstr ""
+
+#: tpl_languages.php:220
+msgid "Filter volunteer results by any one of the following fields:"
+msgstr ""
+
+#: tpl_languages.php:224
+#, fuzzy
+msgid "advanced"
+msgstr "進階搜尋"
+
+#: tpl_languages.php:225
+#, fuzzy
+msgid "Options"
+msgstr "選項"
+
+#: tpl_languages.php:227
+msgid "Find similar sounding names"
+msgstr ""
+
+#: tpl_languages.php:228
+#, fuzzy
+msgid "Show only unassigned"
+msgstr "只顯示各戶的"
+
+#: tpl_languages.php:233
+#, fuzzy
+msgid "and_skills"
+msgstr " 開始的 "
+
+#: tpl_languages.php:235
+msgid "Volunteer must be available for the ENTIRE time specified below"
+msgstr ""
+
+#: tpl_languages.php:236
+msgid "Volunteer must be available for ANY PORTION of the time specified below"
+msgstr ""
+
+#: tpl_languages.php:239
+#, fuzzy
+msgid "Page"
+msgstr "頁"
+
+#: tpl_languages.php:250
+#, fuzzy
+msgid "hours for review on"
+msgstr "在手上的這零件"
+
+#: tpl_languages.php:254
+#, fuzzy
+msgid "Pay Rate "
+msgstr "匯率"
+
+#: tpl_languages.php:255
+#, fuzzy
+msgid "Start "
+msgstr "開始日期"
+
+#: tpl_languages.php:256
+#, fuzzy
+msgid "End "
+msgstr "完結:"
+
+#: tpl_languages.php:257
+msgid "Approved:"
+msgstr ""
+
+#: tpl_languages.php:258
+#, fuzzy
+msgid "Denied:"
+msgstr "允可被拒報表"
+
+#: tpl_languages.php:259
+#, fuzzy
+msgid "Report on My Projects"
+msgstr "稅務參考"
+
+#: tpl_languages.php:261
+#, fuzzy
+msgid "Create Custom Report"
+msgstr "年度供應商報表"
+
+#: tpl_languages.php:262
+msgid "Filter by Project, Organization, or Both"
+msgstr ""
+
+#: tpl_languages.php:263
+#, fuzzy
+msgid "By Project:"
+msgstr "簽署人"
+
+#: tpl_languages.php:264
+#, fuzzy
+msgid "By Organization:"
+msgstr "簽署人"
+
+#: tpl_languages.php:265
+#, fuzzy
+msgid "Create Project or Organization Report"
+msgstr "組織報告是由 "
+
+#: tpl_languages.php:266
+#, fuzzy
+msgid "Report by Specific Volunteers"
+msgstr "回報已尋獲人員"
+
+#: tpl_languages.php:267
+msgid "To add a volunteer to the list, select one in the 'List of Volunteers' below and click on 'Add'."
+msgstr ""
+
+#: tpl_languages.php:268
+msgid "To remove a volunteer from the list, click on the remove link next to his name."
+msgstr ""
+
+#: tpl_languages.php:269
+#: tpl_languages.php:390
+#, fuzzy
+msgid "List of Volunteers :"
+msgstr "價格表"
+
+#: tpl_languages.php:270
+msgid "Create Custom Report for these Volunteers"
+msgstr ""
+
+#: tpl_languages.php:271
+#, fuzzy
+msgid "You must select at least one volunteer if reporting by volunteer."
+msgstr "請選擇將訊息至少傳給一個志願者"
+
+#: tpl_languages.php:273
+#, fuzzy
+msgid "Current Password :"
+msgstr "新密碼"
+
+#: tpl_languages.php:274
+#, fuzzy
+msgid "New Password :"
+msgstr "新密碼"
+
+#: tpl_languages.php:275
+#, fuzzy
+msgid "Re-Type New Password :"
+msgstr "重設密碼"
+
+#: tpl_languages.php:277
+msgid "Pending Hours Approval"
+msgstr ""
+
+#: tpl_languages.php:278
+#, fuzzy
+msgid "Name :"
+msgstr "名稱"
+
+#: tpl_languages.php:279
+#, fuzzy
+msgid "Project :"
+msgstr "專案"
+
+#: tpl_languages.php:280
+#, fuzzy
+msgid "View Hours"
+msgstr "檢視期間"
+
+#: tpl_languages.php:281
+#, fuzzy
+msgid "Skills Modifications"
+msgstr "查詢技能："
+
+#: tpl_languages.php:282
+#, fuzzy
+msgid "Add a new skill"
+msgstr "新增客戶"
+
+#: tpl_languages.php:283
+#, fuzzy
+msgid "Skill Description :"
+msgstr "科目名稱"
+
+#: tpl_languages.php:284
+msgid "Code [4-5 letter unique abbreviation] : "
+msgstr ""
+
+#: tpl_languages.php:286
+#, fuzzy
+msgid "No skills defined."
+msgstr "沒有定義貨運商"
+
+#: tpl_languages.php:288
+msgid "In order to begin, please log in using the Sahana account you just created."
+msgstr ""
+
+#: tpl_languages.php:289
+#: tpl_languages.php:290
+msgid "View Printer Friendly Version"
+msgstr ""
+
+#: tpl_languages.php:291
+#, fuzzy
+msgid "Viewing Report For"
+msgstr "(的) 稅報表"
+
+#: tpl_languages.php:292
+#, fuzzy
+msgid "Specific Volunteers"
+msgstr "搜尋志工"
+
+#: tpl_languages.php:293
+#, fuzzy
+msgid "All Volunteers Part of Organization:"
+msgstr "組織的網站"
+
+#: tpl_languages.php:294
+#, fuzzy
+msgid "Restricting Results by Project:"
+msgstr "限制 [受限]"
+
+#: tpl_languages.php:295
+#: tpl_languages.php:312
+#, fuzzy
+msgid "Project:"
+msgstr "專案"
+
+#: tpl_languages.php:296
+#, fuzzy
+msgid "Organization:"
+msgstr "組織"
+
+#: tpl_languages.php:297
+msgid "All Volunteers that Ever Worked on any Projects"
+msgstr ""
+
+#: tpl_languages.php:301
+#, fuzzy
+msgid "Total Positions Held"
+msgstr "只有凍結的帳號"
+
+#: tpl_languages.php:302
+#: tpl_languages.php:319
+#: tpl_languages.php:322
+#, fuzzy
+msgid "Total Hours"
+msgstr "總成本"
+
+#: tpl_languages.php:303
+#: tpl_languages.php:323
+#, fuzzy
+msgid "Total Monetary Value"
+msgstr "最後總計價值"
+
+#: tpl_languages.php:306
+#: tpl_languages.php:316
+#, fuzzy
+msgid "Retired"
+msgstr "已接收"
+
+#: tpl_languages.php:308
+#, fuzzy
+msgid "Position Status:"
+msgstr "狀況代號"
+
+#: tpl_languages.php:309
+msgid "Hours:"
+msgstr ""
+
+#: tpl_languages.php:310
+#, fuzzy
+msgid "Hourly Rate:"
+msgstr "匯率"
+
+#: tpl_languages.php:311
+#, fuzzy
+msgid "Monetary Value:"
+msgstr "總價值"
+
+#: tpl_languages.php:313
+#, fuzzy
+msgid "no positions held"
+msgstr "只有凍結的帳號"
+
+#: tpl_languages.php:320
+#, fuzzy
+msgid "Total Payment"
+msgstr "付款總數"
+
+#: tpl_languages.php:321
+#, fuzzy
+msgid "none"
+msgstr "這是沒有"
+
+#: tpl_languages.php:324
+#, fuzzy
+msgid "Administrative Functions"
+msgstr "行政設施"
+
+#: tpl_languages.php:325
+msgid "The following is a description of each administrative function for the VM module"
+msgstr ""
+
+#: tpl_languages.php:326
+#: tpl_languages.php:349
+#, fuzzy
+msgid "Access Control Modifications"
+msgstr "(的)序號化控制"
+
+#: tpl_languages.php:327
+msgid "Modify how access to the VM module is handled"
+msgstr ""
+
+#: tpl_languages.php:328
+#: tpl_languages.php:350
+#, fuzzy
+msgid "Update Search Registry"
+msgstr "搜尋採購訂單"
+
+#: tpl_languages.php:329
+msgid "Since a volunteer's name may change in other places in Sahana, you may have to periodically update the search registry with current sounds-like name matching for volunteer searching"
+msgstr ""
+
+#: tpl_languages.php:330
+#: tpl_languages.php:351
+#, fuzzy
+msgid "Clear Template Cache"
+msgstr "選取循環訂單範本"
+
+#: tpl_languages.php:331
+msgid "Delete all PHP templates that have been cached"
+msgstr ""
+
+#: tpl_languages.php:332
+#: tpl_languages.php:352
+#, fuzzy
+msgid "Audit ACL"
+msgstr "稽核"
+
+#: tpl_languages.php:333
+msgid "Verify that all 'act' and 'vm_action' combinations in the VM code are under access control and that all VM tables/views are classified"
+msgstr ""
+
+#: tpl_languages.php:335
+#, fuzzy
+msgid "Please select a situation below to modify access to:"
+msgstr "請指定一個情境，以修改存取"
+
+#: tpl_languages.php:343
+#, fuzzy
+msgid "Remove From List"
+msgstr "或在清單中選取運輸"
+
+#: tpl_languages.php:344
+#, fuzzy
+msgid "Special Constraints"
+msgstr "特殊訂單"
+
+#: tpl_languages.php:345
+#, fuzzy
+msgid "on"
+msgstr "於"
+
+#: tpl_languages.php:346
+#, fuzzy
+msgid "Save Changes"
+msgstr "儲存修改"
+
+#: tpl_languages.php:347
+#, fuzzy
+msgid "Cancel Changes"
+msgstr "儲存修改"
+
+#: tpl_languages.php:348
+#, fuzzy
+msgid "VM Admin Home"
+msgstr "管理首頁"
+
+#: tpl_languages.php:353
+#, fuzzy
+msgid "ACL Audit"
+msgstr "稽核"
+
+#: tpl_languages.php:354
+msgid "All access requests in the database and in the VM code match."
+msgstr ""
+
+#: tpl_languages.php:355
+#, fuzzy
+msgid "Warning:"
+msgstr "警告"
+
+#: tpl_languages.php:356
+msgid "The following requests in the VM code are not under access control:"
+msgstr ""
+
+#: tpl_languages.php:360
+#, fuzzy
+msgid "Please enter a description"
+msgstr "請重新輸入"
+
+#: tpl_languages.php:362
+#, fuzzy
+msgid "The following requests in the database are never referenced"
+msgstr "在資料庫中沒有符合您條件的需求"
+
+#: tpl_languages.php:364
+#, fuzzy
+msgid "Remove From Database"
+msgstr "從資料庫，因為"
+
+#: tpl_languages.php:367
+msgid "The following database tables/views have not been given any classification level"
+msgstr ""
+
+#: tpl_languages.php:368
+#, fuzzy
+msgid "Table"
+msgstr "啟用"
+
+#: tpl_languages.php:369
+#, fuzzy
+msgid "Classification Level"
+msgstr "活躍層次"
+
+#: tpl_languages.php:375
+#, fuzzy
+msgid "From"
+msgstr "由"
+
+#: tpl_languages.php:378
+#, fuzzy
+msgid "Preview"
+msgstr "前一筆"
+
+#: tpl_languages.php:379
+#: tpl_languages.php:385
+#, fuzzy
+msgid "Are you sure you want to delete this message?"
+msgstr "您確定要刪除這個分公司？"
+
+#: tpl_languages.php:380
+#, fuzzy
+msgid "Your"
+msgstr "您的參考號"
+
+#: tpl_languages.php:381
+#, fuzzy
+msgid "is empty"
+msgstr "這是"
+
+#: tpl_languages.php:382
+#, fuzzy
+msgid "Message not found."
+msgstr "在資料庫中找不到"
+
+#: tpl_languages.php:383
+#, fuzzy
+msgid "Back to Inbox"
+msgstr "返回目錄"
+
+#: tpl_languages.php:384
+#, fuzzy
+msgid "Back to Outbox"
+msgstr "返回目錄"
+
+#: tpl_languages.php:386
+#, fuzzy
+msgid "Delete this message"
+msgstr "刪除這項目"
+
+#: tpl_languages.php:388
+#, fuzzy
+msgid "To List:"
+msgstr "價格表"
+
+#: tpl_languages.php:389
+msgid "To add a volunteer to the 'To' list, select one in the 'List of Volunteers' below and click on 'Add'. To remove a volunteer from the 'To' list, click on the remove link next to his name."
+msgstr ""
+
+#: tpl_languages.php:393
+#, fuzzy
+msgid "Message :"
+msgstr "訊息"
+
 #~ msgid "mod_gis_situation_name_help"
 #~ msgstr "mod_gis_situation_name_help"
 #~ msgid "mod_gis_situation_type_help"
@@ -12689,8 +13846,6 @@ msgstr "切換到"
 #~ msgstr "僧侶"
 #~ msgid "General"
 #~ msgstr "一般"
-#~ msgid "Person Status"
-#~ msgstr "個人狀態"
 #~ msgid "Damage Status"
 #~ msgstr "損害狀態"
 #~ msgid "Disaster Status"
@@ -12891,16 +14046,12 @@ msgstr "切換到"
 #~ msgstr "限制-不會游泳者"
 #~ msgid "Restriction-Handicapped"
 #~ msgstr "限制-身障"
-#~ msgid "Site Manager"
-#~ msgstr "網站管理者"
 #~ msgid "family"
 #~ msgstr "家庭"
 #~ msgid "company"
 #~ msgstr "公司"
 #~ msgid "society"
 #~ msgstr "社會"
-#~ msgid "tourists"
-#~ msgstr "遊客"
 #~ msgid "other"
 #~ msgstr "其他"
 #~ msgid "==Select Option=="
@@ -12917,12 +14068,6 @@ msgstr "切換到"
 #~ msgstr "受傷"
 #~ msgid "Deceased"
 #~ msgstr "已故"
-#~ msgid "Unknown"
-#~ msgstr "未知"
-#~ msgid "Male"
-#~ msgstr "男性"
-#~ msgid "Female"
-#~ msgstr "女性"
 #~ msgid "Father"
 #~ msgstr "父親"
 #~ msgid "Mother"
@@ -13033,8 +14178,6 @@ msgstr "切換到"
 #~ msgstr "臨時避難所"
 #~ msgid "Government Evacuation Center"
 #~ msgstr "政府疏散中心"
-#~ msgid "Administrative Facilities"
-#~ msgstr "行政設施"
 #~ msgid "Sanitation Facilities"
 #~ msgstr "衛生設施"
 #~ msgid "Water Facilities"
@@ -13069,8 +14212,6 @@ msgstr "切換到"
 #~ msgstr "教育"
 #~ msgid "Country"
 #~ msgstr "國家"
-#~ msgid "State"
-#~ msgstr "州/省"
 #~ msgid "City"
 #~ msgstr "城市"
 #~ msgid "depth"

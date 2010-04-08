@@ -140,9 +140,7 @@ function addToList(value, text)
 	array
 		(
 			'br' => true,
-			'help' => _('To add a volunteer to the \'To\' list, select one in the \'List of Volunteers\' below and click on \'Add\'.
-			
-			To remove a volunteer from the \'To\' list, click on the remove link next to his name.')
+			'help' => _('To add a volunteer to the \'To\' list, select one in the \'List of Volunteers\' below and click on \'Add\'. To remove a volunteer from the \'To\' list, click on the remove link next to his name.')
 		));
 {/php}
 
