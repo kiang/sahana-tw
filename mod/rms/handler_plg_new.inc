@@ -179,7 +179,8 @@ function _shn_rms_get_subcat($cat_id) {
         shn_form_select($categories, _("Sub Category"), 'category', "onChange='makeRequest(\"stream.php?mod=rms&amp;act=plg_new&amp;seq=ax_sub_cat\",this.value,\"subcat\")'", array('req' => true, 'value' => $category));
     }
 }
-switch ($_REQUEST['seq']) {
+$seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+switch ($seq) {
     case '':
         $_SESSION['rms_items'] = null;
         $_SESSION['rms_plg_added'] = null;

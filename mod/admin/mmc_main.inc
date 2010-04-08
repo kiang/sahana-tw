@@ -27,7 +27,8 @@ function shn_admin_mmc_default() {
 <?php
 }
 function shn_admin_mmc_add() {
-    switch ($_REQUEST['seq']) {
+    $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+    switch ($seq) {
         case 'upload':
             if (!_shn_admin_mmc_upload_form_validate()) {
                 _shn_admin_mmc_upload_form(true);

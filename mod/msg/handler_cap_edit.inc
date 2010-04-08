@@ -21,7 +21,8 @@ require_once ('class_cap_info.inc');
 require_once ('class_cap_resource.inc');
 require_once ('class_cap_area.inc');
 require_once ('lib_cap_js.inc');
-switch ($_REQUEST['seq']) {
+$seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+switch ($seq) {
     case '':
         _shn_msg_cap_editmain();
     break;

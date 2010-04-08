@@ -80,7 +80,7 @@ function shn_form_fopen($act, $mod = null, $form_opts = array('req_message' => t
 <div
 	onclick='event.cancelBubble = true;' class="popup" id="help_popup"></div>
 <div class="<?php echo $form_opts['class'] ?>"><?php
-    if ($form_opts['req_message']) {
+    if (isset($form_opts['req_message']) && $form_opts['req_message']) {
 ?>
 
 <p><b><?php echo _("Key:") ?></b><b class='red'> * </b> - <?php echo _("Fields tagged with a star ") ?>&#040;<span
@@ -90,10 +90,14 @@ function shn_form_fopen($act, $mod = null, $form_opts = array('req_message' => t
 ?>
 <form method="post"
 	action="index.php?mod=<?php echo $mod ?>&amp;act=<?php echo $act ?><?php echo $anchor ?>"
-	id="<?php echo $form_opts['id'] ?>" <?php echo $form_opts['enctype'] ?>
+	id="<?php echo $form_opts['id'] ?>" <?php
+        if(isset($form_opts['enctype'])) {
+            echo $form_opts['enctype'];
+        }
+        ?>
 	name="<?php echo $form_opts['id'] ?>"><?php
     //print the tab position div
-    if ($shn_tab_enabled & !($form_opts['tab'] == 'float')) shn_form_drawtab();
+    if (isset($shn_tab_enabled) && $shn_tab_enabled & !(isset($form_opts['tab']) && $form_opts['tab'] == 'float')) shn_form_drawtab();
 }
 /**
  * This function will close the HTML form
@@ -177,9 +181,9 @@ function shn_form_button($name, $button_opts = null, $extra_opts = null) {
  */
 function shn_form_text($label, $name, $text_opts = null, $extra_opts = null) {
     global $shn_tabindex;
-    $value = ($_POST[$name]) ? $_POST[$name] : $extra_opts['value'];
+    $value = !empty($_POST[$name]) ? $_POST[$name] : (isset($extra_opts['value']) ? $extra_opts['value'] : '');
     if (get_magic_quotes_gpc()) $value = stripslashes($value);
-    if ($extra_opts['no_label'] !== true) {
+    if (isset($extra_opts['no_label']) && $extra_opts['no_label'] !== true) {
 ?>
 <label for="<?php echo $name ?>"><?php echo $label ?></label>
 <?php
@@ -219,8 +223,8 @@ function shn_form_hidden($hidden_vars) {
  */
 function shn_form_checkbox($label, $name, $text_opts = null, $extra_opts = null) {
     global $shn_tabindex;
-    $value = ($_POST[$name]) ? $_POST[$name] : $extra_opts['value'];
-    $disabled = $extra_opts['disabled'] == NULL ? false : $extra_opts['disabled'];
+    $value = !empty($_POST[$name]) ? $_POST[$name] : (isset($extra_opts['value']) ? $extra_opts['value'] : '');
+    $disabled = isset($extra_opts['disabled']) ? $extra_opts['disabled'] : false;
 ?>
 <label for="<?php echo $name ?>"><?php echo $label ?></label>
 <input
@@ -247,7 +251,7 @@ function shn_form_checkbox($label, $name, $text_opts = null, $extra_opts = null)
 function shn_form_select($options, $label, $name, $select_opts = "", $extra_opts = null) {
     global $global;
     global $shn_tabindex;
-    $value = (isset($_POST[$name]) ? $_POST[$name] : $extra_opts['value']);
+    $value = isset($_POST[$name]) ? $_POST[$name] : (isset($extra_opts['value']) ? $extra_opts['value'] : '');
     //to privent warnings set $options to array() if it is null
     $options = ($options == null) ? array() : $options;
 ?>
@@ -280,7 +284,7 @@ function shn_form_select($options, $label, $name, $select_opts = "", $extra_opts
 function shn_form_radio($options, $label, $name, $select_opts = "", $extra_opts = null) {
     global $global;
     global $shn_tabindex;
-    $value = ($_POST[$opt_field]) ? $_POST[$opt_field] : $extra_opts['value'];
+    $value = !empty($extra_opts['value']) ? $extra_opts['value'] : '';
     //$req=(true == $extra_opts['req'])?'<em> * </em>':'';
     
 ?>
@@ -316,9 +320,9 @@ function shn_form_radio($options, $label, $name, $select_opts = "", $extra_opts 
 function shn_form_opt_select($opt_field, $label, $select_opts = "", $extra_opts = null) {
     global $global;
     global $shn_tabindex;
-    $sort = $extra_opts['sort'];
-    $name = ($extra_opts['name']) ? $extra_opts['name'] : $opt_field;
-    $value = ($_POST[$opt_field]) ? $_POST[$opt_field] : $extra_opts['value'];
+    $sort = isset($extra_opts['sort']) ? $extra_opts['sort'] : '';
+    $name = !empty($extra_opts['name']) ? $extra_opts['name'] : $opt_field;
+    $value = !empty($_POST[$opt_field]) ? $_POST[$opt_field] : (isset($extra_opts['value']) ? $extra_opts['value'] : '');
 ?>
 <label><?php echo $label ?></label>
 <select name="<?php echo $name ?>" <?php echo $select_opts ?>
@@ -469,7 +473,7 @@ function shn_form_textarea($label, $name, $text_opts = null, $extra_opts = null)
     global $shn_tabindex;
     $cols = (isset($extra_opts['cols'])) ? $extra_opts['cols'] : '30';
     $rows = (isset($extra_opts['rows'])) ? $extra_opts['rows'] : '4';
-    $value = ($_POST[$name]) ? $_POST[$name] : $extra_opts['value'];
+    $value = !empty($_POST[$name]) ? $_POST[$name] : (isset($extra_opts['value']) ? $extra_opts['value'] : '');
     /*
     * This was commented because it stripsoff unnecessary places too. 14/12/2007
     *
@@ -570,7 +574,7 @@ function shn_form_table_row($elements, $text_opts = null) {
  */
 function shn_form_date($label, $name, $extra_opts = null) {
     global $shn_tabindex;
-    $value = ($_POST[$name]) ? $_POST[$name] : $extra_opts['value'];
+    $value = !empty($_POST[$name]) ? $_POST[$name] : (isset($extra_opts['value']) ? $extra_opts['value'] : '');
     //including the script file only once
     static $script_include = false;
     if (!$script_include) {
@@ -581,6 +585,7 @@ function shn_form_date($label, $name, $extra_opts = null) {
     $string = strtoupper($format);
     $f = substr($string, 0, 1);
     $l = substr($string, -1, 1);
+    $m = '';
     $m = ($f == 'Y' || $l == 'Y') ? $m : 'Y';
     $m = ($f == 'M' || $l == 'M') ? $m : 'M';
     $m = ($f == 'D' || $l == 'D') ? $m : 'D';

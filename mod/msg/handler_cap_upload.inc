@@ -17,7 +17,8 @@
  * Public License (LGPL)
  */
 print '<h2>' . _("CAP file upload") . '</h2>';
-switch ($_REQUEST['seq']) {
+$seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+switch ($seq) {
     case '':
         _shn_cap_upload_getfile();
     break;

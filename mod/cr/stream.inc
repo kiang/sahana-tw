@@ -18,7 +18,8 @@ function shn_cr_acmp() {
     include ($global['approot'] . '/mod/cr/camp.inc');
     require_once ($global['approot'] . '/inc/handler_form.inc');
     // check action sequence
-    switch ($_REQUEST['seq']) {
+    $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+    switch ($seq) {
         case 'chk':
             if ($conf['gis'] == 'false') {
                 if (_shn_cr_validate_error()) _shn_cr_cadd_start(true);

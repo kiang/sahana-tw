@@ -42,7 +42,7 @@ function shn_dvr_add_new_individual($errors = false) {
     //unset($_SESSION['dvr']['person']);
     $extra_opts['help'] = _("Please Select the group type");
     $extra_opts['req'] = true;
-    $extra_opts['value'] = $_SESSION['dvr']['person']['typ_of_grp'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['typ_of_grp']) ? $_SESSION['dvr']['person']['typ_of_grp'] : '';
     $extra_opts['sort'] = 'option_code';
     //print 'installed'.$conf['acl_base'];
     /*if($conf['acl_base']=='installed')
@@ -51,7 +51,7 @@ function shn_dvr_add_new_individual($errors = false) {
     else
     shn_form_opt_select('opt_group_type', _("Type of Group"), '', $extra_opts);
     */
-    $type = $_POST['opt_group_type'];
+    $type = isset($_POST['opt_group_type']) ? $_POST['opt_group_type'] : '';
     $heads = _shn_dvr_getgroupheadspertype($type);
     //print 'fff'.count($heads);
     //print 'gggg'.$heads[1];
@@ -63,7 +63,7 @@ function shn_dvr_add_new_individual($errors = false) {
     //shn_ajax_initiate_request_famaily();
     //shn_ajax_add_suggest_family('family_name','familyHint','family_id');
     //shn_form_text(_('Group head'),'family_name',"size=\"30\" autocomplete=off onkeyup=\"get_family(this.value,'familyHint','index.php?mod=dvr&act=get_family&stream=text')\"" ,$extra_opts);
-    shn_ajax_text_look_up(array('Group head'), array('group_id'), array('familyHint'), 'index.php?mod=dvr&act=get_family&stream=text', array($_SESSION['dvr']['person']['gruop_name']), true, $extra_opts);
+    shn_ajax_text_look_up(array('Group head'), array('group_id'), array('familyHint'), 'index.php?mod=dvr&act=get_family&stream=text', array((isset($_SESSION['dvr']['person']['gruop_name']) ? $_SESSION['dvr']['person']['gruop_name'] : '')), true, $extra_opts);
     //echo '<div id="familyHint"></div>';
     if (isset($_POST['group_id'])) {
         _shn_dvr_set_ajax_group_id();
@@ -75,56 +75,56 @@ function shn_dvr_add_new_individual($errors = false) {
     print '<br />';
     shn_form_fsopen(_('Basic Details'));
     print '<br />';
-    $extra_opts['value'] = $_SESSION['dvr']['person']['full_name'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['full_name']) ? $_SESSION['dvr']['person']['full_name'] : '';
     $extra_opts['help'] = _("Enter your Full Name here(Required)");
     $extra_opts['req'] = true;
     shn_form_text(_('Full Name'), 'full_name', 'size="30"', $extra_opts);
-    $extra_opts['value'] = $_SESSION['dvr']['person']['family_name'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['family_name']) ? $_SESSION['dvr']['person']['family_name'] : '';
     $extra_opts['help'] = _("Family name, or the surname could be specified for matching of people with similar Family names");
     $extra_opts['req'] = false;
     shn_form_text(_('Family Name'), 'family_nme', 'size="30"', $extra_opts);
-    $extra_opts['value'] = $_SESSION['dvr']['person']['local_name'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['local_name']) ? $_SESSION['dvr']['person']['local_name'] : '';
     $extra_opts['help'] = _("You may also specify the local name, even in different script than English");
     shn_form_text(_('Local Name'), 'local_name', 'size="30"', $extra_opts);
-    $extra_opts['value'] = $_SESSION['dvr']['person']['dob'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['dob']) ? $_SESSION['dvr']['person']['dob'] : '';
     unset($extra_opts['help']);
     //$extra_opts['help'] = _("You may also specify the date of birth");
     shn_form_date(_("Date of Birth"), 'dob', $extra_opts);
     //	shn_form_text(_('Date of Birth   (YYYY-MM-DD)'), 'dob', 'size=8', $extra_opts);
     $extra_opts['sort'] = false;
-    $extra_opts['value'] = $_SESSION['dvr']['person']['opt_age_group'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['opt_age_group']) ? $_SESSION['dvr']['person']['opt_age_group'] : '';
     $extra_opts['help'] = _("You may also specify the age group");
     shn_form_opt_select("opt_age_group", _('Age Group'), '', $extra_opts);
-    $extra_opts['value'] = $_SESSION['dvr']['person']['opt_gender'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['opt_gender']) ? $_SESSION['dvr']['person']['opt_gender'] : '';
     $extra_opts['help'] = _("You can specify the gender");
     shn_form_opt_select("opt_gender", _('Gender'), '', $extra_opts);
-    $extra_opts['value'] = $_SESSION['dvr']['person']['opt_marital_status'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['opt_marital_status']) ? $_SESSION['dvr']['person']['opt_marital_status'] : '';
     $extra_opts['help'] = _("You can specify the marital status");
     shn_form_opt_select("opt_marital_status", _('Marital Status'), '', $extra_opts);
-    $extra_opts['value'] = $_SESSION['dvr']['person']['opt_religion'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['opt_religion']) ? $_SESSION['dvr']['person']['opt_religion'] : '';
     $extra_opts['help'] = _("You may also specify the religion");
     shn_form_opt_select("opt_religion", _('Religion'), '', $extra_opts);
-    $extra_opts['value'] = $_SESSION['dvr']['person']['opt_race'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['opt_race']) ? $_SESSION['dvr']['person']['opt_race'] : '';
     $extra_opts['help'] = _("You can also so specify the race");
     shn_form_opt_select("opt_race", _('Race'), '', $extra_opts);
     shn_form_fsclose();
     print '<br />';
     shn_form_fsopen(_('Identity'));
     print '<br />';
-    $extra_opts['value'] = $_SESSION['dvr']['person']['idcard'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['idcard']) ? $_SESSION['dvr']['person']['idcard'] : '';
     $extra_opts['help'] = 'Specify the Identity card Number, Although this is not required this will be useful in searching for the person';
     shn_form_text(_('Identity Card Number'), 'idcard', 'size="30"', $extra_opts);
-    $extra_opts['value'] = $_SESSION['dvr']['person']['passport'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['passport']) ? $_SESSION['dvr']['person']['passport'] : '';
     $extra_opts['help'] = 'Please Specify the passport number, Although this is not required this will be useful in searching for the person';
     shn_form_text(_('Passport Number'), 'passport', 'size="30"', $extra_opts);
-    $extra_opts['value'] = $_SESSION['dvr']['person']['drv_licence'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['drv_licence']) ? $_SESSION['dvr']['person']['drv_licence'] : '';
     $extra_opts['help'] = 'Please Specify the driving License number, Although this is not required this will be useful in searching for the person';
     shn_form_text(_('Driving License'), 'drv_licence', 'size="30"', $extra_opts);
     shn_form_fsclose();
     print '<br />';
     shn_form_fsopen(_('Upload Picture'));
     print '<br />';
-    if ($_SESSION['dvr']['person']['edit_individual_clicked'] == true) {
+    if (isset($_SESSION['dvr']['person']['edit_individual_clicked']) && $_SESSION['dvr']['person']['edit_individual_clicked'] == true) {
         shn_form_label(_("Current Photograph"), $_SESSION['dvr']['person']['picture']);
 ?>
 	<p align='center'>
@@ -141,17 +141,17 @@ function shn_dvr_add_new_individual($errors = false) {
     shn_form_fsopen(_('Contact Information of the Disaster Victim'));
     print '<div class="info">';
     print '<br />';
-    $extra_opts['value'] = $_SESSION['dvr']['person']['address'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['address']) ? $_SESSION['dvr']['person']['address'] : '';
     $extra_opts['help'] = 'Your address can be specified to contact you';
     shn_form_textarea(_('Address'), "address", null, $extra_opts);
     /*$extra_opts['value'] = $_SESSION['dvr']['person']['zip'];
     $extra_opts['help'] = 'Specify a zip code, if it is available';
     
     shn_form_text(_('Postal Code'), 'zip', 'size="15"', $extra_opts);*/
-    $extra_opts['value'] = $_SESSION['dvr']['person']['telephone'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['telephone']) ? $_SESSION['dvr']['person']['telephone'] : '';
     $extra_opts['help'] = 'Specify a phone, if it is available';
     shn_form_text(_('Home Phone'), 'telephone', 'size="15"', $extra_opts);
-    $extra_opts['value'] = $_SESSION['dvr']['person']['mobile'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['mobile']) ? $_SESSION['dvr']['person']['mobile'] : '';
     $extra_opts['help'] = 'You may specify the displaced location of the victim';
     shn_form_text(_('Mobile'), 'mobile', 'size="15"', $extra_opts);
     shn_form_fsclose();
@@ -162,18 +162,18 @@ function shn_dvr_add_new_individual($errors = false) {
     //array_reverse($typ_of_grp);
     $typ_of_grp[1] = _("Same As Group");
     $typ_of_grp[2] = _("Other");
-    $extra_opts['value'] = $_SESSION['dvr']['person']['displaced_location_type'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['displaced_location_type']) ? $_SESSION['dvr']['person']['displaced_location_type'] : '';
     shn_form_select($typ_of_grp, _("Displaced Location"), 'displaced_location_type', 'onchange="javascript:toggle(\'other\',this.value);"', $extra_opts);
     $range = shn_dvr_get_loc_range();
     //shn_location($range, $_SESSION['dvr']['person']['displaced_loc'], null, $extra_opts);
-    $gr_id = $_SESSION['dvr']['person']['group_id'];
+    $gr_id = isset($_SESSION['dvr']['person']['group_id']) ? $_SESSION['dvr']['person']['group_id'] : '';
     //$w = _shn_dvr_get_groupdisplaced_location($gr_id);
-    $extra_opts['value'] = $_SESSION['dvr']['person']['displaced_loc'];
-    $w = $_SESSION['dvr']['person']['displaced_loc'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['displaced_loc']) ? $_SESSION['dvr']['person']['displaced_loc'] : '';
+    $w = isset($_SESSION['dvr']['person']['displaced_loc']) ? $_SESSION['dvr']['person']['displaced_loc'] : '';
 ?>
     <div id="other" 
     <?php
-    if (isset($_SESSION['dvr']['person']['displaced_location_type']) == false) {
+    if (!isset($_SESSION['dvr']['person']['displaced_location_type'])) {
         echo 'style="display:none;"';
     } else {
         if ($_SESSION['dvr']['person']['displaced_location_type'] == 2) echo 'style="display:block;"';

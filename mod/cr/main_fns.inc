@@ -144,7 +144,8 @@ function shn_cr_srch() {
     global $global;
     include ($global['approot'] . '/mod/cr/search.inc');
     //require_once($global['approot'].'/inc/handler_form.inc');
-    switch ($_REQUEST['seq']) {
+    $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+    switch ($seq) {
         case 'next':
             echo _("Search Results");
         break;
@@ -163,7 +164,8 @@ function shn_cr_srch_address() {
     global $global;
     include ($global['approot'] . '/mod/cr/search.inc');
     require_once ($global['approot'] . '/inc/handler_form.inc');
-    switch ($_REQUEST['seq']) {
+    $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+    switch ($seq) {
         case 'next':
             echo _("Search Results");
         break;
@@ -184,7 +186,8 @@ function shn_cr_acmp() {
     include ($global['approot'] . '/mod/cr/camp.inc');
     require_once ($global['approot'] . '/inc/handler_form.inc');
     // check action sequence
-    switch ($_REQUEST['seq']) {
+    $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+    switch ($seq) {
         case 'chk':
             if (!$conf['gis']) {
                 if (_shn_cr_validate_error()) _shn_cr_cadd_start(true);
@@ -374,7 +377,8 @@ function shn_cr_acmp() {
         include ($global['approot'] . '/mod/cr/edit.inc');
         require_once ($global['approot'] . '/inc/handler_form.inc');
         // check action sequence
-        switch ($_REQUEST['seq']) {
+        $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+        switch ($seq) {
             case 'chk':
                 if (_shn_cr_validate_error()) {
                     //display_errors();
@@ -409,7 +413,8 @@ function shn_cr_acmp() {
         include ($global['approot'] . '/mod/cr/edit_ppl.inc');
         require_once ($global['approot'] . '/inc/handler_form.inc');
         // check action sequence
-        switch ($_REQUEST['seq']) {
+        $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+        switch ($seq) {
             case 'chk':
                 if (_shn_cr_validate_error()) _shn_cr_cedt_start(true);
                 else {
@@ -438,7 +443,8 @@ function shn_cr_acmp() {
         include ($global['approot'] . '/mod/cr/edit_bed.inc');
         require_once ($global['approot'] . '/inc/handler_form.inc');
         // check action sequence
-        switch ($_REQUEST['seq']) {
+        $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+        switch ($seq) {
             case 'chk':
                 if (_shn_cr_validate_error()) _shn_cr_cedt_start(true);
                 else {
@@ -466,7 +472,8 @@ function shn_cr_acmp() {
         include ($global['approot'] . '/mod/cr/reports.inc');
         require_once ($global['approot'] . '/inc/handler_form.inc');
         // check action sequence
-        switch ($_REQUEST['seq']) {
+        $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+        switch ($seq) {
             case 'viewall':
                 echo "Reports";
             break;

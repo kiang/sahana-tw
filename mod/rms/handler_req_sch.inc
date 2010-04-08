@@ -255,7 +255,8 @@ function _shn_rms_sch_results() {
     // }*/
     
 }
-switch ($_REQUEST['seq']) {
+$seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+switch ($seq) {
     case '':
         $_SESSION['isadmin'] = _shn_rms_get_user_group();
         _shn_rms_sch_getkeywords();

@@ -25,8 +25,7 @@ global $conf;
 require ($global['approot'] . 'mod/mpr/mpr_lib.inc');
 $limit = $conf['mod_mpr_pictures_per_page'];
 $type = "found";
-$offset = $_GET['offset'];
-if ($offset == null) $offset = 0;
+$offset = isset($_GET['offset']) ? $_GET['offset'] : 0;
 $count = shn_mpr_home_show_mpr($type, $limit, $offset);
 if ($count > $limit) {
     $tmp = $count % $limit;

@@ -354,7 +354,8 @@ function _shn_rms_show_items() {
         shn_form_fclose();
     }
 }
-switch ($_REQUEST['seq']) {
+$seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+switch ($seq) {
     case '':
         //reset the SESSION variables
         $_SESSION['rms_req_id'] = null;

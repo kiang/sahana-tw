@@ -151,7 +151,8 @@ function shn_mpr_editmp() {
     require ($global['approot'] . 'mod/mpr/edit.inc');
     require_once ($global['approot'] . 'mod/mpr/add.inc');
     //validation
-    switch ($_REQUEST['seq']) {
+    $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+    switch ($seq) {
         case 'entry':
             echo '<h1 align="center">' . _('Edit Missing Person Entry') . '</h1>';
             if (shn_mpr_editmp_validate()) {
@@ -271,7 +272,8 @@ function shn_mpr_add_tracker() {
     global $global;
     require ($global['approot'] . 'mod/mpr/add.inc');
     //Controller
-    switch ($_REQUEST['seq']) {
+    $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+    switch ($seq) {
         case 'report_person':
             if (shn_mpr_addmp_reporter_validate()) {
                 if ($_POST['reported_before'] == 'yes') {
@@ -345,7 +347,8 @@ function shn_mpr_addmp() {
     if ($_SESSION['mpr_add']['entry_type'] == 'found') $heading = '<h1 align="center">' . _('Found Person Entry') . '</h1>';
     elseif ($_SESSION['mpr_add']['entry_type'] == 'missing') $heading = '<h1 align="center">' . _('Missing Person Entry') . '</h1>';
     //Controller
-    switch ($_REQUEST['seq']) {
+    $seq = !empty($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+    switch ($seq) {
         case 'entry':
             if (shn_mpr_addmp_validate()) {
                 //clean the $_POST to remove the conflicts
@@ -428,7 +431,8 @@ function shn_mpr_search() {
     require ($global['approot'] . 'mod/mpr/search.inc');
     //Controller for Normal Search
     if ($_GET['act'] == 'search') {
-        switch ($_REQUEST['seq']) {
+        $seq = !empty($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+        switch ($seq) {
             case 'result':
                 shn_mpr_search_default();
                 if ($_GET['offset']) shn_mpr_search_result_vw($_SESSION['mpr']['search']['subquery'], $_GET['offset']);

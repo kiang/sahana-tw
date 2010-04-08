@@ -150,7 +150,7 @@ function _shn_dvr_get_all_groups($incident_id = null, $camp_id = null) {
         $search_q1 = "SELECT distinct pg.g_uuid as group_id,pg.opt_group_type as group_type,pn.full_name as full_name ,pn.family_name as family_name,pn.l10n_name as local_name,id.serial as serial,co.contact_value as address from identity_to_person id,contact co,person_uuid pn,pgroup pg,group_details gd where gd.g_uuid=pg.g_uuid and gd.head_uuid=pn.p_uuid and gd.head_uuid=id.p_uuid and gd.head_uuid=co.pgoc_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' order by group_type";
     }
     $results = $db->Execute($search_q1);
-    $results = shn_paging_get_report($search_q1, $conf['mod_dvr_results_per_page'], $headers, array('post' => false, 'return' => true));
+    $results = shn_paging_get_report($search_q1, $conf['mod_dvr_results_per_page'], NULL, array('post' => false, 'return' => true));
     //print count($results);
     return $results;
 }

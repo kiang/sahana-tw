@@ -267,7 +267,7 @@ function shn_or_drill_report_org_show_orgs() {
 }
 function shn_or_org_sector() {
     include_once ("report.inc");
-    $sector = $_REQUEST['opt_sector'];
+    $sector = isset($_REQUEST['opt_sector']) ? $_REQUEST['opt_sector'] : '';
     _shn_or_report_org_sector($sector);
 }
 // default page, welcome page

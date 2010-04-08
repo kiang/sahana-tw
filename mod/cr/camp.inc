@@ -25,7 +25,7 @@ function _shn_cr_cadd_start($errors = false) {
 ?>
 <h2 align="center"><?php echo _("Register New ") . $conf['mod_cr_alt'] ?></h2>
 <?php
-    shn_form_fopen(acmp);
+    shn_form_fopen('acmp');
     shn_form_fsopen(_("General Details"));
     //check for gis and goto mapping page
     if ($conf['gis']) {

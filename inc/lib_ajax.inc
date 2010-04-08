@@ -335,7 +335,7 @@ function shn_ajax_text_look_up($label, $name, $hint = null, $url, $value = null,
     if (NULL == $hint) {
         $hint = array('hint');
     }
-    if ($global["initiate_ajax"] == false) {
+    if (empty($global["initiate_ajax"])) {
         shn_ajax_initiate_request();
         $global["initiate_ajax"] = true;
     }

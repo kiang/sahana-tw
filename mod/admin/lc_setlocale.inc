@@ -28,7 +28,8 @@ function __select_locale() {
     shn_form_submit(_("Set Locale"));
     shn_form_fclose();
 }
-switch ($_REQUEST['seq']) {
+$seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+switch ($seq) {
     case '':
         if (_shn_lc_issetdblc()) {
             $locale = _shn_lc_getdblc();

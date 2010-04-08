@@ -29,17 +29,17 @@ function shn_dvr_default() {
 function shn_dvr_add_new_indv() {
     global $global;
     include ($global['approot'] . '/mod/dvr/add_new_indv.inc');
-    if ($_REQUEST['location_individual']) {
+    if (!empty($_REQUEST['location_individual'])) {
         if (_shn_dvr_individual_validate_error()) {
             shn_dvr_add_new_individual(true);
         } else {
             shn_dvr_set_person_major_details();
             shn_dvr_disp_and_crnt_loc();
         }
-    } else if ($_REQUEST['physical_button']) {
+    } else if (!empty($_REQUEST['physical_button'])) {
         shn_dvr_set_person_location_details();
         shn_dvr_physical_information();
-    } else if ($_REQUEST['finish']) {
+    } else if (!empty($_REQUEST['finish'])) {
         switch ($_REQUEST['seq']) {
             case 'chk': {
                         if (_shn_dvr_individual_physical_details_validate_error()) {
@@ -49,10 +49,10 @@ function shn_dvr_add_new_indv() {
                         }
                 }
             }
-        } else if ($_REQUEST['edit_details']) {
+        } else if (!empty($_REQUEST['edit_details'])) {
             $_SESSION['dvr']['person']['edit_individual_clicked'] = true;
             shn_dvr_add_new_individual();
-        } else if ($_REQUEST['save']) {
+        } else if (!empty($_REQUEST['save'])) {
             _shn_dvr_add_individual_todb();
             shn_dvr_person_confirm();
             shn_dvr_default();
@@ -123,17 +123,17 @@ function shn_dvr_add_new_indv() {
         //include ($global['approot'] . '/mod/dvr/edit_grp.inc');
         require_once ($global['approot'] . '/inc/handler_form.inc');
         // check action sequence
-        if ($_REQUEST['save'] != null) {
+        if (!empty($_REQUEST['save'])) {
             _shn_dvr_commit();
             //shn_dvr_mbr_confirm();
             shn_dvr_mbr_confirm();
             unset($_SESSION['dvr']['group']);
-        } else if ($_REQUEST['edit_details'] != null) {
+        } else if (!empty($_REQUEST['edit_details'])) {
             $_SESSION['dvr']['group']['edit_clicked'] = true;
             shn_dvr_grouptype_and_head_details_start();
-        } else if ($_REQUEST['member_button'] != null) {
+        } else if (!empty($_REQUEST['member_button'])) {
             shn_dvr_mbr_dtls();
-        } else if ($_REQUEST['location_button'] != null) {
+        } else if (!empty($_REQUEST['location_button'])) {
             $sequence = $_POST['seq'];
             switch ($sequence) {
                 case 'chk': {
@@ -145,7 +145,7 @@ function shn_dvr_add_new_indv() {
                             }
                     }
                 }
-            } else if ($_REQUEST['checklist_button'] != null) {
+            } else if (!empty($_REQUEST['checklist_button'])) {
                 $sequence = $_POST['seq'];
                 switch ($sequence) {
                     case 'chk': {
@@ -160,11 +160,12 @@ function shn_dvr_add_new_indv() {
                         //print 'gis loc' . $_SESSION['dvr']['group']['gis_loc_x'];
                         
                 }
-        } else if ($_REQUEST['end_button'] != null) {
+        } else if (!empty($_REQUEST['end_button'])) {
             _shn_dvr_set_checklist();
             _shn_dvr_regconfirm_group();
         } else {
-            switch ($_REQUEST['seq']) {
+            $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+            switch ($seq) {
                 case 'chk': {
                             if (_shn_dvr_validate_error()) shn_dvr_grouptype_and_head_details_start(true);
                             else print 'ok';
@@ -217,7 +218,8 @@ function shn_dvr_add_new_indv() {
                 include ($global['approot'] . '/mod/dvr/search_individual.inc');
                 require_once ($global['approot'] . '/inc/handler_form.inc');
                 print ("<h2>" . _("Search and Edit Individual") . "</h2>");
-                switch ($_REQUEST['seq']) {
+                $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+                switch ($seq) {
                     case 'advanced': {
                                 shn_dvr_search_advance();
                             break;
@@ -236,7 +238,8 @@ function shn_dvr_add_new_indv() {
                     include ($global['approot'] . '/mod/dvr/search_group.inc');
                     require_once ($global['approot'] . '/inc/handler_form.inc');
                     print ("<h2>" . _("Search and Edit Group") . "</h2>");
-                    switch ($_REQUEST['seq']) {
+                    $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+                    switch ($seq) {
                         case 'advanced': {
                                     shn_dvr_advanced_search_group();
                                 break;
@@ -329,7 +332,8 @@ function shn_dvr_add_new_indv() {
                             _shn_dvr_set_checklist();
                             _shn_dvr_regconfirm_group();
                         } else {
-                            switch ($_REQUEST['seq']) {
+                            $seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+                            switch ($seq) {
                                 case 'chk': {
                                             if (_shn_dvr_validate_error()) shn_dvr_grouptype_and_head_details_start(true);
                                         }

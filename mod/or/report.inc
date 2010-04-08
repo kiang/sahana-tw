@@ -186,7 +186,7 @@ function _shn_or_drill_org($parent = null) {
 <?php
     $q = "SELECT loc_uuid,name FROM location WHERE parent_id='{$parent}' ORDER BY name";
     //$res_loc=$db->Execute($q);
-    $res_loc = shn_paging_get_report($q, 5, $headers, array('post' => false, 'return' => true));
+    $res_loc = shn_paging_get_report($q, 5, NULL, array('post' => false, 'return' => true));
     while (!$res_loc == NULL && !$res_loc->EOF) {
 ?>
     <tr>
@@ -310,7 +310,7 @@ function _shn_or_drill_loc($parent = null) {
     <tbody>
 <?php
     $q = "SELECT loc_uuid,name FROM location WHERE parent_id='{$parent}' ORDER BY name";
-    $res_loc = shn_paging_get_report($q, 5, $headers, array('post' => false, 'return' => true));
+    $res_loc = shn_paging_get_report($q, 5, NULL, array('post' => false, 'return' => true));
     //print_r($locs);
     //$res_loc=$db->Execute($q);
     while (!$res_loc == NULL && !$res_loc->EOF) {
@@ -451,7 +451,7 @@ function _shn_or_report_org_sector($sector) {
     <?php
     $option_code = $sector;
     $q = "SELECT o_uuid,parent_id,name,man_power,equipment,resources FROM org_main,sector WHERE sector.opt_sector='{$option_code}' AND sector.pgoc_uuid=org_main.o_uuid ORDER BY name";
-    $res_org = shn_paging_get_report($q, 5, $headers, array('post' => true, 'return' => true));
+    $res_org = shn_paging_get_report($q, 5, NULL, array('post' => true, 'return' => true));
 ?>
 <br>
 <div id ="result">

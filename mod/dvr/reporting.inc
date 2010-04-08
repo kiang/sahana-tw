@@ -23,8 +23,8 @@ function _shn_drill_downby_group() {
     global $global;
     include_once ($global['approot'] . '/mod/dvr/data_access.inc');
     include_once ($global['approot'] . '/mod/dvr/lib.inc');
-    $incident_id = $_GET['incident_id'];
-    $camp_id = $_GET['camp_id'];
+    $incident_id = isset($_GET['incident_id']) ? $_GET['incident_id'] : 0;
+    $camp_id = isset($_GET['camp_id']) ? $_GET['camp_id'] : 0;
     if ($incident_id != null) {
         $results = _shn_dvr_get_all_groups($incident_id, null);
     } else if ($camp_id != null) {

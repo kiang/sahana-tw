@@ -117,7 +117,8 @@ function __del_entry($id) {
         add_confirmation(_("Error occurred while removing DB L10N entry"));
     }
 }
-switch ($_REQUEST['seq']) {
+$seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+switch ($seq) {
     case '':
         __show_basic_form();
         __show_entries();

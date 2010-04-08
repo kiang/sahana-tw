@@ -24,6 +24,7 @@ function shn_or_organization_list($limit = null, $name_filter = '', $type_filter
     $db = $global['db'];
     $id_list = shn_or_org_search($limit, $name_filter, $type_filter, $service_filter, $location_filter, $address_filter);
     $org_name_list = shn_or_organization_name($id_list);
+    $org_list = array();
     foreach($org_name_list as $org_id => $org_name) {
         $org_list[] = array('name' => $org_name, 'id' => $org_id);
     }

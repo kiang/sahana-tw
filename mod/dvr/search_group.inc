@@ -37,7 +37,7 @@ function shn_dvr_search_default() {
     print '<br />';
     $extra_opts['help'] = _("Please Select the group type");
     $extra_opts['req'] = false;
-    $extra_opts['value'] = $_SESSION['dvr']['person']['typ_of_grp'];
+    $extra_opts['value'] = isset($_SESSION['dvr']['person']['typ_of_grp']) ? $_SESSION['dvr']['person']['typ_of_grp'] : '';
     $extra_opts['sort'] = 'option_code';
     shn_form_opt_select('opt_group_type', _("Type of Group"), '', $extra_opts);
     shn_form_text(_('Any Card Number'), 'card', 'size="30"');

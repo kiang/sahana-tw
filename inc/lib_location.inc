@@ -41,7 +41,7 @@ function shn_location_get_form_submit_loc() {
     if (isset($_POST["loc_unknown"])) { //unknow checkbox is ticked
         return UNKNOWN;
     }
-    $n_lvl = $_POST["levels"]; //the hidden $_POST variable which indicates the max no of levels
+    $n_lvl = !empty($_POST["levels"]) ? $_POST["levels"] : ''; //the hidden $_POST variable which indicates the max no of levels
     while ($n_lvl > 0) {
         $lvl = "loc_select_" . $n_lvl;
         if ((isset($_POST["$lvl"])) && ($_POST["$lvl"] != "0")) {
@@ -587,7 +587,7 @@ var end = <?php echo $end; ?>;
  * @return void
  */
 function shn_location($range = null, $value = null, $parent = null, $extra_opts = null) {
-    if ($extra_opts['req'] == true) {
+    if (isset($extra_opts['req']) && $extra_opts['req'] == true) {
         shn_form_label(null, "Please Select a location", array("req" => true));
 ?> <br />
 	<?
@@ -608,7 +608,7 @@ function shn_location($range = null, $value = null, $parent = null, $extra_opts 
         $info.= _("* Camp/Shelter ") . "<br /> ";
         $count = $count + 1;
     }
-    if ($extra_opts["inv"] == true) {
+    if (isset($extra_opts["inv"]) && $extra_opts["inv"] == true) {
         $info.= _("* an Inventory ") . "<br /> ";
         $count = $count + 1;
     }
@@ -633,7 +633,7 @@ function shn_location($range = null, $value = null, $parent = null, $extra_opts 
         foreach($camps as $id => $name) {
             $options[$id] = $name;
         }
-        if ($extra_opts["camp_id"] != null) {
+        if (!empty($extra_opts["camp_id"])) {
             $q = "select location_id from camp_general where c_uuid='" . $extra_opts["camp_id"] . "'";
             global $global;
             $db = $global["db"];
@@ -903,6 +903,7 @@ function _shn_location_form_value($range, $value) { /*assume the location is d ,
                 
             } else {
                 //now there is a parent, so select all the children
+                $selection = isset($selection) ? $selection : 0;
                 $q = "select location.name,location.loc_uuid from location where location.opt_location_type=" . $res->fields[0] . " and parent_id='" . $selection . "'";
                 unset($extra_opts['help']);
             }
@@ -920,7 +921,9 @@ function _shn_location_form_value($range, $value) { /*assume the location is d ,
                 $res_options->MoveNext();
             }
             $select_opts = 'onChange=update_next_level(this.options[this.selectedIndex].value,' . $res->fields[0] . ')';
-            $extra_opts['value'] = $selection;
+            if(!empty($selection)) {
+                $extra_opts['value'] = $selection;
+            }
             //which one to diplay out of all the locations.
             //should be one of the parents
             // $extra_opts['req']=true;
@@ -955,6 +958,7 @@ function _shn_location_form($range) {
         while (!$res == NULL && !$res->EOF) {
             $extra_opts = array();
             //$extra_opts['req']=true;
+            if(!isset($selection)) $selection = 0;
             if ($cur == $from) {
                 $q = "select location.name,location.loc_uuid from location where location.opt_location_type=" . $res->fields[0] . " order by location.name";
                 $extra_opts['help'] = _("Select the location based at.  This is hierarchical. For example think you are based  in the country 'Sri lanka' ,district 'Colombo' ,and village 'dehiwala'.  start by selecting the country ,once you select country 
@@ -1003,14 +1007,14 @@ function shn_location_get_loc_range() {
     $loc = array();
     $q = "select value from config where module_id='admin' and confkey='loc_range_start'";
     $res = $db->Execute($q);
-    if ($res->fields[0] == NULL) {
+    if (empty($res->fields[0])) {
         $loc["start"] = $conf['mod_or_loc_level_start'];
     } else {
         $loc["start"] = $res->fields[0];
     }
     $q = "select value from config where module_id='admin' and confkey='loc_range_end'";
     $res = $db->Execute($q);
-    if ($res->fields[0] == NULL) {
+    if (empty($res->fields[0])) {
         $loc["end"] = $conf['mod_or_loc_level_end'];
     } else {
         $loc["end"] = $res->fields[0];

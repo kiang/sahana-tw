@@ -23,10 +23,10 @@ function _shn_rms_plg_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
     $paging = false;
     $sql = "SELECT * FROM rms_pledge";
     // apply filters if any
+    $fstr = ''; //filter string
     if ($filter != null) {
         $donor = $filter['donor'];
         $status = $filter['status'];
-        $fstr = ''; //filter string
         if ($filter['status'] == '' || !_shn_rms_is_plgstatus($status)) $status = false;
         if ($filter['donor']) {
             $fstr = " WHERE donor_uuid='$donor'";
@@ -156,12 +156,13 @@ function _shn_rms_stat_pledge($plg_id) {
     shn_form_select($stat, _("Status"), 'status', 'onChange="submit(this);"', array('br' => false, 'value' => $status));
     shn_form_fclose();
 }
-switch ($_REQUEST['seq']) {
+$seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+switch ($seq) {
     case '':
         $_SESSION['rms_plg_filter'] = null;
         $_SESSION['rms_plg_orderby'] = null;
-        $page = $_REQUEST['page_no'];
-        $rows = $_SESSION['rms_plg_ls_rows'];
+        $page = isset($_REQUEST['page_no']) ? $_REQUEST['page_no'] : 0;
+        $rows = isset($_SESSION['rms_plg_ls_rows']) ? $_SESSION['rms_plg_ls_rows'] : 0;
         _shn_rms_plg_showlist($page, $rows);
     break;
     case 'filter':

@@ -23,11 +23,11 @@ function _shn_rms_req_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
     $paging = false;
     $sql = "SELECT * FROM rms_request";
     // apply filters if any
+    $fstr = ''; //filter string
     if ($filter != null) {
         $requester = $filter['requester'];
         $location = $filter['location'];
         $status = $filter['status'];
-        $fstr = ''; //filter string
         if ($filter['status'] == '' || !_shn_rms_is_reqstatus($status)) $status = false;
         if (($filter['requester'])) {
             $fstr = " WHERE reqstr_uuid='$requester'";
@@ -176,12 +176,13 @@ function _shn_rms_stat_request($req_id) {
     unset($_SESSION['rms_ls_reqstr']);
     shn_form_fclose();
 }
-switch ($_REQUEST['seq']) {
+$seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+switch ($seq) {
     case '':
         $_SESSION['rms_req_filter'] = null;
         $_SESSION['rms_req_orderby'] = null;
-        $page = $_REQUEST['page_no'];
-        $rows = $_SESSION['rms_req_ls_rows'];
+        $page = isset($_REQUEST['page_no']) ? $_REQUEST['page_no'] : '';
+        $rows = isset($_SESSION['rms_req_ls_rows']) ? $_SESSION['rms_req_ls_rows'] : 0;
         _shn_rms_req_showlist($page, $rows);
     break;
     case 'filter':

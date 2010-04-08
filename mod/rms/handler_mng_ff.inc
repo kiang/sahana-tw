@@ -324,7 +324,8 @@ function _shn_rms_item_allocation_db() {
         }
     }
 }
-switch ($_REQUEST['seq']) {
+$seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+switch ($seq) {
     case '':
         $_SESSION['rms_req_id'] = null;
         $_SESSION['rms_mng_ff_added'] = false;

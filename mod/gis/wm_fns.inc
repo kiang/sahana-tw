@@ -31,7 +31,7 @@ function show_wiki_map($category = "all", $date = 0) {
     //set to something else if load problems occur, especially online
     print ("<h2>" . _("View Situation Map") . "</h2>");
     if (!isset($category)) $category = "all";
-    shn_form_fopen(swik, null, array('req' => false));
+    shn_form_fopen('swik', null, array('req' => false));
     shn_form_fsopen(_("Filter Options"));
     shn_form_opt_select("opt_wikimap_type", _("Situation Type"), null, array('all' => true));
     shn_form_fsclose();
@@ -177,7 +177,7 @@ function show_wiki_add_detail($errors = false) {
 ?>
 	<h2><?=_("Add Situation Detail") ?></h2>
 <?php
-    shn_form_fopen(awik);
+    shn_form_fopen('awik');
     shn_form_fsopen(_("Main Details"));
     shn_form_hidden(array('seq' => 'map'));
     shn_form_text(_("Name of Detail"), "wiki_name", 'size="50"', array('req' => true, 'help' => _($conf['mod_gis_situation_name_help'])));

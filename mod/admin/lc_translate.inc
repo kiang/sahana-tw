@@ -196,7 +196,8 @@ function _shn_admin_lc_load($file_n = null) {
 ?>
 
 <?php
-switch ($_REQUEST['seq']) {
+$seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+switch ($seq) {
     case '':
         _shn_admin_lc_load();
     break;

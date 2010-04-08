@@ -23,7 +23,8 @@ require_once ('class_cap_area.inc');
 require_once ('lib_cap_js.inc');
 print "<h1>" . _("Sahana Messaging Module") . "</h1>";
 print "<h3>" . _("CAP Message Viewer") . "</h3>";
-switch ($_REQUEST['seq']) {
+$seq = isset($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
+switch ($seq) {
     case '':
         //_shn_msg_cap_url_selector();
         _shn_msg_cap_file_selector();

@@ -28,7 +28,7 @@
  * @access public
  * @return void
  */
-function shn_paging_get_report($query, $rpp = 20, $headers = NULL, $extra_opt) {
+function shn_paging_get_report($query, $rpp = 20, $headers = NULL, $extra_opt = array()) {
     global $global;
     if (isset($_REQUEST['rpp'])) {
         if ('none' != $_REQUEST['rpp']) {
@@ -61,7 +61,6 @@ function _shn_page_get_rs($query, $rpp) {
     if ('Previous' == $page) {
         $page = $_REQUEST['c_page'] - 1;
     }
-    define('ADODB_FETCH_ASSOC', 2);
     $global['db']->SetFetchMode(ADODB_FETCH_ASSOC);
     if ('all' == $rpp) {
         $res = $global['db']->Execute($query);
