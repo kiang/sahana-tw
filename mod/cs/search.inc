@@ -38,6 +38,7 @@ function shn_cs_search_cat() {
 function _shn_cs_cat_form() {
     shn_form_fopen('search_item_submit');
     shn_form_fsopen(_('Search Details'));
+    shn_form_hidden(array( 'search_type' => trim($_POST['search_type'])  ) );
     shn_form_text(_("Name   : "), 'cat_item_name', 'size="50"', array('req' => 'true', 'help' => _('Enter the Item/catalog to be searched')));
     $options = array('item' => _('Item'), 'catalogue' => _('Catalog'));
     shn_form_radio($options, '', 'item_cat_radio');
@@ -56,14 +57,16 @@ function _shn_cs_search_item_cat_submit_result() {
     $db = $global["db"];
     $cat_item_name = trim($_POST['cat_item_name']);
     $item_cat_radio = trim($_POST['item_cat_radio']);
-    if ($item_cat_radio == 'item') {
-        $query = "SELECT * FROM ct_catalogue WHERE name='$cat_item_name' AND final_flag='1'";
+    if($item_cat_radio == 'item') {
+        $query = "SELECT name,description FROM ct_catalogue WHERE name like'%" . $cat_item_name . "%' AND final_flag='1'";
         $res = $db->Execute($query);
         $name = $res->fields["name"];
         $description = $res->fields["description"];
-    } else if ($item_cat_radio == 'catalogue') {
-        $query = "SELECT * FROM ct_catalogue WHERE name='$cat_item_name' AND final_flag='0'";
+    }
+    else if ($item_cat_radio == 'catalogue') {
+        $query = "SELECT name,description FROM ct_catalogue WHERE name like'%" . $cat_item_name . "%' AND final_flag='0'";
         $res = $db->Execute($query);
+
         $name = $res->fields["name"];
         $description = $res->fields["description"];
     }
@@ -80,10 +83,16 @@ function _shn_cs_search_item_cat_submit_result() {
     </THEAD>
     <TBODY>
 
-    <tr>
-        <td><?php print $name; ?></td>
-        <td><?php print $description; ?></td>
-    </tr>
+    <?php
+        foreach ($res as $key => $value) {
+            print"<tr>";
+            for ($count = 0;$count < (count($value) / 2);$count++) {
+                $item = $value['' . $count . ''];
+                print"<td>$item</td>";
+            }
+            print"</tr>";
+        }
+        ?>
 
     </TBODY> 
     </table>
@@ -110,11 +119,12 @@ function _shn_cs_unit_form() {
     $form_opts['name'] = "unit_type";
     shn_form_fopen("search_unit_submit");
     shn_form_fsopen(_('Select Measurement Unit Type'));
+    shn_form_hidden(array( 'search_type' => trim($_POST['search_type'])  ) );
     shn_form_select($option_array, '', 'measurement_type', $select_opts, null);
     shn_form_fsclose();
     shn_form_fsopen(_('Search Details'));
     //$extra_opts['req']=true;
-    shn_form_text(_("Unit Name   : "), 'unit_name', 'size="50"', array('req' => 'true', 'help' => _('Enter the Unit name to be searched.')));
+    shn_form_text(_("Unit Name   : "),'unit_name','size="50"',array('help'=>_('Enter the Unit name to be searched.')));
     shn_form_fsclose();
     shn_form_submit(_("Search"));
     shn_form_fclose();
@@ -182,6 +192,7 @@ function _shn_cs_search_unit_submit_result() {
 function _shn_cs_unit_type_form() {
     shn_form_fopen('search_unit_type_submit');
     shn_form_fsopen(_('Search Details'));
+    shn_form_hidden(array( 'search_type' => trim($_POST['search_type'])  ) );
     shn_form_text(_("Unit type   : "), 'unit_type_name', 'size="50"', array('req' => 'true', 'help' => _('Enter the unit type to be searched')));
     shn_form_fsclose();
     shn_form_submit(_("Search"));

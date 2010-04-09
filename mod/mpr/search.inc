@@ -17,6 +17,17 @@
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  *
  */
+/**
+ * Clean the 'type' parameter from vulnerabilities
+ */
+function shn_clean_type_parameter($type) {
+    if ($type != "all" && $type != "missing" && $type != "found") {
+        // we are being exploited, just default to all
+        $type = "all";
+    }
+    return $type;
+}
+
 /* {{{ Search Form */
 /**
  * Search default form
@@ -35,7 +46,7 @@ function shn_mpr_search_default() {
     #shn_form_label("<a href=\"index.php?mod=mpr&act=search_adv&type={$_GET['type']}\">[Advance Search]</a>","");
     shn_form_fsclose();
     shn_form_hidden(array('seq' => 'result'));
-    shn_form_hidden(array('type' => $_REQUEST['type']));
+    shn_form_hidden(array('type' => shn_clean_type_parameter($_REQUEST['type'])));
     shn_form_fclose();
 }
 /* }}} */
@@ -67,7 +78,7 @@ function shn_mpr_search_advance() {
     shn_form_submit(_('Next'));
     shn_form_fsclose();
     shn_form_hidden(array('seq' => 'result'));
-    shn_form_hidden(array('type' => $_GET['type']));
+    shn_form_hidden(array('type' => shn_clean_type_parameter($_GET['type'])));
     shn_form_fclose();
 }
 /* }}} */
@@ -266,6 +277,7 @@ function shn_mpr_search_show_result($details) {
     <TD><?=_('Associated People'); ?></TD>
     <TD><?=_('Missing Details'); ?></TD>
     <TD><?=_('Actions'); ?></TD>
+    <TD><?= _('Reported Person');?></TD>
     <?=($select ? '<TD>' . _('Select') . '</TD>' : ''); ?>
 </THEAD>
 <?php
@@ -306,6 +318,16 @@ href="index.php?mod=' . $global['module'] . '&act=status&id=' . $detail['p_uuid'
             echo '<br />';
             echo '<a title="' . _('Audit') . '" ' . 'href="index.php?mod=' . $global['module'] . '&act=auditmp&id=' . $detail['p_uuid'] . '">' . _('Audit') . '</a>';
 ?>      </TD>
+        <TD>
+<?php
+            $arr = shn_mpr_search_get_reported_person($detail['p_uuid']);
+            foreach ($arr as $fullname)
+                echo "&nbsp;" . '<a title="' . _('View') . '"' .
+                'href="index.php?mod=' . $global['module'] . '&act=viewmp&id=' .
+                $fullname['p_uuid'] . '">' .
+                $fullname['full_name'] . '</a><br />';
+?>
+        </TD>
         <?=($select ? '<TD><a title="' . _('Select') . '" href="index.php?' . $_SERVER['QUERY_STRING'] . '&tracker_id=' . $detail['p_uuid'] . '&tracker_relation=' . $_POST['opt_relationship_type'] . '&seq=tracker_select" > ' . _('Select') . ' </a>' . '</TD>' : ''); ?>
     </TR>
 <?php
@@ -332,6 +354,26 @@ function shn_mpr_search_get_trackers($p_uuid) {
     $arr = $global['db']->GetAll($sql);
     return $arr;
 }
+/* }}} */
+/* {{{ Get Trackers */
+/**
+ * Get List of Trackers
+ *
+ * @param mixed $p_uuid
+ * @access public
+ * @return void
+ */
+function shn_mpr_search_get_reported_person($p_uuid) {
+    //var_dump($p_uuid);
+    global $global;
+    $sql = "SELECT a.p_uuid, a.full_name FROM person_uuid a, person_reported
+            b WHERE
+            b.p_uuid = '$p_uuid' AND a.p_uuid = b.repd_uuid";
+    $arr = $global['db']->GetAll($sql);
+    return $arr;
+//var_dump($arr['p_uuid']);
+}
+
 /* }}} */
 /* {{{ Search Select */
 /**

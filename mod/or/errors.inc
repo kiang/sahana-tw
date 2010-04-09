@@ -12,17 +12,19 @@
 * @package    sahana
 * @subpackage or
 */
-define(SHN_ERR_OR_NAME_INCOMPLETE, _("Organization name is essential for registration. Please complete and submit again"));
-define(SHN_ERR_OR_TYPE_INCOMPLETE, _("Organization Type is essential for registration. Please complete and submit again"));
-define(SHN_ERR_OR_SECTOR_INCOMPLETE, _("Organization Sector is essential for registration. Please complete and submit again"));
-define(SHN_ERR_OR_LOCATION_INCOMPLETE, _("Organization Location is essential for registration. Please complete and submit again"));
-define(SHN_ERR_OR_UNAME_INCOMPLETE, _("User Name is essential for registration. Please complete and submit again"));
-define(SHN_ERR_OR_PWD_INCOMPLETE, _("Password is essential for registration. Please complete and submit again"));
-define(SHN_ERR_OR_REPWD_INCOMPLETE, _("Password confirmation is essential for registration. Please complete and submit again"));
-define(SHN_ERR_OR_NAME_INCOMPLETE, _("Organization name is essential for registration. Please complete and submit again"));
-define(SHN_ERR_OR_ADD_OPTION, _("Choose group or individual enrty."));
-define(SHN_ERR_OR_ADD_TYPE, _("Select the type of the entry"));
-define(SHN_ERR_OR_PREFER, _("Select the preference of form display"));
-define(SHN_ERR_OR_EMAIL, _("Email address is of the wrong format"));
-define(SHN_ERR_DOB_INCORRECT, _("You have to enter a Date (yyyy-mm-dd) for Date of Birth"));
+define('SHN_ERR_OR_NAME_INCOMPLETE', _("Organization name is essential for registration. Please complete and submit again"));
+define('SHN_ERR_OR_TYPE_INCOMPLETE', _("Organization Type is essential for registration. Please complete and submit again"));
+define('SHN_ERR_OR_SECTOR_INCOMPLETE', _("Organization Sector is essential for registration. Please complete and submit again"));
+define('SHN_ERR_OR_LOCATION_INCOMPLETE', _("Organization Location is essential for registration. Please complete and submit again"));
+define('SHN_ERR_OR_UNAME_INCOMPLETE', _("User Name is essential for registration. Please complete and submit again"));
+define('SHN_ERR_OR_PWD_INCOMPLETE', _("Password is essential for registration. Please complete and submit again"));
+define('SHN_ERR_OR_REPWD_INCOMPLETE', _("Password confirmation is essential for registration. Please complete and submit again"));
+define('SHN_ERR_OR_NAME_INCOMPLETE', _("Organization name is essential for registration. Please complete and submit again"));
+define('SHN_ERR_OR_ADD_OPTION', _("Choose group or individual enrty."));
+define('SHN_ERR_OR_ADD_TYPE', _("Select the type of the entry"));
+define('SHN_ERR_OR_PREFER', _("Select the preference of form display"));
+define('SHN_ERR_OR_EMAIL', _("Email address is of the wrong format"));
+define('SHN_ERR_DOB_INCORRECT', _("You have to enter a Date (yyyy-mm-dd) for Date of Birth"));
+define('SHN_ERR_OR_REG_MAX', _("You have entered a value that exceeds the maximum character length. The maximum character length is 100"));
+define('SHN_ERR_OR_REG_MAX_REG_NO', _("The number of characters available in Registration number field should be lower than 100"));
 ?>

@@ -656,6 +656,19 @@ function _shn_ims_transfer_item_report() {
     $db = $global['db'];
     $sql1 = "SELECT transit_id,item_id,amount_send,unit,inv_id_to,destination_type,person_send,date_send FROM ims_transfer_item;";
     $ims1 = $db->Execute($sql1);
+
+    $module = $global['module'];
+    $form_opts['name'] = "report_transit";
+    $extra_opts['br'] = false;
+    $extra_opts['req'] = false;
+    shn_form_fopen("transit_item_report_download", null, $form_opts);
+    shn_form_fsopen(_("Generate Reports"));
+    shn_form_button(_("PDF"), "onClick='change_action_transit(\"pdf_transit\")'", $extra_opts);
+    shn_form_button(_("ODS"), "onClick='change_action_transit(\"ods_transit\")'", $extra_opts);
+    shn_form_button(_("XHTML"), "onClick='change_action_transit(\"xhtml_transit\")'", $extra_opts);
+    shn_form_hidden(array('action'=>'0'));
+    shn_form_fsclose();
+    shn_form_fclose();
 ?>
     <div id='result'>
     <table>
@@ -753,6 +766,13 @@ function _shn_ims_transfer_item_report() {
         var x=document.getElementsByName('action');
          x[0].value=action;
          document.report_reorder.submit();
+         return;
+    }
+
+    function change_action_transit(action){
+        var x=document.getElementsByName('action');
+         x[0].value=action;
+         document.report_transit.submit();
          return;
     }
 </script>

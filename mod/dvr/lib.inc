@@ -187,17 +187,17 @@ function shn_dvr_get_loc_range() {
     global $conf;
     $db = $global['db'];
     $loc = array();
-    $q = "select value from config where module_id='or' and confkey='loc_range_start'";
+    $q = "select value from config where module_id='dvr' and confkey='loc_range_start'";
     $res = $db->Execute($q);
     if (empty($res->fields[0])) {
-        $loc["start"] = $conf['mod_or_loc_level_start'];
+        $loc["start"] = $conf['mod_dvr_loc_level_start'];
     } else {
         $loc["start"] = $res->fields[0];
     }
     $q = "select value from config where module_id='dvr' and confkey='loc_range_end'";
     $res = $db->Execute($q);
     if (empty($res->fields[0])) {
-        $loc["end"] = $conf['mod_or_loc_level_end'];
+        $loc["end"] = $conf['mod_dvr_loc_level_end'];
     } else {
         $loc["end"] = $res->fields[0];
     }

@@ -64,7 +64,9 @@ function _shn_dvr_add_group() {
     $res = $db->Execute($q10);
     $q11 = "insert into resource_to_shelter(x_uuid,c_uuid) values('{$groupid}','{$_SESSION['dvr']['group']['camps']}') ";
     $db->Execute($q11);
-    $q1 = "INSERT INTO  person_physical (p_uuid,opt_blood_type,height,weight,opt_eye_color,opt_skin_color,opt_hair_color,injuries,comments) values ('{$_SESSION['dvr_add_group']['entry']['p_uuid']}','{$_SESSION['dvr']['person']['opt_blood_type']}','{$_SESSION['dvr']['person']['height']}','{$_SESSION['dvr']['person']['weight']}','{$_SESSION['dvr']['person']['opt_eye_color']}','{$_SESSION['dvr']['person']['opt_skin_color']}','{$_SESSION['dvr']['person']['opt_hair_color']}','','{$other}')";
+    $height_complete=$_SESSION['dvr']['person']['height']." ".$_SESSION['dvr']['person']['height_unit'];
+    $weight_complete=$_SESSION['dvr']['person']['weight']." ".$_SESSION['dvr']['person']['weight_unit'];
+    $q1 = "INSERT INTO  person_physical (p_uuid,opt_blood_type,height,weight,opt_eye_color,opt_skin_color,opt_hair_color,injuries,comments) values ('{$_SESSION['dvr_add_group']['entry']['p_uuid']}','{$_SESSION['dvr']['person']['opt_blood_type']}','{$height_complete}','{$weight_complete}','{$_SESSION['dvr']['person']['opt_eye_color']}','{$_SESSION['dvr']['person']['opt_skin_color']}','{$_SESSION['dvr']['person']['opt_hair_color']}','','{$other}')";
     $db->Execute($q1);
 }
 function _dvr_add_contact($uuid, $contacttype, $contactvalue) {
@@ -95,7 +97,9 @@ function _shn_dvr_commit_individual() {
     $q3 = "insert into person_to_pgroup (p_uuid,g_uuid) values ('{$_SESSION['dvr']['person']['p_uuid']}','{$group}') ";
     $db->Execute($q3);
     $other = $_SESSION['dvr']['person']['last_clothing'] . ',' . $_SESSION['dvr']['person']['comments'];
-    $q4 = "insert into  person_physical (p_uuid,opt_blood_type,height,weight,opt_eye_color,opt_skin_color,opt_hair_color,injuries,comments) values ('{$_SESSION['dvr']['person']['p_uuid']}','{$_SESSION['dvr']['person']['opt_blood_type']}','{$_SESSION['dvr']['person']['height']}','{$_SESSION['dvr']['person']['weight']}','{$_SESSION['dvr']['person']['opt_eye_color']}','{$_SESSION['dvr']['person']['opt_skin_color']}','{$_SESSION['dvr']['person']['opt_hair_color']}','','{$other}')";
+    $height_complete = $_SESSION['dvr']['person']['height'] . " " . $_SESSION['dvr']['person']['height_unit'];
+    $weight_complete = $_SESSION['dvr']['person']['weight'] . " " . $_SESSION['dvr']['person']['weight_unit'];
+    $q4 = "insert into  person_physical (p_uuid,opt_blood_type,height,weight,opt_eye_color,opt_skin_color,opt_hair_color,injuries,comments) values ('{$_SESSION['dvr']['person']['p_uuid']}','{$_SESSION['dvr']['person']['opt_blood_type']}','{$height_complete}','{$weight_complete}','{$_SESSION['dvr']['person']['opt_eye_color']}','{$_SESSION['dvr']['person']['opt_skin_color']}','{$_SESSION['dvr']['person']['opt_hair_color']}','','{$other}')";
     $db->Execute($q4);
     //if($_SESSION['dvr']['person']['finger_image']!=null)
     shn_image_to_db_ex($_SESSION['dvr']['person']['p_uuid'], $_SESSION['dvr']['person']['finger_image'], $_SESSION['dvr']['person']['finger_image_type'], $_SESSION['dvr']['person']['finger_image_height'], $_SESSION['dvr']['person']['finger_image_width'], null, 'finger_print'); {
@@ -337,7 +341,10 @@ function _shn_dvr_update_individual() {
     $q3="update person_to_pgroup (p_uuid,g_uuid) values ('{$_SESSION['dvr']['person']['p_uuid']}','{$group}') "	;
     $db->Execute($q3);*/
     $other = $_SESSION['dvr']['person']['last_clothing'] . ',' . $_SESSION['dvr']['person']['comments'];
-    $q4 = "UPDATE person_physical SET opt_blood_type='{$_SESSION['dvr']['person']['opt_blood_type']}', height='{$_SESSION['dvr']['person']['height']}', weight='{$_SESSION['dvr']['person']['weight']}', opt_eye_color='{$_SESSION['dvr']['person']['opt_eye_color']}', opt_skin_color='{$_SESSION['dvr']['person']['opt_skin_color']}', opt_hair_color='{$_SESSION['dvr']['person']['opt_hair_color']}',injuries='',comments='$other' WHERE p_uuid='{$_SESSION['dvr']['person']['p_uuid']}'";
+    $height_complete = $_SESSION['dvr']['person']['height'] . " " . $_SESSION['dvr']['person']['height_unit'];
+    $weight_complete = $_SESSION['dvr']['person']['weight'] . " " . $_SESSION['dvr']['person']['weight_unit'];
+
+    $q4 = "UPDATE person_physical SET opt_blood_type='{$_SESSION['dvr']['person']['opt_blood_type']}', height='{$height_complete}', weight='{$weight_complete}', opt_eye_color='{$_SESSION['dvr']['person']['opt_eye_color']}', opt_skin_color='{$_SESSION['dvr']['person']['opt_skin_color']}', opt_hair_color='{$_SESSION['dvr']['person']['opt_hair_color']}',injuries='',comments='$other' WHERE p_uuid='{$_SESSION['dvr']['person']['p_uuid']}'";
     $db->Execute($q4);
     //$q4="insert into person_details (p_uuid,next_kin_uuid,birth_date,opt_age_group,relation,opt_country,opt_race,opt_relegion,opt_marital_status,opt_gender,occupation) values ('{$_SESSION['dvr']['person']['p_uuid']}',$_SESSION['dvr']['person']['opt_eye_color'],)";
     _dvr_update_contact($_SESSION['dvr']['person']['p_uuid'], 'mobile', $_SESSION['dvr']['person']['mobile']);

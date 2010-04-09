@@ -59,7 +59,12 @@ function shn_gis_awik() {
             case 'map':
                 if ($_POST['wiki_name'] == "") {
                     show_wiki_add_detail(true);
-                } else {
+                }
+                else if ($_POST['wiki_evnt_date'] == "") {
+                    add_error(_("Date of Event Cannot be empty."));
+                    show_wiki_add_detail(false);
+                }
+                else {
                     show_wiki_add_map();
                 }
             break;

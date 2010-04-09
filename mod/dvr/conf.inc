@@ -25,4 +25,6 @@ $conf['mod_dvr_name'] = _("Disaster Victim Registry");
 $conf['mod_dvr_menuorder'] = 4;
 $conf['mod_dvr_results_per_page'] = 10;
 $conf['mod_dvr_images'] = 6;
+$conf['mod_dvr_loc_level_start'] = 1;
+$conf['mod_dvr_loc_level_end'] = 3;
 ?>

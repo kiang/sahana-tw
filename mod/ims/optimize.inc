@@ -119,7 +119,7 @@ function _shn_ims_relation_item_table() {
         $amount = $ims1->fields['amount'];
         $unit = $ims1->fields['unit'];
         $base_unit = convert_to_base_unit($unit);
-        $unit_name = get_unit_name($base_unit);
+        $unit_name = get_unit_name($unit);
         $sum_amount = _shn_ims_sum_amount($catalog_id, $inv_id);
 ?>
     <tr>

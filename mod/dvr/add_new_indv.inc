@@ -28,7 +28,11 @@ function shn_dvr_add_new_individual($errors = false) {
     global $conf;
     if ($errors) display_errors();
     _shn_dvr_print_header(_("Add New Individual"));
-    shn_form_fopen("add_new_indv", null, array('req_message' => true, 'enctype' => 'enctype="multipart/form-data"'));
+    shn_form_fopen("add_new_indv", null, array (
+                'req_message' => true,
+                'enctype' => 'enctype="multipart/form-data"',
+                'name' => 'addnewindvform'
+    ));
     shn_form_hidden(array('seq' => 'add_new_individual'));
     shn_form_fsopen(_("Select Group"));
     print '<div class="info">';
@@ -87,6 +91,7 @@ function shn_dvr_add_new_individual($errors = false) {
     $extra_opts['help'] = _("You may also specify the local name, even in different script than English");
     shn_form_text(_('Local Name'), 'local_name', 'size="30"', $extra_opts);
     $extra_opts['value'] = isset($_SESSION['dvr']['person']['dob']) ? $_SESSION['dvr']['person']['dob'] : '';
+    $extra_opts['js_on_change']="setAgeGroup";
     unset($extra_opts['help']);
     //$extra_opts['help'] = _("You may also specify the date of birth");
     shn_form_date(_("Date of Birth"), 'dob', $extra_opts);
@@ -422,8 +427,8 @@ function _shn_dvr_regconfirm_individual() {
     shn_form_label(_("Eye Color"), _shn_dvr_getoptiondescription($_SESSION['dvr']['person']['opt_eye_color'], 'opt_eye_color'));
     shn_form_label(_("Skin Color"), _shn_dvr_getoptiondescription($_SESSION['dvr']['person']['opt_skin_color'], 'opt_skin_color'));
     shn_form_label(_("Hair Color"), _shn_dvr_getoptiondescription($_SESSION['dvr']['person']['opt_hair_color'], 'opt_hair_color'));
-    shn_form_label(_("Height"), $_SESSION['dvr']['person']['height']);
-    shn_form_label(_("Weight"), $_SESSION['dvr']['person']['weight']);
+    shn_form_label(_("Height"), $_SESSION['dvr']['person']['height']." ".$_SESSION['dvr']['person']['height_unit']);
+    shn_form_label(_("Weight"), $_SESSION['dvr']['person']['weight']." ".$_SESSION['dvr']['person']['weight_unit']);
     shn_form_label(_("Blood Type"), _shn_dvr_getoptiondescription($_SESSION['dvr']['person']['opt_blood_type']));
     shn_form_label(_("Clothing and appearence"), $_SESSION['dvr']['person']['last_clothing']);
     shn_form_label(_("Other Details"), $_SESSION['dvr']['person']['comments']);
@@ -541,7 +546,9 @@ function shn_dvr_set_person_physical_details() {
     $_SESSION['dvr']['person']['opt_skin_color'] = $_POST['opt_skin_color'];
     $_SESSION['dvr']['person']['opt_hair_color'] = $_POST['opt_hair_color'];
     $_SESSION['dvr']['person']['height'] = $_POST['height'];
+    $_SESSION['dvr']['person']['height_unit'] = $_POST['height_unit'];
     $_SESSION['dvr']['person']['weight'] = $_POST['weight'];
+    $_SESSION['dvr']['person']['weight_unit'] = $_POST['weight_unit'];
     $_SESSION['dvr']['person']['opt_blood_type'] = $_POST['opt_blood_type'];
     $_SESSION['dvr']['person']['last_clothing'] = $_POST['last_clothing'];
     $_SESSION['dvr']['person']['comments'] = $_POST['comments'];
@@ -636,9 +643,19 @@ function shn_dvr_physical_information($errors = false) {
     $extra_opts['value'] = $_SESSION['dvr']['person']['opt_hair_color'];
     shn_form_opt_select("opt_hair_color", _('Hair Colour'), '', $extra_opts);
     $extra_opts['value'] = $_SESSION['dvr']['person']['height'];
+    $extra_opts['br'] = false;
     shn_form_text(_('Height'), 'height', 'size="10"', $extra_opts);
+    $extra_opts['br'] = true;
+    $extra_opts['value'] = $_SESSION['dvr']['person']['height_unit'];
+    shn_form_select(array("cm"=>_('cm'),"inch"=>_('inch')),null,'height_unit','1',$extra_opts);
+    print '<br />';
     $extra_opts['value'] = $_SESSION['dvr']['person']['weight'];
+    $extra_opts['br'] = false;
     shn_form_text(_('Weight'), 'weight', 'size="10"', $extra_opts);
+    $extra_opts['value'] = $_SESSION['dvr']['person']['weight_unit'];
+    $extra_opts['br'] = true;
+    shn_form_select(array("Kg"=>_('Kg'),"g"=>_('g')),null,'weight_unit','1',$extra_opts);
+    print '<br />';
     $extra_opts['value'] = $_SESSION['dvr']['person']['opt_blood_type'];
     shn_form_opt_select("opt_blood_type", _('Blood Type'), '', $extra_opts);
     //shn_form_textarea(_('Other Distinctive Features'), 'physical_comments');
@@ -701,5 +718,48 @@ var othe = document.getElementById(divition);
 	}
 }
 
+function setAgeGroup()
+{
+	if(document.addnewindvform.dob.value != global_dob)
+	{
+		var dob = document.addnewindvform.dob.value;
+		var dob_year = dob.substring(0,4);
+
+		var curr_date = new Date();
+		var curr_year = curr_date.getFullYear();
+
+		var diff= curr_year - dob_year;
+
+		if(diff > 50 && diff != curr_year)
+		{
+			document.addnewindvform.opt_age_group.selectedIndex	= 5;
+		}
+		else if(22 <= diff && diff <= 50)
+		{
+			document.addnewindvform.opt_age_group.selectedIndex = 4;
+		}
+		else if(16 <= diff && diff <= 21)
+		{
+			document.addnewindvform.opt_age_group.selectedIndex = 3;
+		}
+		else if(1 <= diff && diff <= 15)
+		{
+			document.addnewindvform.opt_age_group.selectedIndex = 2;
+		}
+		else if(0 <= diff && diff < 1)
+		{
+			document.addnewindvform.opt_age_group.selectedIndex = 1;
+		}
+		else
+		{
+			document.addnewindvform.opt_age_group.selectedIndex = 0;
+		}
+
+		global_dob = document.addnewindvform.dob.value;
+	}
+}
+
+document.body.onmousemove=setAgeGroup;
+var global_dob = document.addnewindvform.dob.value;
 </script>
-<? 
+<?

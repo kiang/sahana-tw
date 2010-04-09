@@ -162,6 +162,13 @@ function shn_mpr_addmp_validate() {
         add_error(_("Please enter the full name of the missing person"));
         $error_flag = true;
     }
+    if (!shn_valid_phone2($local_post['phone'], 'phone number')) {
+        $error_flag = true;
+    }
+
+    if (!shn_valid_phone2($local_post['mobile'], 'mobile number')) {
+        $error_flag = true;
+    }
     //Picture upload part
     //No file was uploaded ignore else do the following
     if ($_FILES['picture']['error'] == 0 || $_FILES['picture']['error'] == UPLOAD_ERR_NO_FILE) {
@@ -696,6 +703,11 @@ function shn_mpr_addmp_commit() {
     if ($conf['mod_mpr_upload_pic_handler'] == 'database') {
         shn_image_to_db_ex($_SESSION['mpr_add']['entry']['p_uuid'], $_SESSION['mpr']['entry']['image'], $_SESSION['mpr']['entry']['image_type'], $_SESSION['mpr']['entry']['image_height'], $_SESSION['mpr']['entry']['image_width'], '', 'person');
     }
+
+    //$insert_array['p_uuid'] = $_SESSION['p_uuid'];
+    //$insert_array['rep_uuid'] = $_SESSION['rep_uuid'];
+
+    shn_mpr_add_reported_person($_SESSION['p_uuid'], $_SESSION['rep_uuid']);
     //go back to the main menu
     //shn_mpr_default();
     
@@ -706,7 +718,7 @@ function shn_mpr_addmp_commit() {
  * @access public
  * @return void
  */
-function shn_mpr_addmp_insert_reporter($p_uuid) {
+function shn_mpr_addmp_insert_reporter($p_uuid, $r_person=false) {
     //Reported person entry
     $rep_uuid = shn_create_uuid('p');
     //Person uuid table
@@ -785,6 +797,8 @@ function shn_add_person_to_report($p_uuid, $rep_uuid, $relation) {
     } else {
         $insert_array['relation'] = "Not Specified";
     }
+    $_SESSION['p_uuid'] = $p_uuid;
+    $_SESSION['rep_uuid'] = $rep_uuid;
     shn_db_insert($insert_array, 'person_to_report', true, 'p_uuid');
 }
 /* }}} */
@@ -805,6 +819,23 @@ function shn_add_get_tracker_details($p_uuid) {
     $_SESSION['mpr_add']['report_person']['rep_email'] = $rs['email'];
 }
 /* }}} */
+
+
+
+/**
+ * This function helps you to add reported person
+ * @param mixed $p_uuid
+ * @param mixed $rep_uuid
+ * @access public
+ * @return void
+ */
+function shn_mpr_add_reported_person($p_uuid, $rep_uuid) {
+    $insert_array['p_uuid'] = $p_uuid;
+    $insert_array['repd_uuid'] = $rep_uuid;
+
+    shn_db_insert($insert_array, 'person_reported', true, 'p_uuid');
+}
+
 /**
  * This is a buch of javascript helps for the collapse and expanind of a
  * given division.

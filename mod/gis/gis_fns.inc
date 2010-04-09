@@ -247,7 +247,11 @@ function shn_gis_density_map($array) {
     if ($conf['gis']) {
         $plugin_name = $conf['mod_gis_dflt'];
         include $global['approot'] . "/mod/gis/plugins/" . "$plugin_name" . "/handler_" . "$plugin_name" . ".inc";
-        show_map_with_custom_markers($array);
+        if($plugin_name == 'openlayers') {
+            add_error(_("Please configure GIS module plugins as Google Maps, Because Openlayers Map is not available in the 0.6 stable release"));
+        } else {
+            show_map_with_custom_markers($array);
+        }
     } else {
         shn_gis_print_msg();
     }

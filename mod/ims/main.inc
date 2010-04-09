@@ -45,12 +45,17 @@ function shn_ims_mainmenu() {
     shn_mod_menuitem("view_inv", _("Inventories"), $module);
     // shn_mod_menuitem("search_item",_("Find Items"),$module);
     // shn_mod_menuitem("search_inventory",_("Find Inventories"),$module);
-    shn_mod_menuitem("view_edit_item", _("Add/List Items"), $module);
+    //shn_mod_menuitem("view_edit_item",_("Add/List Items"),$module);
+    shn_sub_mod_menuopen(_("Items"));
+    shn_sub_mod_menuitem("add_item_main_page", _("Add/List Items"), $module);
+    shn_sub_mod_menuitem("send_item", _("Send Items"), $module);
+    shn_sub_mod_menuitem("receive_item", _("Transit Items"), $module);
+    shn_sub_mod_menuclose();
     shn_mod_menuitem("view_edit_reorder_page", _("Re-Order Level"), $module);
     shn_sub_mod_menuopen(_("Reports"));
     shn_sub_mod_menuitem("report_expired", _("Expired Items"), $module);
     shn_sub_mod_menuitem("report_destroyed", _("Destroyed Items"), $module);
-    shn_sub_mod_menuitem("report_minimum", _("Re-order Level"), $module);
+    shn_sub_mod_menuitem("report_minimum", _("Items to Re-order"), $module);
     shn_sub_mod_menuitem("report_transit_item", _("Transit Item"), $module);
     //shn_sub_mod_menuitem("report_prediction",_("prediction reports"),$module);
     shn_sub_mod_menuitem("gis_inv", _("Map by Inventory"), $module);
@@ -160,6 +165,22 @@ function shn_ims_report_transit_item() {
     include_once ('ims_report.inc');
     _shn_ims_transfer_item_report();
 }
+function shn_ims_transit_item_report_download() {
+    include_once 'ims_report.inc';
+    $action = trim($_POST['action']);
+    include_once 'report.inc';
+    if ($action == 'pdf_transit') {
+        shn_ims_transit_pdf();
+        shn_report_download('shn_ims_transit_pdf', _('Download the PDF report here'));
+    } else if ($action == 'ods_transit') {
+        shn_ims_transit_ods();
+        shn_report_download('shn_ims_transit_item_ods', _('Download the ODS report here'));
+    } else if ($action == 'xhtml_transit') {
+        shn_ims_transit_xhtml();
+        shn_report_download('shn_ims_transit_item_xhtml', _('Download the XHTML report here'));
+    }
+}
+
 function shn_ims_report_prediction() {
     include_once ('ims_report.inc');
     _shn_ims_report_prediction();

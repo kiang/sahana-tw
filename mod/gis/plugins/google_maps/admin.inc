@@ -39,12 +39,11 @@ function _shn_gis_gm_form() {
     }
     shn_form_fopen("adm_default&submod=google_maps&seq=commit", null, array('req' => false));
     shn_form_fsopen(_("Information"));
-    echo _("<p>Google Maps requires a unique key pointing to where Sahana is hosted</p>");
-    echo _("<p>Register a google maps key for the url you host sahana in, and enter it below</p>");
-    echo _("<p>Get your key from:</p> <a href='http://www.google.com/apis/maps/' target=_blank>Google Maps</a>");
+    echo _("<p>Google Maps requires a unique API Key that is linked to the domain name of the server that this instance of Sahana is installed on. This API Key needs to be entered in the field below</p>");
+    echo _("<p>Obtain your key from: <a href='http://www.google.com/apis/maps/signup.html' target=_blank>Sign Up for the Google Maps API</a>.<br />More information: <a href='http://code.google.com/apis/maps' target=_blank>What is the Google Maps API?</a>.");
     shn_form_fsclose();
     shn_form_fsopen(_("Configure Google Maps"));
-    shn_form_text(_("Enter Google Maps Key"), "gmap_key", 'size="100"', array('value' => $value));
+    shn_form_text(_("Enter Google Maps Key"), "gmap_key", 'size="40"', array('value'=>$value));
     shn_form_fsclose();
     shn_form_submit(_("Done"));
     shn_form_fclose();

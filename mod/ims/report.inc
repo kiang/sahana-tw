@@ -44,6 +44,59 @@ function shn_ims_expired_item_report() {
     //report_download_link("shn_ims_expired_item_report");
     
 }
+
+function shn_ims_transit_pdf() {
+    $table_header = array('item_name' =>'Item Name', 'amount' => 'Amount', 'unit'=>'Unit', 'inv_from'=>'Inventory From', 'inv_to'=>'Inventory To', 'date_sent'=>'Date Sent', 'authorized'=>'Authorized Person');
+    $table_data = array();
+    $table_data = shn_ims_transit_item_report();
+
+    $title = "Transit Items Report-pdf";
+    $text = "These Are the records about items that are transfered";
+
+    $ims_report_keyword_arr = array('mod'=>'ims', 'report'=>'inventory', 'report1'=>'items', 'users'=>'all');
+
+    shn_report_fopen('pdf', "transit_items", $ims_report_keyword_arr);
+    shn_report_add_title($title);
+    //shn_report_add_summary($txt);
+    shn_report_add_table($table_header, $table_data);
+    shn_report_close();
+//report_download_link('shn_ims_expired_item_report');
+}
+
+function shn_ims_transit_ods() {
+    $table_header = array('item_name' =>'Item Name', 'amount' => 'Amount', 'unit'=>'Unit', 'inv_from'=>'Inventory From', 'inv_to'=>'Inventory To', 'date_sent'=>'Date Sent', 'authorized'=>'Authorized Person');
+    $table_data = array();
+    $table_data = shn_ims_transit_item_report();
+
+    $title = "Transit Items Report-pdf";
+    $text = "These Are the records about items that are transfered";
+
+    $ims_report_keyword_arr = array('mod'=>'ims', 'report'=>'inventory', 'report1'=>'items', 'users'=>'all');
+
+    shn_report_fopen('ods', "transit_items", $ims_report_keyword_arr);
+    shn_report_add_title($title);
+    //shn_report_add_summary($txt);
+    shn_report_add_table($table_header, $table_data);
+    shn_report_close();
+}
+
+function shn_ims_transit_xhtml() {
+    $table_header = array('item_name' =>'Item Name', 'amount' => 'Amount', 'unit'=>'Unit', 'inv_from'=>'Inventory From', 'inv_to'=>'Inventory To', 'date_sent'=>'Date Sent', 'authorized'=>'Authorized Person');
+    $table_data = array();
+    $table_data = shn_ims_transit_item_report();
+
+    $title = "Transit Items Report-pdf";
+    $text = "These Are the records about items that are transfered";
+
+    $ims_report_keyword_arr = array('mod'=>'ims', 'report'=>'inventory', 'report1'=>'items', 'users'=>'all');
+
+    shn_report_fopen('xhtml', "transit_items", $ims_report_keyword_arr);
+    shn_report_add_title($title);
+    //shn_report_add_summary($txt);
+    shn_report_add_table($table_header, $table_data);
+    shn_report_close();
+}
+
 function shn_ims_expired_item_ods() {
     $table_header = array('name' => 'Item Name', 'amount' => 'Amount', 'unit' => 'Unit', 'manu_date' => 'Manufactured Date', 'exp_date' => 'Expire Date', 'inventory' => 'Inventory', 'suplier' => 'Supplier');
     $table_data = array();

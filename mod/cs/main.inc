@@ -48,6 +48,8 @@ function shn_cs_mainmenu() {
     shn_mod_menuitem("addmain", _("Add New Catalog"));
     shn_mod_menuitem("addsub", _("Add Aid Category"));
     shn_mod_menuitem("additem", _("Add Aid Item Type"));
+    shn_mod_menuitem("addunit",_("Add Measurement Unit"));
+    //shn_mod_menuitem("addunit",_("Add Measurement Unit"));
     //shn_mod_menuitem("addunittype",_("Add Measurement Unit Type")); // relocate to admin section
     //shn_mod_menuitem("addunit",_("Add Measurement Unit")); // relocate to admin section
     shn_sub_mod_menuclose();
@@ -280,7 +282,13 @@ function shn_cs_edit_cat_select_submit() {
 }
 function shn_cs_edit_cat_form_submit() {
     require_once ('edit.inc');
-    _shn_cs_edit_cat_form_submit_result();
+    if (_shn_cs_validate_edit_calelog_item()) {
+        display_errors();
+        shn_cs_edit_cat_select_submit();
+    }
+    else {
+        _shn_cs_edit_cat_form_submit_result();
+    }
 }
 function shn_cs_delete_item() {
     require_once ('edit.inc');

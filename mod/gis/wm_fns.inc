@@ -169,7 +169,7 @@ function show_wiki_add_detail($errors = false) {
     global $global;
     include_once $global['approot'] . "/inc/lib_errors.inc";
     if ($errors) {
-        add_error(_("Detail Name Cannot be empty"));
+        add_error(_("Detail Name Cannot be empty."));
     }
     global $global;
     global $conf;

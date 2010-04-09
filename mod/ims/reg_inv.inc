@@ -190,17 +190,30 @@ function _shn_ims_validate_reg_inv() {
         add_error(SHN_ERR_or_ims_REG_MAX);
         $error_flag = true;
     }
+    if (strlen($contact_name) != 0 && shn_valid_name($contact_name)) {
+        add_error(_('Invalid contact name'));
+        $error_flag = true;
+    }
     //$contact_address=$_POST{"contact_add"};
     if (strlen($contact_phone) > $VARCHAR) {
         add_error(SHN_ERR_or_ims_REG_MAX);
+        $error_flag = true;
+    }
+    if (strlen($contact_phone) != 0 && shn_valid_phone2($contact_phone, 'contact phone number')) {
         $error_flag = true;
     }
     if (strlen($contact_mobile) > $VARCHAR) {
         add_error(SHN_ERR_or_ims_REG_MAX);
         $error_flag = true;
     }
+    if (strlen($contact_mobile) != 0 && shn_valid_phone2($contact_mobile, 'contact mobile number')) {
+        $error_flag = true;
+    }
     if (strlen($contact_fax) > $VARCHAR) {
         add_error(SHN_ERR_or_ims_REG_MAX);
+        $error_flag = true;
+    }
+    if (strlen($contact_fax) != 0 && shn_valid_phone2($contact_fax, 'contact fax number')) {
         $error_flag = true;
     }
     if (strlen($contact_mail) > $VARCHAR) {

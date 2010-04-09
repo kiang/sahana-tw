@@ -314,14 +314,14 @@ function shn_or_get_loc_range() {
     global $conf;
     $db = $global['db'];
     $loc = array();
-    $q = "select value from config where module_id='or' and confkey='loc_range_start'";
+    $q = "select value from config where module_id='admin' and confkey='loc_range_start'";
     $res = $db->Execute($q);
     if ($res->fields[0] == NULL) {
         $loc["start"] = $conf['mod_or_loc_level_start'];
     } else {
         $loc["start"] = $res->fields[0];
     }
-    $q = "select value from config where module_id='or' and confkey='loc_range_end'";
+    $q = "select value from config where module_id='admin' and confkey='loc_range_end'";
     $res = $db->Execute($q);
     if ($res->fields[0] == NULL) {
         $loc["end"] = $conf['mod_or_loc_level_end'];
@@ -606,11 +606,15 @@ function _shn_or_display_org_sub_type($error = false, $multi = false, $value = N
         
     }
     $extra_opts['help'] = _("please select whether you are Department,Branch,ect of the parent organization");
+    if ($error == true) {
+        $extra_opts['value'] = $_SESSION['org']['type'];
+    }
     shn_form_opt_select('opt_org_sub_type', '', $select_opts, $extra_opts);
 }
 function _shn_or_display_sector($error = false, $value = NULL, $info = true) {
     if ($value != NULL) {
         $extra_opts['value'] = $value;
+        var_dump($extra_opts['value']);
         // $extra_opts['req']=false;
         
     } else {
@@ -622,6 +626,10 @@ function _shn_or_display_sector($error = false, $value = NULL, $info = true) {
     <?php
     }
     $extra_opts['req'] = true;
+    if ($error == true) {
+        $extra_opts['value'] = $_SESSION['org']['sector'];
+        $extra_opts['br'] = true;
+    }
     //  $extra_opts['help']=_("select the services your provide ,i.e what you do as an organization. e.g.if you are a supplier select it");
     shn_form_opt_multi_select('opt_sector_type', '', 'multiple="true"', $extra_opts);
 }
@@ -632,6 +640,7 @@ function _shn_or_display_contact_person($error = false, $confirm = false, $po_uu
         shn_form_label(_("Phone"), $_SESSION['org']['contact_phone']);
         shn_form_label(_("Mobile"), $_SESSION['org']['contact_mobile']);
         shn_form_label(_("Fax"), $_SESSION['org']['contact_fax']);
+        shn_form_label(_("Email"),$_SESSION['org']['contact_mail']);
         shn_form_label(_("Website"), $_SESSION['org']['contact_web']);
         return;
     }
@@ -901,7 +910,23 @@ function _shn_or_check_org_reg_info_complete() {
     } else {
         $parent_org = false;
     }
-    list($error, $_SESSION['org']['name']) = (shn_validate_field($_POST{"org_name"}, "Organization Name", $VARCHAR, true)) ? array($error, $_POST{"org_name"}) : array(true, NULL);
+    if (isset($_POST['parent']) && $_POST['parent'] == '0') { // fail validation
+        add_error('Holding Company not selected, please select a value');
+        $error = true;
+    }
+
+    if ($_SESSION['org']['parent_id'] == '' && $_SESSION['org']['parent_id'] == NULL) {
+        list($error, $_SESSION['org']['name']) = (shn_validate_field($_POST{"org_name"}, "Organization Name", $VARCHAR, true))?array($error, $_POST{"org_name"}):array(true, NULL);
+        shn_check_for_special_char($_SESSION['org']['name'], _('Organization Name'));
+    }
+    else {
+        list($error, $_SESSION['org']['name']) = (shn_validate_field($_POST{"org_name"}, "Operation/Branch", $VARCHAR, true))?array($error, $_POST{"org_name"}):array(true, NULL);
+        shn_check_for_special_char($_SESSION['org']['name'], _('Operation/Branch '));
+    }
+    /* if($_SESSION['org']['name'] != NULL && $_SESSION['org']['name'] != '')
+    {
+    	shn_check_for_special_char($_SESSION['org']['name'], _('Organization '));
+    }*/
     if ($parent_org == true) {
         list($error, $_SESSION['org']['type']) = (shn_validate_opt_field('opt_org_type', $_POST{"opt_org_type"}, "Organization Type", $VARCHAR, false)) ? array($error, $_POST{"opt_org_type"}) : array(true, NULL);
     } else {
@@ -926,7 +951,7 @@ function _shn_or_check_org_reg_info_complete() {
     $_SESSION['org']['loc_txt'] = $_POST['loc_txt'];
     if ($parent_org == true) {
         if (trim(strlen($_POST{"reg_no"})) > $VARCHAR) {
-            add_error(SHN_ERR_OR_REG_MAX);
+            add_error(SHN_ERR_OR_REG_MAX_REG_NO);
             $error = true;
         } else {
             $_SESSION['org']['reg_no'] = $_POST{"reg_no"};
@@ -943,19 +968,31 @@ function _shn_or_check_org_reg_info_complete() {
         add_error(SHN_ERR_OR_REG_MAX);
         $error = true;
     } else {
-        $_SESSION['org']['contact_phone'] = $_POST{"contact_phone"};
+        if (shn_valid_phone2($_POST['contact_phone'], 'phone number') == false) {
+            $error = true;
+        } else {
+            $_SESSION['org']['contact_phone'] = $_POST{"contact_phone"};
+        }
     }
     if (trim(strlen($_POST{"contact_mobile"})) > $VARCHAR) {
         add_error(SHN_ERR_OR_REG_MAX);
         $error = true;
     } else {
-        $_SESSION['org']['contact_mobile'] = $_POST{"contact_mobile"};
+        if (shn_valid_phone2($_POST['contact_mobile'], 'mobile number') == false) {
+            $error = true;
+        } else {
+            $_SESSION['org']['contact_mobile'] = $_POST{"contact_mobile"};
+        }
     }
     if (trim(strlen($_POST{"contact_fax"})) > $VARCHAR) {
         add_error(SHN_ERR_OR_REG_MAX);
         $error = true;
     } else {
-        $_SESSION['org']['contact_fax'] = $_POST{"contact_fax"};
+        if (shn_valid_phone2($_POST['contact_fax'], 'fax number') == false) {
+            $error = true;
+        } else {
+            $_SESSION['org']['contact_fax'] = $_POST{"contact_fax"};
+        }
     }
     if (trim(strlen($_POST{"contact_mail"})) > $VARCHAR) {
         add_error(SHN_ERR_OR_REG_MAX);

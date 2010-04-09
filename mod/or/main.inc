@@ -145,11 +145,23 @@ function shn_or_reg_operation($error = false) {
         _shn_or_regform_operation(false, $_SESSION['org']['parent_id']);
     }
 }
+
 function shn_or_reg_operation_cr() {
-    include_once ("process_org.inc");
-    _shn_or_reg_operation_cr();
-    shn_or_view_org();
+    include_once("process_org.inc");
+    //print($_POST['action']);
+    $action = $_POST['action'];
+    if ($action == 'edit') {
+        //shn_or_reg_operation(true);
+        include_once ("reg_org.inc");
+        //print $_SESSION['org']['parent_id'];
+        _shn_or_regform_operation(true, $_SESSION['org']['parent_id']);
+    }
+    if ($action == 'save') {
+        _shn_or_reg_operation_cr();
+        shn_or_view_org();
+    }
 }
+
 function shn_or_view_org_submit() {
     include_once ("process_org.inc");
     include_once ("view_org.inc");
@@ -191,8 +203,15 @@ function shn_or_view_org_submit() {
             unset($_SESSION['org']);
         break;
         case "del":
-            _shn_or_del_org();
-        break;
+            if (_shn_or_del_org_validate()) {
+                _shn_or_del_org();
+            }
+            else {
+                add_error(_('Branches or departments are registerd with the Organization. Please remove them first'));
+                shn_or_view_org();
+            }
+            // _shn_or_del_org();
+            break;
         default:
             shn_or_view_org();
         break;
