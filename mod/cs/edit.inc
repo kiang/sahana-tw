@@ -113,9 +113,11 @@ function show_item_cat_table() {
     if (isset($_REQUEST['page'])) {
         $start_rec = ($_REQUEST['page'] - 1) * $num_of_rec_per_page;
         $end_rec = $_REQUEST['page'] * $num_of_rec_per_page;
+        $page = $_REQUEST['page'];
     } else {
         $start_rec = 0;
         $end_rec = $num_of_rec_per_page;
+        $page = 0;
     }
     if (isset($_POST['filter_main_cat']) && $_POST['filter_main_cat'] != 'all') {
         $filter_main_cat = $_POST['filter_main_cat'];
@@ -159,9 +161,13 @@ function show_item_cat_table() {
     }
     print "Page : ";
     for ($i = 1;$i <= $num_of_pages;$i++) {
+        if($page != $i) {
 ?>
     &nbsp;<a href="index.php?mod=cs&amp;act=edit_form_submit&amp;view_type=item&amp;page=<?php echo $i ?>"><?php print $i; ?></a>
     <?php
+        } else {
+            echo '<strong>'. $i . '</strong>' ;
+        }
     }
 ?>
 <br /><br />
@@ -238,10 +244,19 @@ function _shn_cs_edit_cat_select_submit_result() {
     global $global;
     $db = $global["db"];
     $id = trim($_REQUEST['id']);
-    $query = "SELECT name,description FROM ct_catalogue WHERE ct_uuid = '$id' ";
-    $res = $db->Execute($query);
-    $name = $res->fields["name"];
-    $description = $res->fields["description"];
+
+    if(isset($_POST['id'])){
+    	$name = $_POST['item_cat_name'];
+    	$description = $_POST['description'];
+    }
+    else{
+    	$query = "SELECT name,description FROM ct_catalogue WHERE ct_uuid = '$id' ";
+    	$res = $db->Execute($query);
+
+    	$name = $res->fields["name"];
+    	$description = $res->fields["description"];
+    }
+
     $form_opts['name'] = "edit_form";
     $extra_opts['req'] = true;
     shn_form_fopen('edit_cat_form_submit', null, $form_opts);
@@ -303,14 +318,25 @@ function _shn_cs_edit_cat_form_submit_result() {
     $action = trim($_POST['action']);
     if ($action == 'close') {
         show_item_cat_table();
-    } else if ($action == 'edit') {
-        $name = trim($_POST['item_cat_name']);
-        $description = trim($_POST['description']);
-        $id = trim($_POST['id']);
-        $query = "UPDATE ct_catalogue SET name = '$name' , description = '$description' WHERE ct_uuid = '$id' ";
-        $res = $db->Execute($query);
-        add_confirmation($name . _(" was successfully saved in the database"));
-        show_item_cat_table();
+    }else if($action == 'edit') {
+        if (!_shn_cs_validate_edit_calelog_item()) {
+            $name = trim($_POST['item_cat_name']);
+            $description = trim($_POST['description']);
+
+            $id = trim($_POST['id']);
+
+            if ($name == '') {
+                add_error('Catalog / Item Name cannot be empty');
+                shn_cs_edit_cat_select_submit();
+            }
+            else {
+                $query = "UPDATE ct_catalogue SET name = '$name' , description = '$description' WHERE ct_uuid = '$id' ";
+                $res = $db->Execute($query);
+
+                add_confirmation($name . _(" was successfully saved in the database"));
+                show_item_cat_table();
+            }
+        }
     } else if ($action == 'del') {
         add_warning('Are You Sure you want to delete this item');
         shn_form_fopen('delete_item', '', '', array('req' => false));

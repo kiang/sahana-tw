@@ -61,11 +61,18 @@ function _shn_admin_mainmenu() {
     shn_sub_mod_menuitem("lc_ui_trns_update", _("Update Translation"), 'admin');
     shn_sub_mod_menuclose();
     shn_sub_mod_menuopen(_("Disaster Levels"));
+    //if($conf['mod_admin_ims_active'] == true)
+    //{
     shn_sub_mod_menuitem("ims_level1", _('Registered ') . _lc($conf['mod_admin_ims_level1']), 'admin');
     shn_sub_mod_menuitem("ims_level2", _('Registered ') . _lc($conf['mod_admin_ims_level2']), 'admin');
     shn_sub_mod_menuitem("ims_level3", _('Registered ') . _lc($conf['mod_admin_ims_level3']), 'admin');
     shn_sub_mod_menuitem("ims_config", _('Levels Terminology'), 'admin');
     //include $global['approot']."/mod/admin/ims_menus.inc";
+    ////}
+    ////else
+    //{
+    	//shn_sub_mod_menuitem("ims_config",_('Levels Terminology'), 'admin');
+    //}
     shn_sub_mod_menuclose();
     shn_sub_mod_menuopen(_("Config Utils"));
     shn_sub_mod_menuitem("conf_list", _("Config Values"), 'admin');
@@ -76,6 +83,9 @@ function _shn_admin_mainmenu() {
     include $global['approot'] . "/inc/handler_mainmenu.inc";
 }
 function _shn_admin_acl_user_roles_menu($user_home = false) {
+    if( !isset( $_GET['tabid'] ) ){
+        $_GET['tabid'] = -1;
+    }
     shn_tabmenu_open();
     shn_tabmenu_item("add_user", _("Add Users"), "admin");
     shn_tabmenu_item("del_user", _("Remove Users"), "admin");
@@ -103,6 +113,9 @@ function _shn_admin_acl_user_roles_menu($user_home = false) {
     }
 }
 function _shn_admin_acl_privacy_menu($privacy_home = false) {
+    if( !isset( $_GET['tabid'] ) ){
+        $_GET['tabid'] = -1;
+    }
     shn_tabmenu_open();
     //shn_tabmenu_item("acl_data_classifications", _("Data Classifications"), 'admin');
     shn_tabmenu_item("acl_data_privacy", _("Data Classifications & Role Permissions"), 'admin');

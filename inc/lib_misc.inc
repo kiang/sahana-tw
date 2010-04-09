@@ -160,25 +160,57 @@ var sort=<?php if ($sort == true) {
             }
         }
 
+        // Removes leading whitespaces
+        function LTrim( value ) {
+        	var re = /\s*((\S+\s*)*)/;
+        	return value.replace(re, "$1");
+        }
+
+        // Removes ending whitespaces
+        function RTrim( value ) {
+        	var re = /((\s*\S+)*)\s*/;
+        	return value.replace(re, "$1");
+        }
+
+        // Removes leading and ending whitespaces
+        function trim( value ) {
+        	return LTrim(RTrim(value));
+        }
+
+        function check_for_special_char(data) {
+            var iChars = "!@#$%^&*()+=-[]\';,./{}|\":<>?";
+            var is_valid = false;
+            for (var i = 0; i < data.length; i++) {
+                if (iChars.indexOf(data.charAt(i)) != -1){
+                    is_valid = true;
+                }
+            }
+            return is_valid;
+        }
+
         function add_types(){
 			/*we need to check whether the new type is in the database
 			if so, notify and reject,therefore check against db_str  */
 			var y=document.getElementsByName("type");
 
 			// blank space validation added by Ravith.
-			y_val = y[0].value
-			y_val.replace(/^\s+|\s+$/g, '')
+			y_val = y[0].value;
+			y_val.replace(/^\s+|\s+$/g, '');
 
-			if(y_val==null || y_val==""){
+			if(y_val==null || y_val=="" || trim(y_val).length == 0){
 			     alert("<?php echo _("Whitespace is not a valid input."); ?>");
 			     return;
 			}
+                        else if(check_for_special_char(y_val)){
+                            alert("Containts special characters. \n These are not allowed.\n Please remove them and try again.");
+                            return;
+                        }
 			// end of blank space validation
 
 			var exist=search(db_str,y[0].value);
 
 			if(exist){
-                alert("<?php echo _("The type already exists in the list") ?>");
+                alert("<?php echo _("The type already exists in the list"); ?>");
                 return;
             }
             	/*Now we need to check whether we added it during this session
@@ -291,4 +323,25 @@ function shn_action_change_javascript($form, $change) {
 </script>
 <?php
 }
+
+function shn_page_reload($mod = null, $act = null)
+{
+	?>
+	<script type="text/javascript">
+		var surl = unescape(window.location.pathname);
+		var mod = '<?php echo $mod; ?>';
+		var act = '<?php echo $act; ?>';
+		var url = '';
+		if(mod != null && act != null){
+			url = surl + '?mod=' + mod + '&act=' + act;
+		}
+		else{
+			url = surl;
+		}
+
+	    window.location.replace(url);
+	</script>
+	<?php
+}
+
 ?>

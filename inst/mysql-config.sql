@@ -194,6 +194,7 @@ INSERT INTO sys_user_groups VALUES ( 6, 'Volunteer Coordinator');
 INSERT INTO sys_user_groups VALUES ( 7, 'Camp Admin');
 INSERT INTO sys_user_groups VALUES ( 8, 'Field Officer');
 INSERT INTO sys_user_groups VALUES ( 9, 'Syncronization Operator');
+INSERT INTO sys_user_groups VALUES ( 10, 'Authorized User');
 
 -- INSERT DEFAULT SYS USER GROUP TO DATA CLASSIFICATION MAPPINGS
 -- admin role
@@ -209,25 +210,26 @@ INSERT INTO sys_group_to_data_classification VALUES ( 1, 6,"crud");
 INSERT INTO sys_group_to_data_classification VALUES ( 1, 7,"crud");
 INSERT INTO sys_group_to_data_classification VALUES ( 1, 8,"crud");
 
-
-INSERT INTO sys_group_to_data_classification VALUES ( 2, 1,"-r--");
-INSERT INTO sys_group_to_data_classification VALUES ( 2, 2,"-r--");
-INSERT INTO sys_group_to_data_classification VALUES ( 2, 3,"crud");
+-- registered tightly restricted by default due to self-signup possibility
+-- new authorized user created with more flexible permissions
+INSERT INTO sys_group_to_data_classification VALUES ( 2, 1,"----");
+INSERT INTO sys_group_to_data_classification VALUES ( 2, 2,"----");
+INSERT INTO sys_group_to_data_classification VALUES ( 2, 3,"----");
 INSERT INTO sys_group_to_data_classification VALUES ( 2, 4,"----");
-INSERT INTO sys_group_to_data_classification VALUES ( 2, 5,"crud");
-INSERT INTO sys_group_to_data_classification VALUES ( 2, 6,"-r--");
-INSERT INTO sys_group_to_data_classification VALUES ( 2, 7,"crud");
-INSERT INTO sys_group_to_data_classification VALUES ( 2, 8,"crud");
+INSERT INTO sys_group_to_data_classification VALUES ( 2, 5,"----");
+INSERT INTO sys_group_to_data_classification VALUES ( 2, 6,"----");
+INSERT INTO sys_group_to_data_classification VALUES ( 2, 7,"-r--");
+INSERT INTO sys_group_to_data_classification VALUES ( 2, 8,"-r--");
 
-
+-- anonymous tightly restricted by default
 INSERT INTO sys_group_to_data_classification VALUES ( 3, 1,"----");
 INSERT INTO sys_group_to_data_classification VALUES ( 3, 2,"----");
-INSERT INTO sys_group_to_data_classification VALUES ( 3, 3,"-r--");
+INSERT INTO sys_group_to_data_classification VALUES ( 3, 3,"----");
 INSERT INTO sys_group_to_data_classification VALUES ( 3, 4,"----");
-INSERT INTO sys_group_to_data_classification VALUES ( 3, 5,"-r--");
+INSERT INTO sys_group_to_data_classification VALUES ( 3, 5,"----");
 INSERT INTO sys_group_to_data_classification VALUES ( 3, 6,"----");
-INSERT INTO sys_group_to_data_classification VALUES ( 3, 7,"crud");
-INSERT INTO sys_group_to_data_classification VALUES ( 3, 8,"crud");
+INSERT INTO sys_group_to_data_classification VALUES ( 3, 7,"-r--");
+INSERT INTO sys_group_to_data_classification VALUES ( 3, 8,"-r--");
 
 INSERT INTO sys_group_to_data_classification VALUES ( 4, 1,"crud");
 INSERT INTO sys_group_to_data_classification VALUES ( 4, 2,"crud");
@@ -282,6 +284,16 @@ INSERT INTO sys_group_to_data_classification VALUES ( 9, 5,"crud");
 INSERT INTO sys_group_to_data_classification VALUES ( 9, 6,"crud");
 INSERT INTO sys_group_to_data_classification VALUES ( 9, 7,"crud");
 INSERT INTO sys_group_to_data_classification VALUES ( 9, 8,"crud");
+
+-- authorized user with more permissions than registered user
+INSERT INTO sys_group_to_data_classification VALUES ( 10, 1,"-r--");
+INSERT INTO sys_group_to_data_classification VALUES ( 10, 2,"-r--");
+INSERT INTO sys_group_to_data_classification VALUES ( 10, 3,"crud");
+INSERT INTO sys_group_to_data_classification VALUES ( 10, 4,"----");
+INSERT INTO sys_group_to_data_classification VALUES ( 10, 5,"crud");
+INSERT INTO sys_group_to_data_classification VALUES ( 10, 6,"-r--");
+INSERT INTO sys_group_to_data_classification VALUES ( 10, 7,"crud");
+INSERT INTO sys_group_to_data_classification VALUES ( 10, 8,"crud");
 
 -- INSERT DEFAULT MODULE ENABLE/DISABLE FOR GROUPS
 INSERT INTO sys_group_to_module VALUES (9,'sync','enabled');

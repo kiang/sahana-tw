@@ -1,5 +1,11 @@
-Change Log for Sahana 0.6.2.2 Update release.
+Change Log for Sahana 0.6.3 Security Release
+-------------------------------------------------------------------------------------
+Cumulative release which addresses security vulnerabilities documented here: 
+http://wiki.sahanafoundation.org/doku.php/security
 
+
+Change Log for Sahana 0.6.2.2 Update release.
+-------------------------------------------------------------------------------------
 Sahana Setup
 
     * Fixed password re-appearance on form in the setup if a page has errors.
@@ -49,4 +55,3 @@ GIS
 
     * Show which plugin is selected
     * Map Display error in Windows
-

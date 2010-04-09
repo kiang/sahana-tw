@@ -127,6 +127,22 @@ function shn_valid_phone($field) {
     }
     return true;
 }
+
+//need a better way
+
+function shn_valid_phone2($fieldValue , $fieldName='phone number')
+{
+   $validPhoneExpr = "/^([0-9]|\+)([0-9]*|\-?|\s?)*$/";
+   if(trim($fieldValue) != ''){
+	   if ( !preg_match($validPhoneExpr , $fieldValue))
+	   {
+	   		add_error ( _("Please enter a valid $fieldName") );
+	      	return false;
+	   }
+   }
+   return true;
+}
+
 /**
  * Check the validity of an email address
  *
@@ -140,7 +156,8 @@ function shn_valid_email($field, $required = false) {
         return true;
     }
     // Check syntax
-    $validEmailExpr = "^[0-9a-z~!#$%&_-]([.]?[0-9a-z~!#$%&_-])*" . "@[0-9a-z~!#$%&_-]([.]?[0-9a-z~!#$%&_-])*$";
+    //$validEmailExpr = "^[0-9a-z~!#$%&_-]([.]?[0-9a-z~!#$%&_-])*" . "@[0-9a-z~!#$%&_-]([.]?[0-9a-z~!#$%&_-])*$";
+    $validEmailExpr = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$";
     if (!eregi($validEmailExpr, $field)) {
         return false;
     }
@@ -183,6 +200,43 @@ function shn_valid_date($date, $check_null = false, $pattern = '/^\d{4}-\d{2}-\d
             add_error($des . _(" field should be valid (yyyy-mm-dd)"));
             return false;
         }
+    }
+}
+
+/**
+ * checks if the argument is a name
+ *
+ * @param mixed $str
+ * @param string $pattern
+ * @access public
+ * @return bool
+ */
+function shn_valid_name($str,$pattern='/^\D+$/')
+{
+    if(preg_match($pattern,$str))
+        return false;
+    else
+        return true;
+}
+
+/**
+ * checks if the argument is a special charactor
+ *
+ * @param mixed $str
+ * @param string $pattern
+ * @access public
+ * @return bool
+ */
+
+function shn_check_for_special_char($str, $prefix = null, $pattern="/[()?~`'@#&<>%\*\,\.]/i")
+{
+
+    if(preg_match($pattern,$str)){
+    	add_error($prefix._(' Containts special characters. These are not allowed. Please remove them and try again.'));
+        return true;
+    }
+    else{
+        return false;
     }
 }
 /**
@@ -291,7 +345,7 @@ function shn_validate_opt_field($type, $field, $desc, $max_len, $array = false) 
             if (($type != "select") and (shn_is_opt_field($type, shn_clean($field)))) {
                 return true;
             } else {
-                add_error(_("You have to select a value from the list box"));
+                add_error(_("Required field can not be empty! You have to select a value from the list box"));
                 return false;
             }
         } else {
@@ -299,7 +353,7 @@ function shn_validate_opt_field($type, $field, $desc, $max_len, $array = false) 
             while ($i < count($field)) {
                 if (($type == "select") or (!shn_is_opt_field($type, shn_clean($field[$i])))) {
                     echo $type;
-                    add_error(_("You have to select a value from the list box"));
+                    add_error(_("Required field can not be empty! You have to select a value from the list box"));
                     return false;
                 }
                 $i = $i + 1;

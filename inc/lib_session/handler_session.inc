@@ -63,9 +63,14 @@ function shn_session_start() {
     hijack this useless session
     */
     //var_dump($_SESSION);
+/*
+
+WE ALWAYS reGen anon users' keys to reduce hijack risk to 0.
+
     if (ANONYMOUS_USER == $_SESSION['user_id']) {
         return true;
     }
+*/
     /*If user is guest then he has privileges ,so we have to protect the
     session ,lets  try to make it hard for session hijacking
     the use of IPADDRESS to prevent session hijacking has
@@ -197,7 +202,7 @@ function write_session($sess_id, $key, $secret) {
 function delete_session($sess_id) {
     global $global;
     $db = $global['db'];
-    $sql = "delete from session_keys where session_id='{$sess_id}'";
+    $sql = "delete from sessions where session_id='{$sess_id}'";
     $res = $db->Execute($sql);
     return $res;
 }

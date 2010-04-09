@@ -859,5 +859,15 @@ CREATE TABLE adodb_logsql (
 )
 
 
-/**================= TO BE REMOVED =======================**/
+/*This table will store the reported person of the missing person
+ * Modules : Missing Person Registry
+ * Created : 30th-October-2009 - dilantha@respere.com
+ */
+DROP TABLE IF EXISTS person_reported;
+CREATE TABLE  person_reported (
+  p_uuid varchar(200) NOT NULL,
+  repd_uuid varchar(200) NOT NULL,
+  PRIMARY KEY  (p_uuid)
+)
 
+/**================= TO BE REMOVED =======================**/

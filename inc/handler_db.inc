@@ -173,7 +173,7 @@ function shn_db_get_incident_select() {
 ?>
 <form method="post" action="index.php?mod=home&amp;act=incident_set" id='incident_changer' class="head" >
 <label><?php echo _("Incident") ?></label>
-<select name="incident_id" onchange="changeIncident(this.value);" >
+<select name="incident_id" onchange="changeIncident(this.value);window.location.reload(true);" > 
 <?php
     $sql_level1 = "SELECT incident_id, name FROM incident WHERE parent_id IS NULL";
     $result_leve1 = $global['db']->Execute($sql_level1);

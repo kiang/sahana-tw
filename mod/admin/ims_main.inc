@@ -36,38 +36,49 @@ function shn_admin_ims_level1() {
 }
 function shn_admin_ims_level2() {
     global $global;
+    global $conf;
     require ($global['approot'] . 'mod/admin/ims_level.inc');
-    print ("<h1><center>" . _("Manage Events") . "</center></h1>");
-    switch ($_POST['seq']) {
-        case 'addnew':
-        case 'update':
-            if (_shn_ims_level2_validate()) {
-                _shn_ims_level2_form(false, $type);
-            } else {
-                _shn_ims_level2_form(true, $type);
-            }
-        break;
-        default:
-            _shn_ims_level2_form();
-        break;
+
+    if($conf['mod_admin_ims_active'] == true) {
+        print("<h1><center>" . _("Manage Events") . "</center></h1>");
+        switch($_POST['seq']) {
+            case 'addnew':
+            case 'update':
+                if (_shn_ims_level2_validate()) {
+                    _shn_ims_level2_form(false, $type);
+                } else {
+                    _shn_ims_level2_form(true, $type);
+                }
+                break;
+            default:
+                _shn_ims_level2_form();
+                break;
+        }
+    } else {
+        add_warning(_('Please activate the disaster levels first'));
     }
 }
 function shn_admin_ims_level3() {
     global $global;
     require ($global['approot'] . 'mod/admin/ims_level.inc');
-    print ("<h1><center>Manage Incidents</center></h1>");
-    switch ($_POST['seq']) {
-        case 'addnew':
-        case 'update':
-            if (_shn_ims_level3_validate()) {
-                _shn_ims_level3_form(false, $type);
-            } else {
-                _shn_ims_level3_form(true, $type);
-            }
-        break;
-        default:
-            _shn_ims_level3_form();
-        break;
+
+    if($conf['mod_admin_ims_active'] == true) {
+        print ("<h1><center>Manage Incidents</center></h1>");
+        switch($_POST['seq']) {
+            case 'addnew':
+            case 'update':
+                if (_shn_ims_level3_validate()) {
+                    _shn_ims_level3_form(false, $type);
+                } else {
+                    _shn_ims_level3_form(true, $type);
+                }
+                break;
+            default:
+                _shn_ims_level3_form();
+                break;
+        }
+    } else {
+        add_warning(_('Please activate the disaster levels first'));
     }
 }
 function shn_admin_ims_assign() {

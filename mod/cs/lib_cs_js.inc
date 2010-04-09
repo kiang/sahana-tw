@@ -100,11 +100,8 @@ function shn_cs_search_cat_js() {
 <script type="text/javascript">
     function shn_cs_search_cat_js()
     {
-    var x=document.select_type_form.search_type.options[document.select_type_form.search_type.selectedIndex].value;
-    if(x!='none')
-        {
+        var x=document.select_type_form.search_type.options[document.select_type_form.search_type.selectedIndex].value;
         document.select_type_form.submit();
-        }
     }
 </script>
 <?php

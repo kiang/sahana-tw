@@ -28,7 +28,7 @@ function _shn_admin_location_view_form() {
 ?>
 <div id="info"><?php
     // removed multiline due to a get text issue.
-    echo _("Select location and then select the level(province,district,ect),") . _(" the selected location field at the end of the form will be updated") ?>
+    echo _("Select location and then select the level (e.g. Country, State, City),") . _(" the selected location field at the end of the form will be updated") ?>
 </div>
 <?php
     $select_opts = "onClick='update_loc(this.options[this.selectedIndex].value,this.options[this.selectedIndex].text)'";
@@ -255,7 +255,7 @@ function _shn_admin_location_range_form() {
     $db = $global["db"];
 ?>
 <h2><?php echo _("Set the Location Range") ?></h2>
-<div id="note"><?php echo _("In a Disaster,all the location levels might not be important ,set the range here") ?>
+<div id="note"><?php echo _("In a Disaster, all the location levels might not be important ,set the range here") ?>
 </div>
 	<?php
     if ($error == true) display_errors();
@@ -312,8 +312,8 @@ function _shn_admin_location_start_form() {
     global $global;
     $db = $global["db"];
 ?>
-<h2><?php echo _("Set the Starting Location") ?></h2>
-<div id="note"><?php echo _("When a Disaster happens,typically only organizations,people located in a certain region get involved. Therefore when you select a location its a waste of time to select from all the locations. Hence ,for example If you know the country ,specify it here in this form,and you will only see sub-divisions of that country. Furthermore ,if the Disaster is confined to a much smaller geographical area, select the appropriate location to start with.") ?>
+<h2><?php echo _("Set the Default Location")?></h2>
+<div id="note"><?php echo _("When a Disaster happens, typically only organizations and people located in a certain region are involved. Therefore, when you select a location it is inefficient to select all locations. For example, if you know the Country, specify it here in this form, and you will only see sub-divisions of that Country. Furthermore, if the Disaster is confined to a smaller geographical area, select the appropriate location to start with - such as the State or Country")?>
 </div>
 	<?php
     if ($error == true) display_errors();
@@ -357,7 +357,12 @@ function _shn_admin_loc_start_cr() {
         } else {
             $q = "insert into  config(module_id,confkey,value) values('admin','loc_start','{$loc}')";
         }
-        $db->Execute($q);
+        $res = $db->Execute($q);
+        if(!$res){
+            add_error(_('Error on updating starting location'));
+        } else {
+            add_confirmation(_('Starting location updated sucessfully.'));
+        }
     }
     _shn_admin_location_start_form();
 }
@@ -379,7 +384,7 @@ function _shn_admin_location_form() {
     if ($loc_count > 0) {
         shn_form_fsopen(_("Now Select the parent Location"));
 ?>
-<div class="info"><?=_("Select the parent or super region (e.g. country, state, etc) of the location you have typed above. If no parent region is given, the location being added will become a top most region (usually country)"); ?></div>
+<div class="info"><?= _("Select the parent or super region (e.g. Country, State, City) of the location you have typed above. If no parent region is given, the location being added will become a top most region (usually a Country)");?></div>
 <br />
 	<?php
         $range = shn_get_range();

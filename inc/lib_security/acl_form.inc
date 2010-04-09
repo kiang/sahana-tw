@@ -508,8 +508,8 @@ function shn_acl_form_event_log() {
     while (($res != null) && (!$res->EOF)) {
         $timestamp = $res->fields["changed_timestamp"];
         $full_name = shn_get_user_details($res->fields["p_uuid"]);
-        $date = date("m.d.y", $timestamp);
-        $time = date("H:m:s", $timestamp);
+        $date = date("Y-m-d", $timestamp);
+        $time = date("H:i:s", $timestamp);
         $type = ($res->fields["event_type"] == null) ? 1 : $res->fields["event_type"];
         $sql = "SELECT option_description FROM field_options WHERE option_code='{$type}' AND field_name='opt_acl_event_type'";
         $res2 = $db->Execute($sql);

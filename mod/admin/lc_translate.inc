@@ -86,9 +86,9 @@ function _shn_admin_lc_save() {
             add_confirmation(_("File saved successfully."));
         }
     } else {
-        echo "<div class=\"message info\">";
-        print _("Please make the path : ") . $file_name . _(" writable");
-        echo "</div>";
+        //echo "<div class=\"message info\">";
+        add_error(_("Please make the path : ") . $file_name . _(" writable"));
+        //echo "</div>";
     }
     _shn_admin_lc_load();
 }
@@ -132,8 +132,12 @@ function _shn_admin_lc_merge() {
             } else {
                 add_error(_("Cannot write to file ") . $filename);
             }
-        } else print _("Please make the path : ") . $file_name . _(" writable");
-    } else print _("Please make the path : ") . $file_name . _(" writable");
+        } else {
+            add_error(_("Please make the path : ") . $file_name . _(" writable"));
+        }
+    } else {
+        add_error(_("Please make the path : ") . $file_name . _(" writable"));
+    }
     _shn_admin_lc_load();
 }
 function _shn_admin_lc_merge_over() {
@@ -179,7 +183,7 @@ function _shn_admin_lc_load($file_n = null) {
                 $value = file_get_contents($tmpfilename);
             } else {
                 add_error(_("Failed to merge database localization values."));
-                echo $cmd;
+                add_error($cmd);
                 $value = file_get_contents($file_name);
             }
         }
@@ -188,6 +192,7 @@ function _shn_admin_lc_load($file_n = null) {
     shn_form_fopen("lc_trns", null, array('req_message' => false));
     shn_form_hidden(array('seq' => 'save'));
     shn_form_fsopen(_('Translation'));
+    $_POST['msgs'] = (isset($_POST['msgs']))? stripcslashes($_POST['msgs']):$_POST['msgs'];
     shn_form_textarea('', 'msgs', null, array('value' => $value, 'rows' => '30', 'cols' => '100'));
     shn_form_fsclose();
     shn_form_submit(_('Save'));
@@ -223,7 +228,12 @@ switch ($seq) {
     case 'compile':
         $return = array();
         $cmd = 'msgfmt ../res/locale/' . $locale . '/LC_MESSAGES/sahana.po --output-file=../res/locale/' . $locale . '/LC_MESSAGES/sahana.mo';
-        system($cmd, &$return);
+        system($cmd, & $return);
+        if (file_exists('../res/locale/' . $locale . '/LC_MESSAGES/sahana.mo') && $return == 0)
+            add_confirmation(_('Messages successfully compiled'));
+        else
+            add_error(_('Error compiling messages'));
+        break;
     break;
 }
 ?>

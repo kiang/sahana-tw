@@ -32,6 +32,11 @@ include_once $global['approot'] . "mod/admin/mmc_main.inc";
 // GIS Management Console
 // @todo: move as library
 //include_once $global['approot']."mod/gis/gis_admin.inc";
+
+$conf['mod_admin_ims_level1'] = $conf['ims_level1'];
+$conf['mod_admin_ims_level2'] = $conf['ims_level2'];
+$conf['mod_admin_ims_level3'] = $conf['ims_level3'];
+
 function shn_admin_mainmenu() {
     _shn_admin_mainmenu();
 }
@@ -263,20 +268,7 @@ function shn_admin_view_loc() {
     _shn_admin_location_view_form();
 }
 function shn_admin_view_loc_cr() {
-    if (isset($_POST{"chk_start"})) {
-        $loc = 0;
-    } else {
-        //$level="loc_select_".$_POST{"opt_location_type"};
-        //$loc=$_POST{$level};
-        $range = shn_get_range();
-        $level = $range['end'];
-        //$loc=$_POST{$level};
-        for ($beb = $level;$beb > 0;$beb--) {
-            $selection = "loc_select_" . $beb;
-            $loc = $_POST{$selection};
-            if ($loc != 0) break;
-        }
-    }
+    $loc = shn_location_get_form_submit_loc();
     if ($loc == "0") {
         add_error("Select the \"Location\" first and then select the \"Location Level\"");
         _shn_admin_location_view_form();

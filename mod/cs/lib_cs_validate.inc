@@ -14,6 +14,26 @@
  * @subpackage cs
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  */
+
+ /**
+  * This function validates the Edit catelog item
+  * This function is called by shn_cs_edit_cat_form_submit() in main.inc
+  * @access private
+  * @return boolean
+  */
+function _shn_cs_validate_edit_calelog_item()
+{
+    $error_flag = false;
+    clean_errors();
+
+    if(trim($_POST['item_cat_name']) == null || trim($_POST['item_cat_name']) == '') {
+    	add_error(_("Please enter the item name"));
+        $error_flag = true;
+	}
+
+   return $error_flag;
+}
+
 /**
  * This function validates the values entered in add main form.
  *This function is called by shn_cs_addmain_form_submit() in main.inc

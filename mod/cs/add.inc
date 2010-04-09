@@ -193,7 +193,7 @@ function _shn_cs_utype_select_submit_result() {
     $extra_opts['value'] = $base_unit_name;
     $extra_opts['req'] = false;
     shn_form_text(_("Base Unit : "), 'base_unit', 'size="5" readonly=true', $extra_opts);
-    shn_form_text(_("Multiplier : "), 'multiplier', 'size="50"', array('req' => 'true', 'help' => _('Enter the Multiplier of the entered Unit to the base unit of the Unit Type. Eg: Unit = g, Base unit=kg, Multiplier=0.001 (g=kg*0.001)')));
+    shn_form_text(_("Multiplier : "),'multiplier','size="50"',array('value'=> '1','req'=>'true','help'=>_('Enter the Multiplier of the entered Unit to the base unit of the Unit Type. Eg: Unit = g, Base unit=kg, Multiplier=0.001 (g=kg*0.001)')));
     shn_form_fsclose();
     $unit_id_array = array('unit_type_id' => $unit_type_id);
     shn_form_hidden($unit_id_array);

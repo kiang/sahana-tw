@@ -734,6 +734,13 @@ function shn_location_add() {
             $res->MoveNext();
         }
     }
+    if(shn_check_for_special_char($_POST["loc_name"])){
+        return;
+    }
+    if(shn_valid_name($_POST["loc_name"])){
+        add_error(_('Containts numbers. These are not allowed. Please remove them and try again.'));
+        return;
+    }
     $insert_array['name'] = $_POST{"loc_name"};
     $insert_array['description'] = $_POST{"desc"};
     $insert_array['iso_code'] = $_POST{"iso"};
@@ -1008,14 +1015,14 @@ function shn_location_get_loc_range() {
     $q = "select value from config where module_id='admin' and confkey='loc_range_start'";
     $res = $db->Execute($q);
     if (empty($res->fields[0])) {
-        $loc["start"] = $conf['mod_or_loc_level_start'];
+        $loc["start"] = $conf['mod_admin_loc_level_start'];
     } else {
         $loc["start"] = $res->fields[0];
     }
     $q = "select value from config where module_id='admin' and confkey='loc_range_end'";
     $res = $db->Execute($q);
     if (empty($res->fields[0])) {
-        $loc["end"] = $conf['mod_or_loc_level_end'];
+        $loc["end"] = $conf['mod_admin_loc_level_end'];
     } else {
         $loc["end"] = $res->fields[0];
     }

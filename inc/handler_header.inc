@@ -25,7 +25,8 @@
         <?php
 global $conf;
 if (file_exists($global['approot'] . 'conf/sysconf.inc')) {
-    shn_db_get_incident_select();
+    if(!empty($conf['mod_admin_ims_active']))
+        shn_db_get_incident_select();
     _shn_lc_lang_list();
 }
 ?>

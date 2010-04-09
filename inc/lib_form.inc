@@ -225,11 +225,12 @@ function shn_form_checkbox($label, $name, $text_opts = null, $extra_opts = null)
     global $shn_tabindex;
     $value = !empty($_POST[$name]) ? $_POST[$name] : (isset($extra_opts['value']) ? $extra_opts['value'] : '');
     $disabled = isset($extra_opts['disabled']) ? $extra_opts['disabled'] : false;
+    $checked = !empty($value)?" checked='checked' ": "";
 ?>
 <label for="<?php echo $name ?>"><?php echo $label ?></label>
 <input
 	type="checkbox" name="<?php echo $name ?>" id="<?php echo $name ?>"
-	value="<?php echo $value ?>"
+	value="<?php echo $value ?>" <?php echo $checked?>
 	<? if ($disabled) {
         echo "disabled='true'";
     } ?> <?php echo $text_opts ?>
@@ -284,7 +285,7 @@ function shn_form_select($options, $label, $name, $select_opts = "", $extra_opts
 function shn_form_radio($options, $label, $name, $select_opts = "", $extra_opts = null) {
     global $global;
     global $shn_tabindex;
-    $value = !empty($extra_opts['value']) ? $extra_opts['value'] : '';
+    $value = !empty($_POST[$name])? $_POST[$name] : (!empty($extra_opts['value']) ? $extra_opts['value'] : '');
     //$req=(true == $extra_opts['req'])?'<em> * </em>':'';
     
 ?>

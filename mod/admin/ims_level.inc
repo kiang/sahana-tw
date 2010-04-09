@@ -83,10 +83,19 @@ function _shn_ims_level1_validate() {
         return false;
     }
     if (($local_post['seq']) == 'addnew') {
+        $sql = "SELECT name FROM incident WHERE name = '{$local_post['level1_name_new']}'";
+        $incident_name = $global['db']->GetOne($sql);
         if (!isset($local_post['level1_name_new'])) {
             add_error(sprintf(_("Please enter the name for %s"), strtolower($conf['mod_admin_ims_level1'])));
             add_warning(sprintf(_('If there is/are no %1$s(s), please add a new %2$s'), strtolower($conf['mod_admin_ims_level1']), strtolower($conf['mod_admin_ims_level1'])));
             $error_flag = true;
+        }
+        else if(shn_check_for_special_char($local_post['level1_name_new'])) {
+            $error_flag=true;
+        }
+        else if(strtolower($incident_name) == strtolower(trim($local_post['level1_name_new']))) {
+            add_warning(sprintf(_("$incident_name is already exists.")));
+            $error_flag=true;
         }
     } else {
         $local_post['level1_name'] = null;
@@ -123,6 +132,8 @@ function _shn_ims_level1_validate() {
                 }
             }
         }
+        include_once $global['approot']."/inc/lib_misc.inc";
+        shn_page_reload('admin', 'ims_level1');
     }
 }
 /* }}} */
@@ -224,6 +235,13 @@ function _shn_ims_level2_validate() {
     $error_flag = false;
     //clean the post
     shn_tools_clean_post(&$local_post);
+
+    $sql = "SELECT  b.name FROM incident a
+    INNER JOIN incident b ON a.incident_id = b.parent_id AND a.parent_id IS NULL
+    WHERE b.name = '{$local_post['level2_name_new']}' AND b.parent_id = '{$local_post['level2_new_parent_id']}'";
+
+    $incident_event_name = $global['db']->GetOne($sql);
+    
     //anything entered?
     if (empty($local_post)) {
         add_error(_("You have not completed the form"));
@@ -236,6 +254,13 @@ function _shn_ims_level2_validate() {
         }
         if (!isset($local_post['level2_new_parent_id'])) {
             add_error(sprintf(_("Please select a %s"), strtolower($conf['mod_admin_ims_level1'])));
+            $error_flag = true;
+        }
+        if(shn_check_for_special_char($local_post['level2_name_new'])) {
+            $error_flag = true;
+        }
+        if($incident_event_name == $local_post['level2_name_new']) {
+            add_warning($local_post['level2_name_new'] . _(" is already exists."));
             $error_flag = true;
         }
     } else {
@@ -289,6 +314,8 @@ function _shn_ims_level2_validate() {
                 }
             }
         }
+        include_once $global['approot']."/inc/lib_misc.inc";
+        shn_page_reload('admin', 'ims_level2');
     }
 }
 /* }}} */
@@ -407,6 +434,10 @@ function _shn_ims_level3_validate() {
             add_warning(_('If there is/are no %1$s(s), please add a new %2$s'), strtolower($conf['mod_admin_ims_level2']), strtolower($conf['mod_admin_ims_level2']));
             $error_flag = true;
         }
+
+        if(shn_check_for_special_char($local_post['level3_name_new'])) {
+            $error_flag = true;
+        }
     } else {
         $local_post['level3_name'] = null;
         foreach($_POST['level3_name'] as $k => $v) {
@@ -432,6 +463,13 @@ function _shn_ims_level3_validate() {
     if ($error_flag) return false;
     else {
         if (($local_post['seq']) == 'addnew') {
+
+            $sql = "SELECT * FROM incident WHERE name='{$local_post['level3_name_new']}' AND parent_id='{$local_post['level3_new_parent_id']}'";
+            $res=$global['db']->Execute($sql);
+            $parent_idset = '';
+            foreach($res as $key => $val) {
+                $parent_idset.=$val['parent_id'];
+            }
             $sql = "INSERT INTO incident (name,parent_id) VALUES ('{$local_post['level3_name_new']}','{$local_post['level3_new_parent_id']}')";
             $global['db']->Execute($sql);
         } else {
@@ -458,6 +496,14 @@ function _shn_ims_level3_validate() {
                 }
             }
         }
+
+        if($parent_idset != null) {
+            $message=$local_post['level3_name_new']._(" Already exists under ").$conf['mod_admin_ims_level3'];
+            add_warning($message);
+        }
+
+        include_once $global['approot']."/inc/lib_misc.inc";
+        shn_page_reload('admin', 'ims_level3');
     }
 }
 /* }}} */

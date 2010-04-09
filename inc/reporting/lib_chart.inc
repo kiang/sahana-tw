@@ -156,7 +156,6 @@ function generate_piechart($chart_file_name = '', $title = '', $xtitle = '', $yt
         global $d_arr_index;
         $d_arr_index = 0;
         base_elements_of_chart($chart_ID, $chart_file_name, $title, $xtitle, $ytitle, $keyword_arr, $d_arr);
-        base_elements_of_chart($chart_ID, $chart_file_name, $title, $xtitle, $ytitle, $keyword_arr, $d_arr);
         $graph->SetprintEnable(_shn_is_print_ok());
         $graph->SetPlotType("pie");
         $graph->DrawGraph();
