@@ -317,15 +317,31 @@ class VolunteerController extends VolunteerView implements Controller {
                 require_once ($global['approot'] . 'mod/vm/lib/vm_validate.inc');
                 if (empty($getvars['skill_desc']) || empty($getvars['skill_code'])) add_error(_('Please specify both a skill description and skill code'));
                 else {
-                    $find = array("/ *" . VM_SKILLS_DELIMETER . " */", "/^ +/", "/ +$/");
-                    $replace = array("-", '', '');
-                    $description = preg_replace($find, $replace, $getvars['skill_desc']);
-                    if (!$dao->addSkill($getvars['skill_code'], $description)) add_error(_('The specified skill code already exists. Please choose another'));
+                    //validate skill code length
+                    if (strlen(trim($getvars['skill_code'])) < 4 || strlen(trim($getvars['skill_code'])) > 5) {
+                        add_error(_('Skill code should be 4 - 5 letters'));
+                    } else {
+                        $find = array("/ *" . VM_SKILLS_DELIMETER . " */", "/^ +/", "/ +$/");
+                        $replace = array("-", '', '');
+                        $description = preg_replace($find, $replace, $getvars['skill_desc']);
+
+                        if (!$dao->addSkill($getvars['skill_code'], $description)) {
+                            add_error(_('The specified skill code already exists. Please choose another'));
+                        } else {
+                            add_confirmation("Skill '$description' added");
+                            unset($_POST);
+                        }
+                    }
                 }
                 $this->displayModifySkills();
                 break;
             case 'process_remove_skill':
-                if (!empty($_REQUEST['skills'])) foreach($_REQUEST['skills'] as $code) $dao->removeSkill($code);
+                if(!empty($_REQUEST['skills'])) {
+                    foreach ($_REQUEST['skills'] as $code) {
+                        $dao->removeSkill($code);
+                        add_confirmation("Deleted $code");
+                    }
+                }
                 $this->displayModifySkills();
                 break;
             case 'display_approval_management':
@@ -396,6 +412,80 @@ class VolunteerController extends VolunteerView implements Controller {
             $validated = true;
             //validate name field
             $validated = $validated && shn_vm_not_empty($getvars['full_name'], SHN_ERR_VM_NO_NAME);
+
+            if ($getvars['prefered_confirm_medium'] != null) {
+                switch ($getvars['prefered_confirm_medium']) {
+                    case 'pmob':
+                        if (trim($getvars['contact_pmob']) == null) {
+                            add_error(SHN_ERR_VM_NO_CONTACT_PMOBILE);
+                            $validated = false;
+                        }
+                        break;
+                    case 'curr':
+                        if (trim($getvars['contact_curr']) == null) {
+                            add_error(SHN_ERR_VM_NO_CONTACT_CPHONE);
+                            $validated = false;
+                        }
+                        break;
+                    case 'cmob':
+                        if (trim($getvars['contact_cmob']) == null) {
+                            add_error(SHN_ERR_VM_NO_CONTACT_MOBILE);
+                            $validated = false;
+                        }
+                        break;
+                    case 'emai':
+                        if (trim($getvars['contact_emai']) == null) {
+                            add_error(SHN_ERR_VM_NO_CONTACT_EMAIL);
+                            $validated = false;
+                        }
+                        break;
+                }
+            }
+            else {
+                add_error(SHN_ERR_VM_NO_CONTACT_PREFERED_MEDIUM);
+                $validated = false;
+            }
+
+            if (!shn_vm_valid_contact($getvars['contact_home'], 100)) {
+                add_error(SHN_ERR_VM_CONTACT_HOME_TOO_LONG);
+                $validated = false;
+            }
+            if (!shn_vm_valid_contact($getvars['contact_name'], 100)) {
+                add_error(SHN_ERR_VM_CONTACT_NAME_TOO_LONG);
+                $validated = false;
+            }
+            if (!shn_vm_valid_contact($getvars['contact_pmob'], 20)) {
+                add_error(SHN_ERR_VM_CONTACT_PMOB_TOO_LONG);
+                $validated = false;
+            }
+            if (!shn_vm_valid_contact($getvars['contact_curr'], 20)) {
+                add_error(SHN_ERR_VM_CONTACT_CPHONE_TOO_LONG);
+                $validated = false;
+            }
+            if (!shn_vm_valid_contact($getvars['contact_cmob'], 20)) {
+                add_error(SHN_ERR_VM_CONTACT_CMOBILE_TOO_LONG);
+                $validated = false;
+            }
+            if (!shn_vm_valid_contact($getvars['contact_emai'], 20)) {
+                add_error(SHN_ERR_VM_CONTACT_EMAIL_TOO_LONG);
+                $validated = false;
+            }
+            if (!shn_vm_valid_contact($getvars['contact_fax'], 20)) {
+                add_error(SHN_ERR_VM_CONTACT_FAX_TOO_LONG);
+                $validated = false;
+            }
+            if (!shn_vm_valid_contact($getvars['contact_web'], 20)) {
+                add_error(SHN_ERR_VM_CONTACT_WEB_TOO_LONG);
+                $validated = false;
+            }
+            if (!shn_vm_valid_contact($getvars['contact_inst'], 20)) {
+                add_error(SHN_ERR_VM_CONTACT_INST_TOO_LONG);
+                $validated = false;
+            }	
+            if (!shn_vm_valid_contact($getvars['contact_emphone'], 20)) {
+                add_error(SHN_ERR_VM_CONTACT_EPHONE_TOO_LONG);
+                $validated = false;
+            }
             //validate start and end dates
             if (!shn_vm_valid_date($getvars['start_date']) || !shn_vm_valid_date($getvars['end_date'])) {
                 add_error(SHN_ERR_VM_BAD_DATES);
@@ -432,7 +522,9 @@ class VolunteerController extends VolunteerView implements Controller {
             //Validate email address
             $validated = $validated && ($getvars['contact_emai'] == null || shn_vm_validate_email($getvars['contact_emai']));
             //Validate picture
-            $validated = $validated && shn_vm_validate_image($getvars['picture']['tmp_name']);
+            if ($getvars['picture']['tmp_name'] != null) {
+                $validated = $validated && shn_vm_validate_image($getvars['picture']['tmp_name']);
+            }
             return $validated;
         }
         /**

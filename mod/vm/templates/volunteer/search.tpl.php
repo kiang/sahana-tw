@@ -17,7 +17,7 @@
 
 	global $global;
 	include_once($global['approot']."inc/lib_location.inc");
-
+        shn_form_fopen(null, null, array('req_message'=>false));
     shn_form_fsopen(_('Personal Information'));
 	    shn_form_text(_('Any ID Number:'),'vol_iden','size="30"');
 	    shn_form_text(_('Name:'),'vol_name','size="30"');

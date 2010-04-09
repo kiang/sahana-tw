@@ -18,6 +18,7 @@ function _shn_or_reg_org_cr() {
     // include_once $global['approot']."/inc/lib_security/authenticate.inc";
     include_once ($global['approot'] . "/inc/lib_uuid.inc");
     include_once $global['approot'] . "/mod/gis/gis_fns.inc";
+    print $_SESSION['org']['name'];
     $db = $global['db'];
     $q = "select o_uuid from org_main where name='{$_SESSION['org']['name']}'";
     $res = $db->Execute($q);
@@ -313,6 +314,21 @@ function _shn_or_reg_operation_cr() {
     
     */
 }
+
+function _shn_or_del_org_validate() {
+    global $global;
+    $db = $global['db'];
+    $org_id = $_POST{"org_id"};
+    $sql = "SELECT * FROM org_main WHERE parent_id = '$org_id'";
+    $res = $db->GetOne($sql);
+    if ($res) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
 function _shn_or_del_org() {
     global $global;
     $db = $global['db'];

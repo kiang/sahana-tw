@@ -78,17 +78,24 @@ if (!file_exists($APPROOT . 'conf/sysconf.inc')) {
 }
 // === cleans the GET and POST ===
 function shn_main_clean_getpost() {
+
     $purifier = new HTMLPurifier();
-    foreach($_POST as $key => $val) {
+
+    foreach ($_POST as $key=>$val) {
+        //this is a hack to prevent po file passed by htmlpurifier
+        if ($key == 'msgs') continue;
         if (is_array($_POST[$key]) == true) {
+
         } else {
             //$val=shn_db_clean($val);
             $val = $purifier->purify($val);
             $val = escapeHTML($val);
             $_POST[$key] = $val;
         }
+
     }
 }
+
 // === process the GET and POST ===
 function shn_main_filter_getpost() {
     global $global;
@@ -127,6 +134,8 @@ function shn_main_front_controller() {
     }
     // check the users access permissions for this action
     $module_function = 'shn_' . $stream_ . $module . '_' . $action;
+    // fixes the security vulnerability associated with null characters in the $module string
+    $module = str_replace("\0", "", $module);
     // include the correct module file based on action and module
     $module_file = $APPROOT . 'mod/' . $module . '/main.inc';
     // default to the home page if the module main does not exist

@@ -91,7 +91,7 @@ function _shn_sync_file_details() {
     <tr><td><?php echo _('Type') ?> </td><td><?=$_FILES['file_dump']['type'] ?></td></tr>
     <tr><td><?php echo _('Size') ?> </td><td><?php echo ((int)$_FILES['file_dump']['size'] / 1000) . ' kb' ?></td></tr>
     <tr><td colspan="2"></td></tr>
-    <tr><td><?php echo _('Time Created') ?></td><td><?=date("F j, Y, g:i a", $time) ?></td></tr>
+    <tr><td><?php echo _('Time Created') ?></td><td><?=date("F j, Y, g:i a") ?></td></tr>
     <tr><td><?php echo _('Dump Instance') ?></td><td><?=$ins ?></td></tr>
     </table >
     </center>

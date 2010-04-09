@@ -6,7 +6,7 @@ shn_form_fsopen(_('Add a new skill'));
 $req = array('req' => true);
 
 shn_form_text(_('Skill Description :'),'skill_desc','size="50"', $req);
-shn_form_text(_('Code [4-5 letter unique abbreviation] : '),'skill_code','size="5"', $req);
+shn_form_text(_('Code [4-5 letter unique abbreviation] : '),'skill_code','maxlength="5" size="5"', $req);
 
 shn_form_fsclose();
 shn_form_submit(_('Add'));

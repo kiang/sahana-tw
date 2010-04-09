@@ -65,7 +65,13 @@ define('VM_MIN_PASSWORD_LENGTH', 8);
 define('VM_MIN_PASSWORD_UPPERCASE', 1);
 define('VM_MIN_PASSWORD_NONALPHA', 1);
 //error constants
+//
 define('SHN_ERR_VM_NO_NAME', _('Please specify a name'));
+define('SHN_ERR_VM_NO_CONTACT_PREFERED_MEDIUM',	_('Please specify a prefered contact medium to send confirmation message.'));
+define('SHN_ERR_VM_NO_CONTACT_PMOBILE', _('Please specify a contact personal mobile number'));
+define('SHN_ERR_VM_NO_CONTACT_CPHONE', _('Please specify a contact current phone'));
+define('SHN_ERR_VM_NO_CONTACT_MOBILE', _('Please specify a contact mobile number'));
+define('SHN_ERR_VM_NO_CONTACT_EMAIL', _('Please specify a contact email'));
 define('SHN_ERR_VM_BAD_DATES', _('Please specify valid start and end dates for availability (yyyy-mm-dd)'));
 define('SHN_ERR_VM_DATES_INCOMPATIBLE', _('Please specify a start date that is before the end date'));
 define('SHN_ERR_VM_INVALID_DOB', _('Date of birth is not a valid date'));
@@ -98,4 +104,14 @@ define('SHN_ERR_VM_NO_DESCRIPTION', _('Please specify a description'));
 define('SHN_ERR_VM_NO_PAYRATE', _('Please specify a non-zero pay rate'));
 define('SHN_ERR_VM_BAD_EMAIL', _('Please specify a correct email address.'));
 define('SHN_ERR_VM_BAD_IMAGE', _('Invalid image file.'));
+define('SHN_ERR_VM_CONTACT_HOME_TOO_LONG', _('Contact home address character length should be lower than 100'));
+define('SHN_ERR_VM_CONTACT_NAME_TOO_LONG', _('Contact name character length should be lower than 100'));
+define('SHN_ERR_VM_CONTACT_PMOB_TOO_LONG', _('Contact personal mobile character length should be lower than 20'));
+define('SHN_ERR_VM_CONTACT_CPHONE_TOO_LONG',	_('Contact current phone character length should be lower than 20'));
+define('SHN_ERR_VM_CONTACT_CMOBILE_TOO_LONG',	_('Contact current mobile character length should be lower than 20'));
+define('SHN_ERR_VM_CONTACT_EMAIL_TOO_LONG', _('Contact email character length should be lower than 20'));
+define('SHN_ERR_VM_CONTACT_FAX_TOO_LONG', _('Contact fax number character length should be lower than 20'));
+define('SHN_ERR_VM_CONTACT_WEB_TOO_LONG', _('Contact web character length should be lower than 20'));
+define('SHN_ERR_VM_CONTACT_INST_TOO_LONG', _('Contact instant messenger character length should be lower than 20'));
+define('SHN_ERR_VM_CONTACT_EPHONE_TOO_LONG',	_('Contact emergency phone contact character length should be lower than 20'));
 ?>

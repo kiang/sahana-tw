@@ -66,6 +66,16 @@ shn_form_fopen('default&vm_action=process_add', null, array('enctype' => 'enctyp
 	shn_form_fsclose();
 
 	shn_form_fsopen(_('Contact Information'));
+		$prefered_medium = array ('pmob','curr','cmob','emai');
+		$contact_medium = array();
+		foreach($contact_types as $code => $name)
+		{
+			if (in_array($code, $prefered_medium)) {
+    			$contact_medium[$code] = $name;
+			}
+		}
+		shn_form_radio($contact_medium, 'Prefered medium confirmation :', 'prefered_confirm_medium',null, array('req'=>true));
+
 		foreach($contact_types as $code => $name)
 		{
 			shn_form_text($name.' :', 'contact_'.$code, '', array('value' => $info['contact'][$code]));

@@ -87,7 +87,7 @@ div#container { }
 		form#language { top:25px; }
 
 		/* insident changer select box in the top */
-		form#incident_changer { position:fixed; float:right; padding:2px 0px 2px 2px; z-index:1; }
+		form#incident_changer { /*position:fixed;*/ float:right; padding:2px 0px 2px 2px; z-index:1; }
 
 	div#wrapper { background: url(img/wrapper_bk.png) #FFF repeat-y left top; }
 		div#wrapper_menu {}	
@@ -303,3 +303,5 @@ div#formcontainer form#form_blank { padding: 5px; background-color: #fff; border
   float:left; display: block;padding: 10px;width: 760px;background-color: #fffbb8;color: #FF9900;border: 1px solid #ffcc00;font-weight: bold;position:fixed;z-index:6;
 
  }
+.about-sahana tr th { padding: 5px 0 2px 0; color: #fff; background-color: #369; border:1px #C6D1F5 solid;  }
+.about-sahana tr td {  background:#F3F6FF; font-size: 11px;  }

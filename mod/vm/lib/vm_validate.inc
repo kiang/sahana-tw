@@ -25,6 +25,18 @@
 /**
  * A library to validate POST data
  */
+function shn_vm_valid_contact($contact, $VARCHAR, $error_message = null) {
+    if (strlen($contact) < $VARCHAR) {
+        return true;
+    }
+    else {
+        if ($error_message != null) {
+            add_error($error_message);
+        }
+        return false;
+    }
+}
+
 /**
  * Checks to see if the date given is valid or not and outputs an error message
  * if so. Expects date in format YYYY-MM-DD.

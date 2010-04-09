@@ -299,12 +299,13 @@ function _shn_or_viewform_org($org_id, $error = false) {
     include_once "lib_or.inc";
     global $global;
     $db = $global['db'];
-    $q = "select o_uuid,parent_id,name,reg_no,man_power,resources from org_main where o_uuid='{$org_id}'";
+    $q = "SELECT om.o_uuid,om.parent_id,om.name,om.reg_no,om.man_power,om.resources FROM org_main om WHERE om.o_uuid='{$org_id}'";
     $res_org = $db->Execute($q);
     if (!$res_org == NULL && !$res_org->EOF) {
         $parent = _shn_or_is_root($org_id);
         $org_name = $res_org->fields["name"];
         $reg_no = $res_org->fields["reg_no"];
+        $parent_id = $res_org->fields['parent_id'];
         if ($parent == true) {
             $type = "opt_org_type";
         } else {
@@ -346,6 +347,9 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
         $lat = $res->fields["map_northing"];
         $lon = $res->fields["map_easting"];
     }
+    else {
+        $parent_id = $_SESSION['org']['parent_id'];
+    }
 ?>
 		<h2><?=_("Organization Registration Information of <em>") . $org_name ?></em></h2>
 		<?php
@@ -380,6 +384,7 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
     if ($parent) {
         _shn_or_display_org_type($error, false, isset($org_type) ? $org_type : $_SESSION['org']['type']);
     } else {
+        shn_form_hidden(array("parent"=>$parent_id));
         _shn_or_display_org_sub_type($error, false, isset($org_type) ? $org_type : $_SESSION['org']['type']);
     }
     shn_form_fsclose();
@@ -391,8 +396,8 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
     $extra_opts['req'] = false;
     shn_form_fsopen(_("Base Location"));
     $range = shn_or_get_loc_range();
-    $loc = isset($loc) ? $loc : $_SESSION['org']['loc'];
-    if ($loc == - 1) {
+    $loc_txt = isset($loc_txt)?$loc_txt:$_SESSION['org']['loc'];
+    if ($loc_txt ==  - 1) {
         shn_location($range, null, null, $extra_opts);
     } else {
         shn_location($range, $loc, null, $extra_opts);
@@ -427,7 +432,7 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
     $extra_opts['br'] = false;
     $extra_opts['req'] = false;
     shn_form_button(_("Close"), "onClick='change_action(\"exit\")'", $extra_opts);
-    shn_form_button(_("Edit"), "onClick='change_action(\"confirm_edit\")'", $extra_opts);
+    shn_form_button(_("Save"), "onClick='change_action(\"confirm_edit\")'", $extra_opts);
     shn_form_button(_("Delete"), "onClick='change_action(\"del\")'", $extra_opts);
     shn_form_hidden(array('action' => '0'));
     shn_form_hidden(array('org_id' => $org_id));

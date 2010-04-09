@@ -68,11 +68,15 @@ function _shn_or_regform_org($error = false) {
     // 	$extra_opts["org"]=true;
     $extra_opts['help'] = (_("Select the location based at.  This is hierarchical. For example if you are based  in the country 'Sri lanka' ,district 'Colombo' ,and village 'Dehiwala',  start by selecting the country. Once you select the country all the divisions of that country will be shown in the next select box.  In this case all districts in 'Sri lanka' will appear . From those select a district, which inturn will show the village list in the next select box. Select 'dehiwala' and it is done! Please note that the levels can be customized, hence it does not need to always be 'country'->'district'->'village'. It is configurable from the 'administration' section.")); //display help icon only once
     shn_form_fsopen(_("Base Location"));
+    //print $_SESSION['org']['loc'];
     if ($error == true) {
         shn_location(null, $_SESSION['org']['loc'], null, $extra_opts);
     } else {
         shn_location(null, null, null, $extra_opts);
     }
+    $extra_opts['value'] = false;
+    $extra_opts['req'] = false;
+    //unset($extra_opts);
     $extra_opts['help'] = (_("In addition to the hierarchical location , you may specify the address of the organization here. "));
     shn_form_text(_("Address"), 'loc_txt', 'size="40"', $extra_opts);
     shn_form_fsclose();
@@ -235,10 +239,21 @@ function _shn_or_regform_operation($error = false, $parent_org = null) {
     _shn_or_display_sector($error);
     shn_form_fsclose();
     // base location
-    shn_form_fsopen(_("Base Location <span class='req'>   * </span>"));
-    $parent = _shn_or_get_start_loc();
-    $range = shn_or_get_loc_range();
-    shn_location($range, $_POST[$range["end"]], $parent);
+    shn_form_fsopen(_("Base Location"));
+    //$parent=_shn_or_get_start_loc();
+    //$range= shn_or_get_loc_range();
+    if ($error == true) {
+        shn_location(null, $_SESSION['org']['loc'], null);
+    }
+    else {
+        shn_location(null, $_POST[$range["end"]], null);
+    }
+    $extra_opts['help'] = (_("In addition to the hierarchical location , you may specify the address of the organization here. "));
+    if ($error == true) {
+        $extra_opts['value'] = $_SESSION['org']['loc_txt'];
+        $extra_opts['br'] = true;
+    }
+    shn_form_text(_("Address"), 'loc_txt', 'size="40"', $extra_opts);
     shn_form_fsclose();
     shn_form_fsopen(_("Contact Information"));
     _shn_or_display_contact_person($error, false, null);
