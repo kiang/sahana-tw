@@ -353,7 +353,7 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
 ?>
 		<h2><?=_("Organization Registration Information of <em>") . $org_name ?></em></h2>
 		<?php
-    if ($error == true) display_errors();
+    if (!empty($error)) display_errors();
 ?>
 		<?php
     $org_id = isset($org_id) ? $org_id : $_SESSION['org']['org_id'];

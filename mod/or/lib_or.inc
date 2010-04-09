@@ -606,7 +606,7 @@ function _shn_or_display_org_sub_type($error = false, $multi = false, $value = N
         
     }
     $extra_opts['help'] = _("please select whether you are Department,Branch,ect of the parent organization");
-    if ($error == true) {
+    if (!empty($error)) {
         $extra_opts['value'] = $_SESSION['org']['type'];
     }
     shn_form_opt_select('opt_org_sub_type', '', $select_opts, $extra_opts);
@@ -626,7 +626,7 @@ function _shn_or_display_sector($error = false, $value = NULL, $info = true) {
     <?php
     }
     $extra_opts['req'] = true;
-    if ($error == true) {
+    if (!empty($error)) {
         $extra_opts['value'] = $_SESSION['org']['sector'];
         $extra_opts['br'] = true;
     }
@@ -645,7 +645,7 @@ function _shn_or_display_contact_person($error = false, $confirm = false, $po_uu
         return;
     }
 ?><div class="info"><?=_("Please provide contact details that can be used to contact your organization in a disaster"); ?> </div><br /><?
-    if ($error == true) {
+    if (!empty($error)) {
         $contact_address = $_SESSION['org']['contact_address'];
         $contact_phone = $_SESSION['org']['contact_phone'];
         $contact_mobile = $_SESSION['org']['contact_mobile'];
@@ -710,7 +710,7 @@ function _shn_or_display_org_facilities($error = false, $confirm = false, $org_i
         shn_form_label(_("Resources"), $_SESSION['org']['resources']);
         return;
     }
-    if ($error == true) {
+    if (!empty($error)) {
         $man_power = $_SESSION['org']['man_power'];
         $equipment = $_SESSION['org']['equipment'];
         $resources = $_SESSION['org']['resources'];

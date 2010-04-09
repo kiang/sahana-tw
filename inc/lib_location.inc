@@ -604,7 +604,7 @@ function shn_location($range = null, $value = null, $parent = null, $extra_opts 
     $count = 0;
     $keepparent = false;
     $info = _("If you know any of the following, please select Only one of them first") . _(" , the selection will populate the set of Location select boxes ") . "<br />";
-    if ($extra_opts["camps"] == true) {
+    if (isset($extra_opts["camps"]) && $extra_opts["camps"] == true) {
         $info.= _("* Camp/Shelter ") . "<br /> ";
         $count = $count + 1;
     }
@@ -612,16 +612,18 @@ function shn_location($range = null, $value = null, $parent = null, $extra_opts 
         $info.= _("* an Inventory ") . "<br /> ";
         $count = $count + 1;
     }
-    if ($extra_opts["org"] == true) {
+    if (isset($extra_opts["org"]) && $extra_opts["org"] == true) {
         $info.= _("* an Organization ") . "<br /> ";
         $count = $count + 1;
     }
-    if (($extra_opts["camps"] == true) or ($extra_opts["inv"] == true) or ($extra_opts["org"] == true)) {
+    if ((isset($extra_opts["camps"]) && $extra_opts["camps"] == true)
+            or (isset($extra_opts["inv"]) && $extra_opts["inv"] == true)
+            or (isset($extra_opts["org"]) && $extra_opts["org"] == true)) {
         //$info.=_("a Location ");
         
 ?><div class="info"><?php echo $info; ?></div><br /><?
     }
-    if ($extra_opts["camps"] == true) {
+    if (isset($extra_opts["camps"]) && $extra_opts["camps"] == true) {
         if ($count >= 1) {
             $options = array("loc_camp" => _("Select a Camp/Shelter"));
             $select_opts = 'onclick=radio_click("loc_camp")';
@@ -650,7 +652,7 @@ function shn_location($range = null, $value = null, $parent = null, $extra_opts 
         shn_form_select($options, _('Shelter/Camp'), 'camps', $select_opts, $extra_opts);
 ?>	</div><?
     }
-    if ($extra_opts["org"] == true) {
+    if (isset($extra_opts["org"]) && $extra_opts["org"] == true) {
         global $global;
         include_once $global['approot'] . "/mod/or/api.inc";
         $orgs = shn_or_organization_list();

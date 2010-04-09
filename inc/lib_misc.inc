@@ -99,6 +99,7 @@ function shn_reset_form_javascript($form, $reset_what) {
 }
 function shn_add_remove_javascript($name, $db_arr, $sort = true) {
     $count = 0;
+    $db_str = '';
     foreach($db_arr as $x) {
         if ($count == 0) {
             $db_str.= $x;

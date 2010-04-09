@@ -242,12 +242,12 @@ function _shn_admin_ch_pwd_cr() {
         $error = true;
         add_error(_("Password and Confirm Password should match"));
     }
-    if ($error == true) {
+    if (!empty($error)) {
         return $error;
     }
     $user_id = trim($_POST{"user"});
     $error = shn_change_password($user_id, $old_password, $password);
-    if ($error == true) {
+    if (!empty($error)) {
         return $error;
     }
     shn_admin_ch_pwd($error);
@@ -322,7 +322,7 @@ function _shn_admin_reset_pwd_cr() {
         $error = true;
         add_error(_("Password and Confirm Password should match"));
     }
-    if ($error == true) {
+    if (!empty($error)) {
         return $error;
     }
     $user_id = trim($_POST{"user"});

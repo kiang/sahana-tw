@@ -31,7 +31,7 @@ function shn_admin_conf_list() {
     include_once ($global['approot'] . '/inc/lib_form.inc');
     require_once ($global['approot'] . "/3rd/xajax/xajax.inc.php");
     require_once ($global['approot'] . '/3rd/xajax/xajaxResponse.inc.php');
-    $xajax = new xajax($conf['base_url'] . 'index.php?mod=admin&act=conf_list&stream=text'); //$conf['base_url'].'index.php?mod=admin&act=conf_list'
+    $xajax = new xajax('index.php?mod=admin&act=conf_list&stream=text');
     $xajax->registerFunction("_shn_admin_conf_ajax_update");
     $xajax->printJavascript("res/js/");
 ?>
@@ -229,7 +229,7 @@ function shn_text_admin_conf_list() {
     global $conf, $global;
     require_once ($global['approot'] . "/3rd/xajax/xajax.inc.php");
     require_once ($global['approot'] . '/3rd/xajax/xajaxResponse.inc.php');
-    $xajax = new xajax($conf['base_url'] . 'index.php?mod=admin&act=conf_list&stream=text'); //$conf['base_url'].'index.php?mod=admin&act=conf_list'
+    $xajax = new xajax('index.php?mod=admin&act=conf_list&stream=text');
     $xajax->registerFunction("_shn_admin_conf_ajax_update");
     $xajax->processRequests();
 }

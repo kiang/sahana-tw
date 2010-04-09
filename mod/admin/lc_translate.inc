@@ -169,6 +169,7 @@ function _shn_admin_lc_load($file_n = null) {
     else {
         //$value = file_get_contents($file_name);
         if (!_shn_lc_is_dbl10n_tbl_empty()) {
+            $t_value = '';
             $t_value.= "\n\n#: " . _("DB L10N Starts here") . "\n";
             $t_value.= _shn_lc_get_dbpo();
             $tmp_ids = tempnam("/tmp/", "shn_");
@@ -192,7 +193,7 @@ function _shn_admin_lc_load($file_n = null) {
     shn_form_fopen("lc_trns", null, array('req_message' => false));
     shn_form_hidden(array('seq' => 'save'));
     shn_form_fsopen(_('Translation'));
-    $_POST['msgs'] = (isset($_POST['msgs']))? stripcslashes($_POST['msgs']):$_POST['msgs'];
+    $_POST['msgs'] = (isset($_POST['msgs']))? stripcslashes($_POST['msgs']):'';
     shn_form_textarea('', 'msgs', null, array('value' => $value, 'rows' => '30', 'cols' => '100'));
     shn_form_fsclose();
     shn_form_submit(_('Save'));

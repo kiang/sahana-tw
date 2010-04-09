@@ -27,7 +27,7 @@ function _shn_ims_regform_inv($error = false) {
 ?>
 <h2><?=_('Add an Inventory') ?></h2>
 <?php
-    if ($error == true) display_errors();
+    if (!empty($error)) display_errors();
 ?>
 <div id="formcontainer">
 <?php

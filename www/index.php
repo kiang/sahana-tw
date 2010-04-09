@@ -149,6 +149,7 @@ function shn_main_front_controller() {
     // content header, menubar, login
     shn_stream_init();
     if (isset($_SESSION['first_time_run']) && $_SESSION['first_time_run'] == true) {
+        $_SESSION['first_time_run'] = false;
         include_once ($APPROOT . 'mod/home/main.inc');
         // first time welcome view.
         // the first time flag will be cleared inside the method.

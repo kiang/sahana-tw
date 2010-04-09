@@ -57,7 +57,7 @@ function shn_dvr_adm_checklist() {
     <td width="100%"><strong><?=_('Delete'); ?></strong></td>
     </thead>
     <?php
-    $button = $_POST['selection'];
+    $button = isset($_POST['selection']) ? $_POST['selection'] : '';
     if ($button == 'Update') {
         $count = 0;
         while ($_POST[$_SESSION['option_code' . $count]] != null) {

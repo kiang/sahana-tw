@@ -22,7 +22,7 @@ function shn_admin_location_form() {
 	<?=_("Fields marked with * are required (entry is compulsory)") ?>
 	</div>
 <?php
-    if ($error == true) display_errors();
+    if (!empty($error)) display_errors();
 ?>
 	<div id="formcontainer">
 <?php

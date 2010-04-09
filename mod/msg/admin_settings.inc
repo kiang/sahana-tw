@@ -31,7 +31,7 @@ function _shn_kannel_config_setfile() {
     copy($conf['input_file'], $conf['output_file']);
     $form_opts['name'] = "Kanne_settings";
     $form_opts['req_message'] = true;
-    shn_form_fopen($act, $msg, $form_opts);
+    shn_form_fopen($act, $mod, $form_opts);
     $help_device_port = _("The port to which the modem or phone is connected to, in a computer   through a data cable<br /> eg:- if connected to USB port the device port value should be /dev/ttyUSB0.<br/> This should be visible when you type 'dmesg | tail' on the terminal, after connecting the device to a computer");
     $help_id = _("The model number of the phone or modem<br/>eg:-if the phone is SonyEriccson k700i,then the model number is 700.");
     shn_form_fsopen(_("Kannel Settings"));

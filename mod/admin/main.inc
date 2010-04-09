@@ -33,9 +33,9 @@ include_once $global['approot'] . "mod/admin/mmc_main.inc";
 // @todo: move as library
 //include_once $global['approot']."mod/gis/gis_admin.inc";
 
-$conf['mod_admin_ims_level1'] = $conf['ims_level1'];
-$conf['mod_admin_ims_level2'] = $conf['ims_level2'];
-$conf['mod_admin_ims_level3'] = $conf['ims_level3'];
+$conf['mod_admin_ims_level1'] = isset($conf['ims_level1']) ? $conf['ims_level1'] : 0;
+$conf['mod_admin_ims_level2'] = isset($conf['ims_level2']) ? $conf['ims_level2'] : 0;
+$conf['mod_admin_ims_level3'] = isset($conf['ims_level3']) ? $conf['ims_level3'] : 0;
 
 function shn_admin_mainmenu() {
     _shn_admin_mainmenu();
@@ -433,7 +433,7 @@ function shn_admin_lc_ui_trns() {
     require_once $global['approot'] . "/inc/lib_locale/lib_locale.inc";
     require_once ('lc_ui_translate.inc');
     print ("<h1><center>" . _("Interactive Translation") . "</center></h1>");
-    if ($_POST['locale'] == null) {
+    if (empty($_POST['locale'])) {
         _shn_admin_set_locale();
     } else {
         _shn_admin_lc_set_ui_translate();
@@ -461,7 +461,7 @@ function shn_admin_lc_ui_trns_enable() {
 function shn_admin_lc_ui_trns_update() {
     require_once ('lc_ui_translate_update.inc');
     print ("<h1><center>" . _("Update Translation") . "</center></h1>");
-    if ($_GET['update'] == "Update") {
+    if (isset($_GET['update']) && $_GET['update'] == "Update") {
         _shn_admin_lc_translate_compile();
     } else {
         _shn_admin_lc_translate_update();

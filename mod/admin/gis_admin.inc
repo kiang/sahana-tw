@@ -60,7 +60,7 @@ function shn_gis_adm_find_mods() {
     $count = 1;
     $gis_plugins_dir = $global['approot'] . '/mod/gis/plugins/';
     $dir = opendir($gis_plugins_dir);
-    shn_form_fopen(adm_gis_conf, null, array('req_message' => false));
+    shn_form_fopen('adm_gis_conf', null, array('req_message' => false));
     shn_form_fsopen(_("GIS Plugin Configuration"));
     while ($file = readdir($dir)) {
         if (!is_dir($file)) {
@@ -158,7 +158,7 @@ refer to the documentation within the mod/gis subdirectory"); ?> </li>
     //shn_form_fclose();
     $query_mod = "SELECT value FROM config WHERE module_id='gis' AND confkey='mod_gis_dflt'";
     $result = $db->Execute($query_mod);
-    if (!$res->EOF) {
+    if (isset($res) && !$res->EOF) {
         $mod_name = $result->fields['value'];
     }
     $count = 1;

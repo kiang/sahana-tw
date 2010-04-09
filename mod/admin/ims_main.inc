@@ -3,7 +3,8 @@ function shn_admin_ims_config() {
     global $global;
     require ($global['approot'] . 'mod/admin/ims_config.inc');
     print ("<h1><center>Disaster Incident Configuration</center></h1>");
-    switch ($_POST['seq']) {
+    $seq = isset($_POST['seq']) ? $_POST['seq'] : '';
+    switch ($seq) {
         case 'entry':
             if (_shn_ims_config_validate()) {
                 _shn_ims_config_form(false, true);
@@ -20,7 +21,8 @@ function shn_admin_ims_level1() {
     global $global;
     require ($global['approot'] . 'mod/admin/ims_level.inc');
     print ("<h1><center>" . _("Manage Disaster") . "</center></h1>");
-    switch ($_POST['seq']) {
+    $seq = isset($_POST['seq']) ? $_POST['seq'] : '';
+    switch ($seq) {
         case 'addnew':
         case 'update':
             if (_shn_ims_level1_validate()) {
@@ -41,7 +43,8 @@ function shn_admin_ims_level2() {
 
     if($conf['mod_admin_ims_active'] == true) {
         print("<h1><center>" . _("Manage Events") . "</center></h1>");
-        switch($_POST['seq']) {
+        $seq = isset($_POST['seq']) ? $_POST['seq'] : '';
+        switch ($seq) {
             case 'addnew':
             case 'update':
                 if (_shn_ims_level2_validate()) {
@@ -60,11 +63,13 @@ function shn_admin_ims_level2() {
 }
 function shn_admin_ims_level3() {
     global $global;
+    global $conf;
     require ($global['approot'] . 'mod/admin/ims_level.inc');
 
     if($conf['mod_admin_ims_active'] == true) {
         print ("<h1><center>Manage Incidents</center></h1>");
-        switch($_POST['seq']) {
+        $seq = isset($_POST['seq']) ? $_POST['seq'] : '';
+        switch ($seq) {
             case 'addnew':
             case 'update':
                 if (_shn_ims_level3_validate()) {
@@ -84,7 +89,8 @@ function shn_admin_ims_level3() {
 function shn_admin_ims_assign() {
     global $global;
     require ($global['approot'] . 'mod/admin/ims_assign.inc');
-    switch ($_POST['seq']) {
+    $seq = isset($_POST['seq']) ? $_POST['seq'] : '';
+    switch ($seq) {
         case 'entry':
             if (_shn_ims_assign_validate()) {
                 _shn_ims_assign_form(false, true);

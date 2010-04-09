@@ -338,7 +338,7 @@ function _shn_ims_edit_org() {
 <h2>Inventory Registry</h2>
 <?php
     }
-    if ($error == true) {
+    if (!empty($error)) {
         _shn_ims_viewform_org($org_id, $error);
         return false;
     }

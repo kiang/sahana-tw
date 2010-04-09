@@ -552,7 +552,7 @@ function shn_setup_database() {
 function shn_setup_run_sqlscript($db, $relative_script_path) {
     global $global;
     $script = $global['approot'] . $relative_script_path;
-    if ($fh = fopen($script, 'r')) {
+    if (file_exists($script) && $fh = fopen($script, 'r')) {
         $sql = ''; // clear the bucket
         while (!feof($fh)) { // a fix as Execute gets confused over carriage returns
             $buffer = fgets($fh, 1024); // read the script and fill the buffer

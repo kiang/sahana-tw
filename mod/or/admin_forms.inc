@@ -23,7 +23,7 @@ function shn_or_adm_location_form() {
 <?=_("When a Disaster happens,typically organizations located in a certain region get involved. Therefore when you select a location its a waste of time to always start from country. If you know the country ,give it in this form,and you can start with sub-divisions of that country. Furthermore ,if the Disaster is confined to a much smaller geographical area, select the appropriate location to start with.") ?>
 </div>
 <?php
-    if ($error == true) {
+    if (!empty($error)) {
         display_errors();
     }
 ?>
@@ -69,7 +69,7 @@ function shn_or_adm_location_range_form() {
 <?=_("In a Disaster,all the location levels might not be important ,set the range here") ?>
 </div>
 <?php
-    if ($error == true) {
+    if (!empty($error)) {
         display_errors();
     }
 ?>
@@ -104,7 +104,7 @@ function shn_or_adm_or_type_form() {
 ?>
 <h2><?=_('Organization Types') ?></h2>
 <?php
-    if ($error == true) {
+    if (!empty($error)) {
         display_errors();
     }
 ?>
@@ -124,10 +124,10 @@ function shn_or_adm_or_type_form() {
     //   shn_form_fsclose();
     
 ?>
-</center>
+<center>
 <?php
     shn_form_fsopen(_("Add and Remove Types"));
-    _shn_or_display_org_type($error, true, null, false);
+    _shn_or_display_org_type(isset($error) ? $error : false, true, null, false);
     shn_form_button(_("Remove"), "onClick='remove_types()'");
     shn_form_text(_("New Organization Type : "), 'type', 'size="40"', null);
     shn_form_button(_("Add More"), "onClick='add_types()'");
@@ -160,9 +160,9 @@ function shn_or_adm_or_sector_form() {
     include_once ($global['approot'] . '/inc/lib_misc.inc');
     include_once ("api.inc");
 ?>
-<h2><?=_("Organization Sectors") ?></h1>
+<h2><?=_("Organization Sectors") ?></h2>
 <?php
-    if ($error == true) {
+    if (!empty($error)) {
         display_errors();
     }
 ?>
@@ -182,10 +182,10 @@ function shn_or_adm_or_sector_form() {
     // shn_form_fsclose();
     
 ?>
-</center>
+<center>
 <?php
     shn_form_fsopen(_("Add & Remove Sectors"));
-    _shn_or_display_sector($error, null, false);
+    _shn_or_display_sector(isset($error) ? $error : false, null, false);
     shn_form_button(_("Remove"), "onClick='remove_types()'");
     shn_form_text(_("New Organization Sector : "), 'type', 'size="40"', null);
     shn_form_button(_("Add More"), "onClick='add_types()'");

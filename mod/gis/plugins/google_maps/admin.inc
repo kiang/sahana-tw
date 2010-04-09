@@ -34,7 +34,7 @@ function _shn_gis_gm_form() {
     //Show stored value
     $query = "select value from config where confkey='mod_gis_google_key' and module_id='gis'";
     $res = $db->Execute($query);
-    if (!$res->EOF) {
+    if (isset($res->EOF) && !$res->EOF) {
         $value = $res->fields['value'];
     }
     shn_form_fopen("adm_default&submod=google_maps&seq=commit", null, array('req' => false));
@@ -43,7 +43,7 @@ function _shn_gis_gm_form() {
     echo _("<p>Obtain your key from: <a href='http://www.google.com/apis/maps/signup.html' target=_blank>Sign Up for the Google Maps API</a>.<br />More information: <a href='http://code.google.com/apis/maps' target=_blank>What is the Google Maps API?</a>.");
     shn_form_fsclose();
     shn_form_fsopen(_("Configure Google Maps"));
-    shn_form_text(_("Enter Google Maps Key"), "gmap_key", 'size="40"', array('value'=>$value));
+    shn_form_text(_("Enter Google Maps Key"), "gmap_key", 'size="40"', array('value'=> isset($value) ? $value : ''));
     shn_form_fsclose();
     shn_form_submit(_("Done"));
     shn_form_fclose();

@@ -540,7 +540,7 @@ function shn_auth_add_user_cr() {
     } else {
         $account_name = $_POST{"account_name"};
     }
-    if ($error == true) {
+    if (!empty($error)) {
         return $error;
     } else {
         $role = $_POST["roles"];
@@ -576,7 +576,7 @@ function shn_auth_self_signup_cr() {
     } else {
         $account_name = $_POST{"account_name"};
     }
-    if ($error == true) {
+    if (!empty($error)) {
         return $error;
     }
     $role = REGISTERED;

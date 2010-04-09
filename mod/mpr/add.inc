@@ -103,7 +103,7 @@ function shn_mpr_addmp_entry($errors = false) {
     $range['start'] = $conf['mod_mpr_location_upper_limit'];
     $range['end'] = $conf['mod_mpr_location_lower_limit'];
     shn_form_fsopen(_('Select Missing Person\'s Origin'));
-    shn_location($range, $_POST[$i]);
+    shn_location($range, isset($_POST[$i]) ? $_POST[$i] : '');
     shn_form_fsclose();
     shn_form_fsopen(_('Physical Details'));
     shn_form_opt_select("opt_eye_color", _('Eye Colour'));

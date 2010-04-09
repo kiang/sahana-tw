@@ -20,7 +20,7 @@ function _shn_admin_location_view_form() {
 <h1 align="center"><?php echo _("First select a location to Edit or Delete") ?></h1>
 
 	<?php
-    if ($error == true) display_errors();
+    if (!empty($error)) display_errors();
 ?>
 <div id="formcontainer"><?php
     shn_form_fopen("view_loc_cr", '', array('req_message' => false));
@@ -77,7 +77,7 @@ function _shn_admin_location_edit_form($loc) {
 <div id="note"><?php echo _("Fields marked with * are required (entry is compulsory)") ?>
 </div>
 	<?php
-    if ($error == true) display_errors();
+    if (!empty($error)) display_errors();
 ?>
 <div id="formcontainer"><?php
     $form_opts['name'] = 'view';
@@ -119,7 +119,7 @@ function _shn_admin_levels_form() {
 <div id="info"><?=_("The Location you add will be added after the remaining ones") ?>
 </div>
 	<?php
-    if ($error == true) display_errors();
+    if (!empty($error)) display_errors();
 ?>
 <div id="formcontainer"><?php
     $loc_arr = shn_admin_location_level_list();
@@ -258,7 +258,7 @@ function _shn_admin_location_range_form() {
 <div id="note"><?php echo _("In a Disaster, all the location levels might not be important ,set the range here") ?>
 </div>
 	<?php
-    if ($error == true) display_errors();
+    if (!empty($error)) display_errors();
 ?>
 <div id="formcontainer"><?php
     $range = shn_location_get_loc_range();
@@ -316,14 +316,14 @@ function _shn_admin_location_start_form() {
 <div id="note"><?php echo _("When a Disaster happens, typically only organizations and people located in a certain region are involved. Therefore, when you select a location it is inefficient to select all locations. For example, if you know the Country, specify it here in this form, and you will only see sub-divisions of that Country. Furthermore, if the Disaster is confined to a smaller geographical area, select the appropriate location to start with - such as the State or Country")?>
 </div>
 	<?php
-    if ($error == true) display_errors();
+    if (!empty($error)) display_errors();
 ?>
 <div id="formcontainer"><?php
     shn_form_fopen("loc_start_cr", null, array('req_message' => false));
     shn_form_fsopen(_("Select the Location"));
     //$range= shn_location_get_loc_range();
     $extra_opts["unknown"] = false;
-    shn_location($range, null, null, $extra_opts);
+    shn_location(null, null, null, $extra_opts);
     shn_form_fsclose();
     //shn_form_add_component_list($location_inf,$section=true,$legend='Now Select the Location',$return=false,$default_val_req=$error);
     
@@ -373,7 +373,7 @@ function _shn_admin_location_form() {
 <h1 align="center"><?=_("Add Locations") ?></h1>
 
 	<?php
-    if ($error == true) display_errors();
+    if (!empty($error)) display_errors();
 ?>
 <div id="formcontainer"><?php
     $form_opts = array('id' => 'add_loc_cr_submit');

@@ -182,7 +182,7 @@ function _shn_ims_viewform_org($org_id, $error = false) {
 ?>
 <h2><?=_("Inventory Registration Information of ") . "<em>" . $org_name ?></em></h2>
 <?php
-    if ($error == true) display_errors();
+    if (!empty($error)) display_errors();
 ?>
 <div id="formcontainer">
 <?php

@@ -334,6 +334,7 @@ function _shn_ims_level3_form($errors = false, $type = null) {
     if ($errors) display_errors();
     $sql = "SELECT a.incident_id, a.name FROM incident a INNER JOIN incident b ON a.parent_id = b.incident_id and b.parent_id IS NULL";
     $arr = $global['db']->GetAll($sql);
+    $parent_ids = array();
     foreach($arr as $row) {
         $parent_ids[$row['incident_id']] = $row['name'];
     }

@@ -183,7 +183,7 @@ function shn_form_text($label, $name, $text_opts = null, $extra_opts = null) {
     global $shn_tabindex;
     $value = !empty($_POST[$name]) ? $_POST[$name] : (isset($extra_opts['value']) ? $extra_opts['value'] : '');
     if (get_magic_quotes_gpc()) $value = stripslashes($value);
-    if (isset($extra_opts['no_label']) && $extra_opts['no_label'] !== true) {
+    if (empty($extra_opts['no_label'])) {
 ?>
 <label for="<?php echo $name ?>"><?php echo $label ?></label>
 <?php
@@ -365,7 +365,7 @@ function shn_form_opt_select($opt_field, $label, $select_opts = "", $extra_opts 
 function shn_form_opt_multi_select($opt_field, $label, $select_opts = "", $extra_opts = null) {
     global $global;
     global $shn_tabindex;
-    $value = ($_POST[$opt_field]) ? $_POST[$opt_field] : $extra_opts['value'];
+    $value = isset($_POST[$opt_field]) ? $_POST[$opt_field] : isset($extra_opts['value']) ? $extra_opts['value'] : '';
 ?>
 <label><?php echo $label ?></label>
 <select name="<?php echo $opt_field ?>[]" <?php echo $select_opts ?>
@@ -383,7 +383,7 @@ function shn_form_opt_multi_select($opt_field, $label, $select_opts = "", $extra
         }
 ?>
 	<option value="<?php echo $res->fields["option_code"] ?>"
-	<?php echo $sel ?>><?php echo $res->fields["option_description"] ?></option>
+	<?php if(isset($sel)) echo $sel; ?>><?php echo $res->fields["option_description"] ?></option>
 	<?php
         $res->MoveNext();
     }
@@ -537,7 +537,7 @@ function shn_form_label($label, $caption, $extra_opts = null) {
  */
 function shn_form_password($label, $name, $text_opts = null, $extra_opts = null) {
     global $shn_tabindex;
-    $value = ($_POST[$name]) ? $_POST[$name] : $extra_opts['value'];
+    $value = isset($_POST[$name]) ? $_POST[$name] : isset($extra_opts['value']) ? $extra_opts['value'] : '';
 ?>
 <label for="<?php echo $name ?>"><?php echo $label ?></label>
 <input

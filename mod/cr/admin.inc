@@ -46,7 +46,7 @@ function _shn_cr_adm_form_change() {
     shn_form_submit("Set Division");
     shn_form_fclose();
     */
-    shn_form_fopen(adm_form_commit, null, array("req" => false));
+    shn_form_fopen('adm_form_commit', null, array("req" => false));
     shn_form_fsopen(_("Add Service / Facility"));
     shn_form_opt_select("opt_camp_service", _("Currently Available Services/Facilities"));
     echo "<br/>";

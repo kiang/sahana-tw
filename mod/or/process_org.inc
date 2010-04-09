@@ -547,7 +547,7 @@ function _shn_or_edit_org() {
 
 <?php
     }
-    if ($error == true) {
+    if (!empty($error)) {
         _shn_or_viewform_org($org_id, $error);
         return false;
     }

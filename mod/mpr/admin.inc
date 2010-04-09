@@ -85,7 +85,7 @@ function shn_mpr_insert_to_config($val) {
 /* {{{ shn_mpr_adm_gen */
 function shn_mpr_adm_gen() {
     shn_mpr_adminmenu();
-    if ($_POST['seq'] == 'general') {
+    if (isset($_POST['seq']) && $_POST['seq'] == 'general') {
         if (_shn_mpr_adm_gen_validate()) {
             _shn_mpr_adm_gen(true, false);
         } else {
@@ -240,7 +240,8 @@ function shn_mpr_adm_acl_install() {
 /* }}} */
 //temporary fix
 function _shn_mpr_adm_field_options_controller($type) {
-    switch ($_POST['seq']) {
+    $seq = isset($_POST['seq']) ? $_POST['seq'] : '';
+    switch ($seq) {
         case 'update':
             if (_shn_mpr_adm_field_options_validate($type)) {
                 _shn_mpr_adm_field_options_form($type, false);
@@ -290,7 +291,7 @@ function _shn_mpr_insert_option($field_name, $optioncode, $optiondescription) {
 function _shn_mpr_adm_field_options_form($type) {
     global $global;
     global $conf;
-    $button_type = $_POST['button_name'];
+    $button_type = isset($_POST['button_name']) ? $_POST['button_name'] : '';
     if ($button_type == 'Update') {
         $sql = "SELECT field_name, option_code, option_description  FROM field_options WHERE field_name = '{$type}'";
         $sel = $global['db']->GetAll($sql);
