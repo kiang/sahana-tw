@@ -342,10 +342,16 @@ function shn_mpr_del_tracker() {
 function shn_mpr_addmp() {
     global $global;
     require ($global['approot'] . 'mod/mpr/add.inc');
-    if ($_GET['type'] == 'found') $_SESSION['mpr_add']['entry_type'] = 'found';
-    elseif ($_GET['type'] == 'missing') $_SESSION['mpr_add']['entry_type'] = 'missing';
-    if ($_SESSION['mpr_add']['entry_type'] == 'found') $heading = '<h1 align="center">' . _('Found Person Entry') . '</h1>';
-    elseif ($_SESSION['mpr_add']['entry_type'] == 'missing') $heading = '<h1 align="center">' . _('Missing Person Entry') . '</h1>';
+    if (isset($_GET['type']) && $_GET['type'] == 'found') {
+        $_SESSION['mpr_add']['entry_type'] = 'found';
+        $heading = '<h1 align="center">' . _('Found Person Entry') . '</h1>';
+    } else {
+        /*
+         * if ($_GET['type'] == 'missing')
+         */
+        $_SESSION['mpr_add']['entry_type'] = 'missing';
+        $heading = '<h1 align="center">' . _('Missing Person Entry') . '</h1>';
+    }
     //Controller
     $seq = !empty($_REQUEST['seq']) ? $_REQUEST['seq'] : '';
     switch ($seq) {

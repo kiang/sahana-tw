@@ -162,11 +162,11 @@ function shn_mpr_addmp_validate() {
         add_error(_("Please enter the full name of the missing person"));
         $error_flag = true;
     }
-    if (!shn_valid_phone2($local_post['phone'], 'phone number')) {
+    if (isset($local_post['phone']) && !shn_valid_phone2($local_post['phone'], 'phone number')) {
         $error_flag = true;
     }
 
-    if (!shn_valid_phone2($local_post['mobile'], 'mobile number')) {
+    if (isset($local_post['mobile']) && !shn_valid_phone2($local_post['mobile'], 'mobile number')) {
         $error_flag = true;
     }
     //Picture upload part
