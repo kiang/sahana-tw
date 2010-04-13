@@ -38,7 +38,7 @@ function _shn_ims_get_start_loc() {
     $db = $global['db'];
     $q = "SELECT value FROM config WHERE module_id='or' AND confkey='loc_start'";
     $res = $db->Execute($q);
-    if ($res->fields[0] == NULL) {
+    if (is_object($res) && $res->fields[0] == NULL) {
         return $conf['mod_or_ims_start_loc'];
     } else {
         return $res->fields[0];
@@ -51,14 +51,14 @@ function shn_ims_get_loc_range() {
     $loc = array();
     $q = "SELECT value FROM config WHERE module_id='or' AND confkey='loc_range_start'";
     $res = $db->Execute($q);
-    if ($res->fields[0] == NULL) {
+    if (is_object($res) && $res->fields[0] == NULL) {
         $loc["start"] = $conf['mod_or_ims_loc_level_start'];
     } else {
         $loc["start"] = $res->fields[0];
     }
     $q = "SELECT value FROM config WHERE module_id='or' AND confkey='loc_range_end'";
     $res = $db->Execute($q);
-    if ($res->fields[0] == NULL) {
+    if (is_object($res) && $res->fields[0] == NULL) {
         $loc["end"] = $conf['mod_or_ims_loc_level_end'];
     } else {
         $loc["end"] = $res->fields[0];

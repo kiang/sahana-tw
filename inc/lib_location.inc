@@ -170,14 +170,14 @@ function shn_location_get_x_uuid_loc_range() {
     $loc = array();
     $q = "select value from config where module_id='or' and confkey='loc_range_start'";
     $res = $db->Execute($q);
-    if ($res->fields[0] == NULL) {
+    if (is_object($res) && $res->fields[0] == NULL) {
         $loc["start"] = $conf['mod_or_loc_level_start'];
     } else {
         $loc["start"] = $res->fields[0];
     }
     $q = "select value from config where module_id='or' and confkey='loc_range_end'";
     $res = $db->Execute($q);
-    if ($res->fields[0] == NULL) {
+    if (is_object($res) && $res->fields[0] == NULL) {
         $loc["end"] = $conf['mod_or_loc_level_end'];
     } else {
         $loc["end"] = $res->fields[0];

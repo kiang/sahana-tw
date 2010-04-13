@@ -291,7 +291,7 @@ function _shn_admin_loc_range_cr() {
     }
     $q = "SELECT value FROM config WHERE module_id='admin' AND confkey='loc_range_start'";
     $res = $db->Execute($q);
-    if ($res->fields[0] == NULL) {
+    if (is_object($res) && $res->fields[0] == NULL) {
         $q = "INSERT INTO config(module_id,confkey,value ) VALUES ( 'admin', 'loc_range_start', '{$start}')";
     } else {
         $q = "UPDATE config SET value={$start} WHERE module_id='admin' AND confkey='loc_range_start'";
@@ -299,7 +299,7 @@ function _shn_admin_loc_range_cr() {
     $db->Execute($q);
     $q = "SELECT value FROM config WHERE module_id='admin' AND confkey='loc_range_end'";
     $res = $db->Execute($q);
-    if ($res->fields[0] == NULL) {
+    if (is_object($res) && $res->fields[0] == NULL) {
         $q = "INSERT INTO config(module_id,confkey,value ) VALUES ( 'admin', 'loc_range_end', '{$end}')";
     } else {
         $q = "UPDATE config SET value={$end} WHERE module_id='admin' AND confkey='loc_range_end'";
