@@ -99,7 +99,7 @@ class DAO {
         // IDs and ID types
         $result = $this->execute("select opt_id_type, serial from identity_to_person where p_uuid = '" . $id . "'");
         $info["ids"] = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $info["ids"][$result->fields["opt_id_type"]] = $result->fields["serial"];
             $result->moveNext();
         }
@@ -123,7 +123,7 @@ class DAO {
         // a volunteer may be assigned to more than one project
         $info['proj_id'] = $info['pos_id'] = array();
         $result = $this->execute("select pos_id, proj_id from vm_vol_assignment_active where p_uuid = '$id'");
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $info['pos_id'][] = $result->fields['pos_id'];
             $info['proj_id'][] = $result->fields['proj_id'];
             $result->MoveNext();
@@ -147,7 +147,7 @@ class DAO {
         //all the contact information
         $result = $this->execute("select opt_contact_type, contact_value from contact " . "where pgoc_uuid = '$id'");
         $contacts = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $contacts[$result->fields['opt_contact_type']] = $result->fields['contact_value'];
             $result->moveNext();
         }
@@ -160,7 +160,7 @@ class DAO {
         //get skills
         $info['skills'] = array();
         $result = $this->execute("SELECT opt_skill_code, option_description FROM vm_vol_skills JOIN field_options ON (opt_skill_code = option_code AND field_name = 'opt_skill_type') WHERE p_uuid = '$id'");
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $info['skills'][$result->fields['opt_skill_code']] = $result->fields['option_description'];
             $result->moveNext();
         }
@@ -180,7 +180,7 @@ class DAO {
         // get the ID codes and names from the 'field_options' table
         $result = $this->execute("select option_code, option_description from field_options where field_name = 'opt_id_type'");
         $id_types = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $id_types[$result->fields['option_code']] = $result->fields['option_description'];
             $result->moveNext();
         }
@@ -255,7 +255,7 @@ class DAO {
     {
         $result = $this->execute("select option_code, option_description from field_options where field_name = 'opt_contact_type'");
         $contact_types = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $contact_types[$result->fields['option_code']] = $result->fields['option_description'];
             $result->moveNext();
         }
@@ -358,7 +358,7 @@ class DAO {
         $result = $this->getCurrentPage($q);
         // put all information into an array for returning
         $volunteers = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $volunteers[] = new Volunteer($result->fields['p_uuid']);
             $result->moveNext();
         }
@@ -405,7 +405,7 @@ class DAO {
         $result = $this->getCurrentPage($q);
         // put all information into an array for returning
         $volunteers = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             if (empty($result->fields['location_id'])) $locations = array();
             else $locations = $this->getParentLocations($result->fields['location_id']);
             $volunteers[$result->fields['p_uuid']] = array('full_name' => $result->fields['full_name'], 'locations' => $locations, 'affiliation' => ($result->fields['org_name'] == null) ? '' : $result->fields['org_name'], 'pay_info' => $this->getVolHoursAndRate($result->fields['p_uuid'], $proj_id), 'status' => $result->fields['status']);
@@ -525,7 +525,7 @@ class DAO {
         else $whereClause = "WHERE proj_id = '$proj_id' AND p_uuid = '$p_uuid'";
         $result = $this->execute("SELECT pos_id, proj_id,project_name, ptype_id, slots, title, description, ptype_title, ptype_description, skill_code FROM vm_vol_assignment $whereClause ORDER BY proj_id ");
         $positions = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $this->remove_keys($result->fields);
             $positions[] = $result->fields;
             $result->moveNext();
@@ -580,7 +580,7 @@ class DAO {
         //store the info
         $result = $this->execute($query);
         $position = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $position[$result->fields['pos_id']] = array('title' => $result->fields['title'], 'skill_code' => $result->fields['skill_code'], 'payrate' => $result->fields['payrate'], 'description' => $result->fields['description'], 'slots' => $result->fields['slots']);
             $result->moveNext();
         }
@@ -604,7 +604,7 @@ class DAO {
     function listPositionTypes() {
         $result = $this->execute("select ptype_id, title, description, skill_code from vm_positiontype");
         $ptypes = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $this->remove_keys($result->fields);
             $ptypes[] = $result->fields;
             $result->moveNext();
@@ -697,7 +697,7 @@ class DAO {
             $result = $this->execute($query);
         }
         $projects = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             if ($simple) $projects[$result->fields['proj_id']] = $result->fields['name'];
             else $projects[$result->fields['proj_id']] = array('name' => $result->fields['name'], 'description' => $result->fields['description']);
             $result->moveNext();
@@ -728,7 +728,7 @@ class DAO {
         //get positions for this project
         $result = $this->execute("select pos_id this_pos_id, ptype_id, title, description, ptype_title, ptype_description, slots numSlots, payrate, (select count(*) FROM vm_vol_assignment_active WHERE pos_id = this_pos_id AND proj_id='$proj_id') numVolunteers, skill_code " . "from vm_position_active where proj_id = '$proj_id'");
         $proj['positions'] = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $this->remove_keys($result->fields);
             $result->fields['pos_id'] = $result->fields['this_pos_id'];
             unset($result->fields['this_pos_id']);
@@ -821,7 +821,7 @@ class DAO {
         $result = $this->execute("SELECT DISTINCT option_code, option_description FROM field_options WHERE field_name = 'opt_skill_type' ORDER BY option_description");
         $tree = new Tree("?mod=vm&amp;stream=text&amp;act=display_js&amp;js=");
         $tree->setRoot(new Node(_('Skills and Work Restrictions')));
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $split = preg_split('/' . VM_SKILLS_DELIMETER . '/', $result->fields['option_description']);
             $cur_parent = $tree->root;
             foreach($split as $index => $name) {
@@ -858,7 +858,7 @@ class DAO {
     function getVolSkillsArray($p_uuid) {
         $skills_array = array();
         $result = $this->execute("SELECT opt_skill_code FROM vm_vol_skills WHERE p_uuid = '$p_uuid'");
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $skills_array[] = $result->fields['opt_skill_code'];
             $result->MoveNext();
         }
@@ -882,7 +882,7 @@ class DAO {
         $tree = new Tree("?mod=vm&amp;stream=text&amp;act=display_js&amp;js=");
         $tree->setRoot(new Node(_('Skills and Work Restrictions')));
         // now store the skills in a Tree structure
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $split = preg_split('/' . VM_SKILLS_DELIMETER . '/', $result->fields['option_description']);
             $cur_parent = $tree->root;
             foreach($split as $index => $name) {
@@ -912,7 +912,7 @@ class DAO {
     function getSkillIDs() {
         $result = $this->execute("SELECT option_code FROM field_options WHERE field_name = 'opt_skill_type'");
         $skill_ids = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $skill_ids[] = $result->fields['option_code'];
             $result->MoveNext();
         }
@@ -922,7 +922,7 @@ class DAO {
         $result = $this->execute("select option_code code, option_description skill from field_options where field_name = 'opt_skill_type' order by option_description asc");
         if (!$result->EOF) {
             $skills = array();
-            while (!$result->EOF) {
+            while (is_object($result) && !$result->EOF) {
                 $skills[$result->fields['code']] = $result->fields['skill'];
                 $result->moveNext();
             }
@@ -958,7 +958,7 @@ class DAO {
         if ($vmOnly) $q.= "WHERE o_uuid IN (SELECT org_id FROM vm_vol_active)";
         $result = $this->execute($q);
         $orgs = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $orgs[$result->fields['o_uuid']] = $result->fields['name'];
             $result->MoveNext();
         }
@@ -1026,7 +1026,7 @@ class DAO {
 									 $extra_clause
 									 ORDER BY status");
         $vols = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $vols[$result->fields['p_uuid']] = array('name' => $result->fields['full_name'], 'status' => $result->fields['status']);
             $result->moveNext();
         }
@@ -1106,7 +1106,7 @@ class DAO {
         }
         $result = $this->getCurrentPage($query);
         $messages = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $this->remove_keys($result->fields);
             $messages[] = $result->fields;
             $result->moveNext();
@@ -1358,7 +1358,7 @@ class DAO {
         $result = $this->getCurrentPage($query);
         //			print_r($this->db);
         $search_results = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $search_results[] = new Volunteer($result->fields['p_uuid']);
             $result->MoveNext();
         }
@@ -1372,7 +1372,7 @@ class DAO {
      */
     function updatePhonetics() {
         $result = $this->execute("SELECT p_uuid, full_name FROM person_uuid WHERE p_uuid IN (SELECT p_uuid FROM vm_vol_active)");
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $p_uuid = $result->fields['p_uuid'];
             $full_name = $result->fields['full_name'];
             $this->execute("DELETE FROM phonetic_word WHERE pgl_uuid='{$p_uuid}'");
@@ -1453,7 +1453,7 @@ class DAO {
     function getPossibleAccessConstraints() {
         $result = $this->execute("SELECT constraint_id, description FROM vm_access_constraint");
         $constraints = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $constraints[$result->fields['constraint_id']] = $result->fields['description'];
             $result->MoveNext();
         }
@@ -1469,7 +1469,7 @@ class DAO {
 										 WHERE		vm_access_request.request_id = vm_access_constraint_to_request.request_id
 										 AND 		vm_access_constraint.constraint_id = vm_access_constraint_to_request.constraint_id");
         $access = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $act = $result->fields['act'];
             $vm_action = $result->fields['vm_action'];
             $constraint = $result->fields['constraint_id'];
@@ -1484,7 +1484,7 @@ class DAO {
         $result = $this->execute("SELECT 	act, vm_action, table_name, crud
 										 FROM 		vm_access_request, vm_access_classification_to_request
 										 WHERE		vm_access_request.request_id = vm_access_classification_to_request.request_id");
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $act = $result->fields['act'];
             $vm_action = $result->fields['vm_action'];
             $table_name = $result->fields['table_name'];
@@ -1515,7 +1515,7 @@ class DAO {
     function getAccessRequests() {
         $result = $this->execute("SELECT act, vm_action, description FROM vm_access_request ORDER BY description");
         $requests = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $act = $result->fields['act'];
             $vm_action = $result->fields['vm_action'];
             $desc = $result->fields['description'];
@@ -1531,7 +1531,7 @@ class DAO {
     function getAccessRequestsForDisplay() {
         $result = $this->execute("SELECT act, vm_action, description FROM vm_access_request ORDER BY description");
         $requests = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $act = $result->fields['act'];
             $vm_action = $result->fields['vm_action'];
             $desc = $result->fields['description'];
@@ -1553,7 +1553,7 @@ class DAO {
 										WHERE   act = '$act' AND vm_action = '$vm_action'
 										AND     vm_access_request.request_id = vm_access_constraint_to_request.request_id
 										AND     vm_access_constraint.constraint_id = vm_access_constraint_to_request.constraint_id");
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $constraints['extra'][] = $result->fields['constraint_id'];
             $result->MoveNext();
         }
@@ -1562,7 +1562,7 @@ class DAO {
 										FROM    vm_access_request, vm_access_classification_to_request
 										WHERE   act = '$act' AND vm_action = '$vm_action'
 										AND     vm_access_request.request_id = vm_access_classification_to_request.request_id");
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $constraints['tables'][$result->fields['table_name']] = $result->fields['crud'];
             $result->MoveNext();
         }
@@ -1592,7 +1592,7 @@ class DAO {
     function getDBTables() {
         $tables = array();
         $result = $this->execute("SHOW TABLES");
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $tables[] = $result->fields[0];
             $result->MoveNext();
         }
@@ -1653,7 +1653,7 @@ class DAO {
         if (!$all) $q.= " WHERE status = 'active'";
         $result = $this->execute($q);
         $vols = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $vols[$result->fields['p_uuid']] = $result->fields['full_name'];
             $result->moveNext();
         }
@@ -1708,7 +1708,7 @@ class DAO {
     function getDataClassificationLevels() {
         $result = $this->execute("SELECT level_id, level FROM sys_data_classifications");
         $levels = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $levels[$result->fields['level_id']] = $result->fields['level'];
             $result->moveNext();
         }

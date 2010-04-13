@@ -697,7 +697,7 @@ class daoTest extends PHPUnit_Framework_TestCase {
     public function testListProjects() {
         $result = $this->fixture->execute("SELECT proj_id, name, description FROM vm_projects_active");
         $projects = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             if ($simple) $projects[$result->fields['proj_id']] = $result->fields['name'];
             else $projects[$result->fields['proj_id']] = array('name' => $result->fields['name'], 'description' => $result->fields['description']);
             $result->moveNext();
@@ -715,7 +715,7 @@ class daoTest extends PHPUnit_Framework_TestCase {
         $result = $this->fixture->execute("SELECT status FROM vm_vol_details WHERE p_uuid = 'jpt420'");
         //$result2 = $this->fixture->execute("SELECT status FROM vm_vol_assigment WHERE p_uuid = 'jpt420'");
         $ptypes = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $this->fixture->remove_keys($result->fields);
             $ptypes[] = $result->fields;
             $result->moveNext();
@@ -732,7 +732,7 @@ class daoTest extends PHPUnit_Framework_TestCase {
         $this->fixture->deleteProject('4201');
         $result = $this->fixture->execute("SELECT status FROM vm_projects WHERE proj_id = '4201'");
         $ptypes = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $this->fixture->remove_keys($result->fields);
             $ptypes[] = $result->fields;
             $result->moveNext();
@@ -769,7 +769,7 @@ class daoTest extends PHPUnit_Framework_TestCase {
     public function testListPositionTypes() {
         $result = $this->fixture->execute("select ptype_id, title, description, skill_code from vm_positiontype");
         $ptypes = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $this->fixture->remove_keys($result->fields);
             $ptypes[] = $result->fields;
             $result->moveNext();
@@ -783,7 +783,7 @@ class daoTest extends PHPUnit_Framework_TestCase {
         $time = $this->fixture->execute("SELECT NOW()");
         $result = $this->fixture->execute("SELECT status FROM vm_vol_assignment WHERE proj_id ='4200' AND p_uuid = 'jpt420'");
         $ptypes = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $this->fixture->remove_keys($result->fields);
             $ptypes[] = $result->fields;
             $result->moveNext();
@@ -1007,7 +1007,7 @@ class daoTest extends PHPUnit_Framework_TestCase {
         $functionresult = $this->fixture->getDBTables();
         $expectedtables = array();
         $result = $this->fixture->execute("SHOW TABLES");
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $expectedtables[] = $result->fields[0];
             $result->MoveNext();
         }
@@ -1082,7 +1082,7 @@ class daoTest extends PHPUnit_Framework_TestCase {
     public function testGetVolunteerNames() {
         $result = $this->fixture->execute("SELECT person_uuid.p_uuid, full_name FROM vm_vol_details JOIN person_uuid USING(p_uuid) WHERE status  = 'active' ");
         $vols = array();
-        while (!$result->EOF) {
+        while (is_object($result) && !$result->EOF) {
             $vols[$result->fields['p_uuid']] = $result->fields['full_name'];
             $result->moveNext();
         }
