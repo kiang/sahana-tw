@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-04-09 13:13+0800\n"
-"PO-Revision-Date: 2010-04-13 16:30+0800\n"
+"PO-Revision-Date: 2010-04-13 17:56+0800\n"
 "Last-Translator: Hsiaojan <hsiaojan.liu@gmail.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -1594,7 +1594,7 @@ msgstr "身份類型"
 
 #: tools/tpl_languages.php:178
 msgid "Identification Number :"
-msgstr "身份證號碼"
+msgstr "身份證字號"
 
 #: tools/tpl_languages.php:179
 msgid "Create a Sahana account"
@@ -4873,7 +4873,7 @@ msgstr "根據姓名/身分證號碼搜尋  ："
 
 #: mod/ims/transfer_inv.inc:304
 msgid "Search the Victims by their names or their Identity card Number"
-msgstr "按姓名或身份證號碼搜尋受災者"
+msgstr "按姓名或身份證字號搜尋受災者"
 
 #: mod/ims/transfer_inv.inc:305
 msgid "Search & Add"
@@ -6704,14 +6704,14 @@ msgstr "頭髮顏色："
 #: mod/dvr/lib.inc:146
 #: mod/dvr/lib.inc:166
 msgid "Last Seen : "
-msgstr "上一次看見："
+msgstr "上一次看見他/她 是在："
 
 #: mod/mpr/mpr_lib.inc:47
 #: mod/mpr/mpr_lib.inc:67
 #: mod/dvr/lib.inc:147
 #: mod/dvr/lib.inc:167
 msgid "Last Clothing : "
-msgstr "最後的衣著："
+msgstr "最後的穿著："
 
 #: mod/mpr/mpr_lib.inc:48
 #: mod/mpr/mpr_lib.inc:68
@@ -6748,7 +6748,7 @@ msgstr "身份"
 #: mod/dvr/add_new_indv.inc:121
 #: mod/dvr/add_new_indv.inc:398
 msgid "Identity Card Number"
-msgstr "身份證號碼"
+msgstr "身份證字號"
 
 #: mod/mpr/view.inc:38
 #: mod/mpr/search.inc:67
@@ -6819,7 +6819,7 @@ msgstr "基本細節"
 #: inc/lib_security/lib_auth.inc:519
 #: inc/lib_security/acl_form.inc:500
 msgid "Full Name"
-msgstr "名"
+msgstr "名字"
 
 #: mod/mpr/view.inc:47
 #: mod/mpr/search.inc:73
@@ -7054,7 +7054,7 @@ msgstr "血型"
 #: mod/mpr/edit.inc:449
 #: mod/mpr/add.inc:502
 msgid "Last Seen"
-msgstr "上一次看見"
+msgstr "上一次看見他/她 是在"
 
 #: mod/mpr/view.inc:85
 #: mod/mpr/search.inc:308
@@ -7226,7 +7226,7 @@ msgstr "上傳照片"
 
 #: mod/mpr/edit.inc:175
 msgid "Previously Uploaded Image"
-msgstr "前次上傳圖片"
+msgstr "前次上傳的照片"
 
 #: mod/mpr/edit.inc:232
 #: mod/mpr/add.inc:151
@@ -7520,7 +7520,7 @@ msgstr "失蹤者登錄為針對失蹤者與尋獲者的線上佈告欄。這個
 
 #: mod/mpr/home.inc:46
 msgid "Submitting information about the individual such as identification numbers, physical appearance, last seen location, status, etc"
-msgstr "登錄與失蹤者有關的的資訊，例如：身份證號碼、外貌、上一次看到他的地點、現在狀態…等等"
+msgstr "登錄與失蹤者有關的的資訊，例如：身份證字號、外貌、上一次看到他的地點、現在狀態…等等"
 
 #: mod/mpr/home.inc:47
 msgid "'Sounds-like' name search allowing search even the spelling of the name is not known exactly"
@@ -7536,11 +7536,11 @@ msgstr "依據「家庭單位」或其他條件進行分組"
 
 #: mod/mpr/home.inc:54
 msgid "Search for a person"
-msgstr "失蹤人口查詢"
+msgstr "失蹤/受災 人口查詢"
 
 #: mod/mpr/home.inc:54
 msgid "Search to see whether a person is lost contact with people known to him or her"
-msgstr "搜尋，以了解這個人是否與認識他/她的人失去聯繫"
+msgstr "利用搜尋功能，確認你正在尋找的人是否已經登錄在本系統，及同時在追蹤這個人的其他相關人"
 
 #: mod/mpr/home.inc:55
 msgid "Report a missing person"
@@ -7548,7 +7548,7 @@ msgstr "通報失蹤者"
 
 #: mod/mpr/home.inc:55
 msgid "Report details about a missing person"
-msgstr "通報關於失蹤人員的細節"
+msgstr "通報失蹤人口，回報關於失蹤人口的各項細節，讓其他人也能瞭解這個人目前的狀態"
 
 #: mod/mpr/home.inc:56
 msgid "Edit missing person"
@@ -7556,7 +7556,7 @@ msgstr "編輯失蹤者資料"
 
 #: mod/mpr/home.inc:56
 msgid "Update the details of missing person entered to the database previously"
-msgstr "更新之前輸入到資料庫裡的失蹤人員的詳細資訊"
+msgstr "針對既存的失蹤人口詳細資訊進行編輯與更新"
 
 #: mod/mpr/home.inc:57
 msgid "Report a found person"
@@ -7564,7 +7564,7 @@ msgstr "回報已尋獲人員"
 
 #: mod/mpr/home.inc:57
 msgid "Report information if the displaced person is found"
-msgstr "如果找到失蹤人員，請回報資訊"
+msgstr "回報已經尋獲的失蹤人口"
 
 #: mod/mpr/home.inc:58
 msgid "List missing people"
@@ -7572,7 +7572,7 @@ msgstr "失蹤者清單"
 
 #: mod/mpr/home.inc:58
 msgid "List all the missing person information available in the database"
-msgstr "列出資料庫中所有失蹤者的資訊"
+msgstr "列出目前資料庫中所有既存的失蹤人口"
 
 #: mod/mpr/home.inc:59
 msgid "List found people"
@@ -7580,7 +7580,7 @@ msgstr "尋獲者清單"
 
 #: mod/mpr/home.inc:59
 msgid "Lias all the information of found displaced people"
-msgstr "列出所有尋獲人員的資訊"
+msgstr "列出目前資料庫中所有已尋獲人口的資料"
 
 #: mod/mpr/home.inc:74
 msgid "Latest updates on Found People"
@@ -7685,12 +7685,12 @@ msgstr "請先進行搜尋，以確認您所要找的人是否已經存在名單
 
 #: mod/mpr/add.inc:60
 msgid "If you have any information about missing person's identity numbers, Please include them since it will be helpful for finding the person. Otherwise please ignore."
-msgstr "如果您有失蹤者的身份證號碼的資訊，請提供，因為這將有助於尋找失蹤者。若無可忽略。"
+msgstr "如果您有失蹤者的身份證字號的資訊，請提供，因為這將有助於尋找失蹤者。若無可忽略。"
 
 #: mod/mpr/add.inc:62
 #: mod/dvr/edt_indv.inc:179
 msgid "Specify the Identity card Number, Although this is not required this will be useful in searching for the person"
-msgstr "填寫身份證號碼，雖然這並非必要，但在搜尋人員時會很有用處"
+msgstr "填寫身份證字號，雖然這並非必要，但在搜尋受災者時會很有用處"
 
 #: mod/mpr/add.inc:63
 #: mod/dvr/edt_indv.inc:182
@@ -10562,7 +10562,7 @@ msgstr "輸入名稱（ local Name）"
 #: mod/dvr/edt_grp.inc:245
 #: mod/dvr/search_group.inc:127
 msgid "Enter the National Identity Card Number if available. (Optional)"
-msgstr "如果有的話，請輸入身份證號碼（選填）"
+msgstr "如果有的話，請輸入身份證字號（選填）"
 
 #: mod/dvr/edt_grp.inc:247
 #: mod/dvr/add_new_grp.inc:206
@@ -10764,7 +10764,7 @@ msgstr "群組類型："
 #: mod/dvr/edt_indv.inc:399
 #: mod/dvr/add_new_indv.inc:378
 msgid "Full name"
-msgstr "全名"
+msgstr "名字"
 
 #: mod/dvr/edt_grp.inc:474
 #: mod/dvr/add_new_grp.inc:378
@@ -10884,7 +10884,7 @@ msgstr "輸入群組負責人的本地名稱"
 
 #: mod/dvr/add_new_grp.inc:204
 msgid "Enter the National Identity Card Number, Passport number or any other proof for identity(Optional)"
-msgstr "輸入身份證號碼、護照號碼或其他身分證名（選填）"
+msgstr "輸入身份證字號、護照號碼或其他身分證名（選填）"
 
 #: mod/dvr/add_new_grp.inc:219
 msgid "Upload the photograph of the head of the group if available"
@@ -13439,7 +13439,7 @@ msgstr "帳號詳細資訊"
 #: inc/lib_security/auth_form.inc:76
 #: inc/lib_security/auth_form.inc:131
 msgid "Full Name "
-msgstr "全名"
+msgstr "名字"
 
 #: inc/lib_security/auth_form.inc:77
 #: inc/lib_security/auth_form.inc:132
