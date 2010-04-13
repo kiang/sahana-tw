@@ -9,11 +9,11 @@ function _shn_pref_config_form($errors = false, $updated = false) {
     $arr_level1 = $global['db']->GetAll($sql_level1);
     $arr_level2 = $global['db']->GetAll($sql_level2);
     $arr_level3 = $global['db']->GetAll($sql_level3);
-    if ($_POST['ims_level'] == 'level2') {
+    if (isset($_POST['ims_level']) && $_POST['ims_level'] == 'level2') {
         foreach($arr_level2 as $row) {
             $arr[$row['incident_id']] = $row['parent_name'] . ' --> ' . $row['name'];
         }
-    } elseif ($_POST['ims_level'] == 'level3') {
+    } elseif (isset($_POST['ims_level']) && $_POST['ims_level'] == 'level3') {
         foreach($arr_level3 as $row) {
             $arr[$row['incident_id']] = $row['grand_parent_name'] . ' --> ' . $row['parent_name'] . ' --> ' . $row['name'];
         }

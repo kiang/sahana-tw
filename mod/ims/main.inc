@@ -106,7 +106,7 @@ function shn_ims_search_item_page() {
 function shn_ims_add_item_main_page() {
     global $global;
     include_once ('add_item.inc');
-    $inventory_id = $_REQUEST['inv_id'];
+    $inventory_id = isset($_REQUEST['inv_id']) ? $_REQUEST['inv_id'] : 0;
     _shn_ims_add_item_main_page($inventory_id);
 }
 function shn_ims_add_item($parent_id = false) {
@@ -403,7 +403,7 @@ function shn_ims_view_inv() {
     include_once ("view_inv.inc");
 ?>
 <?php
-    if (NULL == $_REQUEST['id']) {
+    if (empty($_REQUEST['id'])) {
 ?>
 <h2> Inventory Registry</h2>
 <?php $Limit = 20;
