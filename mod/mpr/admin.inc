@@ -292,7 +292,7 @@ function _shn_mpr_adm_field_options_form($type) {
     global $global;
     global $conf;
     $button_type = isset($_POST['button_name']) ? $_POST['button_name'] : '';
-    if ($button_type == 'Update') {
+    if ($button_type == _('Update')) {
         $sql = "SELECT field_name, option_code, option_description  FROM field_options WHERE field_name = '{$type}'";
         $sel = $global['db']->GetAll($sql);
         $count = 0;
@@ -300,8 +300,10 @@ function _shn_mpr_adm_field_options_form($type) {
             $opcode = $row['option_code'];
             $fname = $row['field_name'];
             $code = $_POST[$opcode];
-            $desc = $_POST[$count++];
-            $todelete = $_POST[$count++];
+            $desc = isset($_POST[$count]) ? $_POST[$count] : '';
+            ++$count;
+            $todelete = isset($_POST[$count]) ? $_POST[$count] : '';
+            ++$count;
             //print $code.$todelete;
             if ($todelete == 'on') {
                 _shn_mpr_delete_option($code);
@@ -309,7 +311,7 @@ function _shn_mpr_adm_field_options_form($type) {
                 _shn_mpr_update_option($code, $desc);
             }
         }
-    } else if ($button_type == 'AddNew') {
+    } else if ($button_type == _('AddNew')) {
         $code = $_POST['new_code'];
         $desc = $_POST['new_desc'];
         if ($code == null | $desc == null) {

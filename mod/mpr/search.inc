@@ -100,7 +100,7 @@ function shn_mpr_search_result() {
     else $type = '';
     global $global;
     //check the name with numbers get the p_uuid accroding to the rank
-    if ($name) {
+    if (!empty($name)) {
         //split name
         $names = preg_split("/\s+/", $_POST['name']);
         foreach($names as $name) {
@@ -111,7 +111,7 @@ function shn_mpr_search_result() {
         $encode2 = substr($encode2, 0, strlen($encode2) - 3);
         $sql = "SELECT pgl_uuid as p_uuid FROM phonetic_word, person_status WHERE pgl_uuid=p_uuid AND (($encode1) OR ($encode2)) $type GROUP BY 1";
     }
-    if ($idcard) $sql = "SELECT a.p_uuid FROM identity_to_person a INNER JOIN person_status b USING (p_uuid) WHERE a.serial LIKE '%$idcard%' $type GROUP BY 1";
+    if (!empty($idcard)) $sql = "SELECT a.p_uuid FROM identity_to_person a INNER JOIN person_status b USING (p_uuid) WHERE a.serial LIKE '%$idcard%' $type GROUP BY 1";
     if ($name && $idcard) $sql = "SELECT a.p_uuid FROM person_status a
                     LEFT OUTER JOIN identity_to_person b USING(p_uuid)
                     LEFT OUTER JOIN phonetic_word c ON c.pgl_uuid = a.p_uuid

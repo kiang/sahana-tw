@@ -376,6 +376,7 @@ function shn_mpr_editmp_confirm() {
     shn_form_label(shn_get_field_opt($_SESSION['mpr_edit']['entry']['opt_status'], 'opt_status'), '');
     shn_form_fsclose();
     //Identity
+    $identity_section = false;
     if (isset($_SESSION['mpr_edit']['entry']['idcard']) || isset($_SESSION['mpr_edit']['entry']['passport']) || isset($_SESSION['mpr_edit']['entry']['drv_license'])) {
         shn_form_fsopen(_("Identity"));
         $identity_section = true;
@@ -645,7 +646,7 @@ function shn_mpr_editmp_commit() {
             echo "</pre>";*/
             $res->MoveFirst();
             $img_id = $res->Fields('image_id');
-            if ($_SESSION['mpr']['entry']['image']) {
+            if (!empty($_SESSION['mpr']['entry']['image'])) {
                 shn_image_to_db_ex($_SESSION['mpr_edit']['entry']['p_uuid'], $_SESSION['mpr']['entry']['image'], $_SESSION['mpr']['entry']['image_type'], $_SESSION['mpr']['entry']['image_height'], $_SESSION['mpr']['entry']['image_width'], $img_id, 'person');
             }
             unset($_SESSION['mpr']['entry']['image']);
