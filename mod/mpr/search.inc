@@ -146,7 +146,7 @@ function shn_mpr_search_result_vw($subquery = "SELECT p_uuid FROM person_uuid", 
     global $global;
     global $conf;
     $limit = $conf['mod_mpr_search_limit'];
-    if ($conf['mysql']) {
+    if (!empty($conf['mysql'])) {
         //Select into temp table todo put the locks to reading tables ;-)
         $sql1 = "CREATE TEMPORARY TABLE tmp_mpr_search( p_uuid BIGINT )";
         $sql2 = "INSERT INTO tmp_mpr_search $subquery";
@@ -231,7 +231,7 @@ function shn_mpr_search_nav() {
     global $global;
     global $conf;
     $limit = $conf['mod_mpr_search_limit'];
-    $offset = $_GET['offset'];
+    $offset = isset($_GET['offset']) ? $_GET['offset'] : 0;
     $total = $_SESSION['mpr']['search']['record_count'];
     $delta = $total - $offset - $limit;
     echo '<br /><strong>' . _('Total') . ' ' . $total . ' ' . _('Records were found') . '</strong><br />';
@@ -268,6 +268,7 @@ function shn_mpr_search_nav() {
  */
 function shn_mpr_search_show_result($details) {
     global $global;
+    $select = false;
     if ($_GET['act'] != 'search') $select = true;
 ?>
 <TABLE>
@@ -321,6 +322,9 @@ href="index.php?mod=' . $global['module'] . '&act=status&id=' . $detail['p_uuid'
         <TD>
 <?php
             $arr = shn_mpr_search_get_reported_person($detail['p_uuid']);
+            if(!is_array($arr)) {
+                $arr = array();
+            }
             foreach ($arr as $fullname)
                 echo "&nbsp;" . '<a title="' . _('View') . '"' .
                 'href="index.php?mod=' . $global['module'] . '&act=viewmp&id=' .
@@ -471,6 +475,7 @@ class SearchQuery {
         $this->__name = $name;
         //split name
         $names = preg_split("/\s+/", $this->__name);
+        $encode1 = $encode2 = '';
         foreach($names as $name) {
             $encode1.= " phonetic_word.encode1 LIKE '" . soundex($name) . "' OR ";
             $encode2.= " phonetic_word.encode2 LIKE '" . metaphone($name) . "%' OR ";

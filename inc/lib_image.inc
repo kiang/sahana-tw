@@ -215,6 +215,9 @@ function shn_show_thumb_url($x_uuid, $stream_type, $mod = null, $act = null, $se
                     break;
                 }
             }
+            if(!isset($filename)) {
+                return false;
+            }
             $filename = trim($filename);
             //if image is not available
             if (!file_exists($global['approot'] . "www/tmp/ori_$x_uuid" . "$ext")) {
@@ -231,6 +234,12 @@ function shn_show_thumb_url($x_uuid, $stream_type, $mod = null, $act = null, $se
             $src_ori = 'http://' . $url . "/tmp/ori_$x_uuid" . "$ext";
             $src_tmp = "tmp/thumb_$x_uuid" . "$ext";
         }
+    }
+    if(!isset($height)) {
+        return false;
+    }
+    if(!isset($width)) {
+        return false;
     }
     //echo $src_tmp;
     

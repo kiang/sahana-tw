@@ -260,7 +260,8 @@ function shn_mpr_addmp_reporter($errors = false) {
     } ?>
 >
 <?php
-    shn_form_opt_select('opt_status', _('If you are a victim, Please specify the status'), '', array('value' => $_SESSION['mpr_reporter']['opt_status']));
+    $opt_status = isset($_SESSION['mpr_reporter']['opt_status']) ? $_SESSION['mpr_reporter']['opt_status'] : '';
+    shn_form_opt_select('opt_status', _('If you are a victim, Please specify the status'), '', array('value' => $opt_status));
 ?>
 </div>
 </div>
@@ -322,12 +323,10 @@ function shn_mpr_addmp_reporter_validate() {
         add_error(_("Please enter the full name of the reporting person"));
         $error_flag = true;
     }
-    $email = $local_post['rep_email'];
-    if ($email != null) {
-        if (!shn_valid_email($email)) {
-            add_error(_("Please enter a valid E-mail"));
-            $error_flag = true;
-        }
+    $email = isset($local_post['rep_email']) ? $local_post['rep_email'] : '';
+    if (!empty($email) && !shn_valid_email($email)) {
+        add_error(_("Please enter a valid E-mail"));
+        $error_flag = true;
     }
     //Reporting person relation
     /* if(! isset($local_post['opt_relationship_type'])){
@@ -429,6 +428,7 @@ function shn_mpr_addmp_confirm() {
     <hr>
 <?php
     //Identity
+    $identity_section = false;
     if (isset($_SESSION['mpr_add']['entry']['idcard']) || isset($_SESSION['mpr_add']['entry']['passport']) || isset($_SESSION['mpr_add']['entry']['drv_license'])) {
         shn_form_fsopen(_('Identity'));
         $identity_section = true;
@@ -696,12 +696,15 @@ function shn_mpr_addmp_commit() {
      $insert_array = null;
      */
     //reset $insert_array
-    if ($_SESSION['mpr_add']['entry']['tracker_id']) {
+    if (!empty($_SESSION['mpr_add']['entry']['tracker_id'])) {
         shn_add_person_to_report($_SESSION['mpr_add']['entry']['p_uuid'], $_SESSION['mpr_add']['entry']['tracker_id'], $_SESSION['mpr_add']['report_person']['opt_relationship_type']);
     } else shn_mpr_addmp_insert_reporter($_SESSION['mpr_add']['entry']['p_uuid']);
     //Insert Image if image save handler is set to database
     if ($conf['mod_mpr_upload_pic_handler'] == 'database') {
-        shn_image_to_db_ex($_SESSION['mpr_add']['entry']['p_uuid'], $_SESSION['mpr']['entry']['image'], $_SESSION['mpr']['entry']['image_type'], $_SESSION['mpr']['entry']['image_height'], $_SESSION['mpr']['entry']['image_width'], '', 'person');
+        foreach(array('p_uuid', 'image', 'image_type', 'image_height', 'image_width') AS $key) {
+            $$key = isset($_SESSION['mpr_add']['entry'][$key]) ? $_SESSION['mpr_add']['entry'][$key] : '';
+        }
+        shn_image_to_db_ex($p_uuid, $image, $image_type, $image_height, $image_width, '', 'person');
     }
 
     //$insert_array['p_uuid'] = $_SESSION['p_uuid'];
@@ -778,7 +781,8 @@ function shn_mpr_addmp_insert_reporter($p_uuid, $r_person=false) {
     /*
     * Insert into the person_to_report
     */
-    shn_add_person_to_report($p_uuid, $rep_uuid, $_SESSION['mpr_add']['report_person']['opt_relationship_type']);
+    $opt_relationship_type = isset($_SESSION['mpr_add']['report_person']['opt_relationship_type']) ? $_SESSION['mpr_add']['report_person']['opt_relationship_type'] : '';
+    shn_add_person_to_report($p_uuid, $rep_uuid, $opt_relationship_type);
 }
 /**
  * This function helps you to add reporting persons to the missing person

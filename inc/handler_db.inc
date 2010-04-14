@@ -97,7 +97,9 @@ function shn_db_insert($arr, $table, $audit = true, $primary_field = '') {
     if ($audit) {
         $primary_field = trim($primary_field);
         //If Primary Field given then check for the value
-        if ($primary_field != '') $x_uuid = $arr[$primary_field];
+        if ($primary_field != '') {
+            $x_uuid = isset($arr[$primary_field]) ? $arr[$primary_field] : '';
+        }
         //if primary field is not given the look get the primary key
         //@TODO
         //if the $_SESSION['user_id'] is not set, $u_uuid =
@@ -106,6 +108,7 @@ function shn_db_insert($arr, $table, $audit = true, $primary_field = '') {
         else $u_uuid = $conf['guest_id'];
     }
     $sql = "INSERT INTO $table ";
+    $keys = $values = '';
     foreach($arr as $k => $v) {
         $keys.= "$k , ";
         if ($v == '') $values.= "'NULL', ";

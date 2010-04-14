@@ -441,7 +441,7 @@ function shn_mpr_search() {
         switch ($seq) {
             case 'result':
                 shn_mpr_search_default();
-                if ($_GET['offset']) shn_mpr_search_result_vw($_SESSION['mpr']['search']['subquery'], $_GET['offset']);
+                if (isset($_GET['offset'])) shn_mpr_search_result_vw($_SESSION['mpr']['search']['subquery'], $_GET['offset']);
                 else {
                     $search_sql = new SearchQuery();
                     if (!empty($_POST['name'])) $search_sql->set_name($_POST['name']);
