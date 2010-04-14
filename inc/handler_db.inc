@@ -29,6 +29,9 @@ require_once ($global['approot'] . '3rd/adodb/adodb.inc.php');
 $global['db'] = NewADOConnection($conf['db_engine']);
 $global['db']->Connect($conf['db_host'] . ($conf['db_port'] ? ':' . $conf['db_por
 t'] : ''), $conf['db_user'], $conf['db_pass'], $conf['db_name']);
+if($conf['db_engine'] == 'mysql') {
+    $global['db']->Execute('SET NAMES utf8;');
+}
 if ($conf['enable_monitor_sql']) $global['db']->LogSQL();
 /**
  * Cleans the given value to avoid SQL Injections
@@ -99,6 +102,8 @@ function shn_db_insert($arr, $table, $audit = true, $primary_field = '') {
         //If Primary Field given then check for the value
         if ($primary_field != '') {
             $x_uuid = isset($arr[$primary_field]) ? $arr[$primary_field] : '';
+        } else {
+            $x_uuid = '';
         }
         //if primary field is not given the look get the primary key
         //@TODO
