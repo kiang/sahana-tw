@@ -99,22 +99,24 @@ function _shn_lc_issetsession() {
  * Displays the list of available languages
  */
 function _shn_lc_lang_list($mode = 1) {
-    if (!isset($_REQUEST['act']) || ($_REQUEST['act'] == 'default' || $_REQUEST['act'] == '' || $_REQUEST['act'] == 'lc_set')) {
-        $lc_list = _shn_get_lang_list();
-        $locale = $_SESSION['locale'];
-        global $global;
-        //shn_form_fopen("lc_set",null,array('req_message'=>false,'id'=>"language"));
+    $lc_list = _shn_get_lang_list();
+    $locale = $_SESSION['locale'];
+    global $global;
+    //shn_form_fopen("lc_set",null,array('req_message'=>false,'id'=>"language"));
 
-        // this prevents Sahana Security Bulletin 2009:1210 by cleaning the module variable before outputting it
-        $mod = substr($global['module'], 0, 6);
-        if (!preg_match("/\A[0-9a-z]{2,6}\Z/", $mod)) {
-            $mod = "";
-        }
-        echo "<form method=\"post\" action=\"index.php?mod=".$mod."&amp;act=lc_set\" id=\"language\" class=\"head\"  >\n";
-        shn_form_hidden(array('seq' => 'set_locale'));
-        shn_form_select($lc_list, "Language", "locale", 'onchange="submit(this);"', array('value' => "$locale"));
-        echo "</form>";
+    // this prevents Sahana Security Bulletin 2009:1210 by cleaning the module variable before outputting it
+    $mod = substr($global['module'], 0, 6);
+    if (!preg_match("/\A[0-9a-z]{2,6}\Z/", $mod)) {
+        $mod = "";
     }
+    $action = $global['action'];
+    if (!preg_match("/[0-9a-z\-_]/", $action)) {
+        $action = "";
+    }
+    echo "<form method=\"post\" action=\"index.php?mod=" . $mod . "&amp;act=" . $action . "\" id=\"language\" class=\"head\"  >\n";
+    shn_form_hidden(array('seq' => 'set_locale'));
+    shn_form_select($lc_list, "Language", "locale", 'onchange="submit(this);"', array('value' => "$locale"));
+    echo "</form>";
 }
 function _shn_lc_get_dbpo() {
     global $global;
