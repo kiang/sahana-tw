@@ -38,7 +38,8 @@ function shn_clean_type_parameter($type) {
 function shn_mpr_search_default() {
     shn_form_fopen("search", null, array('req_message' => false));
     shn_form_fsopen(_('Basic Search'));
-    shn_form_text(_('Any Card Number'), 'idcard', 'size="30"');
+    shn_form_text(_('Identity Card Number'), 'idcard', 'size="30"');
+    shn_form_text(_('Any Card Number'), 'anycard', 'size="30"');
     shn_form_text(_('Any Name'), 'name', 'size="30"');
     #   shn_form_checkbox(_('All incidents belongs to current incident'),'list_incidents');
     shn_form_checkbox(_('All incidents'), 'all_incidents');
@@ -80,54 +81,6 @@ function shn_mpr_search_advance() {
     shn_form_hidden(array('seq' => 'result'));
     shn_form_hidden(array('type' => shn_clean_type_parameter($_GET['type'])));
     shn_form_fclose();
-}
-/* }}} */
-/* {{{ Search Query Generation (OLD NOT NEEDED) */
-/**
- * Search Query Generation
- *
- * @deprecated
- * @access public
- * @return void
- */
-function shn_mpr_search_result() {
-    //@todo: rewrite
-    $name = trim($_POST['name']);
-    $idcard = trim($_POST['idcard']);
-    $post_type = trim($_POST['type']);
-    if ($post_type == 'missing') $type = " AND opt_status LIKE 'mis'";
-    elseif ($post_type == 'found') $type = " AND opt_status NOT LIKE 'mis'";
-    else $type = '';
-    global $global;
-    //check the name with numbers get the p_uuid accroding to the rank
-    if (!empty($name)) {
-        //split name
-        $names = preg_split("/\s+/", $_POST['name']);
-        foreach($names as $name) {
-            $encode1.= " encode1 LIKE '" . soundex($name) . "' OR ";
-            $encode2.= " encode2 LIKE '" . metaphone($name) . "%' OR ";
-        }
-        $encode1 = substr($encode1, 0, strlen($encode1) - 3);
-        $encode2 = substr($encode2, 0, strlen($encode2) - 3);
-        $sql = "SELECT pgl_uuid as p_uuid FROM phonetic_word, person_status WHERE pgl_uuid=p_uuid AND (($encode1) OR ($encode2)) $type GROUP BY 1";
-    }
-    if (!empty($idcard)) $sql = "SELECT a.p_uuid FROM identity_to_person a INNER JOIN person_status b USING (p_uuid) WHERE a.serial LIKE '%$idcard%' $type GROUP BY 1";
-    if ($name && $idcard) $sql = "SELECT a.p_uuid FROM person_status a
-                    LEFT OUTER JOIN identity_to_person b USING(p_uuid)
-                    LEFT OUTER JOIN phonetic_word c ON c.pgl_uuid = a.p_uuid
-                    WHERE ((b.serial LIKE '%$idcard%') OR (($encode1) OR ($encode2))) $type
-                    GROUP BY 1";
-    if (!($name || $idcard)) {
-        if ($post_type == 'missing') $sub_sql = "SELECT p_uuid FROM person_status WHERE opt_status
-LIKE 'mis' AND isvictim='TRUE'";
-        elseif ($post_type == 'found') $sub_sql = "SELECT p_uuid FROM person_status WHERE opt_status
-NOT LIKE 'mis' AND isvictim='TRUE'";
-        else $sub_sql = "SELECT p_uuid FROM person_status WHERE
-isvictim='TRUE'";
-        shn_mpr_search_result_vw($sub_sql);
-    } else {
-        shn_mpr_search_result_vw($sql);
-    }
 }
 /* }}} */
 /* {{{ Search Result Display  (OLD) */
@@ -184,6 +137,7 @@ function shn_mpr_search_result_vw($subquery = "SELECT p_uuid FROM person_uuid", 
         $rs = $global['db']->SelectLimit($sql, $limit, $offset);
         $rs_count = $global['db']->Execute($sql);
     }
+    $arr = '';
     if ($rs != null) $arr = $rs->GetAll();
     if ($rs_count != null) $_SESSION['mpr']['search']['record_count'] = $rs_count->RecordCount();
     else $_SESSION['mpr']['search']['record_count'] = 0;
@@ -449,6 +403,7 @@ class SearchQuery {
     var $__address;
     var $__phone;
     var $__email;
+    var $__idcard_no;
     var $__serial_no;
     var $__sql;
     var $__joins;
@@ -515,8 +470,28 @@ class SearchQuery {
      */
     function set_serial_no($serial_no) {
         $this->__serial_no = $serial_no;
-        $this->__joins[] = " LEFT OUTER JOIN identity_to_person ON " . " person_status.p_uuid = identity_to_person.p_uuid ";
-        $this->__where[] = " identity_to_person.serial LIKE '%{$this->__serial_no}%' ";
+        $join = " LEFT OUTER JOIN identity_to_person ON " . " person_status.p_uuid = identity_to_person.p_uuid ";
+        if(empty($this->__joins) || !in_array($join, $this->__joins)) {
+            $this->__joins[] = $join;
+        }
+        $this->__where[] = " identity_to_person.serial = '{$this->__serial_no}' ";
+    }
+    /* }}} */
+    /* {{{ set idcard */
+    /**
+     * Sets ID Card numeber
+     *
+     * @param mixed $serial_no
+     * @access public
+     * @return void
+     */
+    function set_idcard_no($idcard_no) {
+        $this->__idcard_no = $idcard_no;
+        $join = " LEFT OUTER JOIN identity_to_person ON " . " person_status.p_uuid = identity_to_person.p_uuid ";
+        if(empty($this->__joins) || !in_array($join, $this->__joins)) {
+            $this->__joins[] = $join;
+        }
+        $this->__where[] = " (identity_to_person.serial = '{$this->__idcard_no}' AND identity_to_person.opt_id_type = 'nic') ";
     }
     /* }}} */
     /* {{{ set phone */
@@ -542,7 +517,9 @@ class SearchQuery {
      */
     function get_sql() {
         $sql = "SELECT person_status.p_uuid FROM person_status ";
-        foreach($this->__joins as $joins) $sql.= $joins;
+        if(!empty($this->__joins)) {
+            foreach($this->__joins as $joins) $sql.= $joins;
+        }
         //if incident_id is given join that
         if (!empty($this->incident_id) || !empty($this->incident_list)) $sql.= " INNER JOIN resource_to_incident ON resource_to_incident.x_uuid = person_status.p_uuid ";
         if ($this->__where) {

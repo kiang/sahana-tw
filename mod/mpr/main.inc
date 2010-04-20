@@ -444,11 +444,14 @@ function shn_mpr_search() {
                 if (isset($_GET['offset'])) shn_mpr_search_result_vw($_SESSION['mpr']['search']['subquery'], $_GET['offset']);
                 else {
                     $search_sql = new SearchQuery();
-                    if (!empty($_POST['name'])) $search_sql->set_name($_POST['name']);
-                    if (!empty($_POST['idcard'])) $search_sql->set_serial_no($_POST['idcard']);
-                    if (empty($_POST['idcard']) && empty($_POST['name'])) {
+                    if (!empty($_POST['name'])) {
                         $search_sql->set_name($_POST['name']);
-                        $search_sql->set_serial_no($_POST['idcard']);
+                    }
+                    if (!empty($_POST['idcard'])) {
+                        $search_sql->set_idcard_no($_POST['idcard']);
+                    }
+                    if (!empty($_POST['anycard'])) {
+                        $search_sql->set_serial_no($_POST['anycard']);
                     }
                     #$search_sql->isvictim = true;
                     if (!isset($_REQUEST['all_incidents'])) $search_sql->incident_list = "'" . implode(shn_db_get_all_incidents($_SESSION['user_pref_ims_incident_id']), "','") . "'";
