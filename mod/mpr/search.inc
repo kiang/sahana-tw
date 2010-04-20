@@ -474,7 +474,7 @@ class SearchQuery {
         if(empty($this->__joins) || !in_array($join, $this->__joins)) {
             $this->__joins[] = $join;
         }
-        $this->__where[] = " identity_to_person.serial = '{$this->__serial_no}' ";
+        $this->__where[] = " (identity_to_person.serial = '{$this->__serial_no}' AND identity_to_person.opt_id_type != 'nic') ";
     }
     /* }}} */
     /* {{{ set idcard */
