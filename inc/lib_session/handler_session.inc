@@ -214,7 +214,7 @@ function delete_session($sess_id) {
  * @access public
  * @return void
  */
-function shn_session_end($user_data) {
+function shn_session_end($user_data = array()) {
     /*regenerate the session id and send to the client, this  is essential
     as user obtained different privileges
     */

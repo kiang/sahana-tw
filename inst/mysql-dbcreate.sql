@@ -66,8 +66,7 @@ CREATE TABLE config(
     module_id VARCHAR(20), -- the directory name of the module e.g. dvr, or, mpr
 	confkey VARCHAR(50) NOT NULL, -- the configuration key for the module
 	value VARCHAR(100), -- the value 
-    PRIMARY KEY(config_id),
-	FOREIGN KEY (module_id) REFERENCES modules (module_id)
+    PRIMARY KEY(config_id)
 );
 
 /**
