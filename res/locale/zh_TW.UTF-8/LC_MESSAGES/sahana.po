@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-04-09 13:13+0800\n"
-"PO-Revision-Date: 2010-04-13 17:56+0800\n"
+"PO-Revision-Date: 2010-04-19 18:50+0800\n"
 "Last-Translator: Hsiaojan <hsiaojan.liu@gmail.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -1696,12 +1696,12 @@ msgstr "進階搜尋條件"
 #: tools/tpl_languages.php:215
 #: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:4
 msgid "Back to Basic Search"
-msgstr "返回基本搜尋"
+msgstr "返回搜尋頁面"
 
 #: tools/tpl_languages.php:216
 #: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:6
 msgid "Basic Search Criteria"
-msgstr "基本搜尋條件"
+msgstr "搜尋條件"
 
 #: tools/tpl_languages.php:217
 #: mod/mpr/search.inc:63
@@ -2181,9 +2181,8 @@ msgid "All access requests in the database and in the VM code match."
 msgstr ""
 
 #: tools/tpl_languages.php:355
-#, fuzzy
 msgid "Warning:"
-msgstr "警告"
+msgstr "提醒："
 
 #: tools/tpl_languages.php:356
 msgid "The following requests in the VM code are not under access control:"
@@ -2197,7 +2196,7 @@ msgstr "請輸入描述"
 #: tools/tpl_languages.php:366
 #: inc/lib_stream_html.inc:80
 msgid "Warning"
-msgstr "警告"
+msgstr "提醒"
 
 #: tools/tpl_languages.php:362
 #, fuzzy
@@ -6669,14 +6668,14 @@ msgstr "RSS 讀取錯誤"
 #: mod/dvr/lib.inc:141
 #: mod/dvr/lib.inc:161
 msgid "Height : "
-msgstr "身高："
+msgstr "身高（公分）："
 
 #: mod/mpr/mpr_lib.inc:42
 #: mod/mpr/mpr_lib.inc:62
 #: mod/dvr/lib.inc:142
 #: mod/dvr/lib.inc:162
 msgid "Weight : "
-msgstr "體重："
+msgstr "體重（公斤）："
 
 #: mod/mpr/mpr_lib.inc:43
 #: mod/mpr/mpr_lib.inc:63
@@ -7081,7 +7080,7 @@ msgstr "檢視"
 
 #: mod/mpr/view.inc:96
 msgid "Click to edit"
-msgstr "點選以編輯"
+msgstr "點選這裡開始編輯"
 
 #: mod/mpr/list_missing.inc:20
 msgid "Missing People"
@@ -7089,19 +7088,19 @@ msgstr "失蹤者"
 
 #: mod/mpr/search.inc:40
 msgid "Basic Search"
-msgstr "基本搜尋"
+msgstr "搜尋"
 
 #: mod/mpr/search.inc:41
 #: mod/dvr/search_individual.inc:47
 #: mod/dvr/search_group.inc:43
 msgid "Any Card Number"
-msgstr "任何證件號碼"
+msgstr "身份證字號"
 
 #: mod/mpr/search.inc:42
 #: mod/dvr/search_individual.inc:48
 #: mod/dvr/search_group.inc:44
 msgid "Any Name"
-msgstr "名字（姓、名、或暱稱均可）"
+msgstr "名字（姓、名、或當地姓名均可）"
 
 #: mod/mpr/search.inc:44
 #: mod/dvr/search_individual.inc:49
@@ -7175,17 +7174,17 @@ msgstr "加入追蹤"
 
 #: mod/mpr/search.inc:303
 msgid "Associate another person"
-msgstr " 建立其他關係人"
+msgstr " 建立其他追蹤者"
 
 #: mod/mpr/search.inc:314
 #: mod/mpr/search.inc:415
 msgid "Change the status to Alive & Well"
-msgstr "變更狀態為存活 & 良好"
+msgstr "變更狀態為倖存"
 
 #: mod/mpr/search.inc:316
 #: mod/mpr/search.inc:415
 msgid "Click to change to found"
-msgstr "點選此處，變更此人為「已尋獲」"
+msgstr "★點選此處，變更此人為「倖存（且無受傷）」"
 
 #: mod/mpr/search.inc:319
 #: mod/mpr/audit.inc:26
@@ -7194,7 +7193,7 @@ msgstr "稽核"
 
 #: mod/mpr/list_found.inc:21
 msgid "Found People"
-msgstr "已尋獲的人員"
+msgstr "已尋獲名單"
 
 #: mod/mpr/edit.inc:144
 #: mod/rms/handler_mng_ff.inc:37
@@ -7250,7 +7249,7 @@ msgstr "無效的圖片類型，請再試一次。"
 
 #: mod/mpr/edit.inc:454
 msgid "Reporting People"
-msgstr "通報人員"
+msgstr "通報/追蹤者"
 
 #: mod/mpr/edit.inc:464
 #: mod/mpr/edit.inc:677
@@ -7265,7 +7264,7 @@ msgstr "確認"
 
 #: mod/mpr/edit.inc:483
 msgid "Is the information that you've entered correct?"
-msgstr "您剛才輸入的資訊正確嗎？"
+msgstr "請確認本頁資料是否正確"
 
 #: mod/mpr/edit.inc:485
 #: mod/mpr/add.inc:232
@@ -7281,7 +7280,7 @@ msgstr "是"
 #: mod/mpr/add.inc:248
 #: mod/sync/handler_upload.inc:109
 msgid "No"
-msgstr "無"
+msgstr "否"
 
 #: mod/mpr/edit.inc:670
 msgid "Current Trackers"
@@ -7289,7 +7288,7 @@ msgstr "目前追蹤者"
 
 #: mod/mpr/edit.inc:692
 msgid "Click to remove the tracker"
-msgstr "按一下以移除追蹤者"
+msgstr "點選此，移除本追蹤者"
 
 #: mod/mpr/edit.inc:699
 msgid "Add a tracker"
@@ -7516,7 +7515,7 @@ msgid ""
 "of people finding each other. For example if two members of the a family unit is\n"
 "looking for the head of the family, we can use this data at least to connect those two\n"
 "family members."
-msgstr "失蹤者登錄為針對失蹤者與尋獲者的線上佈告欄。這個布告欄可以清楚收集並整理關於失蹤者與尋獲者的資訊，以及正在尋找他們的親人或朋友資訊，這樣能夠增加彼此互相找到的機會。"
+msgstr "失蹤者登錄為針對失蹤者與尋獲者的線上佈告欄。這個布告欄可以清楚收集並整理關於失蹤者與倖存者的資訊，以及正在尋找他們的親人或朋友資訊，這樣能夠增加彼此互相找到的機會。"
 
 #: mod/mpr/home.inc:46
 msgid "Submitting information about the individual such as identification numbers, physical appearance, last seen location, status, etc"
@@ -7560,7 +7559,7 @@ msgstr "針對既存的失蹤人口詳細資訊進行編輯與更新"
 
 #: mod/mpr/home.inc:57
 msgid "Report a found person"
-msgstr "回報已尋獲人員"
+msgstr "回報倖存者"
 
 #: mod/mpr/home.inc:57
 msgid "Report information if the displaced person is found"
@@ -7568,7 +7567,7 @@ msgstr "回報已經尋獲的失蹤人口"
 
 #: mod/mpr/home.inc:58
 msgid "List missing people"
-msgstr "失蹤者清單"
+msgstr "失蹤者名單"
 
 #: mod/mpr/home.inc:58
 msgid "List all the missing person information available in the database"
@@ -7584,15 +7583,15 @@ msgstr "列出目前資料庫中所有已尋獲人口的資料"
 
 #: mod/mpr/home.inc:74
 msgid "Latest updates on Found People"
-msgstr "關於尋獲者的最近更新訊息"
+msgstr "關於倖存者的最新訊息"
 
 #: mod/mpr/home.inc:86
 msgid "Latest updates on Missing People"
-msgstr "關於失蹤者的最新紀錄"
+msgstr "關於失蹤者的最新訊息"
 
 #: mod/mpr/main.inc:56
 msgid "Search for a Person"
-msgstr "搜尋某人"
+msgstr "搜尋失蹤/受難者"
 
 #: mod/mpr/main.inc:57
 msgid "Report a Missing Person"
@@ -7608,11 +7607,11 @@ msgstr "通報尋獲者"
 
 #: mod/mpr/main.inc:62
 msgid "List Missing People"
-msgstr "列出失蹤者"
+msgstr "失蹤者名單"
 
 #: mod/mpr/main.inc:63
 msgid "List Found People"
-msgstr "列出已尋獲的人員"
+msgstr "倖存者名單"
 
 #: mod/mpr/main.inc:157
 #: mod/mpr/main.inc:163
@@ -7639,7 +7638,7 @@ msgstr "您確認要從追蹤列表裡刪除「%s」嗎？"
 
 #: mod/mpr/main.inc:245
 msgid "Edit Found Person Entry"
-msgstr "編輯追蹤者資料"
+msgstr "編輯倖存者資料"
 
 #: mod/mpr/main.inc:261
 msgid "View Person"
@@ -7647,11 +7646,11 @@ msgstr "檢視人員"
 
 #: mod/mpr/main.inc:347
 msgid "Found Person Entry"
-msgstr "尋獲者清單"
+msgstr "倖存者清單"
 
 #: mod/mpr/main.inc:348
 msgid "Missing Person Entry"
-msgstr "失蹤者通報管理功能"
+msgstr "通報失蹤者"
 
 #: mod/mpr/main.inc:357
 #: mod/mpr/main.inc:367
@@ -7677,11 +7676,11 @@ msgstr "請選擇通報者"
 
 #: mod/mpr/images.inc:23
 msgid "Add Another Picture"
-msgstr "增加另一個圖片"
+msgstr "增加另一張圖片"
 
 #: mod/mpr/add.inc:48
 msgid "Please do a search and check whether the person you are looking for is already exists"
-msgstr "請先進行搜尋，以確認您所要找的人是否已經存在名單裡"
+msgstr "請先進行搜尋，以確認您所要找的人是否已經存在本系統"
 
 #: mod/mpr/add.inc:60
 msgid "If you have any information about missing person's identity numbers, Please include them since it will be helpful for finding the person. Otherwise please ignore."
@@ -7690,31 +7689,31 @@ msgstr "如果您有失蹤者的身份證字號的資訊，請提供，因為這
 #: mod/mpr/add.inc:62
 #: mod/dvr/edt_indv.inc:179
 msgid "Specify the Identity card Number, Although this is not required this will be useful in searching for the person"
-msgstr "填寫身份證字號，雖然這並非必要，但在搜尋受災者時會很有用處"
+msgstr "填寫身份證字號，雖然這並非必要，但在搜尋失蹤/受難者時會很有用處"
 
 #: mod/mpr/add.inc:63
 #: mod/dvr/edt_indv.inc:182
 msgid "Please Specify the passport number, Although this is not required this will be useful in searching for the person"
-msgstr "請填寫護照號碼，雖然這並非必要，但在搜尋人員時會很有用處"
+msgstr "請填寫護照號碼，雖然這並非必要，但在搜尋失蹤/受難者 時會很有用處"
 
 #: mod/mpr/add.inc:64
 #: mod/dvr/edt_indv.inc:185
 msgid "Please Specify the driving License number, Although this is not required this will be useful in searching for the person"
-msgstr "請填寫駕照號碼，雖然這並非必要，但在搜尋人員時會很有用處"
+msgstr "請填寫駕照號碼，雖然這並非必要，但在搜尋失蹤/受難者 時會很有用處"
 
 #: mod/mpr/add.inc:68
 msgid "Please enter any of the following details on the person:"
-msgstr "請輸入該位失蹤者的詳細資訊："
+msgstr "請輸入該失蹤者的詳細資訊："
 
 #: mod/mpr/add.inc:71
 #: mod/dvr/add_new_indv.inc:87
 msgid "Family name, or the surname could be specified for matching of people with similar Family names"
-msgstr "姓氏，或是指定surname，可用於有相似姓氏的人員比對"
+msgstr "請填入此失蹤者姓氏"
 
 #: mod/mpr/add.inc:72
 #: mod/dvr/add_new_indv.inc:91
 msgid "You may also specify the local name, even in different script than English"
-msgstr "您也許要指定本地名稱，甚至是以非英語的文字"
+msgstr "本失蹤者的暱稱或大家習慣稱呼他的方式"
 
 #: mod/mpr/add.inc:83
 msgid "If you have a picture of the missing person, please upload the picture. So, that it will be easy for us to identify the person. <br />It is not required, so if you don't have a picture no need to upload."
@@ -7726,11 +7725,11 @@ msgstr "失蹤者的聯絡資訊"
 
 #: mod/mpr/add.inc:88
 msgid "Your address can be specified to contact you"
-msgstr "可以聯絡到您的地址"
+msgstr "請填入可聯絡到你的地址"
 
 #: mod/mpr/add.inc:89
 msgid "Specify a postal code, if it is available"
-msgstr "指定郵遞區號，如果有的話"
+msgstr "可聯絡到你的地址之郵遞區號"
 
 #: mod/mpr/add.inc:105
 msgid "Select Missing Person's Origin"
@@ -13106,7 +13105,7 @@ msgstr "啟動 Sahana"
 
 #: inst/setup.inc:373
 msgid "WARNING: Security"
-msgstr "警告：安全"
+msgstr "提醒：安全性"
 
 #: inst/setup.inc:374
 msgid ""
@@ -13213,19 +13212,19 @@ msgstr "關閉此提示"
 
 #: inc/lib_form.inc:86
 msgid "Key:"
-msgstr "Key:"
+msgstr "說明："
 
 #: inc/lib_form.inc:86
 msgid "Fields tagged with a star "
-msgstr "用星號標記的欄位"
+msgstr "標註星號欄位"
 
 #: inc/lib_form.inc:87
 msgid "are mandatory and must be filled."
-msgstr "是必填欄位。"
+msgstr "為必填欄位。"
 
 #: inc/lib_security/lib_auth.inc:521
 msgid "Full name is a required field. Please enter a value."
-msgstr "全名是必填欄位，請輸入。"
+msgstr "名字為必填欄位，請輸入。"
 
 #: inc/lib_security/lib_auth.inc:609
 msgid "User does not exist"
@@ -13550,7 +13549,7 @@ msgstr "選擇所在的位置。這是階層式的。舉例來說，位置是台
 
 #: inc/lib_location.inc:909
 msgid "Select the location based at.  This is hierarchical. For example think you are based  in the  'Sri lanka' ,district 'Colombo' ,and village 'dehiwala'.  start by selecting the  ,once you select all the divisions of that country will populate the next select box.  therefore in this case all the districts in 'Sri lanka' appear . From those select a district which will populate the village list in the next select box. So select 'dehiwala' and you have done it!please note that the levels can be customized, therefore it does not need to be 'country'->'district'->'village' ,always. Its configurable from the 'administration' section."
-msgstr "選擇所在位置。這是一個層級式的。假設你所在國家是『台灣』，地區是『高雄縣』，鄉鎮是『甲仙鄉』。從選擇國家開始，一旦選擇了國家，該國所有的行政區域都顯示在下一下選擇框中。因此，『台灣』的所有行政區域都會顯示。從中選一個行政區域，其下所有的鄉鎮市都會顯示在下一下選擇框中。因此，選擇『高雄縣』、『甲仙鄉』，就完成了！請注意，所有的層級都是可自定的，因而沒有必要遵循國家－行政區域－鄉鎮市的層級。可以在『管理』單元進行設定。"
+msgstr "請選擇「台灣 Taiwan」"
 
 #: inc/lib_location.inc:971
 msgid ""
