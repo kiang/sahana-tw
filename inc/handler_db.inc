@@ -186,9 +186,11 @@ function shn_db_get_incident_select() {
     $sql_level1 = "SELECT incident_id, name FROM incident WHERE parent_id IS NULL";
     $result_leve1 = $global['db']->Execute($sql_level1);
     while ($myresult_level1 = $result_leve1->FetchRow()) {
-?>
-	<option value="<?=$myresult_level1['incident_id']; ?>" <?=($_SESSION['user_pref_ims_incident_id'] == $myresult_level1['incident_id'] ? 'selected="selected"' : ''); ?> ><?=$myresult_level1['name']; ?></option>
-<?php
+        echo '<option value="' . $myresult_level1['incident_id'] . '"';
+        if(isset($_SESSION['user_pref_ims_incident_id']) && $_SESSION['user_pref_ims_incident_id'] == $myresult_level1['incident_id']) {
+            echo ' selected="selected"';
+        }
+        echo '>' . $myresult_level1['name'] . '</option>';
         $sql_level2 = "SELECT incident_id, name FROM incident WHERE parent_id = '{$myresult_level1['incident_id']}'";
         $result_leve2 = $global['db']->Execute($sql_level2);
         while ($myresult_level2 = $result_leve2->FetchRow()) {
