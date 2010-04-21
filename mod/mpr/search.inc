@@ -432,14 +432,44 @@ class SearchQuery {
         $names = preg_split("/\s+/", $this->__name);
         $encode1 = $encode2 = '';
         foreach($names as $name) {
-            $encode1.= " phonetic_word.encode1 LIKE '" . soundex($name) . "' OR ";
-            $encode2.= " phonetic_word.encode2 LIKE '" . metaphone($name) . "%' OR ";
+            $soundex = soundex($name);
+            $metaphone = metaphone($name);
+            if(!empty($soundex) && $soundex != '0000') {
+                $encode1.= " phonetic_word.encode1 LIKE '" . $soundex . "' OR ";
+            }
+            if(!empty($metaphone)) {
+                $encode2.= " phonetic_word.encode2 LIKE '" . metaphone($name) . "%' OR ";
+            }
         }
-        $encode1 = substr($encode1, 0, strlen($encode1) - 3);
-        $encode2 = substr($encode2, 0, strlen($encode2) - 3);
+        $checkEncode1 = $checkEncode2 = false;
+        if(!empty($encode1)) {
+            $encode1 = substr($encode1, 0, strlen($encode1) - 3);
+            $checkEncode1 = true;
+        }
+        if(!empty($encode2)) {
+            $encode2 = substr($encode2, 0, strlen($encode2) - 3);
+            $checkEncode2 = true;
+        }
+        
         //TODO: Need to check this later
-        $this->__joins[] = " LEFT OUTER JOIN phonetic_word ON " . " person_status.p_uuid = phonetic_word.pgl_uuid ";
-        $this->__where[] = " ( ($encode1) OR ($encode2) ) ";
+        if($checkEncode1 || $checkEncode2) {
+            $this->__joins[] = " LEFT OUTER JOIN phonetic_word ON person_status.p_uuid = phonetic_word.pgl_uuid ";
+            if($checkEncode1) {
+                $this->__where[] = " ($encode1) ";
+            }
+            if($checkEncode2) {
+                $this->__where[] = " ($encode2) ";
+            }
+        }
+
+        /*
+         * Include the name in person_uuid
+         */
+        $this->__joins[] = " LEFT OUTER JOIN person_uuid ON person_status.p_uuid = person_uuid.p_uuid ";
+        $this->__where[] = " ((person_uuid.full_name LIKE '%{$this->__name}%')
+                OR (person_uuid.family_name LIKE '%{$this->__name}%')
+                OR (person_uuid.l10n_name LIKE '%{$this->__name}%')
+                OR (person_uuid.custom_name LIKE '%{$this->__name}%')) ";
     }
     /* }}} */
     /* {{{ set address */
