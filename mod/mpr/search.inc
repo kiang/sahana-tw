@@ -38,6 +38,7 @@ function shn_clean_type_parameter($type) {
 function shn_mpr_search_default() {
     shn_form_fopen("search", null, array('req_message' => false));
     shn_form_fsopen(_('Basic Search'));
+    echo '<div>' . _('Please try to lookup the people with the the fields below') . '</div><br />';
     shn_form_text(_('Identity Card Number'), 'idcard', 'size="30"');
     shn_form_text(_('Any Card Number'), 'anycard', 'size="30"');
     shn_form_text(_('Any Name'), 'name', 'size="30"');
