@@ -387,7 +387,7 @@ function shn_location_jscript($start, $to, $parent = false) {
                 for (i=1; i<results.length-1; i=i+2, j++){
                     opt = document.createElement("option") ;
                     opt.value = results[i] ;
-                    opt.text = results[i+1].replace(/[^A-Za-z0-9]$/,"");
+                    opt.text = results[i+1];
                     x.options[j] = opt;
                 }
                 x.selectedIndex=-1;
