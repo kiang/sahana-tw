@@ -27,12 +27,12 @@ function shn_sub_cat_jscript($max, $form, $change, $item_flag = false) {
     $fetch_server = "xml.php?";
 ?>           
 <script type="text/javascript">
-	var url = "<?php echo $fetch_server ?>"; 
+    var url = "<?php echo $fetch_server ?>";
     var curlevel = 0;
     var http;
     var null_data;
     var max=<?php echo $max ?>;
-    
+
     function getHTTPObject() {
         var xmlhttp;
         //conditional compliation
@@ -55,43 +55,43 @@ function shn_sub_cat_jscript($max, $form, $change, $item_flag = false) {
             try {
                 xmlhttp = new XMLHttpRequest();
             } catch (e) {
-            xmlhttp = false;
+                xmlhttp = false;
             }
         }
-    return xmlhttp;
+        return xmlhttp;
     }
 
     // The callback funtion
     function handleHttpResponse() {
         if (http.readyState == 4) { // Split the comma delimited response into an array  
-                results = http.responseText.split(",");
+            results = http.responseText.split(",");
             if (results[0] != "null") {
-                    null_data = false;
-                    curlevel = curlevel+1;
-                     var x = document.getElementsByName(curlevel);
-                     x[0].style.visibility = 'visible';
-                    j = 0;
-                 var x = document.getElementsByName(curlevel);
+                null_data = false;
+                curlevel = curlevel+1;
+                var x = document.getElementsByName(curlevel);
+                x[0].style.visibility = 'visible';
+                j = 0;
+                var x = document.getElementsByName(curlevel);
                 for (i = 0; i <= x[0].options.length+1; i++){
-                        x[0].options[0] = null;
-                    }
-                    for (i = 1; i < results.length-1; i = i+2, j++) {
-                         opt = document.createElement("option") ;
-                          opt.value = results[i] ;
-                          opt.text = results[i+1].replace(/[^A-Za-z0-9]$/,"");
-                          x[0].options[j] = opt;
-                        x[0].selectedIndex = -1;
-                    }
-                } else {
-                    null_data = true;
+                    x[0].options[0] = null;
                 }
+                for (i = 1; i < results.length-1; i = i+2, j++) {
+                    opt = document.createElement("option") ;
+                    opt.value = results[i] ;
+                    opt.text = results[i+1].replace(/[^A-Za-z0-9]$/,"");
+                    x[0].options[j] = opt;
+                    x[0].selectedIndex = -1;
+                }
+            } else {
+                null_data = true;
+            }
 
             for (i = max; i > curlevel; i = i-1) {
-                 var x = document.getElementsByName(i);
-                 x[0].style.visibility = 'hidden';
+                var x = document.getElementsByName(i);
+                x[0].style.visibility = 'hidden';
 
-             }
-       
+            }
+
         } 
     }
 
@@ -102,42 +102,42 @@ function shn_sub_cat_jscript($max, $form, $change, $item_flag = false) {
         http = getHTTPObject();
         var url2 = url + "act=sub_cat&cat=" + selection+"&flag="+item_flag;
         http.open("GET", url2, true); 
-//      http.onreadystatechange = null; 
+        //      http.onreadystatechange = null;
         http.onreadystatechange = function(){}; 
         http.onreadystatechange = handleHttpResponse; 
         http.send(null);
     }
-    
+
     function set_name_submit()
     {
         var name = "";
         var element = "";
         var last_lvl;
-        
-            if(null_data == true){
-                last_lvl = curlevel+1 ;
+
+        if(null_data == true){
+            last_lvl = curlevel+1 ;
+        } else {
+            last_lvl = curlevel;
+        }
+
+        for(i = 0;i < last_lvl;i++) {
+            element = "\""+i+"\"";
+            var x = document.getElementsByName(i);
+            if(i+1 == last_lvl) {
+                name = name+x[0].options[x[0].selectedIndex].text;
             } else {
-                last_lvl = curlevel;
+                name = name+x[0].options[x[0].selectedIndex].text+"->";
             }
-            
-            for(i = 0;i < last_lvl;i++) {
-                    element = "\""+i+"\"";
-                var x = document.getElementsByName(i);
-                if(i+1 == last_lvl) {
-                    name = name+x[0].options[x[0].selectedIndex].text;
-                } else {
-                    name = name+x[0].options[x[0].selectedIndex].text+"->";
-                }
-        	}
-        
+        }
+
         var x = document.getElementsByName("<?php echo $change ?>");
         x[0].value = name;
         document.<?php echo $form; ?>.submit();
         return;
     }
-    
-     var x = document.getElementsByName(0);
-     x[0].selectedIndex = -1;
+
+    var x = document.getElementsByName(0);
+    x[0].selectedIndex = -1;
     for (i = max; i > 0; i = i-1) {
     	var x = document.getElementsByName(i);
         x[0].style.visibility = 'hidden';

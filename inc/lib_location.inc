@@ -326,13 +326,13 @@ function shn_location_jscript($start, $to, $parent = false) {
     var http;
     var to=<?php echo $to ?>;
     var start = <?php echo $start; ?>;
-    <?php if ($parent) {
-        echo "var parent=true;";
-    } else {
-        echo "var parent=false;";
-    }
+<?php if ($parent) {
+    echo "var parent=true;";
+} else {
+    echo "var parent=false;";
+}
 ?>
-	var previous="nothing";
+    var previous="nothing";
     function getHTTPObject() {
         var xmlhttp;
         //conditional compliation
@@ -355,99 +355,94 @@ function shn_location_jscript($start, $to, $parent = false) {
             try {
                 xmlhttp = new XMLHttpRequest();
             } catch (e) {
-            xmlhttp = false;
+                xmlhttp = false;
             }
         }
-    return xmlhttp;
+        return xmlhttp;
     }
 
     // The callback funtion
     function handleHttpResponse(){
         if (http.readyState == 4) { // Split the comma delimited response into an array  
- 		    results = http.responseText.split(","); 
-			curlevel=curlevel+1;
-			var dropdown="loc_select_"+curlevel;
-	        var x=document.getElementById(dropdown);
-	        if(x != null){
-          	opt = document.createElement("option") ;
-  			opt.value = "" ;
-  			opt.text = "";
-          	if(x.options==null){
-           		   j=0;
-          	}else{
-    
-          		for (i=0; i<=x.options.length+1; i++){
-	            	x.options[0]=null;
-            	}
-               	x.options[0] = opt;
-            	j=1;
-          	}
- 
-            var next=results[1];
-            
+            results = http.responseText.split(",");
+            curlevel=curlevel+1;
+            var dropdown="loc_select_"+curlevel;
+            var x=document.getElementById(dropdown);
+            if(x != null){
+                opt = document.createElement("option") ;
+                opt.value = "" ;
+                opt.text = "";
+                if(x.options==null){
+                    j=0;
+                }else{
+                    for (i=0; i<=x.options.length+1; i++){
+                        x.options[0]=null;
+                    }
+                    x.options[0] = opt;
+                    j=1;
+                }
 
-            for (i=1; i<results.length-1; i=i+2, j++){
-		 	    opt = document.createElement("option") ;
-  			    opt.value = results[i] ;
-  			    opt.text = results[i+1].replace(/[^A-Za-z0-9]$/,"");
-  		    	x.options[j] = opt;
-  			    
-              
-               //
+                var next=results[1];
+
+                for (i=1; i<results.length-1; i=i+2, j++){
+                    opt = document.createElement("option") ;
+                    opt.value = results[i] ;
+                    opt.text = results[i+1].replace(/[^A-Za-z0-9]$/,"");
+                    x.options[j] = opt;
+                }
+                x.selectedIndex=-1;
+                if(curlevel<to){
+                    update_next_level(next,curlevel);
+                }
             }
-            x.selectedIndex=-1;
-            if(curlevel<to){
-                 update_next_level(next,curlevel);
-            }
-        } 
+        }
     }
-    }
-    
-        // The callback funtion for locations related to organizations,camps
-        // The callback funtion
+
+    // The callback funtion for locations related to organizations,camps
+    // The callback funtion
     function handleHttpResponseComplex(){
-    		var selection=0;
+        var selection=0;
         if (http.readyState == 4) { // Split the comma delimited response into an array
- 
+
             var all_arr=http.responseText.split(";"); 
             var header=all_arr[0];
-			if(header){
-	            header_arr = header.split(","); 
-	            type=header_arr[0];
-	            next=header_arr[1];
-	            cur_lvl=header_arr[2];
-	            selection=header_arr[3]*1+1;//multiplication required to convert to number
-	
-				//alert(all_arr);
-	            var data=all_arr[1];
-	            if(data){
-		            results = data.split(",");
-		            
-					var dropdown="loc_select_"+cur_lvl;
-			        var x=document.getElementById(dropdown);
+            if(header){
+                header_arr = header.split(",");
+                type=header_arr[0];
+                next=header_arr[1];
+                cur_lvl=header_arr[2];
+                selection=header_arr[3]*1+1;//multiplication required to convert to number
 
-		            opt = document.createElement("option") ;
-		  			opt.value = "" ;
-		  			opt.text = "";
-		            x.options[0] = opt;
-		            
+                //alert(all_arr);
+                var data=all_arr[1];
+                if(data){
+                    results = data.split(",");
 
-            		for (i=0; i<results.length;i++){
-		 	    		opt = document.createElement("option") ;
+                    var dropdown="loc_select_"+cur_lvl;
+                    var x=document.getElementById(dropdown);
 
-		 	    		var option_data=results[i].split(":");
-		 	    		opt.value = option_data[0] ;
-  			    		opt.text = option_data[1].replace(/[^A-Za-z]$/,"");
-                		x.options[x.options.length] = opt;//i+1
-              
-            		}
-            		x.selectedIndex=selection;
-		
-		            if(cur_lvl>0){
-		            		update_location(next,type);
-		            }
-	            }
-	        } 
+                    opt = document.createElement("option") ;
+                    opt.value = "" ;
+                    opt.text = "";
+                    x.options[0] = opt;
+
+
+                    for (i=0; i<results.length;i++){
+                        opt = document.createElement("option") ;
+
+                        var option_data=results[i].split(":");
+                        opt.value = option_data[0] ;
+                        opt.text = option_data[1].replace(/[^A-Za-z]$/,"");
+                        x.options[x.options.length] = opt;//i+1
+
+                    }
+                    x.selectedIndex=selection;
+
+                    if(cur_lvl>0){
+                        update_location(next,type);
+                    }
+                }
+            }
         }
 
     }
@@ -457,24 +452,24 @@ function shn_location_jscript($start, $to, $parent = false) {
         http = getHTTPObject();
         var url2=url + "act=get_loc&lvl="+curlevel+"&sel="+selection;
         http.open("GET", url2, true); 
-//        http.onreadystatechange = null; 
+        //        http.onreadystatechange = null;
         http.onreadystatechange = function(){}; 
         http.onreadystatechange = handleHttpResponse; 
         http.send(null);
     }
-    
+
     function update_location(selection,type){
-    	
-    	if(type!='loc_dir'){
-    			for(j=1;j<=to;j++){
-    				
-    				var dropdown="loc_select_"+j;
-	        		var x=document.getElementById(dropdown);
-    				
-            		for (i=0; i<=x.options.length+1; i++){
-	            		x.options[0]=null;
-            		}
-            	}
+
+        if(type!='loc_dir'){
+            for(j=1;j<=to;j++){
+
+                var dropdown="loc_select_"+j;
+                var x=document.getElementById(dropdown);
+
+                for (i=0; i<=x.options.length+1; i++){
+                    x.options[0]=null;
+                }
+            }
         }
         http = getHTTPObject();
         var url2=url + "act=get_loc_val&type="+type+"&sel="+selection;
@@ -483,97 +478,98 @@ function shn_location_jscript($start, $to, $parent = false) {
         http.onreadystatechange = handleHttpResponseComplex; 
         http.send(null);
     }
-    
-	
-	
-	
-	function radio_click(div){
-		
-		if(div=='loc_dir'){
-			for(i=start;i<=to;i++){
-	  				var x=document.getElementsByName(i);
-  					//x[0].selectedIndex=-1;
-  					var y=document.getElementById(i);
-  				
-  					y.style.display='block';
-  			}
 
 
-		}else{
-			var y=document.getElementById(div);
-			
-			y.style.display='block';
-		}
-		
-		
-		
-		if(previous=='loc_dir'){
 
-			for(i=start;i<=to;i++){
-	  				var x=document.getElementsByName(i);
-  					//x[0].selectedIndex=-1;
-  					var y=document.getElementById(i);
-  					
-  					y.style.display='none';
-  			}
-		}else{
-			if(previous!="nothing"){
-				var y=document.getElementById(previous);
-				
-				y.style.display='none';
-			}
-		}
-		previous=div;
-		return;
-}
+
+    function radio_click(div){
+
+        if(div=='loc_dir'){
+            for(i=start;i<=to;i++){
+                var x=document.getElementsByName(i);
+                //x[0].selectedIndex=-1;
+                var y=document.getElementById(i);
+
+                y.style.display='block';
+            }
+
+
+        }else{
+            var y=document.getElementById(div);
+
+            y.style.display='block';
+        }
+
+
+
+        if(previous=='loc_dir'){
+
+            for(i=start;i<=to;i++){
+                var x=document.getElementsByName(i);
+                //x[0].selectedIndex=-1;
+                var y=document.getElementById(i);
+
+                y.style.display='none';
+            }
+        }else{
+            if(previous!="nothing"){
+                var y=document.getElementById(previous);
+
+                y.style.display='none';
+            }
+        }
+        previous=div;
+        return;
+    }
     if(parent==true){
-    
-    			for(i=1;i<=to;i++){
-    		//	alert("start"+start);
-    				if(i<=start){
-	  				var x=document.getElementsByName(i);
-  					//x[0].selectedIndex=-1;
-  				}
-  			}
-  		//var y=document.getElementById(i);
-  		//y.style.display='none';
-  		
-  	}else{
-    
-	for(i=start;i<=to;i++){
-	  	var x=document.getElementsByName(i);
-  		//x[0].selectedIndex=-1;
-  		//var y=document.getElementById(i);
-  		//y.style.display='none';
-  		
-  		}
-  	}
-  	var y=document.getElementById("loc_org");
-  	if(y)
-  	y.style.display='none';
-  	
-  	var y=document.getElementById("loc_camp");
-  	if(y)
-  	y.style.display='none';
-    	
+
+        for(i=1;i<=to;i++){
+            //	alert("start"+start);
+            if(i<=start){
+                var x=document.getElementsByName(i);
+                //x[0].selectedIndex=-1;
+            }
+        }
+        //var y=document.getElementById(i);
+        //y.style.display='none';
+
+    }else{
+
+        for(i=start;i<=to;i++){
+            var x=document.getElementsByName(i);
+            //x[0].selectedIndex=-1;
+            //var y=document.getElementById(i);
+            //y.style.display='none';
+
+        }
+    }
+    var y=document.getElementById("loc_org");
+    if(y)
+        y.style.display='none';
+
+    var y=document.getElementById("loc_camp");
+    if(y)
+        y.style.display='none';
+
 </script>
 <?php
 }
+
 function shn_location_init_jscript($start, $end) {
 ?>
 <script type="text/javascript">
-var start = <?php echo $start; ?>;
-var end = <?php echo $end; ?>;
-	for(i=start;i<=end;i++){
-	  	var x=document.getElementsByName(i);
-  		x[0].selectedIndex=-1;
-  		var y=document.getElementById(i);
-  		y.style.visibility='hidden';
-  	}
-  	var y=document.getElementById("loc_org");
-  	y.style.visibility='hidden';
-  	var y=document.getElementById("loc_camp");
-  	y.style.visibility='hidden';
+    var start = <?php echo $start; ?>;
+    var end = <?php echo $end; ?>;
+    for(i=start;i<=end;i++){
+        var x=document.getElementsByName(i);
+        x[0].selectedIndex=-1;
+        var y=document.getElementById(i);
+        y.style.visibility='hidden';
+    }
+    var y=document.getElementById("loc_org");
+    y.style.visibility='hidden';
+    var y=document.getElementById("loc_camp");
+    y.style.visibility='hidden';
 </script>
 <?php
 }
