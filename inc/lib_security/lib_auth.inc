@@ -521,9 +521,9 @@ function shn_auth_add_user_cr() {
         add_error(_("Full name is a required field. Please enter a value."));
         $error = true;
     }
-    list($error, $user_name) = (shn_validate_user_name($_POST['user_name"})) ? array($error, $_POST{"user_name']) : array(true, NULL);
+    list($error, $user_name) = (shn_validate_user_name($_POST['user_name'])) ? array($error, $_POST['user_name']) : array(true, NULL);
     //for the moment return true
-    list($error, $password) = (shn_validate_password($_POST['user_name"}, $_POST{"password"})) ? array($error, $_POST{"password"}) : array(true, $_POST{"password']);
+    list($error, $password) = (shn_validate_password($_POST['user_name'], $_POST['password'])) ? array($error, $_POST['password']) : array(true, $_POST['password']);
     if (is_null($_POST['re_password'])) {
         $error = true;
         add_error(SHN_ERR_ADMIN_REPWD_INCOMPLETE);
@@ -557,9 +557,9 @@ function shn_auth_self_signup_cr() {
     global $global;
     $db = $global["db"];
     $VARCHAR = 100;
-    list($error, $user_name) = (shn_validate_user_name($_POST['user_name"})) ? array($error, $_POST{"user_name']) : array(true, NULL);
+    list($error, $user_name) = (shn_validate_user_name($_POST['user_name'])) ? array($error, $_POST['user_name']) : array(true, NULL);
     //for the moment return true
-    list($error, $password) = (shn_validate_password($_POST['user_name"}, $_POST{"password"})) ? array(false, $_POST{"password"}) : array(true, $_POST{"password']);
+    list($error, $password) = (shn_validate_password($_POST['user_name'], $_POST['password'])) ? array(false, $_POST['password']) : array(true, $_POST['password']);
     if (is_null($_POST['re_password'])) {
         $error = true;
         add_error(SHN_AUTH_ERR_REPWD_INCOMPLETE);
