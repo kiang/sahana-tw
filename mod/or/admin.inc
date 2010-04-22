@@ -46,8 +46,8 @@ function shn_or_adm_type_cr() {
     global $global;
     include_once $global['approot'] . 'inc/lib_misc.inc';
     $db = $global['db'];
-    $add = explode(",", $_POST{"added"});
-    $remove = explode(",", $_POST{"removed"});
+    $add = explode(",", $_POST['added']);
+    $remove = explode(",", $_POST['removed']);
     for ($i = 1;$i < count($add) - 1;$i++) {
         $key = shn_create_unique_database_field_value($add[$i], 2, "field_options", "option_code");
         $q = "INSERT INTO field_options(field_name,option_code,option_description) VALUES('opt_org_type','$key','$add[$i]')";
@@ -69,8 +69,8 @@ function shn_or_adm_sector_cr() {
     global $global;
     include_once $global['approot'] . 'inc/lib_misc.inc';
     $db = $global['db'];
-    $add = explode(",", $_POST{"added"});
-    $remove = explode(",", $_POST{"removed"});
+    $add = explode(",", $_POST['added']);
+    $remove = explode(",", $_POST['removed']);
     for ($i = 1;$i < count($add) - 1;$i++) {
         $key = shn_create_unique_database_field_value($add[$i], 2, "field_options", "option_code");
         $q = "INSERT INTO field_options(field_name,option_code,option_description) VALUES('opt_sector_type','$key','$add[$i]')";

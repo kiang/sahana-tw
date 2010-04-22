@@ -436,7 +436,7 @@ function shn_ims_search_cr() {
     include_once "view_inv.inc";
     $VARCHAR = 100;
     $db = $global["db"];
-    //   list($error,$sector)=(shn_validate_opt_field('opt_sector_type',$_POST{"opt_sector_type"},"Inventory Sector",$VARCHAR,true))?array($error,$_POST{"opt_sector_type"}):array(true,NULL);
+    //   list($error,$sector)=(shn_validate_opt_field('opt_sector_type',$_POST['opt_sector_type"},"Inventory Sector",$VARCHAR,true))?array($error,$_POST{"opt_sector_type']):array(true,NULL);
     $post_loc = $_POST["loc_sel"];
     $locs = shn_location_get_descendants($post_loc);
     $loc = "($locs)";

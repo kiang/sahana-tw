@@ -349,8 +349,8 @@ function shn_authenticate_user() {
         return $user_data;
     } else {
         //authentication is done only as the user requested to login
-        $user = addslashes(strip_tags(trim($_POST{"user_name"})));
-        $pwd = addslashes(strip_tags(trim($_POST{"password"})));
+        $user = addslashes(strip_tags(trim($_POST['user_name'])));
+        $pwd = addslashes(strip_tags(trim($_POST['password'])));
         $q = "SELECT salt,p_uuid,status  FROM users
                     WHERE user_name = '$user'";
         $res = $db->Execute($q);
@@ -521,24 +521,24 @@ function shn_auth_add_user_cr() {
         add_error(_("Full name is a required field. Please enter a value."));
         $error = true;
     }
-    list($error, $user_name) = (shn_validate_user_name($_POST{"user_name"})) ? array($error, $_POST{"user_name"}) : array(true, NULL);
+    list($error, $user_name) = (shn_validate_user_name($_POST['user_name"})) ? array($error, $_POST{"user_name']) : array(true, NULL);
     //for the moment return true
-    list($error, $password) = (shn_validate_password($_POST{"user_name"}, $_POST{"password"})) ? array($error, $_POST{"password"}) : array(true, $_POST{"password"});
-    if (is_null($_POST{"re_password"})) {
+    list($error, $password) = (shn_validate_password($_POST['user_name"}, $_POST{"password"})) ? array($error, $_POST{"password"}) : array(true, $_POST{"password']);
+    if (is_null($_POST['re_password'])) {
         $error = true;
         add_error(SHN_ERR_ADMIN_REPWD_INCOMPLETE);
     } else {
-        $re_password = trim($_POST{"re_password"});
+        $re_password = trim($_POST['re_password']);
     }
     if (!($password == $re_password)) {
         $error = true;
         add_error(SHN_ERR_ADMIN_REPWD_WRONG);
     }
-    if (trim(strlen($_POST{"account_name"})) > $VARCHAR) {
+    if (trim(strlen($_POST['account_name'])) > $VARCHAR) {
         $error = true;
         add_error(SHN_ERR_ADMIN_REG_MAX);
     } else {
-        $account_name = $_POST{"account_name"};
+        $account_name = $_POST['account_name'];
     }
     if (!empty($error)) {
         return $error;
@@ -546,7 +546,7 @@ function shn_auth_add_user_cr() {
         $role = $_POST["roles"];
         if (shn_auth_add_user($account_name, $user_name, $password, $role, null) == false) {
         } else {
-            $msg = $_POST{"account_name"} . " was successfully registered as a User ";
+            $msg = $_POST['account_name'] . " was successfully registered as a User ";
             add_confirmation($msg);
             unset($_POST);
         }
@@ -557,24 +557,24 @@ function shn_auth_self_signup_cr() {
     global $global;
     $db = $global["db"];
     $VARCHAR = 100;
-    list($error, $user_name) = (shn_validate_user_name($_POST{"user_name"})) ? array($error, $_POST{"user_name"}) : array(true, NULL);
+    list($error, $user_name) = (shn_validate_user_name($_POST['user_name"})) ? array($error, $_POST{"user_name']) : array(true, NULL);
     //for the moment return true
-    list($error, $password) = (shn_validate_password($_POST{"user_name"}, $_POST{"password"})) ? array(false, $_POST{"password"}) : array(true, $_POST{"password"});
-    if (is_null($_POST{"re_password"})) {
+    list($error, $password) = (shn_validate_password($_POST['user_name"}, $_POST{"password"})) ? array(false, $_POST{"password"}) : array(true, $_POST{"password']);
+    if (is_null($_POST['re_password'])) {
         $error = true;
         add_error(SHN_AUTH_ERR_REPWD_INCOMPLETE);
     } else {
-        $re_password = trim($_POST{"re_password"});
+        $re_password = trim($_POST['re_password']);
     }
     if (!($password == $re_password)) {
         $error = true;
         add_error(SHN_AUTH_ERR_REPWD_WRONG);
     }
-    if (trim(strlen($_POST{"account_name"})) > $VARCHAR) {
+    if (trim(strlen($_POST['account_name'])) > $VARCHAR) {
         $error = true;
         add_error(SHN_AUTH_ERR_REG_MAX);
     } else {
-        $account_name = $_POST{"account_name"};
+        $account_name = $_POST['account_name'];
     }
     if (!empty($error)) {
         return $error;
@@ -584,7 +584,7 @@ function shn_auth_self_signup_cr() {
 }
 function _shn_auth_del_user_cr() {
     global $global;
-    $user = $_POST{"users"};
+    $user = $_POST['users'];
     $db = $global["db"];
     $VARCHAR = 100;
     for ($i = 0;$i < count($user);$i++) {

@@ -42,21 +42,21 @@ function shn_pref_ch_passwd_cr() {
         add_error(_("Old password cannot be empty"));
         shn_acl_log_msg("Password Change error: Old password cannot be empty");
     } else {
-        $old_password = trim($_POST{"old_password"});
+        $old_password = trim($_POST['old_password']);
     }
     if ((null == $_POST["password"]) or (is_null($_POST["password"]))) {
         $error = true;
         add_error(_("User password cannot be empty"));
         shn_acl_log_msg("Password Change error: User password cannot be empty");
     } else {
-        $new_password = trim($_POST{"password"});
+        $new_password = trim($_POST['password']);
     }
     if ((null == $_POST["re_password"]) or (is_null($_POST["re_password"]))) {
         $error = true;
         add_error(_("User Confirm password cannot be empty"));
         shn_acl_log_msg("Password Change error: User Confirm password cannot be empty");
     } else {
-        $re_password = trim($_POST{"re_password"});
+        $re_password = trim($_POST['re_password']);
     }
     if (!($new_password == $re_password)) {
         $error = true;

@@ -220,9 +220,9 @@ function _shn_or_reg_operation_cr() {
     $error=false;
     $VARCHAR=100;
     $parent_id=$_POST["parent"];
-    list($error,$org_name)=(shn_validate_field($_POST{"org_name"},"Organization Name",$VARCHAR,true))?array($error,$_POST{"org_name"}):array(true,NULL);
-    list($error,$opt_org_sub_type)=(shn_validate_opt_field('opt_org_sub_type',$_POST{"opt_org_sub_type"},"Relationship to the parent organization",$VARCHAR,false))?array($error,$_POST{"opt_org_sub_type"}):array(true,NULL);
-    list($error,$sector)=(shn_validate_opt_field('opt_sector_type',$_POST{"opt_sector_type"},"Organization Sector",$VARCHAR,true))?array($error,$_POST{"opt_sector_type"}):array(true,NULL);
+    list($error,$org_name)=(shn_validate_field($_POST['org_name"},"Organization Name",$VARCHAR,true))?array($error,$_POST{"org_name']):array(true,NULL);
+    list($error,$opt_org_sub_type)=(shn_validate_opt_field('opt_org_sub_type',$_POST['opt_org_sub_type"},"Relationship to the parent organization",$VARCHAR,false))?array($error,$_POST{"opt_org_sub_type']):array(true,NULL);
+    list($error,$sector)=(shn_validate_opt_field('opt_sector_type',$_POST['opt_sector_type"},"Organization Sector",$VARCHAR,true))?array($error,$_POST{"opt_sector_type']):array(true,NULL);
     
     
     $loc=shn_location_get_form_submit_loc();
@@ -231,26 +231,26 @@ function _shn_or_reg_operation_cr() {
     $error=true;
     }
     
-    $contact_name=$_POST{"contact_name"};
-    $contact_address=$_POST{"contact_add"};
-    $contact_phone=$_POST{"contact_phone"};
-    $contact_mobile=$_POST{"contact_mobile"};
-    $contact_fax=$_POST{"contact_fax"};
-    if (trim(strlen($_POST{"contact_mail"})) > $VARCHAR){
+    $contact_name=$_POST['contact_name'];
+    $contact_address=$_POST['contact_add'];
+    $contact_phone=$_POST['contact_phone'];
+    $contact_mobile=$_POST['contact_mobile'];
+    $contact_fax=$_POST['contact_fax'];
+    if (trim(strlen($_POST['contact_mail'])) > $VARCHAR){
     add_error(SHN_ERR_OR_REG_MAX);
     $error=true;
     }else {
-    $contact_mail=$_POST{"contact_mail"};
+    $contact_mail=$_POST['contact_mail'];
     if(!shn_valid_email($contact_mail)){
     add_error(SHN_ERR_OR_EMAIL);
     $error=true;
     }
     }
-    $contact_web=$_POST{"contact_web"};
-    $man_power=$_POST{"man_power"};
-    $equipment=$_POST{"equipment"};
-    $resources=$_POST{"resources"};
-    $chk_branch=(isset ($_POST{"chk_branch"}))?1:0;
+    $contact_web=$_POST['contact_web'];
+    $man_power=$_POST['man_power'];
+    $equipment=$_POST['equipment'];
+    $resources=$_POST['resources'];
+    $chk_branch=(isset ($_POST['chk_branch']))?1:0;
     $db=$global['db'];
     $org_id	=shn_create_uuid('org');;
     if (empty($org_id)){
@@ -318,7 +318,7 @@ function _shn_or_reg_operation_cr() {
 function _shn_or_del_org_validate() {
     global $global;
     $db = $global['db'];
-    $org_id = $_POST{"org_id"};
+    $org_id = $_POST['org_id'];
     $sql = "SELECT * FROM org_main WHERE parent_id = '$org_id'";
     $res = $db->GetOne($sql);
     if ($res) {
@@ -332,7 +332,7 @@ function _shn_or_del_org_validate() {
 function _shn_or_del_org() {
     global $global;
     $db = $global['db'];
-    $org_id = $_POST{"org_id"};
+    $org_id = $_POST['org_id'];
     $q = "SELECT name FROM org_main WHERE o_uuid='{$org_id}'";
     $res = $db->Execute($q);
     $org_name = $res->fields["name"];
@@ -399,10 +399,10 @@ function _shn_or_edit_org() {
         $contact_name = $_SESSION['org']['contact_name'];
     }
     /*
-    if (trim(strlen($_POST{"contact_add"})) > $CONTACT_ADDRESS){
+    if (trim(strlen($_POST['contact_add'])) > $CONTACT_ADDRESS){
     add_error(SHN_ERR_OR_REG_MAX);
     }else {
-    $contact_address=$_POST{"contact_add"};
+    $contact_address=$_POST['contact_add'];
     }
     */
     $contact_address = $_SESSION['org']['contact_address'];

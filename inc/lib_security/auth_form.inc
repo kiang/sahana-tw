@@ -219,24 +219,24 @@ function _shn_admin_ch_pwd_cr() {
     $db = $global["db"];
     $VARCHAR = 100;
     //for the moment return true
-    //  list($error,$password)=(shn_validate_password($_POST{"password"}))?array($error,$_POST{"password"}):array(true,NULL);
+    //  list($error,$password)=(shn_validate_password($_POST['password"}))?array($error,$_POST{"password']):array(true,NULL);
     if ((null == $_POST["old_password"]) or (is_null($_POST["old_password"]))) {
         $error = true;
         add_error(_("Old password cannot be empty"));
     } else {
-        $old_password = trim($_POST{"old_password"});
+        $old_password = trim($_POST['old_password']);
     }
     if ((null == $_POST["password"]) or (is_null($_POST["password"]))) {
         $error = true;
         add_error(_("New password cannot be empty"));
     } else {
-        $password = trim($_POST{"password"});
+        $password = trim($_POST['password']);
     }
     if ((null == $_POST["re_password"]) or (is_null($_POST["re_password"]))) {
         $error = true;
         add_error(_("Confirm password cannot be empty"));
     } else {
-        $re_password = trim($_POST{"re_password"});
+        $re_password = trim($_POST['re_password']);
     }
     if (!($password == $re_password)) {
         $error = true;
@@ -245,7 +245,7 @@ function _shn_admin_ch_pwd_cr() {
     if (!empty($error)) {
         return $error;
     }
-    $user_id = trim($_POST{"user"});
+    $user_id = trim($_POST['user']);
     $error = shn_change_password($user_id, $old_password, $password);
     if (!empty($error)) {
         return $error;
@@ -310,13 +310,13 @@ function _shn_admin_reset_pwd_cr() {
         $error = true;
         add_error(_("New password cannot be empty"));
     } else {
-        $password = trim($_POST{"password"});
+        $password = trim($_POST['password']);
     }
     if ((null == $_POST["re_password"]) or (is_null($_POST["re_password"]))) {
         $error = true;
         add_error(_("Confirm password cannot be empty"));
     } else {
-        $re_password = trim($_POST{"re_password"});
+        $re_password = trim($_POST['re_password']);
     }
     if (!($password == $re_password)) {
         $error = true;
@@ -325,7 +325,7 @@ function _shn_admin_reset_pwd_cr() {
     if (!empty($error)) {
         return $error;
     }
-    $user_id = trim($_POST{"user"});
+    $user_id = trim($_POST['user']);
     if (shn_force_change_password($user_id, $password) == true) {
         return;
     }

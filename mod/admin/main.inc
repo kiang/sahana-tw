@@ -277,15 +277,15 @@ function shn_admin_view_loc_cr() {
     }
 }
 function shn_admin_edit_loc_cr() {
-    $act = $_POST{"action"};
-    $loc = $_POST{"loc_id"};
+    $act = $_POST['action'];
+    $loc = $_POST['loc_id'];
     switch ($act) {
         case "edit":
             $loc = array();
-            $loc["loc"] = $_POST{"loc_id"};
-            $loc["name"] = $_POST{"loc_name"};
-            $loc["desc"] = $_POST{"desc"};
-            $loc["iso"] = $_POST{"iso"};
+            $loc["loc"] = $_POST['loc_id'];
+            $loc["name"] = $_POST['loc_name'];
+            $loc["desc"] = $_POST['desc'];
+            $loc["iso"] = $_POST['iso'];
             shn_location_edit($loc);
             _shn_admin_location_view_form();
         break;
@@ -398,7 +398,7 @@ _shn_admin_acl_role_edit_perms();
 
 function shn_admin_acl_role_edit_perms_cr()
 {
-$module=$_GET{"sel"};
+$module=$_GET['sel'];
 _shn_admin_acl_role_edit_perms_cr($module);
 }
 

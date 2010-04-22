@@ -632,15 +632,15 @@ function shn_setup_acl() {
         $error = true;
         add_error(_("Root password cannot be empty"));
     } else {
-        $re_password = trim($_POST{"root_pwd_confirm"});
+        $re_password = trim($_POST['root_pwd_confirm']);
     }
     if ((null == $_POST["root_pwd_confirm"]) or (is_null($_POST["root_pwd_confirm"]))) {
         $error = true;
         add_error(_("Root Confirm password cannot be empty"));
     } else {
-        $re_password = trim($_POST{"root_pwd_confirm"});
+        $re_password = trim($_POST['root_pwd_confirm']);
     }
-    if (!($_POST{"root_pwd"} == $re_password)) {
+    if (!($_POST['root_pwd'] == $re_password)) {
         $error = true;
         add_error("Root password and confirm password should match");
     }
@@ -652,15 +652,15 @@ function shn_setup_acl() {
         $error = true;
         add_error(_("User password cannot be empty"));
     } else {
-        $password = trim($_POST{"user_pwd"});
+        $password = trim($_POST['user_pwd']);
     }
     if ((null == $_POST["user_pwd_confirm"]) or (is_null($_POST["user_pwd_confirm"]))) {
         $error = true;
         add_error(_("User Confirm password cannot be empty"));
     } else {
-        $re_password = trim($_POST{"user_pwd_confirm"});
+        $re_password = trim($_POST['user_pwd_confirm']);
     }
-    if (!($_POST{"user_pwd"} == $re_password)) {
+    if (!($_POST['user_pwd'] == $re_password)) {
         $error = true;
         add_error("User password and confirm password should match");
     }

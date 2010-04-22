@@ -857,18 +857,18 @@ function _shn_or_get_suplier_name($suplier_id) {
     
 }
 function _shn_or_check_org_reg_map_info_complete() {
-    if ($_POST{"loc_x"} != null && $_POST{"loc_y"} != null) {
-        $_SESSION['org']['loc_x'] = $_POST{"loc_x"};
-        $_SESSION['org']['loc_y'] = $_POST{"loc_y"};
+    if ($_POST['loc_x"} != null && $_POST{"loc_y'] != null) {
+        $_SESSION['org']['loc_x'] = $_POST['loc_x'];
+        $_SESSION['org']['loc_y'] = $_POST['loc_y'];
         return true;
     } else {
-        if (strlen(trim($_POST{"gps_x"})) == 0 || shn_valid_x_coordinate(trim($_POST{"gps_x"}))) {
-            $_SESSION['org']['loc_x'] = $_POST{"gps_x"};
+        if (strlen(trim($_POST['gps_x"})) == 0 || shn_valid_x_coordinate(trim($_POST{"gps_x']))) {
+            $_SESSION['org']['loc_x'] = $_POST['gps_x'];
         } else {
             return false;
         }
-        if (strlen(trim($_POST{"gps_y"})) == 0 || shn_valid_y_coordinate($_POST{"gps_y"})) {
-            $_SESSION['org']['loc_y'] = $_POST{"gps_y"};
+        if (strlen(trim($_POST['gps_y"})) == 0 || shn_valid_y_coordinate($_POST{"gps_y'])) {
+            $_SESSION['org']['loc_y'] = $_POST['gps_y'];
         } else {
             return false;
         }
@@ -876,18 +876,18 @@ function _shn_or_check_org_reg_map_info_complete() {
     }
 }
 function _shn_or_check_org_reg_map_info_complete_in_edit() {
-    if ($_POST{"loc_x"} != null && $_POST{"loc_y"} != null) {
-        $_SESSION['org']['loc_x'] = $_POST{"loc_x"};
-        $_SESSION['org']['loc_y'] = $_POST{"loc_y"};
+    if ($_POST['loc_x"} != null && $_POST{"loc_y'] != null) {
+        $_SESSION['org']['loc_x'] = $_POST['loc_x'];
+        $_SESSION['org']['loc_y'] = $_POST['loc_y'];
         return true;
     } else {
-        if (strlen(trim($_POST{"lat_edited"})) == 0 || shn_valid_x_coordinate(trim($_POST{"lat_edited"}))) {
-            $_SESSION['org']['lat_edited'] = $_POST{"lat_edited"};
+        if (strlen(trim($_POST['lat_edited"})) == 0 || shn_valid_x_coordinate(trim($_POST{"lat_edited']))) {
+            $_SESSION['org']['lat_edited'] = $_POST['lat_edited'];
         } else {
             return false;
         }
-        if (strlen(trim($_POST{"lon_edited"})) == 0 || shn_valid_y_coordinate($_POST{"lon_edited"})) {
-            $_SESSION['org']['lon_edited'] = $_POST{"lon_edited"};
+        if (strlen(trim($_POST['lon_edited"})) == 0 || shn_valid_y_coordinate($_POST{"lon_edited'])) {
+            $_SESSION['org']['lon_edited'] = $_POST['lon_edited'];
         } else {
             return false;
         }
@@ -916,11 +916,11 @@ function _shn_or_check_org_reg_info_complete() {
     }
 
     if ($_SESSION['org']['parent_id'] == '' && $_SESSION['org']['parent_id'] == NULL) {
-        list($error, $_SESSION['org']['name']) = (shn_validate_field($_POST{"org_name"}, "Organization Name", $VARCHAR, true))?array($error, $_POST{"org_name"}):array(true, NULL);
+        list($error, $_SESSION['org']['name']) = (shn_validate_field($_POST['org_name"}, "Organization Name", $VARCHAR, true))?array($error, $_POST{"org_name']):array(true, NULL);
         shn_check_for_special_char($_SESSION['org']['name'], _('Organization Name'));
     }
     else {
-        list($error, $_SESSION['org']['name']) = (shn_validate_field($_POST{"org_name"}, "Operation/Branch", $VARCHAR, true))?array($error, $_POST{"org_name"}):array(true, NULL);
+        list($error, $_SESSION['org']['name']) = (shn_validate_field($_POST['org_name"}, "Operation/Branch", $VARCHAR, true))?array($error, $_POST{"org_name']):array(true, NULL);
         shn_check_for_special_char($_SESSION['org']['name'], _('Operation/Branch '));
     }
     /* if($_SESSION['org']['name'] != NULL && $_SESSION['org']['name'] != '')
@@ -928,11 +928,11 @@ function _shn_or_check_org_reg_info_complete() {
     	shn_check_for_special_char($_SESSION['org']['name'], _('Organization '));
     }*/
     if ($parent_org == true) {
-        list($error, $_SESSION['org']['type']) = (shn_validate_opt_field('opt_org_type', $_POST{"opt_org_type"}, "Organization Type", $VARCHAR, false)) ? array($error, $_POST{"opt_org_type"}) : array(true, NULL);
+        list($error, $_SESSION['org']['type']) = (shn_validate_opt_field('opt_org_type', $_POST['opt_org_type"}, "Organization Type", $VARCHAR, false)) ? array($error, $_POST{"opt_org_type']) : array(true, NULL);
     } else {
-        list($error, $_SESSION['org']['type']) = (shn_validate_opt_field('opt_org_sub_type', $_POST{"opt_org_sub_type"}, "Organization Sub Type", $VARCHAR, false)) ? array($error, $_POST{"opt_org_sub_type"}) : array(true, NULL);
+        list($error, $_SESSION['org']['type']) = (shn_validate_opt_field('opt_org_sub_type', $_POST['opt_org_sub_type"}, "Organization Sub Type", $VARCHAR, false)) ? array($error, $_POST{"opt_org_sub_type']) : array(true, NULL);
     }
-    list($error, $_SESSION['org']['sector']) = (shn_validate_opt_field('opt_sector_type', $_POST{"opt_sector_type"}, "Organization Sector", $VARCHAR, true)) ? array($error, $_POST{"opt_sector_type"}) : array(true, NULL);
+    list($error, $_SESSION['org']['sector']) = (shn_validate_opt_field('opt_sector_type', $_POST['opt_sector_type"}, "Organization Sector", $VARCHAR, true)) ? array($error, $_POST{"opt_sector_type']) : array(true, NULL);
     // the following two are used only in edit org form
     /*if(isset($_POST['lat_edited'])){
     $_SESSION['org']['lat_edited']=$_POST['lat_edited'];
@@ -950,80 +950,80 @@ function _shn_or_check_org_reg_info_complete() {
     }
     $_SESSION['org']['loc_txt'] = $_POST['loc_txt'];
     if ($parent_org == true) {
-        if (trim(strlen($_POST{"reg_no"})) > $VARCHAR) {
+        if (trim(strlen($_POST['reg_no'])) > $VARCHAR) {
             add_error(SHN_ERR_OR_REG_MAX_REG_NO);
             $error = true;
         } else {
-            $_SESSION['org']['reg_no'] = $_POST{"reg_no"};
+            $_SESSION['org']['reg_no'] = $_POST['reg_no'];
         }
     }
-    if (trim(strlen($_POST{"contact_name"})) > $VARCHAR) {
+    if (trim(strlen($_POST['contact_name'])) > $VARCHAR) {
         add_error(SHN_ERR_OR_REG_MAX);
         $error = true;
     } else {
-        $_SESSION['org']['contact_name'] = $_POST{"contact_name"};
+        $_SESSION['org']['contact_name'] = $_POST['contact_name'];
     }
-    $_SESSION['org']['contact_address'] = $_POST{"contact_add"};
-    if (trim(strlen($_POST{"contact_phone"})) > $VARCHAR) {
+    $_SESSION['org']['contact_address'] = $_POST['contact_add'];
+    if (trim(strlen($_POST['contact_phone'])) > $VARCHAR) {
         add_error(SHN_ERR_OR_REG_MAX);
         $error = true;
     } else {
         if (shn_valid_phone2($_POST['contact_phone'], 'phone number') == false) {
             $error = true;
         } else {
-            $_SESSION['org']['contact_phone'] = $_POST{"contact_phone"};
+            $_SESSION['org']['contact_phone'] = $_POST['contact_phone'];
         }
     }
-    if (trim(strlen($_POST{"contact_mobile"})) > $VARCHAR) {
+    if (trim(strlen($_POST['contact_mobile'])) > $VARCHAR) {
         add_error(SHN_ERR_OR_REG_MAX);
         $error = true;
     } else {
         if (shn_valid_phone2($_POST['contact_mobile'], 'mobile number') == false) {
             $error = true;
         } else {
-            $_SESSION['org']['contact_mobile'] = $_POST{"contact_mobile"};
+            $_SESSION['org']['contact_mobile'] = $_POST['contact_mobile'];
         }
     }
-    if (trim(strlen($_POST{"contact_fax"})) > $VARCHAR) {
+    if (trim(strlen($_POST['contact_fax'])) > $VARCHAR) {
         add_error(SHN_ERR_OR_REG_MAX);
         $error = true;
     } else {
         if (shn_valid_phone2($_POST['contact_fax'], 'fax number') == false) {
             $error = true;
         } else {
-            $_SESSION['org']['contact_fax'] = $_POST{"contact_fax"};
+            $_SESSION['org']['contact_fax'] = $_POST['contact_fax'];
         }
     }
-    if (trim(strlen($_POST{"contact_mail"})) > $VARCHAR) {
+    if (trim(strlen($_POST['contact_mail'])) > $VARCHAR) {
         add_error(SHN_ERR_OR_REG_MAX);
         $error = true;
     } else {
-        if (!shn_valid_email($_POST{"contact_mail"})) {
+        if (!shn_valid_email($_POST['contact_mail'])) {
             add_error(SHN_ERR_OR_EMAIL);
             $error = true;
         } else {
-            $_SESSION['org']['contact_mail'] = $_POST{"contact_mail"};
+            $_SESSION['org']['contact_mail'] = $_POST['contact_mail'];
         }
     }
-    if (trim(strlen($_POST{"contact_web"})) > $VARCHAR) {
+    if (trim(strlen($_POST['contact_web'])) > $VARCHAR) {
         add_error(SHN_ERR_OR_REG_MAX);
         $error = true;
     } else {
-        $_SESSION['org']['contact_web'] = $_POST{"contact_web"};
+        $_SESSION['org']['contact_web'] = $_POST['contact_web'];
     }
-    if (trim(strlen($_POST{"man_power"})) > $VARCHAR) {
+    if (trim(strlen($_POST['man_power'])) > $VARCHAR) {
         add_error(SHN_ERR_OR_REG_MAX);
         $error = true;
     } else {
-        $_SESSION['org']['man_power'] = $_POST{"man_power"};
+        $_SESSION['org']['man_power'] = $_POST['man_power'];
     }
-    if (trim(strlen($_POST{"equipment"})) > $VARCHAR) {
+    if (trim(strlen($_POST['equipment'])) > $VARCHAR) {
         add_error(SHN_ERR_OR_REG_MAX);
         $error = true;
     } else {
-        $_SESSION['org']['equipment'] = $_POST{"equipment"};
+        $_SESSION['org']['equipment'] = $_POST['equipment'];
     }
-    $_SESSION['org']['resources'] = $_POST{"resources"};
+    $_SESSION['org']['resources'] = $_POST['resources'];
     return $error;
 }
 function array_copy($src, &$dest, $start, $end) {

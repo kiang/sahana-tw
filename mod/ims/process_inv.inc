@@ -31,7 +31,7 @@ function _shn_ims_reg_inv_cr() {
         $contact_name = $_SESSION['ims']['contact_name'];
     }
     $contact_address = $_SESSION['ims']['contact_add'];
-    if (trim(strlen($_POST{"contact_phone"})) > $VARCHAR) {
+    if (trim(strlen($_POST['contact_phone'])) > $VARCHAR) {
         add_error(SHN_ERR_or_ims_REG_MAX);
         $error = true;
     } else {
@@ -174,7 +174,7 @@ function _shn_ims_reg_inv_cr() {
 function _shn_ims_del_org() {
     global $global;
     $db = $global['db'];
-    $org_id = $_POST{"org_id"};
+    $org_id = $_POST['org_id'];
     $q = "SELECT inventory_name FROM  ims_inventory_records WHERE inv_uuid='{$org_id}'";
     $res = $db->Execute($q);
     $org_name = $res->fields[0];
@@ -228,8 +228,8 @@ function _shn_ims_edit_org() {
     include_once $global['approot'] . "/inc/lib_validate.inc";
     $error = false;
     $VARCHAR = 100;
-    $org_id = $_POST{"org_id"};
-    list($error, $org_name) = (shn_validate_field($_POST{"org_name"}, "Organization Name", $VARCHAR, true)) ? array($error, $_POST{"org_name"}) : array(true, NULL);
+    $org_id = $_POST['org_id'];
+    list($error, $org_name) = (shn_validate_field($_POST['org_name"}, "Organization Name", $VARCHAR, true)) ? array($error, $_POST{"org_name']) : array(true, NULL);
     $_SESSION['ims_1'] = $_POST['1'];
     $_SESSION['ims_2'] = $_POST['2'];
     $_SESSION['ims_3'] = $_POST['3'];
@@ -243,68 +243,68 @@ function _shn_ims_edit_org() {
         $bsd_village = $location;
     }
     $bsd_village = shn_location_get_form_submit_loc();
-    if (trim(strlen($_POST{"contact_name"})) > $VARCHAR) {
+    if (trim(strlen($_POST['contact_name'])) > $VARCHAR) {
         add_error(SHN_ERR_or_ims_REG_MAX);
         $error = true;
     } else {
-        $contact_name = $_POST{"contact_name"};
+        $contact_name = $_POST['contact_name'];
     }
     /*
-    if (trim(strlen($_POST{"contact_add"})) > $CONTACT_ADDRESS){
+    if (trim(strlen($_POST['contact_add'])) > $CONTACT_ADDRESS){
     add_error(SHN_ERR_or_ims_REG_MAX);
     }else {
-    $contact_address=$_POST{"contact_add"};
+    $contact_address=$_POST['contact_add'];
     }
     */
-    $contact_address = $_POST{"contact_add"};
-    if (trim(strlen($_POST{"contact_phone"})) > $VARCHAR) {
+    $contact_address = $_POST['contact_add'];
+    if (trim(strlen($_POST['contact_phone'])) > $VARCHAR) {
         add_error(SHN_ERR_or_ims_REG_MAX);
         $error = true;
     } else {
-        $contact_phone = $_POST{"contact_phone"};
+        $contact_phone = $_POST['contact_phone'];
     }
-    if (trim(strlen($_POST{"contact_mobile"})) > $VARCHAR) {
+    if (trim(strlen($_POST['contact_mobile'])) > $VARCHAR) {
         add_error(SHN_ERR_or_ims_REG_MAX);
         $error = true;
     } else {
-        $contact_mobile = $_POST{"contact_mobile"};
+        $contact_mobile = $_POST['contact_mobile'];
     }
-    if (trim(strlen($_POST{"contact_fax"})) > $VARCHAR) {
+    if (trim(strlen($_POST['contact_fax'])) > $VARCHAR) {
         add_error(SHN_ERR_or_ims_REG_MAX);
         $error = true;
     } else {
-        $contact_fax = $_POST{"contact_fax"};
+        $contact_fax = $_POST['contact_fax'];
     }
-    if (trim(strlen($_POST{"contact_mail"})) > $VARCHAR) {
+    if (trim(strlen($_POST['contact_mail'])) > $VARCHAR) {
         add_error(SHN_ERR_or_ims_REG_MAX);
         $error = true;
     } else {
-        $contact_mail = $_POST{"contact_mail"};
+        $contact_mail = $_POST['contact_mail'];
         if (!shn_valid_email($contact_mail)) {
             add_error(SHN_ERR_or_ims_EMAIL);
             $error = true;
         }
     }
-    if (trim(strlen($_POST{"contact_web"})) > $VARCHAR) {
+    if (trim(strlen($_POST['contact_web'])) > $VARCHAR) {
         add_error(SHN_ERR_or_ims_REG_MAX);
         $error = true;
     } else {
-        $contact_web = $_POST{"contact_web"};
+        $contact_web = $_POST['contact_web'];
     }
-    if (trim(strlen($_POST{"man_power"})) > $VARCHAR) {
+    if (trim(strlen($_POST['man_power'])) > $VARCHAR) {
         add_error(SHN_ERR_or_ims_REG_MAX);
         $error = true;
     } else {
-        $man_power = $_POST{"man_power"};
+        $man_power = $_POST['man_power'];
     }
-    if (trim(strlen($_POST{"equipment"})) > $VARCHAR) {
+    if (trim(strlen($_POST['equipment'])) > $VARCHAR) {
         add_error(SHN_ERR_or_ims_REG_MAX);
         $error = true;
     } else {
-        $equipment = $_POST{"equipment"};
+        $equipment = $_POST['equipment'];
     }
-    $resources = $_POST{"resources"};
-    $space = $_POST{"space"};
+    $resources = $_POST['resources'];
+    $space = $_POST['space'];
     if (!$error) {
         $db = $global['db'];
         //no validation done on other fields as they are not unique

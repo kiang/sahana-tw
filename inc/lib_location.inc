@@ -715,7 +715,7 @@ function _shn_location_camp_list() {
  * @return void
  */
 function shn_location_add() {
-    if ($_POST{"loc_name"} == null) {
+    if ($_POST['loc_name'] == null) {
         $msg = " You cant add a NULL(empty) value for location ";
         add_error($msg);
         return;
@@ -729,7 +729,7 @@ function shn_location_add() {
         $res = $global['db']->Execute($q);
         _shn_location_validate_name();
         while (!$res->EOF) {
-            if ($_POST{"loc_name"} == $res->fields['name']) {
+            if ($_POST['loc_name'] == $res->fields['name']) {
                 add_warning(_("This location name is already in the database. Do you want to add anyway?  &nbsp&nbsp&nbsp<b><a href='#' onclick='_shn_loc_val_name();'>Add anyway</a></b> or else you can change the \"Location Name\" textbox and submit the form again."));
                 return;
             }
@@ -743,9 +743,9 @@ function shn_location_add() {
         add_error(_('Containts numbers. These are not allowed. Please remove them and try again.'));
         return;
     }
-    $insert_array['name'] = $_POST{"loc_name"};
-    $insert_array['description'] = $_POST{"desc"};
-    $insert_array['iso_code'] = $_POST{"iso"};
+    $insert_array['name'] = $_POST['loc_name'];
+    $insert_array['description'] = $_POST['desc'];
+    $insert_array['iso_code'] = $_POST['iso'];
     $loc = shn_location_get_form_submit_loc();
     if ($loc == - 1) {
         $loc = null;
@@ -762,7 +762,7 @@ function shn_location_add() {
     if ((!$res == NULL) && (!$res->EOF)) {
         $loc_lvl_name = $res->fields["option_description"];
     }
-    $msg = $_POST{"loc_name"} . " Location was succesfully added as a " . $loc_lvl_name;
+    $msg = $_POST['loc_name'] . " Location was succesfully added as a " . $loc_lvl_name;
     add_confirmation($msg);
     unset($_POST['loc_name']);
     unset($_POST['desc']);

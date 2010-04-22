@@ -167,7 +167,7 @@ function shn_or_view_org_submit() {
     include_once ("view_org.inc");
     include_once ("reg_org.inc");
     // require_once ($global['approot'].'inc/lib_security/authenticate.inc');
-    $act = $_POST{"action"};
+    $act = $_POST['action'];
     switch ($act) {
         case "gis":
             //put values to session
@@ -303,11 +303,11 @@ function shn_or_search_cr() {
     include_once "view_org.inc";
     $VARCHAR = 100;
     $db = $global["db"];
-    $org_name = $_POST{"org_name"};
+    $org_name = $_POST['org_name'];
     $loc = shn_location_get_form_submit_loc();
-    $sector = $_POST{"opt_sector_type"};
-    $org_type = $_POST{"opt_org_type"};
-    $addr = $_POST{"loc_txt"};
+    $sector = $_POST['opt_sector_type'];
+    $org_type = $_POST['opt_org_type'];
+    $addr = $_POST['loc_txt'];
     $org_list = shn_or_org_search(null, $org_name, $org_type, $sector, $loc, $addr, true);
     //_shn_or_viewform_allorg($org_list);
     _shn_or_display_header();

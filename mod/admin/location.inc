@@ -190,7 +190,7 @@ function _shn_adm_loc_lvl_cr() {
         global $global;
         include_once $global['approot'] . 'inc/lib_misc.inc';
         $db = $global['db'];
-        $add = explode(",", $_POST{"loc_str"});
+        $add = explode(",", $_POST['loc_str']);
         $duplicate = false;
         $dup_val = "";
         for ($j = 0;$j < count($add);$j++) {
@@ -282,8 +282,8 @@ function _shn_admin_location_range_form() {
 function _shn_admin_loc_range_cr() {
     global $global;
     $db = $global['db'];
-    $start = $_POST{"start"};
-    $end = $_POST{"end"};
+    $start = $_POST['start'];
+    $end = $_POST['end'];
     if ($start >= $end) {
         add_error(_("Starting level should be a level above the ending level."));
         _shn_admin_location_range_form();

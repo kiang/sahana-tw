@@ -127,18 +127,18 @@ function _shn_ims_regform_operation($error = false) {
 function _shn_ims_reg_inv_gis() {
     //$bsd_village=trim($_POST[$range["end"]]);
     //$end=trim($_POST[$range["end"]]);
-    $_SESSION['ims']['inv_name'] = trim($_POST{"org_name"});
-    $_SESSION['ims']['contact_name'] = trim($_POST{"contact_name"});
-    $_SESSION['ims']['contact_add'] = trim($_POST{"contact_add"});
+    $_SESSION['ims']['inv_name'] = trim($_POST['org_name']);
+    $_SESSION['ims']['contact_name'] = trim($_POST['contact_name']);
+    $_SESSION['ims']['contact_add'] = trim($_POST['contact_add']);
     $_SESSION['ims']['contact_phone'] = trim($_POST['contact_phone']);
-    $_SESSION['ims']['contact_mobile'] = trim($_POST{"contact_mobile"});
-    $_SESSION['ims']['contact_fax'] = trim($_POST{"contact_fax"});
-    $_SESSION['ims']['contact_mail'] = trim($_POST{"contact_mail"});
-    $_SESSION['ims']['contact_web'] = trim($_POST{"contact_web"});
-    $_SESSION['ims']['man_power'] = trim($_POST{"man_power"});
-    $_SESSION['ims']['equipment'] = trim($_POST{"equipment"});
-    $_SESSION['ims']['resources'] = trim($_POST{"resources"});
-    $_SESSION['ims']['space'] = trim($_POST{"space"});
+    $_SESSION['ims']['contact_mobile'] = trim($_POST['contact_mobile']);
+    $_SESSION['ims']['contact_fax'] = trim($_POST['contact_fax']);
+    $_SESSION['ims']['contact_mail'] = trim($_POST['contact_mail']);
+    $_SESSION['ims']['contact_web'] = trim($_POST['contact_web']);
+    $_SESSION['ims']['man_power'] = trim($_POST['man_power']);
+    $_SESSION['ims']['equipment'] = trim($_POST['equipment']);
+    $_SESSION['ims']['resources'] = trim($_POST['resources']);
+    $_SESSION['ims']['space'] = trim($_POST['space']);
     //$range=trim($_POST["range"]);
     $_SESSION['ims_1'] = $_POST['1'];
     $_SESSION['ims_2'] = $_POST['2'];
@@ -162,18 +162,18 @@ function _shn_ims_validate_reg_inv() {
     $VARCHAR = 100;
     //$bsd_village=trim($_POST[$range["end"]]);
     //$end=trim($_POST[$range["end"]]);
-    $inv_name = trim($_POST{"org_name"});
-    $contact_name = trim($_POST{"contact_name"});
-    $contact_add = trim($_POST{"contact_add"});
+    $inv_name = trim($_POST['org_name']);
+    $contact_name = trim($_POST['contact_name']);
+    $contact_add = trim($_POST['contact_add']);
     $contact_phone = trim($_POST['contact_phone']);
-    $contact_mobile = trim($_POST{"contact_mobile"});
-    $contact_fax = trim($_POST{"contact_fax"});
-    $contact_mail = trim($_POST{"contact_mail"});
-    $contact_web = trim($_POST{"contact_web"});
-    $man_power = trim($_POST{"man_power"});
-    $equipment = trim($_POST{"equipment"});
-    $resources = trim($_POST{"resources"});
-    $space = trim($_POST{"space"});
+    $contact_mobile = trim($_POST['contact_mobile']);
+    $contact_fax = trim($_POST['contact_fax']);
+    $contact_mail = trim($_POST['contact_mail']);
+    $contact_web = trim($_POST['contact_web']);
+    $man_power = trim($_POST['man_power']);
+    $equipment = trim($_POST['equipment']);
+    $resources = trim($_POST['resources']);
+    $space = trim($_POST['space']);
     if ($inv_name == null) {
         add_error(_("Inventory Name cannot be empty."));
         $error_flag = true;
@@ -194,7 +194,7 @@ function _shn_ims_validate_reg_inv() {
         add_error(_('Invalid contact name'));
         $error_flag = true;
     }
-    //$contact_address=$_POST{"contact_add"};
+    //$contact_address=$_POST['contact_add'];
     if (strlen($contact_phone) > $VARCHAR) {
         add_error(SHN_ERR_or_ims_REG_MAX);
         $error_flag = true;
@@ -236,7 +236,7 @@ function _shn_ims_validate_reg_inv() {
         add_error(SHN_ERR_or_ims_REG_MAX);
         $error_flag = true;
     }
-    //$resources=$_POST{"resources"};
+    //$resources=$_POST['resources'];
     if (strlen($space) > $VARCHAR) {
         add_error(SHN_ERR_ims_SPACE);
         $error_flag = true;

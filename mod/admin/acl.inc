@@ -45,7 +45,7 @@ function _shn_admin_acl_enable_mods_cr() {
     global $global;
     $error_flag = false;
     $db = $global["db"];
-    $perm_string = $_POST{"perms"};
+    $perm_string = $_POST['perms'];
     $perms = explode(";", $perm_string);
     $sql = "DELETE FROM sys_group_to_module";
     $res = $db->Execute($sql);
@@ -176,9 +176,9 @@ function _shn_admin_acl_role_perms() {
     shn_acl_form_role_perms_grid($module, false);
 }
 function _shn_admin_acl_role_edit_perms_cr() {
-    $perm_string = $_POST{"perms"};
+    $perm_string = $_POST['perms'];
     $perms = explode(";", $perm_string);
-    $role = $_POST{"role"};
+    $role = $_POST['role'];
     //	array_pop($perms);
     $success = true;
     for ($i = 1;$i < count($perms);$i++) {
@@ -229,9 +229,9 @@ function _shn_admin_acl_user_edit_roles() {
     shn_acl_form_user_edit_roles();
 }
 function _shn_admin_acl_user_edit_roles_cr($module = NULL, $error = false) {
-    $perm_string = $_POST{"perms"};
+    $perm_string = $_POST['perms'];
     $perms = explode(";", $perm_string);
-    $users = explode(":", $_POST{"users"});
+    $users = explode(":", $_POST['users']);
     $i = count($users) - 1;
     /*
     echo "i=".$i;
@@ -297,17 +297,17 @@ function _shn_admin_acl_user_add_roles($module = NULL, $error = false) {
 function _shn_admin_acl_user_add_roles_cr() {
     global $global;
     $module = $_GET['sel'];
-    if (is_null($_POST{"users"})) {
+    if (is_null($_POST['users'])) {
         $error = true;
         add_error(SHN_ERR_OR_NAME_INCOMPLETE);
     } else {
-        $user = $_POST{"users"};
+        $user = $_POST['users'];
     }
-    if (is_null($_POST{"roles"})) {
+    if (is_null($_POST['roles'])) {
         $error = true;
         add_error(SHN_ERR_OR_NAME_INCOMPLETE);
     } else {
-        $role = $_POST{"roles"};
+        $role = $_POST['roles'];
     }
     $i = 0;
     while ($i < count($user)) {
@@ -336,17 +336,17 @@ function _shn_admin_acl_role() {
 function _shn_admin_acl_role_cr() {
     global $global;
     $module = $_GET['sel'];
-    if (is_null($_POST{"action_groups"})) {
+    if (is_null($_POST['action_groups'])) {
         $error = true;
         add_error(SHN_ERR_OR_NAME_INCOMPLETE);
     } else {
-        $action_group = $_POST{"action_groups"};
+        $action_group = $_POST['action_groups'];
     }
-    if (is_null($_POST{"roles"})) {
+    if (is_null($_POST['roles'])) {
         $error = true;
         add_error(SHN_ERR_OR_NAME_INCOMPLETE);
     } else {
-        $role = $_POST{"roles"};
+        $role = $_POST['roles'];
     }
     $i = 0;
     while ($i < count($role)) {
@@ -375,7 +375,7 @@ function _shn_admin_acl_user_add_perms() {
     shn_acl_form_user_add_perms($module, false);
 }
 function _shn_admin_acl_user_edit_perms_cr() {
-    $perm_string = $_POST{"perms"};
+    $perm_string = $_POST['perms'];
     $perms = explode(";", $perm_string);
     var_dump($perms);
 }
@@ -391,17 +391,17 @@ function _shn_admin_acl_user_edit_perms() {
 function _shn_admin_acl_user_cr() {
     global $global;
     $module = $_GET['sel'];
-    if (is_null($_POST{"action_groups"})) {
+    if (is_null($_POST['action_groups'])) {
         $error = true;
         add_error(SHN_ERR_OR_NAME_INCOMPLETE);
     } else {
-        $action_group = $_POST{"action_groups"};
+        $action_group = $_POST['action_groups'];
     }
-    if (is_null($_POST{"users"})) {
+    if (is_null($_POST['users'])) {
         $error = true;
         add_error(SHN_ERR_OR_NAME_INCOMPLETE);
     } else {
-        $user = $_POST{"users"};
+        $user = $_POST['users'];
     }
     $i = 0;
     while ($i < count($user)) {
