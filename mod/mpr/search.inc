@@ -487,8 +487,10 @@ class SearchQuery {
         //set wild cards between
         $local_address = $this->__address;
         preg_replace("/\s+/", "%", $local_address);
-        $this->__joins[] = " LEFT OUTER JOIN location_details ON " . " person_status.p_uuid = location_details.poc_uuid ";
-        $this->__where[] = " location_details.address LIKE '$local_address' ";
+        if (!empty($local_address)) {
+            $this->__joins[] = " LEFT OUTER JOIN location_details ON person_status.p_uuid = location_details.poc_uuid ";
+            $this->__where[] = " location_details.address LIKE '$local_address' ";
+        }
     }
     /* }}} */
     /* {{{ set serial */
@@ -501,11 +503,13 @@ class SearchQuery {
      */
     function set_serial_no($serial_no) {
         $this->__serial_no = $serial_no;
-        $join = " LEFT OUTER JOIN identity_to_person ON " . " person_status.p_uuid = identity_to_person.p_uuid ";
-        if(empty($this->__joins) || !in_array($join, $this->__joins)) {
-            $this->__joins[] = $join;
+        if(!empty($this->__serial_no)) {
+            $join = " LEFT OUTER JOIN identity_to_person ON " . " person_status.p_uuid = identity_to_person.p_uuid ";
+            if (empty($this->__joins) || !in_array($join, $this->__joins)) {
+                $this->__joins[] = $join;
+            }
+            $this->__where[] = " (identity_to_person.serial = '{$this->__serial_no}' AND identity_to_person.opt_id_type != 'nic') ";
         }
-        $this->__where[] = " (identity_to_person.serial = '{$this->__serial_no}' AND identity_to_person.opt_id_type != 'nic') ";
     }
     /* }}} */
     /* {{{ set idcard */
@@ -518,11 +522,13 @@ class SearchQuery {
      */
     function set_idcard_no($idcard_no) {
         $this->__idcard_no = $idcard_no;
-        $join = " LEFT OUTER JOIN identity_to_person ON " . " person_status.p_uuid = identity_to_person.p_uuid ";
-        if(empty($this->__joins) || !in_array($join, $this->__joins)) {
-            $this->__joins[] = $join;
+        if (!empty($this->__idcard_no)) {
+            $join = " LEFT OUTER JOIN identity_to_person ON " . " person_status.p_uuid = identity_to_person.p_uuid ";
+            if (empty($this->__joins) || !in_array($join, $this->__joins)) {
+                $this->__joins[] = $join;
+            }
+            $this->__where[] = " (identity_to_person.serial = '{$this->__idcard_no}' AND identity_to_person.opt_id_type = 'nic') ";
         }
-        $this->__where[] = " (identity_to_person.serial = '{$this->__idcard_no}' AND identity_to_person.opt_id_type = 'nic') ";
     }
     /* }}} */
     /* {{{ set phone */
@@ -535,8 +541,10 @@ class SearchQuery {
      */
     function set_phone($phone) {
         $this->__phone = $phone;
-        $this->__joins[] = " LEFT OUTER JOIN contact ON " . " person_status.p_uuid = contact.pgoc_uuid AND contact.opt_contact_type = 'curr'";
-        $this->__where[] = " contact.contact_value LIKE '%{$this->__phone}%' ";
+        if(!empty($this->__phone)) {
+            $this->__joins[] = " LEFT OUTER JOIN contact ON " . " person_status.p_uuid = contact.pgoc_uuid AND contact.opt_contact_type = 'curr'";
+            $this->__where[] = " contact.contact_value LIKE '%{$this->__phone}%' ";
+        }
     }
     /* }}} */
     /* {{{ get sql */
@@ -573,4 +581,3 @@ class SearchQuery {
     /* }}} */
 }
 /* }}} */
-?>

@@ -158,7 +158,7 @@ function shn_show_thumb_url($x_uuid, $stream_type, $mod = null, $act = null, $se
     global $global;
     global $conf;
     if (is_null($mod)) $mod = $global['module'];
-    if (is_null($act)) $act = $global['act'];
+    if (is_null($act)) $act = isset($global['act']) ? $global['act'] : '';
     if ($stream_type == 'database') {
         if ($session) {
             $src_ori = "index.php?stream=image&mod=$mod&act=$act&session=true&x_uuid=.$x_uuid&imagetype=jpeg";

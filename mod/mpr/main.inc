@@ -238,7 +238,10 @@ function shn_mpr_editmp() {
             break;
         default:
             $_SESSION['mpr_edit']['entry'] = null;
-            shn_mpr_editmp_load($_GET['id']); //load details
+            if (isset($_GET['id'])) {
+                shn_mpr_editmp_load($_GET['id']); //load details
+            }
+            
             if ($_SESSION['mpr_edit']['entry']['opt_status'] == 'mis') {
                 echo '<h1 align="center">' . _('Edit Missing Person Entry') . '</h1>';
             } else {
@@ -305,9 +308,14 @@ function shn_mpr_add_tracker() {
             //clean the $_POST to remove the conflicts
             $_POST = null;
             $_SESSION['mpr_add']['add_tracker'] = null;
-            echo '<h1 align="center">' . _('Add a tracker to') . ' ' . $_GET['name'] . ' </h1>';
-            $_SESSION['mpr_add']['add_tracker']['p_uuid'] = $_GET['id'];
-            $_SESSION['mpr_add']['add_tracker']['name'] = $_GET['name'];
+            if(isset($_GET['name'])) {
+                echo '<h1 align="center">' . _('Add a tracker to') . ' ' . $_GET['name'] . ' </h1>';
+                $_SESSION['mpr_add']['add_tracker']['p_uuid'] = $_GET['id'];
+                $_SESSION['mpr_add']['add_tracker']['name'] = $_GET['name'];
+            } else {
+                $_SESSION['mpr_add']['add_tracker']['p_uuid'] = '';
+                $_SESSION['mpr_add']['add_tracker']['name'] = '';
+            }
             // todo: check the p_uuid exists or not *** VERY URGENT
             shn_mpr_addmp_reporter();
         break;
