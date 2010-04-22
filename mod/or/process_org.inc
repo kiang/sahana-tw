@@ -220,9 +220,9 @@ function _shn_or_reg_operation_cr() {
     $error=false;
     $VARCHAR=100;
     $parent_id=$_POST["parent"];
-    list($error,$org_name)=(shn_validate_field($_POST['org_name"},"Organization Name",$VARCHAR,true))?array($error,$_POST{"org_name']):array(true,NULL);
-    list($error,$opt_org_sub_type)=(shn_validate_opt_field('opt_org_sub_type',$_POST['opt_org_sub_type"},"Relationship to the parent organization",$VARCHAR,false))?array($error,$_POST{"opt_org_sub_type']):array(true,NULL);
-    list($error,$sector)=(shn_validate_opt_field('opt_sector_type',$_POST['opt_sector_type"},"Organization Sector",$VARCHAR,true))?array($error,$_POST{"opt_sector_type']):array(true,NULL);
+    list($error,$org_name)=(shn_validate_field($_POST['org_name'],"Organization Name",$VARCHAR,true))?array($error,$_POST['org_name']):array(true,NULL);
+    list($error,$opt_org_sub_type)=(shn_validate_opt_field('opt_org_sub_type',$_POST['opt_org_sub_type'],"Relationship to the parent organization",$VARCHAR,false))?array($error,$_POST['opt_org_sub_type']):array(true,NULL);
+    list($error,$sector)=(shn_validate_opt_field('opt_sector_type',$_POST['opt_sector_type'],"Organization Sector",$VARCHAR,true))?array($error,$_POST['opt_sector_type']):array(true,NULL);
     
     
     $loc=shn_location_get_form_submit_loc();

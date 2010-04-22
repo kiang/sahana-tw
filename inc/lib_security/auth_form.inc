@@ -219,7 +219,7 @@ function _shn_admin_ch_pwd_cr() {
     $db = $global["db"];
     $VARCHAR = 100;
     //for the moment return true
-    //  list($error,$password)=(shn_validate_password($_POST['password"}))?array($error,$_POST{"password']):array(true,NULL);
+    //  list($error,$password)=(shn_validate_password($_POST['password']))?array($error,$_POST['password']):array(true,NULL);
     if ((null == $_POST["old_password"]) or (is_null($_POST["old_password"]))) {
         $error = true;
         add_error(_("Old password cannot be empty"));

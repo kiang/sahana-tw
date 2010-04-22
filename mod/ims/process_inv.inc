@@ -229,7 +229,7 @@ function _shn_ims_edit_org() {
     $error = false;
     $VARCHAR = 100;
     $org_id = $_POST['org_id'];
-    list($error, $org_name) = (shn_validate_field($_POST['org_name"}, "Organization Name", $VARCHAR, true)) ? array($error, $_POST{"org_name']) : array(true, NULL);
+    list($error, $org_name) = (shn_validate_field($_POST['org_name'], "Organization Name", $VARCHAR, true)) ? array($error, $_POST['org_name']) : array(true, NULL);
     $_SESSION['ims_1'] = $_POST['1'];
     $_SESSION['ims_2'] = $_POST['2'];
     $_SESSION['ims_3'] = $_POST['3'];
