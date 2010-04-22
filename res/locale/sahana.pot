@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-09 13:13+0800\n"
+"POT-Creation-Date: 2010-04-22 14:25+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -247,7 +247,6 @@ msgstr ""
 
 #: mod/vm/model/dao.php:823 mod/vm/model/dao.php:883
 #: tools/tpl_languages.php:116
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:144
 msgid "Skills and Work Restrictions"
 msgstr ""
 
@@ -346,52 +345,42 @@ msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:10
 #: tools/tpl_languages.php:205 tools/tpl_languages.php:221
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:19
 msgid "Personal Information"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:13
 #: tools/tpl_languages.php:206 tools/tpl_languages.php:222
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:20
 msgid "Any ID Number:"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:14
 #: tools/tpl_languages.php:100 tools/tpl_languages.php:207
 #: tools/tpl_languages.php:223
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:18
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:21
 msgid "Name:"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:15
 #: tools/tpl_languages.php:208 tools/tpl_languages.php:226
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:30
 msgid "Loose Name Matching"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:15
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:30
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:32
 msgid "(May return many unrelated results)"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:18
 #: tools/tpl_languages.php:188 tools/tpl_languages.php:209
 #: tools/tpl_languages.php:230
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:41
 msgid "Skills"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
 #: tools/tpl_languages.php:210 tools/tpl_languages.php:231
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:42
 msgid "Require ALL skills below"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
 #: tools/tpl_languages.php:211 tools/tpl_languages.php:232
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:43
 msgid "Require ANY skills below"
 msgstr ""
 
@@ -408,12 +397,10 @@ msgstr ""
 #: mod/rs/search.inc:64 mod/rs/sample.inc:132 mod/rs/sample.inc:137
 #: mod/cs/search.inc:46 mod/cs/search.inc:129 mod/cs/search.inc:198
 #: mod/cs/main.inc:76 mod/cs/main.inc:89 mod/cs/add.inc:84 mod/cs/add.inc:245
-#: mod/mpr/search.inc:45 mod/mpr/admin.inc:183 mod/cr/search.inc:180
+#: mod/mpr/search.inc:47 mod/mpr/admin.inc:183 mod/cr/search.inc:180
 #: mod/cr/search.inc:187 mod/cr/search.inc:202 mod/cr/search.inc:206
 #: mod/cr/main.inc:29 mod/rms/handler_req_sch.inc:103
 #: mod/rms/handler_plg_sch.inc:68
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:16
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:16
 msgid "Search"
 msgstr ""
 
@@ -438,10 +425,10 @@ msgstr ""
 #: mod/or/lib_or.inc:793 mod/ws/reg.inc:52 mod/ims/reg_inv.inc:59
 #: mod/ims/reg_inv.inc:111 mod/ims/reg_inv.inc:157 mod/cs/lib_cs.inc:193
 #: mod/gis/wm_fns.inc:100 mod/gis/wm_fns.inc:129 mod/gis/main_fns.inc:88
-#: mod/gis/main_fns.inc:117 mod/gis/gis_fns.inc:180 mod/mpr/search.inc:78
-#: mod/mpr/search.inc:251 mod/mpr/edit.inc:209 mod/mpr/edit.inc:312
-#: mod/mpr/edit.inc:705 mod/mpr/images.inc:26 mod/mpr/add.inc:122
-#: mod/mpr/add.inc:301 mod/mpr/add.inc:369 mod/mpr/add.inc:526
+#: mod/gis/main_fns.inc:117 mod/gis/gis_fns.inc:180 mod/mpr/search.inc:80
+#: mod/mpr/search.inc:206 mod/mpr/edit.inc:209 mod/mpr/edit.inc:312
+#: mod/mpr/edit.inc:706 mod/mpr/images.inc:26 mod/mpr/add.inc:122
+#: mod/mpr/add.inc:302 mod/mpr/add.inc:368 mod/mpr/add.inc:526
 #: mod/sync/handler_upload.inc:71 mod/admin/location.inc:58 mod/cr/edit.inc:67
 #: mod/cr/edit.inc:216 mod/cr/edit.inc:590 mod/cr/camp.inc:75
 #: mod/cr/camp.inc:96 mod/cr/camp.inc:175 mod/cr/camp.inc:659
@@ -473,7 +460,6 @@ msgid "Situation Type"
 msgstr ""
 
 #: mod/gis/wm_fns.php:38 mod/or/report.inc:447 mod/gis/wm_fns.inc:38
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:62
 msgid "Filter"
 msgstr ""
 
@@ -585,24 +571,21 @@ msgstr ""
 #: tools/tpl_languages.php:342 tools/tpl_languages.php:374
 #: mod/or/view_org.inc:436 mod/ims/view_edit_item.inc:66
 #: mod/ims/view_inv.inc:217 mod/ims/mini_quantity.inc:250 mod/cs/edit.inc:279
-#: mod/cs/edit.inc:443 mod/cs/edit.inc:559 mod/mpr/admin.inc:339
+#: mod/cs/edit.inc:443 mod/cs/edit.inc:559 mod/mpr/admin.inc:342
 #: mod/admin/ims_level.inc:31 mod/admin/ims_level.inc:175
-#: mod/admin/ims_level.inc:357 mod/admin/ims_assign.inc:18
+#: mod/admin/ims_level.inc:358 mod/admin/ims_assign.inc:18
 #: mod/admin/ims_assign.inc:35 mod/admin/location.inc:100 mod/cr/edit.inc:173
 #: mod/dvr/admin.inc:57 mod/rms/handler_req_ls.inc:98 mod/rms/lib_rms.inc:489
-#: mod/msg/message_forms.inc:233
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:7
-#: inc/lib_security/acl_form.inc:274
+#: mod/msg/message_forms.inc:233 inc/lib_security/acl_form.inc:274
 msgid "Delete"
 msgstr ""
 
 #: tools/tpl_languages.php:7 tools/tpl_languages.php:23
 #: tools/tpl_languages.php:98 mod/or/process_org.inc:33
 #: mod/or/process_org.inc:41 mod/ims/view_edit_item.inc:65
-#: mod/ims/mini_quantity.inc:249 mod/mpr/search.inc:291 mod/cr/edit.inc:172
+#: mod/ims/mini_quantity.inc:249 mod/mpr/search.inc:247 mod/cr/edit.inc:172
 #: mod/cr/edit.inc:258 mod/cr/edit.inc:553 mod/cr/camp.inc:617
 #: mod/msg/handler_cap_edit.inc:46
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:4
 msgid "Edit"
 msgstr ""
 
@@ -635,8 +618,8 @@ msgstr ""
 #: tools/tpl_languages.php:55 tools/tpl_languages.php:357
 #: tools/tpl_languages.php:363 mod/rs/sample.inc:167 mod/rs/sample.inc:281
 #: mod/cs/supplier_report.inc:30 mod/cs/search.inc:82 mod/cs/search.inc:221
-#: mod/cs/edit.inc:504 mod/cs/add.inc:428 mod/mpr/admin.inc:338
-#: mod/mpr/admin.inc:365 mod/dvr/edt_grp.inc:449 mod/dvr/edt_grp.inc:524
+#: mod/cs/edit.inc:504 mod/cs/add.inc:428 mod/mpr/admin.inc:341
+#: mod/mpr/admin.inc:368 mod/dvr/edt_grp.inc:449 mod/dvr/edt_grp.inc:524
 #: mod/dvr/add_new_grp.inc:354 mod/dvr/admin.inc:56
 #: mod/msg/handler_cap_new.inc:134
 msgid "Description"
@@ -660,11 +643,12 @@ msgstr ""
 
 #: tools/tpl_languages.php:19 tools/tpl_languages.php:249
 #: tools/tpl_languages.php:341 mod/or/admin_forms.inc:142
-#: mod/or/admin_forms.inc:200 mod/mpr/admin.inc:193 mod/mpr/admin.inc:327
-#: mod/mpr/admin.inc:360 mod/pref/ims_config.inc:39 mod/admin/ims_level.inc:49
-#: mod/admin/ims_level.inc:206 mod/admin/ims_level.inc:390
-#: mod/admin/ims_config.inc:30 mod/admin/lc_ui_translate_update.inc:25
-#: mod/dvr/admin.inc:105 inc/lib_security/acl_form.inc:274
+#: mod/or/admin_forms.inc:200 mod/mpr/admin.inc:193 mod/mpr/admin.inc:295
+#: mod/mpr/admin.inc:330 mod/mpr/admin.inc:363 mod/pref/ims_config.inc:39
+#: mod/admin/ims_level.inc:49 mod/admin/ims_level.inc:206
+#: mod/admin/ims_level.inc:391 mod/admin/ims_config.inc:30
+#: mod/admin/lc_ui_translate_update.inc:25 mod/dvr/admin.inc:105
+#: inc/lib_security/acl_form.inc:274
 msgid "Update"
 msgstr ""
 
@@ -673,16 +657,15 @@ msgstr ""
 #: tools/tpl_languages.php:298 mod/or/lib_or.inc:638 mod/rs/sample.inc:166
 #: mod/rs/sample.inc:225 mod/rs/sample.inc:280 mod/cs/supplier_report.inc:29
 #: mod/cs/drill_down.inc:51 mod/cs/edit.inc:177 mod/cs/edit.inc:383
-#: mod/cs/edit.inc:503 mod/cs/add.inc:427 mod/mpr/search.inc:70
-#: mod/mpr/search.inc:71 mod/mpr/search.inc:394 mod/mpr/edit.inc:463
-#: mod/mpr/edit.inc:676 mod/mpr/add.inc:273 mod/mpr/add.inc:509
+#: mod/cs/edit.inc:503 mod/cs/add.inc:427 mod/mpr/search.inc:72
+#: mod/mpr/search.inc:73 mod/mpr/search.inc:353 mod/mpr/edit.inc:464
+#: mod/mpr/edit.inc:677 mod/mpr/add.inc:274 mod/mpr/add.inc:509
 #: mod/sync/handler_upload.inc:90 mod/admin/ims_level.inc:30
 #: mod/admin/ims_level.inc:61 mod/admin/ims_level.inc:173
-#: mod/admin/ims_level.inc:219 mod/admin/ims_level.inc:355
-#: mod/admin/ims_level.inc:403 mod/dvr/search_individual.inc:131
+#: mod/admin/ims_level.inc:219 mod/admin/ims_level.inc:356
+#: mod/admin/ims_level.inc:404 mod/dvr/search_individual.inc:131
 #: mod/dvr/search_individual.inc:132 mod/dvr/search_group.inc:136
 #: mod/dvr/search_group.inc:137
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:5
 msgid "Name"
 msgstr ""
 
@@ -736,12 +719,11 @@ msgid "Target"
 msgstr ""
 
 #: tools/tpl_languages.php:38 tools/tpl_languages.php:90
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:77
 msgid "Assigned"
 msgstr ""
 
 #: tools/tpl_languages.php:39 mod/ims/optimize.inc:495 mod/ims/view_inv.inc:65
-#: mod/mpr/search.inc:279
+#: mod/mpr/search.inc:235
 msgid "Actions"
 msgstr ""
 
@@ -775,7 +757,6 @@ msgstr ""
 
 #: tools/tpl_languages.php:50 tools/tpl_languages.php:112
 #: tools/tpl_languages.php:252
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:111
 msgid "Project"
 msgstr ""
 
@@ -784,19 +765,17 @@ msgid "Project Information"
 msgstr ""
 
 #: tools/tpl_languages.php:53 tools/tpl_languages.php:237
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:57
 msgid "Start date :"
 msgstr ""
 
 #: tools/tpl_languages.php:54 tools/tpl_languages.php:238
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:58
 msgid "End date :"
 msgstr ""
 
 #: tools/tpl_languages.php:56 tools/tpl_languages.php:198 mod/or/search.inc:40
 #: mod/or/reg_org.inc:70 mod/or/reg_org.inc:177 mod/or/reg_org.inc:242
 #: mod/or/view_org.inc:397 mod/ims/reg_inv.inc:92 mod/ims/view_inv.inc:198
-#: inc/lib_location.inc:1063
+#: inc/lib_location.inc:1065
 msgid "Base Location"
 msgstr ""
 
@@ -847,62 +826,50 @@ msgid "Volunteers to Assign"
 msgstr ""
 
 #: tools/tpl_languages.php:76 tools/tpl_languages.php:200
-#: mod/mpr/search.inc:393 mod/mpr/edit.inc:462
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:9
+#: mod/mpr/search.inc:352 mod/mpr/edit.inc:463
 msgid "Picture"
 msgstr ""
 
 #: tools/tpl_languages.php:77 tools/tpl_languages.php:299
 #: tools/tpl_languages.php:314 mod/ims/search.inc:142 mod/ims/search.inc:215
-#: mod/mpr/search.inc:395 mod/mpr/edit.inc:143 mod/mpr/add.inc:50
+#: mod/mpr/search.inc:354 mod/mpr/edit.inc:143 mod/mpr/add.inc:50
 #: mod/mpr/add.inc:51 mod/rms/handler_req_ls.inc:135
 #: mod/rms/handler_req_ls.inc:175 mod/rms/handler_req_sch.inc:99
 #: mod/rms/handler_req_sch.inc:205 mod/rms/handler_req_sch.inc:211
 #: mod/rms/handler_plg_ls.inc:118 mod/rms/handler_plg_ls.inc:156
 #: mod/rms/handler_plg_sch.inc:63 mod/rms/handler_mng_ff.inc:199
 #: mod/msg/handler_cap_edit.inc:90 mod/msg/handler_cap_new.inc:81
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:12
 msgid "Status"
 msgstr ""
 
 #: tools/tpl_languages.php:78 tools/tpl_languages.php:300
 #: tools/tpl_languages.php:317
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:15
 msgid "Affiliation"
 msgstr ""
 
 #: tools/tpl_languages.php:79
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:18
 msgid "Project - Position"
 msgstr ""
 
 #: tools/tpl_languages.php:80 tools/tpl_languages.php:82
 #: tools/tpl_languages.php:104 tools/tpl_languages.php:195
 #: tools/tpl_languages.php:234 mod/cr/edit.inc:436 mod/cr/camp.inc:500
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:21
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:22
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:67
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:54
 msgid "Availability"
 msgstr ""
 
 #: tools/tpl_languages.php:81
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:21
 msgid "Start"
 msgstr ""
 
 #: tools/tpl_languages.php:83
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:22
 msgid "End"
 msgstr ""
 
 #: tools/tpl_languages.php:84
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:25
 msgid "Hours"
 msgstr ""
 
 #: tools/tpl_languages.php:85
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:28
 msgid "Identification"
 msgstr ""
 
@@ -915,130 +882,104 @@ msgstr ""
 #: mod/rms/handler_req_sch.inc:203 mod/rms/handler_req_sch.inc:209
 #: mod/rms/handler_mng_ff.inc:200 mod/rms/lib_rms.inc:843
 #: mod/rms/lib_rms.inc:1336
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:31
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:37
 msgid "Location"
 msgstr ""
 
 #: tools/tpl_languages.php:87
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:34
 msgid "Specialties"
 msgstr ""
 
 #: tools/tpl_languages.php:88
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:37
 msgid "Assign"
 msgstr ""
 
 #: tools/tpl_languages.php:89
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:40
 msgid "Remove From Project"
 msgstr ""
 
 #: tools/tpl_languages.php:91
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:79
 msgid "Unassigned"
 msgstr ""
 
 #: tools/tpl_languages.php:92 tools/tpl_languages.php:307
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:140
 msgid "Position:"
 msgstr ""
 
 #: tools/tpl_languages.php:93
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:148
 msgid "Assign this Volunteer"
 msgstr ""
 
 #: tools/tpl_languages.php:94
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:171
 msgid ""
 "To assign another volunteer, you must perform another search because no "
 "other volunteers match the current search criteria"
 msgstr ""
 
 #: tools/tpl_languages.php:95
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:175
 msgid "No volunteers were found. Please refine your criteria and try again"
 msgstr ""
 
 #: tools/tpl_languages.php:96
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:177
 msgid "Alternatively, you can try the"
 msgstr ""
 
 #: tools/tpl_languages.php:97
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:177
 msgid "specifying 'Loose Name Matching'"
 msgstr ""
 
 #: tools/tpl_languages.php:101 mod/or/lib_or.inc:562 mod/ims/lib_ims.inc:297
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:22
 msgid "Gender:"
 msgstr ""
 
 #: tools/tpl_languages.php:102
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:47
 msgid "Date of Birth:"
 msgstr ""
 
 #: tools/tpl_languages.php:103
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:54
 msgid "Contact Info"
 msgstr ""
 
 #: tools/tpl_languages.php:105
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:70
 msgid "Work Begin:"
 msgstr ""
 
 #: tools/tpl_languages.php:106
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:74
 msgid "Work End:"
 msgstr ""
 
 #: tools/tpl_languages.php:107
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:79
 msgid "Work Hour Begin:"
 msgstr ""
 
 #: tools/tpl_languages.php:108
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:85
 msgid "Work Hour End:"
 msgstr ""
 
 #: tools/tpl_languages.php:109 tools/tpl_languages.php:184
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:92
 msgid "Work Details"
 msgstr ""
 
 #: tools/tpl_languages.php:110
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:96
 msgid "Occupation:"
 msgstr ""
 
 #: tools/tpl_languages.php:111
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:102
 msgid "Affiliation:"
 msgstr ""
 
 #: tools/tpl_languages.php:113 tools/tpl_languages.php:253
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:112
 msgid "Position"
 msgstr ""
 
 #: tools/tpl_languages.php:114
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:113
 msgid "Log Time"
 msgstr ""
 
 #: tools/tpl_languages.php:115
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:127
 msgid "Log time"
 msgstr ""
 
 #: tools/tpl_languages.php:117
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:151
 msgid "Special Needs:"
 msgstr ""
 
@@ -1099,212 +1040,142 @@ msgid "Upgrade this Volunteer to Site Manager Status"
 msgstr ""
 
 #: tools/tpl_languages.php:132 mod/vm/conf.inc:27 mod/vm/menu.inc:102
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:1
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:1
 msgid "Volunteer Management"
 msgstr ""
 
 #: tools/tpl_languages.php:133
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:2
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:2
 msgid "The Volunteer Management module keeps track of projects and volunteers."
 msgstr ""
 
 #: tools/tpl_languages.php:134
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:3
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:3
 msgid "Volunteer Portal"
 msgstr ""
 
 #: tools/tpl_languages.php:135
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:5
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:5
 msgid "My information page"
 msgstr ""
 
 #: tools/tpl_languages.php:136
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:5
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:5
 msgid "Personal information and time logging."
 msgstr ""
 
 #: tools/tpl_languages.php:137 mod/vm/menu.inc:35
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:7
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:7
 msgid "Assign to Project"
 msgstr ""
 
 #: tools/tpl_languages.php:138
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:7
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:7
 msgid "Manage volunteer assignments"
 msgstr ""
 
 #: tools/tpl_languages.php:139 mod/vm/menu.inc:36
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:10
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:10
 msgid "Show Assigned"
 msgstr ""
 
 #: tools/tpl_languages.php:140
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:10
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:10
 msgid "View all volunteers assigned to projects"
 msgstr ""
 
 #: tools/tpl_languages.php:141
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:13
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:13
 msgid "View All Volunteers"
 msgstr ""
 
 #: tools/tpl_languages.php:142
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:13
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:13
 msgid "View all registered volunteers"
 msgstr ""
 
 #: tools/tpl_languages.php:144
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:16
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:16
 msgid "Search for a volunteer"
 msgstr ""
 
 #: tools/tpl_languages.php:145
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:19
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:19
 msgid "Add New Project"
 msgstr ""
 
 #: tools/tpl_languages.php:146
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:19
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:19
 msgid "Start a new project"
 msgstr ""
 
 #: tools/tpl_languages.php:147 mod/vm/menu.inc:50
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:22
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:22
 msgid "View My Projects"
 msgstr ""
 
 #: tools/tpl_languages.php:148
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:22
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:22
 msgid "View all projects you are currently assigned to"
 msgstr ""
 
 #: tools/tpl_languages.php:149
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:25
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:25
 msgid "View All Projects"
 msgstr ""
 
 #: tools/tpl_languages.php:150
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:25
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:25
 msgid "View all projects being tracked"
 msgstr ""
 
 #: tools/tpl_languages.php:151
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:28
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:28
 msgid "Generate report"
 msgstr ""
 
 #: tools/tpl_languages.php:152
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:28
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:28
 msgid "Generate customized report on volunteers and projects"
 msgstr ""
 
 #: tools/tpl_languages.php:153
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:31
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:31
 msgid "Register to VM"
 msgstr ""
 
 #: tools/tpl_languages.php:154
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:31
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:31
 msgid "Register yourself in Volunteer Management module"
 msgstr ""
 
 #: tools/tpl_languages.php:155
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:35
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:35
 msgid "Send messages"
 msgstr ""
 
 #: tools/tpl_languages.php:156
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:37
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:37
 msgid "Send messages to other users"
 msgstr ""
 
 #: tools/tpl_languages.php:157
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:43
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:43
 msgid "Current projects"
 msgstr ""
 
 #: tools/tpl_languages.php:158
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:46
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:46
 msgid "You are not assigned to any project."
 msgstr ""
 
 #: tools/tpl_languages.php:159
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:48
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:48
 msgid "Click here"
 msgstr ""
 
 #: tools/tpl_languages.php:160
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:48
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:48
 msgid "to view your projects"
 msgstr ""
 
 #: tools/tpl_languages.php:161 mod/or/home.inc:43 mod/cr/main_fns.inc:29
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:51
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:51
 msgid "Current features include:"
 msgstr ""
 
 #: tools/tpl_languages.php:162
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:54
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:54
 msgid "Manage volunteer assignment"
 msgstr ""
 
 #: tools/tpl_languages.php:163
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:55
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:55
 msgid "Start and view projects"
 msgstr ""
 
 #: tools/tpl_languages.php:164
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:56
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:56
 msgid "Search volunteers"
 msgstr ""
 
 #: tools/tpl_languages.php:165
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:57
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:57
 msgid "Send and receive messages"
 msgstr ""
 
 #: tools/tpl_languages.php:166 mod/admin/mmc_main.inc:12
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:60
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:60
 msgid "Version"
 msgstr ""
 
 #: tools/tpl_languages.php:167
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:60
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:60
 msgid "Last Modified"
 msgstr ""
 
@@ -1438,73 +1309,59 @@ msgid "Current picture"
 msgstr ""
 
 #: tools/tpl_languages.php:204 tools/tpl_languages.php:219
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:10
 msgid "Please enter at least one field below:"
 msgstr ""
 
 #: tools/tpl_languages.php:214
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:3
 msgid "Advanced Search Criteria"
 msgstr ""
 
 #: tools/tpl_languages.php:215
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:4
 msgid "Back to Basic Search"
 msgstr ""
 
 #: tools/tpl_languages.php:216
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:6
 msgid "Basic Search Criteria"
 msgstr ""
 
-#: tools/tpl_languages.php:217 mod/mpr/search.inc:63
+#: tools/tpl_languages.php:217 mod/mpr/search.inc:65
 #: mod/dvr/search_individual.inc:124 mod/dvr/search_group.inc:111
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:7
 msgid "Advanced Search"
 msgstr ""
 
 #: tools/tpl_languages.php:218
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:9
 msgid "Search results are returned only if they match ALL selected fields."
 msgstr ""
 
 #: tools/tpl_languages.php:220
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:12
 msgid "Filter volunteer results by any one of the following fields:"
 msgstr ""
 
 #: tools/tpl_languages.php:224
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:27
 msgid "advanced"
 msgstr ""
 
 #: tools/tpl_languages.php:225
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:29
 msgid "Options"
 msgstr ""
 
 #: tools/tpl_languages.php:227
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:32
 msgid "Find similar sounding names"
 msgstr ""
 
 #: tools/tpl_languages.php:228
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:34
 msgid "Show only unassigned"
 msgstr ""
 
 #: tools/tpl_languages.php:233
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:43
 msgid "and_skills"
 msgstr ""
 
 #: tools/tpl_languages.php:235
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:55
 msgid "Volunteer must be available for the ENTIRE time specified below"
 msgstr ""
 
 #: tools/tpl_languages.php:236
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:56
 msgid "Volunteer must be available for ANY PORTION of the time specified below"
 msgstr ""
 
@@ -1516,7 +1373,7 @@ msgstr ""
 msgid "Go to Previous Page"
 msgstr ""
 
-#: tools/tpl_languages.php:241 mod/mpr/search.inc:246
+#: tools/tpl_languages.php:241 mod/mpr/search.inc:201
 #: mod/rms/handler_req_ls.inc:54 mod/rms/handler_plg_ls.inc:48
 #: inc/lib_paging.inc:117 inc/lib_paging.inc:208
 msgid "Previous"
@@ -1677,8 +1534,8 @@ msgid "No skills defined."
 msgstr ""
 
 #: tools/tpl_languages.php:287 tools/tpl_languages.php:365
-#: mod/or/admin_forms.inc:131 mod/or/admin_forms.inc:189 mod/mpr/edit.inc:678
-#: mod/mpr/edit.inc:690 mod/admin/location.inc:141 mod/admin/lc_db.inc:95
+#: mod/or/admin_forms.inc:131 mod/or/admin_forms.inc:189 mod/mpr/edit.inc:679
+#: mod/mpr/edit.inc:691 mod/admin/location.inc:141 mod/admin/lc_db.inc:95
 #: mod/admin/lc_add_new_language.inc:36 mod/msg/class_cap_alert.inc:417
 #: mod/msg/class_cap_alert.inc:421 mod/msg/class_cap_alert.inc:438
 #: mod/msg/class_cap_alert.inc:442
@@ -1735,7 +1592,7 @@ msgstr ""
 msgid "Total Monetary Value"
 msgstr ""
 
-#: tools/tpl_languages.php:304 mod/mpr/view.inc:26 mod/mpr/search.inc:276
+#: tools/tpl_languages.php:304 mod/mpr/view.inc:26 mod/mpr/search.inc:232
 #: mod/rms/handler_req_ls.inc:94 mod/rms/handler_req_sch.inc:216
 #: mod/rms/handler_plg_ls.inc:95 mod/rms/handler_plg_sch.inc:291
 msgid "Details"
@@ -2061,8 +1918,8 @@ msgstr ""
 #: mod/or/report.inc:466 mod/or/view_org.inc:92 mod/or/view_org.inc:405
 #: mod/or/view_org.inc:472 mod/or/lib_or.inc:639 mod/ims/search.inc:381
 #: mod/ims/search.inc:498 mod/ims/ims_report.inc:436 mod/ims/view_inv.inc:59
-#: mod/mpr/view.inc:73 mod/mpr/edit.inc:178 mod/mpr/edit.inc:424
-#: mod/mpr/add.inc:88 mod/mpr/add.inc:293 mod/mpr/add.inc:477
+#: mod/mpr/view.inc:73 mod/mpr/edit.inc:178 mod/mpr/edit.inc:425
+#: mod/mpr/add.inc:88 mod/mpr/add.inc:294 mod/mpr/add.inc:477
 #: mod/mpr/add.inc:511 mod/cr/search.inc:43 mod/cr/search.inc:120
 #: mod/cr/edit.inc:42 mod/cr/edit.inc:134 mod/cr/edit.inc:498
 #: mod/cr/edit.inc:564 mod/cr/reports.inc:61 mod/cr/reports.inc:164
@@ -2235,7 +2092,7 @@ msgstr ""
 #: mod/cs/edit.inc:558 mod/cs/_admin.inc:50 mod/cs/_admin.inc:79
 #: mod/cs/add.inc:200 mod/admin/location.inc:99 mod/admin/location.inc:147
 #: mod/admin/location.inc:271 mod/admin/location.inc:333
-#: mod/admin/lc_translate.inc:198 mod/dvr/edt_grp.inc:532
+#: mod/admin/lc_translate.inc:199 mod/dvr/edt_grp.inc:532
 #: mod/dvr/add_new_grp.inc:432 mod/dvr/edt_indv.inc:465
 #: mod/dvr/add_new_indv.inc:442 mod/msg/handler_cap_edit.inc:111
 #: mod/msg/message_forms.inc:46 mod/msg/message_forms.inc:232
@@ -2352,7 +2209,7 @@ msgid "No Records"
 msgstr ""
 
 #: mod/or/view_org.inc:222 mod/or/view_org.inc:542 mod/mpr/mpr_lib.inc:50
-#: mod/mpr/mpr_lib.inc:70 mod/mpr/search.inc:317 mod/dvr/lib.inc:150
+#: mod/mpr/mpr_lib.inc:70 mod/mpr/search.inc:273 mod/dvr/lib.inc:150
 #: mod/dvr/lib.inc:170
 msgid "Assign to more incidents"
 msgstr ""
@@ -2391,7 +2248,7 @@ msgid "Close"
 msgstr ""
 
 #: mod/or/view_org.inc:568 mod/or/view_org.inc:578 mod/mpr/view.inc:97
-#: mod/mpr/search.inc:425 mod/rms/handler_mng_ff.inc:109
+#: mod/mpr/search.inc:384 mod/rms/handler_mng_ff.inc:109
 msgid "Back"
 msgstr ""
 
@@ -2486,12 +2343,12 @@ msgid ""
 "if you offer medical services select it"
 msgstr ""
 
-#: mod/or/lib_or.inc:640 mod/mpr/add.inc:294 mod/mpr/add.inc:512
+#: mod/or/lib_or.inc:640 mod/mpr/add.inc:295 mod/mpr/add.inc:512
 msgid "Phone"
 msgstr ""
 
 #: mod/or/lib_or.inc:641 mod/mpr/view.inc:76 mod/mpr/edit.inc:181
-#: mod/mpr/edit.inc:441 mod/mpr/add.inc:91 mod/mpr/add.inc:494
+#: mod/mpr/edit.inc:442 mod/mpr/add.inc:91 mod/mpr/add.inc:494
 #: mod/dvr/edt_grp.inc:288 mod/dvr/edt_grp.inc:490 mod/dvr/add_new_grp.inc:224
 #: mod/dvr/add_new_grp.inc:390 mod/dvr/edt_indv.inc:234
 #: mod/dvr/edt_indv.inc:428 mod/dvr/add_new_indv.inc:161
@@ -2506,7 +2363,7 @@ msgid "Fax"
 msgstr ""
 
 #: mod/or/lib_or.inc:643 mod/home/main.inc:52 mod/home/main.inc:182
-#: mod/mpr/add.inc:295 mod/mpr/add.inc:513 mod/dvr/edt_grp.inc:294
+#: mod/mpr/add.inc:296 mod/mpr/add.inc:513 mod/dvr/edt_grp.inc:294
 #: mod/dvr/edt_grp.inc:492 mod/dvr/add_new_grp.inc:230
 #: mod/dvr/add_new_grp.inc:392 mod/rms/handler_req_new.inc:38
 #: mod/rms/handler_req_new.inc:75 mod/rms/handler_plg_new.inc:37
@@ -5048,7 +4905,7 @@ msgid "Projects"
 msgstr ""
 
 #: mod/vm/menu.inc:49 mod/admin/ims_level.inc:63 mod/admin/ims_level.inc:221
-#: mod/admin/ims_level.inc:405 mod/admin/lc_add_new_language.inc:29
+#: mod/admin/ims_level.inc:406 mod/admin/lc_add_new_language.inc:29
 msgid "Add New"
 msgstr ""
 
@@ -5956,7 +5813,7 @@ msgid "Contact Person  Phone"
 msgstr ""
 
 #: mod/gis/main_fns.inc:84 mod/mpr/view.inc:79 mod/mpr/edit.inc:203
-#: mod/mpr/edit.inc:444 mod/mpr/add.inc:116 mod/mpr/add.inc:497
+#: mod/mpr/edit.inc:445 mod/mpr/add.inc:116 mod/mpr/add.inc:497
 #: mod/dvr/edt_indv.inc:457 mod/dvr/edt_indv.inc:677
 #: mod/dvr/add_new_indv.inc:434 mod/dvr/add_new_indv.inc:663
 msgid "Other Details"
@@ -6198,8 +6055,8 @@ msgstr ""
 msgid "Comments : "
 msgstr ""
 
-#: mod/mpr/view.inc:34 mod/mpr/search.inc:64 mod/mpr/search.inc:65
-#: mod/mpr/edit.inc:146 mod/mpr/edit.inc:380 mod/mpr/add.inc:58
+#: mod/mpr/view.inc:34 mod/mpr/search.inc:66 mod/mpr/search.inc:67
+#: mod/mpr/edit.inc:146 mod/mpr/edit.inc:381 mod/mpr/add.inc:58
 #: mod/mpr/add.inc:433 mod/dvr/search_individual.inc:125
 #: mod/dvr/search_individual.inc:126 mod/dvr/search_group.inc:130
 #: mod/dvr/search_group.inc:131 mod/dvr/edt_indv.inc:176
@@ -6208,38 +6065,38 @@ msgstr ""
 msgid "Identity"
 msgstr ""
 
-#: mod/mpr/view.inc:37 mod/mpr/edit.inc:147 mod/mpr/edit.inc:383
-#: mod/mpr/add.inc:62 mod/mpr/add.inc:436 mod/dvr/edt_indv.inc:180
-#: mod/dvr/edt_indv.inc:420 mod/dvr/add_new_indv.inc:121
-#: mod/dvr/add_new_indv.inc:398
+#: mod/mpr/view.inc:37 mod/mpr/search.inc:42 mod/mpr/edit.inc:147
+#: mod/mpr/edit.inc:384 mod/mpr/add.inc:62 mod/mpr/add.inc:436
+#: mod/dvr/edt_indv.inc:180 mod/dvr/edt_indv.inc:420
+#: mod/dvr/add_new_indv.inc:121 mod/dvr/add_new_indv.inc:398
 msgid "Identity Card Number"
 msgstr ""
 
-#: mod/mpr/view.inc:38 mod/mpr/search.inc:67 mod/mpr/edit.inc:148
-#: mod/mpr/edit.inc:384 mod/mpr/add.inc:63 mod/mpr/add.inc:437
+#: mod/mpr/view.inc:38 mod/mpr/search.inc:69 mod/mpr/edit.inc:148
+#: mod/mpr/edit.inc:385 mod/mpr/add.inc:63 mod/mpr/add.inc:437
 #: mod/dvr/search_individual.inc:128 mod/dvr/search_group.inc:133
 #: mod/dvr/edt_indv.inc:183 mod/dvr/edt_indv.inc:421
 #: mod/dvr/add_new_indv.inc:124 mod/dvr/add_new_indv.inc:399
 msgid "Passport Number"
 msgstr ""
 
-#: mod/mpr/view.inc:39 mod/mpr/search.inc:68 mod/mpr/edit.inc:149
-#: mod/mpr/edit.inc:385 mod/mpr/add.inc:64 mod/mpr/add.inc:438
+#: mod/mpr/view.inc:39 mod/mpr/search.inc:70 mod/mpr/edit.inc:149
+#: mod/mpr/edit.inc:386 mod/mpr/add.inc:64 mod/mpr/add.inc:438
 #: mod/dvr/search_individual.inc:129 mod/dvr/edt_indv.inc:186
 #: mod/dvr/edt_indv.inc:422 mod/dvr/add_new_indv.inc:127
 #: mod/dvr/add_new_indv.inc:400
 msgid "Driving License"
 msgstr ""
 
-#: mod/mpr/view.inc:43 mod/mpr/search.inc:76 mod/mpr/edit.inc:151
-#: mod/mpr/edit.inc:389 mod/mpr/add.inc:66 mod/mpr/add.inc:442
+#: mod/mpr/view.inc:43 mod/mpr/search.inc:78 mod/mpr/edit.inc:151
+#: mod/mpr/edit.inc:390 mod/mpr/add.inc:66 mod/mpr/add.inc:442
 #: mod/dvr/search_individual.inc:137 mod/dvr/edt_indv.inc:141
 #: mod/dvr/add_new_indv.inc:80
 msgid "Basic Details"
 msgstr ""
 
-#: mod/mpr/view.inc:46 mod/mpr/search.inc:72 mod/mpr/edit.inc:155
-#: mod/mpr/edit.inc:392 mod/mpr/add.inc:70 mod/mpr/add.inc:445
+#: mod/mpr/view.inc:46 mod/mpr/search.inc:74 mod/mpr/edit.inc:155
+#: mod/mpr/edit.inc:393 mod/mpr/add.inc:70 mod/mpr/add.inc:445
 #: mod/cr/edit.inc:54 mod/cr/edit.inc:147 mod/cr/edit.inc:505
 #: mod/cr/edit.inc:577 mod/cr/camp.inc:56 mod/cr/camp.inc:569
 #: mod/cr/camp.inc:646 mod/dvr/edt_grp.inc:235
@@ -6253,8 +6110,8 @@ msgstr ""
 msgid "Full Name"
 msgstr ""
 
-#: mod/mpr/view.inc:47 mod/mpr/search.inc:73 mod/mpr/edit.inc:156
-#: mod/mpr/edit.inc:393 mod/mpr/add.inc:71 mod/mpr/add.inc:446
+#: mod/mpr/view.inc:47 mod/mpr/search.inc:75 mod/mpr/edit.inc:156
+#: mod/mpr/edit.inc:394 mod/mpr/add.inc:71 mod/mpr/add.inc:446
 #: mod/dvr/reporting.inc:43 mod/dvr/edt_grp.inc:239
 #: mod/dvr/search_individual.inc:88 mod/dvr/search_individual.inc:134
 #: mod/dvr/search_group.inc:72 mod/dvr/search_group.inc:139
@@ -6263,8 +6120,8 @@ msgstr ""
 msgid "Family Name"
 msgstr ""
 
-#: mod/mpr/view.inc:48 mod/mpr/search.inc:74 mod/mpr/edit.inc:157
-#: mod/mpr/edit.inc:394 mod/mpr/add.inc:72 mod/mpr/add.inc:447
+#: mod/mpr/view.inc:48 mod/mpr/search.inc:76 mod/mpr/edit.inc:157
+#: mod/mpr/edit.inc:395 mod/mpr/add.inc:72 mod/mpr/add.inc:447
 #: mod/dvr/reporting.inc:44 mod/dvr/edt_grp.inc:243
 #: mod/dvr/search_individual.inc:135 mod/dvr/search_group.inc:73
 #: mod/dvr/search_group.inc:140 mod/dvr/add_new_grp.inc:202
@@ -6273,121 +6130,121 @@ msgstr ""
 msgid "Local Name"
 msgstr ""
 
-#: mod/mpr/view.inc:49 mod/mpr/edit.inc:158 mod/mpr/edit.inc:395
+#: mod/mpr/view.inc:49 mod/mpr/edit.inc:158 mod/mpr/edit.inc:396
 #: mod/mpr/add.inc:73 mod/mpr/add.inc:448 mod/dvr/edt_indv.inc:157
 #: mod/dvr/add_new_indv.inc:97
 msgid "Date of Birth"
 msgstr ""
 
-#: mod/mpr/view.inc:50 mod/mpr/edit.inc:160 mod/mpr/edit.inc:396
+#: mod/mpr/view.inc:50 mod/mpr/edit.inc:160 mod/mpr/edit.inc:397
 #: mod/mpr/add.inc:75 mod/mpr/add.inc:449 mod/dvr/edt_indv.inc:161
 #: mod/dvr/add_new_indv.inc:102
 msgid "Age Group"
 msgstr ""
 
-#: mod/mpr/view.inc:51 mod/mpr/edit.inc:161 mod/mpr/edit.inc:397
+#: mod/mpr/view.inc:51 mod/mpr/edit.inc:161 mod/mpr/edit.inc:398
 #: mod/mpr/add.inc:76 mod/mpr/add.inc:450 mod/dvr/edt_indv.inc:164
 #: mod/dvr/edt_indv.inc:414 mod/dvr/add_new_indv.inc:105
 #: mod/dvr/add_new_indv.inc:392
 msgid "Gender"
 msgstr ""
 
-#: mod/mpr/view.inc:52 mod/mpr/edit.inc:162 mod/mpr/edit.inc:398
+#: mod/mpr/view.inc:52 mod/mpr/edit.inc:162 mod/mpr/edit.inc:399
 #: mod/mpr/add.inc:77 mod/mpr/add.inc:451 mod/dvr/edt_indv.inc:167
 #: mod/dvr/edt_indv.inc:415 mod/dvr/add_new_indv.inc:108
 #: mod/dvr/add_new_indv.inc:393
 msgid "Marital Status"
 msgstr ""
 
-#: mod/mpr/view.inc:53 mod/mpr/edit.inc:163 mod/mpr/edit.inc:399
+#: mod/mpr/view.inc:53 mod/mpr/edit.inc:163 mod/mpr/edit.inc:400
 #: mod/mpr/add.inc:78 mod/mpr/add.inc:452 mod/dvr/edt_indv.inc:170
 #: mod/dvr/edt_indv.inc:416 mod/dvr/add_new_indv.inc:111
 #: mod/dvr/add_new_indv.inc:394
 msgid "Religion"
 msgstr ""
 
-#: mod/mpr/view.inc:54 mod/mpr/edit.inc:164 mod/mpr/edit.inc:400
+#: mod/mpr/view.inc:54 mod/mpr/edit.inc:164 mod/mpr/edit.inc:401
 #: mod/mpr/add.inc:79 mod/mpr/add.inc:453 mod/dvr/edt_indv.inc:173
 #: mod/dvr/edt_indv.inc:417 mod/dvr/add_new_indv.inc:114
 #: mod/dvr/add_new_indv.inc:395
 msgid "Race"
 msgstr ""
 
-#: mod/mpr/view.inc:58 mod/mpr/edit.inc:195 mod/mpr/edit.inc:404
+#: mod/mpr/view.inc:58 mod/mpr/edit.inc:195 mod/mpr/edit.inc:405
 #: mod/mpr/add.inc:108 mod/mpr/add.inc:457 mod/dvr/edt_indv.inc:651
 #: mod/dvr/add_new_indv.inc:637
 msgid "Physical Details"
 msgstr ""
 
-#: mod/mpr/view.inc:61 mod/mpr/search.inc:296 mod/mpr/edit.inc:196
-#: mod/mpr/edit.inc:407 mod/mpr/add.inc:109 mod/mpr/add.inc:460
+#: mod/mpr/view.inc:61 mod/mpr/search.inc:252 mod/mpr/edit.inc:196
+#: mod/mpr/edit.inc:408 mod/mpr/add.inc:109 mod/mpr/add.inc:460
 #: mod/dvr/edt_indv.inc:654 mod/dvr/add_new_indv.inc:640
 msgid "Eye Colour"
 msgstr ""
 
-#: mod/mpr/view.inc:62 mod/mpr/search.inc:296 mod/mpr/edit.inc:197
-#: mod/mpr/edit.inc:408 mod/mpr/add.inc:110 mod/mpr/add.inc:461
+#: mod/mpr/view.inc:62 mod/mpr/search.inc:252 mod/mpr/edit.inc:197
+#: mod/mpr/edit.inc:409 mod/mpr/add.inc:110 mod/mpr/add.inc:461
 #: mod/dvr/edt_indv.inc:656 mod/dvr/add_new_indv.inc:642
 msgid "Skin Colour"
 msgstr ""
 
-#: mod/mpr/view.inc:63 mod/mpr/search.inc:296 mod/mpr/edit.inc:198
-#: mod/mpr/edit.inc:409 mod/mpr/add.inc:111 mod/mpr/add.inc:462
+#: mod/mpr/view.inc:63 mod/mpr/search.inc:252 mod/mpr/edit.inc:198
+#: mod/mpr/edit.inc:410 mod/mpr/add.inc:111 mod/mpr/add.inc:462
 #: mod/dvr/edt_indv.inc:658 mod/dvr/add_new_indv.inc:644
 msgid "Hair Colour"
 msgstr ""
 
-#: mod/mpr/view.inc:64 mod/mpr/search.inc:296 mod/mpr/edit.inc:199
-#: mod/mpr/edit.inc:410 mod/mpr/add.inc:112 mod/mpr/add.inc:463
+#: mod/mpr/view.inc:64 mod/mpr/search.inc:252 mod/mpr/edit.inc:199
+#: mod/mpr/edit.inc:411 mod/mpr/add.inc:112 mod/mpr/add.inc:463
 #: mod/dvr/edt_indv.inc:453 mod/dvr/edt_indv.inc:661
 #: mod/dvr/add_new_indv.inc:430 mod/dvr/add_new_indv.inc:647
 msgid "Height"
 msgstr ""
 
-#: mod/mpr/view.inc:65 mod/mpr/search.inc:296 mod/mpr/edit.inc:200
-#: mod/mpr/edit.inc:411 mod/mpr/add.inc:113 mod/mpr/add.inc:464
+#: mod/mpr/view.inc:65 mod/mpr/search.inc:252 mod/mpr/edit.inc:200
+#: mod/mpr/edit.inc:412 mod/mpr/add.inc:113 mod/mpr/add.inc:464
 #: mod/dvr/edt_indv.inc:454 mod/dvr/edt_indv.inc:668
 #: mod/dvr/add_new_indv.inc:431 mod/dvr/add_new_indv.inc:654
 msgid "Weight"
 msgstr ""
 
-#: mod/mpr/view.inc:66 mod/mpr/view.inc:86 mod/mpr/search.inc:308
-#: mod/mpr/edit.inc:201 mod/mpr/edit.inc:207 mod/mpr/edit.inc:412
-#: mod/mpr/edit.inc:451 mod/mpr/add.inc:465 mod/mpr/add.inc:504
+#: mod/mpr/view.inc:66 mod/mpr/view.inc:86 mod/mpr/search.inc:264
+#: mod/mpr/edit.inc:201 mod/mpr/edit.inc:207 mod/mpr/edit.inc:413
+#: mod/mpr/edit.inc:452 mod/mpr/add.inc:465 mod/mpr/add.inc:504
 msgid "Comments"
 msgstr ""
 
-#: mod/mpr/view.inc:70 mod/mpr/edit.inc:177 mod/mpr/edit.inc:422
+#: mod/mpr/view.inc:70 mod/mpr/edit.inc:177 mod/mpr/edit.inc:423
 #: mod/mpr/add.inc:475
 msgid "Contact Details"
 msgstr ""
 
-#: mod/mpr/view.inc:74 mod/mpr/edit.inc:179 mod/mpr/edit.inc:439
+#: mod/mpr/view.inc:74 mod/mpr/edit.inc:179 mod/mpr/edit.inc:440
 #: mod/mpr/add.inc:89 mod/mpr/add.inc:492
 msgid "Postal Code"
 msgstr ""
 
-#: mod/mpr/view.inc:75 mod/mpr/edit.inc:180 mod/mpr/edit.inc:440
+#: mod/mpr/view.inc:75 mod/mpr/edit.inc:180 mod/mpr/edit.inc:441
 #: mod/mpr/add.inc:90 mod/mpr/add.inc:493 mod/dvr/edt_indv.inc:231
 #: mod/dvr/edt_indv.inc:427 mod/dvr/add_new_indv.inc:158
 #: mod/dvr/add_new_indv.inc:405
 msgid "Home Phone"
 msgstr ""
 
-#: mod/mpr/view.inc:83 mod/mpr/edit.inc:204 mod/mpr/edit.inc:448
+#: mod/mpr/view.inc:83 mod/mpr/edit.inc:204 mod/mpr/edit.inc:449
 #: mod/mpr/add.inc:117 mod/mpr/add.inc:501 mod/dvr/edt_indv.inc:455
 #: mod/dvr/edt_indv.inc:674 mod/dvr/add_new_indv.inc:432
 #: mod/dvr/add_new_indv.inc:660
 msgid "Blood Type"
 msgstr ""
 
-#: mod/mpr/view.inc:84 mod/mpr/search.inc:308 mod/mpr/edit.inc:205
-#: mod/mpr/edit.inc:449 mod/mpr/add.inc:502
+#: mod/mpr/view.inc:84 mod/mpr/search.inc:264 mod/mpr/edit.inc:205
+#: mod/mpr/edit.inc:450 mod/mpr/add.inc:502
 msgid "Last Seen"
 msgstr ""
 
-#: mod/mpr/view.inc:85 mod/mpr/search.inc:308 mod/mpr/edit.inc:206
-#: mod/mpr/edit.inc:450 mod/mpr/add.inc:503
+#: mod/mpr/view.inc:85 mod/mpr/search.inc:264 mod/mpr/edit.inc:206
+#: mod/mpr/edit.inc:451 mod/mpr/add.inc:503
 msgid "Last Clothing"
 msgstr ""
 
@@ -6395,8 +6252,8 @@ msgstr ""
 msgid "People that are tracking"
 msgstr ""
 
-#: mod/mpr/view.inc:91 mod/mpr/search.inc:302 mod/mpr/search.inc:325
-#: mod/mpr/search.inc:409 mod/mpr/edit.inc:686 mod/msg/handler_cap_view.inc:65
+#: mod/mpr/view.inc:91 mod/mpr/search.inc:258 mod/mpr/search.inc:284
+#: mod/mpr/search.inc:368 mod/mpr/edit.inc:687 mod/msg/handler_cap_view.inc:65
 #: mod/msg/handler_cap_view.inc:74 mod/msg/handler_cap_view.inc:85
 msgid "View"
 msgstr ""
@@ -6413,86 +6270,90 @@ msgstr ""
 msgid "Basic Search"
 msgstr ""
 
-#: mod/mpr/search.inc:41 mod/dvr/search_individual.inc:47
+#: mod/mpr/search.inc:41
+msgid "Please try to lookup the people with the the fields below"
+msgstr ""
+
+#: mod/mpr/search.inc:43 mod/dvr/search_individual.inc:47
 #: mod/dvr/search_group.inc:43
 msgid "Any Card Number"
 msgstr ""
 
-#: mod/mpr/search.inc:42 mod/dvr/search_individual.inc:48
+#: mod/mpr/search.inc:44 mod/dvr/search_individual.inc:48
 #: mod/dvr/search_group.inc:44
 msgid "Any Name"
 msgstr ""
 
-#: mod/mpr/search.inc:44 mod/dvr/search_individual.inc:49
+#: mod/mpr/search.inc:46 mod/dvr/search_individual.inc:49
 msgid "All incidents"
 msgstr ""
 
-#: mod/mpr/search.inc:66 mod/dvr/search_individual.inc:127
+#: mod/mpr/search.inc:68 mod/dvr/search_individual.inc:127
 #: mod/dvr/search_group.inc:132
 msgid "Identity Card"
 msgstr ""
 
-#: mod/mpr/search.inc:227 mod/mpr/search.inc:237
+#: mod/mpr/search.inc:182 mod/mpr/search.inc:192
 msgid "Total"
 msgstr ""
 
-#: mod/mpr/search.inc:227 mod/mpr/search.inc:237
+#: mod/mpr/search.inc:182 mod/mpr/search.inc:192
 msgid "Records were found"
 msgstr ""
 
-#: mod/mpr/search.inc:244
+#: mod/mpr/search.inc:199
 msgid "First"
 msgstr ""
 
-#: mod/mpr/search.inc:244 mod/mpr/search.inc:246 mod/mpr/search.inc:251
-#: mod/mpr/search.inc:253 mod/rms/handler_req_ls.inc:148
+#: mod/mpr/search.inc:199 mod/mpr/search.inc:201 mod/mpr/search.inc:206
+#: mod/mpr/search.inc:208 mod/rms/handler_req_ls.inc:148
 #: mod/rms/handler_plg_ls.inc:131
 msgid "Records"
 msgstr ""
 
-#: mod/mpr/search.inc:253
+#: mod/mpr/search.inc:208
 msgid "Last"
 msgstr ""
 
-#: mod/mpr/search.inc:275 mod/mpr/edit.inc:369
+#: mod/mpr/search.inc:231 mod/mpr/edit.inc:369
 msgid "Person"
 msgstr ""
 
-#: mod/mpr/search.inc:277
+#: mod/mpr/search.inc:233
 msgid "Associated People"
 msgstr ""
 
-#: mod/mpr/search.inc:278
+#: mod/mpr/search.inc:234
 msgid "Missing Details"
 msgstr ""
 
-#: mod/mpr/search.inc:280
+#: mod/mpr/search.inc:236
 msgid "Reported Person"
 msgstr ""
 
-#: mod/mpr/search.inc:281 mod/mpr/search.inc:331 mod/mpr/search.inc:396
-#: mod/mpr/search.inc:418 mod/rms/handler_mng_ff.inc:159
+#: mod/mpr/search.inc:237 mod/mpr/search.inc:290 mod/mpr/search.inc:355
+#: mod/mpr/search.inc:377 mod/rms/handler_mng_ff.inc:159
 #: mod/rms/lib_rms.inc:870
 msgid "Select"
 msgstr ""
 
-#: mod/mpr/search.inc:303 mod/mpr/edit.inc:699 mod/mpr/admin.inc:227
+#: mod/mpr/search.inc:259 mod/mpr/edit.inc:700 mod/mpr/admin.inc:227
 msgid "Add Tracker"
 msgstr ""
 
-#: mod/mpr/search.inc:303
+#: mod/mpr/search.inc:259
 msgid "Associate another person"
 msgstr ""
 
-#: mod/mpr/search.inc:314 mod/mpr/search.inc:415
+#: mod/mpr/search.inc:270 mod/mpr/search.inc:374
 msgid "Change the status to Alive & Well"
 msgstr ""
 
-#: mod/mpr/search.inc:316 mod/mpr/search.inc:415
+#: mod/mpr/search.inc:272 mod/mpr/search.inc:374
 msgid "Click to change to found"
 msgstr ""
 
-#: mod/mpr/search.inc:319 mod/mpr/audit.inc:26
+#: mod/mpr/search.inc:275 mod/mpr/audit.inc:26
 msgid "Audit"
 msgstr ""
 
@@ -6513,8 +6374,8 @@ msgid "Replace Current Picture"
 msgstr ""
 
 #: mod/mpr/edit.inc:174 mod/mpr/edit.inc:311 mod/mpr/images.inc:24
-#: mod/mpr/add.inc:81 mod/mpr/add.inc:85 mod/mpr/add.inc:366
-#: mod/mpr/add.inc:367 mod/dvr/edt_indv.inc:189 mod/dvr/edt_indv.inc:214
+#: mod/mpr/add.inc:81 mod/mpr/add.inc:85 mod/mpr/add.inc:365
+#: mod/mpr/add.inc:366 mod/dvr/edt_indv.inc:189 mod/dvr/edt_indv.inc:214
 #: mod/dvr/add_new_indv.inc:130 mod/dvr/add_new_indv.inc:144
 msgid "Upload Picture"
 msgstr ""
@@ -6535,46 +6396,46 @@ msgstr ""
 msgid "Invalid image type.Please try again!"
 msgstr ""
 
-#: mod/mpr/edit.inc:333 mod/mpr/add.inc:181 mod/mpr/add.inc:388
+#: mod/mpr/edit.inc:333 mod/mpr/add.inc:181 mod/mpr/add.inc:387
 msgid "Invalid image type please try again"
 msgstr ""
 
-#: mod/mpr/edit.inc:454
+#: mod/mpr/edit.inc:455
 msgid "Reporting People"
 msgstr ""
 
-#: mod/mpr/edit.inc:464 mod/mpr/edit.inc:677
+#: mod/mpr/edit.inc:465 mod/mpr/edit.inc:678
 msgid "Relationship"
 msgstr ""
 
-#: mod/mpr/edit.inc:481 mod/admin/mmc_main.inc:140 mod/admin/mmc_main.inc:161
+#: mod/mpr/edit.inc:482 mod/admin/mmc_main.inc:140 mod/admin/mmc_main.inc:161
 msgid "Confirm"
 msgstr ""
 
-#: mod/mpr/edit.inc:483
+#: mod/mpr/edit.inc:484
 msgid "Is the information that you've entered correct?"
 msgstr ""
 
-#: mod/mpr/edit.inc:485 mod/mpr/add.inc:232 mod/mpr/add.inc:248
+#: mod/mpr/edit.inc:486 mod/mpr/add.inc:232 mod/mpr/add.inc:248
 #: mod/sync/handler_upload.inc:109 mod/admin/mmc_main.inc:147
 #: mod/admin/mmc_main.inc:167
 msgid "Yes"
 msgstr ""
 
-#: mod/mpr/edit.inc:486 mod/mpr/add.inc:232 mod/mpr/add.inc:248
+#: mod/mpr/edit.inc:487 mod/mpr/add.inc:232 mod/mpr/add.inc:248
 #: mod/sync/handler_upload.inc:109
 msgid "No"
 msgstr ""
 
-#: mod/mpr/edit.inc:670
+#: mod/mpr/edit.inc:671
 msgid "Current Trackers"
 msgstr ""
 
-#: mod/mpr/edit.inc:692
+#: mod/mpr/edit.inc:693
 msgid "Click to remove the tracker"
 msgstr ""
 
-#: mod/mpr/edit.inc:699
+#: mod/mpr/edit.inc:700
 msgid "Add a tracker"
 msgstr ""
 
@@ -6741,38 +6602,38 @@ msgstr ""
 msgid "ACL Base for Missing Person Registry was successfully installed"
 msgstr ""
 
-#: mod/mpr/admin.inc:260 mod/dvr/admin.inc:158
+#: mod/mpr/admin.inc:261 mod/dvr/admin.inc:158
 msgid "Field was successfully deleted."
 msgstr ""
 
-#: mod/mpr/admin.inc:286
+#: mod/mpr/admin.inc:287
 msgid " was successfully added."
 msgstr ""
 
-#: mod/mpr/admin.inc:315
+#: mod/mpr/admin.inc:314 mod/mpr/admin.inc:369
+msgid "AddNew"
+msgstr ""
+
+#: mod/mpr/admin.inc:318
 msgid "Please  enter the code"
 msgstr ""
 
-#: mod/mpr/admin.inc:316
+#: mod/mpr/admin.inc:319
 msgid "Please  enter the description"
 msgstr ""
 
-#: mod/mpr/admin.inc:319
+#: mod/mpr/admin.inc:322
 msgid "Code already exists"
 msgstr ""
 
-#: mod/mpr/admin.inc:337 mod/mpr/admin.inc:364 mod/dvr/admin.inc:55
+#: mod/mpr/admin.inc:340 mod/mpr/admin.inc:367 mod/dvr/admin.inc:55
 #: mod/msg/handler_cap_edit.inc:103 mod/msg/handler_cap_new.inc:94
 msgid "Code"
 msgstr ""
 
-#: mod/mpr/admin.inc:363 mod/admin/ims_level.inc:60
-#: mod/admin/ims_level.inc:217 mod/admin/ims_level.inc:401
+#: mod/mpr/admin.inc:366 mod/admin/ims_level.inc:60
+#: mod/admin/ims_level.inc:217 mod/admin/ims_level.inc:402
 msgid "Add New "
-msgstr ""
-
-#: mod/mpr/admin.inc:366
-msgid "AddNew"
 msgstr ""
 
 #: mod/mpr/home.inc:32
@@ -6918,24 +6779,24 @@ msgstr ""
 msgid "Found Person Entry"
 msgstr ""
 
-#: mod/mpr/main.inc:348
+#: mod/mpr/main.inc:353
 msgid "Missing Person Entry"
 msgstr ""
 
-#: mod/mpr/main.inc:357 mod/mpr/main.inc:367 mod/mpr/main.inc:406
-#: mod/mpr/main.inc:415 mod/mpr/add.inc:507
+#: mod/mpr/main.inc:363 mod/mpr/main.inc:373 mod/mpr/main.inc:412
+#: mod/mpr/main.inc:421 mod/mpr/add.inc:507
 msgid "Reporting Person"
 msgstr ""
 
-#: mod/mpr/main.inc:361
+#: mod/mpr/main.inc:367
 msgid "Person Details"
 msgstr ""
 
-#: mod/mpr/main.inc:374 mod/mpr/main.inc:401 inc/lib_validate.inc:125
+#: mod/mpr/main.inc:380 mod/mpr/main.inc:407 inc/lib_validate.inc:125
 msgid "The "
 msgstr ""
 
-#: mod/mpr/main.inc:384
+#: mod/mpr/main.inc:390
 msgid "Please Select the person who is reporting"
 msgstr ""
 
@@ -7033,7 +6894,7 @@ msgid "Other information that would help us to find this person"
 msgstr ""
 
 #: mod/mpr/add.inc:157 mod/pref/ims_config.inc:48 mod/admin/ims_level.inc:82
-#: mod/admin/ims_level.inc:247 mod/admin/ims_level.inc:424
+#: mod/admin/ims_level.inc:247 mod/admin/ims_level.inc:425
 #: mod/admin/ims_assign.inc:88 mod/admin/ims_config.inc:40
 msgid "You have not completed the form"
 msgstr ""
@@ -7071,25 +6932,25 @@ msgstr ""
 msgid "Are you a disaster victim too? "
 msgstr ""
 
-#: mod/mpr/add.inc:263
+#: mod/mpr/add.inc:264
 msgid "If you are a victim, Please specify the status"
 msgstr ""
 
-#: mod/mpr/add.inc:269
+#: mod/mpr/add.inc:270
 msgid "Details of the reporting person"
 msgstr ""
 
-#: mod/mpr/add.inc:271
+#: mod/mpr/add.inc:272
 msgid ""
 "NOTE : If you have reported before, we will use the following information to "
 "perform a search to see you are in our database or not."
 msgstr ""
 
-#: mod/mpr/add.inc:291
+#: mod/mpr/add.inc:292
 msgid "IMPORTANT : At least one of the following contact method is required"
 msgstr ""
 
-#: mod/mpr/add.inc:322
+#: mod/mpr/add.inc:323
 msgid "Please enter the full name of the reporting person"
 msgstr ""
 
@@ -7097,18 +6958,18 @@ msgstr ""
 msgid "Please enter a valid E-mail"
 msgstr ""
 
-#: mod/mpr/add.inc:340
+#: mod/mpr/add.inc:339
 msgid "Please enter any contact method of the reporting person"
 msgstr ""
 
-#: mod/mpr/add.inc:363
+#: mod/mpr/add.inc:362
 msgid ""
 "If you have a picture of the missing person, please upload the picture. So, "
 "that it will be easy for us to identify the person. <br />If you don't have "
 "a picture to upload just click the \"Next\" button."
 msgstr ""
 
-#: mod/mpr/add.inc:425
+#: mod/mpr/add.inc:424
 msgid "Missing Person"
 msgstr ""
 
@@ -7286,7 +7147,7 @@ msgstr ""
 msgid "The uploaded file exceeds the MAX upload size"
 msgstr ""
 
-#: mod/sync/handler_upload.inc:40 inc/lib_image.inc:322
+#: mod/sync/handler_upload.inc:40 inc/lib_image.inc:331
 msgid "The uploaded file was only partially uploaded."
 msgstr ""
 
@@ -7439,31 +7300,31 @@ msgstr ""
 msgid "Next >>"
 msgstr ""
 
-#: mod/pref/ims_main.inc:41 inc/lib_security/auth_form.inc:225
+#: mod/pref/ims_main.inc:42 inc/lib_security/auth_form.inc:225
 msgid "Old password cannot be empty"
 msgstr ""
 
-#: mod/pref/ims_main.inc:48 inst/setup.inc:653
+#: mod/pref/ims_main.inc:49 inst/setup.inc:653
 msgid "User password cannot be empty"
 msgstr ""
 
-#: mod/pref/ims_main.inc:55 inst/setup.inc:659
+#: mod/pref/ims_main.inc:56 inst/setup.inc:659
 msgid "User Confirm password cannot be empty"
 msgstr ""
 
-#: mod/pref/ims_main.inc:62
+#: mod/pref/ims_main.inc:63
 msgid "User password and confirm password should match"
 msgstr ""
 
-#: mod/pref/ims_main.inc:79
+#: mod/pref/ims_main.inc:80
 msgid "You cannot change the password more than once in one day"
 msgstr ""
 
-#: mod/pref/ims_main.inc:105
+#: mod/pref/ims_main.inc:106
 msgid "You cannot choose one of the recent four passwords"
 msgstr ""
 
-#: mod/pref/ims_main.inc:119
+#: mod/pref/ims_main.inc:120
 msgid " Succesfully changed Password "
 msgstr ""
 
@@ -7535,7 +7396,7 @@ msgid " was successfully registered as a User "
 msgstr ""
 
 #: mod/admin/ims_level.inc:26 mod/admin/ims_level.inc:169
-#: mod/admin/ims_level.inc:351 mod/admin/ims_menus.inc:2
+#: mod/admin/ims_level.inc:352 mod/admin/ims_menus.inc:2
 #: mod/admin/ims_menus.inc:3 mod/admin/ims_menus.inc:4
 msgid "Manage "
 msgstr ""
@@ -7545,12 +7406,12 @@ msgstr ""
 msgid "Please enter the name for %s"
 msgstr ""
 
-#: mod/admin/ims_level.inc:90 mod/admin/ims_level.inc:434
+#: mod/admin/ims_level.inc:90 mod/admin/ims_level.inc:435
 #, php-format
 msgid "If there is/are no %1$s(s), please add a new %2$s"
 msgstr ""
 
-#: mod/admin/ims_level.inc:252 mod/admin/ims_level.inc:429
+#: mod/admin/ims_level.inc:252 mod/admin/ims_level.inc:430
 #, php-format
 msgid "Please enter a name for the %s"
 msgstr ""
@@ -7564,24 +7425,24 @@ msgstr ""
 msgid " is already exists."
 msgstr ""
 
-#: mod/admin/ims_level.inc:433
+#: mod/admin/ims_level.inc:434
 #, php-format
 msgid "Please select a %s."
 msgstr ""
 
-#: mod/admin/ims_level.inc:501
+#: mod/admin/ims_level.inc:502
 msgid " Already exists under "
 msgstr ""
 
-#: mod/admin/ims_main.inc:22 mod/admin/main.inc:78
+#: mod/admin/ims_main.inc:23 mod/admin/main.inc:78
 msgid "Manage Disaster"
 msgstr ""
 
-#: mod/admin/ims_main.inc:43
+#: mod/admin/ims_main.inc:45
 msgid "Manage Events"
 msgstr ""
 
-#: mod/admin/ims_main.inc:58 mod/admin/ims_main.inc:81
+#: mod/admin/ims_main.inc:61 mod/admin/ims_main.inc:86
 msgid "Please activate the disaster levels first"
 msgstr ""
 
@@ -7917,11 +7778,11 @@ msgstr ""
 msgid "Upload Spread Sheet : "
 msgstr ""
 
-#: mod/admin/lc_translate.inc:35 mod/admin/lc_translate.inc:247
+#: mod/admin/lc_translate.inc:35 mod/admin/lc_translate.inc:248
 msgid "Get New List"
 msgstr ""
 
-#: mod/admin/lc_translate.inc:43 mod/admin/lc_translate.inc:255
+#: mod/admin/lc_translate.inc:43 mod/admin/lc_translate.inc:256
 msgid "Load Existing List"
 msgstr ""
 
@@ -7973,27 +7834,27 @@ msgstr ""
 msgid "Please create the file first"
 msgstr ""
 
-#: mod/admin/lc_translate.inc:172
+#: mod/admin/lc_translate.inc:173
 msgid "DB L10N Starts here"
 msgstr ""
 
-#: mod/admin/lc_translate.inc:185
+#: mod/admin/lc_translate.inc:186
 msgid "Failed to merge database localization values."
 msgstr ""
 
-#: mod/admin/lc_translate.inc:194
+#: mod/admin/lc_translate.inc:195
 msgid "Translation"
 msgstr ""
 
-#: mod/admin/lc_translate.inc:233
+#: mod/admin/lc_translate.inc:234
 msgid "Messages successfully compiled"
 msgstr ""
 
-#: mod/admin/lc_translate.inc:235
+#: mod/admin/lc_translate.inc:236
 msgid "Error compiling messages"
 msgstr ""
 
-#: mod/admin/lc_translate.inc:272
+#: mod/admin/lc_translate.inc:273
 msgid "Compile Messages"
 msgstr ""
 
@@ -12581,23 +12442,23 @@ msgstr ""
 msgid "* an Organization "
 msgstr ""
 
-#: inc/lib_location.inc:626
+#: inc/lib_location.inc:628
 msgid "Select a Camp/Shelter"
 msgstr ""
 
-#: inc/lib_location.inc:650
+#: inc/lib_location.inc:652
 msgid "Shelter/Camp"
 msgstr ""
 
-#: inc/lib_location.inc:658
+#: inc/lib_location.inc:660
 msgid "Select an Organization"
 msgstr ""
 
-#: inc/lib_location.inc:671
+#: inc/lib_location.inc:673
 msgid "Organizations"
 msgstr ""
 
-#: inc/lib_location.inc:731
+#: inc/lib_location.inc:733
 msgid ""
 "This location name is already in the database. Do you want to add anyway?  "
 "&nbsp&nbsp&nbsp<b><a href='#' onclick='_shn_loc_val_name();'>Add anyway</a></"
@@ -12605,19 +12466,19 @@ msgid ""
 "again."
 msgstr ""
 
-#: inc/lib_location.inc:741
+#: inc/lib_location.inc:743
 msgid ""
 "Containts numbers. These are not allowed. Please remove them and try again."
 msgstr ""
 
-#: inc/lib_location.inc:823
+#: inc/lib_location.inc:825
 msgid ""
 "Select the location based at.  This is hierarchical. For example think you "
 "are based  in the country 'Sri lanka' ,district 'Colombo' ,and village "
 "'dehiwala'.  start by selecting the country ,once you select country"
 msgstr ""
 
-#: inc/lib_location.inc:909
+#: inc/lib_location.inc:911
 msgid ""
 "Select the location based at.  This is hierarchical. For example think you "
 "are based  in the  'Sri lanka' ,district 'Colombo' ,and village 'dehiwala'.  "
@@ -12630,7 +12491,7 @@ msgid ""
 "'administration' section."
 msgstr ""
 
-#: inc/lib_location.inc:971
+#: inc/lib_location.inc:973
 msgid ""
 "Select the location based at.  This is hierarchical. For example think you "
 "are based  in the country 'Sri lanka' ,district 'Colombo' ,and village "
@@ -12718,19 +12579,19 @@ msgstr ""
 msgid "Page "
 msgstr ""
 
-#: inc/handler_db.inc:175
+#: inc/handler_db.inc:183
 msgid "Incident"
 msgstr ""
 
-#: inc/lib_misc.inc:201
+#: inc/lib_misc.inc:202
 msgid "Whitespace is not a valid input."
 msgstr ""
 
-#: inc/lib_misc.inc:213
+#: inc/lib_misc.inc:214
 msgid "The type already exists in the list"
 msgstr ""
 
-#: inc/lib_misc.inc:222
+#: inc/lib_misc.inc:223
 msgid "The Type Exists,you just added it"
 msgstr ""
 
@@ -12738,38 +12599,38 @@ msgstr ""
 msgid "UUID is NULL"
 msgstr ""
 
-#: inc/lib_image.inc:196 inc/lib_image.inc:221
+#: inc/lib_image.inc:196 inc/lib_image.inc:224
 msgid "Image Not Available"
 msgstr ""
 
-#: inc/lib_image.inc:238
+#: inc/lib_image.inc:247
 msgid "Click to see the original size"
 msgstr ""
 
-#: inc/lib_image.inc:318
+#: inc/lib_image.inc:327
 msgid ""
 "The uploaded file exceeds the upload_max_filesize directive in php.ini. (<"
 msgstr ""
 
-#: inc/lib_image.inc:320
+#: inc/lib_image.inc:329
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form."
 msgstr ""
 
-#: inc/lib_image.inc:324
+#: inc/lib_image.inc:333
 msgid "No file was uploaded."
 msgstr ""
 
-#: inc/lib_image.inc:326
+#: inc/lib_image.inc:335
 msgid "Missing a temporary folder."
 msgstr ""
 
-#: inc/lib_image.inc:328
+#: inc/lib_image.inc:337
 msgid "Failed to write file to disk."
 msgstr ""
 
-#: inc/lib_image.inc:330
+#: inc/lib_image.inc:339
 msgid "File upload stopped by extension."
 msgstr ""
 

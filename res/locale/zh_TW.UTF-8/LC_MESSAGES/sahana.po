@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-09 13:13+0800\n"
-"PO-Revision-Date: 2010-04-21 17:56+0800\n"
+"POT-Creation-Date: 2010-04-22 14:25+0800\n"
+"PO-Revision-Date: 2010-04-22 14:26+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -249,7 +249,6 @@ msgstr "這是一個自動訊息。"
 #: mod/vm/model/dao.php:823
 #: mod/vm/model/dao.php:883
 #: tools/tpl_languages.php:116
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:144
 msgid "Skills and Work Restrictions"
 msgstr "技能與工作限制"
 
@@ -350,14 +349,12 @@ msgstr "已經成功地指派志工"
 #: mod/vm/templates/volunteer/adv_search.tpl.php:10
 #: tools/tpl_languages.php:205
 #: tools/tpl_languages.php:221
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:19
 msgid "Personal Information"
 msgstr "個人資訊"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:13
 #: tools/tpl_languages.php:206
 #: tools/tpl_languages.php:222
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:20
 msgid "Any ID Number:"
 msgstr "任意編號："
 
@@ -365,21 +362,16 @@ msgstr "任意編號："
 #: tools/tpl_languages.php:100
 #: tools/tpl_languages.php:207
 #: tools/tpl_languages.php:223
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:18
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:21
 msgid "Name:"
 msgstr "名稱："
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:15
 #: tools/tpl_languages.php:208
 #: tools/tpl_languages.php:226
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:30
 msgid "Loose Name Matching"
 msgstr "寬鬆的名稱查詢"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:15
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:30
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:32
 msgid "(May return many unrelated results)"
 msgstr "(也許傳回了許多不相關的結果)"
 
@@ -387,21 +379,18 @@ msgstr "(也許傳回了許多不相關的結果)"
 #: tools/tpl_languages.php:188
 #: tools/tpl_languages.php:209
 #: tools/tpl_languages.php:230
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:41
 msgid "Skills"
 msgstr "技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
 #: tools/tpl_languages.php:210
 #: tools/tpl_languages.php:231
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:42
 msgid "Require ALL skills below"
 msgstr "需要下面所有技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
 #: tools/tpl_languages.php:211
 #: tools/tpl_languages.php:232
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:43
 msgid "Require ANY skills below"
 msgstr "需要下面任意技能"
 
@@ -432,7 +421,7 @@ msgstr "查詢技能："
 #: mod/cs/main.inc:89
 #: mod/cs/add.inc:84
 #: mod/cs/add.inc:245
-#: mod/mpr/search.inc:45
+#: mod/mpr/search.inc:47
 #: mod/mpr/admin.inc:183
 #: mod/cr/search.inc:180
 #: mod/cr/search.inc:187
@@ -441,8 +430,6 @@ msgstr "查詢技能："
 #: mod/cr/main.inc:29
 #: mod/rms/handler_req_sch.inc:103
 #: mod/rms/handler_plg_sch.inc:68
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:16
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:16
 msgid "Search"
 msgstr "搜尋"
 
@@ -482,15 +469,15 @@ msgstr "前往下一頁"
 #: mod/gis/main_fns.inc:88
 #: mod/gis/main_fns.inc:117
 #: mod/gis/gis_fns.inc:180
-#: mod/mpr/search.inc:78
-#: mod/mpr/search.inc:251
+#: mod/mpr/search.inc:80
+#: mod/mpr/search.inc:206
 #: mod/mpr/edit.inc:209
 #: mod/mpr/edit.inc:312
-#: mod/mpr/edit.inc:705
+#: mod/mpr/edit.inc:706
 #: mod/mpr/images.inc:26
 #: mod/mpr/add.inc:122
-#: mod/mpr/add.inc:301
-#: mod/mpr/add.inc:369
+#: mod/mpr/add.inc:302
+#: mod/mpr/add.inc:368
 #: mod/mpr/add.inc:526
 #: mod/sync/handler_upload.inc:71
 #: mod/admin/location.inc:58
@@ -547,7 +534,6 @@ msgstr "狀態類型"
 #: mod/gis/wm_fns.php:38
 #: mod/or/report.inc:447
 #: mod/gis/wm_fns.inc:38
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:62
 msgid "Filter"
 msgstr "過濾器"
 
@@ -693,10 +679,10 @@ msgstr "取消"
 #: mod/cs/edit.inc:279
 #: mod/cs/edit.inc:443
 #: mod/cs/edit.inc:559
-#: mod/mpr/admin.inc:339
+#: mod/mpr/admin.inc:342
 #: mod/admin/ims_level.inc:31
 #: mod/admin/ims_level.inc:175
-#: mod/admin/ims_level.inc:357
+#: mod/admin/ims_level.inc:358
 #: mod/admin/ims_assign.inc:18
 #: mod/admin/ims_assign.inc:35
 #: mod/admin/location.inc:100
@@ -705,7 +691,6 @@ msgstr "取消"
 #: mod/rms/handler_req_ls.inc:98
 #: mod/rms/lib_rms.inc:489
 #: mod/msg/message_forms.inc:233
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:7
 #: inc/lib_security/acl_form.inc:274
 msgid "Delete"
 msgstr "刪除"
@@ -717,13 +702,12 @@ msgstr "刪除"
 #: mod/or/process_org.inc:41
 #: mod/ims/view_edit_item.inc:65
 #: mod/ims/mini_quantity.inc:249
-#: mod/mpr/search.inc:291
+#: mod/mpr/search.inc:247
 #: mod/cr/edit.inc:172
 #: mod/cr/edit.inc:258
 #: mod/cr/edit.inc:553
 #: mod/cr/camp.inc:617
 #: mod/msg/handler_cap_edit.inc:46
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:4
 msgid "Edit"
 msgstr "編輯"
 
@@ -767,8 +751,8 @@ msgstr "預計志工人數"
 #: mod/cs/search.inc:221
 #: mod/cs/edit.inc:504
 #: mod/cs/add.inc:428
-#: mod/mpr/admin.inc:338
-#: mod/mpr/admin.inc:365
+#: mod/mpr/admin.inc:341
+#: mod/mpr/admin.inc:368
 #: mod/dvr/edt_grp.inc:449
 #: mod/dvr/edt_grp.inc:524
 #: mod/dvr/add_new_grp.inc:354
@@ -804,12 +788,13 @@ msgstr "任務"
 #: mod/or/admin_forms.inc:142
 #: mod/or/admin_forms.inc:200
 #: mod/mpr/admin.inc:193
-#: mod/mpr/admin.inc:327
-#: mod/mpr/admin.inc:360
+#: mod/mpr/admin.inc:295
+#: mod/mpr/admin.inc:330
+#: mod/mpr/admin.inc:363
 #: mod/pref/ims_config.inc:39
 #: mod/admin/ims_level.inc:49
 #: mod/admin/ims_level.inc:206
-#: mod/admin/ims_level.inc:390
+#: mod/admin/ims_level.inc:391
 #: mod/admin/ims_config.inc:30
 #: mod/admin/lc_ui_translate_update.inc:25
 #: mod/dvr/admin.inc:105
@@ -832,25 +817,24 @@ msgstr "更新"
 #: mod/cs/edit.inc:383
 #: mod/cs/edit.inc:503
 #: mod/cs/add.inc:427
-#: mod/mpr/search.inc:70
-#: mod/mpr/search.inc:71
-#: mod/mpr/search.inc:394
-#: mod/mpr/edit.inc:463
-#: mod/mpr/edit.inc:676
-#: mod/mpr/add.inc:273
+#: mod/mpr/search.inc:72
+#: mod/mpr/search.inc:73
+#: mod/mpr/search.inc:353
+#: mod/mpr/edit.inc:464
+#: mod/mpr/edit.inc:677
+#: mod/mpr/add.inc:274
 #: mod/mpr/add.inc:509
 #: mod/sync/handler_upload.inc:90
 #: mod/admin/ims_level.inc:30
 #: mod/admin/ims_level.inc:61
 #: mod/admin/ims_level.inc:173
 #: mod/admin/ims_level.inc:219
-#: mod/admin/ims_level.inc:355
-#: mod/admin/ims_level.inc:403
+#: mod/admin/ims_level.inc:356
+#: mod/admin/ims_level.inc:404
 #: mod/dvr/search_individual.inc:131
 #: mod/dvr/search_individual.inc:132
 #: mod/dvr/search_group.inc:136
 #: mod/dvr/search_group.inc:137
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:5
 msgid "Name"
 msgstr "名稱"
 
@@ -912,14 +896,13 @@ msgstr "目標"
 
 #: tools/tpl_languages.php:38
 #: tools/tpl_languages.php:90
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:77
 msgid "Assigned"
 msgstr "指派"
 
 #: tools/tpl_languages.php:39
 #: mod/ims/optimize.inc:495
 #: mod/ims/view_inv.inc:65
-#: mod/mpr/search.inc:279
+#: mod/mpr/search.inc:235
 msgid "Actions"
 msgstr "狀態/動作"
 
@@ -958,7 +941,6 @@ msgstr "沒有志工被指派到"
 #: tools/tpl_languages.php:50
 #: tools/tpl_languages.php:112
 #: tools/tpl_languages.php:252
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:111
 msgid "Project"
 msgstr "專案"
 
@@ -968,14 +950,12 @@ msgstr "專案資訊"
 
 #: tools/tpl_languages.php:53
 #: tools/tpl_languages.php:237
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:57
 #, fuzzy
 msgid "Start date :"
 msgstr "開始日期"
 
 #: tools/tpl_languages.php:54
 #: tools/tpl_languages.php:238
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:58
 #, fuzzy
 msgid "End date :"
 msgstr "結束日期"
@@ -989,7 +969,7 @@ msgstr "結束日期"
 #: mod/or/view_org.inc:397
 #: mod/ims/reg_inv.inc:92
 #: mod/ims/view_inv.inc:198
-#: inc/lib_location.inc:1063
+#: inc/lib_location.inc:1065
 msgid "Base Location"
 msgstr "基本位置"
 
@@ -1047,9 +1027,8 @@ msgstr "可進行指派的志工"
 
 #: tools/tpl_languages.php:76
 #: tools/tpl_languages.php:200
-#: mod/mpr/search.inc:393
-#: mod/mpr/edit.inc:462
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:9
+#: mod/mpr/search.inc:352
+#: mod/mpr/edit.inc:463
 msgid "Picture"
 msgstr "圖片"
 
@@ -1058,7 +1037,7 @@ msgstr "圖片"
 #: tools/tpl_languages.php:314
 #: mod/ims/search.inc:142
 #: mod/ims/search.inc:215
-#: mod/mpr/search.inc:395
+#: mod/mpr/search.inc:354
 #: mod/mpr/edit.inc:143
 #: mod/mpr/add.inc:50
 #: mod/mpr/add.inc:51
@@ -1073,20 +1052,17 @@ msgstr "圖片"
 #: mod/rms/handler_mng_ff.inc:199
 #: mod/msg/handler_cap_edit.inc:90
 #: mod/msg/handler_cap_new.inc:81
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:12
 msgid "Status"
 msgstr "狀態"
 
 #: tools/tpl_languages.php:78
 #: tools/tpl_languages.php:300
 #: tools/tpl_languages.php:317
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:15
 #, fuzzy
 msgid "Affiliation"
 msgstr "會籍："
 
 #: tools/tpl_languages.php:79
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:18
 msgid "Project - Position"
 msgstr "專案 - 職位"
 
@@ -1097,31 +1073,23 @@ msgstr "專案 - 職位"
 #: tools/tpl_languages.php:234
 #: mod/cr/edit.inc:436
 #: mod/cr/camp.inc:500
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:21
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:22
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:67
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:54
 msgid "Availability"
 msgstr "可利用性"
 
 #: tools/tpl_languages.php:81
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:21
 #, fuzzy
 msgid "Start"
 msgstr "開始日期"
 
 #: tools/tpl_languages.php:83
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:22
 msgid "End"
 msgstr "結束"
 
 #: tools/tpl_languages.php:84
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:25
 msgid "Hours"
 msgstr "時數"
 
 #: tools/tpl_languages.php:85
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:28
 msgid "Identification"
 msgstr "身份識別"
 
@@ -1145,133 +1113,107 @@ msgstr "身份識別"
 #: mod/rms/handler_mng_ff.inc:200
 #: mod/rms/lib_rms.inc:843
 #: mod/rms/lib_rms.inc:1336
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:31
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:37
 msgid "Location"
 msgstr "地點"
 
 #: tools/tpl_languages.php:87
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:34
 msgid "Specialties"
 msgstr "特殊專長"
 
 #: tools/tpl_languages.php:88
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:37
 msgid "Assign"
 msgstr "指派"
 
 #: tools/tpl_languages.php:89
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:40
 msgid "Remove From Project"
 msgstr "從本專案移除"
 
 #: tools/tpl_languages.php:91
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:79
 msgid "Unassigned"
 msgstr "未指派"
 
 #: tools/tpl_languages.php:92
 #: tools/tpl_languages.php:307
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:140
 msgid "Position:"
 msgstr "職位"
 
 #: tools/tpl_languages.php:93
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:148
 msgid "Assign this Volunteer"
 msgstr "指定本位志工"
 
 #: tools/tpl_languages.php:94
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:171
 msgid "To assign another volunteer, you must perform another search because no other volunteers match the current search criteria"
 msgstr "如果要指派其他志工，請再次查詢。"
 
 #: tools/tpl_languages.php:95
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:175
 msgid "No volunteers were found. Please refine your criteria and try again"
 msgstr "沒有符合條件的志工，請調整您的查詢條件並再次查詢。"
 
 #: tools/tpl_languages.php:96
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:177
 msgid "Alternatively, you can try the"
 msgstr "其他選擇如下，請再次嘗試。"
 
 #: tools/tpl_languages.php:97
-#: www/tmp/vm_cache/list.tpl.php.c825d41d2b8911ae4a3d78966c7ebb15.inc:177
 msgid "specifying 'Loose Name Matching'"
 msgstr "模糊名稱查詢"
 
 #: tools/tpl_languages.php:101
 #: mod/or/lib_or.inc:562
 #: mod/ims/lib_ims.inc:297
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:22
 msgid "Gender:"
 msgstr "性別："
 
 #: tools/tpl_languages.php:102
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:47
 msgid "Date of Birth:"
 msgstr "生日："
 
 #: tools/tpl_languages.php:103
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:54
 msgid "Contact Info"
 msgstr "連絡資訊"
 
 #: tools/tpl_languages.php:105
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:70
 msgid "Work Begin:"
 msgstr "工作開始："
 
 #: tools/tpl_languages.php:106
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:74
 msgid "Work End:"
 msgstr "工作結束："
 
 #: tools/tpl_languages.php:107
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:79
 msgid "Work Hour Begin:"
 msgstr "工作開始時間："
 
 #: tools/tpl_languages.php:108
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:85
 msgid "Work Hour End:"
 msgstr "工作結束時間："
 
 #: tools/tpl_languages.php:109
 #: tools/tpl_languages.php:184
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:92
 msgid "Work Details"
 msgstr "工作細節"
 
 #: tools/tpl_languages.php:110
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:96
 msgid "Occupation:"
 msgstr "職業："
 
 #: tools/tpl_languages.php:111
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:102
 msgid "Affiliation:"
 msgstr "會籍："
 
 #: tools/tpl_languages.php:113
 #: tools/tpl_languages.php:253
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:112
 msgid "Position"
 msgstr "職稱"
 
 #: tools/tpl_languages.php:114
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:113
 msgid "Log Time"
 msgstr "記錄時間"
 
 #: tools/tpl_languages.php:115
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:127
 msgid "Log time"
 msgstr "記錄時間"
 
 #: tools/tpl_languages.php:117
-#: www/tmp/vm_cache/display.tpl.php.361d451241ef2c8e448d484d1798c372.inc:151
 msgid "Special Needs:"
 msgstr "特殊需求："
 
@@ -1336,218 +1278,148 @@ msgstr "將這個志工升級為網站管理者權限"
 #: tools/tpl_languages.php:132
 #: mod/vm/conf.inc:27
 #: mod/vm/menu.inc:102
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:1
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:1
 msgid "Volunteer Management"
 msgstr "志工管理"
 
 #: tools/tpl_languages.php:133
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:2
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:2
 msgid "The Volunteer Management module keeps track of projects and volunteers."
 msgstr "志工管理模組用來追蹤專案與志工"
 
 #: tools/tpl_languages.php:134
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:3
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:3
 msgid "Volunteer Portal"
 msgstr "志工站"
 
 #: tools/tpl_languages.php:135
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:5
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:5
 msgid "My information page"
 msgstr "我的資訊"
 
 #: tools/tpl_languages.php:136
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:5
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:5
 msgid "Personal information and time logging."
 msgstr "個人資訊與時間記錄"
 
 #: tools/tpl_languages.php:137
 #: mod/vm/menu.inc:35
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:7
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:7
 msgid "Assign to Project"
 msgstr "指派到專案"
 
 #: tools/tpl_languages.php:138
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:7
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:7
 msgid "Manage volunteer assignments"
 msgstr "管理志工分派"
 
 #: tools/tpl_languages.php:139
 #: mod/vm/menu.inc:36
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:10
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:10
 msgid "Show Assigned"
 msgstr "顯示指派狀況"
 
 #: tools/tpl_languages.php:140
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:10
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:10
 msgid "View all volunteers assigned to projects"
 msgstr "檢視所有已分派專案的志工"
 
 #: tools/tpl_languages.php:141
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:13
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:13
 msgid "View All Volunteers"
 msgstr "檢視所有志工"
 
 #: tools/tpl_languages.php:142
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:13
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:13
 msgid "View all registered volunteers"
 msgstr "檢視所有註冊的志工"
 
 #: tools/tpl_languages.php:144
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:16
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:16
 msgid "Search for a volunteer"
 msgstr "搜尋志工"
 
 #: tools/tpl_languages.php:145
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:19
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:19
 msgid "Add New Project"
 msgstr "新增專案"
 
 #: tools/tpl_languages.php:146
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:19
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:19
 msgid "Start a new project"
 msgstr "開始一個新專案"
 
 #: tools/tpl_languages.php:147
 #: mod/vm/menu.inc:50
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:22
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:22
 msgid "View My Projects"
 msgstr "檢視我的專案"
 
 #: tools/tpl_languages.php:148
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:22
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:22
 msgid "View all projects you are currently assigned to"
 msgstr "檢視所有參與的專案"
 
 #: tools/tpl_languages.php:149
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:25
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:25
 msgid "View All Projects"
 msgstr "檢視所有專案"
 
 #: tools/tpl_languages.php:150
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:25
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:25
 msgid "View all projects being tracked"
 msgstr "檢視所有被追蹤的專案"
 
 #: tools/tpl_languages.php:151
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:28
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:28
 msgid "Generate report"
 msgstr "產生報表"
 
 #: tools/tpl_languages.php:152
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:28
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:28
 msgid "Generate customized report on volunteers and projects"
 msgstr "產生志工與專案的自訂報表"
 
 #: tools/tpl_languages.php:153
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:31
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:31
 msgid "Register to VM"
 msgstr "註冊到志工管理"
 
 #: tools/tpl_languages.php:154
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:31
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:31
 msgid "Register yourself in Volunteer Management module"
 msgstr "在志工管理模組註冊你自己"
 
 #: tools/tpl_languages.php:155
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:35
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:35
 msgid "Send messages"
 msgstr "發送訊息"
 
 #: tools/tpl_languages.php:156
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:37
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:37
 msgid "Send messages to other users"
 msgstr "發送訊息給其他使用者"
 
 #: tools/tpl_languages.php:157
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:43
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:43
 msgid "Current projects"
 msgstr "目前專案"
 
 #: tools/tpl_languages.php:158
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:46
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:46
 msgid "You are not assigned to any project."
 msgstr "你目前沒有被指派任何專案"
 
 #: tools/tpl_languages.php:159
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:48
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:48
 msgid "Click here"
 msgstr "點選這裡"
 
 #: tools/tpl_languages.php:160
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:48
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:48
 msgid "to view your projects"
 msgstr "檢視你的專案"
 
 #: tools/tpl_languages.php:161
 #: mod/or/home.inc:43
 #: mod/cr/main_fns.inc:29
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:51
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:51
 msgid "Current features include:"
 msgstr "目前的功能包括： "
 
 #: tools/tpl_languages.php:162
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:54
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:54
 msgid "Manage volunteer assignment"
 msgstr "管理志工分派"
 
 #: tools/tpl_languages.php:163
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:55
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:55
 msgid "Start and view projects"
 msgstr "開始與檢視專案"
 
 #: tools/tpl_languages.php:164
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:56
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:56
 msgid "Search volunteers"
 msgstr "搜尋志工"
 
 #: tools/tpl_languages.php:165
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:57
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:57
 msgid "Send and receive messages"
 msgstr "發送與接收訊息"
 
 #: tools/tpl_languages.php:166
 #: mod/admin/mmc_main.inc:12
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:60
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:60
 msgid "Version"
 msgstr "版本"
 
 #: tools/tpl_languages.php:167
-#: www/tmp/vm_cache/portal.tpl.php.f07bd6bf9990f67a58d8ce4b77e0a018.inc:60
-#: www/tmp/vm_cache/portal.tpl.689afe8f47aed8ef4fa03fb99b69526b.inc:60
 msgid "Last Modified"
 msgstr "最後更新"
 
@@ -1684,77 +1556,63 @@ msgstr "最近的照片"
 
 #: tools/tpl_languages.php:204
 #: tools/tpl_languages.php:219
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:10
 msgid "Please enter at least one field below:"
 msgstr "請輸入至少一個欄位"
 
 #: tools/tpl_languages.php:214
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:3
 msgid "Advanced Search Criteria"
 msgstr "進階搜尋條件"
 
 #: tools/tpl_languages.php:215
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:4
 msgid "Back to Basic Search"
 msgstr "返回搜尋頁面"
 
 #: tools/tpl_languages.php:216
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:6
 msgid "Basic Search Criteria"
 msgstr "搜尋條件"
 
 #: tools/tpl_languages.php:217
-#: mod/mpr/search.inc:63
+#: mod/mpr/search.inc:65
 #: mod/dvr/search_individual.inc:124
 #: mod/dvr/search_group.inc:111
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:7
 msgid "Advanced Search"
 msgstr "進階搜尋"
 
 #: tools/tpl_languages.php:218
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:9
 msgid "Search results are returned only if they match ALL selected fields."
 msgstr "只有全部條件都符合的結果才會被顯示出來。"
 
 #: tools/tpl_languages.php:220
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:12
 msgid "Filter volunteer results by any one of the following fields:"
 msgstr "請以下列任一欄位過濾志工查詢結果。"
 
 #: tools/tpl_languages.php:224
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:27
 #, fuzzy
 msgid "advanced"
 msgstr "進階搜尋"
 
 #: tools/tpl_languages.php:225
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:29
 #, fuzzy
 msgid "Options"
 msgstr "選項"
 
 #: tools/tpl_languages.php:227
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:32
 msgid "Find similar sounding names"
 msgstr "尋找任何發音相似的名字。"
 
 #: tools/tpl_languages.php:228
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:34
 msgid "Show only unassigned"
 msgstr "僅顯示為指派"
 
 #: tools/tpl_languages.php:233
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:43
 msgid "and_skills"
 msgstr "以及技巧"
 
 #: tools/tpl_languages.php:235
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:55
 msgid "Volunteer must be available for the ENTIRE time specified below"
 msgstr ""
 
 #: tools/tpl_languages.php:236
-#: www/tmp/vm_cache/search.tpl.php.4cd61fb54ad59a19a25eef8be93b5628.inc:56
 msgid "Volunteer must be available for ANY PORTION of the time specified below"
 msgstr ""
 
@@ -1769,7 +1627,7 @@ msgid "Go to Previous Page"
 msgstr "到前一頁"
 
 #: tools/tpl_languages.php:241
-#: mod/mpr/search.inc:246
+#: mod/mpr/search.inc:201
 #: mod/rms/handler_req_ls.inc:54
 #: mod/rms/handler_plg_ls.inc:48
 #: inc/lib_paging.inc:117
@@ -1953,8 +1811,8 @@ msgstr "沒有被定義的技能"
 #: tools/tpl_languages.php:365
 #: mod/or/admin_forms.inc:131
 #: mod/or/admin_forms.inc:189
-#: mod/mpr/edit.inc:678
-#: mod/mpr/edit.inc:690
+#: mod/mpr/edit.inc:679
+#: mod/mpr/edit.inc:691
 #: mod/admin/location.inc:141
 #: mod/admin/lc_db.inc:95
 #: mod/admin/lc_add_new_language.inc:36
@@ -2023,7 +1881,7 @@ msgstr "最後總計價值"
 
 #: tools/tpl_languages.php:304
 #: mod/mpr/view.inc:26
-#: mod/mpr/search.inc:276
+#: mod/mpr/search.inc:232
 #: mod/rms/handler_req_ls.inc:94
 #: mod/rms/handler_req_sch.inc:216
 #: mod/rms/handler_plg_ls.inc:95
@@ -2398,9 +2256,9 @@ msgstr "組織領域"
 #: mod/ims/view_inv.inc:59
 #: mod/mpr/view.inc:73
 #: mod/mpr/edit.inc:178
-#: mod/mpr/edit.inc:424
+#: mod/mpr/edit.inc:425
 #: mod/mpr/add.inc:88
-#: mod/mpr/add.inc:293
+#: mod/mpr/add.inc:294
 #: mod/mpr/add.inc:477
 #: mod/mpr/add.inc:511
 #: mod/cr/search.inc:43
@@ -2600,7 +2458,7 @@ msgstr "可用的設施"
 #: mod/admin/location.inc:147
 #: mod/admin/location.inc:271
 #: mod/admin/location.inc:333
-#: mod/admin/lc_translate.inc:198
+#: mod/admin/lc_translate.inc:199
 #: mod/dvr/edt_grp.inc:532
 #: mod/dvr/add_new_grp.inc:432
 #: mod/dvr/edt_indv.inc:465
@@ -2739,7 +2597,7 @@ msgstr "無記錄"
 #: mod/or/view_org.inc:542
 #: mod/mpr/mpr_lib.inc:50
 #: mod/mpr/mpr_lib.inc:70
-#: mod/mpr/search.inc:317
+#: mod/mpr/search.inc:273
 #: mod/dvr/lib.inc:150
 #: mod/dvr/lib.inc:170
 msgid "Assign to more incidents"
@@ -2785,7 +2643,7 @@ msgstr "關閉"
 #: mod/or/view_org.inc:568
 #: mod/or/view_org.inc:578
 #: mod/mpr/view.inc:97
-#: mod/mpr/search.inc:425
+#: mod/mpr/search.inc:384
 #: mod/rms/handler_mng_ff.inc:109
 msgid "Back"
 msgstr "上一步"
@@ -2866,7 +2724,7 @@ msgid "Select the services your organization provides ,that is what you do as an
 msgstr "選擇您的組織所能提供的服務，也就是您的組織可以在災難中所能做的事情，例如提供醫療服務。"
 
 #: mod/or/lib_or.inc:640
-#: mod/mpr/add.inc:294
+#: mod/mpr/add.inc:295
 #: mod/mpr/add.inc:512
 msgid "Phone"
 msgstr "電話"
@@ -2874,7 +2732,7 @@ msgstr "電話"
 #: mod/or/lib_or.inc:641
 #: mod/mpr/view.inc:76
 #: mod/mpr/edit.inc:181
-#: mod/mpr/edit.inc:441
+#: mod/mpr/edit.inc:442
 #: mod/mpr/add.inc:91
 #: mod/mpr/add.inc:494
 #: mod/dvr/edt_grp.inc:288
@@ -2899,7 +2757,7 @@ msgstr "傳真"
 #: mod/or/lib_or.inc:643
 #: mod/home/main.inc:52
 #: mod/home/main.inc:182
-#: mod/mpr/add.inc:295
+#: mod/mpr/add.inc:296
 #: mod/mpr/add.inc:513
 #: mod/dvr/edt_grp.inc:294
 #: mod/dvr/edt_grp.inc:492
@@ -5539,7 +5397,7 @@ msgstr "專案"
 #: mod/vm/menu.inc:49
 #: mod/admin/ims_level.inc:63
 #: mod/admin/ims_level.inc:221
-#: mod/admin/ims_level.inc:405
+#: mod/admin/ims_level.inc:406
 #: mod/admin/lc_add_new_language.inc:29
 msgid "Add New"
 msgstr "新增"
@@ -6051,7 +5909,7 @@ msgstr "搜尋物資類型"
 #: mod/cs/main.inc:47
 #, fuzzy
 msgid "Modify Catalog"
-msgstr "修改目錄"
+msgstr "修改列"
 
 #: mod/cs/main.inc:48
 msgid "Add New Catalog"
@@ -6426,7 +6284,7 @@ msgstr "聯絡人員電話"
 #: mod/gis/main_fns.inc:84
 #: mod/mpr/view.inc:79
 #: mod/mpr/edit.inc:203
-#: mod/mpr/edit.inc:444
+#: mod/mpr/edit.inc:445
 #: mod/mpr/add.inc:116
 #: mod/mpr/add.inc:497
 #: mod/dvr/edt_indv.inc:457
@@ -6720,10 +6578,10 @@ msgid "Comments : "
 msgstr "備註："
 
 #: mod/mpr/view.inc:34
-#: mod/mpr/search.inc:64
-#: mod/mpr/search.inc:65
+#: mod/mpr/search.inc:66
+#: mod/mpr/search.inc:67
 #: mod/mpr/edit.inc:146
-#: mod/mpr/edit.inc:380
+#: mod/mpr/edit.inc:381
 #: mod/mpr/add.inc:58
 #: mod/mpr/add.inc:433
 #: mod/dvr/search_individual.inc:125
@@ -6738,8 +6596,9 @@ msgid "Identity"
 msgstr "身份"
 
 #: mod/mpr/view.inc:37
+#: mod/mpr/search.inc:42
 #: mod/mpr/edit.inc:147
-#: mod/mpr/edit.inc:383
+#: mod/mpr/edit.inc:384
 #: mod/mpr/add.inc:62
 #: mod/mpr/add.inc:436
 #: mod/dvr/edt_indv.inc:180
@@ -6750,9 +6609,9 @@ msgid "Identity Card Number"
 msgstr "身份證字號"
 
 #: mod/mpr/view.inc:38
-#: mod/mpr/search.inc:67
+#: mod/mpr/search.inc:69
 #: mod/mpr/edit.inc:148
-#: mod/mpr/edit.inc:384
+#: mod/mpr/edit.inc:385
 #: mod/mpr/add.inc:63
 #: mod/mpr/add.inc:437
 #: mod/dvr/search_individual.inc:128
@@ -6765,9 +6624,9 @@ msgid "Passport Number"
 msgstr "護證號碼"
 
 #: mod/mpr/view.inc:39
-#: mod/mpr/search.inc:68
+#: mod/mpr/search.inc:70
 #: mod/mpr/edit.inc:149
-#: mod/mpr/edit.inc:385
+#: mod/mpr/edit.inc:386
 #: mod/mpr/add.inc:64
 #: mod/mpr/add.inc:438
 #: mod/dvr/search_individual.inc:129
@@ -6779,9 +6638,9 @@ msgid "Driving License"
 msgstr "駕駛執照"
 
 #: mod/mpr/view.inc:43
-#: mod/mpr/search.inc:76
+#: mod/mpr/search.inc:78
 #: mod/mpr/edit.inc:151
-#: mod/mpr/edit.inc:389
+#: mod/mpr/edit.inc:390
 #: mod/mpr/add.inc:66
 #: mod/mpr/add.inc:442
 #: mod/dvr/search_individual.inc:137
@@ -6791,9 +6650,9 @@ msgid "Basic Details"
 msgstr "基本細節"
 
 #: mod/mpr/view.inc:46
-#: mod/mpr/search.inc:72
+#: mod/mpr/search.inc:74
 #: mod/mpr/edit.inc:155
-#: mod/mpr/edit.inc:392
+#: mod/mpr/edit.inc:393
 #: mod/mpr/add.inc:70
 #: mod/mpr/add.inc:445
 #: mod/cr/edit.inc:54
@@ -6821,9 +6680,9 @@ msgid "Full Name"
 msgstr "名字"
 
 #: mod/mpr/view.inc:47
-#: mod/mpr/search.inc:73
+#: mod/mpr/search.inc:75
 #: mod/mpr/edit.inc:156
-#: mod/mpr/edit.inc:393
+#: mod/mpr/edit.inc:394
 #: mod/mpr/add.inc:71
 #: mod/mpr/add.inc:446
 #: mod/dvr/reporting.inc:43
@@ -6841,9 +6700,9 @@ msgid "Family Name"
 msgstr "姓氏"
 
 #: mod/mpr/view.inc:48
-#: mod/mpr/search.inc:74
+#: mod/mpr/search.inc:76
 #: mod/mpr/edit.inc:157
-#: mod/mpr/edit.inc:394
+#: mod/mpr/edit.inc:395
 #: mod/mpr/add.inc:72
 #: mod/mpr/add.inc:447
 #: mod/dvr/reporting.inc:44
@@ -6861,7 +6720,7 @@ msgstr "當地姓名"
 
 #: mod/mpr/view.inc:49
 #: mod/mpr/edit.inc:158
-#: mod/mpr/edit.inc:395
+#: mod/mpr/edit.inc:396
 #: mod/mpr/add.inc:73
 #: mod/mpr/add.inc:448
 #: mod/dvr/edt_indv.inc:157
@@ -6871,7 +6730,7 @@ msgstr "出生日期"
 
 #: mod/mpr/view.inc:50
 #: mod/mpr/edit.inc:160
-#: mod/mpr/edit.inc:396
+#: mod/mpr/edit.inc:397
 #: mod/mpr/add.inc:75
 #: mod/mpr/add.inc:449
 #: mod/dvr/edt_indv.inc:161
@@ -6881,7 +6740,7 @@ msgstr "年齡層"
 
 #: mod/mpr/view.inc:51
 #: mod/mpr/edit.inc:161
-#: mod/mpr/edit.inc:397
+#: mod/mpr/edit.inc:398
 #: mod/mpr/add.inc:76
 #: mod/mpr/add.inc:450
 #: mod/dvr/edt_indv.inc:164
@@ -6893,7 +6752,7 @@ msgstr "性別"
 
 #: mod/mpr/view.inc:52
 #: mod/mpr/edit.inc:162
-#: mod/mpr/edit.inc:398
+#: mod/mpr/edit.inc:399
 #: mod/mpr/add.inc:77
 #: mod/mpr/add.inc:451
 #: mod/dvr/edt_indv.inc:167
@@ -6905,7 +6764,7 @@ msgstr "婚姻狀況"
 
 #: mod/mpr/view.inc:53
 #: mod/mpr/edit.inc:163
-#: mod/mpr/edit.inc:399
+#: mod/mpr/edit.inc:400
 #: mod/mpr/add.inc:78
 #: mod/mpr/add.inc:452
 #: mod/dvr/edt_indv.inc:170
@@ -6917,7 +6776,7 @@ msgstr "宗教"
 
 #: mod/mpr/view.inc:54
 #: mod/mpr/edit.inc:164
-#: mod/mpr/edit.inc:400
+#: mod/mpr/edit.inc:401
 #: mod/mpr/add.inc:79
 #: mod/mpr/add.inc:453
 #: mod/dvr/edt_indv.inc:173
@@ -6929,7 +6788,7 @@ msgstr "種族"
 
 #: mod/mpr/view.inc:58
 #: mod/mpr/edit.inc:195
-#: mod/mpr/edit.inc:404
+#: mod/mpr/edit.inc:405
 #: mod/mpr/add.inc:108
 #: mod/mpr/add.inc:457
 #: mod/dvr/edt_indv.inc:651
@@ -6938,9 +6797,9 @@ msgid "Physical Details"
 msgstr "身體特徵細節"
 
 #: mod/mpr/view.inc:61
-#: mod/mpr/search.inc:296
+#: mod/mpr/search.inc:252
 #: mod/mpr/edit.inc:196
-#: mod/mpr/edit.inc:407
+#: mod/mpr/edit.inc:408
 #: mod/mpr/add.inc:109
 #: mod/mpr/add.inc:460
 #: mod/dvr/edt_indv.inc:654
@@ -6949,9 +6808,9 @@ msgid "Eye Colour"
 msgstr "眼睛顏色"
 
 #: mod/mpr/view.inc:62
-#: mod/mpr/search.inc:296
+#: mod/mpr/search.inc:252
 #: mod/mpr/edit.inc:197
-#: mod/mpr/edit.inc:408
+#: mod/mpr/edit.inc:409
 #: mod/mpr/add.inc:110
 #: mod/mpr/add.inc:461
 #: mod/dvr/edt_indv.inc:656
@@ -6960,9 +6819,9 @@ msgid "Skin Colour"
 msgstr "皮膚顏色"
 
 #: mod/mpr/view.inc:63
-#: mod/mpr/search.inc:296
+#: mod/mpr/search.inc:252
 #: mod/mpr/edit.inc:198
-#: mod/mpr/edit.inc:409
+#: mod/mpr/edit.inc:410
 #: mod/mpr/add.inc:111
 #: mod/mpr/add.inc:462
 #: mod/dvr/edt_indv.inc:658
@@ -6971,9 +6830,9 @@ msgid "Hair Colour"
 msgstr "頭髮顏色"
 
 #: mod/mpr/view.inc:64
-#: mod/mpr/search.inc:296
+#: mod/mpr/search.inc:252
 #: mod/mpr/edit.inc:199
-#: mod/mpr/edit.inc:410
+#: mod/mpr/edit.inc:411
 #: mod/mpr/add.inc:112
 #: mod/mpr/add.inc:463
 #: mod/dvr/edt_indv.inc:453
@@ -6984,9 +6843,9 @@ msgid "Height"
 msgstr "身高"
 
 #: mod/mpr/view.inc:65
-#: mod/mpr/search.inc:296
+#: mod/mpr/search.inc:252
 #: mod/mpr/edit.inc:200
-#: mod/mpr/edit.inc:411
+#: mod/mpr/edit.inc:412
 #: mod/mpr/add.inc:113
 #: mod/mpr/add.inc:464
 #: mod/dvr/edt_indv.inc:454
@@ -6998,11 +6857,11 @@ msgstr "體重"
 
 #: mod/mpr/view.inc:66
 #: mod/mpr/view.inc:86
-#: mod/mpr/search.inc:308
+#: mod/mpr/search.inc:264
 #: mod/mpr/edit.inc:201
 #: mod/mpr/edit.inc:207
-#: mod/mpr/edit.inc:412
-#: mod/mpr/edit.inc:451
+#: mod/mpr/edit.inc:413
+#: mod/mpr/edit.inc:452
 #: mod/mpr/add.inc:465
 #: mod/mpr/add.inc:504
 msgid "Comments"
@@ -7010,14 +6869,14 @@ msgstr "備註"
 
 #: mod/mpr/view.inc:70
 #: mod/mpr/edit.inc:177
-#: mod/mpr/edit.inc:422
+#: mod/mpr/edit.inc:423
 #: mod/mpr/add.inc:475
 msgid "Contact Details"
 msgstr "聯絡方式詳細內容"
 
 #: mod/mpr/view.inc:74
 #: mod/mpr/edit.inc:179
-#: mod/mpr/edit.inc:439
+#: mod/mpr/edit.inc:440
 #: mod/mpr/add.inc:89
 #: mod/mpr/add.inc:492
 msgid "Postal Code"
@@ -7025,7 +6884,7 @@ msgstr "郵遞區號"
 
 #: mod/mpr/view.inc:75
 #: mod/mpr/edit.inc:180
-#: mod/mpr/edit.inc:440
+#: mod/mpr/edit.inc:441
 #: mod/mpr/add.inc:90
 #: mod/mpr/add.inc:493
 #: mod/dvr/edt_indv.inc:231
@@ -7037,7 +6896,7 @@ msgstr "住家電話"
 
 #: mod/mpr/view.inc:83
 #: mod/mpr/edit.inc:204
-#: mod/mpr/edit.inc:448
+#: mod/mpr/edit.inc:449
 #: mod/mpr/add.inc:117
 #: mod/mpr/add.inc:501
 #: mod/dvr/edt_indv.inc:455
@@ -7048,17 +6907,17 @@ msgid "Blood Type"
 msgstr "血型"
 
 #: mod/mpr/view.inc:84
-#: mod/mpr/search.inc:308
+#: mod/mpr/search.inc:264
 #: mod/mpr/edit.inc:205
-#: mod/mpr/edit.inc:449
+#: mod/mpr/edit.inc:450
 #: mod/mpr/add.inc:502
 msgid "Last Seen"
 msgstr "上一次看見他/她 是在"
 
 #: mod/mpr/view.inc:85
-#: mod/mpr/search.inc:308
+#: mod/mpr/search.inc:264
 #: mod/mpr/edit.inc:206
-#: mod/mpr/edit.inc:450
+#: mod/mpr/edit.inc:451
 #: mod/mpr/add.inc:503
 msgid "Last Clothing"
 msgstr "最後的衣著"
@@ -7068,10 +6927,10 @@ msgid "People that are tracking"
 msgstr "追蹤者"
 
 #: mod/mpr/view.inc:91
-#: mod/mpr/search.inc:302
-#: mod/mpr/search.inc:325
-#: mod/mpr/search.inc:409
-#: mod/mpr/edit.inc:686
+#: mod/mpr/search.inc:258
+#: mod/mpr/search.inc:284
+#: mod/mpr/search.inc:368
+#: mod/mpr/edit.inc:687
 #: mod/msg/handler_cap_view.inc:65
 #: mod/msg/handler_cap_view.inc:74
 #: mod/msg/handler_cap_view.inc:85
@@ -7091,102 +6950,106 @@ msgid "Basic Search"
 msgstr "搜尋"
 
 #: mod/mpr/search.inc:41
+msgid "Please try to lookup the people with the the fields below"
+msgstr "請以搜尋方式找出您欲編輯的失蹤/受難者資料"
+
+#: mod/mpr/search.inc:43
 #: mod/dvr/search_individual.inc:47
 #: mod/dvr/search_group.inc:43
 msgid "Any Card Number"
 msgstr "其他證件號碼"
 
-#: mod/mpr/search.inc:42
+#: mod/mpr/search.inc:44
 #: mod/dvr/search_individual.inc:48
 #: mod/dvr/search_group.inc:44
 msgid "Any Name"
 msgstr "名字（姓、名、或當地姓名均可）"
 
-#: mod/mpr/search.inc:44
+#: mod/mpr/search.inc:46
 #: mod/dvr/search_individual.inc:49
 msgid "All incidents"
 msgstr "所有事故"
 
-#: mod/mpr/search.inc:66
+#: mod/mpr/search.inc:68
 #: mod/dvr/search_individual.inc:127
 #: mod/dvr/search_group.inc:132
 msgid "Identity Card"
 msgstr "身分證"
 
-#: mod/mpr/search.inc:227
-#: mod/mpr/search.inc:237
+#: mod/mpr/search.inc:182
+#: mod/mpr/search.inc:192
 msgid "Total"
 msgstr "總計"
 
-#: mod/mpr/search.inc:227
-#: mod/mpr/search.inc:237
+#: mod/mpr/search.inc:182
+#: mod/mpr/search.inc:192
 msgid "Records were found"
 msgstr "符合搜尋條件的資料如下"
 
-#: mod/mpr/search.inc:244
+#: mod/mpr/search.inc:199
 msgid "First"
 msgstr "第一筆"
 
-#: mod/mpr/search.inc:244
-#: mod/mpr/search.inc:246
-#: mod/mpr/search.inc:251
-#: mod/mpr/search.inc:253
+#: mod/mpr/search.inc:199
+#: mod/mpr/search.inc:201
+#: mod/mpr/search.inc:206
+#: mod/mpr/search.inc:208
 #: mod/rms/handler_req_ls.inc:148
 #: mod/rms/handler_plg_ls.inc:131
 msgid "Records"
 msgstr "記錄"
 
-#: mod/mpr/search.inc:253
+#: mod/mpr/search.inc:208
 msgid "Last"
 msgstr "最後一筆"
 
-#: mod/mpr/search.inc:275
+#: mod/mpr/search.inc:231
 #: mod/mpr/edit.inc:369
 msgid "Person"
 msgstr "失蹤/受災者"
 
-#: mod/mpr/search.inc:277
+#: mod/mpr/search.inc:233
 msgid "Associated People"
 msgstr "目前追蹤者"
 
-#: mod/mpr/search.inc:278
+#: mod/mpr/search.inc:234
 msgid "Missing Details"
 msgstr "失蹤時的外觀與其他相關特徵"
 
-#: mod/mpr/search.inc:280
+#: mod/mpr/search.inc:236
 msgid "Reported Person"
 msgstr "報告者"
 
-#: mod/mpr/search.inc:281
-#: mod/mpr/search.inc:331
-#: mod/mpr/search.inc:396
-#: mod/mpr/search.inc:418
+#: mod/mpr/search.inc:237
+#: mod/mpr/search.inc:290
+#: mod/mpr/search.inc:355
+#: mod/mpr/search.inc:377
 #: mod/rms/handler_mng_ff.inc:159
 #: mod/rms/lib_rms.inc:870
 msgid "Select"
 msgstr "選取"
 
-#: mod/mpr/search.inc:303
-#: mod/mpr/edit.inc:699
+#: mod/mpr/search.inc:259
+#: mod/mpr/edit.inc:700
 #: mod/mpr/admin.inc:227
 msgid "Add Tracker"
 msgstr "加入追蹤"
 
-#: mod/mpr/search.inc:303
+#: mod/mpr/search.inc:259
 msgid "Associate another person"
 msgstr " 建立其他追蹤者"
 
-#: mod/mpr/search.inc:314
-#: mod/mpr/search.inc:415
+#: mod/mpr/search.inc:270
+#: mod/mpr/search.inc:374
 msgid "Change the status to Alive & Well"
 msgstr "變更狀態為倖存"
 
-#: mod/mpr/search.inc:316
-#: mod/mpr/search.inc:415
+#: mod/mpr/search.inc:272
+#: mod/mpr/search.inc:374
 msgid "Click to change to found"
 msgstr "★點選此處，變更此人為「倖存（且無受傷）」"
 
-#: mod/mpr/search.inc:319
+#: mod/mpr/search.inc:275
 #: mod/mpr/audit.inc:26
 msgid "Audit"
 msgstr "稽核"
@@ -7214,8 +7077,8 @@ msgstr "替換目前的圖片"
 #: mod/mpr/images.inc:24
 #: mod/mpr/add.inc:81
 #: mod/mpr/add.inc:85
+#: mod/mpr/add.inc:365
 #: mod/mpr/add.inc:366
-#: mod/mpr/add.inc:367
 #: mod/dvr/edt_indv.inc:189
 #: mod/dvr/edt_indv.inc:214
 #: mod/dvr/add_new_indv.inc:130
@@ -7243,30 +7106,30 @@ msgstr "無效的圖片類型。請再試一次。"
 
 #: mod/mpr/edit.inc:333
 #: mod/mpr/add.inc:181
-#: mod/mpr/add.inc:388
+#: mod/mpr/add.inc:387
 msgid "Invalid image type please try again"
 msgstr "無效的圖片類型，請再試一次。"
 
-#: mod/mpr/edit.inc:454
+#: mod/mpr/edit.inc:455
 msgid "Reporting People"
 msgstr "通報/追蹤者"
 
-#: mod/mpr/edit.inc:464
-#: mod/mpr/edit.inc:677
+#: mod/mpr/edit.inc:465
+#: mod/mpr/edit.inc:678
 msgid "Relationship"
 msgstr "關聯性"
 
-#: mod/mpr/edit.inc:481
+#: mod/mpr/edit.inc:482
 #: mod/admin/mmc_main.inc:140
 #: mod/admin/mmc_main.inc:161
 msgid "Confirm"
 msgstr "確認"
 
-#: mod/mpr/edit.inc:483
+#: mod/mpr/edit.inc:484
 msgid "Is the information that you've entered correct?"
 msgstr "請確認本頁資料是否正確"
 
-#: mod/mpr/edit.inc:485
+#: mod/mpr/edit.inc:486
 #: mod/mpr/add.inc:232
 #: mod/mpr/add.inc:248
 #: mod/sync/handler_upload.inc:109
@@ -7275,22 +7138,22 @@ msgstr "請確認本頁資料是否正確"
 msgid "Yes"
 msgstr "是"
 
-#: mod/mpr/edit.inc:486
+#: mod/mpr/edit.inc:487
 #: mod/mpr/add.inc:232
 #: mod/mpr/add.inc:248
 #: mod/sync/handler_upload.inc:109
 msgid "No"
 msgstr "否"
 
-#: mod/mpr/edit.inc:670
+#: mod/mpr/edit.inc:671
 msgid "Current Trackers"
 msgstr "目前追蹤者"
 
-#: mod/mpr/edit.inc:692
+#: mod/mpr/edit.inc:693
 msgid "Click to remove the tracker"
 msgstr "點選此，移除本追蹤者"
 
-#: mod/mpr/edit.inc:699
+#: mod/mpr/edit.inc:700
 msgid "Add a tracker"
 msgstr "新增追蹤者"
 
@@ -7468,44 +7331,45 @@ msgstr "編輯人員"
 msgid "ACL Base for Missing Person Registry was successfully installed"
 msgstr "成功安裝用於失蹤者登錄的 ACL 資料庫已"
 
-#: mod/mpr/admin.inc:260
+#: mod/mpr/admin.inc:261
 #: mod/dvr/admin.inc:158
 msgid "Field was successfully deleted."
 msgstr "已成功刪除欄位。"
 
-#: mod/mpr/admin.inc:286
+#: mod/mpr/admin.inc:287
 msgid " was successfully added."
 msgstr "已經加入"
 
-#: mod/mpr/admin.inc:315
+#: mod/mpr/admin.inc:314
+#: mod/mpr/admin.inc:369
+msgid "AddNew"
+msgstr "新增"
+
+#: mod/mpr/admin.inc:318
 msgid "Please  enter the code"
 msgstr "請輸入編碼"
 
-#: mod/mpr/admin.inc:316
+#: mod/mpr/admin.inc:319
 msgid "Please  enter the description"
 msgstr "請輸入說明"
 
-#: mod/mpr/admin.inc:319
+#: mod/mpr/admin.inc:322
 msgid "Code already exists"
 msgstr "code 已存在"
 
-#: mod/mpr/admin.inc:337
-#: mod/mpr/admin.inc:364
+#: mod/mpr/admin.inc:340
+#: mod/mpr/admin.inc:367
 #: mod/dvr/admin.inc:55
 #: mod/msg/handler_cap_edit.inc:103
 #: mod/msg/handler_cap_new.inc:94
 msgid "Code"
 msgstr "Code"
 
-#: mod/mpr/admin.inc:363
+#: mod/mpr/admin.inc:366
 #: mod/admin/ims_level.inc:60
 #: mod/admin/ims_level.inc:217
-#: mod/admin/ims_level.inc:401
+#: mod/admin/ims_level.inc:402
 msgid "Add New "
-msgstr "新增"
-
-#: mod/mpr/admin.inc:366
-msgid "AddNew"
 msgstr "新增"
 
 #: mod/mpr/home.inc:32
@@ -7648,29 +7512,29 @@ msgstr "檢視人員"
 msgid "Found Person Entry"
 msgstr "倖存者清單"
 
-#: mod/mpr/main.inc:348
+#: mod/mpr/main.inc:353
 msgid "Missing Person Entry"
 msgstr "通報失蹤者"
 
-#: mod/mpr/main.inc:357
-#: mod/mpr/main.inc:367
-#: mod/mpr/main.inc:406
-#: mod/mpr/main.inc:415
+#: mod/mpr/main.inc:363
+#: mod/mpr/main.inc:373
+#: mod/mpr/main.inc:412
+#: mod/mpr/main.inc:421
 #: mod/mpr/add.inc:507
 msgid "Reporting Person"
 msgstr "通報者"
 
-#: mod/mpr/main.inc:361
+#: mod/mpr/main.inc:367
 msgid "Person Details"
 msgstr "人員細節"
 
-#: mod/mpr/main.inc:374
-#: mod/mpr/main.inc:401
+#: mod/mpr/main.inc:380
+#: mod/mpr/main.inc:407
 #: inc/lib_validate.inc:125
 msgid "The "
 msgstr "這個"
 
-#: mod/mpr/main.inc:384
+#: mod/mpr/main.inc:390
 msgid "Please Select the person who is reporting"
 msgstr "請選擇通報者"
 
@@ -7759,7 +7623,7 @@ msgstr "其他能夠幫助我們找到這名失蹤者的資訊"
 #: mod/pref/ims_config.inc:48
 #: mod/admin/ims_level.inc:82
 #: mod/admin/ims_level.inc:247
-#: mod/admin/ims_level.inc:424
+#: mod/admin/ims_level.inc:425
 #: mod/admin/ims_assign.inc:88
 #: mod/admin/ims_config.inc:40
 msgid "You have not completed the form"
@@ -7793,23 +7657,23 @@ msgstr "您曾經回報過嗎？"
 msgid "Are you a disaster victim too? "
 msgstr "您也是災難受災者？"
 
-#: mod/mpr/add.inc:263
+#: mod/mpr/add.inc:264
 msgid "If you are a victim, Please specify the status"
 msgstr "如果您是受災者，請說明狀況"
 
-#: mod/mpr/add.inc:269
+#: mod/mpr/add.inc:270
 msgid "Details of the reporting person"
 msgstr "通報人的資訊"
 
-#: mod/mpr/add.inc:271
+#: mod/mpr/add.inc:272
 msgid "NOTE : If you have reported before, we will use the following information to perform a search to see you are in our database or not."
 msgstr "注意：如果您之前通報過，我們將使用下列資訊來進行搜尋，以了解是否已存在我們的資料庫。"
 
-#: mod/mpr/add.inc:291
+#: mod/mpr/add.inc:292
 msgid "IMPORTANT : At least one of the following contact method is required"
 msgstr "重要：至少需要下列聯絡方法之一"
 
-#: mod/mpr/add.inc:322
+#: mod/mpr/add.inc:323
 msgid "Please enter the full name of the reporting person"
 msgstr "請輸入通報者的全名"
 
@@ -7817,15 +7681,15 @@ msgstr "請輸入通報者的全名"
 msgid "Please enter a valid E-mail"
 msgstr "請輸入一個有效的電子郵件"
 
-#: mod/mpr/add.inc:340
+#: mod/mpr/add.inc:339
 msgid "Please enter any contact method of the reporting person"
 msgstr "請輸入任何可以聯絡通報者的聯絡方式"
 
-#: mod/mpr/add.inc:363
+#: mod/mpr/add.inc:362
 msgid "If you have a picture of the missing person, please upload the picture. So, that it will be easy for us to identify the person. <br />If you don't have a picture to upload just click the \"Next\" button."
 msgstr "如果您有失蹤者的照片，請上傳照片。這樣將有助於找出失蹤者。<br />如果您沒有此位失蹤者的照片，請點選'下一步'。"
 
-#: mod/mpr/add.inc:425
+#: mod/mpr/add.inc:424
 msgid "Missing Person"
 msgstr "失蹤者"
 
@@ -7999,7 +7863,7 @@ msgid "The uploaded file exceeds the MAX upload size"
 msgstr "要上傳檔案超過最大可容許的大小"
 
 #: mod/sync/handler_upload.inc:40
-#: inc/lib_image.inc:322
+#: inc/lib_image.inc:331
 msgid "The uploaded file was only partially uploaded."
 msgstr "上傳檔案只有部分被上傳"
 
@@ -8148,34 +8012,34 @@ msgstr "伺服器網址"
 msgid "Next >>"
 msgstr "下一個 >>"
 
-#: mod/pref/ims_main.inc:41
+#: mod/pref/ims_main.inc:42
 #: inc/lib_security/auth_form.inc:225
 msgid "Old password cannot be empty"
 msgstr "舊密碼不能為空白"
 
-#: mod/pref/ims_main.inc:48
+#: mod/pref/ims_main.inc:49
 #: inst/setup.inc:653
 msgid "User password cannot be empty"
 msgstr "使用者密碼不能為空白"
 
-#: mod/pref/ims_main.inc:55
+#: mod/pref/ims_main.inc:56
 #: inst/setup.inc:659
 msgid "User Confirm password cannot be empty"
 msgstr "使用者確認密碼不能為空白"
 
-#: mod/pref/ims_main.inc:62
+#: mod/pref/ims_main.inc:63
 msgid "User password and confirm password should match"
 msgstr "使用者密碼和確認密碼必須相同"
 
-#: mod/pref/ims_main.inc:79
+#: mod/pref/ims_main.inc:80
 msgid "You cannot change the password more than once in one day"
 msgstr "對不起，一天之內您只能做一次密碼更改"
 
-#: mod/pref/ims_main.inc:105
+#: mod/pref/ims_main.inc:106
 msgid "You cannot choose one of the recent four passwords"
 msgstr "您的密碼已在最近的四次更改中使用過，為了您的安全，請選擇新的密碼"
 
-#: mod/pref/ims_main.inc:119
+#: mod/pref/ims_main.inc:120
 msgid " Succesfully changed Password "
 msgstr "成功更改了密碼！"
 
@@ -8256,7 +8120,7 @@ msgstr "已成功註冊為使用者"
 
 #: mod/admin/ims_level.inc:26
 #: mod/admin/ims_level.inc:169
-#: mod/admin/ims_level.inc:351
+#: mod/admin/ims_level.inc:352
 #: mod/admin/ims_menus.inc:2
 #: mod/admin/ims_menus.inc:3
 #: mod/admin/ims_menus.inc:4
@@ -8269,13 +8133,13 @@ msgid "Please enter the name for %s"
 msgstr "請輸入 %s 的名稱"
 
 #: mod/admin/ims_level.inc:90
-#: mod/admin/ims_level.inc:434
+#: mod/admin/ims_level.inc:435
 #, php-format
 msgid "If there is/are no %1$s(s), please add a new %2$s"
 msgstr "如果沒有 %1$s(s)，請新增一個 %2$s"
 
 #: mod/admin/ims_level.inc:252
-#: mod/admin/ims_level.inc:429
+#: mod/admin/ims_level.inc:430
 #, php-format
 msgid "Please enter a name for the %s"
 msgstr "請輸入 %s 的名稱"
@@ -8289,26 +8153,26 @@ msgstr "請選擇一項 %s"
 msgid " is already exists."
 msgstr "已經存在"
 
-#: mod/admin/ims_level.inc:433
+#: mod/admin/ims_level.inc:434
 #, php-format
 msgid "Please select a %s."
 msgstr "請選擇一項%s"
 
-#: mod/admin/ims_level.inc:501
+#: mod/admin/ims_level.inc:502
 msgid " Already exists under "
 msgstr "已經存於"
 
-#: mod/admin/ims_main.inc:22
+#: mod/admin/ims_main.inc:23
 #: mod/admin/main.inc:78
 msgid "Manage Disaster"
 msgstr "管理災難"
 
-#: mod/admin/ims_main.inc:43
+#: mod/admin/ims_main.inc:45
 msgid "Manage Events"
 msgstr "管理事件"
 
-#: mod/admin/ims_main.inc:58
-#: mod/admin/ims_main.inc:81
+#: mod/admin/ims_main.inc:61
+#: mod/admin/ims_main.inc:86
 msgid "Please activate the disaster levels first"
 msgstr "請先將災難層級啟用"
 
@@ -8642,12 +8506,12 @@ msgid "Upload Spread Sheet : "
 msgstr "上傳試算表："
 
 #: mod/admin/lc_translate.inc:35
-#: mod/admin/lc_translate.inc:247
+#: mod/admin/lc_translate.inc:248
 msgid "Get New List"
 msgstr "取得新列表"
 
 #: mod/admin/lc_translate.inc:43
-#: mod/admin/lc_translate.inc:255
+#: mod/admin/lc_translate.inc:256
 msgid "Load Existing List"
 msgstr "載入現有列表"
 
@@ -8702,29 +8566,29 @@ msgstr "新字串合併成功，請按『讀取現有列表』按鈕"
 msgid "Please create the file first"
 msgstr "請先建立檔案"
 
-#: mod/admin/lc_translate.inc:172
+#: mod/admin/lc_translate.inc:173
 msgid "DB L10N Starts here"
 msgstr "DB L10N 從此處開始"
 
-#: mod/admin/lc_translate.inc:185
+#: mod/admin/lc_translate.inc:186
 msgid "Failed to merge database localization values."
 msgstr "無法合併資料庫本地化數值。"
 
-#: mod/admin/lc_translate.inc:194
+#: mod/admin/lc_translate.inc:195
 msgid "Translation"
 msgstr "翻譯"
 
-#: mod/admin/lc_translate.inc:233
+#: mod/admin/lc_translate.inc:234
 #, fuzzy
 msgid "Messages successfully compiled"
 msgstr "完成上傳 EDI_INV_"
 
-#: mod/admin/lc_translate.inc:235
+#: mod/admin/lc_translate.inc:236
 #, fuzzy
 msgid "Error compiling messages"
 msgstr "錯誤發生在更新這"
 
-#: mod/admin/lc_translate.inc:272
+#: mod/admin/lc_translate.inc:273
 msgid "Compile Messages"
 msgstr "編譯訊息"
 
@@ -13519,39 +13383,39 @@ msgstr "* 存貨"
 msgid "* an Organization "
 msgstr "* 組織"
 
-#: inc/lib_location.inc:626
+#: inc/lib_location.inc:628
 msgid "Select a Camp/Shelter"
 msgstr "選擇營地/庇護所"
 
-#: inc/lib_location.inc:650
+#: inc/lib_location.inc:652
 msgid "Shelter/Camp"
 msgstr "避難所/營地"
 
-#: inc/lib_location.inc:658
+#: inc/lib_location.inc:660
 msgid "Select an Organization"
 msgstr "選擇組織"
 
-#: inc/lib_location.inc:671
+#: inc/lib_location.inc:673
 msgid "Organizations"
 msgstr "組織"
 
-#: inc/lib_location.inc:731
+#: inc/lib_location.inc:733
 msgid "This location name is already in the database. Do you want to add anyway?  &nbsp&nbsp&nbsp<b><a href='#' onclick='_shn_loc_val_name();'>Add anyway</a></b> or else you can change the \"Location Name\" textbox and submit the form again."
 msgstr "該位置名稱已經存在資料庫。你還是想要新增嗎？ &nbsp&nbsp&nbsp<b><a href='#' onclick='_shn_loc_val_name();'>我要新增</a></b> 。或者你可以修改位置名稱的欄位，重新送出此表單。"
 
-#: inc/lib_location.inc:741
+#: inc/lib_location.inc:743
 msgid "Containts numbers. These are not allowed. Please remove them and try again."
 msgstr "內含數量。These are not allowed. Please remove them and try again."
 
-#: inc/lib_location.inc:823
+#: inc/lib_location.inc:825
 msgid "Select the location based at.  This is hierarchical. For example think you are based  in the country 'Sri lanka' ,district 'Colombo' ,and village 'dehiwala'.  start by selecting the country ,once you select country"
 msgstr "選擇所在的位置。這是階層式的。舉例來說，位置是台灣、高雄縣、甲仙鄉，請先選擇國家，然後再選擇縣市、鄉鎮。"
 
-#: inc/lib_location.inc:909
+#: inc/lib_location.inc:911
 msgid "Select the location based at.  This is hierarchical. For example think you are based  in the  'Sri lanka' ,district 'Colombo' ,and village 'dehiwala'.  start by selecting the  ,once you select all the divisions of that country will populate the next select box.  therefore in this case all the districts in 'Sri lanka' appear . From those select a district which will populate the village list in the next select box. So select 'dehiwala' and you have done it!please note that the levels can be customized, therefore it does not need to be 'country'->'district'->'village' ,always. Its configurable from the 'administration' section."
 msgstr "請選擇「台灣 Taiwan」"
 
-#: inc/lib_location.inc:971
+#: inc/lib_location.inc:973
 msgid ""
 "Select the location based at.  This is hierarchical. For example think you are based  in the country 'Sri lanka' ,district 'Colombo' ,and village 'dehiwala'.  start by selecting the country ,once you select country \n"
 "all the divisions of that country will populate the next select box.  therefore in this case all the districts in 'Sri lanka' appear . From those select a district which will populate the village list in the next select box. So select 'dehiwala' and you have done it! \n"
@@ -13635,19 +13499,19 @@ msgstr "找不到資料"
 msgid "Page "
 msgstr "頁"
 
-#: inc/handler_db.inc:175
+#: inc/handler_db.inc:183
 msgid "Incident"
 msgstr "事故"
 
-#: inc/lib_misc.inc:201
+#: inc/lib_misc.inc:202
 msgid "Whitespace is not a valid input."
 msgstr "空格不是合法的輸入。"
 
-#: inc/lib_misc.inc:213
+#: inc/lib_misc.inc:214
 msgid "The type already exists in the list"
 msgstr "該類型已存在於列表裡"
 
-#: inc/lib_misc.inc:222
+#: inc/lib_misc.inc:223
 msgid "The Type Exists,you just added it"
 msgstr "此類型已存在，你已經新增了"
 
@@ -13656,35 +13520,35 @@ msgid "UUID is NULL"
 msgstr "UUID 是 NULL"
 
 #: inc/lib_image.inc:196
-#: inc/lib_image.inc:221
+#: inc/lib_image.inc:224
 msgid "Image Not Available"
 msgstr "沒有圖片"
 
-#: inc/lib_image.inc:238
+#: inc/lib_image.inc:247
 msgid "Click to see the original size"
 msgstr "請點選以瀏覽原始檔案大小"
 
-#: inc/lib_image.inc:318
+#: inc/lib_image.inc:327
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini. (<"
 msgstr "上傳檔案超過了 php.ini 裡所指定的最大檔案大小（upload_max_filesize ）。"
 
-#: inc/lib_image.inc:320
+#: inc/lib_image.inc:329
 msgid "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form."
 msgstr "上傳檔案超出了HTML表單裡所指定的MAX_FILE_SIZE （最大檔案大小）。"
 
-#: inc/lib_image.inc:324
+#: inc/lib_image.inc:333
 msgid "No file was uploaded."
 msgstr "檔案沒有上傳。"
 
-#: inc/lib_image.inc:326
+#: inc/lib_image.inc:335
 msgid "Missing a temporary folder."
 msgstr "缺少暫存資料夾。"
 
-#: inc/lib_image.inc:328
+#: inc/lib_image.inc:337
 msgid "Failed to write file to disk."
 msgstr "無法將檔案寫入硬碟。"
 
-#: inc/lib_image.inc:330
+#: inc/lib_image.inc:339
 msgid "File upload stopped by extension."
 msgstr "檔案上傳停止。"
 
@@ -13880,8 +13744,4 @@ msgstr "Sahana 主選單"
 #: inc/lib_menu.inc:237
 msgid "Switch back to"
 msgstr "切換到"
-
-#: added manually
-msgid "Please try to lookup the people with the the fields below"
-msgstr "請以搜尋方式找出您欲編輯的失蹤/受難者資料"
 
