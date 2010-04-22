@@ -13,6 +13,14 @@
 * @copyright  Lanka Software Foundation - http://www.opensource.lk
 *
 */
+require_once ('../3rd/adodb/adodb.inc.php');
+require_once ('../conf/sysconf.inc');
+$db = NewADOConnection($conf['db_engine']);
+$db->Connect($conf['db_host'] . ($conf['db_port'] ? ':' . $conf['db_port'] : ''), $conf['db_user'], $conf['db_pass'], $conf['db_name']);
+if($conf['db_engine'] == 'mysql') {
+    $db->Execute('SET NAMES utf8;');
+}
+
 $act = $_GET["act"];
 if ($act == 'add_loc') {
     _shn_get_level_location();
@@ -26,14 +34,6 @@ if ($act == 'add_loc') {
     _shn_get_victims();
 } else {
     _shn_get_children();
-}
-
-require_once ('../3rd/adodb/adodb.inc.php');
-require_once ('../conf/sysconf.inc');
-$db = NewADOConnection($conf['db_engine']);
-$db->Connect($conf['db_host'] . ($conf['db_port'] ? ':' . $conf['db_port'] : ''), $conf['db_user'], $conf['db_pass'], $conf['db_name']);
-if($conf['db_engine'] == 'mysql') {
-    $db->Execute('SET NAMES utf8;');
 }
 
 function _shn_get_units() {

@@ -44,9 +44,8 @@ function shn_location_get_form_submit_loc() {
     $n_lvl = !empty($_POST["levels"]) ? $_POST["levels"] : ''; //the hidden $_POST variable which indicates the max no of levels
     while ($n_lvl > 0) {
         $lvl = "loc_select_" . $n_lvl;
-        if ((isset($_POST["$lvl"])) && ($_POST["$lvl"] != "0")) {
-            return $_POST["$lvl"]; //as soon as you find a selected location return
-            
+        if ((isset($_POST[$lvl])) && ($_POST[$lvl] != "0")) {
+            return $_POST[$lvl]; //as soon as you find a selected location return
         }
         $n_lvl--;
     }
@@ -715,7 +714,7 @@ function _shn_location_camp_list() {
  * @return void
  */
 function shn_location_add() {
-    if ($_POST['loc_name'] == null) {
+    if (empty($_POST['loc_name'])) {
         $msg = " You cant add a NULL(empty) value for location ";
         add_error($msg);
         return;
