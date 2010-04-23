@@ -18,7 +18,7 @@
  */
 function _shn_rms_db_addcontact($uuid, $type, $value) {
     global $global;
-    $sql = "INSERT INTO contact (pgoc_uuid, opt_contact_type, contact_value) " . "VALUES ('$uuid', '$type', '$value')";
+    $sql = "INSERT INTO contact (pgoc_uuid, opt_contact_type, contact_value) VALUES ('$uuid', '$type', '$value')";
     if ($global['db']->Execute($sql) === false) {
         $msg = $global['db']->ErrorMsg();
         add_error($msg . '<br />' . $sql);
@@ -30,7 +30,7 @@ function _shn_rms_db_addcontact($uuid, $type, $value) {
 }
 function _snf_rms_db_is_contactex($uuid, $type) {
     global $global;
-    $sql = "SELECT pgoc_uuid, opt_contact_type FROM contact " . "WHERE pgoc_uuid='$uuid'" . "AND opt_contact_type='$type'";
+    $sql = "SELECT pgoc_uuid, opt_contact_type FROM contact WHERE pgoc_uuid='$uuid'" . "AND opt_contact_type='$type'";
     $rs = $global['db']->Execute($sql);
     if ($rs === false) {
         $msg = $global['db']->ErrorMsg();

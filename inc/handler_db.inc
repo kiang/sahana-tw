@@ -119,7 +119,7 @@ function shn_db_insert($arr, $table, $audit = true, $primary_field = '') {
         if ($v == '') $values.= "'NULL', ";
         elseif ($v == 'TRUE') $values.= "TRUE, ";
         else $values.= shn_db_clean($v) . ", ";
-        if ($audit) $sql_audit[] = "INSERT INTO audit (x_uuid, u_uuid, change_type, " . "change_table, change_field, new_val ) VALUES ( " . "'$x_uuid' , '$u_uuid', 'ins' , '$table' , '$k' , " . shn_db_clean($v) . " )";
+        if ($audit) $sql_audit[] = "INSERT INTO audit (x_uuid, u_uuid, change_type, change_table, change_field, new_val ) VALUES ( '$x_uuid' , '$u_uuid', 'ins' , '$table' , '$k' , " . shn_db_clean($v) . " )";
     }
     $keys = substr($keys, 0, strlen($keys) - 2);
     $values = substr($values, 0, strlen($values) - 2);

@@ -343,7 +343,7 @@ function shn_dvr_cklst_and_desc() {
     print '<div class="info">';
     print _("You are able to make requests for items/aid here. Select the checkbox(s) in front of the required item(s).");
     print '</div>';
-    $extra_opts['help'] = _("Please select items " . "tick the Check Box (Optional)");
+    $extra_opts['help'] = _("Please select items tick the Check Box (Optional)");
     $extra_opts['selected'] = $_SESSION['dvr']['group']['opt_dvr_service'];
     shn_form_opt_checkbox(_("opt_dvr_service"), $extra_opts);
     shn_form_fsclose();

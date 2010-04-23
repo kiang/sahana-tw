@@ -504,7 +504,7 @@ class SearchQuery {
     function set_serial_no($serial_no) {
         $this->__serial_no = $serial_no;
         if(!empty($this->__serial_no)) {
-            $join = " LEFT OUTER JOIN identity_to_person ON " . " person_status.p_uuid = identity_to_person.p_uuid ";
+            $join = " LEFT OUTER JOIN identity_to_person ON  person_status.p_uuid = identity_to_person.p_uuid ";
             if (empty($this->__joins) || !in_array($join, $this->__joins)) {
                 $this->__joins[] = $join;
             }
@@ -523,7 +523,7 @@ class SearchQuery {
     function set_idcard_no($idcard_no) {
         $this->__idcard_no = $idcard_no;
         if (!empty($this->__idcard_no)) {
-            $join = " LEFT OUTER JOIN identity_to_person ON " . " person_status.p_uuid = identity_to_person.p_uuid ";
+            $join = " LEFT OUTER JOIN identity_to_person ON  person_status.p_uuid = identity_to_person.p_uuid ";
             if (empty($this->__joins) || !in_array($join, $this->__joins)) {
                 $this->__joins[] = $join;
             }
@@ -542,7 +542,7 @@ class SearchQuery {
     function set_phone($phone) {
         $this->__phone = $phone;
         if(!empty($this->__phone)) {
-            $this->__joins[] = " LEFT OUTER JOIN contact ON " . " person_status.p_uuid = contact.pgoc_uuid AND contact.opt_contact_type = 'curr'";
+            $this->__joins[] = " LEFT OUTER JOIN contact ON  person_status.p_uuid = contact.pgoc_uuid AND contact.opt_contact_type = 'curr'";
             $this->__where[] = " contact.contact_value LIKE '%{$this->__phone}%' ";
         }
     }

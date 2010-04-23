@@ -136,7 +136,7 @@ function shn_cr_all_view() {
     $i = 1 - 1;
     while ($i < 5) {
         $i++;
-        $sql = " SELECT location.name , field_options.option_description FROM location " . " INNER JOIN field_options ON field_options.option_code = location.opt_location_type " . " WHERE location.opt_location_type = '$i' AND " . " location.loc_uuid = '{$_SESSION['opt_location_type']}' ";
+        $sql = " SELECT location.name , field_options.option_description FROM location  INNER JOIN field_options ON field_options.option_code = location.opt_location_type  WHERE location.opt_location_type = '$i' AND  location.loc_uuid = '{$_SESSION['opt_location_type']}' ";
         $result = $global['db']->GetRow($sql);
         shn_form_label($result['option_description'], $result['name']);
     }

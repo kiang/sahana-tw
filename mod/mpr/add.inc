@@ -483,7 +483,7 @@ function shn_mpr_addmp_confirm() {
     while ($i < $conf['mod_mpr_location_lower_limit']) {
         $i++;
         if (isset($_SESSION['mpr_add']['entry'][$i])) {
-            $sql = " SELECT location.name , field_options.option_description FROM location " . " INNER JOIN field_options ON field_options.option_code = location.opt_location_type " . " WHERE location.opt_location_type = '$i' AND " . " location.loc_uuid = '{$_SESSION['mpr_add']['entry'][$i]}' ";
+            $sql = " SELECT location.name , field_options.option_description FROM location  INNER JOIN field_options ON field_options.option_code = location.opt_location_type  WHERE location.opt_location_type = '$i' AND  location.loc_uuid = '{$_SESSION['mpr_add']['entry'][$i]}' ";
             $result = $global['db']->GetRow($sql);
             shn_form_label($result['option_description'], $result['name']);
         }
@@ -815,7 +815,7 @@ function shn_add_person_to_report($p_uuid, $rep_uuid, $relation) {
  */
 function shn_add_get_tracker_details($p_uuid) {
     global $global;
-    $rs = $global['db']->GetRow("SELECT a.full_name, b.address , c.contact_value as phone, d.contact_value as email FROM person_uuid a " . "LEFT OUTER JOIN location_details b ON a.p_uuid = b.poc_uuid AND b.opt_person_loc_type = 'hom' " . "LEFT OUTER JOIN contact c ON a.p_uuid = c.pgoc_uuid AND c.opt_contact_type = 'curr' " . "LEFT OUTER JOIN contact d ON a.p_uuid = d.pgoc_uuid AND d.opt_contact_type = 'email' " . "WHERE a.p_uuid = '$p_uuid'");
+    $rs = $global['db']->GetRow("SELECT a.full_name, b.address , c.contact_value as phone, d.contact_value as email FROM person_uuid a LEFT OUTER JOIN location_details b ON a.p_uuid = b.poc_uuid AND b.opt_person_loc_type = 'hom' LEFT OUTER JOIN contact c ON a.p_uuid = c.pgoc_uuid AND c.opt_contact_type = 'curr' LEFT OUTER JOIN contact d ON a.p_uuid = d.pgoc_uuid AND d.opt_contact_type = 'email' WHERE a.p_uuid = '$p_uuid'");
     #var_dump($rs);
     $_SESSION['mpr_add']['report_person']['rep_full_name'] = $rs['full_name'];
     $_SESSION['mpr_add']['report_person']['rep_address'] = $rs['address'];

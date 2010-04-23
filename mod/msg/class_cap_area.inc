@@ -45,7 +45,7 @@ class Msg_CapArea {
             }
             $this->polygon[] = $polygon;
         } else {
-            add_error(_("The first and last pairs of coordinates MUST be the " . "same."));
+            add_error(_("The first and last pairs of coordinates MUST be the same."));
         }
     }
     /**

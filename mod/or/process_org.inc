@@ -30,7 +30,7 @@ function _shn_or_reg_org_cr() {
             //shn_form_fopen("reg_org_name_change",null,array("name"=>"confirm_name","req_message"=>false));
             shn_form_fopen("reg_org_cr", null, array("name" => "confirm_name", "req_message" => false));
             $msg = _("There is already an Organization by the name ") . "<strong>" . $_SESSION['org']['name'] . "</strong>" . _(" you are trying to register ") . "<br />";
-            $msg = $msg . _("From the below buttons ,Please Click ") . "<span style=\"color: brown;font-weight:bolder\">" . _("Continue") . "</span>" . " to continue with this name or Click " . "<span style=\"color: green;font-weight:bolder\">" . _("Edit") . "</span>" . _(" to Change the Name") . "<br />";
+            $msg = $msg . _("From the below buttons ,Please Click ") . "<span style=\"color: brown;font-weight:bolder\">" . _("Continue") . "</span>" . " to continue with this name or Click <span style=\"color: green;font-weight:bolder\">" . _("Edit") . "</span>" . _(" to Change the Name") . "<br />";
             add_warning($msg);
             $extra_opts['br'] = false;
             $extra_opts['req'] = false;

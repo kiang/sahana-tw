@@ -27,7 +27,7 @@
 <?php
 function shn_audit_show($x_uuid) {
     global $global;
-    $sql = "SELECT a.updated, b.full_name, a.change_table, a.change_field, " . "a.change_type, a.prev_val, a.new_val FROM audit a LEFT OUTER JOIN " . "person_uuid b ON b.p_uuid = a.u_uuid WHERE a.x_uuid = '$x_uuid' ";
+    $sql = "SELECT a.updated, b.full_name, a.change_table, a.change_field, a.change_type, a.prev_val, a.new_val FROM audit a LEFT OUTER JOIN person_uuid b ON b.p_uuid = a.u_uuid WHERE a.x_uuid = '$x_uuid' ";
     $arr_result = $global['db']->GetAll($sql);
     //    echo ' <a title="'._('Download').'"'.
     //        'href="index.php?mod='.$global['module'].'&act=auditmp&id='.

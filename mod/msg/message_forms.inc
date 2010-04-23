@@ -111,7 +111,7 @@ function _shn_msg_validate_add_group($group_name = NULL) {
                 add_error($mobile_temp . " is not a valid phone number");
                 $error_flag = true;
             } else if (!shn_valid_len_range($mobile_temp, $min = 5, $max = 21)) {
-                add_error($mobile_temp . " " . "is not a valid phone number!");
+                add_error($mobile_temp . " is not a valid phone number!");
                 $error_flag = true;
             }
         } //end of for loop
@@ -507,7 +507,7 @@ function _shn_msg_validate_customized_messaging() {
                     
                 }
                 if (!shn_valid_len_range($mobile_temp, $min = 5, $max = 21)) {
-                    add_error($mobile_temp . " " . "is not a valid phone number!");
+                    add_error($mobile_temp . " is not a valid phone number!");
                     $error_flag = true;
                 }
             }

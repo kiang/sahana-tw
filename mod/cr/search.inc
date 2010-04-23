@@ -25,7 +25,7 @@ function _shn_cr_srch_rst_address($camp_name, $type = 'all') {
     $db = $global['db'];
     if ($_REQUEST['edt'] == 'true') $edt = true;
     // Specific Type search
-    $query = " select cg.c_uuid,cg.name,cg.address,cg.location_id," . " total,capacity from camp_general as cg, camp_reg as cr " . "where cg.c_uuid=cr.c_uuid " . ((null == $camp_name) ? "" : " AND cg.address LIKE '%{$camp_name}%' ");
+    $query = " select cg.c_uuid,cg.name,cg.address,cg.location_id," . " total,capacity from camp_general as cg, camp_reg as cr where cg.c_uuid=cr.c_uuid " . ((null == $camp_name) ? "" : " AND cg.address LIKE '%{$camp_name}%' ");
     //echo "q=".$query;
     // 	$res_cmp =$db->Execute($query);
     
@@ -103,7 +103,7 @@ function _shn_cr_srch_rst($camp_name, $type) {
     //$db->debug=true;
     if ($_REQUEST['edt'] == 'true') $edt = true;
     // Specific Type search
-    $query = " select cg.c_uuid,cg.name,cg.address,cg.location_id," . " option_description, " . " total,capacity from camp_general as cg, camp_reg as cr " . ", field_options as fo " . " where cg.c_uuid=cr.c_uuid " . (($type == "all") ? "" : " AND option_code='{$type}' ") . " AND field_name='opt_camp_type' " . " AND opt_camp_type=fo.option_code " . ((null == $camp_name) ? "" : " AND cg.name LIKE '%{$camp_name}%' ");
+    $query = " select cg.c_uuid,cg.name,cg.address,cg.location_id," . " option_description,  total,capacity from camp_general as cg, camp_reg as cr , field_options as fo  where cg.c_uuid=cr.c_uuid " . (($type == "all") ? "" : " AND option_code='{$type}' ") . " AND field_name='opt_camp_type'  AND opt_camp_type=fo.option_code " . ((null == $camp_name) ? "" : " AND cg.name LIKE '%{$camp_name}%' ");
     //$res_cmp =$db->Execute($query);
     
 ?>

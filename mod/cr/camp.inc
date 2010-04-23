@@ -455,19 +455,19 @@ function _shn_cr_cadd_commit_db() {
     $loc_id = _shn_cr_get_locid();
     $loc_id = $_SESSION['cr_loc'];
     //enter into camp table
-    $q = "INSERT INTO camp_general(c_uuid,name,location_id,opt_camp_type,address,capacity) " . "VALUES('{$uid}','{$_SESSION['camp_name']}','{$loc_id}','{$_SESSION['opt_camp_type']}','{$_SESSION['camp_address']}','{$_SESSION['camp_capacity']}')";
+    $q = "INSERT INTO camp_general(c_uuid,name,location_id,opt_camp_type,address,capacity) VALUES('{$uid}','{$_SESSION['camp_name']}','{$loc_id}','{$_SESSION['opt_camp_type']}','{$_SESSION['camp_address']}','{$_SESSION['camp_capacity']}')";
     $res = $db->Execute($q);
     //enter into camp_reg table
-    $q = "INSERT INTO camp_reg (c_uuid,admin_name,admin_no,men,women,family,children,total) " . "VALUES ('{$uid}','{$_SESSION['camp_contact_name']}','{$_SESSION['camp_contact_number']}','{$_SESSION['camp_men']}','{$_SESSION['camp_women']}','{$_SESSION['camp_family']}','{$_SESSION['camp_children']}','{$_SESSION['camp_total']}')";
+    $q = "INSERT INTO camp_reg (c_uuid,admin_name,admin_no,men,women,family,children,total) VALUES ('{$uid}','{$_SESSION['camp_contact_name']}','{$_SESSION['camp_contact_number']}','{$_SESSION['camp_men']}','{$_SESSION['camp_women']}','{$_SESSION['camp_family']}','{$_SESSION['camp_children']}','{$_SESSION['camp_total']}')";
     $res = $db->Execute($q);
     // insert into camp admin
     $qa = "INSERT INTO camp_admin(c_uuid,contact_puuid) VALUES ('{$uid}','{$puid}')";
     $resa = $db->Execute($qa);
     // insert into person_details
-    $qb = "INSERT INTO person_details(p_uuid,occupation) " . "VALUES('{$puid}','{$_SESSION['occupation']}')";
+    $qb = "INSERT INTO person_details(p_uuid,occupation) VALUES('{$puid}','{$_SESSION['occupation']}')";
     $resb = $db->Execute($qb);
     // insert into admin contact
-    $qc = "INSERT INTO contact(pgoc_uuid,opt_contact_type,contact_value) " . "VALUES ('{$puid}','cmob','{$_SESSION['contact_mob']}')";
+    $qc = "INSERT INTO contact(pgoc_uuid,opt_contact_type,contact_value) VALUES ('{$puid}','cmob','{$_SESSION['contact_mob']}')";
     $resc = $db->Execute($qc);
     if ($conf['gis']) {
         include $global['approot'] . "/mod/gis/gis_fns.inc";

@@ -27,7 +27,7 @@ function shn_rms_make_request($item, $amount, $priority, $unit) {
     $status = 'open';
     $user_id = 'u-1';
     $q1 = "INSERT INTO rms_req_item (item_uuid,quantity,pri_uuid,req_uuid,unit) VALUES ('$item','$amount','$priority','$req_uuid','$unit')";
-    $q2 = "INSERT INTO rms_request (req_uuid, reqstr_uuid, loc_uuid, status, user_id) " . "VALUES ('$req_uuid', '$requester_uuid', '', '$status', '$user_id')";
+    $q2 = "INSERT INTO rms_request (req_uuid, reqstr_uuid, loc_uuid, status, user_id) VALUES ('$req_uuid', '$requester_uuid', '', '$status', '$user_id')";
     $res1 = $db->Execute($q1);
     $res2 = $db->Execute($q2);
     if ($res1 == NULL || $res1 == NULL) {
@@ -48,8 +48,8 @@ function shn_rms_new_pledge($item, $amount, $unit) {
     $status = 'Not Delivered';
     $user_id = 'u-1';
     $donor_uuid = shn_create_uuid('p');
-    $sql1 = "INSERT INTO rms_pledge (plg_uuid, donor_uuid, status, user_id) " . "VALUES ('$plg_uuid', '$donor_uuid', '$status', '$user_id')";
-    $sql2 = "INSERT INTO rms_plg_item (item_uuid, quantity, plg_uuid, unit) " . "VALUES ('$item', '$amount', '$plg_uuid', '$unit')";
+    $sql1 = "INSERT INTO rms_pledge (plg_uuid, donor_uuid, status, user_id) VALUES ('$plg_uuid', '$donor_uuid', '$status', '$user_id')";
+    $sql2 = "INSERT INTO rms_plg_item (item_uuid, quantity, plg_uuid, unit) VALUES ('$item', '$amount', '$plg_uuid', '$unit')";
     $res1 = $db->Execute($sql1);
     $res2 = $db->Execute($sql2);
     if ($res1 == NULL || $res2 == NULL) {

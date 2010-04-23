@@ -32,7 +32,7 @@ function __show_basic_form() {
 }
 function __add_entry($table, $field) {
     global $global;
-    $sql = "SELECT * FROM lc_fields " . "WHERE tablename = '$table' " . "AND fieldname = '$field'";
+    $sql = "SELECT * FROM lc_fields WHERE tablename = '$table' AND fieldname = '$field'";
     $rs = $global['db']->Execute($sql);
     if (trim($table) == '') {
         add_error(_("The Table name cannot be blank, please enter a valid Table name"));
@@ -61,7 +61,7 @@ function __add_entry($table, $field) {
     if ($error) {
         display_errors();
     } elseif (1 > $rs->RecordCount()) {
-        $sql = "INSERT INTO lc_fields (tablename, fieldname) " . "VALUES('$table','$field')";
+        $sql = "INSERT INTO lc_fields (tablename, fieldname) VALUES('$table','$field')";
         $global['db']->Execute($sql);
         add_confirmation(_("Database localization entry added successfully!"));
     } else {

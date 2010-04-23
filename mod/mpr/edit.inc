@@ -431,7 +431,7 @@ function shn_mpr_editmp_confirm() {
     while ($i < $conf['mod_mpr_location_lower_limit']) {
         $i++;
         if (isset($_SESSION['mpr_edit']['entry'][$i])) {
-            $sql = " SELECT location.name , field_options.option_description FROM location " . " INNER JOIN field_options ON field_options.option_code = location.opt_location_type " . " WHERE location.opt_location_type = '$i' AND " . " location.loc_uuid = '{$_SESSION['mpr_edit']['entry'][$i]}' ";
+            $sql = " SELECT location.name , field_options.option_description FROM location  INNER JOIN field_options ON field_options.option_code = location.opt_location_type  WHERE location.opt_location_type = '$i' AND  location.loc_uuid = '{$_SESSION['mpr_edit']['entry'][$i]}' ";
             $result = $global['db']->GetRow($sql);
             shn_form_label($result['option_description'], $result['name']);
         }
@@ -718,7 +718,7 @@ function shn_edit_show_trackers($p_uuid) {
  */
 function shn_edit_del_tracker($p_uuid, $rep_uuid) {
     global $global;
-    $sql = "DELETE FROM person_to_report WHERE p_uuid = '$p_uuid' " . " AND rep_uuid = '$rep_uuid'";
+    $sql = "DELETE FROM person_to_report WHERE p_uuid = '$p_uuid'  AND rep_uuid = '$rep_uuid'";
     $global['db']->Execute($sql);
 }
 /* }}} */

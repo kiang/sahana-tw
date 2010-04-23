@@ -145,7 +145,7 @@ class DAO {
         $org_info = $this->getOrganizationInfo($org_id);
         $info['affiliation_name'] = (empty($org_info)) ? '' : $org_info['name'];
         //all the contact information
-        $result = $this->execute("select opt_contact_type, contact_value from contact " . "where pgoc_uuid = '$id'");
+        $result = $this->execute("select opt_contact_type, contact_value from contact where pgoc_uuid = '$id'");
         $contacts = array();
         while (is_object($result) && !$result->EOF) {
             $contacts[$result->fields['opt_contact_type']] = $result->fields['contact_value'];
@@ -726,7 +726,7 @@ class DAO {
         $this->remove_keys($result->fields);
         $proj = $result->fields;
         //get positions for this project
-        $result = $this->execute("select pos_id this_pos_id, ptype_id, title, description, ptype_title, ptype_description, slots numSlots, payrate, (select count(*) FROM vm_vol_assignment_active WHERE pos_id = this_pos_id AND proj_id='$proj_id') numVolunteers, skill_code " . "from vm_position_active where proj_id = '$proj_id'");
+        $result = $this->execute("select pos_id this_pos_id, ptype_id, title, description, ptype_title, ptype_description, slots numSlots, payrate, (select count(*) FROM vm_vol_assignment_active WHERE pos_id = this_pos_id AND proj_id='$proj_id') numVolunteers, skill_code from vm_position_active where proj_id = '$proj_id'");
         $proj['positions'] = array();
         while (is_object($result) && !$result->EOF) {
             $this->remove_keys($result->fields);
@@ -1431,7 +1431,7 @@ class DAO {
         $image_data = addslashes($pic->image_data);
         $thumb_data = addslashes($pic->thumb_data);
         if (!empty($pic->p_uuid)) $this->execute("delete from vm_image where p_uuid = '{$pic->p_uuid}'");
-        $this->execute("insert into vm_image (img_uuid, original, image_data, thumb_data, p_uuid, date_added, width, height, thumb_width, thumb_height, mime_type, name) " . "values ('{$pic->img_uuid}', '$original', '$image_data', '$thumb_data', '{$pic->p_uuid}', now(), '{$pic->width}', '{$pic->height}', '{$pic->thumb_width}', '{$pic->thumb_height}', '{$pic->type}', '{$pic->name}')");
+        $this->execute("insert into vm_image (img_uuid, original, image_data, thumb_data, p_uuid, date_added, width, height, thumb_width, thumb_height, mime_type, name) values ('{$pic->img_uuid}', '$original', '$image_data', '$thumb_data', '{$pic->p_uuid}', now(), '{$pic->width}', '{$pic->height}', '{$pic->thumb_width}', '{$pic->thumb_height}', '{$pic->type}', '{$pic->name}')");
     }
     function getPictureID($p_uuid) {
         $result = $this->execute("select img_uuid from vm_image where p_uuid = '$p_uuid'");

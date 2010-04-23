@@ -185,7 +185,7 @@ function shn_config_file_update_new($modify, $config_file, $output_file) {
             if (preg_match('/' . $search . '/', $line)) {
                 $match = true;
                 if ($search == 'device') fputs($fh_t, $search . " = " . $replace . "\n");
-                else fputs($fh_t, $search . " = " . "\"" . $replace . "\"" . "\n");
+                else fputs($fh_t, $search . " = \"" . $replace . "\"" . "\n");
             }
         }
         if (!$match) // if no match was found output the default line

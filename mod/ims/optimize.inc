@@ -476,7 +476,7 @@ function _shn_ims_optim_inventory_db($inv_id, $time_period, $prediction_type, $a
     $current_date = date("Y-m-d");
     list($year, $month, $day) = split("-", $current_date);
     $date_after = _shn_ims_timeafter($year, $month, $day, $time_period);
-    $string = "Prediction Report Since " . $current_date . " " . "To" . " " . $date_after;
+    $string = "Prediction Report Since " . $current_date . " To" . " " . $date_after;
 ?>
     <div><h3><b><em><?php print $string; ?></em></b></h3></div>
     <div id="result">

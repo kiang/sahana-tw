@@ -47,7 +47,7 @@ function shn_gis_gps_from_rest($uuid, $lat, $lon) {
     $db = $global['db'];
     include_once $global['approot'] . "/inc/lib_uuid.inc";
     $gis_id = shn_create_uuid('gis');
-    $query = "insert into gis_location (poc_uuid,map_northing,map_easting,gis_uid) " . " values ('{$uuid}','{$lat}','{$lon}','{$gis_id}') ";
+    $query = "insert into gis_location (poc_uuid,map_northing,map_easting,gis_uid)  values ('{$uuid}','{$lat}','{$lon}','{$gis_id}') ";
     $db->Execute($query);
     echo _("Coordinates Added");
 }
@@ -138,7 +138,7 @@ function shn_gis_dbinsert_feature($uuid, $latcoord, $loncoord, $time = null) {
     $db = $global['db'];
     $gis_id = shn_create_uuid('g');
     // @TODO: Check for type of insertion. POINT assumed.
-    $query = "INSERT INTO gis_feature (feature_uuid,poc_uuid,feature_coords) " . " VALUES ('{$gis_id}', '{$uuid}', GeomFromText('POINT($latcoord $loncoord)'))";
+    $query = "INSERT INTO gis_feature (feature_uuid,poc_uuid,feature_coords)  VALUES ('{$gis_id}', '{$uuid}', GeomFromText('POINT($latcoord $loncoord)'))";
     $res = $db->Execute($query);
 }
 /**

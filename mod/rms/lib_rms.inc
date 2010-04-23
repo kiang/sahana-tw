@@ -40,7 +40,7 @@ function _shn_rms_add_requester($requester) {
     $card_number_pre = $requester['card_number'];
     $card_number = $p_uuid;
     //print $card_number;
-    $sql = "INSERT INTO person_uuid (p_uuid, full_name) " . "VALUES ('$p_uuid', '$name')";
+    $sql = "INSERT INTO person_uuid (p_uuid, full_name) VALUES ('$p_uuid', '$name')";
     if ($global['db']->Execute($sql) === false) {
         $msg = $global['db']->ErrorMsg();
         add_error($msg . '<br />' . $sql);
@@ -123,7 +123,7 @@ function _shn_rms_get_requester($id) {
 }
 function _shn_rms_get_requesters() {
     global $global;
-    $sql = "SELECT psn.p_uuid AS p_uuid, psn.full_name AS fullname " . "FROM rms_request req, person_uuid psn " . "WHERE req.reqstr_uuid=psn.p_uuid";
+    $sql = "SELECT psn.p_uuid AS p_uuid, psn.full_name AS fullname FROM rms_request req, person_uuid psn WHERE req.reqstr_uuid=psn.p_uuid";
     $rs = $global['db']->Execute($sql);
     if ($rs === false) {
         $msg = $global['db']->ErrorMsg();
@@ -141,7 +141,7 @@ function _shn_rms_get_requesters() {
 }
 function _shn_rms_get_location($loc_id) {
     global $global;
-    $sql = "SELECT * FROM location_details " . "WHERE location_id='$loc_id'";
+    $sql = "SELECT * FROM location_details WHERE location_id='$loc_id'";
     $rs = $global['db']->Execute($sql);
     if ($rs === false) {
         $msg = $global['db']->ErrorMsg();
@@ -156,7 +156,7 @@ function _shn_rms_get_location($loc_id) {
 }
 function _shn_rms_get_locations() {
     global $global;
-    $sql = "SELECT loc.location_id " . "FROM location_details loc,rms_request req " . "WHERE loc.poc_uuid=req.reqstr_uuid";
+    $sql = "SELECT loc.location_id FROM location_details loc,rms_request req WHERE loc.poc_uuid=req.reqstr_uuid";
     $rs = $global['db']->Execute($sql);
     if ($rs === false) {
         $msg = $global['db']->ErrorMsg();
@@ -183,7 +183,7 @@ function _shn_rms_add_requester_loc($id, $location) {
     $address = $location['address'];
     $postcode = $location['postcode'];
     $gis = $location['gis'];
-    $sql = "INSERT INTO location_details ( " . "poc_uuid, " . "location_id, " . "opt_person_loc_type, " . "address, " . "postcode, " . "long_lat) " . "VALUES ('$poc_uuid', '$location_id', '$type', '$address', " . "'$postcode', '$gis')";
+    $sql = "INSERT INTO location_details ( poc_uuid, location_id, opt_person_loc_type, address, postcode, long_lat) VALUES ('$poc_uuid', '$location_id', '$type', '$address', '$postcode', '$gis')";
     if ($global['db']->Execute($sql) === false) {
         $msg = $global['db']->ErrorMsg();
         add_error($msg . '<br />' . $sql);
@@ -288,7 +288,7 @@ function _shn_rms_get_items($cat_id) {
 }
 function _shn_rms_get_itm_units($itm_id) {
     global $global;
-    $sql = "SELECT * FROM ct_unit, ct_cat_unit WHERE ct_uuid='$itm_id' " . "AND ct_unit.unit_uuid=ct_cat_unit.unit_uuid";
+    $sql = "SELECT * FROM ct_unit, ct_cat_unit WHERE ct_uuid='$itm_id' AND ct_unit.unit_uuid=ct_cat_unit.unit_uuid";
     $rs = $global['db']->Execute($sql);
     if ($rs === false) {
         $msg = $global['db']->ErrorMsg();
@@ -413,7 +413,7 @@ function _shn_rms_add_request($reqstr_uuid, $loc_uuid) {
     $req_uuid = shn_create_uuid('r');
     $status = 'open';
     $user_id = 'u-1';
-    $sql = "INSERT INTO rms_request (req_uuid, reqstr_uuid, loc_uuid, status, user_id) " . "VALUES ('$req_uuid', '$reqstr_uuid', '$loc_uuid', '$status', '$user_id')";
+    $sql = "INSERT INTO rms_request (req_uuid, reqstr_uuid, loc_uuid, status, user_id) VALUES ('$req_uuid', '$reqstr_uuid', '$loc_uuid', '$status', '$user_id')";
     if ($global['db']->Execute($sql) === false) {
         $msg = $global['db']->ErrorMsg();
         add_error($msg . '<br />' . $sql);
@@ -430,7 +430,7 @@ function _shn_rms_add_reqitems($req_uuid) {
         $quantity = $item[1];
         $pri_uuid = $item[2];
         $unit = $item[3];
-        $sql = "INSERT INTO rms_req_item " . "VALUES ('$item_uuid', $quantity, '$pri_uuid', '$req_uuid', '$unit')";
+        $sql = "INSERT INTO rms_req_item VALUES ('$item_uuid', $quantity, '$pri_uuid', '$req_uuid', '$unit')";
         if ($global['db']->Execute($sql) === false) {
             $msg = $global['db']->ErrorMsg();
             add_error($msg . '<br />' . $sql);
@@ -531,7 +531,7 @@ function _shn_rms_get_plgitems($plg_uuid) {
     }
 }
 function _shn_rms_get_itm_category($itm_id) {
-    $sql = "SELECT DISTINCT(cat.ct_uuid),cat.name " . "FROM ct_catalogue itm, ct_catalogue cat " . "WHERE itm.parentid=cat.ct_uuid " . "AND itm.ct_uuid='$itm_id'";
+    $sql = "SELECT DISTINCT(cat.ct_uuid),cat.name FROM ct_catalogue itm, ct_catalogue cat WHERE itm.parentid=cat.ct_uuid AND itm.ct_uuid='$itm_id'";
     $rs = $global['db']->Execute($sql);
     if ($rs === false) {
         $msg = $global['db']->ErrorMsg();
@@ -561,7 +561,7 @@ function _shn_rms_add_donor($donor) {
     //print $p_uuid;
     $card_number = $p_uuid;
     //print $card_number;
-    $sql = "INSERT INTO person_uuid (p_uuid, full_name) " . "VALUES ('$p_uuid', '$name')";
+    $sql = "INSERT INTO person_uuid (p_uuid, full_name) VALUES ('$p_uuid', '$name')";
     if ($global['db']->Execute($sql) === false) {
         $msg = $global['db']->ErrorMsg();
         add_error($msg . '<br />' . $sql);
@@ -599,7 +599,7 @@ function _shn_rms_get_donor($id) {
 }
 function _shn_rms_get_donors() {
     global $global;
-    $sql = "SELECT psn.p_uuid AS p_uuid, psn.full_name AS fullname " . "FROM rms_pledge plg, person_uuid psn " . "WHERE plg.donor_uuid=psn.p_uuid";
+    $sql = "SELECT psn.p_uuid AS p_uuid, psn.full_name AS fullname FROM rms_pledge plg, person_uuid psn WHERE plg.donor_uuid=psn.p_uuid";
     $rs = $global['db']->Execute($sql);
     if ($rs === false) {
         $msg = $global['db']->ErrorMsg();
@@ -621,7 +621,7 @@ function _shn_rms_add_pledge($donor_uuid) {
     $plg_uuid = shn_create_uuid('pl');
     $status = 'Not Delivered';
     $user_id = 'u-1';
-    $sql = "INSERT INTO rms_pledge (plg_uuid, donor_uuid, status, user_id) " . "VALUES ('$plg_uuid', '$donor_uuid', '$status', '$user_id')";
+    $sql = "INSERT INTO rms_pledge (plg_uuid, donor_uuid, status, user_id) VALUES ('$plg_uuid', '$donor_uuid', '$status', '$user_id')";
     if ($global['db']->Execute($sql) === false) {
         $msg = $global['db']->ErrorMsg();
         add_error($msg . '<br />' . $sql);
@@ -639,7 +639,7 @@ function _shn_rms_add_plgitems($plg_uuid) {
         $quantity = $item[1];
         $unit = $item[3];
         $inv = $item[4];
-        $sql = "INSERT INTO rms_plg_item (item_uuid, quantity, plg_uuid, unit, inventory) " . "VALUES ('$item_uuid', $quantity, '$plg_uuid', '$unit', '$inv')";
+        $sql = "INSERT INTO rms_plg_item (item_uuid, quantity, plg_uuid, unit, inventory) VALUES ('$item_uuid', $quantity, '$plg_uuid', '$unit', '$inv')";
         if ($global['db']->Execute($sql) === false) {
             $msg = $global['db']->ErrorMsg();
             add_error($msg . '<br />' . $sql);
@@ -651,7 +651,7 @@ function _shn_rms_add_ff($req_uuid, $item_uuid, $plg_uuid, $qty) {
     global $global;
     //$plg_uuid = shn_create_uuid('ff');
     //$user_id = 'u-1';
-    $sql = "INSERT INTO rms_fulfil (req_uuid, item_uuid, plg_uuid, quantity) " . "VALUES ('$req_uuid', '$item_uuid', '$plg_uuid', $qty)";
+    $sql = "INSERT INTO rms_fulfil (req_uuid, item_uuid, plg_uuid, quantity) VALUES ('$req_uuid', '$item_uuid', '$plg_uuid', $qty)";
     if ($global['db']->Execute($sql) === false) {
         $msg = $global['db']->ErrorMsg();
         //add_error($msg . '<br />' . $sql);
@@ -877,7 +877,7 @@ function _shn_rms_view_reqitems($req_id) {
 }
 function _shn_rms_view_requestff($req_uuid, $item_uuid) {
     global $global;
-    $sql = "SELECT r.quantity, SUM(f.quantity) AS fulfilled, r.pri_uuid, r.unit FROM rms_req_item AS r LEFT JOIN rms_fulfil AS f " . "ON r.req_uuid = f.req_uuid AND r.item_uuid = f.item_uuid" . " WHERE r.req_uuid = '" . $req_uuid . "' AND r.item_uuid = '" . $item_uuid . "'" . " GROUP BY f.item_uuid";
+    $sql = "SELECT r.quantity, SUM(f.quantity) AS fulfilled, r.pri_uuid, r.unit FROM rms_req_item AS r LEFT JOIN rms_fulfil AS f ON r.req_uuid = f.req_uuid AND r.item_uuid = f.item_uuid" . " WHERE r.req_uuid = '" . $req_uuid . "' AND r.item_uuid = '" . $item_uuid . "'" . " GROUP BY f.item_uuid";
     $res = $global['db']->Execute($sql);
     if ($res->RecordCount() > 0) {
         $th_items[] = array('Item', 'Requested Quantity', 'To be Fulfilled', 'Priority');
@@ -891,7 +891,7 @@ function _shn_rms_view_reqff($req_id) {
     global $global;
     $rms_items = array();
     // @TODO: check compatibility of the sql statement
-    $sql = "SELECT req.req_uuid AS req_uuid, req.unit AS unit, req.item_uuid AS item_uuid, " . "req.pri_uuid AS pri_uuid, " . "ff.plg_uuid AS plg_uuid, req.quantity AS req_qty, " . "ff.quantity AS ff_qty, ff.ff_date AS ff_date " . "FROM rms_req_item req LEFT JOIN rms_fulfil ff " . "ON ff.item_uuid=req.item_uuid " . "AND req.req_uuid=ff.req_uuid " . "WHERE req.req_uuid='$req_id'";
+    $sql = "SELECT req.req_uuid AS req_uuid, req.unit AS unit, req.item_uuid AS item_uuid, req.pri_uuid AS pri_uuid, ff.plg_uuid AS plg_uuid, req.quantity AS req_qty, ff.quantity AS ff_qty, ff.ff_date AS ff_date FROM rms_req_item req LEFT JOIN rms_fulfil ff ON ff.item_uuid=req.item_uuid AND req.req_uuid=ff.req_uuid WHERE req.req_uuid='$req_id'";
     $rs = $global['db']->Execute($sql);
     if ($rs === false) {
         $msg = $global['db']->ErrorMsg();
@@ -1212,7 +1212,7 @@ function _shn_rms_requester_add_new_loc_() {
         if (_shn_rms_requester_search_loc_($location_id, $p_uuid)) { //if location already exists
             add_error(_("Location already exists"));
         } else {
-            $sql = "INSERT INTO ext_location( " . "p_uuid, " . "loc_uuid) " . "VALUES ('$p_uuid', '$location_id')";
+            $sql = "INSERT INTO ext_location( p_uuid, loc_uuid) VALUES ('$p_uuid', '$location_id')";
             if ($global['db']->Execute($sql) === false) {
                 $msg = $global['db']->ErrorMsg();
                 add_error($msg . '<br />' . $sql);
@@ -1237,7 +1237,7 @@ function _shn_rms_requester_add_new_loc_() {
             if (_shn_rms_requester_search_loc_($location_id, $p_uuid)) { //if location already exists
                 add_error(_("Location already exists"));
             } else {
-                $sql = "INSERT INTO ext_location( " . "p_uuid, " . "loc_uuid) " . "VALUES ('$p_uuid', '$location_id')";
+                $sql = "INSERT INTO ext_location( p_uuid, loc_uuid) VALUES ('$p_uuid', '$location_id')";
                 if ($global['db']->Execute($sql) === false) {
                     $msg = $global['db']->ErrorMsg();
                     add_error($msg . '<br />' . $sql);
@@ -1256,7 +1256,7 @@ function _shn_rms_requester_add_new_loc_() {
             if (_shn_rms_requester_search_loc_($location_id, $p_uuid)) {
                 add_error(_("Location already exists"));
             } else {
-                $sql = "INSERT INTO ext_location( " . "p_uuid, " . "loc_uuid) " . "VALUES ('$p_uuid', '$location_id')";
+                $sql = "INSERT INTO ext_location( p_uuid, loc_uuid) VALUES ('$p_uuid', '$location_id')";
                 if ($global['db']->Execute($sql) === false) {
                     $msg = $global['db']->ErrorMsg();
                     add_error($msg . '<br />' . $sql);
@@ -1275,7 +1275,7 @@ function _shn_rms_requester_add_new_loc_() {
             if (_shn_rms_requester_search_loc_($location_id, $p_uuid)) {
                 add_error(_("Location already exists"));
             } else {
-                $sql = "INSERT INTO ext_location( " . "p_uuid, " . "loc_uuid) " . "VALUES ('$p_uuid', '$location_id')";
+                $sql = "INSERT INTO ext_location( p_uuid, loc_uuid) VALUES ('$p_uuid', '$location_id')";
                 if ($global['db']->Execute($sql) === false) {
                     $msg = $global['db']->ErrorMsg();
                     add_error($msg . '<br />' . $sql);

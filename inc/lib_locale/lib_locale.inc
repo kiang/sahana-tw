@@ -32,7 +32,7 @@ function _shn_lc_setdblc($locale) {
         // check if previous value exists.
         if (!$res->EOF) {
             // update value
-            $sql = "UPDATE config SET value = '$locale' " . "WHERE module_id = 'admin' " . "AND confkey = 'locale'";
+            $sql = "UPDATE config SET value = '$locale' WHERE module_id = 'admin' AND confkey = 'locale'";
         } else {
             // insert value
             $sql = "INSERT INTO config (module_id,confkey,value)" . "VALUES('admin', 'locale', '$locale')";
@@ -56,7 +56,7 @@ function _shn_lc_setdblc($locale) {
  */
 function _shn_lc_getdblc() {
     global $global;
-    $sql = "SELECT value FROM config " . "WHERE module_id = 'admin' " . "AND confkey = 'locale'";
+    $sql = "SELECT value FROM config WHERE module_id = 'admin' AND confkey = 'locale'";
     $rs = $global['db']->Execute($sql);
     if (!$rs) {
         print "Error : " . $global['db']->ErrorMsg();
