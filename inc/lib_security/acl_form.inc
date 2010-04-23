@@ -124,6 +124,7 @@ whether the module is enabled for that role or not") ?></strong></div>
 		<tr>
 			<td><?php echo $mod_arr[1]; ?></td>
 			<?php
+                        $perms = '';
         foreach($roles as $role => $role_name) {
             $perms = $perms . $mod_arr[0] . ":" . $role . ";";
             $name = trim($mod_arr[0] . $role);
@@ -197,6 +198,7 @@ whether the User is a member of the Role or not."); ?></div>
 		<tr>
 			<td><?php echo $uname; ?></td>
 			<?php
+                        $perms = '';
         foreach($roles as $role => $role_name) {
             $perms = $perms . $user . ":" . $role . ";";
             $name = trim($user . $role);
@@ -281,6 +283,7 @@ Create,Read,Update,Delete permissions to the Data Classificatons"); ?></strong><
 	<tbody>
 	<?php
     $levels = shn_acl_data_classifications_list();
+    $perms = '';
     foreach($levels as $level => $level_name) {
         //this will be used in a hidden field to identify all the checkboxes
         $levels = $level . ":" . $levels;
@@ -412,7 +415,7 @@ function shn_acl_form_change_user_status() {
 <br />
 
 <center><?php
-    shn_form_hidden(array("perms" => $perms));
+    shn_form_hidden(array("perms" => ''));
     shn_form_hidden(array("users" => $users));
     shn_form_submit(_("Save"));
 ?></center>
@@ -476,7 +479,7 @@ values") ?></div>
 <br />
 
 <center><?php
-    shn_form_hidden(array("perms" => $perms));
+    shn_form_hidden(array("perms" => ''));
     shn_form_hidden(array("users" => $users));
     shn_form_submit(_("Save"));
 ?></center>

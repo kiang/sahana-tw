@@ -406,15 +406,16 @@ function shn_form_opt_multi_select($opt_field, $label, $select_opts = "", $extra
 function shn_form_multi_select($name, $options, $label, $select_opts = "", $extra_opts = null) {
     global $global;
     global $shn_tabindex;
-    $value = $extra_opts['value'];
+    $value = isset($extra_opts['value']) ? $extra_opts['value'] : '';
 ?>
 <label><?php echo $label ?></label>
 <select name="<?php echo $name ?>[]" <?php echo $select_opts ?>
 	tabindex="<?php echo ++$shn_tabindex ?>">
 	<?php
     foreach($options as $opt_value => $desc) {
+        $sel = '';
         if ($value != NULL) {
-            $sel = ((array_search($opt_value, $value) == true) || (array_search($opt_value, $value) === 0)) ? 'selected="selected"' : null;
+            $sel = ((array_search($opt_value, $value) == true) || (array_search($opt_value, $value) === 0)) ? 'selected="selected"' : '';
         }
 ?>
 	<option value="<?php echo $opt_value ?>" <?php echo $sel ?>><?php echo $desc ?></option>

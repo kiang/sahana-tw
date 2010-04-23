@@ -144,7 +144,7 @@ function shn_admin_check_sec_policies() {
     shn_acl_check_valid_policy();
 }
 function shn_admin_acl_change_user_status($error = false) {
-    _shn_admin_acl_user_menu($module);
+    _shn_admin_acl_user_menu();
     shn_acl_form_change_user_status();
 }
 function shn_admin_acl_change_user_status_cr($error = false) {
@@ -153,7 +153,7 @@ function shn_admin_acl_change_user_status_cr($error = false) {
     shn_admin_acl_change_user_status();
 }
 function shn_admin_acl_unlock_user($error = false) {
-    _shn_admin_acl_user_menu($module);
+    _shn_admin_acl_user_menu();
     shn_acl_form_unlock_user();
 }
 function shn_admin_acl_unlock_user_cr($error = false) {
@@ -165,7 +165,7 @@ function shn_admin_acl_event_log($error = false) {
     shn_acl_form_event_log();
 }
 function shn_admin_add_user($error = false) {
-    _shn_admin_acl_user_menu($module);
+    _shn_admin_acl_user_menu();
     shn_auth_form_user_add($error);
 }
 function shn_admin_add_user_cr() {
@@ -178,7 +178,7 @@ function shn_admin_add_user_cr() {
     shn_auth_form_user_add($error);
 }
 function shn_admin_del_user($error = false) {
-    _shn_admin_acl_user_menu($module);
+    _shn_admin_acl_user_menu();
     shn_auth_form_user_del();
 }
 function shn_admin_del_user_cr() {
@@ -195,7 +195,7 @@ function shn_admin_reset_pwd_cr() {
     _shn_admin_acl_user_menu();
 }
 function shn_admin_ch_pwd($error = false) {
-    _shn_admin_acl_user_menu($module);
+    _shn_admin_acl_user_menu();
     shn_auth_form_ch_pwd($error);
 }
 function shn_admin_ch_pwd_cr() {
