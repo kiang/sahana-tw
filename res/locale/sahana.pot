@@ -12819,3 +12819,919 @@ msgstr ""
 #: inc/lib_menu.inc:237
 msgid "Switch back to"
 msgstr ""
+
+#: DB L10N Start from here field_options/option_description,
+msgid "family"
+msgstr ""
+
+#: field_options/option_description,
+msgid "company"
+msgstr ""
+
+#: field_options/option_description,
+msgid "society"
+msgstr ""
+
+#: field_options/option_description,
+msgid "tourists"
+msgstr ""
+
+#: field_options/option_description,
+msgid "other"
+msgstr ""
+
+#: field_options/option_description,
+msgid "==Select Option=="
+msgstr ""
+
+#: field_options/option_description,
+msgid "National Identity Card"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Passport"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Driving License Number"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Alive & Well"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Injured"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Deceased"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Father"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Mother"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Brother"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Sister"
+msgstr ""
+
+#: field_options/option_description,
+msgid "GrandFather"
+msgstr ""
+
+#: field_options/option_description,
+msgid "GrandMother"
+msgstr ""
+
+#: field_options/option_description,
+msgid "GrandFatherPaternal"
+msgstr ""
+
+#: field_options/option_description,
+msgid "GrandFatherMaternal"
+msgstr ""
+
+#: field_options/option_description,
+msgid "GrandMotherPaternal"
+msgstr ""
+
+#: field_options/option_description,
+msgid "GrandMotherMaternal"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Friend"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Home(permanent address)"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Contact Person"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Personal Mobile"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Current Phone"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Current Mobile"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Email address"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Fax Number"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Instant Messenger"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Permanent home address)"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Impact location"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Current location"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unknown"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Infant (0-1)"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Child (1-15)"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Young Adult (16-21)"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Adult (22-50)"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Senior Citizen (50+)"
+msgstr ""
+
+#: field_options/option_description,
+msgid "United Kingdom"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Sri Lanka"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Filipino"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Buddhist"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Christian"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Muslim"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Single"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Married"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Divorced"
+msgstr ""
+
+#: field_options/option_description,
+msgid "A+"
+msgstr ""
+
+#: field_options/option_description,
+msgid "A-"
+msgstr ""
+
+#: field_options/option_description,
+msgid "B+"
+msgstr ""
+
+#: field_options/option_description,
+msgid "B-"
+msgstr ""
+
+#: field_options/option_description,
+msgid "AB+"
+msgstr ""
+
+#: field_options/option_description,
+msgid "AB-"
+msgstr ""
+
+#: field_options/option_description,
+msgid "O+"
+msgstr ""
+
+#: field_options/option_description,
+msgid "O-"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Black"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Light Brown"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Blue"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Dark Brown"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Fair"
+msgstr ""
+
+#: field_options/option_description,
+msgid "White"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Brown"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Red"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Blond"
+msgstr ""
+
+#: field_options/option_description,
+msgid "NGO Run Camp"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Temporary Shelter"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Government Evacuation Center"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Administrative Facilities"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Sanitation Facilities"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Water Facilities"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Medical Facilities"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Government"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Private"
+msgstr ""
+
+#: field_options/option_description,
+msgid "NGO"
+msgstr ""
+
+#: field_options/option_description,
+msgid "International NGO"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Multinational NGO"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Department"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Subsidiary"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Branch"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Supplier of Goods"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Communications"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Medical Services"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Rehabilitation"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Education"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Country"
+msgstr ""
+
+#: field_options/option_description,
+msgid "State"
+msgstr ""
+
+#: field_options/option_description,
+msgid "City"
+msgstr ""
+
+#: field_options/option_description,
+msgid "depth"
+msgstr ""
+
+#: field_options/option_description,
+msgid "number of page records"
+msgstr ""
+
+#: field_options/option_description,
+msgid "the frequency of report update"
+msgstr ""
+
+#: field_options/option_description,
+msgid "the frequency of chart update"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Village"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Temple"
+msgstr ""
+
+#: field_options/option_description,
+msgid "School"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Coordinator"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Chief Of Village"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Monk"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Person Status"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Damage Status"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Disaster Status"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Help Needed"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Emergency Phone Contact"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Animals-Animal Control Vehicles"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Animals-Animal Handling"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Animals-Grief Counseling"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Animals-Horse Trailers"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Animals-Livestock Vehicles"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Animals-Other"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Animals-Veterinarian"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Animals-Veterinary Technician"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Automotive-Body Repair"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Automotive-Engine Repair"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Automotive-Lights, Electrical"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Automotive-Other"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Automotive-Tire Repair"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Automotive-Wheel and Brake Repair"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Baby and Child Care-Aide"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Baby and Child Care-Leader"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Baby and Child Care-Other"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Construction Services-Glass Service"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Construction Services-House Repair"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Construction Services-Inspection, B"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Construction Services-Other"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Construction Services-Roofing"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Construction Services-Window Repair"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Electrical-External Wiring"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Electrical-Internal Wiring"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Electrical-Other"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Food Service-Cooking"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Food Service-Directing"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Food Service-Other"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Food Service-Preparing"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Food Service-Serving"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Hazardous Materials-Asbestos"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Hazardous Materials-Chemicals"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Hazardous Materials-Explosives"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Hazardous Materials-Flammables"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Hazardous Materials-Gases"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Hazardous Materials-Identification"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Hazardous Materials-Other"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Hazardous Materials-Radioactive "
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Information Services-Book Restorati"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Information Services-Computer"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Information Services-Data Entry"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Information Services-Hardware (Comp"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Information Services-Other"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Information Services-Software (Comp"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Information Services-Telephone Repa"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Medical-Assist to Physician"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Medical-Counseling"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Medical-Dentist"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Medical-First Aid"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Medical-Medical, Ambulance"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Medical-Nurse"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Medical-Other"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Medical-Physician"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Medical-Technician"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Plumbing-Other"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Plumbing-Pumping-With Pump"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Plumbing-Pumping-Without Pump"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Tree-Evaluation of Needs"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Tree-Other"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Tree-Removal of Trees"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Tree-Trimming of Trees"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unskilled-Other-Baby Care Help"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unskilled-Other-Clerical"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unskilled-Other-Food Help"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unskilled-Other-Heavy Labor (Moving, Erecting Tent"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unskilled-Other-Light Labor (Cleanup)"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unskilled-Other-Messenger (Local People Preferred)"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unskilled-Other-Miscellaneous"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Vehicle-Own Aircraft"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Building Aide-Own Backhoe"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Building Aide-Own Bulldozer"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Building Aide-Own Crane"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Building Aide-Own Forklift"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Building Aide-Own Heavy Equipment"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Vehicle-Own Medical; Ambulance"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Vehicle-Own Other"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Vehicle-Own Refrigerated"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Vehicle-Own Steamshovel"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Vehicle-Own Truck"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Vehicle-Own Van, Car"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Vehicle-Own Boat(s)"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Warehouse-Forklift"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Resources-Warehouse-General"
+msgstr ""
+
+#: field_options/option_description,
+msgid "General Skills-Warehouse-Management"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unskilled-With Tools-with Brooms"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unskilled-With Tools-with Carpentry Tools"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unskilled-With Tools-with Other Tools"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unskilled-With Tools-with Pump, Small"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unskilled-With Tools-with Saws, Chainsaw"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unskilled-With Tools-with Wheelbarrow"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Unskilled-With Tools-with Yard Tools"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Restriction-No Heavy Lifting"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Restriction-Can not drive"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Restriction-Can not swim"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Restriction-Handicapped"
+msgstr ""
+
+#: field_options/option_description,
+msgid "Site Manager"
+msgstr ""
+
+#: ct_unit/name,
+msgid "kl"
+msgstr ""
+
+#: ct_unit/name,
+msgid "microlitre"
+msgstr ""
+
+#: ct_unit/name,
+msgid "gal"
+msgstr ""
+
+#: ct_unit/name,
+msgid "Truck"
+msgstr ""
+
+#: ct_unit/name,
+msgid "Box"
+msgstr ""
+
+#: ct_unit/name,
+msgid "Bottle"
+msgstr ""
+
+#: ct_unit/name,
+msgid "Bag"
+msgstr ""
+
+#: ct_unit/name,
+msgid "Piece"
+msgstr ""
+
+#: ct_unit/name,
+msgid "Kit"
+msgstr ""
+
+#: ct_unit/name,
+msgid "Ration"
+msgstr ""
+
+#: ct_unit/name,
+msgid "Packet"
+msgstr ""
+
+#: ct_unit/name,
+msgid "Tablet"
+msgstr ""
+
+#: ct_unit/name,
+msgid "Capsule"
+msgstr ""
+
+#: ct_unit/name,
+msgid "Vial"
+msgstr ""
+
+#: ct_unit/name,
+msgid "Ampoule"
+msgstr ""
+
+#: ct_unit/name,
+msgid "Suspension"
+msgstr ""
+
+#: ct_unit/name,
+msgid "mg"
+msgstr ""
+
+#: ct_unit/name,
+msgid "microgram"
+msgstr ""
+
+#: ct_unit/name,
+msgid "m"
+msgstr ""
+
+#: ct_unit/name,
+msgid "km"
+msgstr ""
+
+#: ct_unit/name,
+msgid "l"
+msgstr ""
+
+#: ct_unit/name,
+msgid "ml"
+msgstr ""
+
+#: ct_unit_type/description,
+msgid "Mass"
+msgstr ""
+
+#: ct_unit_type/description,
+msgid "Length"
+msgstr ""
+
+#: ct_unit_type/description,
+msgid "Volume"
+msgstr ""
+
+#: ct_unit_type/description,
+msgid "Miscellaneous"
+msgstr ""
+
+#: ct_unit_type/description,
+msgid "Medical"
+msgstr ""
