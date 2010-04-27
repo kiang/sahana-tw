@@ -197,7 +197,7 @@ function shn_auth_form_ch_pwd($error = false) {
     shn_form_hidden(array('user' => $user_id));
     shn_form_fsclose();
 ?>
-</br>
+<br />
 
 <?php
     //create the submit button

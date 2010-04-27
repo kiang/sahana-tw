@@ -25,7 +25,6 @@ CREATE TABLE rms_request (          -- rms_request table
     user_id VARCHAR(60),              -- user 
     PRIMARY KEY (req_uuid),
     FOREIGN KEY (reqstr_uuid) REFERENCES person_uuid (p_uuid),
-    FOREIGN KEY (loc_uuid) REFERENCES location_details (poc_uuid),
     FOREIGN KEY (user_id) REFERENCES users (p_uuid)
 );
 

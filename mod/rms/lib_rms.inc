@@ -412,7 +412,7 @@ function _shn_rms_add_request($reqstr_uuid, $loc_uuid) {
     global $global;
     $req_uuid = shn_create_uuid('r');
     $status = 'open';
-    $user_id = 'u-1';
+    $user_id = $_SESSION["user_id"];
     $sql = "INSERT INTO rms_request (req_uuid, reqstr_uuid, loc_uuid, status, user_id) VALUES ('$req_uuid', '$reqstr_uuid', '$loc_uuid', '$status', '$user_id')";
     if ($global['db']->Execute($sql) === false) {
         $msg = $global['db']->ErrorMsg();
@@ -620,7 +620,7 @@ function _shn_rms_add_pledge($donor_uuid) {
     //print $donor_uuid;
     $plg_uuid = shn_create_uuid('pl');
     $status = 'Not Delivered';
-    $user_id = 'u-1';
+    $user_id = $_SESSION["user_id"];
     $sql = "INSERT INTO rms_pledge (plg_uuid, donor_uuid, status, user_id) VALUES ('$plg_uuid', '$donor_uuid', '$status', '$user_id')";
     if ($global['db']->Execute($sql) === false) {
         $msg = $global['db']->ErrorMsg();
@@ -650,7 +650,7 @@ function _shn_rms_add_plgitems($plg_uuid) {
 function _shn_rms_add_ff($req_uuid, $item_uuid, $plg_uuid, $qty) {
     global $global;
     //$plg_uuid = shn_create_uuid('ff');
-    //$user_id = 'u-1';
+    //$user_id = $_SESSION["user_id"];
     $sql = "INSERT INTO rms_fulfil (req_uuid, item_uuid, plg_uuid, quantity) VALUES ('$req_uuid', '$item_uuid', '$plg_uuid', $qty)";
     if ($global['db']->Execute($sql) === false) {
         $msg = $global['db']->ErrorMsg();
