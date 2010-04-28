@@ -134,7 +134,7 @@ function _shn_rms_show_items() {
         $rms_items = $_SESSION['rms_items'];
         $th_items[] = array(_("Item"), _("Quantity"), '&nbsp;');
         foreach($rms_items as $itm) {
-            $remove_link = '<a href="index.php?mod=rms&amp;act=plg_new' . '&amp;seq=del_item&amp;itm_id=' . $itm[0] . '">' . _("Remove Item") . '</a>';
+            $remove_link = '<a href="index.php?mod=rms&amp;act=plg_new&amp;seq=del_item&amp;itm_id=' . $itm[0] . '">' . _("Remove Item") . '</a>';
             $tb_items[] = array(_shn_rms_get_itemname($itm[0]), $itm[1] . " " . _shn_rms_get_iunit_name($itm[3]) . "", $remove_link);
         }
         print '<br />';
@@ -274,7 +274,7 @@ switch ($seq) {
         }
         add_confirmation(_("The Pledge was successfully added"));
         _shn_rms_view_pledge($_SESSION['rms_plg_id']);
-        print '<br />' . '[ <a href="index.php?mod=rms">RMS Home</a> ] :: ' . '[ <a href="index.php?mod=rms&amp;act=plg_new">New Pledge</a> ]';
+        print '<br />[ <a href="index.php?mod=rms">RMS Home</a> ] :: [ <a href="index.php?mod=rms&amp;act=plg_new">New Pledge</a> ]';
         break;
     }
 ?>

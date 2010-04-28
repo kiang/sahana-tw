@@ -45,16 +45,16 @@ function _shn_rms_plg_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
         $paging = true;
         $page_list = _(":: ");
         if (1 < $page) {
-            $page_list.= '<a href="index.php?mod=rms&amp;act=plg_ls' . '&amp;page_no=' . ($page - 1) . '"> ' . _("Previous") . '</a> ';
+            $page_list.= '<a href="index.php?mod=rms&amp;act=plg_ls&amp;page_no=' . ($page - 1) . '"> ' . _("Previous") . '</a> ';
         }
         for ($i = 1;$i <= $page_count;$i++) {
             if ($page != $i) {
-                $page_list.= ' <a href="index.php?mod=rms&amp;act=plg_ls' . '&amp;page_no=' . $i . '"> <small>' . $i . '</small></a> ';
+                $page_list.= ' <a href="index.php?mod=rms&amp;act=plg_ls&amp;page_no=' . $i . '"> <small>' . $i . '</small></a> ';
             } else {
                 $page_list.= '<small>' . $i . '</small>';
             }
         }
-        if ($page_count != $page) $page_list.= '<a href="index.php?mod=rms&amp;act=plg_ls' . '&amp;page_no=' . ($page + 1) . '">' . _("Next") . '</a>';
+        if ($page_count != $page) $page_list.= '<a href="index.php?mod=rms&amp;act=plg_ls&amp;page_no=' . ($page + 1) . '">' . _("Next") . '</a>';
     }
     //set order-by
     if ($odr_by != null && $odr_by != '') $sql.= " ORDER BY '$odr_by'";
@@ -88,11 +88,11 @@ function _shn_rms_plg_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
         $donor = _shn_rms_get_donor($r['donor_uuid']);
         //$donor = _shn_rms_get_donor($donor_id);
         //print $donor;
-        $donor_d = '<strong>' . $donor['name'] . '</strong><br >' . 'Contact: <a href="mailto:' . $donor['email'] . '">' . $donor['email'] . '</a> , ' . $donor['mobile'];
+        $donor_d = '<strong>' . $donor['name'] . '</strong><br >Contact: <a href="mailto:' . $donor['email'] . '">' . $donor['email'] . '</a> , ' . $donor['mobile'];
         $plg_date = $r['plg_date'];
         $plg_stat = $r['status'];
         $shn_usr = $r['user_id'];
-        $view_url = '<a href=index.php?mod=rms&amp;act=plg_ls' . '&amp;seq=view_plg&amp;plg_id=' . $plg_id . '>' . _("Details") . '</a>';
+        $view_url = '<a href=index.php?mod=rms&amp;act=plg_ls&amp;seq=view_plg&amp;plg_id=' . $plg_id . '>' . _("Details") . '</a>';
         //$tb_res[] = array ($plg_id, $donor_d, $plg_date, $plg_stat, $view_url);
         $tb_res[] = array($donor_d, $plg_date, $plg_stat, $view_url);
     }
@@ -139,7 +139,7 @@ function _shn_rms_plg_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
         shn_html_table($tb_res, $th_res, null, array('class' => 'wide'));
     } else {
         _shn_html_print_alert(_("There are no Pledges on the Database that matches your criteria"));
-        print '<br />' . '[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: ' . '[ <a href="index.php?mod=rms&amp;act=plg_ls">' . _("Back to Pledge List") . '</a> ]';
+        print '<br />[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=plg_ls">' . _("Back to Pledge List") . '</a> ]';
     }
 }
 function _shn_rms_stat_pledge($plg_id) {
@@ -195,7 +195,7 @@ switch ($seq) {
         $plg_id = $_REQUEST['plg_id'];
         _shn_rms_view_pledge($plg_id);
         _shn_rms_stat_pledge($plg_id);
-        print '<br />' . '[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: ' . '[ <a href="index.php?mod=rms&amp;act=plg_ls">' . _("Back to Pledge List") . '</a> ]';
+        print '<br />[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=plg_ls">' . _("Back to Pledge List") . '</a> ]';
     break;
     case 'chg_stat':
         $plg_id = $_POST['plg_id'];
@@ -203,7 +203,7 @@ switch ($seq) {
         _shn_rms_pledge_setstat($plg_id, $stat);
         _shn_rms_view_pledge($plg_id);
         _shn_rms_stat_pledge($plg_id);
-        print '<br />' . '[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: ' . '[ <a href="index.php?mod=rms&amp;act=plg_ls">' . _("Back to Pledge List") . '</a> ]';
+        print '<br />[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=plg_ls">' . _("Back to Pledge List") . '</a> ]';
     break;
 }
 ?>

@@ -418,7 +418,7 @@ class Msg_CapAlert {
             $count = 0;
             foreach($info->getArea() as $area) {
                 $del_str = '';
-                if ($showDel) $del_str = '<a href="index.php?mod=msg&amp;act=cap_new' . '&amp;seq=del_cap_area&amp;area_id=' . $count . '">' . _("Remove") . '</a>';
+                if ($showDel) $del_str = '<a href="index.php?mod=msg&amp;act=cap_new&amp;seq=del_cap_area&amp;area_id=' . $count . '">' . _("Remove") . '</a>';
                 if (is_array($area->getGeocode())) foreach($area->getGeocode() as $gc) $geo = $gc['valueName'] . ' : ' . $gc['value'] . '<br />';
                 if (is_array($area->getPolygon())) foreach($area->getPolygon() as $p) $poly = $p . '<br />';
                 if (is_array($area->getCircle())) foreach($area->getCircle() as $c) $crl = $c . '<br />';
@@ -439,7 +439,7 @@ class Msg_CapAlert {
             $count = 0;
             foreach($info->getResource() as $res) {
                 $del_str = '';
-                if ($showDel) $del_str = '<a href="index.php?mod=msg&amp;act=cap_new' . '&amp;seq=del_cap_res&amp;res_id=' . $count . '">' . _("Remove") . '</a>';
+                if ($showDel) $del_str = '<a href="index.php?mod=msg&amp;act=cap_new&amp;seq=del_cap_res&amp;res_id=' . $count . '">' . _("Remove") . '</a>';
                 $tb_res[] = array($res->getResourceDesc(), $res->getMimeType(), $res->getSize(), $res->getUri(), $res->getDerefUri(), $res->getDigest(), $del_str);
                 $count++;
             }

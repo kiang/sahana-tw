@@ -684,7 +684,7 @@ function shn_edit_show_trackers($p_uuid) {
 	<TR>
 		<!--<TD><?php shn_show_thumb_url($tracker['p_uuid'], $conf['mod_mpr_upload_picture_savehandler'], 'mpr', 'addmp_img'); ?></TD>
     -->
-		<TD><?php echo '<a title="' . _('View') . '" ' . 'href="index.php?mod=' . $global['module'] . '&act=viewmp&id=' . $tracker['p_uuid'] . '">' . $tracker['full_name'] . '</a><br />';
+		<TD><?php echo '<a title="' . _('View') . '" href="index.php?mod=' . $global['module'] . '&act=viewmp&id=' . $tracker['p_uuid'] . '">' . $tracker['full_name'] . '</a><br />';
 ?></TD>
 		<TD><?=($tracker['relation'] == 'NULL') ? 'unknown' : $tracker['relation']; ?>
 		</TD>
@@ -697,7 +697,7 @@ function shn_edit_show_trackers($p_uuid) {
 ?>
 	<TR>
 		<TD colspan="4"><?php
-    echo '<a title="' . _('Add Tracker') . '" ' . 'href="index.php?mod=' . $global['module'] . '&act=editmp&seq=add_tracker&id=' . $p_uuid . '">' . _('Add a tracker') . '</a>';
+    echo '<a title="' . _('Add Tracker') . '" href="index.php?mod=' . $global['module'] . '&act=editmp&seq=add_tracker&id=' . $p_uuid . '">' . _('Add a tracker') . '</a>';
 ?></TD>
 	</TR>
 </TABLE>

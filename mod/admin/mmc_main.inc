@@ -172,7 +172,7 @@ function shn_admin_mmc_add() {
     }
     function _shn_admin_mmc_create_tmp_dir() {
         global $global;
-        $tmp_dir = $global['approot'] . '/www/tmp/' . 'tmp_' . time() . '/';
+        $tmp_dir = $global['approot'] . '/www/tmp/tmp_' . time() . '/';
         if (!mkdir($tmp_dir)) {
             add_error(_("Couldn't create the directory in the www/tmp. Make sure the location is writable."));
             return false;

@@ -281,7 +281,7 @@ switch ($seq) {
         $req_id = $_REQUEST['req_id'];
         _shn_rms_view_request($req_id);
         $keywords = $_REQUEST['keywords'];
-        print '<br />' . '[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: ' . '[ <a href="index.php?mod=rms&amp;' . 'act=req_sch&amp;seq=get_keywords' . '&amp;keywords' . $keywords . '">' . _("Back to Request Search") . '</a> ]';
+        print '<br />[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_sch&amp;seq=get_keywords&amp;keywords' . $keywords . '">' . _("Back to Request Search") . '</a> ]';
     break;
 }
 ?>

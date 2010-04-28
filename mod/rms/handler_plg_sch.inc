@@ -288,7 +288,7 @@ function _shn_rms_sch_results() {
         } else {
             $tbl_hd_arr[0] = array(_("Category"), _("Item"), _("Quantity"), _("Date"), _("status"), _("Inventory"));
         }
-        $view_url = '<a href=index.php?mod=rms&amp;act=plg_sch' . '&amp;seq=view_plg&amp;plg_id=' . $plg_id . '>' . _("Details") . '</a>';
+        $view_url = '<a href=index.php?mod=rms&amp;act=plg_sch&amp;seq=view_plg&amp;plg_id=' . $plg_id . '>' . _("Details") . '</a>';
         $i = 0;
         while (!$res->EOF) {
             if ($_SESSION['isadmin'] == TRUE) {
@@ -345,7 +345,7 @@ switch ($seq) {
         $plg_id = $_REQUEST['plg_id'];
         _shn_rms_view_pledge($plg_id);
         $keywords = $_REQUEST['keywords'];
-        print '<br />' . '[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: ' . '[ <a href="index.php?mod=rms&amp;' . 'act=plg_sch">' . _("Back to Pledge Search") . '</a> ]';
+        print '<br />[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=plg_sch">' . _("Back to Pledge Search") . '</a> ]';
     break;
 }
 ?>

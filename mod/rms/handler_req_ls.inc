@@ -51,16 +51,16 @@ function _shn_rms_req_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
         $paging = true;
         $page_list = _(":: ");
         if (1 < $page) {
-            $page_list.= '<a href="index.php?mod=rms&amp;act=req_ls' . '&amp;page_no=' . ($page - 1) . '"> ' . _("Previous") . '</a> ';
+            $page_list.= '<a href="index.php?mod=rms&amp;act=req_ls&amp;page_no=' . ($page - 1) . '"> ' . _("Previous") . '</a> ';
         }
         for ($i = 1;$i <= $page_count;$i++) {
             if ($page != $i) {
-                $page_list.= ' <a href="index.php?mod=rms&amp;act=req_ls' . '&amp;page_no=' . $i . '"> <small>' . $i . '</small></a> ';
+                $page_list.= ' <a href="index.php?mod=rms&amp;act=req_ls&amp;page_no=' . $i . '"> <small>' . $i . '</small></a> ';
             } else {
                 $page_list.= '<small>' . $i . '</small>';
             }
         }
-        if ($page_count != $page) $page_list.= '<a href="index.php?mod=rms&amp;act=req_ls' . '&amp;page_no=' . ($page + 1) . '">' . _("Next") . '</a>';
+        if ($page_count != $page) $page_list.= '<a href="index.php?mod=rms&amp;act=req_ls&amp;page_no=' . ($page + 1) . '">' . _("Next") . '</a>';
     }
     //set order-by
     if ($odr_by != null && $odr_by != '') $sql.= " ORDER BY '$odr_by'";
@@ -73,7 +73,7 @@ function _shn_rms_req_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
         $req_id = $r['req_uuid'];
         $reqstr = _shn_rms_get_requester($r['reqstr_uuid']);
         //need a function to get name
-        $reqstr_d = '<strong>' . $reqstr['name'] . '</strong><br >' . 'Contact: <a href="mailto:' . $reqstr['email'] . '">' . $reqstr['email'] . '</a> , ' . $reqstr['mobile'];
+        $reqstr_d = '<strong>' . $reqstr['name'] . '</strong><br >Contact: <a href="mailto:' . $reqstr['email'] . '">' . $reqstr['email'] . '</a> , ' . $reqstr['mobile'];
         //$req_loc = _shn_rms_get_location($r['loc_uuid']);
         //$req_loc = _shn_ims_get_location($inv_id);
         //$location_name=_shn_rms_get_location_name($req_loc['location_id']);
@@ -91,11 +91,11 @@ function _shn_rms_req_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
         $req_date = $r['req_date'];
         $req_stat = $r['status'];
         $req_usr = $r['user_id'];
-        $view_url = '<a href=index.php?mod=rms&amp;act=req_ls' . '&amp;seq=view_req&amp;req_id=' . $req_id . '>' . _("Details") . '</a>';
+        $view_url = '<a href=index.php?mod=rms&amp;act=req_ls&amp;seq=view_req&amp;req_id=' . $req_id . '>' . _("Details") . '</a>';
         // added by dominic
         // show 'Delete' URL in case this request has no fulfillments yet
         if (!_shn_rms_has_ff($req_id)) {
-            $view_url.= ' | <a href=index.php?mod=rms&amp;act=req_ls' . '&amp;seq=del_req&amp;req_id=' . $req_id . '>' . _("Delete") . '</a>';
+            $view_url.= ' | <a href=index.php?mod=rms&amp;act=req_ls&amp;seq=del_req&amp;req_id=' . $req_id . '>' . _("Delete") . '</a>';
         }
         //$tb_res[] = array ($req_id, $reqstr_d, $loc_d, $req_date, $req_stat, $view_url);
         $tb_res[] = array($reqstr_d, $loc_d, $req_date, $req_stat, $view_url);
@@ -216,7 +216,7 @@ switch ($seq) {
         $req_id = $_REQUEST['req_id'];
         _shn_rms_view_request($req_id);
         _shn_rms_stat_request($req_id);
-        print '<br />' . '[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: ' . '[ <a href="index.php?mod=rms&amp;act=req_ls">' . _("Back to Request List") . '</a> ]';
+        print '<br />[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_ls">' . _("Back to Request List") . '</a> ]';
     break;
     case 'del_req':
         $req_id = $_REQUEST['req_id'];
@@ -233,7 +233,7 @@ switch ($seq) {
         _shn_rms_request_setstat($req_id, $stat);
         _shn_rms_view_request($req_id);
         _shn_rms_stat_request($req_id);
-        print '<br />' . '[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: ' . '[ <a href="index.php?mod=rms&amp;act=req_ls">' . _("Back to Request List") . '</a> ]';
+        print '<br />[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_ls">' . _("Back to Request List") . '</a> ]';
     break;
 }
 ?>

@@ -62,7 +62,7 @@ function shn_lc_create_pot() {
     $pot_file = "sahana.pot";
     if (is_writable($pot_path)) {
         $return = array();
-        $cmd = 'xgettext --keyword=__ --keyword=_e ' . '--keyword=_p  --default-domain=sahana ' . '--language=php ../*/*.inc ../*/*.inc ../*/*/*/*/*.inc ' . '--output=../res/locale/sahana.pot';
+        $cmd = 'xgettext --keyword=__ --keyword=_e --keyword=_p  --default-domain=sahana --language=php ../*/*.inc ../*/*.inc ../*/*/*/*/*.inc --output=../res/locale/sahana.pot';
         system($cmd, &$return);
         return true;
     } else {

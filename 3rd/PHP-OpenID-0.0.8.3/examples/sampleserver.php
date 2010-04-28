@@ -159,7 +159,7 @@ class ConcreteServer extends OpenIDServer {
     }
     
     function gen_trust_store_path( $identity, $trust_root ) {
-         return $this->trust_store_dir . '/' . 'openid_trust_' . base64_encode(md5($identity)) . '_' . base64_encode(md5($trust_root));
+         return $this->trust_store_dir . '/openid_trust_' . base64_encode(md5($identity)) . '_' . base64_encode(md5($trust_root));
     }
 
     function is_valid($req) {

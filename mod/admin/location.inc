@@ -384,7 +384,7 @@ function _shn_admin_location_form() {
     if ($loc_count > 0) {
         shn_form_fsopen(_("Now Select the parent Location"));
 ?>
-<div class="info"><?= _("Select the parent or super region (e.g. Country, State, City) of the location you have typed above. If no parent region is given, the location being added will become a top most region (usually a Country)");?></div>
+<div class="info"><?php echo _("Select the parent or super region (e.g. Country, State, City) of the location you have typed above. If no parent region is given, the location being added will become a top most region (usually a Country)");?></div>
 <br />
 	<?php
         $range = shn_get_range();

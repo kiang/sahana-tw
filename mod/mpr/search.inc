@@ -196,9 +196,9 @@ function shn_mpr_search_nav() {
     //Back Arrows
     if ($offset > 0) {
         //Right Back
-        echo '<li><a href="index.php?mod=' . $global['module'] . '&act=' . $_GET['act'] . '&seq=' . $_REQUEST['seq'] . '&offset=0' . '">' . '|&lt;&lt;' . _('First') . ' ' . $limit . ' ' . _('Records') . ' </a></li>';
+        echo '<li><a href="index.php?mod=' . $global['module'] . '&act=' . $_GET['act'] . '&seq=' . $_REQUEST['seq'] . '&offset=0">|&lt;&lt;' . _('First') . ' ' . $limit . ' ' . _('Records') . ' </a></li>';
         //With Limit Jump
-        echo '<li><a href="index.php?mod=' . $global['module'] . '&act=' . $_GET['act'] . '&seq=' . $_REQUEST['seq'] . '&offset=' . ($offset - $limit) . '">' . '&lt;&lt;' . _('Previous') . ' ' . $limit . ' ' . _('Records') . ' </a></li>';
+        echo '<li><a href="index.php?mod=' . $global['module'] . '&act=' . $_GET['act'] . '&seq=' . $_REQUEST['seq'] . '&offset=' . ($offset - $limit) . '">&lt;&lt;' . _('Previous') . ' ' . $limit . ' ' . _('Records') . ' </a></li>';
     }
     //Forward Arrows
     if ($delta > 0) {
@@ -233,7 +233,7 @@ function shn_mpr_search_show_result($details) {
     <TD><?php echo _('Associated People'); ?></TD>
     <TD><?php echo _('Missing Details'); ?></TD>
     <TD><?php echo _('Actions'); ?></TD>
-    <TD><?= _('Reported Person');?></TD>
+    <TD><?php echo _('Reported Person');?></TD>
     <?=($select ? '<TD>' . _('Select') . '</TD>' : ''); ?>
 </THEAD>
 <?php
@@ -244,7 +244,7 @@ function shn_mpr_search_show_result($details) {
         <TD>
 <?php
             shn_show_thumb_url($detail['p_uuid'], null, 'mpr', 'addmp_img');
-            echo '<br><a title="' . _('Edit') . '" href="index.php?mod=' . $global['module'] . '&act=editmp&id=' . $detail['p_uuid'] . '">' . $detail['full_name'] . '</a>' . '<br>' . $detail['family_name'] . '<br>' . $detail['l10n_name'];
+            echo '<br><a title="' . _('Edit') . '" href="index.php?mod=' . $global['module'] . '&act=editmp&id=' . $detail['p_uuid'] . '">' . $detail['full_name'] . '</a><br>' . $detail['family_name'] . '<br>' . $detail['l10n_name'];
 ?>
         </TD>
         <TD>
@@ -255,8 +255,8 @@ function shn_mpr_search_show_result($details) {
         <TD>
 <?php
             $arr = shn_mpr_search_get_trackers($detail['p_uuid']);
-            foreach($arr as $fullname) echo "&nbsp;" . '<a title="' . _('View') . '"' . 'href="index.php?mod=' . $global['module'] . '&act=viewmp&id=' . $fullname['p_uuid'] . '">' . $fullname['full_name'] . '</a><br />';
-            echo '<hr><a title="' . _('Add Tracker') . '"' . 'href="index.php?mod=' . $global['module'] . '&act=add_tracker&id=' . $detail['p_uuid'] . '&name=' . $detail['full_name'] . '">' . _("Associate another person") . '</a>';
+            foreach($arr as $fullname) echo "&nbsp;" . '<a title="' . _('View') . '" href="index.php?mod=' . $global['module'] . '&act=viewmp&id=' . $fullname['p_uuid'] . '">' . $fullname['full_name'] . '</a><br />';
+            echo '<hr><a title="' . _('Add Tracker') . '" href="index.php?mod=' . $global['module'] . '&act=add_tracker&id=' . $detail['p_uuid'] . '&name=' . $detail['full_name'] . '">' . _("Associate another person") . '</a>';
 ?>
         </TD>
         <TD>
@@ -270,9 +270,9 @@ function shn_mpr_search_show_result($details) {
             if ($detail['opt_status'] == 'mis') echo '</br /><a title="' . _('Change the status to Alive & Well') . '"
 href="index.php?mod=' . $global['module'] . '&act=status&id=' . $detail['p_uuid'] . '"><br
 />(' . _('Click to change to found') . ')</a>';
-            echo '<br /><a title="' . _('Assign to more incidents') . '" ' . 'href="index.php?mod=admin&act=ims_assign&id=' . $detail['p_uuid'] . '">' . _('Assign to more incidents') . '</a>';
+            echo '<br /><a title="' . _('Assign to more incidents') . '" href="index.php?mod=admin&act=ims_assign&id=' . $detail['p_uuid'] . '">' . _('Assign to more incidents') . '</a>';
             echo '<br />';
-            echo '<a title="' . _('Audit') . '" ' . 'href="index.php?mod=' . $global['module'] . '&act=auditmp&id=' . $detail['p_uuid'] . '">' . _('Audit') . '</a>';
+            echo '<a title="' . _('Audit') . '" href="index.php?mod=' . $global['module'] . '&act=auditmp&id=' . $detail['p_uuid'] . '">' . _('Audit') . '</a>';
 ?>      </TD>
         <TD>
 <?php
@@ -287,7 +287,7 @@ href="index.php?mod=' . $global['module'] . '&act=status&id=' . $detail['p_uuid'
                 $fullname['full_name'] . '</a><br />';
 ?>
         </TD>
-        <?=($select ? '<TD><a title="' . _('Select') . '" href="index.php?' . $_SERVER['QUERY_STRING'] . '&tracker_id=' . $detail['p_uuid'] . '&tracker_relation=' . $_POST['opt_relationship_type'] . '&seq=tracker_select" > ' . _('Select') . ' </a>' . '</TD>' : ''); ?>
+        <?=($select ? '<TD><a title="' . _('Select') . '" href="index.php?' . $_SERVER['QUERY_STRING'] . '&tracker_id=' . $detail['p_uuid'] . '&tracker_relation=' . $_POST['opt_relationship_type'] . '&seq=tracker_select" > ' . _('Select') . ' </a></TD>' : ''); ?>
     </TR>
 <?php
         }
@@ -365,13 +365,13 @@ function shn_mpr_search_select($details) {
         </TD>
         <TD>
 <?php
-        echo '<a title="' . _('View') . '" href="index.php?mod=' . $global['module'] . '&act=viewmp&id=' . $detail['p_uuid'] . '">' . $detail['full_name'] . '</a>' . '<br>' . $detail['family_name'] . '<br>' . $detail['l10n_name'];
+        echo '<a title="' . _('View') . '" href="index.php?mod=' . $global['module'] . '&act=viewmp&id=' . $detail['p_uuid'] . '">' . $detail['full_name'] . '</a><br>' . $detail['family_name'] . '<br>' . $detail['l10n_name'];
 ?>
         </TD>
         <TD>
 <?php
         echo shn_get_field_opt($detail['opt_status'], 'opt_status');
-        if ($detail['opt_status'] == 'mis') echo '</br /><a title="' . _('Change the status to Alive & Well') . '" ' . 'href="index.php?mod=' . $global['module'] . '&act=status&id=' . $detail['p_uuid'] . '"><br />(' . _('Click to change to found') . ')</a>';
+        if ($detail['opt_status'] == 'mis') echo '</br /><a title="' . _('Change the status to Alive & Well') . '" href="index.php?mod=' . $global['module'] . '&act=status&id=' . $detail['p_uuid'] . '"><br />(' . _('Click to change to found') . ')</a>';
 ?>
         </TD>
         <TD><a title="<?php echo _('Select'); ?>" href="index.php?<?=$_SERVER['QUERY_STRING'] . '&tracker_id=' . $detail['p_uuid'] . '&seq=tracker_select'; ?>" ><?php echo _('Select'); ?></a>

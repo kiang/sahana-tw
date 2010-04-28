@@ -30,7 +30,7 @@ function _shn_admin_lc_add_new_module() {
 function _shn_admin_lc_add_new_module_update() {
     $locale = $_SESSION["locale"];
     $return = array();
-    $cmd = 'xgettext --keyword=__ --keyword=_e ' . '--keyword=_p  --default-domain=sahana ' . '--language=php ../*/*/*.inc ../*/*.inc ../*/*/*/*/*.inc ' . '--output=../res/locale/' . $locale . '/LC_MESSAGES/sahana_merge.po';
+    $cmd = 'xgettext --keyword=__ --keyword=_e --keyword=_p  --default-domain=sahana --language=php ../*/*/*.inc ../*/*.inc ../*/*/*/*/*.inc --output=../res/locale/' . $locale . '/LC_MESSAGES/sahana_merge.po';
     system($cmd, &$return);
     $cmd = 'msgmerge --output-file=../res/locale/' . $locale . '/LC_MESSAGES/sahana.po ../res/locale/' . $locale . '/LC_MESSAGES/sahana.po ../res/locale/' . $locale . '/LC_MESSAGES/sahana_merge.po';
     system($cmd, &$return);

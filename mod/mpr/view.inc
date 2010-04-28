@@ -94,7 +94,7 @@ function shn_mpr_view($p_uuid) {
     //Reporting Person
     shn_form_fsopen(_("People that are tracking"));
     foreach($arr_info['trk_people'] as $info) {
-        echo '<a title="' . _('View') . '" ' . 'href="index.php?mod=mpr&act=viewmp&id=' . $info['rep_uuid'] . '" >' . $info['full_name'] . '</a>' . ' -- ' . $info['relation'] . '<br />';
+        echo '<a title="' . _('View') . '" href="index.php?mod=mpr&act=viewmp&id=' . $info['rep_uuid'] . '" >' . $info['full_name'] . '</a> -- ' . $info['relation'] . '<br />';
     }
     shn_form_fsclose();
 ?>

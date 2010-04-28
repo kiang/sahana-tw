@@ -341,7 +341,7 @@ function _shn_rms_show_items() {
         $rms_items = $_SESSION['rms_items'];
         $th_items[] = array(_("Item"), _("Quantity"), _("Item Priority"), '&nbsp;');
         foreach($rms_items as $itm) {
-            $remove_link = '<a href="index.php?mod=rms&amp;act=req_new' . '&amp;seq=del_item&amp;itm_id=' . $itm[0] . '#items">' . _("Remove Item") . '</a>';
+            $remove_link = '<a href="index.php?mod=rms&amp;act=req_new&amp;seq=del_item&amp;itm_id=' . $itm[0] . '#items">' . _("Remove Item") . '</a>';
             $tb_items[] = array(_shn_rms_get_itemname($itm[0]), $itm[1] . " " . _shn_rms_get_iunit_name($itm[3]) . "", _shn_rms_get_priorityname($itm[2]), $remove_link);
         }
         shn_html_table($tb_items, $th_items, null, array('class' => 'wide'));
@@ -506,7 +506,7 @@ switch ($seq) {
         }
         add_confirmation(_("The Request was successfully submitted"));
         _shn_rms_view_request($_SESSION['rms_req_id']);
-        print '<br />' . '[ <a href="index.php?mod=rms">RMS Home</a> ] :: ' . '[ <a href="index.php?mod=rms&amp;act=req_new">New Request</a> ]';
+        print '<br />[ <a href="index.php?mod=rms">RMS Home</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_new">New Request</a> ]';
         break;
     }
 ?>

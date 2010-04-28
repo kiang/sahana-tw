@@ -75,30 +75,30 @@ function shn_admin_default() {
         echo '<li><b>' . _('Add Disaster Name') . '</b>' . _(' - As this system can handle
                 multiple disasters in the same system you need to
                 first add the name of the first disaster you are using
-                Sahana for. To do this in the navigation bar click on ') . '&#34;' . _('Disaster Incidents') . '&#34;' . _(' followed by ') . '<a href="?mod=admin&act=ims_level1">' . '&#34;' . _('Manage Disaster') . '&#34;' . '</a> ' . _('and add the disaster name.') . '</li><br/>';
+                Sahana for. To do this in the navigation bar click on ') . '&#34;' . _('Disaster Incidents') . '&#34;' . _(' followed by ') . '<a href="?mod=admin&act=ims_level1">&#34;' . _('Manage Disaster') . '&#34;</a> ' . _('and add the disaster name.') . '</li><br/>';
     }
     if (!$isLocationsEntered) {
         echo '<li><b>' . _('Add Locations') . '</b>' . _(' - Please enter some of the
                 regions affected in the disaster by clicking the
-                navigation bar on ') . '&#34;' . _('Location Hierarchy') . '&#34;' . _(' followed by ') . '<a href="?mod=admin&act=add_loc">' . '&#34;' . _('Add New Location') . '&#34;' . '</a></li><br/>';
+                navigation bar on ') . '&#34;' . _('Location Hierarchy') . '&#34;' . _(' followed by ') . '<a href="?mod=admin&act=add_loc">&#34;' . _('Add New Location') . '&#34;</a></li><br/>';
     }
     if (!$isCatalogCreated) {
         echo '<li><b>' . _('Create the Aid Catalog') . '</b>' . _(' - The catalog
                 of aid items has to be defined to use
                 the Pledge/Request Management System and Inventory Management,
                 you need to define the type of aid items available. To do this
-                click on the') . '<a href="?mod=cs&act=default">' . '&#34;' . _('Catalog System') . '&#34;' . '</a> ' . _('in the navigation bar and start adding
+                click on the') . '<a href="?mod=cs&act=default">&#34;' . _('Catalog System') . '&#34;</a> ' . _('in the navigation bar and start adding
                 aid items for the disaster') . '</li><br/>';
     }
     if (!$isGoogleSetup) {
         echo '<li><b>' . _('Setup Google Maps') . '</b>' . _(' - To get mapping to
-                work you need to enter a Google Map key in the ') . '<a href="?mod=gis&act=admin&submod=google_maps">' . '&#34;' . _('Mapping / GIS') . '&#34; ' . '</a>' . _('section to do this. By default mapping is enabled for the localhost access only') . '</li><br/>';
+                work you need to enter a Google Map key in the ') . '<a href="?mod=gis&act=admin&submod=google_maps">&#34;' . _('Mapping / GIS') . '&#34; </a>' . _('section to do this. By default mapping is enabled for the localhost access only') . '</li><br/>';
     }
     if (!$isSecurityEnabled) {
 ?>
 <font color="red"><?php echo _("Current Security state: Disabled") ?></font>
 		<?php
-        echo '<li><b>' . _('Configure Default Security') . '</b>' . _(' - By default Sahana is installed with open access. To prevent unauthorized access to the system enable logins and security by clicking ') . '&#34;' . '<a href="?mod=admin&act=acl_enable_acl">' . _('Enable Security.') . '</a>&#34;</li>';
+        echo '<li><b>' . _('Configure Default Security') . '</b>' . _(' - By default Sahana is installed with open access. To prevent unauthorized access to the system enable logins and security by clicking ') . '&#34;<a href="?mod=admin&act=acl_enable_acl">' . _('Enable Security.') . '</a>&#34;</li>';
     }
     echo "</ol>\n";
 ?>

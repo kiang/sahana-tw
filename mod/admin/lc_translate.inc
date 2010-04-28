@@ -99,7 +99,7 @@ function _shn_admin_lc_merge() {
     if (is_writable("../res/locale/$locale/LC_MESSAGES/")) {
         if (file_exists($file_name)) {
             $return = array();
-            $cmd = 'xgettext --keyword=__ --keyword=_e ' . '--keyword=_p  --default-domain=sahana ' . '--language=php ../*/*/*.inc ../*/*.inc ../*/*/*/*/*.inc ' . '--output=../res/locale/' . $locale . '/LC_MESSAGES/sahana_temp.po';
+            $cmd = 'xgettext --keyword=__ --keyword=_e --keyword=_p  --default-domain=sahana --language=php ../*/*/*.inc ../*/*.inc ../*/*/*/*/*.inc --output=../res/locale/' . $locale . '/LC_MESSAGES/sahana_temp.po';
             system($cmd, &$return);
             /*$_SESSION['admin']['locale']['charset'] = implode('', file("../res/locale/$locale/LC_MESSAGES/sahana_temp.po"));
             $string = 'charset=CHARSET';
@@ -218,7 +218,7 @@ switch ($seq) {
     break;
     case 'extract':
         $return = array();
-        $cmd = 'xgettext --keyword=__ --keyword=_e ' . '--keyword=_p  --default-domain=sahana ' . '--language=php ../*/*/*.inc ../*/*.inc ../*/*/*/*/*.inc ../*/*/*/*/*.inc ' . '--output=../res/locale/' . $locale . '/LC_MESSAGES/sahana_temp.po';
+        $cmd = 'xgettext --keyword=__ --keyword=_e --keyword=_p  --default-domain=sahana --language=php ../*/*/*.inc ../*/*.inc ../*/*/*/*/*.inc ../*/*/*/*/*.inc --output=../res/locale/' . $locale . '/LC_MESSAGES/sahana_temp.po';
         system($cmd, &$return);
         $po_file = file_get_contents("../res/locale/" . $locale . "/LC_MESSAGES/sahana_temp.po");
         $new_po_file = _shn_replace_charset($po_file, "UTF-8");

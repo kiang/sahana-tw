@@ -514,7 +514,7 @@ function shn_rms_delete_request() {
     } else {
         add_warning(_("Action cancelled."));
     }
-    print '<br />' . '[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: ' . '[ <a href="index.php?mod=rms&amp;act=req_ls">' . _("Back to Request List") . '</a> ]';
+    print '<br />[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_ls">' . _("Back to Request List") . '</a> ]';
 }
 function _shn_rms_get_plgitems($plg_uuid) {
     global $global;
@@ -867,7 +867,7 @@ function _shn_rms_view_reqitems($req_id) {
                 $fulfiled = 0;
             }
         }
-        $sel_url = '<a href=index.php?mod=rms&amp;act=mng_ff' . '&amp;seq=sel_plg&amp;req_id=' . $req_id . '&amp;itm_id=' . $itm[0] . '>' . _("Select") . '</a>';
+        $sel_url = '<a href=index.php?mod=rms&amp;act=mng_ff&amp;seq=sel_plg&amp;req_id=' . $req_id . '&amp;itm_id=' . $itm[0] . '>' . _("Select") . '</a>';
         //print_r($itm);
         $tb_items[] = array(_shn_rms_get_itemname($itm[0]), $itm[1] . " " . _shn_rms_get_iunit_name($itm[4]) . "", $fulfiled, _shn_rms_get_priorityname($itm[2]), $sel_url);
     }
