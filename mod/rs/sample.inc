@@ -22,7 +22,7 @@
 function shn_rs_sample_report() {
     print "<h1>" . _("Sample Reports Generation") . "</h1>";
 ?>
-    <p><?=_('Here you can generate reports based on sahana database or custom reports.'); ?></p> 
+    <p><?php echo _('Here you can generate reports based on sahana database or custom reports.'); ?></p> 
     <?php
     $extra_opts['req'] = true;
     shn_form_fopen('sample_submit_one', '', array('req_message' => true, 'enctype' => 'enctype="multipart/form-data"', 'name' => 'sample_rep_form'));
@@ -163,9 +163,9 @@ function _show_item_table($keyword_in = '', $exact_in = true) {
     <div id="result">
     <table>
     <thead>
-        <td><strong><?=_("Name") ?></strong></td>
-        <td><strong><?=_("Description") ?></strong></td>
-	<td><strong><?=_("Keyword") ?></strong></td>
+        <td><strong><?php echo _("Name") ?></strong></td>
+        <td><strong><?php echo _("Description") ?></strong></td>
+	<td><strong><?php echo _("Keyword") ?></strong></td>
     </thead>
     <tbody>
     <?php
@@ -222,8 +222,8 @@ function _show_unit_table($keyword_in = '', $exact_in = true) {
     <div id="result">
     <table>
     <thead>
-    <td><strong><?=_("Name") ?></strong></td>
-    <td><strong><?=_("Multiplier") ?></strong></td>
+    <td><strong><?php echo _("Name") ?></strong></td>
+    <td><strong><?php echo _("Multiplier") ?></strong></td>
     </thead>
     <tbody>
     <?php
@@ -277,8 +277,8 @@ function _show_unit_type_table($keyword_in = '', $exact_in = true) {
     <div id="result">
     <table>
     <thead>
-    <td><strong><?=_("Name") ?></strong></td>
-    <td><strong><?=_("Description") ?></strong></td>
+    <td><strong><?php echo _("Name") ?></strong></td>
+    <td><strong><?php echo _("Description") ?></strong></td>
     </thead>
     <tbody>
     <?php

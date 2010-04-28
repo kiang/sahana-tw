@@ -242,12 +242,12 @@ function _shn_ims_view_edit_reorder_page($page_number, $Limit = null) {
     <div id="result">
     <table>
         <thead>
-        <td><?=_("Item"); ?></td>
-        <td><?=_("Amount"); ?></td>
-        <td><?=_("Unit"); ?></td>
-        <td><?=_("Inventory"); ?></td>
-        <td><?=_("Edit"); ?></td>
-        <td><?=_("Delete"); ?></td>
+        <td><?php echo _("Item"); ?></td>
+        <td><?php echo _("Amount"); ?></td>
+        <td><?php echo _("Unit"); ?></td>
+        <td><?php echo _("Inventory"); ?></td>
+        <td><?php echo _("Edit"); ?></td>
+        <td><?php echo _("Delete"); ?></td>
             
             
         </thead>

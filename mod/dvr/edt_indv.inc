@@ -390,7 +390,7 @@ function _shn_dvr_regconfirm_individual() {
     global $conf;
     $db = $global['db'];
 ?>
-<h2><?=_('Confirm  Details of') . $_SESSION['dvr']['person']['name'] ?></h2>
+<h2><?php echo _('Confirm  Details of') . $_SESSION['dvr']['person']['name'] ?></h2>
 <div id="formcontainer">
 <?php
     shn_form_fopen("edit_individual", null, false);

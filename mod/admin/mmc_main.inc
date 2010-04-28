@@ -7,10 +7,10 @@ function shn_admin_mmc_default() {
 	<div id="result">
 	<table>
 	<thead>
-    	<td><?=_('Module Prefix'); ?></td>
-    	<td><?=_('Module Name'); ?></td>
-    	<td><?=_('Version'); ?></td>
-    	<td><?=_('Author'); ?></td>
+    	<td><?php echo _('Module Prefix'); ?></td>
+    	<td><?php echo _('Module Name'); ?></td>
+    	<td><?php echo _('Version'); ?></td>
+    	<td><?php echo _('Author'); ?></td>
 	</thead>
 <?php
     foreach(shn_get_module_names() as $module) {

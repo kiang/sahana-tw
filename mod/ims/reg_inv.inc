@@ -25,7 +25,7 @@ function _shn_ims_regform_inv($error = false) {
     //global $conf;
     $db = $global['db'];
 ?>
-<h2><?=_('Add an Inventory') ?></h2>
+<h2><?php echo _('Add an Inventory') ?></h2>
 <?php
     if (!empty($error)) display_errors();
 ?>
@@ -74,7 +74,7 @@ function _shn_ims_regform_operation($error = false) {
     global $conf;
     $db = $global['db'];
 ?>
-<h2><?=_("Add an Operation/Branch under the Inventory ") . $_SESSION["parent_name"] ?> </h2>
+<h2><?php echo _("Add an Operation/Branch under the Inventory ") . $_SESSION["parent_name"] ?> </h2>
 <?php
     if ($error) display_errors();
 ?>               

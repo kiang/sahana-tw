@@ -244,7 +244,7 @@ function shn_show_thumb_url($x_uuid, $stream_type, $mod = null, $act = null, $se
     //echo $src_tmp;
     
 ?>
-<a title="<?=_('Click to see the original size'); ?>" href="#"
+<a title="<?php echo _('Click to see the original size'); ?>" href="#"
 	onclick="window.open('<?=$src_ori; ?>','hello','width=<?=$width ?>,height=<?=$height ?>,scrollbars=no,status=no');return false;">
 <img border="0" src="<?=$src_tmp; ?>" /> </a>
 	<?php

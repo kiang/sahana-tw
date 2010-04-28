@@ -228,11 +228,11 @@ function shn_mpr_search_show_result($details) {
 ?>
 <TABLE>
 <THEAD>
-    <TD><?=_('Person'); ?></TD>
-    <TD><?=_('Details'); ?></TD>
-    <TD><?=_('Associated People'); ?></TD>
-    <TD><?=_('Missing Details'); ?></TD>
-    <TD><?=_('Actions'); ?></TD>
+    <TD><?php echo _('Person'); ?></TD>
+    <TD><?php echo _('Details'); ?></TD>
+    <TD><?php echo _('Associated People'); ?></TD>
+    <TD><?php echo _('Missing Details'); ?></TD>
+    <TD><?php echo _('Actions'); ?></TD>
     <TD><?= _('Reported Person');?></TD>
     <?=($select ? '<TD>' . _('Select') . '</TD>' : ''); ?>
 </THEAD>
@@ -349,10 +349,10 @@ function shn_mpr_search_select($details) {
 <DIV ID="result">
 <TABLE>
 <THEAD>
-    <TD><?=_('Picture'); ?></TD>
-    <TD><?=_('Name'); ?></TD>
-    <TD><?=_('Status'); ?></TD>
-    <TD><?=_('Select'); ?></TD>
+    <TD><?php echo _('Picture'); ?></TD>
+    <TD><?php echo _('Name'); ?></TD>
+    <TD><?php echo _('Status'); ?></TD>
+    <TD><?php echo _('Select'); ?></TD>
 </THEAD>
 <?php
     foreach($details as $detail) {
@@ -374,14 +374,14 @@ function shn_mpr_search_select($details) {
         if ($detail['opt_status'] == 'mis') echo '</br /><a title="' . _('Change the status to Alive & Well') . '" ' . 'href="index.php?mod=' . $global['module'] . '&act=status&id=' . $detail['p_uuid'] . '"><br />(' . _('Click to change to found') . ')</a>';
 ?>
         </TD>
-        <TD><a title="<?=_('Select'); ?>" href="index.php?<?=$_SERVER['QUERY_STRING'] . '&tracker_id=' . $detail['p_uuid'] . '&seq=tracker_select'; ?>" ><?=_('Select'); ?></a>
+        <TD><a title="<?php echo _('Select'); ?>" href="index.php?<?=$_SERVER['QUERY_STRING'] . '&tracker_id=' . $detail['p_uuid'] . '&seq=tracker_select'; ?>" ><?php echo _('Select'); ?></a>
         </TD>
     </TR>
 <?php
     }
 ?>
 </TABLE>
-<a title="<?=_('Back'); ?>" href="index.php?<?=$_SERVER['QUERY_STRING'] ?>&seq=tracker_back"><?=_('Back'); ?></a>
+<a title="<?php echo _('Back'); ?>" href="index.php?<?=$_SERVER['QUERY_STRING'] ?>&seq=tracker_back"><?php echo _('Back'); ?></a>
 </DIV>
 <?php
     shn_mpr_search_nav();

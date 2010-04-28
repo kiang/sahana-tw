@@ -67,12 +67,12 @@ function shn_dvr_group_search_results() {
 	<table>
         <thead>
         		
-            <td><?=_("Group Type") ?></td>
-            <td><?=_("Group Head Name") ?></td>
-            <td><?=_("Family Name") ?></td>
-           <!-- <td><?=_("Local Name") ?></td>-->
-          	<td><?=_("NIC") ?></td>
-            <td><?=_("Address") ?></td>
+            <td><?php echo _("Group Type") ?></td>
+            <td><?php echo _("Group Head Name") ?></td>
+            <td><?php echo _("Family Name") ?></td>
+           <!-- <td><?php echo _("Local Name") ?></td>-->
+          	<td><?php echo _("NIC") ?></td>
+            <td><?php echo _("Address") ?></td>
             <td></td>
             <td></td>
         </thead>

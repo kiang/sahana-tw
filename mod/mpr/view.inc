@@ -99,8 +99,8 @@ function shn_mpr_view($p_uuid) {
     shn_form_fsclose();
 ?>
     <p align="center"><a href="index.php?mod=mpr&act=editmp&id=<?=$p_uuid; ?>"
-><?=_('Click to edit'); ?></a></p>
-    <p><a href="#" onCLick="history.back()"><?=_('Back'); ?></a></p>
+><?php echo _('Click to edit'); ?></a></p>
+    <p><a href="#" onCLick="history.back()"><?php echo _('Back'); ?></a></p>
 <?php
     shn_form_fclose();
 }

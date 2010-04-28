@@ -20,7 +20,7 @@ function shn_gis_default() {
 <div id="home">
 <h2><?php echo _('Situation Mapping') ?></h2>
 <p>
-<?=_("The Situation Mapping module provides a mechanism to collaboratively provide an overview of the developing disaster, using online mapping (GIS). You can add markers and pictures to pin-point incidents on the map."); ?>
+<?php echo _("The Situation Mapping module provides a mechanism to collaboratively provide an overview of the developing disaster, using online mapping (GIS). You can add markers and pictures to pin-point incidents on the map."); ?>
         
 </p>
 
@@ -34,9 +34,9 @@ function shn_gis_default() {
 
 <strong><?php echo _('Description of Actions:') ?></strong><br/>
     <ul>
-        <li><a href="index.php?mod=gis&act=swik"><b><?=_('View Situation Map'); ?></b></a><br/><?=_('Map of the developing situation with markers of incidents, locations and objects displayed on the map'); ?></li>
-        <li><a href="index.php?mod=gis&act=awik"><b><?=_('Add Situation Markers'); ?> </b> </a><br/><?=_('Add markers on the map of incidents and objects with pictures'); ?></li>
-        <li><a href="index.php?mod=gis&act=mapc"><b><?=_('General Map'); ?> </b></a><br/><?=_('Free form map of the location without markers'); ?></li>
+        <li><a href="index.php?mod=gis&act=swik"><b><?php echo _('View Situation Map'); ?></b></a><br/><?php echo _('Map of the developing situation with markers of incidents, locations and objects displayed on the map'); ?></li>
+        <li><a href="index.php?mod=gis&act=awik"><b><?php echo _('Add Situation Markers'); ?> </b> </a><br/><?php echo _('Add markers on the map of incidents and objects with pictures'); ?></li>
+        <li><a href="index.php?mod=gis&act=mapc"><b><?php echo _('General Map'); ?> </b></a><br/><?php echo _('Free form map of the location without markers'); ?></li>
         
         
 </ul>
@@ -144,7 +144,7 @@ function shn_gis_com() {
         shn_gis_dbinsert(0, 0, null, $_SESSION['gis_loc_x'], $_SESSION['gis_loc_y'], null, $gis_id);
     }
 ?>
-	<h2><?=_('Your Landmark has been succesfully added. ') ?></h2>
+	<h2><?php echo _('Your Landmark has been succesfully added. ') ?></h2>
 <?php
 }
 ?>

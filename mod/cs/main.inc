@@ -74,7 +74,7 @@ function shn_cs_default() {
 function shn_cs_search() {
 ?>
     <h1><?=(_("Search")) ?></h1>
-    <p><?=_('Select the Search Type in the select box that you need to search. By selecting catalog/Item, you are able to Search for a Item or a catalog and by selecting Unit, you are able to search for Units.'); ?></p> 
+    <p><?php echo _('Select the Search Type in the select box that you need to search. By selecting catalog/Item, you are able to Search for a Item or a catalog and by selecting Unit, you are able to search for Units.'); ?></p> 
     <?php
     require_once ('search.inc');
     shn_cs_search_cat();
@@ -145,7 +145,7 @@ function shn_cs_search_unit_type_submit() {
 function shn_cs_addmain() {
 ?>
     <h1><?=(_("Add New Aid Catalog")) ?></h1>
-    <p><?=_('Please add the details of the New Aid Catalog below'); ?></p>
+    <p><?php echo _('Please add the details of the New Aid Catalog below'); ?></p>
     <?php
     require_once ('add.inc');
     shn_cs_addmain_form();
@@ -153,7 +153,7 @@ function shn_cs_addmain() {
 function shn_cs_addsub() {
 ?>
     <h1><?=(_("Add A New Category")) ?></h1>
-    <p><?=_('The Aid Catolog can be divided in to categories or classified by the type of item. You can create a hierachy of categories. First select the parent category that you wish to place this new category under:'); ?></p>
+    <p><?php echo _('The Aid Catolog can be divided in to categories or classified by the type of item. You can create a hierachy of categories. First select the parent category that you wish to place this new category under:'); ?></p>
     <?php
     require_once ('add.inc');
     shn_cs_addsub_form1();
@@ -192,7 +192,7 @@ function shn_cs_addsub_form2_submit() {
 function shn_cs_addunit() {
 ?>
     <h1><?=(_("Add Measurement Unit")) ?></h1>
-    <p><?=_(' This feature allows to add measurement unit/units. Before adding a sub category you have to add the measurement unit/units that is  used by the particular category.'); ?></p>
+    <p><?php echo _(' This feature allows to add measurement unit/units. Before adding a sub category you have to add the measurement unit/units that is  used by the particular category.'); ?></p>
     <?php
     require_once ('add.inc');
     shn_cs_addunit_form();
@@ -218,7 +218,7 @@ function shn_cs_addunit_form_submit() {
 function shn_cs_additem() {
 ?>
 	<h1><?=(_("Add Item Type: Select Category")) ?></h1>
-	<p><?=_('First select the parent category, before proceeding to add the Item Type details'); ?></p>
+	<p><?php echo _('First select the parent category, before proceeding to add the Item Type details'); ?></p>
 	<?php
     require_once ('add.inc');
     shn_cs_additem_form1();
@@ -249,7 +249,7 @@ function shn_cs_additem_form2_submit() {
 function shn_cs_viewedit() {
 ?>
         <h1><?=(_("View And Edit")) ?></h1>
-        <p><?=_("Here you are able to view, edit and Delete all the catalogs, Items, Units and Unit Types which are handled by the catalog system. ") . "<b>" . _("Using Delete, you will lose all the records of the particular catalogs, Items, Unit or Unit Types.") . "</b>"; ?></p>
+        <p><?php echo _("Here you are able to view, edit and Delete all the catalogs, Items, Units and Unit Types which are handled by the catalog system. ") . "<b>" . _("Using Delete, you will lose all the records of the particular catalogs, Items, Unit or Unit Types.") . "</b>"; ?></p>
     <?php
     require_once ('edit.inc');
     //shn_cs_edit_form();
@@ -331,7 +331,7 @@ function shn_cs_addunittype() {
     <?php
     require_once ('add.inc');
 ?>
-    <p><?=_('Here you are able to add Unit type. For every Unit type you have to add a base unit. Eg. If you add volume as the unit type, Litre can be specified as the base unit.'); ?></p>
+    <p><?php echo _('Here you are able to add Unit type. For every Unit type you have to add a base unit. Eg. If you add volume as the unit type, Litre can be specified as the base unit.'); ?></p>
     <?php
     shn_cs_add_unit_type_form();
 }

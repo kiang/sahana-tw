@@ -30,9 +30,9 @@ function _shn_msg_add_group() {
     $extra_opts['req'] = "true";
     shn_form_fopen("add_group_actions", null, $form_opts);
     shn_form_fsopen("Add Groups");
-?><div class="info"><?=_("Multiple E-mail addresses or mobile numbers should be entered comma seperatedly."); ?><br/><br/>
-     <?=_("Phone numbers are limited to 6-20 digits."); ?><br/><br/>
-     <?=_("Group name is limited to 10 characters."); ?></div><br/><br/>
+?><div class="info"><?php echo _("Multiple E-mail addresses or mobile numbers should be entered comma seperatedly."); ?><br/><br/>
+     <?php echo _("Phone numbers are limited to 6-20 digits."); ?><br/><br/>
+     <?php echo _("Group name is limited to 10 characters."); ?></div><br/><br/>
     <?
     shn_form_text(_("Group Name : "), 'new_group_name', 'MaxLength=10', array('req' => true, 'help' => _('Name of the Group')));
     shn_form_textarea(_("E-mail address(es) : "), 'email', 'size="30"', $extra_opts);
@@ -156,9 +156,9 @@ function _shn_msg_edit_group() {
     <center>
     <table>
         <thead>
-        <td><?=_("Group Name"); ?></td>
-        <td><?=_("Mail IDs/Phone Numbers Count"); ?></td>
-        <td><?=_("Action"); ?></td>
+        <td><?php echo _("Group Name"); ?></td>
+        <td><?php echo _("Mail IDs/Phone Numbers Count"); ?></td>
+        <td><?php echo _("Action"); ?></td>
         </thead>
     <tbody>
 <?php
@@ -217,9 +217,9 @@ function _shn_msg_edit_group_form($group_uuid) {
     $form_opts['req_message'] = true;
     shn_form_fopen("view_edit_group_actions", null, $form_opts);
     shn_form_fsopen("Add Group");
-?><div class="info"><?=_("Multiple E-mail addresses or mobile numbers should be entered comma seperatedly."); ?></div><?
-?><div class="info"><?=_("Phone numbers are limited to 5-20 digits."); ?></div><?
-?><div class="info"><?=_("Group name is limited to 10 characters."); ?></div><br/><?
+?><div class="info"><?php echo _("Multiple E-mail addresses or mobile numbers should be entered comma seperatedly."); ?></div><?
+?><div class="info"><?php echo _("Phone numbers are limited to 5-20 digits."); ?></div><?
+?><div class="info"><?php echo _("Group name is limited to 10 characters."); ?></div><br/><?
     shn_form_text(_("Group Name : "), 'new_group_name', 'MaxLength=10', array('req' => true, 'value' => $group_name, 'help' => _('Name of the Group')));
     shn_form_textarea(_("E-mail address(es) : "), 'email', 'size="40"', array('req' => true, 'value' => $address, 'cols' => "40", 'rows' => "3"));
     shn_form_textarea(_("Mobile Number(s) : "), 'mobile_number', 'size="40"', array('req' => true, 'value' => $mobile, 'cols' => "40", 'rows' => "3"));
@@ -252,9 +252,9 @@ function _shn_msg_list_group() {
     <div id ="result">
     <table>
         <thead>
-        <td><?=_("Group Name"); ?></td>
-        <td><?=_("e-mails IDs"); ?></td>
-        <td><?=_("Mobile Numbers"); ?></td>
+        <td><?php echo _("Group Name"); ?></td>
+        <td><?php echo _("e-mails IDs"); ?></td>
+        <td><?php echo _("Mobile Numbers"); ?></td>
         </thead>
     <tbody>
 <?php
@@ -331,7 +331,7 @@ function _shn_msg_send_group() {
     $val = '';
     shn_form_fopen("send_group_action", null, $form_opts);
     shn_form_fsopen("Message Details");
-?><div class="info"><?=_("Message content is limited to 160 characters."); ?></div><br/><?
+?><div class="info"><?php echo _("Message content is limited to 160 characters."); ?></div><br/><?
     shn_form_textarea(_("Message : "), 'message', 'onkeydown="extracheck(this)"', $extra_opts);
     // 'onKeyDown=x()'
     shn_form_multi_select('group_select', $group_array, _("Group(s) Selection"), 'size="6" width="20" multiple="true"', array('help' => _('Select the Group(s) you wish to message.<br/> hold down the Ctrl key for selecting more than one group')));
@@ -429,7 +429,7 @@ function _shn_msg_customized_messaging() {
     $form_opts['req_message'] = true;
     shn_form_fopen("customized_messaging_actions", null, $form_opts);
     shn_form_fsopen("Messaging");
-?><div class="info"><?=_("Multiple E-mail addresses or mobile numbers should be entered comma seperatedly."); ?><br/><br/><?=_("Message content is limited to 160 characters."); ?><br/><br><?=_("Phone numbers are limited to 6-20 digits."); ?>
+?><div class="info"><?php echo _("Multiple E-mail addresses or mobile numbers should be entered comma seperatedly."); ?><br/><br/><?php echo _("Message content is limited to 160 characters."); ?><br/><br><?php echo _("Phone numbers are limited to 6-20 digits."); ?>
     </div><?
     print "<br/>";
     shn_form_textarea(_("Message : "), 'message', 'onkeydown="extracheck(this)"', $extra_opts);

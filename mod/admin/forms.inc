@@ -17,9 +17,9 @@ include_once $global['approot'] . "/inc/handler_form.inc";
 include_once $global['approot'] . "/inc/lib_location.inc";
 function shn_admin_location_form() {
 ?>
-	<h1 align="center"><?=_("Add Locations") ?></h1>
+	<h1 align="center"><?php echo _("Add Locations") ?></h1>
 	<div id="note">
-	<?=_("Fields marked with * are required (entry is compulsory)") ?>
+	<?php echo _("Fields marked with * are required (entry is compulsory)") ?>
 	</div>
 <?php
     if (!empty($error)) display_errors();

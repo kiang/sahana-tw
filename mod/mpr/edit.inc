@@ -150,7 +150,7 @@ function shn_mpr_editmp_entry($errors = false) {
     shn_form_fsclose();
     shn_form_fsopen(_("Basic Details"));
 ?>
-<p><?=_('Please enter any of the following details on the person'); ?>:</p>
+<p><?php echo _('Please enter any of the following details on the person'); ?>:</p>
 	<?php
     shn_form_text(_('Full Name'), 'full_name', 'size="40"', array('value' => $_SESSION['mpr_edit']['entry']['full_name'], 'req' => true));
     shn_form_text(_('Family Name'), 'family_name', 'size="40"', array('value' => $_SESSION['mpr_edit']['entry']['family_name']));
@@ -460,9 +460,9 @@ function shn_mpr_editmp_confirm() {
 <DIV ID="result">
 <TABLE>
 	<THEAD>
-		<TD><?=_('Picture'); ?></TD>
-		<TD><?=_('Name'); ?></TD>
-		<TD><?=_('Relationship'); ?></TD>
+		<TD><?php echo _('Picture'); ?></TD>
+		<TD><?php echo _('Name'); ?></TD>
+		<TD><?php echo _('Relationship'); ?></TD>
 	</THEAD>
 	<?php
     foreach($arr as $tracker) {
@@ -481,7 +481,7 @@ function shn_mpr_editmp_confirm() {
     shn_form_fsclose();
     shn_form_fsopen(_("Confirm"));
 ?>
-<p><?=_('Is the information that you\'ve entered correct?'); ?></p>
+<p><?php echo _('Is the information that you\'ve entered correct?'); ?></p>
 <?php
     shn_form_submit(_('Yes'), 'name="yes"');
     shn_form_submit(_('No'), 'name="no"');
@@ -674,9 +674,9 @@ function shn_edit_show_trackers($p_uuid) {
 <TABLE>
 	<THEAD>
 
-		<TD><?=_('Name'); ?></TD>
-		<TD><?=_('Relationship'); ?></TD>
-		<TD><?=_('Remove'); ?></TD>
+		<TD><?php echo _('Name'); ?></TD>
+		<TD><?php echo _('Relationship'); ?></TD>
+		<TD><?php echo _('Remove'); ?></TD>
 	</THEAD>
 	<?php
     foreach($arr as $tracker) {
@@ -688,9 +688,9 @@ function shn_edit_show_trackers($p_uuid) {
 ?></TD>
 		<TD><?=($tracker['relation'] == 'NULL') ? 'unknown' : $tracker['relation']; ?>
 		</TD>
-		<TD><a title="<?=_('Remove'); ?>"
+		<TD><a title="<?php echo _('Remove'); ?>"
 			href="<?='index.php?mod=' . $global['module'] . '&act=editmp&tracker_id=' . $tracker['p_uuid'] . '&tracker_name=' . $tracker['full_name'] . '&seq=con_del_tracker';
-?>"><?=_('Click to remove the tracker'); ?></a></TD>
+?>"><?php echo _('Click to remove the tracker'); ?></a></TD>
 	</TR>
 	<?php
     }

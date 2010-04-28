@@ -83,7 +83,7 @@ function shn_cr_all_view() {
     global $global;
     $db = $global['db'];
 ?>
-<h2><?=_("Shelter Details") ?></h2>
+<h2><?php echo _("Shelter Details") ?></h2>
 	<?php
     /*$query="select c_uuid from camp_general where name='{$_REQUEST['cmp_id']}'";
     $res=$db->Execute($query);
@@ -425,7 +425,7 @@ function _shn_cr_cedt_commit() {
 
 <? add_confirmation(_("You have succesfully edited shelter ") . $_SESSION['camp_name']); ?>
 <br />
-<h3><?=_("The availability of Services & Facilities of the shelter are as follows") ?></h3>
+<h3><?php echo _("The availability of Services & Facilities of the shelter are as follows") ?></h3>
 
 	<!--To have the results shown in table format-->
 <div id="result">
@@ -487,7 +487,7 @@ function _shn_cr_cedit_confir() {
     global $conf;
     $db = $global['db'];
 ?>
-    <h2><?=_('Confirm Registration Details of ') . $_SESSION['camp_name'] ?></h2>
+    <h2><?php echo _('Confirm Registration Details of ') . $_SESSION['camp_name'] ?></h2>
     <?php
     shn_form_fopen("ecmp", null, array('req_message' => false, 'name' => ""));
     shn_form_fsopen(_('General Details'));

@@ -173,7 +173,7 @@ function shn_sub_cat($max, $form, $inventory_id, $item_flag = false) {
         $parent_array["1"] = _("None");
         shn_form_fsopen(_('Information'));
 ?>
-    	<p><?=_('There is no catalog found by that name'); ?><a href="index.php?mod=cs&act=addmain"><?=_("Add Catalog"); ?></a><?=_(' First'); ?></p> 
+    	<p><?php echo _('There is no catalog found by that name'); ?><a href="index.php?mod=cs&act=addmain"><?php echo _("Add Catalog"); ?></a><?php echo _(' First'); ?></p> 
     	<?php
         shn_form_fsclose();
     } else {

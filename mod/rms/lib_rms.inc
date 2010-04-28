@@ -1139,8 +1139,8 @@ function _shn_rms_ct_cat($max, $form, $item_flag = false) {
         $parent_array["1"] = _("None");
         shn_form_fsopen(_('Information'));
 ?>
-<p><?=_('There is no any root catalogue found. '); ?><a
-	href="index.php?mod=cs&act=addmain">Add root Catalogue</a><?=_(' First'); ?></p>
+<p><?php echo _('There is no any root catalogue found. '); ?><a
+	href="index.php?mod=cs&act=addmain">Add root Catalogue</a><?php echo _(' First'); ?></p>
 
 		<?php
         shn_form_fsclose();

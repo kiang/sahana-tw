@@ -43,7 +43,7 @@ function shn_stream_init() {
 ?>     
     <div id="wrapper" class="clearfix"> 
     <div id="wrapper_menu">
-    <p id="skip">Jump to: <a href="#content"><?=_('Content') ?></a> | <a href="#modulemenu"><?=_('Module Menu') ?></a></p> 
+    <p id="skip">Jump to: <a href="#content"><?php echo _('Content') ?></a> | <a href="#modulemenu"><?php echo _('Module Menu') ?></a></p> 
 <?php
     // hack for the admin section such that the mene and login come from
     // the admin section

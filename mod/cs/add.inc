@@ -135,7 +135,7 @@ function _shn_cs_addsub_form2_result() {
     if ($res == true) {
         add_confirmation($sub_cat_name . _(" was successfully saved in the database"));
 ?>
-	<p><b><?=_("Add another sub catalog"); ?></b></p>
+	<p><b><?php echo _("Add another sub catalog"); ?></b></p>
 	<?php
         shn_cs_addsub_form1();
     } else {
@@ -162,7 +162,7 @@ function shn_cs_addunit_form() {
         shn_form_fopen(null);
         shn_form_fsopen(_("Information"));
 ?>
-    <p><?=_('There is no any Measurement Unit category found. '); ?><a href="index.php?mod=cs&amp;act=addunittype"><?php echo _("Add Unit category") ?></a><?=_(' First'); ?></p>
+    <p><?php echo _('There is no any Measurement Unit category found. '); ?><a href="index.php?mod=cs&amp;act=addunittype"><?php echo _("Add Unit category") ?></a><?php echo _(' First'); ?></p>
     
     <?php
         shn_form_fsclose();
@@ -218,7 +218,7 @@ function _shn_cs_addunit_form_result() {
     if ($res == true) {
         add_confirmation($unit_name . _(" was successfully saved in the database"));
 ?>
-	<p><b><?=_("Add another Unit"); ?></b></p>
+	<p><b><?php echo _("Add another Unit"); ?></b></p>
 	<?php
         shn_cs_addunit_form();
     } else {
@@ -346,7 +346,7 @@ function shn_cs_additem_form2_result() {
     if ($items_saved_ok == true && $all_units_saved_ok == true) {
         add_confirmation($item_name . _(" was successfully saved in the database"));
 ?>
-		<p><b><?=_("Add another Item"); ?></b></p>
+		<p><b><?php echo _("Add another Item"); ?></b></p>
 		<?php
         shn_cs_additem_form1();
     } elseif ($items_saved_ok == true && $all_units_saved_ok == false) {
@@ -398,7 +398,7 @@ function _shn_cs_add_unit_type_form_result() {
     if ($unit_type_saved_ok == true && $base_unit_saved_ok == true) {
         add_confirmation($unit_type_name . _(" was successfully saved in the database"));
 ?>
-		<p><b><?=_("Add another unit type"); ?></b></p>
+		<p><b><?php echo _("Add another unit type"); ?></b></p>
 		<?php
         shn_cs_add_unit_type_form();
     } elseif ($unit_type_saved_ok == true && $base_unit_saved_ok == false) {
@@ -424,10 +424,10 @@ function _shn_cs_search_keyword_result() {
 <div id="result">
 <table>
     <thead>
-        <td><strong><?=_("Name") ?></strong></td>
-        <td><strong><?=_("Description") ?></strong></td>
-        <td><strong><?=_("Item/catalog") ?></strong></td>
-	<td><strong><?=_("Keyword") ?></strong></td>
+        <td><strong><?php echo _("Name") ?></strong></td>
+        <td><strong><?php echo _("Description") ?></strong></td>
+        <td><strong><?php echo _("Item/catalog") ?></strong></td>
+	<td><strong><?php echo _("Keyword") ?></strong></td>
     </thead>
     <TBODY>
     <?php

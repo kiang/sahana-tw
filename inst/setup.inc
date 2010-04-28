@@ -123,16 +123,16 @@ function shn_setup_form_dependancy() {
     $cross_img = '<img align="top" src="theme/default/img/cross.png" alt="cross"/>';
     $oops_img = '<img align="bottom" src="theme/default/img/oops.png" alt="oops"/>';
 ?>
-<h1><?=_('Sahana Web Setup - Step 1') ?></h1>
+<h1><?php echo _('Sahana Web Setup - Step 1') ?></h1>
 
-<p><?=_('Welcome to Sahana. Please follow the following steps to setup the Sahana system') ?></p>
+<p><?php echo _('Welcome to Sahana. Please follow the following steps to setup the Sahana system') ?></p>
 
-<p><?=_('First we need to check if all the relevant dependencies for the Sahana system to be install are available on your system') ?></p>
+<p><?php echo _('First we need to check if all the relevant dependencies for the Sahana system to be install are available on your system') ?></p>
 	<?php
     shn_form_fopen(_('dependancy'));
     shn_form_fsopen(_('PHP libraries'));
 ?>
-<p><?=_('The following checks if all the relevant Sahana libraries are installed') ?></p>
+<p><?php echo _('The following checks if all the relevant Sahana libraries are installed') ?></p>
 	<?php
     $value = (version_compare(phpversion(), '4.1', '>'));
     $isOK&= $value;
@@ -172,7 +172,7 @@ function shn_setup_form_dependancy() {
     shn_form_fsclose();
     shn_form_fsopen(_('File and Directory Permissions'));
 ?>
-<p><?=_('The following checks if certain files and sub-directories have write permissions for Sahana to function,') ?></p>
+<p><?php echo _('The following checks if certain files and sub-directories have write permissions for Sahana to function,') ?></p>
 	<?php
     $tmpWritable = is_writable($global['approot'] . 'www/tmp');
     $isOK&= $tmpWritable;
@@ -239,7 +239,7 @@ function shn_setup_form1() {
     shn_form_fsopen(_('Schemas to Install'));
     // please add somedescription,
     /*
-    ?> <p><?=_('Check this to create the default categories for aid goods,units.')?></p> <?
+    ?> <p><?php echo _('Check this to create the default categories for aid goods,units.')?></p> <?
     */
     shn_form_checkbox(_('Default Item Categories'), 'dbsample', 'checked', array('value' => 'y'));
     // this 'help' is to be removed :
@@ -358,8 +358,8 @@ function shn_setup_form_conffile() {
     //shn_chk_root_pwd();
     
 ?>
-<h1><?=_('Sahaha Web Setup - Step 4') ?></h1>
-<p><?=_('Configuration file ') ?><?=$_POST['conffile'] ?> <?=_(' has been successfully written.') ?></p>
+<h1><?php echo _('Sahaha Web Setup - Step 4') ?></h1>
+<p><?php echo _('Configuration file ') ?><?=$_POST['conffile'] ?> <?php echo _(' has been successfully written.') ?></p>
 
 	<?php
     global $global;
@@ -375,17 +375,17 @@ function shn_setup_form_conffile() {
              permissions from the configuration file sysconf.inc located in 
              the Sahana directory conf/') ?></p>
 
-<p><?=_('Click the button below to start Sahana') ?> <?php
+<p><?php echo _('Click the button below to start Sahana') ?> <?php
     } else {
 ?>
 
 
-<p><?=_('To finish the configuration follow the steps below') ?></p>
-<p><b>1.</b><?=_(' Copy the temporary config file created from: ') ?><br />
+<p><?php echo _('To finish the configuration follow the steps below') ?></p>
+<p><b>1.</b><?php echo _(' Copy the temporary config file created from: ') ?><br />
 <u><?=$_POST['conffile'] ?></u> to: <br />
 <u><?=$global['approot'] . "conf/sysconf.inc" ?></u></p>
-<p><b>2.</b><?=_(' For security reasons delete the temporary configuration file at ') ?><u><?=$_POST['conffile'] ?></u></p>
-<p><b>3.</b><?=_(' Once done click the button below to start Sahana or access it anytime using the url: ') ?><a
+<p><b>2.</b><?php echo _(' For security reasons delete the temporary configuration file at ') ?><u><?=$_POST['conffile'] ?></u></p>
+<p><b>3.</b><?php echo _(' Once done click the button below to start Sahana or access it anytime using the url: ') ?><a
 	href="<?=$sahana_url ?>"><?=$sahana_url ?></a></p>
 
 	<?php

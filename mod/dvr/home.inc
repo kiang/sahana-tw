@@ -19,7 +19,7 @@ include_once ($global['approot'] . '/inc/lib_image.inc');
  */
 ?>
 <div id="home">
-<h2><?=_('Disaster Victim Registry'); ?></h2>
+<h2><?php echo _('Disaster Victim Registry'); ?></h2>
 <p>
 <?php
 print _("The Disaster Victim Registry is a central online repository where information on all the disaster victims and families, especially identified casualties, evacuees and displaced people can be stored. Information like name, age, contact number, identity card number, displaced location, and other details are captured. People picture and finger print details can be uploaded to the system. People can also be captured rather by group for effeciency and convenience");
@@ -56,14 +56,14 @@ print _("Capture Information on Disaster Victim groups (Tourists, Passengers, Fa
 </ul>
 <strong><?php echo _("Description of Actions:") ?></strong><br/>
     <ul>
-        <li><a href="index.php?mod=dvr&act=add_new_grp"><b><?=_('Add New Group'); ?> </b></a><br/><?=_('Adding a new disaster victim group'); ?></li>
-        <li><a href="index.php?mod=dvr&act=add_new_indv"><b><?=_('Add New Individuals'); ?> </b> </a><br/><?=_('Adding a disaster victim under each and every victim group'); ?></li>
-        <li><a href="index.php?mod=dvr&act=search_group"><b><?=_('Search & Edit Group'); ?></b></a><br/><?=_('Searching and editing a victim group'); ?></li>
-        <li><a href="index.php?mod=dvr&act=search_individual"><b><?=_('Search & Edit Individuals'); ?></b></a><br/><?=_('Searching and editing a victim'); ?>
-        <li><a href="index.php?mod=dvr&act=list_groups"><b><?=_('List groups/ View members'); ?></b></a><br/><?=_('List all the groups and view members'); ?></li>
-        <li><a href="index.php?mod=dvr&act=drill_downby_group"><b><?=_('Drill Down By Group'); ?> </b></a><br/><?=_('Drill down by disaster victim group report'); ?></li>
-        <li><a href="index.php?mod=dvr&act=drill_downby_shelter"><b><?=_('Drill Down By Shelter'); ?> </b></a><br/><?=_('Drill down by shelter report'); ?></li>
-        <li><a href="index.php?mod=dvr&act=drill_downby_incident"><b><?=_('Drill Down By Incident'); ?> </b></a><br/><?=_('Drill down by incident report'); ?></li>
+        <li><a href="index.php?mod=dvr&act=add_new_grp"><b><?php echo _('Add New Group'); ?> </b></a><br/><?php echo _('Adding a new disaster victim group'); ?></li>
+        <li><a href="index.php?mod=dvr&act=add_new_indv"><b><?php echo _('Add New Individuals'); ?> </b> </a><br/><?php echo _('Adding a disaster victim under each and every victim group'); ?></li>
+        <li><a href="index.php?mod=dvr&act=search_group"><b><?php echo _('Search & Edit Group'); ?></b></a><br/><?php echo _('Searching and editing a victim group'); ?></li>
+        <li><a href="index.php?mod=dvr&act=search_individual"><b><?php echo _('Search & Edit Individuals'); ?></b></a><br/><?php echo _('Searching and editing a victim'); ?>
+        <li><a href="index.php?mod=dvr&act=list_groups"><b><?php echo _('List groups/ View members'); ?></b></a><br/><?php echo _('List all the groups and view members'); ?></li>
+        <li><a href="index.php?mod=dvr&act=drill_downby_group"><b><?php echo _('Drill Down By Group'); ?> </b></a><br/><?php echo _('Drill down by disaster victim group report'); ?></li>
+        <li><a href="index.php?mod=dvr&act=drill_downby_shelter"><b><?php echo _('Drill Down By Shelter'); ?> </b></a><br/><?php echo _('Drill down by shelter report'); ?></li>
+        <li><a href="index.php?mod=dvr&act=drill_downby_incident"><b><?php echo _('Drill Down By Incident'); ?> </b></a><br/><?php echo _('Drill down by incident report'); ?></li>
 </ul>
 
 
@@ -76,7 +76,7 @@ print _("Capture Information on Disaster Victim groups (Tourists, Passengers, Fa
 
 
 
-<h1><?=_('Latest updates on Reported  Victims'); ?></h1>
+<h1><?php echo _('Latest updates on Reported  Victims'); ?></h1>
 <?php
 shn_dvr_home_show_dvr();
 ?>

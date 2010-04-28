@@ -27,8 +27,8 @@ function _shn_ims_level1_form($errors = false, $type = null) {
 ?>
 		<table>
 		<thead>
-    	<td width="100%"><strong><?=_('Name'); ?></strong></td>
-    	<td width="100%"><strong><?=_('Delete'); ?></strong></td>
+    	<td width="100%"><strong><?php echo _('Name'); ?></strong></td>
+    	<td width="100%"><strong><?php echo _('Delete'); ?></strong></td>
 		</thead>
 <?php
         foreach($arr as $row) {
@@ -353,9 +353,9 @@ function _shn_ims_level3_form($errors = false, $type = null) {
 ?>
 		<table width="100%">
 		<thead>
-    	<td><strong><?=_('Name'); ?></strong></td>
-    	<td><strong><?=_($conf['mod_admin_ims_level2']); ?></strong></td>
-    	<td><strong><?=_('Delete'); ?></strong></td>
+    	<td><strong><?php echo _('Name'); ?></strong></td>
+    	<td><strong><?php echo _($conf['mod_admin_ims_level2']); ?></strong></td>
+    	<td><strong><?php echo _('Delete'); ?></strong></td>
 		</thead>
 <?php
         foreach($arr as $row) {

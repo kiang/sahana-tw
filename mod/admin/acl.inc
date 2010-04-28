@@ -26,13 +26,13 @@ function _shn_admin_acl_user() {
     _shn_admin_acl_user_menu();
 ?>
 <div id="home">
-<h2><?=_('Welcome to Users= section'); ?></h2>
+<h2><?php echo _('Welcome to Users= section'); ?></h2>
 
 <ul>
-	<li><?=_('Add Users') ?></li>
-	<li><?=_('Remove Users') ?></li>
-	<li><?=_('Change your password if you are logged in') ?></li>
-	<li><?=_('Edit Roles of User ') ?></li>
+	<li><?php echo _('Add Users') ?></li>
+	<li><?php echo _('Remove Users') ?></li>
+	<li><?php echo _('Change your password if you are logged in') ?></li>
+	<li><?php echo _('Edit Roles of User ') ?></li>
 </ul>
 </div>
 

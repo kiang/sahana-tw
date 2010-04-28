@@ -23,7 +23,7 @@
  * @return void
  */
 ?>
-<h1><?=_('Audit'); ?></h1>
+<h1><?php echo _('Audit'); ?></h1>
 <?php
 function shn_audit_show($x_uuid) {
     global $global;
@@ -47,13 +47,13 @@ function shn_audit_show($x_uuid) {
 <TABLE>
 <THEAD>
    <TR>
-    <TD><?=_('Date/Time'); ?></TD>
-    <TD><?=_('User Making Changes'); ?></TD>
-    <TD><?=_('Table Affected'); ?></TD>
-    <TD><?=_('Field Affected'); ?></TD>
-    <TD><?=_('Type of change'); ?></TD>
-    <TD><?=_('Previous Value'); ?></TD>
-    <TD><?=_('New Value'); ?></TD>
+    <TD><?php echo _('Date/Time'); ?></TD>
+    <TD><?php echo _('User Making Changes'); ?></TD>
+    <TD><?php echo _('Table Affected'); ?></TD>
+    <TD><?php echo _('Field Affected'); ?></TD>
+    <TD><?php echo _('Type of change'); ?></TD>
+    <TD><?php echo _('Previous Value'); ?></TD>
+    <TD><?php echo _('New Value'); ?></TD>
     </TR>
 </THEAD>
 <?php

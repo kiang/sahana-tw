@@ -55,15 +55,15 @@ function _shn_ims_view_edit($i, $Limit = null) {
     <div id ="result">
     <table>
         <thead>
-        <td><?=_("Item"); ?></td>
-        <td><?=_("Amount"); ?></td>
-        <td><?=_("Unit"); ?></td>
-        <td><?=_("Manufactured Date") ?></td>
-            <td><?=_("Expire Date") ?></td>
-        <td><?=_("Available Inventory") ?></td>
-            <td><?=_("Supplier Name") ?></td>
-        <td><?=_("Edit") ?></td>
-        <td><?=_("Delete") ?></td>
+        <td><?php echo _("Item"); ?></td>
+        <td><?php echo _("Amount"); ?></td>
+        <td><?php echo _("Unit"); ?></td>
+        <td><?php echo _("Manufactured Date") ?></td>
+            <td><?php echo _("Expire Date") ?></td>
+        <td><?php echo _("Available Inventory") ?></td>
+            <td><?php echo _("Supplier Name") ?></td>
+        <td><?php echo _("Edit") ?></td>
+        <td><?php echo _("Delete") ?></td>
             
         </thead>
     <tbody>

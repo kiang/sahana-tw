@@ -52,8 +52,8 @@ function shn_mpr_adminmenu() {
 function shn_mpr_adm_default() {
     shn_mpr_adminmenu();
 ?> <br></br> 
-    <p><b><?=_("Welcome to the Missing Person Registry admin page"); ?> </b></p>
-    <p><?=_("Please use the navigation menu above to configure each field."); ?> </p>
+    <p><b><?php echo _("Welcome to the Missing Person Registry admin page"); ?> </b></p>
+    <p><?php echo _("Please use the navigation menu above to configure each field."); ?> </p>
 <?php
     //shn_mpr_adm_gen();
     
@@ -100,7 +100,7 @@ function shn_mpr_adm_gen() {
 /* {{{ shn_mpr_adm_images */
 function shn_mpr_adm_images() {
     shn_mpr_adminmenu();
-?><br /><h2><?=_("Manage Search"); ?></h2>
+?><br /><h2><?php echo _("Manage Search"); ?></h2>
 <?php
 }
 /* }}} */
@@ -109,7 +109,7 @@ function shn_mpr_adm_opt_age_group() {
     shn_mpr_adminmenu();
     //print 'button is'.$_POST['button_name'];
     
-?><br /><h2><?=_("Manage Age Groups"); ?></h2>
+?><br /><h2><?php echo _("Manage Age Groups"); ?></h2>
 <?php
     _shn_mpr_adm_field_options_controller('opt_age_group');
 }
@@ -117,7 +117,7 @@ function shn_mpr_adm_opt_age_group() {
 /* {{{ shn_mpr_adm_age */
 function shn_mpr_adm_opt_race() {
     shn_mpr_adminmenu();
-?><br /><h2><?=_("Manage Race"); ?></h2>
+?><br /><h2><?php echo _("Manage Race"); ?></h2>
 <?php
     _shn_mpr_adm_field_options_controller('opt_race');
 }
@@ -125,7 +125,7 @@ function shn_mpr_adm_opt_race() {
 /* {{{ shn_mpr_adm_age */
 function shn_mpr_adm_opt_religion() {
     shn_mpr_adminmenu();
-?><br /><h2><?=_("Manage Religion"); ?></h2>
+?><br /><h2><?php echo _("Manage Religion"); ?></h2>
 <?php
     _shn_mpr_adm_field_options_controller('opt_religion');
 }
@@ -133,7 +133,7 @@ function shn_mpr_adm_opt_religion() {
 /* {{{ shn_mpr_adm_age */
 function shn_mpr_adm_opt_blood_type() {
     shn_mpr_adminmenu();
-?><br /><h2><?=_("Manage Blood Groups"); ?></h2>
+?><br /><h2><?php echo _("Manage Blood Groups"); ?></h2>
 <?php
     _shn_mpr_adm_field_options_controller('opt_blood_type');
 }
@@ -141,7 +141,7 @@ function shn_mpr_adm_opt_blood_type() {
 /* {{{ shn_mpr_adm_age */
 function shn_mpr_adm_opt_eye_color() {
     shn_mpr_adminmenu();
-?><br /><h2><?=_("Manage Eye Color"); ?></h2>
+?><br /><h2><?php echo _("Manage Eye Color"); ?></h2>
 <?php
     _shn_mpr_adm_field_options_controller('opt_eye_color');
 }
@@ -149,7 +149,7 @@ function shn_mpr_adm_opt_eye_color() {
 /* {{{ shn_mpr_adm_age */
 function shn_mpr_adm_opt_hair_color() {
     shn_mpr_adminmenu();
-?><br /><h2><?=_("Manage Hair Color"); ?></h2>
+?><br /><h2><?php echo _("Manage Hair Color"); ?></h2>
 <?php
     _shn_mpr_adm_field_options_controller('opt_hair_color');
 }
@@ -157,7 +157,7 @@ function shn_mpr_adm_opt_hair_color() {
 /* {{{ shn_mpr_adm_age */
 function shn_mpr_adm_opt_skin_color() {
     shn_mpr_adminmenu();
-?><br /><h2><?=_("Manage Skin Color"); ?></h2>
+?><br /><h2><?php echo _("Manage Skin Color"); ?></h2>
 <?php
     _shn_mpr_adm_field_options_controller('opt_skin_color');
 }
@@ -337,9 +337,9 @@ function _shn_mpr_adm_field_options_form($type) {
 
 
 <thead>
-    <td><strong><?=_('Code'); ?></strong></td>
-    <td width="100%"><strong><?=_('Description'); ?></strong></td>
-    <td width="100%"><strong><?=_('Delete'); ?></strong></td>
+    <td><strong><?php echo _('Code'); ?></strong></td>
+    <td width="100%"><strong><?php echo _('Description'); ?></strong></td>
+    <td width="100%"><strong><?php echo _('Delete'); ?></strong></td>
 </thead>
 <?php
         $count = 0;

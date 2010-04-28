@@ -52,9 +52,9 @@ function shn_dvr_adm_checklist() {
     shn_form_fsopen(_("Currently Available Services/Facilities"));
 ?>	   <table> 
 	    <thead>
-    <td><strong><?=_('Code'); ?></strong></td>
-    <td width="100%"><strong><?=_('Description'); ?></strong></td>
-    <td width="100%"><strong><?=_('Delete'); ?></strong></td>
+    <td><strong><?php echo _('Code'); ?></strong></td>
+    <td width="100%"><strong><?php echo _('Description'); ?></strong></td>
+    <td width="100%"><strong><?php echo _('Delete'); ?></strong></td>
     </thead>
     <?php
     $button = isset($_POST['selection']) ? $_POST['selection'] : '';

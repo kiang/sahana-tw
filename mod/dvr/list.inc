@@ -28,12 +28,12 @@ function list_all_groups() {
 	<table>
         <thead>
         		
-            <td><?=_("Group Type") ?></td>
-            <td><?=_("Group Head Name") ?></td>
-            <td><?=_("Family Name") ?></td>
-           <!-- <td><?=_("Local Name") ?></td>-->
-          	<td><?=_("NIC") ?></td>
-            <td><?=_("Address") ?></td>
+            <td><?php echo _("Group Type") ?></td>
+            <td><?php echo _("Group Head Name") ?></td>
+            <td><?php echo _("Family Name") ?></td>
+           <!-- <td><?php echo _("Local Name") ?></td>-->
+          	<td><?php echo _("NIC") ?></td>
+            <td><?php echo _("Address") ?></td>
             <td></td>
             
         </thead>
@@ -69,12 +69,12 @@ function list_all_individuals() {
 	<table>
         <thead>
         		<td></td>
-            <td><?=_("Group Type") ?></td>
-            <td><?=_("Group Head Name") ?></td>
-            <td><?=_("Family Name") ?></td>
-            <td><?=_("Local Name") ?></td>
-          	<td><?=_("NIC") ?></td>
-            <td><?=_("Address") ?></td>
+            <td><?php echo _("Group Type") ?></td>
+            <td><?php echo _("Group Head Name") ?></td>
+            <td><?php echo _("Family Name") ?></td>
+            <td><?php echo _("Local Name") ?></td>
+          	<td><?php echo _("NIC") ?></td>
+            <td><?php echo _("Address") ?></td>
          <td><a href='index.php?mod=dvr&act=add_new_indv'>Edit</a></td>
         </thead>
         </table>

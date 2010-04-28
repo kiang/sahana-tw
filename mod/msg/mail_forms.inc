@@ -18,7 +18,7 @@ function _shn_msg_compose_mail_form($error = false) {
     include_once $global['approot'] . "/inc/lib_form.inc";
     include_once $global['approot'] . "/inc/lib_errors.inc"
 ?>
-<h2><?=_('Compose Mail') ?></h2>
+<h2><?php echo _('Compose Mail') ?></h2>
 <?php
     if ($error) display_errors();
 ?>

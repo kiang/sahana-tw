@@ -40,14 +40,14 @@ function _shn_or_display_page($page) {
 <?
     if (($_SESSION["org"]["total_pages"]) < 1) {
 ?>
-<div id="note"><?=_("No Organizations "); ?></div>
+<div id="note"><?php echo _("No Organizations "); ?></div>
 	<?
         return;
     } else {
         _shn_or_display_page_links();
     }
 ?>
-<div id="note"><?=_("Your are viewing page no ") . $page; ?></div>
+<div id="note"><?php echo _("Your are viewing page no ") . $page; ?></div>
 <?
     _shn_or_display_header();
     /*
@@ -84,13 +84,13 @@ function _shn_or_display_header() {
 <table>
 	<thead>
 		<td></td>
-		<td><?=_("Organization Name") ?></td>
-		<td><?=_("Incidents") ?></td>
-		<td><?=_("Services Provided") ?></td>
-		<td><?=_("Organization Type") ?></td>
-		<td><?=_("Location") ?></td>
-		<td><?=_("Address") ?></td>
-		<td><?=_("Contact Numbers") ?></td>
+		<td><?php echo _("Organization Name") ?></td>
+		<td><?php echo _("Incidents") ?></td>
+		<td><?php echo _("Services Provided") ?></td>
+		<td><?php echo _("Organization Type") ?></td>
+		<td><?php echo _("Location") ?></td>
+		<td><?php echo _("Address") ?></td>
+		<td><?php echo _("Contact Numbers") ?></td>
 	</thead>
 	<tbody>
 	<?php
@@ -351,7 +351,7 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
         $parent_id = $_SESSION['org']['parent_id'];
     }
 ?>
-		<h2><?=_("Organization Registration Information of <em>") . $org_name ?></em></h2>
+		<h2><?php echo _("Organization Registration Information of <em>") . $org_name ?></em></h2>
 		<?php
     if (!empty($error)) display_errors();
 ?>
@@ -362,7 +362,7 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
     shn_form_fopen("view_org_submit", null, $form_opts);
     shn_form_fsopen(_('Primary Details'));
 ?>
-		<div class="info"><?=_("These are the basic details of an organization. Organization name is required ,but registration  no is optional"); ?></div>
+		<div class="info"><?php echo _("These are the basic details of an organization. Organization name is required ,but registration  no is optional"); ?></div>
 		<br />
 		<?
     $extra_opts['req'] = true;
@@ -464,13 +464,13 @@ function _shn_or_viewform_latest_orgs($no = NULL) {
 		<div id="result">
 		<table>
 			<thead>
-				<td><?=_("Organization Name") ?></td>
-				<td><?=_("Incidents") ?></td>
-				<td><?=_("Services Provided") ?></td>
-				<td><?=_("Organization Type") ?></td>
-				<td><?=_("Location") ?></td>
-				<td><?=_("Address") ?></td>
-				<td><?=_("Contact Numbers") ?></td>
+				<td><?php echo _("Organization Name") ?></td>
+				<td><?php echo _("Incidents") ?></td>
+				<td><?php echo _("Services Provided") ?></td>
+				<td><?php echo _("Organization Type") ?></td>
+				<td><?php echo _("Location") ?></td>
+				<td><?php echo _("Address") ?></td>
+				<td><?php echo _("Contact Numbers") ?></td>
 			</thead>
 			<tbody>
 			<?php

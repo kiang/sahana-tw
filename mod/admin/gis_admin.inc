@@ -102,7 +102,7 @@ function shn_gis_adm_show_mod_menu() {
             $name = $conf['plugin_name'];
 ?>
 			<a href="index.php?mod=gis&act=admin&submod=<?=$file
-?>"><?=_($name) ?></a>
+?>"><?php echo _($name) ?></a>
 <?php
             $count++;
         }

@@ -149,7 +149,7 @@ function _shn_or_drill_org($parent = null) {
     $res = $db->Execute($q);
     $level = $res->fields["option_description"];
 ?>
-	<h2><?=_("Organization Report By ") . $level ?></h2>
+	<h2><?php echo _("Organization Report By ") . $level ?></h2>
     <p>
     
     <?php
@@ -257,7 +257,7 @@ function _shn_or_drill_loc($parent = null) {
     $tmp = shn_get_last_level();
     if ($tmp[0] == $lvl_child - 1) {
 ?>
- 	<h2><?=_("Organization Report for ") . $parent_type; ?></h2>
+ 	<h2><?php echo _("Organization Report for ") . $parent_type; ?></h2>
     <div class="note">
     <?
         $tmp = shn_get_last_level();
@@ -268,7 +268,7 @@ function _shn_or_drill_loc($parent = null) {
  	</div><?
     } else {
 ?>
- 	<h2><?=_("Organization Report By ") . $child_type . _(" for ") . $parent_type; ?></h2>
+ 	<h2><?php echo _("Organization Report By ") . $child_type . _(" for ") . $parent_type; ?></h2>
     <p>
  
 <?php
@@ -429,7 +429,7 @@ function _shn_or_report_org_sector($sector) {
     global $global;
     $db = $global['db'];
 ?>
-<h2><?=_("Organization Report by Sector") ?></h2>
+<h2><?php echo _("Organization Report by Sector") ?></h2>
 <?php
     shn_report_download("shn_or_service_coverage_pdf", "Download as PDF");
     $q = "SELECT option_code,option_description FROM field_options WHERE field_name='opt_sector_type' ORDER BY option_description";
@@ -458,13 +458,13 @@ function _shn_or_report_org_sector($sector) {
     <table>
         <thead>
         	<td></td>
-            <td><?=_("Organization Name") ?></td>
-            <td><?=_("Incidents") ?></td>
-            <td><?=_("Services Offered") ?></td>
-            <td><?=_("Organization Type") ?></td>
-            <td><?=_("Location") ?></td>
-            <td><?=_("Address") ?></td>
-            <td><?=_("Contact Number") ?></td>
+            <td><?php echo _("Organization Name") ?></td>
+            <td><?php echo _("Incidents") ?></td>
+            <td><?php echo _("Services Offered") ?></td>
+            <td><?php echo _("Organization Type") ?></td>
+            <td><?php echo _("Location") ?></td>
+            <td><?php echo _("Address") ?></td>
+            <td><?php echo _("Contact Number") ?></td>
         </thead>
         <tbody>
 <?php
@@ -473,7 +473,7 @@ function _shn_or_report_org_sector($sector) {
 ?>
 	    <!--<tr>
 		    <td>
-	            <b><?=_($res_sector->fields[1]) ?></b>
+	            <b><?php echo _($res_sector->fields[1]) ?></b>
 		    </td>
 	    </tr>-->
 	    <?php

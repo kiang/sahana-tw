@@ -19,7 +19,7 @@ include_once $global['approot'] . '/mod/cs/lib_cs.inc';
 //function shn_ims_home(){
 function _shn_ims_default() {
 ?>
-<h1 align="center"><?=_("Inventory Management System Home") ?> </h1>
+<h1 align="center"><?php echo _("Inventory Management System Home") ?> </h1>
 <?php
 ?>
 <div id="home">
@@ -47,13 +47,13 @@ function _shn_ims_default() {
 ?>    
     <table>
     <thead>
-        <td><?=_("Item") ?></td>
-        <td><?=_("Amount") ?></td>
-        <td><?=_("Unit") ?></td>
-        <td><?=_("Manufactured Date") ?></td>
-        <td><?=_("Expire Date") ?></td>
-        <td><?=_("Inventory") ?></td>
-            <td><?=_("Supplier") ?></td>
+        <td><?php echo _("Item") ?></td>
+        <td><?php echo _("Amount") ?></td>
+        <td><?php echo _("Unit") ?></td>
+        <td><?php echo _("Manufactured Date") ?></td>
+        <td><?php echo _("Expire Date") ?></td>
+        <td><?php echo _("Inventory") ?></td>
+            <td><?php echo _("Supplier") ?></td>
             
             
     </thead>

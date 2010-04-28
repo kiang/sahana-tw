@@ -45,16 +45,16 @@ function shn_cr_default() {
                 
 <strong><?php echo _("Description of Actions:"); ?></strong><br/>
     <ul>
-        <li><a href="index.php?mod=cr&act=srch"><b><?=_('Search by Name'); ?> </b></a><br/><?=_('Search for shelter by name or type of the shelter'); ?></li>
-        <li><a href="index.php?mod=cr&act=srch_address"><b><?=_('Search by address'); ?> </b> </a><br/><?=_('Search the shelter by its location'); ?></li>
-        <li><a href="index.php?mod=cr&act=acmp"><b><?=_('Add shelter'); ?></b></a><br/><?=_('Add a shelter to the database'); ?></li>
-        <li><a href="index.php?mod=cr&act=ecmp"><b><?=_('Edit shelter'); ?></b></a><br/><?=_('Update informations regarding shelters'); ?>
-        <li><a href="index.php?mod=cr&act=arpt"><b><?=_('View all shelters'); ?></b></a><br/><?=_('List information of all shelters'); ?></li>
-        <li><a href="index.php?mod=cr&act=lrpt"><b><?=_('View by location'); ?></b></a><br/><?=_('List shelters according to location'); ?></li>
-        <li><a href="index.php?mod=cr&act=contact"><b><?=_('View admin details'); ?></b></a><br/><?=_('List shelters by shelter administrator\'s name'); ?></li>
-        <li><a href="index.php?mod=cr&act=gis_show"><b><?=_('Map by location'); ?></b></a><br/><?=_('Graphical representation of shelter locations on a map'); ?>
-        <li><a href="index.php?mod=cr&act=gis_infect"><b><?=_('Map by infection'); ?></b></a><br/><?=_('Graphical representation of shelter by infections'); ?></li>
-        <li><a href="index.php?mod=cr&act=gis_population"><b><?=_('Map by population'); ?></b></a><br/><?=_('Graphical representation of shelters by their population density'); ?></li>
+        <li><a href="index.php?mod=cr&act=srch"><b><?php echo _('Search by Name'); ?> </b></a><br/><?php echo _('Search for shelter by name or type of the shelter'); ?></li>
+        <li><a href="index.php?mod=cr&act=srch_address"><b><?php echo _('Search by address'); ?> </b> </a><br/><?php echo _('Search the shelter by its location'); ?></li>
+        <li><a href="index.php?mod=cr&act=acmp"><b><?php echo _('Add shelter'); ?></b></a><br/><?php echo _('Add a shelter to the database'); ?></li>
+        <li><a href="index.php?mod=cr&act=ecmp"><b><?php echo _('Edit shelter'); ?></b></a><br/><?php echo _('Update informations regarding shelters'); ?>
+        <li><a href="index.php?mod=cr&act=arpt"><b><?php echo _('View all shelters'); ?></b></a><br/><?php echo _('List information of all shelters'); ?></li>
+        <li><a href="index.php?mod=cr&act=lrpt"><b><?php echo _('View by location'); ?></b></a><br/><?php echo _('List shelters according to location'); ?></li>
+        <li><a href="index.php?mod=cr&act=contact"><b><?php echo _('View admin details'); ?></b></a><br/><?php echo _('List shelters by shelter administrator\'s name'); ?></li>
+        <li><a href="index.php?mod=cr&act=gis_show"><b><?php echo _('Map by location'); ?></b></a><br/><?php echo _('Graphical representation of shelter locations on a map'); ?>
+        <li><a href="index.php?mod=cr&act=gis_infect"><b><?php echo _('Map by infection'); ?></b></a><br/><?php echo _('Graphical representation of shelter by infections'); ?></li>
+        <li><a href="index.php?mod=cr&act=gis_population"><b><?php echo _('Map by population'); ?></b></a><br/><?php echo _('Graphical representation of shelters by their population density'); ?></li>
         
 </ul>
 <br/>
@@ -86,8 +86,8 @@ function shn_cr_home_pop() {
 <div id="result">
 	<table>
 		<thead>
-			<td><?=_("{$conf['mod_cr_alt']} Name") ?></td>
-			<td><?=_("{$conf['mod_cr_alt']} Population") ?></td>
+			<td><?php echo _("{$conf['mod_cr_alt']} Name") ?></td>
+			<td><?php echo _("{$conf['mod_cr_alt']} Population") ?></td>
 		</thead>
 	
 	<?php
@@ -121,8 +121,8 @@ function shn_cr_home_newcmp() {
 <div id="result">
 	<table>
 		<thead>
-			<td><?=_("{$conf['mod_cr_alt']} Name") ?></td>
-			<td><?=_("{$conf['mod_cr_alt']} Location") ?></td>
+			<td><?php echo _("{$conf['mod_cr_alt']} Name") ?></td>
+			<td><?php echo _("{$conf['mod_cr_alt']} Location") ?></td>
 		</thead>
 	
 	<?php
@@ -282,7 +282,7 @@ function shn_cr_acmp() {
             shn_gis_density_map($map_array);
 ?>
 <br>
-<h3><?=_("Legend") ?></h3>
+<h3><?php echo _("Legend") ?></h3>
 
 <div id="result">
 <table>
@@ -350,7 +350,7 @@ function shn_cr_acmp() {
             shn_gis_density_map($map_array);
 ?>
 <br>
-<h3><?=_("Legend") ?></h3>
+<h3><?php echo _("Legend") ?></h3>
 
 <div id="result">
 <table>

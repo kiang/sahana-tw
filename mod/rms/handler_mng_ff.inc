@@ -193,12 +193,12 @@ function _shn_rms_mng_select_pledge() {
     <table>
     <caption>Items from inventories</caption>
     <thead>
-        <td><?=_("Item") ?></td>
-        <td><?=_("Amount") ?></td>
-        <td><?=_("Inventory") ?></td>
-        <td><?=_('Status') ?></td>
-        <td><?=_('Location') ?></td>
-        <td><?=_("Action") ?></td>
+        <td><?php echo _("Item") ?></td>
+        <td><?php echo _("Amount") ?></td>
+        <td><?php echo _("Inventory") ?></td>
+        <td><?php echo _('Status') ?></td>
+        <td><?php echo _('Location') ?></td>
+        <td><?php echo _("Action") ?></td>
             
             
     </thead>

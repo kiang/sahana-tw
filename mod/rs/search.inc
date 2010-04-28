@@ -22,7 +22,7 @@
 function shn_rs_search_type_select() {
     print "<h1>" . _("Search") . "</h1>";
 ?>
-    <p><?=_('Here you can search for reports and charts. Select the category that you need to search for.'); ?></p> 
+    <p><?php echo _('Here you can search for reports and charts. Select the category that you need to search for.'); ?></p> 
     <?php
     $form_opts['id'] = "rep_search";
     $search_type_array = array('none' => '---select---', 'report' => 'Report', 'chart' => 'Chart');
@@ -133,12 +133,12 @@ function _printTable($res) {
     <div id="result">
     <table>
     <thead>
-    <td><strong><?=_("Report ID") ?></strong></td>
-    <td><strong><?=_("File Name") ?></strong></td>
-    <td><strong><?=_("Title") ?></strong></td>
-    <td><strong><?=_("Date/Time") ?></strong></td>
-    <td><strong><?=_("File Type") ?></strong></td>
-    <td><strong><?=_("File Size (kb) ") ?></strong></td>
+    <td><strong><?php echo _("Report ID") ?></strong></td>
+    <td><strong><?php echo _("File Name") ?></strong></td>
+    <td><strong><?php echo _("Title") ?></strong></td>
+    <td><strong><?php echo _("Date/Time") ?></strong></td>
+    <td><strong><?php echo _("File Type") ?></strong></td>
+    <td><strong><?php echo _("File Size (kb) ") ?></strong></td>
     </thead>
     <tbody>
     <?php

@@ -40,7 +40,7 @@ include_once ($global['approot'] . '/inc/lib_image.inc');
 
 
 
-<h1><?=_('Group Members'); ?></h1>
+<h1><?php echo _('Group Members'); ?></h1>
 <?php
 //shn_show_thumb_url($_SESSION['dvr']['person']['p_uuid'],'', 'dvr', 'adddvr_img',true);
 include_once ($global['approot'] . '/mod/dvr/data_access.inc');

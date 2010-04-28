@@ -17,7 +17,7 @@
  */
 ?>
 <div id="home_recent">
-<h1><?=_('Missing People'); ?></h1>
+<h1><?php echo _('Missing People'); ?></h1>
 <?php
 global $global;
 global $conf;

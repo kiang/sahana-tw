@@ -83,7 +83,7 @@ function _shn_cr_hos_bed($errors = false) {
     global $conf;
     shn_form_fopen(acmp);
 ?>
-	<h1><?=_("Hospital Capabilities") ?></h1>
+	<h1><?php echo _("Hospital Capabilities") ?></h1>
 <?php
     shn_form_fsopen(_("Number of Beds"));
     shn_form_hidden(array('seq' => 'commit'));
@@ -551,7 +551,7 @@ function _shn_cr_cadd_confir($errors = false) {
     global $conf;
     $db = $global['db'];
 ?>
-    <h2><?=_('Confirm Registration Details of ') . $_SESSION['camp_name'] ?></h2>
+    <h2><?php echo _('Confirm Registration Details of ') . $_SESSION['camp_name'] ?></h2>
     <?php
     shn_form_fopen("acmp", null, array('req_message' => false, 'name' => ""));
     shn_form_fsopen(_('General Details'));

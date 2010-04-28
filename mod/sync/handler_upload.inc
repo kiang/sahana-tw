@@ -86,7 +86,7 @@ function _shn_sync_file_details() {
     <center>
     <br />
     <table>
-    <thead><td colspan="2"><?=_('Upload File Info') ?></td></thead>
+    <thead><td colspan="2"><?php echo _('Upload File Info') ?></td></thead>
     <tr><td><?php echo _('Name') ?> </td><td><?=$_FILES['file_dump']['name'] ?></td></tr>
     <tr><td><?php echo _('Type') ?> </td><td><?=$_FILES['file_dump']['type'] ?></td></tr>
     <tr><td><?php echo _('Size') ?> </td><td><?php echo ((int)$_FILES['file_dump']['size'] / 1000) . ' kb' ?></td></tr>

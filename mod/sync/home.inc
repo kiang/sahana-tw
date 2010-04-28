@@ -18,9 +18,9 @@
  */
 ?>
 <div id="home">
-<h2><?=_('Synchronization Module'); ?></h2>
+<h2><?php echo _('Synchronization Module'); ?></h2>
 <!-- <img src="theme/default/img/mpr.png"/> -->
-<p><?=_('This module helps you to synchronize two separate Sahana installations and share information among the independent Sahana instances.'); ?><br /><br />
+<p><?php echo _('This module helps you to synchronize two separate Sahana installations and share information among the independent Sahana instances.'); ?><br /><br />
 
 
     <div><h3><b><em><?=(_("Features Include:")) ?></em></b></h3></div>
@@ -28,16 +28,16 @@
 
 </p>
 <ul>
-    <li><?=_('Import and export information among Sahana instances'); ?></li>
-    <li><?=_('Allows details of the data sharing history among selected Sahana installations'); ?></li>
+    <li><?php echo _('Import and export information among Sahana instances'); ?></li>
+    <li><?php echo _('Allows details of the data sharing history among selected Sahana installations'); ?></li>
 </ul>
 
 
 <strong><?php echo _('Description of Actions:') ?></strong><br/>
     <ul>
-        <li><a href="index.php?mod=sync&act=download"><b><?=_('Export data'); ?> </b></a><br/><?=_('Save the information of selected modules to XML, CSV, SQL or SQLite in compressed or uncompressed file formats'); ?></li>
-        <li><a href="index.php?mod=sync&act=upload"><b><?=_('Import data'); ?> </b> </a><br/><?=_('Update Sahana database with information \'exported\' from another Sahana installation.'); ?></li>
-        <li><a href="index.php?mod=sync&act=history"><b><?=_('History'); ?></b></a><br/><?=_('Lists all synchronizations done in the past.'); ?></li>
+        <li><a href="index.php?mod=sync&act=download"><b><?php echo _('Export data'); ?> </b></a><br/><?php echo _('Save the information of selected modules to XML, CSV, SQL or SQLite in compressed or uncompressed file formats'); ?></li>
+        <li><a href="index.php?mod=sync&act=upload"><b><?php echo _('Import data'); ?> </b> </a><br/><?php echo _('Update Sahana database with information \'exported\' from another Sahana installation.'); ?></li>
+        <li><a href="index.php?mod=sync&act=history"><b><?php echo _('History'); ?></b></a><br/><?php echo _('Lists all synchronizations done in the past.'); ?></li>
         
 	</ul>
 <br/>   

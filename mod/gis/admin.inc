@@ -94,7 +94,7 @@ function shn_gis_adm_show_mod_menu() {
     $dir = opendir($gis_plugins_dir);
 ?>
 	<div id="submenu_v">
-		<a href="index.php?mod=gis&act=admin"><?=_("General Mapping") ?></a>
+		<a href="index.php?mod=gis&act=admin"><?php echo _("General Mapping") ?></a>
 <?php
     while ($file = readdir($dir)) {
         if (!is_dir($file)) {
@@ -103,7 +103,7 @@ function shn_gis_adm_show_mod_menu() {
             $name = $conf['plugin_name'];
 ?>
 <a href="index.php?mod=gis&act=admin&submod=<?=$file
-?>"><?=_($name) ?></a>
+?>"><?php echo _($name) ?></a>
 <?php
             $count++;
         }

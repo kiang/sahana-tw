@@ -18,18 +18,18 @@ function shn_cs_show_supplier_report() {
     global $global;
     $db = $global["db"];
 ?>
-	<h2><?=_('Supplier Report'); ?></h2>
-	<p><?=_('Here you can have a report on items with supplier details which are having registered suppliers in catalog system.'); ?></p>
+	<h2><?php echo _('Supplier Report'); ?></h2>
+	<p><?php echo _('Here you can have a report on items with supplier details which are having registered suppliers in catalog system.'); ?></p>
 
     <br>
     <div id="result">
     <table>
     <thead>
-    <td><strong><?=_("Item ID") ?></strong></td>
-    <td><strong><?=_("Name") ?></strong></td>
-    <td><strong><?=_("Description") ?></strong></td>
-    <td><strong><?=_("Supplier ID") ?></strong></td>
-    <td><strong><?=_("Supplier") ?></strong></td>
+    <td><strong><?php echo _("Item ID") ?></strong></td>
+    <td><strong><?php echo _("Name") ?></strong></td>
+    <td><strong><?php echo _("Description") ?></strong></td>
+    <td><strong><?php echo _("Supplier ID") ?></strong></td>
+    <td><strong><?php echo _("Supplier") ?></strong></td>
     </thead>
     <tbody>
     <?php

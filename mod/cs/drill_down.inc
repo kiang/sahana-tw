@@ -19,7 +19,7 @@ $db = $global['db'];
 $breadcrumb_str = "<a href='index.php?mod=cs&amp;act=drill_down'>" . "root" . "</a>";
 ?>
   	<h1><?=(_("Drill down report")) ?></h1>
-  	<p><?=_('Here you are able to view the catalog hierarchy as a drill down report. All the catalogs and sub catalogs which are having child catalogs or items will be displayed as active links.'); ?></p>
+  	<p><?php echo _('Here you are able to view the catalog hierarchy as a drill down report. All the catalogs and sub catalogs which are having child catalogs or items will be displayed as active links.'); ?></p>
   	<?php
 if (isset($_REQUEST['id'])) {
     $cat_itm_arr = _shn_cs_get_next_lvl_cats_itms($_REQUEST['id']);
@@ -43,14 +43,14 @@ if (isset($_REQUEST['id'])) {
     $cat_itm_arr = _shn_cs_get_main_cats();
 }
 ?>
-	<p><?=_("Go to : ") ?><?php print $breadcrumb_str; ?></p>
+	<p><?php echo _("Go to : ") ?><?php print $breadcrumb_str; ?></p>
  	<br />
  	<div id="result">
  	<table>
     	<thead>
-        	<td><strong><?=_("Name") ?></strong></td>
-        	<td><strong><?=_("Item/catalog") ?></strong></td>
-			<td><strong><?=_("Keyword") ?></strong></td>
+        	<td><strong><?php echo _("Name") ?></strong></td>
+        	<td><strong><?php echo _("Item/catalog") ?></strong></td>
+			<td><strong><?php echo _("Keyword") ?></strong></td>
     	</thead>
     	<TBODY>
     	<?php

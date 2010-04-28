@@ -54,15 +54,15 @@ function _shn_ims_viewform_allorg($no = NULL, $page_number = NULL, $Limit = NULL
 <div id ="result">
 	<table>
         <thead>
-            <td><?=_("Inventory Name") ?></td>
-            <td><?=_("Country of Origin/GIS") ?></td> 
-            <td><?=_("Address") ?></td>
-            <td><?=_("Contact Numbers") ?></td>
-            <td><?=_("Man Power") ?></td>
-            <td><?=_("Equipment") ?></td>
-            <td><?=_("Other <br /> Facilities") ?></td>
-	    <td><?=_("Inventory Space") ?></td>
-	    <td><?=_("Actions") ?></td>
+            <td><?php echo _("Inventory Name") ?></td>
+            <td><?php echo _("Country of Origin/GIS") ?></td> 
+            <td><?php echo _("Address") ?></td>
+            <td><?php echo _("Contact Numbers") ?></td>
+            <td><?php echo _("Man Power") ?></td>
+            <td><?php echo _("Equipment") ?></td>
+            <td><?php echo _("Other <br /> Facilities") ?></td>
+	    <td><?php echo _("Inventory Space") ?></td>
+	    <td><?php echo _("Actions") ?></td>
         </thead>
         <tbody>
 <?php
@@ -180,7 +180,7 @@ function _shn_ims_viewform_org($org_id, $error = false) {
         $bsd_village = $res_loc->fields[0];
     }
 ?>
-<h2><?=_("Inventory Registration Information of ") . "<em>" . $org_name ?></em></h2>
+<h2><?php echo _("Inventory Registration Information of ") . "<em>" . $org_name ?></em></h2>
 <?php
     if (!empty($error)) display_errors();
 ?>

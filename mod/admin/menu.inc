@@ -102,11 +102,11 @@ function _shn_admin_acl_user_roles_menu($user_home = false) {
 	<h2><?php echo _('Welcome to Users section'); ?></h2>
 	<h3><?php echo _("As Administrator , use this section for the following") ?></h3>
 	<ul>
-    <li><?=_('Add Users') ?></li>
-    <li><?=_('Remove Users') ?></li>
-    <li><?=_('Change User Roles') ?></li>
-    <li><?=_('Change User Status') ?></li>
-    <li><?=_('Unlock Users') ?></li>
+    <li><?php echo _('Add Users') ?></li>
+    <li><?php echo _('Remove Users') ?></li>
+    <li><?php echo _('Change User Roles') ?></li>
+    <li><?php echo _('Change User Status') ?></li>
+    <li><?php echo _('Unlock Users') ?></li>
 	</ul>
 	</div>
 <?php
@@ -142,10 +142,10 @@ function _shn_admin_acl_user_menu() {
 function _shn_admin_acl_role_menu($module = null) {
 ?>
 	<div id="submenu_v">
-	<a href="index.php?mod=admin&amp;act=add_role"><?=_("Add Role") ?></a>
-	<a href="index.php?mod=admin&amp;act=del_role"><?=_("Remove Role") ?></a>
-	<a href="index.php?mod=admin&amp;act=acl_role_perms"><?=_("Existing Role Permissions") ?></a>
-	<a href="index.php?mod=admin&amp;act=acl_role_edit_perms"><?=_("Modify Role Permissions") ?></a>
+	<a href="index.php?mod=admin&amp;act=add_role"><?php echo _("Add Role") ?></a>
+	<a href="index.php?mod=admin&amp;act=del_role"><?php echo _("Remove Role") ?></a>
+	<a href="index.php?mod=admin&amp;act=acl_role_perms"><?php echo _("Existing Role Permissions") ?></a>
+	<a href="index.php?mod=admin&amp;act=acl_role_edit_perms"><?php echo _("Modify Role Permissions") ?></a>
 	</div>
 	<br>
 <?php

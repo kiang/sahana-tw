@@ -82,12 +82,12 @@ function shn_dvr_individual_search_results() {
 	<table>
         <thead>
         		<td></td>
-            <td><?=_("Group Type") ?></td>
-            <td><?=_("Group Head Name") ?></td>
-            <td><?=_("Full Name") ?></td>
-            <td><?=_("Family Name") ?></td>
-          	<td><?=_("NIC") ?></td>
-            <td><?=_("Address") ?></td>
+            <td><?php echo _("Group Type") ?></td>
+            <td><?php echo _("Group Head Name") ?></td>
+            <td><?php echo _("Full Name") ?></td>
+            <td><?php echo _("Family Name") ?></td>
+          	<td><?php echo _("NIC") ?></td>
+            <td><?php echo _("Address") ?></td>
          <td>Edit</td>
           <td>Delete</td>
         </thead>

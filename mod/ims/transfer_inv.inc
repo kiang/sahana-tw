@@ -91,14 +91,14 @@ function _shn_ims_send_item_table_view_($catalog_id, $Limit, $page_number) {
     <div id="result">
     <table>
     <thead>
-            <td><?=_("Item") ?></td>
-            <td><?=_("Amount"); ?></td>
-            <td><?=_("Unit"); ?></td>
-            <td><?=_("Manufactured Date") ?></td>
-                <td><?=_("Expire Date") ?></td>
-            <td><?=_("Available Inventory") ?></td>
-                <td><?=_("state") ?></td>
-        <td><?=_("Action") ?></td>
+            <td><?php echo _("Item") ?></td>
+            <td><?php echo _("Amount"); ?></td>
+            <td><?php echo _("Unit"); ?></td>
+            <td><?php echo _("Manufactured Date") ?></td>
+                <td><?php echo _("Expire Date") ?></td>
+            <td><?php echo _("Available Inventory") ?></td>
+                <td><?php echo _("state") ?></td>
+        <td><?php echo _("Action") ?></td>
         </thead>
     <tbody>
 <?php
@@ -145,14 +145,14 @@ function _shn_ims_send_item_table_view_($catalog_id, $Limit, $page_number) {
     <div id="result">
     <table>
     <thead>
-            <td><?=_("Item") ?></td>
-	    <td><?=_("Amount"); ?></td>
-            <td><?=_("Unit"); ?></td>
-            <td><?=_("Manufactured Date") ?></td>
-                <td><?=_("Expire Date") ?></td>
-            <td><?=_("Available Inventory") ?></td>
-                <td><?=_("state") ?></td>
-        <td><?=_("Action") ?></td>
+            <td><?php echo _("Item") ?></td>
+	    <td><?php echo _("Amount"); ?></td>
+            <td><?php echo _("Unit"); ?></td>
+            <td><?php echo _("Manufactured Date") ?></td>
+                <td><?php echo _("Expire Date") ?></td>
+            <td><?php echo _("Available Inventory") ?></td>
+                <td><?php echo _("state") ?></td>
+        <td><?php echo _("Action") ?></td>
         </thead>
     <tbody>
 <?php
@@ -455,14 +455,14 @@ function _shn_ims_receive($Limit, $page_number = null) {
 ?>
     <table>
         <thead>
-        <td><?=_("Item") ?></td>
-        <td><?=_("Amount Sent"); ?></td>
-        <td><?=_("Unit"); ?></td>
-        <td><?=_("Inventory From") ?></td>
-        <td><?=_("To") ?></td>
-            <td><?=_("Date Sent") ?></td>
-            <td><?=_("Authorized Person") ?></td>
-        <td><?=_("Transit Item") ?></td>
+        <td><?php echo _("Item") ?></td>
+        <td><?php echo _("Amount Sent"); ?></td>
+        <td><?php echo _("Unit"); ?></td>
+        <td><?php echo _("Inventory From") ?></td>
+        <td><?php echo _("To") ?></td>
+            <td><?php echo _("Date Sent") ?></td>
+            <td><?php echo _("Authorized Person") ?></td>
+        <td><?php echo _("Transit Item") ?></td>
             
         </thead>
     <tbody>

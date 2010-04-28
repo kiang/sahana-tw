@@ -16,16 +16,16 @@
  */
 ?>
     <div id="home">
-    <h2><?=_('Reporting System'); ?></h2>
-    <div><p><?=_('The Reporting System helps to generate reports based on sahana database. It aggregates all the module reports in one place for making easier the user to view, search reports and charts. On the other hand it performs as the administrator interface for sahana module reports.'); ?></p></div>
+    <h2><?php echo _('Reporting System'); ?></h2>
+    <div><p><?php echo _('The Reporting System helps to generate reports based on sahana database. It aggregates all the module reports in one place for making easier the user to view, search reports and charts. On the other hand it performs as the administrator interface for sahana module reports.'); ?></p></div>
 
     <br></br>
     <div><h3><b><em><?=(_("Features Include:")) ?></em></b></h3></div>
     <ul>
-    <li><b><?=_('Module Reports Aggregator'); ?> </b><?=_(' - Aggregates all the module reports. This will show a detail view of each module report.'); ?></li>
-    <li><a href="index.php?mod=rs&amp;act=sample"><b><?=_('Generate Sample Reports'); ?></b></a><?=_(' - Enables user to generate module based reports which are relavent to the sahana database or custom reports which are not relavent to sahana database.'); ?></li>
-    <li><a href="index.php?mod=rs&amp;act=search"><b><?=_('Report/Chart Search'); ?> </b> </a><?=_(' - Enables user to search reports and charts.'); ?></li>
-    <li><a href="index.php?mod=rs&amp;act=config"><b><?=_('Configuration'); ?></b></a><?=_(' - Enables to configure the frequency of updating modules reports and charts.'); ?></li>
+    <li><b><?php echo _('Module Reports Aggregator'); ?> </b><?php echo _(' - Aggregates all the module reports. This will show a detail view of each module report.'); ?></li>
+    <li><a href="index.php?mod=rs&amp;act=sample"><b><?php echo _('Generate Sample Reports'); ?></b></a><?php echo _(' - Enables user to generate module based reports which are relavent to the sahana database or custom reports which are not relavent to sahana database.'); ?></li>
+    <li><a href="index.php?mod=rs&amp;act=search"><b><?php echo _('Report/Chart Search'); ?> </b> </a><?php echo _(' - Enables user to search reports and charts.'); ?></li>
+    <li><a href="index.php?mod=rs&amp;act=config"><b><?php echo _('Configuration'); ?></b></a><?php echo _(' - Enables to configure the frequency of updating modules reports and charts.'); ?></li>
     </ul>
 
 </div>

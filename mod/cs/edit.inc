@@ -174,9 +174,9 @@ function show_item_cat_table() {
 <div id="result">
 <table>
     <thead>
-        <td><strong><?=_("Name") ?></strong></td>
-        <td><strong><?=_("Item/catalog") ?></strong></td>
-	<td><strong><?=_("Keyword") ?></strong></td>
+        <td><strong><?php echo _("Name") ?></strong></td>
+        <td><strong><?php echo _("Item/catalog") ?></strong></td>
+	<td><strong><?php echo _("Keyword") ?></strong></td>
     </thead>
     <TBODY>
     <?php
@@ -380,8 +380,8 @@ function show_unit_table() {
 	<div id="result">
 	<table>
 	<thead>
-        <td><strong><?=_("Name") ?></strong></td>
-        <td><strong><?=_("Multiplier") ?></strong></td>
+        <td><strong><?php echo _("Name") ?></strong></td>
+        <td><strong><?php echo _("Multiplier") ?></strong></td>
     </thead>
     <TBODY>
     <?php
@@ -500,8 +500,8 @@ function show_unit_type_table() {
 <div id="result">
 <table>
     <thead>
-        <td><strong><?=_("Name") ?></strong></td>
-        <td><strong><?=_("Description") ?></strong></td>
+        <td><strong><?php echo _("Name") ?></strong></td>
+        <td><strong><?php echo _("Description") ?></strong></td>
     </thead>
     <TBODY>
     <?php

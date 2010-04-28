@@ -152,7 +152,7 @@ function map_client($errors = false) {
     include_once $global['approot'] . "/inc/lib_form.inc";
     include_once $global['approot'] . "/mod/gis/gis_fns.inc";
 ?>
-	<h2><?=_("Mapping Client") ?></h2>
+	<h2><?php echo _("Mapping Client") ?></h2>
 	<p></p>
 <?php
     //mapping comes here
@@ -175,7 +175,7 @@ function show_wiki_add_detail($errors = false) {
     global $conf;
     include_once $global['approot'] . "/inc/lib_form.inc";
 ?>
-	<h2><?=_("Add Situation Detail") ?></h2>
+	<h2><?php echo _("Add Situation Detail") ?></h2>
 <?php
     shn_form_fopen('awik');
     shn_form_fsopen(_("Main Details"));

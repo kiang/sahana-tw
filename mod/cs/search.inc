@@ -78,8 +78,8 @@ function _shn_cs_search_item_cat_submit_result() {
     <div id="result">
     <table>
     <THEAD>
-        <TD><strong><?=_("Category Name") ?></strong></TD>
-        <TD><strong><?=_("Description") ?></strong></TD>
+        <TD><strong><?php echo _("Category Name") ?></strong></TD>
+        <TD><strong><?php echo _("Description") ?></strong></TD>
     </THEAD>
     <TBODY>
 
@@ -155,9 +155,9 @@ function _shn_cs_search_unit_submit_result() {
     <div id="result">
     <table>
     <THEAD>
-        <TD><strong><?=_("Unit Type") ?></strong></TD>
-        <TD><strong><?=_("Unit") ?></strong></TD>
-        <TD><strong><?=_("Multiplier") ?></strong></TD>
+        <TD><strong><?php echo _("Unit Type") ?></strong></TD>
+        <TD><strong><?php echo _("Unit") ?></strong></TD>
+        <TD><strong><?php echo _("Multiplier") ?></strong></TD>
     </THEAD>
     <TBODY>
     <?php
@@ -217,8 +217,8 @@ function _shn_cs_search_unit_type_submit_result() {
     <div id="result">
     <table>
     <THEAD>
-        <TD><strong><?=_("Unit Type Name") ?></strong></TD>
-        <TD><strong><?=_("Description") ?></strong></TD>
+        <TD><strong><?php echo _("Unit Type Name") ?></strong></TD>
+        <TD><strong><?php echo _("Description") ?></strong></TD>
     </THEAD>
     <TBODY>
 

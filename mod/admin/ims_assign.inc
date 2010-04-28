@@ -14,8 +14,8 @@ function _shn_ims_assign_form($errors = false, $type = false) {
 ?>
 		<table>
 		<thead>
-    	<td width="100%"><strong><?=_('Incident Name'); ?></strong></td>
-    	<td width="100%"><strong><?=_('Delete'); ?></strong></td>
+    	<td width="100%"><strong><?php echo _('Incident Name'); ?></strong></td>
+    	<td width="100%"><strong><?php echo _('Delete'); ?></strong></td>
 		</thead>
 <?php
         foreach($arr as $row) {
@@ -59,7 +59,7 @@ function _shn_ims_assign_form($errors = false, $type = false) {
     shn_form_fopen("ims_assign", null, array('req_message' => false));
     if ($updated) {
         shn_form_fsopen("");
-?>		<p align="center"><?=_('Added.'); ?></p>
+?>		<p align="center"><?php echo _('Added.'); ?></p>
 <?php
         shn_form_fsclose();
     }

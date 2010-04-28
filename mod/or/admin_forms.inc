@@ -18,9 +18,9 @@ function shn_or_adm_location_form() {
     global $global;
     $db = $global["db"];
 ?>
-<h2><?=_("Set the Starting Location") ?></h2>
+<h2><?php echo _("Set the Starting Location") ?></h2>
 <div id="note">
-<?=_("When a Disaster happens,typically organizations located in a certain region get involved. Therefore when you select a location its a waste of time to always start from country. If you know the country ,give it in this form,and you can start with sub-divisions of that country. Furthermore ,if the Disaster is confined to a much smaller geographical area, select the appropriate location to start with.") ?>
+<?php echo _("When a Disaster happens,typically organizations located in a certain region get involved. Therefore when you select a location its a waste of time to always start from country. If you know the country ,give it in this form,and you can start with sub-divisions of that country. Furthermore ,if the Disaster is confined to a much smaller geographical area, select the appropriate location to start with.") ?>
 </div>
 <?php
     if (!empty($error)) {
@@ -64,9 +64,9 @@ function shn_or_adm_location_range_form() {
     global $global;
     $db = $global["db"];
 ?>
-<h2><?=_("Set the Location Range") ?></h2>
+<h2><?php echo _("Set the Location Range") ?></h2>
 <div id="note">
-<?=_("In a Disaster,all the location levels might not be important ,set the range here") ?>
+<?php echo _("In a Disaster,all the location levels might not be important ,set the range here") ?>
 </div>
 <?php
     if (!empty($error)) {
@@ -102,7 +102,7 @@ function shn_or_adm_or_type_form() {
     include_once ($global['approot'] . '/inc/lib_misc.inc');
     include_once ("api.inc");
 ?>
-<h2><?=_('Organization Types') ?></h2>
+<h2><?php echo _('Organization Types') ?></h2>
 <?php
     if (!empty($error)) {
         display_errors();
@@ -160,7 +160,7 @@ function shn_or_adm_or_sector_form() {
     include_once ($global['approot'] . '/inc/lib_misc.inc');
     include_once ("api.inc");
 ?>
-<h2><?=_("Organization Sectors") ?></h2>
+<h2><?php echo _("Organization Sectors") ?></h2>
 <?php
     if (!empty($error)) {
         display_errors();

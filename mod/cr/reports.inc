@@ -48,7 +48,7 @@ function _shn_cr_rpt_all() {
     $db = $global['db'];
     $q = "select * from camp_reg ";
 ?>
-    <h1><?=_("Shelter Information") ?></h1>
+    <h1><?php echo _("Shelter Information") ?></h1>
 <?php
     //$res_cmp =$db->Execute($q);
     $res_cmp = shn_paging_get_report($q, 10);
@@ -56,15 +56,15 @@ function _shn_cr_rpt_all() {
 <div id ="result">
    <table>
         <thead>
-            <td><?=_("Shelter Name") ?></td>
-            <td><?=_("Shelter Type") ?></td>
-            <td><?=_("Address") ?></td> 
-            <td><?=_("Location") ?></td>
-            <!--<td><?=_("No: of Families") ?></td>-->
-            <td><?=_("No: of Males") ?></td>
-            <td><?=_("No: of Females") ?></td>
-            <td><?=_("No: of Children") ?></td>
-            <td><?=_("Total Count") ?></td>
+            <td><?php echo _("Shelter Name") ?></td>
+            <td><?php echo _("Shelter Type") ?></td>
+            <td><?php echo _("Address") ?></td> 
+            <td><?php echo _("Location") ?></td>
+            <!--<td><?php echo _("No: of Families") ?></td>-->
+            <td><?php echo _("No: of Males") ?></td>
+            <td><?php echo _("No: of Females") ?></td>
+            <td><?php echo _("No: of Children") ?></td>
+            <td><?php echo _("Total Count") ?></td>
         </thead>
         <tbody>
 <?php
@@ -109,12 +109,12 @@ function _shn_cr_rpt_all() {
 }
 function _shn_cr_drill_location() {
 ?>
-<h1><?=_("Shelter Information by Location") ?></h1>
+<h1><?php echo _("Shelter Information by Location") ?></h1>
   <div id ="result">
 	   <table>
 		   <thead>
-		     	<td><?=_("Location") ?></td>
-					<td><?=_("Total Number of Victims in Shelters") ?></td>
+		     	<td><?php echo _("Location") ?></td>
+					<td><?php echo _("Total Number of Victims in Shelters") ?></td>
 			 </thead>
 			 <tbody>
 <?php
@@ -152,17 +152,17 @@ function _shn_cr_drill_location() {
 //To Display the camps based on the location
 function _shn_cr_rpt_loc($locate) {
 ?>
-<h1><center><?=_("Shelter Information by Location Drilled") ?></center></h1>
+<h1><center><?php echo _("Shelter Information by Location Drilled") ?></center></h1>
 <?php
     echo "<h3>" . _("Shelters in") . " : " . _shn_cr_location_string($locate) . " </h3>";
 ?>
 <div id ="result">
 <table>
 <thead>
-<td><?=_("Shelter Name") ?> </td>
-<td><?=_("Shelter Type") ?></td>
-<td><?=_("Address") ?></td>
-<td><?=_("Total Victims") ?></td>
+<td><?php echo _("Shelter Name") ?> </td>
+<td><?php echo _("Shelter Type") ?></td>
+<td><?php echo _("Address") ?></td>
+<td><?php echo _("Total Victims") ?></td>
 </thead>
 
 <tbody>
@@ -209,11 +209,11 @@ function _shn_cr_contact() {
 	<div id = "result">
 		  <table>
 			  <thead>
-			    <td><?=_("Shelter Name") ?> </td>
-			    <td><?=_("Admin Name") ?></td>
-			    <td><?=_("Admin Phone") ?></td>
-			    <td><?=_("Admin Mobile") ?></td>
-			    <td><?=_("Admin Occupation") ?></td>
+			    <td><?php echo _("Shelter Name") ?> </td>
+			    <td><?php echo _("Admin Name") ?></td>
+			    <td><?php echo _("Admin Phone") ?></td>
+			    <td><?php echo _("Admin Mobile") ?></td>
+			    <td><?php echo _("Admin Occupation") ?></td>
 			  </thead>
 	      <tbody>
 				<?php

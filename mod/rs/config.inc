@@ -22,7 +22,7 @@
 function shn_rs_config_main_form() {
     print "<h1>" . _("Configuration") . "</h1>";
 ?>
-    <p><?=_('Here you can configure the frequency of updating module reports and charts.'); ?></p> 
+    <p><?php echo _('Here you can configure the frequency of updating module reports and charts.'); ?></p> 
     <?php
     global $global;
     $db = $global["db"];

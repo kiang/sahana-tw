@@ -135,12 +135,12 @@ function _shn_ims_search_item_db() {
         <div id ="result">
     <table>
         <thead>
-        <td><?=_("Item Name") ?></td>
-        <td><?=_("Amount") ?></td>
-        <td><?=_("Unit") ?></td>
-        <td><?=_("Inventory") ?></td>
-        <td><?=_("Status") ?></td>
-        <td><?=_("Supplier") ?></td> 
+        <td><?php echo _("Item Name") ?></td>
+        <td><?php echo _("Amount") ?></td>
+        <td><?php echo _("Unit") ?></td>
+        <td><?php echo _("Inventory") ?></td>
+        <td><?php echo _("Status") ?></td>
+        <td><?php echo _("Supplier") ?></td> 
         
             
             
@@ -208,12 +208,12 @@ function _shn_ims_search_item_db() {
 	<div id="result">
 	<table>
 	<thead>
-	<td><?=_("Item Name") ?></td>
-        <td><?=_("Amount") ?></td>
-        <td><?=_("Unit") ?></td>
-        <td><?=_("Inventory") ?></td>
-        <td><?=_("Status") ?></td>
-        <td><?=_("Supplier") ?></td> 
+	<td><?php echo _("Item Name") ?></td>
+        <td><?php echo _("Amount") ?></td>
+        <td><?php echo _("Unit") ?></td>
+        <td><?php echo _("Inventory") ?></td>
+        <td><?php echo _("Status") ?></td>
+        <td><?php echo _("Supplier") ?></td> 
 	</thead>
 	<tbody>
 <?php
@@ -315,7 +315,7 @@ function _shn_ims_form_search() {
     //global $global;
     $module = $global['module'];
 ?>
-<h2 align="center"><?=_("Search for Inventories by name and by Location") ?></h2>
+<h2 align="center"><?php echo _("Search for Inventories by name and by Location") ?></h2>
 <?php
     $form_opts['name'] = "search_inventory";
     shn_form_fopen('search_inventory_db', null, $form_opts);
@@ -376,14 +376,14 @@ function _shn_ims_search_inventory_db() {
 <div id='result'>
     <table>
     <thead>
-    <td><?=_("Inventory Name") ?></td>
-    <td><?=_("Country of Origin/GIS") ?></td> 
-    <td><?=_("Address") ?></td>
-    <td><?=_("Contact Numbers") ?></td>
-    <td><?=_("Man Power") ?></td>
-    <td><?=_("Equipment") ?></td>
-    <td><?=_("Other ") . "<br />" . _(" Facilities") ?></td>
-    <td><?=_("Inventory Space") ?></td>
+    <td><?php echo _("Inventory Name") ?></td>
+    <td><?php echo _("Country of Origin/GIS") ?></td> 
+    <td><?php echo _("Address") ?></td>
+    <td><?php echo _("Contact Numbers") ?></td>
+    <td><?php echo _("Man Power") ?></td>
+    <td><?php echo _("Equipment") ?></td>
+    <td><?php echo _("Other ") . "<br />" . _(" Facilities") ?></td>
+    <td><?php echo _("Inventory Space") ?></td>
     </thead>
     <tbody>
 
@@ -493,14 +493,14 @@ function _shn_ims_search_address() {
 <div id='result'>
     <table>
     <thead>
-    <td><?=_("Inventory Name") ?></td>
-    <td><?=_("Country of Origin/GIS") ?></td> 
-    <td><?=_("Address") ?></td>
-    <td><?=_("Contact Numbers") ?></td>
-    <td><?=_("Man Power") ?></td>
-    <td><?=_("Equipment") ?></td>
-    <td><?=_("Other ") . "<br />" . _(" Facilities") ?></td>
-    <td><?=_("Inventory Space") ?></td>
+    <td><?php echo _("Inventory Name") ?></td>
+    <td><?php echo _("Country of Origin/GIS") ?></td> 
+    <td><?php echo _("Address") ?></td>
+    <td><?php echo _("Contact Numbers") ?></td>
+    <td><?php echo _("Man Power") ?></td>
+    <td><?php echo _("Equipment") ?></td>
+    <td><?php echo _("Other ") . "<br />" . _(" Facilities") ?></td>
+    <td><?php echo _("Inventory Space") ?></td>
     </thead>
     <tbody>
 
@@ -534,7 +534,7 @@ function _shn_ims_form_search_old() {
     global $conf;
     $db = $global["db"];
 ?>
-<h2><?=_("Search for Inventories by Location") ?></h2>
+<h2><?php echo _("Search for Inventories by Location") ?></h2>
     <div id="formcontainer">
 <?php
     shn_form_fopen("search_cr");

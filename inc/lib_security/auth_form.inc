@@ -84,7 +84,7 @@ function shn_auth_form_signup($title = "Create Your Account", $mod = "pref", $ac
     shn_form_fsclose();
     $extra_opts['req'] = true;
     shn_form_fsopen(_("OpenId Login Details"));
-?><div class="info"><?=_("You can use an OpenID instead of a username/password for login if you like."); ?> </div><br /><?
+?><div class="info"><?php echo _("You can use an OpenID instead of a username/password for login if you like."); ?> </div><br /><?
     shn_form_text(_("OpenID "), 'openid', 'size="30"', null);
     shn_form_fsclose();
     shn_form_fsopen(_("Just a couple of more Details to verify that you are not a bot"));
@@ -139,7 +139,7 @@ function shn_auth_form_user_add($title = "Create Your Account", $mod = "admin", 
     shn_form_fsclose();
     $extra_opts['req'] = true;
     shn_form_fsopen(_("OpenId Login Details"));
-?><div class="info"><?=_("Option to use an OpenID instead of a username/password if you'd like."); ?> </div><br /><?
+?><div class="info"><?php echo _("Option to use an OpenID instead of a username/password if you'd like."); ?> </div><br /><?
     shn_form_text(_("OpenID "), 'openid', 'size="30"', null);
     shn_form_fsclose();
 ?>

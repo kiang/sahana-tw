@@ -17,7 +17,7 @@
  */
 function _shn_drill_downby_group() {
 ?>	
- 	 <h2><?=_("Disaster Victim Report by group") ?></h2>
+ 	 <h2><?php echo _("Disaster Victim Report by group") ?></h2>
  	 
  	 <?php
     global $global;
@@ -37,13 +37,13 @@ function _shn_drill_downby_group() {
    	 <div id ="result">
 	<table>
         <thead>
-        	<!--  <td><?=_("Group Id") ?></td>-->
-            <td><?=_("Group Type") ?></td>
-            <td><?=_("Group Head Name") ?></td>
-            <td><?=_("Family Name") ?></td>
-           <!-- <td><?=_("Local Name") ?></td>-->
-          	<td><?=_("NIC") ?></td>
-            <td><?=_("Address") ?></td>
+        	<!--  <td><?php echo _("Group Id") ?></td>-->
+            <td><?php echo _("Group Type") ?></td>
+            <td><?php echo _("Group Head Name") ?></td>
+            <td><?php echo _("Family Name") ?></td>
+           <!-- <td><?php echo _("Local Name") ?></td>-->
+          	<td><?php echo _("NIC") ?></td>
+            <td><?php echo _("Address") ?></td>
             
         </thead>
         <?php
@@ -77,15 +77,15 @@ function _shn_drill_downby_shelter() {
     include_once ($global['approot'] . '/mod/dvr/data_access.inc');
     $camps = _shn_dvr_get_camps();
 ?>
- 	  <h2><?=_("Disaster Victim Report by Shelter") ?></h2>
+ 	  <h2><?php echo _("Disaster Victim Report by Shelter") ?></h2>
    	 <div id ="result">
 	<table>
         <thead>
         		
-            <!--<td><?=_("Camp Id") ?></td>-->
-            <td><?=_("Camp Name") ?></td>
-            <td><?=_("Address") ?></td>
-            <td><?=_("Capacity") ?></td>
+            <!--<td><?php echo _("Camp Id") ?></td>-->
+            <td><?php echo _("Camp Name") ?></td>
+            <td><?php echo _("Address") ?></td>
+            <td><?php echo _("Capacity") ?></td>
          
         </thead>
         
@@ -111,13 +111,13 @@ function _shn_drill_downby_incident() {
     include_once ($global['approot'] . '/mod/dvr/data_access.inc');
     $incidents = _shn_dvr_get_incidents();
 ?>
- 	  <h2><?=_("Disaster Victim Report by Incident") ?></h2>
+ 	  <h2><?php echo _("Disaster Victim Report by Incident") ?></h2>
    	 <div id ="result">
 	<table>
         <thead>
         		
-            <!-- <td><?=_("Incident Id") ?></td>-->
-            <td><?=_("Incident Name") ?></td>
+            <!-- <td><?php echo _("Incident Id") ?></td>-->
+            <td><?php echo _("Incident Name") ?></td>
             
          
          

@@ -23,7 +23,7 @@ function _shn_or_regform_org($error = false) {
     global $conf;
     $db = $global['db'];
 ?>
-<h2><?=_('Organization Registration') ?></h2>
+<h2><?php echo _('Organization Registration') ?></h2>
 <?php
     /*    if($error)
     display_errors();*/
@@ -33,7 +33,7 @@ function _shn_or_regform_org($error = false) {
     shn_form_fopen("reg_org_gis_map");
     shn_form_fsopen(_("Primary Details"));
     $extra_opts['req'] = true;
-?><div class="info"><?=_("These are the basic details of an organization. Organization name is required , but the Registration number is optional"); ?> </div><br /><?php
+?><div class="info"><?php echo _("These are the basic details of an organization. Organization name is required , but the Registration number is optional"); ?> </div><br /><?php
     if (!empty($error)) {
         $extra_opts['value'] = $_SESSION['org']['name'];
     }
@@ -130,7 +130,7 @@ function _shn_or_regconfirm_org() {
     global $conf;
     $db = $global['db'];
 ?>
-<h2><?=_('Confirm Registration Details of ') . $_SESSION['org']['name'] ?></h2>
+<h2><?php echo _('Confirm Registration Details of ') . $_SESSION['org']['name'] ?></h2>
 <div id="formcontainer">
 <?php
     if ($_POST['action'] == 'confirm_edit') {
@@ -217,9 +217,9 @@ function _shn_or_regform_operation($error = false, $parent_org = null) {
     $q = "SELECT name FROM org_main WHERE o_uuid='{$parent_org}'";
     $res = $db->Execute($q);
 ?>
-<h2><?=_("Add an Operation/Branch under the Organization ") . $res->Fields("name") ?> </h2>
+<h2><?php echo _("Add an Operation/Branch under the Organization ") . $res->Fields("name") ?> </h2>
 <div id="note">
-<?=_("Your Organization might be having branches or carrying out relief operations in this disaster. Then information of those operations is usefull "); ?>
+<?php echo _("Your Organization might be having branches or carrying out relief operations in this disaster. Then information of those operations is usefull "); ?>
 </div>
                
 <div id="formcontainer">
