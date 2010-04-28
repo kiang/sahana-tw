@@ -12,12 +12,8 @@
 * @package    sahana
 * @subpackage or
 */
-#define(SHN_ERR_ADMIN_NAME_INCOMPLETE,"Organization name is essential for registration. Please Complete and Submit again");
-define(SHN_ERR_ADMIN_LOCATION_INCOMPLETE, "Organization location is essential for registration. Please complete and submit again");
-define(SHN_ERR_ADMIN_UNAME_INCOMPLETE, "User Name is essential for registration. Please complete and submit again");
-define(SHN_ERR_ADMIN_PWD_INCOMPLETE, "Password is essential for registration. Please complete and submit again");
-define(SHN_ERR_ADMIN_REPWD_INCOMPLETE, "Password confirmation is essential for registration. Please complete and submit again");
-define(SHN_ERR_ADMIN_REPWD_WRONG, "Password and confirmation password do not match. Please complete and submit again");
-#define(SHN_ERR_ADMIN_NAME_INCOMPLETE,"Organization name is essential for registration. Please Complete and Submit again");
-
-?>
+define("SHN_ERR_ADMIN_LOCATION_INCOMPLETE", "Organization location is essential for registration. Please complete and submit again");
+define("SHN_ERR_ADMIN_UNAME_INCOMPLETE", "User Name is essential for registration. Please complete and submit again");
+define("SHN_ERR_ADMIN_PWD_INCOMPLETE", "Password is essential for registration. Please complete and submit again");
+define("SHN_ERR_ADMIN_REPWD_INCOMPLETE", "Password confirmation is essential for registration. Please complete and submit again");
+define("SHN_ERR_ADMIN_REPWD_WRONG", "Password and confirmation password do not match. Please complete and submit again");

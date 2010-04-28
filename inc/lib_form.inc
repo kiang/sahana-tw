@@ -538,7 +538,7 @@ function shn_form_label($label, $caption, $extra_opts = null) {
  */
 function shn_form_password($label, $name, $text_opts = null, $extra_opts = null) {
     global $shn_tabindex;
-    $value = isset($_POST[$name]) ? $_POST[$name] : isset($extra_opts['value']) ? $extra_opts['value'] : '';
+    $value = isset($_POST[$name]) ? $_POST[$name] : (isset($extra_opts['value']) ? $extra_opts['value'] : '');
 ?>
 <label for="<?php echo $name ?>"><?php echo $label ?></label>
 <input

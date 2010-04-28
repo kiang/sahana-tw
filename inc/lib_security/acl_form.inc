@@ -182,6 +182,7 @@ whether the User is a member of the Role or not."); ?></div>
 		<td><strong><?php _("User"); ?></strong></td>
 		<?php
     $roles = _shn_acl_get_roles();
+    $perms = '';
     foreach($roles as $role => $role_name) {
         echo "<td>" . $role_name . "</td>";
     }
@@ -198,7 +199,6 @@ whether the User is a member of the Role or not."); ?></div>
 		<tr>
 			<td><?php echo $uname; ?></td>
 			<?php
-                        $perms = '';
         foreach($roles as $role => $role_name) {
             $perms = $perms . $user . ":" . $role . ";";
             $name = trim($user . $role);

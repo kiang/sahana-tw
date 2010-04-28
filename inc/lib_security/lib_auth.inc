@@ -161,6 +161,7 @@ function shn_auth_add_user($account_name, $user_name, $user_password, $role, $pi
     }
     $q = "insert into person_uuid(p_uuid,full_name) values('{$pid}','{$account_name}')";
     $res = $db->Execute($q);
+    $error = false;
     if ($res == false) {
         add_error($db->ErrorMsg());
         $error = true;
