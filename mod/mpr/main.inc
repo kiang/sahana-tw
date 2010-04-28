@@ -462,7 +462,8 @@ function shn_mpr_search() {
                         $search_sql->set_serial_no($_POST['anycard']);
                     }
                     #$search_sql->isvictim = true;
-                    if (!isset($_REQUEST['all_incidents'])) $search_sql->incident_list = "'" . implode(shn_db_get_all_incidents($_SESSION['user_pref_ims_incident_id']), "','") . "'";
+                    if (!empty($_REQUEST['all_incidents']))
+                        $search_sql->incident_list = "'" . implode(shn_db_get_all_incidents($_SESSION['user_pref_ims_incident_id']), "','") . "'";
                     if ($_REQUEST['type'] == 'missing') {
                         $search_sql->missing_only = true;
                         $search_sql->isvictim = true;

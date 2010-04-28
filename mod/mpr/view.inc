@@ -24,19 +24,23 @@
 function shn_mpr_view($p_uuid) {
     shn_form_fopen("", null);
     shn_form_fsopen(_("Details"));
-    shn_show_thumb_url($p_uuid, $conf['mod_mpr']['upload_picture']['savehandler'], 'mpr', 'addmp_img');
+    $savehandler = isset($conf['mod_mpr']['upload_picture']['savehandler']) ? $conf['mod_mpr']['upload_picture']['savehandler'] : '';
+    shn_show_thumb_url($p_uuid, $savehandler, 'mpr', 'addmp_img');
 ?>
     <hr>
 <?php
     $arr_info = _shn_mpr_get_details($p_uuid);
     //Identity
+    $identity_section = false;
     if (isset($arr_info['idcard']) || isset($arr_info['passport']) || isset($arr_info['drv_license'])) {
         shn_form_fsopen(_("Identity"));
         $identity_section = true;
     }
     if (isset($arr_info['idcard'])) shn_form_label(_('Identity Card Number'), $arr_info['idcard']);
     if (isset($arr_info['passport'])) shn_form_label(_('Passport Number'), $arr_info['passport']);
-    if (isset($arr_info['drv_license'])) shn_form_label(_('Driving License'), $arr_info['drv_license']);
+    if (isset($arr_info['drv_license'])) {
+        shn_form_label(_('Driving License'), isset($arr_info['drv_license']) ? $arr_info['drv_license'] : '');
+    }
     if ($identity_section) shn_form_fsclose();
     //Basic Details
     if (isset($arr_info['full_name']) || isset($arr_info['family_name']) || isset($arr_info['local_name']) || isset($arr_info['dob']) || isset($arr_info['opt_age_group']) || isset($arr_info['opt_gender']) || isset($arr_info['opt_marital_status']) || isset($arr_info['opt_religion']) || isset($arr_info['opt_race'])) {
@@ -54,6 +58,7 @@ function shn_mpr_view($p_uuid) {
     if (isset($arr_info['opt_race'])) shn_form_label(_('Race', shn_get_field_opt($arr_info['opt_race']), 'opt_race'));
     if ($basic_section) shn_form_fsclose();
     //Physical Details
+    $physical_section = false;
     if (isset($arr_info['opt_eye_color']) || isset($arr_info['opt_skin_color']) || isset($arr_info['opt_hair_color']) || isset($arr_info['height']) || isset($arr_info['weight']) || isset($arr_info['physical_comments'])) {
         shn_form_fsopen(_("Physical Details"));
         $physical_section = true;
@@ -75,6 +80,7 @@ function shn_mpr_view($p_uuid) {
     if (isset($arr_info['phone'])) shn_form_label(_('Home Phone'), $arr_info['phone']);
     if (isset($arr_info['mobile'])) shn_form_label(_('Mobile'), $arr_info['mobile']);
     if ($contact_section) shn_form_fsclose();
+    $other_section = false;
     if (isset($arr_info['opt_blood_type']) || isset($arr_info['last_seen']) || isset($arr_info['last_clothing']) || isset($arr_info['comments'])) {
         shn_form_fsopen(_("Other Details"));
         $other_section = true;
