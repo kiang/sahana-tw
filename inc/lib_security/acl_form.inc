@@ -119,12 +119,12 @@ whether the module is enabled for that role or not") ?></strong></div>
 	<tbody>
 	<?php
     $mods = shn_get_all_modules();
+    $perms = '';
     foreach($mods as $mod => $mod_arr) {
 ?>
 		<tr>
 			<td><?php echo $mod_arr[1]; ?></td>
 			<?php
-                        $perms = '';
         foreach($roles as $role => $role_name) {
             $perms = $perms . $mod_arr[0] . ":" . $role . ";";
             $name = trim($mod_arr[0] . $role);
