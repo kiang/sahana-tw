@@ -561,10 +561,11 @@ class SearchQuery {
      * @return string
      */
     function get_sql() {
-        $sql = "SELECT person_status.p_uuid FROM person_status WHERE 1";
+        $sql = "SELECT person_status.p_uuid FROM person_status";
         if(!empty($this->__joins)) {
             foreach($this->__joins as $joins) $sql.= $joins;
         }
+        $sql .= ' WHERE 1';
         //if incident_id is given join that
         if (!empty($this->incident_id) || !empty($this->incident_list)) $sql.= " INNER JOIN resource_to_incident ON resource_to_incident.x_uuid = person_status.p_uuid ";
         if (!empty($this->__where)) {
