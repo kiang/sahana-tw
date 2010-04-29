@@ -44,13 +44,14 @@ function shn_tools_clean_post(&$local_post) {
 function shn_mpr_addmp_entry($errors = false) {
     //if($errors)
     //display_errors();
+    $addmpType = isset($_REQUEST['type']) ? $_REQUEST['type'] : 'found';
     shn_form_fopen("addmp", null, array('enctype' => 'enctype="multipart/form-data"', 'req_message' => true));
     add_warning(_('Please do a search and check whether the person you are looking for is already exists'));
-    if ($_GET['type'] == 'found') {
+    if ($addmpType == 'found') {
         shn_form_fsopen(_('Status'));
         shn_form_opt_select('opt_status', _('Status'));
         shn_form_fsclose();
-    } elseif ($_GET['type'] == 'missing') {
+    } else {
         shn_form_hidden(array('opt_status' => 'mis'));
     }
     shn_form_hidden(array('seq' => 'entry'));
@@ -172,9 +173,21 @@ function shn_mpr_addmp_validate() {
         return false;
     }
     //fullname is entered?
-    if (!isset($local_post['full_name'])) {
+    if (empty($local_post['full_name'])) {
         add_error(_("Please enter the full name of the missing person"));
         $error_flag = true;
+    }
+    /*
+     * Check if idcard record is unique if entered
+     */
+    if(!empty($local_post['idcard'])) {
+        $uuid = shn_valid_idcard($local_post['idcard']);
+        if(!empty($uuid)) {
+            $error_flag = true;
+            add_error(sprintf(
+                    _("The Identification Number you entered is existed. Click %s to check it or correct the data you entered.")
+                    , '<a href="?mod=mpr&act=editmp&id=' . $uuid . '">' . $local_post['idcard'] . '</a>'));
+        }
     }
     if (isset($local_post['phone']) && !shn_valid_phone2($local_post['phone'], 'phone number')) {
         $error_flag = true;

@@ -238,6 +238,18 @@ function shn_mpr_editmp_validate() {
         add_error(_("Please enter the full name of the missing person"));
         $error_flag = true;
     }
+    /*
+     * Check if idcard record is unique if entered
+     */
+    if(!empty($local_post['idcard'])) {
+        $uuid = shn_valid_idcard($local_post['idcard'], $_SESSION['mpr_edit']['entry']['p_uuid']);
+        if(!empty($uuid)) {
+            $error_flag = true;
+            add_error(sprintf(
+                    _("The Identification Number you entered is existed. Click %s to check it or correct the data you entered.")
+                    , '<a href="?mod=mpr&act=editmp&id=' . $uuid . '">' . $local_post['idcard'] . '</a>'));
+        }
+    }
     $dob = $_POST['dob'];
     if (!shn_valid_date($dob, false, '/^\d{4}-\d{2}-\d{2}$/', 'Date of birth')) {
         //add_error(_("Please Check the Date format"));

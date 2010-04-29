@@ -219,6 +219,23 @@ function shn_valid_name($str,$pattern='/^\D+$/')
         return true;
 }
 
+function shn_valid_idcard($str, $p_uuid = '') {
+    $str = trim($str);
+    if(empty($str)) {
+        return false;
+    }
+    global $global;
+    $q = "SELECT p_uuid FROM identity_to_person WHERE serial='$str' AND opt_id_type='nic'";
+    if(!empty($p_uuid)) {
+        $q .= ' AND p_uuid != \'' . $p_uuid . '\'';
+    }
+    $result = $global['db']->Execute($q);
+    if(!empty($result->fields[0])) {
+        return $result->fields[0];
+    }
+    else return false;
+}
+
 /**
  * checks if the argument is a special charactor
  *
