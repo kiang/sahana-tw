@@ -144,14 +144,6 @@ function shn_mpr_editmp_entry($errors = false) {
     shn_form_opt_select('opt_status', _('Change the status'), '', array(
         'value' => isset($_SESSION['mpr_edit']['entry']['opt_status']) ? $_SESSION['mpr_edit']['entry']['opt_status'] : ''));
     shn_form_fsclose();
-    shn_form_fsopen(_('Identity'));
-    shn_form_text(_('Identity Card Number'), 'idcard', 'size="30"', array(
-        'value' => isset($_SESSION['mpr_edit']['entry']['idcard']) ? $_SESSION['mpr_edit']['entry']['idcard'] : ''));
-    shn_form_text(_('Passport Number'), 'passport', 'size="30"', array(
-        'value' => isset($_SESSION['mpr_edit']['entry']['passport']) ? $_SESSION['mpr_edit']['entry']['passport'] : ''));
-    shn_form_text(_('Driving License'), 'drv_license', 'size="30"', array(
-        'value' => isset($_SESSION['mpr_edit']['entry']['drv_license']) ? $_SESSION['mpr_edit']['entry']['drv_license'] : ''));
-    shn_form_fsclose();
     shn_form_fsopen(_("Basic Details"));
 ?>
 <p><?php echo _('Please enter any of the following details on the person'); ?>:</p>
@@ -175,6 +167,14 @@ function shn_mpr_editmp_entry($errors = false) {
     shn_form_opt_select("opt_religion", _("Religion"), '', array('value' => $_SESSION['mpr_edit']['entry']['opt_religion']));
     shn_form_opt_select("opt_race", _("Race"), '', array(
         'value' => isset($_SESSION['mpr_edit']['entry']['opt_race']) ? $_SESSION['mpr_edit']['entry']['opt_race'] : ''));
+    shn_form_fsclose();
+    shn_form_fsopen(_('Identity'));
+    shn_form_text(_('Identity Card Number'), 'idcard', 'size="30"', array(
+        'value' => isset($_SESSION['mpr_edit']['entry']['idcard']) ? $_SESSION['mpr_edit']['entry']['idcard'] : ''));
+    shn_form_text(_('Passport Number'), 'passport', 'size="30"', array(
+        'value' => isset($_SESSION['mpr_edit']['entry']['passport']) ? $_SESSION['mpr_edit']['entry']['passport'] : ''));
+    shn_form_text(_('Driving License'), 'drv_license', 'size="30"', array(
+        'value' => isset($_SESSION['mpr_edit']['entry']['drv_license']) ? $_SESSION['mpr_edit']['entry']['drv_license'] : ''));
     shn_form_fsclose();
     shn_form_fsopen(_('Replace Current Picture'));
     ?>

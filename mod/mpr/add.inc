@@ -56,20 +56,6 @@ function shn_mpr_addmp_entry($errors = false) {
     }
     shn_form_hidden(array('seq' => 'entry'));
     shn_form_hidden(array('type' => $_SESSION['mpr_add']['entry_type']));
-    shn_form_fsopen(_('Identity'));
-?>
-    <p><?php echo _('If you have any information about missing person\'s identity numbers, Please include them since it will be helpful for finding the person. Otherwise please ignore.'); ?></p>
-<?php
-    shn_form_text(_('Identity Card Number'), 'idcard', 'size="30"', array(
-        'value' => (isset($_SESSION['mpr']['search']['keyword']['idcard'])) ? $_SESSION['mpr']['search']['keyword']['idcard'] : '',
-        'help' => _('Specify the Identity card Number, Although this is not required this will be useful in searching for the person')
-        ));
-    shn_form_text(_('Passport Number'), 'passport', 'size="30"', array(
-        'value' => (isset($_SESSION['mpr']['search']['keyword']['anycard'])) ? $_SESSION['mpr']['search']['keyword']['anycard'] : '',
-        'help' => _('Please Specify the passport number, Although this is not required this will be useful in searching for the person')
-        ));
-    shn_form_text(_('Driving License'), 'drv_license', 'size="30"', array('help' => _('Please Specify the driving License number, Although this is not required this will be useful in searching for the person')));
-    shn_form_fsclose();
     shn_form_fsopen(_('Basic Details'));
 ?>
 <p><?php echo _('Please enter any of the following details on the person:'); ?></p> 
@@ -92,6 +78,20 @@ function shn_mpr_addmp_entry($errors = false) {
     shn_form_opt_select("opt_marital_status", _('Marital Status'));
     shn_form_opt_select("opt_religion", _('Religion'), null);
     shn_form_opt_select("opt_race", _('Race'));
+    shn_form_fsclose();
+    shn_form_fsopen(_('Identity'));
+?>
+    <p><?php echo _('If you have any information about missing person\'s identity numbers, Please include them since it will be helpful for finding the person. Otherwise please ignore.'); ?></p>
+<?php
+    shn_form_text(_('Identity Card Number'), 'idcard', 'size="30"', array(
+        'value' => (isset($_SESSION['mpr']['search']['keyword']['idcard'])) ? $_SESSION['mpr']['search']['keyword']['idcard'] : '',
+        'help' => _('Specify the Identity card Number, Although this is not required this will be useful in searching for the person')
+        ));
+    shn_form_text(_('Passport Number'), 'passport', 'size="30"', array(
+        'value' => (isset($_SESSION['mpr']['search']['keyword']['anycard'])) ? $_SESSION['mpr']['search']['keyword']['anycard'] : '',
+        'help' => _('Please Specify the passport number, Although this is not required this will be useful in searching for the person')
+        ));
+    shn_form_text(_('Driving License'), 'drv_license', 'size="30"', array('help' => _('Please Specify the driving License number, Although this is not required this will be useful in searching for the person')));
     shn_form_fsclose();
     shn_form_fsopen(_('Upload Picture'));
 ?>
