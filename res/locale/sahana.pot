@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-22 14:25+0800\n"
+"POT-Creation-Date: 2010-04-29 19:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -397,9 +397,9 @@ msgstr ""
 #: mod/rs/search.inc:64 mod/rs/sample.inc:132 mod/rs/sample.inc:137
 #: mod/cs/search.inc:46 mod/cs/search.inc:129 mod/cs/search.inc:198
 #: mod/cs/main.inc:76 mod/cs/main.inc:89 mod/cs/add.inc:84 mod/cs/add.inc:245
-#: mod/mpr/search.inc:47 mod/mpr/admin.inc:183 mod/cr/search.inc:180
-#: mod/cr/search.inc:187 mod/cr/search.inc:202 mod/cr/search.inc:206
-#: mod/cr/main.inc:29 mod/rms/handler_req_sch.inc:103
+#: mod/mpr/search.inc:47 mod/mpr/admin.inc:183 mod/mpr/main.inc:452
+#: mod/cr/search.inc:180 mod/cr/search.inc:187 mod/cr/search.inc:202
+#: mod/cr/search.inc:206 mod/cr/main.inc:29 mod/rms/handler_req_sch.inc:103
 #: mod/rms/handler_plg_sch.inc:68
 msgid "Search"
 msgstr ""
@@ -426,9 +426,9 @@ msgstr ""
 #: mod/ims/reg_inv.inc:111 mod/ims/reg_inv.inc:157 mod/cs/lib_cs.inc:193
 #: mod/gis/wm_fns.inc:100 mod/gis/wm_fns.inc:129 mod/gis/main_fns.inc:88
 #: mod/gis/main_fns.inc:117 mod/gis/gis_fns.inc:180 mod/mpr/search.inc:80
-#: mod/mpr/search.inc:206 mod/mpr/edit.inc:209 mod/mpr/edit.inc:312
-#: mod/mpr/edit.inc:706 mod/mpr/images.inc:26 mod/mpr/add.inc:122
-#: mod/mpr/add.inc:302 mod/mpr/add.inc:368 mod/mpr/add.inc:526
+#: mod/mpr/search.inc:206 mod/mpr/edit.inc:236 mod/mpr/edit.inc:351
+#: mod/mpr/edit.inc:745 mod/mpr/images.inc:26 mod/mpr/add.inc:137
+#: mod/mpr/add.inc:329 mod/mpr/add.inc:395 mod/mpr/add.inc:553
 #: mod/sync/handler_upload.inc:71 mod/admin/location.inc:58 mod/cr/edit.inc:67
 #: mod/cr/edit.inc:216 mod/cr/edit.inc:590 mod/cr/camp.inc:75
 #: mod/cr/camp.inc:96 mod/cr/camp.inc:175 mod/cr/camp.inc:659
@@ -576,14 +576,14 @@ msgstr ""
 #: mod/admin/ims_level.inc:358 mod/admin/ims_assign.inc:18
 #: mod/admin/ims_assign.inc:35 mod/admin/location.inc:100 mod/cr/edit.inc:173
 #: mod/dvr/admin.inc:57 mod/rms/handler_req_ls.inc:98 mod/rms/lib_rms.inc:489
-#: mod/msg/message_forms.inc:233 inc/lib_security/acl_form.inc:274
+#: mod/msg/message_forms.inc:233 inc/lib_security/acl_form.inc:276
 msgid "Delete"
 msgstr ""
 
 #: tools/tpl_languages.php:7 tools/tpl_languages.php:23
 #: tools/tpl_languages.php:98 mod/or/process_org.inc:33
 #: mod/or/process_org.inc:41 mod/ims/view_edit_item.inc:65
-#: mod/ims/mini_quantity.inc:249 mod/mpr/search.inc:247 mod/cr/edit.inc:172
+#: mod/ims/mini_quantity.inc:249 mod/mpr/search.inc:252 mod/cr/edit.inc:172
 #: mod/cr/edit.inc:258 mod/cr/edit.inc:553 mod/cr/camp.inc:617
 #: mod/msg/handler_cap_edit.inc:46
 msgid "Edit"
@@ -648,7 +648,7 @@ msgstr ""
 #: mod/admin/ims_level.inc:49 mod/admin/ims_level.inc:206
 #: mod/admin/ims_level.inc:391 mod/admin/ims_config.inc:30
 #: mod/admin/lc_ui_translate_update.inc:25 mod/dvr/admin.inc:105
-#: inc/lib_security/acl_form.inc:274
+#: inc/lib_security/acl_form.inc:276
 msgid "Update"
 msgstr ""
 
@@ -658,8 +658,8 @@ msgstr ""
 #: mod/rs/sample.inc:225 mod/rs/sample.inc:280 mod/cs/supplier_report.inc:29
 #: mod/cs/drill_down.inc:51 mod/cs/edit.inc:177 mod/cs/edit.inc:383
 #: mod/cs/edit.inc:503 mod/cs/add.inc:427 mod/mpr/search.inc:72
-#: mod/mpr/search.inc:73 mod/mpr/search.inc:353 mod/mpr/edit.inc:464
-#: mod/mpr/edit.inc:677 mod/mpr/add.inc:274 mod/mpr/add.inc:509
+#: mod/mpr/search.inc:73 mod/mpr/search.inc:358 mod/mpr/edit.inc:503
+#: mod/mpr/edit.inc:716 mod/mpr/add.inc:301 mod/mpr/add.inc:536
 #: mod/sync/handler_upload.inc:90 mod/admin/ims_level.inc:30
 #: mod/admin/ims_level.inc:61 mod/admin/ims_level.inc:173
 #: mod/admin/ims_level.inc:219 mod/admin/ims_level.inc:356
@@ -723,7 +723,7 @@ msgid "Assigned"
 msgstr ""
 
 #: tools/tpl_languages.php:39 mod/ims/optimize.inc:495 mod/ims/view_inv.inc:65
-#: mod/mpr/search.inc:235
+#: mod/mpr/search.inc:240
 msgid "Actions"
 msgstr ""
 
@@ -775,7 +775,7 @@ msgstr ""
 #: tools/tpl_languages.php:56 tools/tpl_languages.php:198 mod/or/search.inc:40
 #: mod/or/reg_org.inc:70 mod/or/reg_org.inc:177 mod/or/reg_org.inc:242
 #: mod/or/view_org.inc:397 mod/ims/reg_inv.inc:92 mod/ims/view_inv.inc:198
-#: inc/lib_location.inc:1065
+#: inc/lib_location.inc:1060
 msgid "Base Location"
 msgstr ""
 
@@ -793,7 +793,7 @@ msgstr ""
 
 #: tools/tpl_languages.php:63 tools/tpl_languages.php:336
 #: mod/or/process_org.inc:33 mod/or/process_org.inc:38
-#: inc/lib_security/acl_form.inc:248
+#: inc/lib_security/acl_form.inc:250
 msgid "Continue"
 msgstr ""
 
@@ -826,14 +826,14 @@ msgid "Volunteers to Assign"
 msgstr ""
 
 #: tools/tpl_languages.php:76 tools/tpl_languages.php:200
-#: mod/mpr/search.inc:352 mod/mpr/edit.inc:463
+#: mod/mpr/search.inc:357 mod/mpr/edit.inc:502
 msgid "Picture"
 msgstr ""
 
 #: tools/tpl_languages.php:77 tools/tpl_languages.php:299
 #: tools/tpl_languages.php:314 mod/ims/search.inc:142 mod/ims/search.inc:215
-#: mod/mpr/search.inc:354 mod/mpr/edit.inc:143 mod/mpr/add.inc:50
-#: mod/mpr/add.inc:51 mod/rms/handler_req_ls.inc:135
+#: mod/mpr/search.inc:359 mod/mpr/edit.inc:143 mod/mpr/add.inc:51
+#: mod/mpr/add.inc:52 mod/rms/handler_req_ls.inc:135
 #: mod/rms/handler_req_ls.inc:175 mod/rms/handler_req_sch.inc:99
 #: mod/rms/handler_req_sch.inc:205 mod/rms/handler_req_sch.inc:211
 #: mod/rms/handler_plg_ls.inc:118 mod/rms/handler_plg_ls.inc:156
@@ -1534,8 +1534,8 @@ msgid "No skills defined."
 msgstr ""
 
 #: tools/tpl_languages.php:287 tools/tpl_languages.php:365
-#: mod/or/admin_forms.inc:131 mod/or/admin_forms.inc:189 mod/mpr/edit.inc:679
-#: mod/mpr/edit.inc:691 mod/admin/location.inc:141 mod/admin/lc_db.inc:95
+#: mod/or/admin_forms.inc:131 mod/or/admin_forms.inc:189 mod/mpr/edit.inc:718
+#: mod/mpr/edit.inc:730 mod/admin/location.inc:141 mod/admin/lc_db.inc:95
 #: mod/admin/lc_add_new_language.inc:36 mod/msg/class_cap_alert.inc:417
 #: mod/msg/class_cap_alert.inc:421 mod/msg/class_cap_alert.inc:438
 #: mod/msg/class_cap_alert.inc:442
@@ -1592,14 +1592,14 @@ msgstr ""
 msgid "Total Monetary Value"
 msgstr ""
 
-#: tools/tpl_languages.php:304 mod/mpr/view.inc:26 mod/mpr/search.inc:232
+#: tools/tpl_languages.php:304 mod/mpr/view.inc:26 mod/mpr/search.inc:237
 #: mod/rms/handler_req_ls.inc:94 mod/rms/handler_req_sch.inc:216
 #: mod/rms/handler_plg_ls.inc:95 mod/rms/handler_plg_sch.inc:291
 msgid "Details"
 msgstr ""
 
 #: tools/tpl_languages.php:305 tools/tpl_languages.php:315
-#: inc/lib_security/acl_form.inc:374 inc/lib_security/acl_form.inc:439
+#: inc/lib_security/acl_form.inc:377 inc/lib_security/acl_form.inc:442
 msgid "Active"
 msgstr ""
 
@@ -1695,11 +1695,11 @@ msgstr ""
 msgid "Table Name"
 msgstr ""
 
-#: tools/tpl_languages.php:339 inc/lib_security/acl_form.inc:274
+#: tools/tpl_languages.php:339 inc/lib_security/acl_form.inc:276
 msgid "Create"
 msgstr ""
 
-#: tools/tpl_languages.php:340 inc/lib_security/acl_form.inc:274
+#: tools/tpl_languages.php:340 inc/lib_security/acl_form.inc:276
 msgid "Read"
 msgstr ""
 
@@ -1918,9 +1918,9 @@ msgstr ""
 #: mod/or/report.inc:466 mod/or/view_org.inc:92 mod/or/view_org.inc:405
 #: mod/or/view_org.inc:472 mod/or/lib_or.inc:639 mod/ims/search.inc:381
 #: mod/ims/search.inc:498 mod/ims/ims_report.inc:436 mod/ims/view_inv.inc:59
-#: mod/mpr/view.inc:73 mod/mpr/edit.inc:178 mod/mpr/edit.inc:425
-#: mod/mpr/add.inc:88 mod/mpr/add.inc:294 mod/mpr/add.inc:477
-#: mod/mpr/add.inc:511 mod/cr/search.inc:43 mod/cr/search.inc:120
+#: mod/mpr/view.inc:78 mod/mpr/edit.inc:191 mod/mpr/edit.inc:464
+#: mod/mpr/add.inc:103 mod/mpr/add.inc:321 mod/mpr/add.inc:504
+#: mod/mpr/add.inc:538 mod/cr/search.inc:43 mod/cr/search.inc:120
 #: mod/cr/edit.inc:42 mod/cr/edit.inc:134 mod/cr/edit.inc:498
 #: mod/cr/edit.inc:564 mod/cr/reports.inc:61 mod/cr/reports.inc:164
 #: mod/cr/camp.inc:45 mod/cr/camp.inc:562 mod/cr/camp.inc:633
@@ -2069,7 +2069,7 @@ msgid " Longitude= "
 msgstr ""
 
 #: mod/or/reg_org.inc:180 mod/or/lib_or.inc:126 mod/ims/lib_ims.inc:1466
-#: inc/lib_location.inc:104
+#: inc/lib_location.inc:103
 msgid "Organization Location"
 msgstr ""
 
@@ -2096,10 +2096,10 @@ msgstr ""
 #: mod/dvr/add_new_grp.inc:432 mod/dvr/edt_indv.inc:465
 #: mod/dvr/add_new_indv.inc:442 mod/msg/handler_cap_edit.inc:111
 #: mod/msg/message_forms.inc:46 mod/msg/message_forms.inc:232
-#: mod/msg/admin_settings.inc:60 inc/lib_security/acl_form.inc:154
-#: inc/lib_security/acl_form.inc:227 inc/lib_security/acl_form.inc:321
-#: inc/lib_security/acl_form.inc:345 inc/lib_security/acl_form.inc:417
-#: inc/lib_security/acl_form.inc:481
+#: mod/msg/admin_settings.inc:60 inc/lib_security/acl_form.inc:155
+#: inc/lib_security/acl_form.inc:229 inc/lib_security/acl_form.inc:324
+#: inc/lib_security/acl_form.inc:348 inc/lib_security/acl_form.inc:420
+#: inc/lib_security/acl_form.inc:484
 msgid "Save"
 msgstr ""
 
@@ -2209,7 +2209,7 @@ msgid "No Records"
 msgstr ""
 
 #: mod/or/view_org.inc:222 mod/or/view_org.inc:542 mod/mpr/mpr_lib.inc:50
-#: mod/mpr/mpr_lib.inc:70 mod/mpr/search.inc:273 mod/dvr/lib.inc:150
+#: mod/mpr/mpr_lib.inc:71 mod/mpr/search.inc:278 mod/dvr/lib.inc:150
 #: mod/dvr/lib.inc:170
 msgid "Assign to more incidents"
 msgstr ""
@@ -2247,8 +2247,8 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: mod/or/view_org.inc:568 mod/or/view_org.inc:578 mod/mpr/view.inc:97
-#: mod/mpr/search.inc:384 mod/rms/handler_mng_ff.inc:109
+#: mod/or/view_org.inc:568 mod/or/view_org.inc:578 mod/mpr/view.inc:103
+#: mod/mpr/search.inc:389 mod/rms/handler_mng_ff.inc:109
 msgid "Back"
 msgstr ""
 
@@ -2343,12 +2343,12 @@ msgid ""
 "if you offer medical services select it"
 msgstr ""
 
-#: mod/or/lib_or.inc:640 mod/mpr/add.inc:295 mod/mpr/add.inc:512
+#: mod/or/lib_or.inc:640 mod/mpr/add.inc:322 mod/mpr/add.inc:539
 msgid "Phone"
 msgstr ""
 
-#: mod/or/lib_or.inc:641 mod/mpr/view.inc:76 mod/mpr/edit.inc:181
-#: mod/mpr/edit.inc:442 mod/mpr/add.inc:91 mod/mpr/add.inc:494
+#: mod/or/lib_or.inc:641 mod/mpr/view.inc:81 mod/mpr/edit.inc:197
+#: mod/mpr/edit.inc:481 mod/mpr/add.inc:106 mod/mpr/add.inc:521
 #: mod/dvr/edt_grp.inc:288 mod/dvr/edt_grp.inc:490 mod/dvr/add_new_grp.inc:224
 #: mod/dvr/add_new_grp.inc:390 mod/dvr/edt_indv.inc:234
 #: mod/dvr/edt_indv.inc:428 mod/dvr/add_new_indv.inc:161
@@ -2363,7 +2363,7 @@ msgid "Fax"
 msgstr ""
 
 #: mod/or/lib_or.inc:643 mod/home/main.inc:52 mod/home/main.inc:182
-#: mod/mpr/add.inc:296 mod/mpr/add.inc:513 mod/dvr/edt_grp.inc:294
+#: mod/mpr/add.inc:323 mod/mpr/add.inc:540 mod/dvr/edt_grp.inc:294
 #: mod/dvr/edt_grp.inc:492 mod/dvr/add_new_grp.inc:230
 #: mod/dvr/add_new_grp.inc:392 mod/rms/handler_req_new.inc:38
 #: mod/rms/handler_req_new.inc:75 mod/rms/handler_plg_new.inc:37
@@ -5812,8 +5812,8 @@ msgstr ""
 msgid "Contact Person  Phone"
 msgstr ""
 
-#: mod/gis/main_fns.inc:84 mod/mpr/view.inc:79 mod/mpr/edit.inc:203
-#: mod/mpr/edit.inc:445 mod/mpr/add.inc:116 mod/mpr/add.inc:497
+#: mod/gis/main_fns.inc:84 mod/mpr/view.inc:85 mod/mpr/edit.inc:226
+#: mod/mpr/edit.inc:484 mod/mpr/add.inc:131 mod/mpr/add.inc:524
 #: mod/dvr/edt_indv.inc:457 mod/dvr/edt_indv.inc:677
 #: mod/dvr/add_new_indv.inc:434 mod/dvr/add_new_indv.inc:663
 msgid "Other Details"
@@ -6015,49 +6015,49 @@ msgstr ""
 msgid "Error Reading RSS Feed"
 msgstr ""
 
-#: mod/mpr/mpr_lib.inc:41 mod/mpr/mpr_lib.inc:61 mod/dvr/lib.inc:141
+#: mod/mpr/mpr_lib.inc:41 mod/mpr/mpr_lib.inc:62 mod/dvr/lib.inc:141
 #: mod/dvr/lib.inc:161
 msgid "Height : "
 msgstr ""
 
-#: mod/mpr/mpr_lib.inc:42 mod/mpr/mpr_lib.inc:62 mod/dvr/lib.inc:142
+#: mod/mpr/mpr_lib.inc:42 mod/mpr/mpr_lib.inc:63 mod/dvr/lib.inc:142
 #: mod/dvr/lib.inc:162
 msgid "Weight : "
 msgstr ""
 
-#: mod/mpr/mpr_lib.inc:43 mod/mpr/mpr_lib.inc:63 mod/dvr/lib.inc:143
+#: mod/mpr/mpr_lib.inc:43 mod/mpr/mpr_lib.inc:64 mod/dvr/lib.inc:143
 #: mod/dvr/lib.inc:163
 msgid "Eye Colour : "
 msgstr ""
 
-#: mod/mpr/mpr_lib.inc:44 mod/mpr/mpr_lib.inc:64 mod/dvr/lib.inc:144
+#: mod/mpr/mpr_lib.inc:44 mod/mpr/mpr_lib.inc:65 mod/dvr/lib.inc:144
 #: mod/dvr/lib.inc:164
 msgid "Skin Colour : "
 msgstr ""
 
-#: mod/mpr/mpr_lib.inc:45 mod/mpr/mpr_lib.inc:65 mod/dvr/lib.inc:145
+#: mod/mpr/mpr_lib.inc:45 mod/mpr/mpr_lib.inc:66 mod/dvr/lib.inc:145
 #: mod/dvr/lib.inc:165
 msgid "Hair Colour : "
 msgstr ""
 
-#: mod/mpr/mpr_lib.inc:46 mod/mpr/mpr_lib.inc:66 mod/dvr/lib.inc:146
+#: mod/mpr/mpr_lib.inc:46 mod/mpr/mpr_lib.inc:67 mod/dvr/lib.inc:146
 #: mod/dvr/lib.inc:166
 msgid "Last Seen : "
 msgstr ""
 
-#: mod/mpr/mpr_lib.inc:47 mod/mpr/mpr_lib.inc:67 mod/dvr/lib.inc:147
+#: mod/mpr/mpr_lib.inc:47 mod/mpr/mpr_lib.inc:68 mod/dvr/lib.inc:147
 #: mod/dvr/lib.inc:167
 msgid "Last Clothing : "
 msgstr ""
 
-#: mod/mpr/mpr_lib.inc:48 mod/mpr/mpr_lib.inc:68 mod/dvr/lib.inc:148
+#: mod/mpr/mpr_lib.inc:48 mod/mpr/mpr_lib.inc:69 mod/dvr/lib.inc:148
 #: mod/dvr/lib.inc:168
 msgid "Comments : "
 msgstr ""
 
-#: mod/mpr/view.inc:34 mod/mpr/search.inc:66 mod/mpr/search.inc:67
-#: mod/mpr/edit.inc:146 mod/mpr/edit.inc:381 mod/mpr/add.inc:58
-#: mod/mpr/add.inc:433 mod/dvr/search_individual.inc:125
+#: mod/mpr/view.inc:36 mod/mpr/search.inc:66 mod/mpr/search.inc:67
+#: mod/mpr/edit.inc:147 mod/mpr/edit.inc:420 mod/mpr/add.inc:59
+#: mod/mpr/add.inc:460 mod/dvr/search_individual.inc:125
 #: mod/dvr/search_individual.inc:126 mod/dvr/search_group.inc:130
 #: mod/dvr/search_group.inc:131 mod/dvr/edt_indv.inc:176
 #: mod/dvr/edt_indv.inc:419 mod/dvr/add_new_indv.inc:117
@@ -6065,38 +6065,38 @@ msgstr ""
 msgid "Identity"
 msgstr ""
 
-#: mod/mpr/view.inc:37 mod/mpr/search.inc:42 mod/mpr/edit.inc:147
-#: mod/mpr/edit.inc:384 mod/mpr/add.inc:62 mod/mpr/add.inc:436
+#: mod/mpr/view.inc:39 mod/mpr/search.inc:42 mod/mpr/edit.inc:148
+#: mod/mpr/edit.inc:423 mod/mpr/add.inc:63 mod/mpr/add.inc:463
 #: mod/dvr/edt_indv.inc:180 mod/dvr/edt_indv.inc:420
 #: mod/dvr/add_new_indv.inc:121 mod/dvr/add_new_indv.inc:398
 msgid "Identity Card Number"
 msgstr ""
 
-#: mod/mpr/view.inc:38 mod/mpr/search.inc:69 mod/mpr/edit.inc:148
-#: mod/mpr/edit.inc:385 mod/mpr/add.inc:63 mod/mpr/add.inc:437
+#: mod/mpr/view.inc:40 mod/mpr/search.inc:69 mod/mpr/edit.inc:150
+#: mod/mpr/edit.inc:424 mod/mpr/add.inc:67 mod/mpr/add.inc:464
 #: mod/dvr/search_individual.inc:128 mod/dvr/search_group.inc:133
 #: mod/dvr/edt_indv.inc:183 mod/dvr/edt_indv.inc:421
 #: mod/dvr/add_new_indv.inc:124 mod/dvr/add_new_indv.inc:399
 msgid "Passport Number"
 msgstr ""
 
-#: mod/mpr/view.inc:39 mod/mpr/search.inc:70 mod/mpr/edit.inc:149
-#: mod/mpr/edit.inc:386 mod/mpr/add.inc:64 mod/mpr/add.inc:438
+#: mod/mpr/view.inc:42 mod/mpr/search.inc:70 mod/mpr/edit.inc:152
+#: mod/mpr/edit.inc:425 mod/mpr/add.inc:71 mod/mpr/add.inc:465
 #: mod/dvr/search_individual.inc:129 mod/dvr/edt_indv.inc:186
 #: mod/dvr/edt_indv.inc:422 mod/dvr/add_new_indv.inc:127
 #: mod/dvr/add_new_indv.inc:400
 msgid "Driving License"
 msgstr ""
 
-#: mod/mpr/view.inc:43 mod/mpr/search.inc:78 mod/mpr/edit.inc:151
-#: mod/mpr/edit.inc:390 mod/mpr/add.inc:66 mod/mpr/add.inc:442
+#: mod/mpr/view.inc:47 mod/mpr/search.inc:78 mod/mpr/edit.inc:155
+#: mod/mpr/edit.inc:429 mod/mpr/add.inc:73 mod/mpr/add.inc:469
 #: mod/dvr/search_individual.inc:137 mod/dvr/edt_indv.inc:141
 #: mod/dvr/add_new_indv.inc:80
 msgid "Basic Details"
 msgstr ""
 
-#: mod/mpr/view.inc:46 mod/mpr/search.inc:74 mod/mpr/edit.inc:155
-#: mod/mpr/edit.inc:393 mod/mpr/add.inc:70 mod/mpr/add.inc:445
+#: mod/mpr/view.inc:50 mod/mpr/search.inc:74 mod/mpr/edit.inc:159
+#: mod/mpr/edit.inc:432 mod/mpr/add.inc:77 mod/mpr/add.inc:472
 #: mod/cr/edit.inc:54 mod/cr/edit.inc:147 mod/cr/edit.inc:505
 #: mod/cr/edit.inc:577 mod/cr/camp.inc:56 mod/cr/camp.inc:569
 #: mod/cr/camp.inc:646 mod/dvr/edt_grp.inc:235
@@ -6105,13 +6105,13 @@ msgstr ""
 #: mod/dvr/edt_indv.inc:146 mod/dvr/add_new_indv.inc:85
 #: mod/rms/handler_req_new.inc:36 mod/rms/handler_req_new.inc:73
 #: mod/rms/handler_plg_new.inc:35 mod/rms/handler_plg_new.inc:59
-#: mod/rms/lib_rms.inc:790 inc/lib_security/lib_auth.inc:519
-#: inc/lib_security/acl_form.inc:500
+#: mod/rms/lib_rms.inc:790 inc/lib_security/lib_auth.inc:520
+#: inc/lib_security/acl_form.inc:503
 msgid "Full Name"
 msgstr ""
 
-#: mod/mpr/view.inc:47 mod/mpr/search.inc:75 mod/mpr/edit.inc:156
-#: mod/mpr/edit.inc:394 mod/mpr/add.inc:71 mod/mpr/add.inc:446
+#: mod/mpr/view.inc:51 mod/mpr/search.inc:75 mod/mpr/edit.inc:162
+#: mod/mpr/edit.inc:433 mod/mpr/add.inc:86 mod/mpr/add.inc:473
 #: mod/dvr/reporting.inc:43 mod/dvr/edt_grp.inc:239
 #: mod/dvr/search_individual.inc:88 mod/dvr/search_individual.inc:134
 #: mod/dvr/search_group.inc:72 mod/dvr/search_group.inc:139
@@ -6120,8 +6120,8 @@ msgstr ""
 msgid "Family Name"
 msgstr ""
 
-#: mod/mpr/view.inc:48 mod/mpr/search.inc:76 mod/mpr/edit.inc:157
-#: mod/mpr/edit.inc:395 mod/mpr/add.inc:72 mod/mpr/add.inc:447
+#: mod/mpr/view.inc:52 mod/mpr/search.inc:76 mod/mpr/edit.inc:164
+#: mod/mpr/edit.inc:434 mod/mpr/add.inc:87 mod/mpr/add.inc:474
 #: mod/dvr/reporting.inc:44 mod/dvr/edt_grp.inc:243
 #: mod/dvr/search_individual.inc:135 mod/dvr/search_group.inc:73
 #: mod/dvr/search_group.inc:140 mod/dvr/add_new_grp.inc:202
@@ -6130,135 +6130,135 @@ msgstr ""
 msgid "Local Name"
 msgstr ""
 
-#: mod/mpr/view.inc:49 mod/mpr/edit.inc:158 mod/mpr/edit.inc:396
-#: mod/mpr/add.inc:73 mod/mpr/add.inc:448 mod/dvr/edt_indv.inc:157
+#: mod/mpr/view.inc:53 mod/mpr/edit.inc:166 mod/mpr/edit.inc:435
+#: mod/mpr/add.inc:88 mod/mpr/add.inc:475 mod/dvr/edt_indv.inc:157
 #: mod/dvr/add_new_indv.inc:97
 msgid "Date of Birth"
 msgstr ""
 
-#: mod/mpr/view.inc:50 mod/mpr/edit.inc:160 mod/mpr/edit.inc:397
-#: mod/mpr/add.inc:75 mod/mpr/add.inc:449 mod/dvr/edt_indv.inc:161
+#: mod/mpr/view.inc:54 mod/mpr/edit.inc:169 mod/mpr/edit.inc:436
+#: mod/mpr/add.inc:90 mod/mpr/add.inc:476 mod/dvr/edt_indv.inc:161
 #: mod/dvr/add_new_indv.inc:102
 msgid "Age Group"
 msgstr ""
 
-#: mod/mpr/view.inc:51 mod/mpr/edit.inc:161 mod/mpr/edit.inc:398
-#: mod/mpr/add.inc:76 mod/mpr/add.inc:450 mod/dvr/edt_indv.inc:164
+#: mod/mpr/view.inc:55 mod/mpr/edit.inc:171 mod/mpr/edit.inc:437
+#: mod/mpr/add.inc:91 mod/mpr/add.inc:477 mod/dvr/edt_indv.inc:164
 #: mod/dvr/edt_indv.inc:414 mod/dvr/add_new_indv.inc:105
 #: mod/dvr/add_new_indv.inc:392
 msgid "Gender"
 msgstr ""
 
-#: mod/mpr/view.inc:52 mod/mpr/edit.inc:162 mod/mpr/edit.inc:399
-#: mod/mpr/add.inc:77 mod/mpr/add.inc:451 mod/dvr/edt_indv.inc:167
+#: mod/mpr/view.inc:56 mod/mpr/edit.inc:173 mod/mpr/edit.inc:438
+#: mod/mpr/add.inc:92 mod/mpr/add.inc:478 mod/dvr/edt_indv.inc:167
 #: mod/dvr/edt_indv.inc:415 mod/dvr/add_new_indv.inc:108
 #: mod/dvr/add_new_indv.inc:393
 msgid "Marital Status"
 msgstr ""
 
-#: mod/mpr/view.inc:53 mod/mpr/edit.inc:163 mod/mpr/edit.inc:400
-#: mod/mpr/add.inc:78 mod/mpr/add.inc:452 mod/dvr/edt_indv.inc:170
+#: mod/mpr/view.inc:57 mod/mpr/edit.inc:175 mod/mpr/edit.inc:439
+#: mod/mpr/add.inc:93 mod/mpr/add.inc:479 mod/dvr/edt_indv.inc:170
 #: mod/dvr/edt_indv.inc:416 mod/dvr/add_new_indv.inc:111
 #: mod/dvr/add_new_indv.inc:394
 msgid "Religion"
 msgstr ""
 
-#: mod/mpr/view.inc:54 mod/mpr/edit.inc:164 mod/mpr/edit.inc:401
-#: mod/mpr/add.inc:79 mod/mpr/add.inc:453 mod/dvr/edt_indv.inc:173
+#: mod/mpr/view.inc:58 mod/mpr/edit.inc:176 mod/mpr/edit.inc:440
+#: mod/mpr/add.inc:94 mod/mpr/add.inc:480 mod/dvr/edt_indv.inc:173
 #: mod/dvr/edt_indv.inc:417 mod/dvr/add_new_indv.inc:114
 #: mod/dvr/add_new_indv.inc:395
 msgid "Race"
 msgstr ""
 
-#: mod/mpr/view.inc:58 mod/mpr/edit.inc:195 mod/mpr/edit.inc:405
-#: mod/mpr/add.inc:108 mod/mpr/add.inc:457 mod/dvr/edt_indv.inc:651
+#: mod/mpr/view.inc:63 mod/mpr/edit.inc:212 mod/mpr/edit.inc:444
+#: mod/mpr/add.inc:123 mod/mpr/add.inc:484 mod/dvr/edt_indv.inc:651
 #: mod/dvr/add_new_indv.inc:637
 msgid "Physical Details"
 msgstr ""
 
-#: mod/mpr/view.inc:61 mod/mpr/search.inc:252 mod/mpr/edit.inc:196
-#: mod/mpr/edit.inc:408 mod/mpr/add.inc:109 mod/mpr/add.inc:460
+#: mod/mpr/view.inc:66 mod/mpr/search.inc:257 mod/mpr/edit.inc:213
+#: mod/mpr/edit.inc:447 mod/mpr/add.inc:124 mod/mpr/add.inc:487
 #: mod/dvr/edt_indv.inc:654 mod/dvr/add_new_indv.inc:640
 msgid "Eye Colour"
 msgstr ""
 
-#: mod/mpr/view.inc:62 mod/mpr/search.inc:252 mod/mpr/edit.inc:197
-#: mod/mpr/edit.inc:409 mod/mpr/add.inc:110 mod/mpr/add.inc:461
+#: mod/mpr/view.inc:67 mod/mpr/search.inc:257 mod/mpr/edit.inc:215
+#: mod/mpr/edit.inc:448 mod/mpr/add.inc:125 mod/mpr/add.inc:488
 #: mod/dvr/edt_indv.inc:656 mod/dvr/add_new_indv.inc:642
 msgid "Skin Colour"
 msgstr ""
 
-#: mod/mpr/view.inc:63 mod/mpr/search.inc:252 mod/mpr/edit.inc:198
-#: mod/mpr/edit.inc:410 mod/mpr/add.inc:111 mod/mpr/add.inc:462
+#: mod/mpr/view.inc:68 mod/mpr/search.inc:257 mod/mpr/edit.inc:217
+#: mod/mpr/edit.inc:449 mod/mpr/add.inc:126 mod/mpr/add.inc:489
 #: mod/dvr/edt_indv.inc:658 mod/dvr/add_new_indv.inc:644
 msgid "Hair Colour"
 msgstr ""
 
-#: mod/mpr/view.inc:64 mod/mpr/search.inc:252 mod/mpr/edit.inc:199
-#: mod/mpr/edit.inc:411 mod/mpr/add.inc:112 mod/mpr/add.inc:463
+#: mod/mpr/view.inc:69 mod/mpr/search.inc:257 mod/mpr/edit.inc:219
+#: mod/mpr/edit.inc:450 mod/mpr/add.inc:127 mod/mpr/add.inc:490
 #: mod/dvr/edt_indv.inc:453 mod/dvr/edt_indv.inc:661
 #: mod/dvr/add_new_indv.inc:430 mod/dvr/add_new_indv.inc:647
 msgid "Height"
 msgstr ""
 
-#: mod/mpr/view.inc:65 mod/mpr/search.inc:252 mod/mpr/edit.inc:200
-#: mod/mpr/edit.inc:412 mod/mpr/add.inc:113 mod/mpr/add.inc:464
+#: mod/mpr/view.inc:70 mod/mpr/search.inc:257 mod/mpr/edit.inc:221
+#: mod/mpr/edit.inc:451 mod/mpr/add.inc:128 mod/mpr/add.inc:491
 #: mod/dvr/edt_indv.inc:454 mod/dvr/edt_indv.inc:668
 #: mod/dvr/add_new_indv.inc:431 mod/dvr/add_new_indv.inc:654
 msgid "Weight"
 msgstr ""
 
-#: mod/mpr/view.inc:66 mod/mpr/view.inc:86 mod/mpr/search.inc:264
-#: mod/mpr/edit.inc:201 mod/mpr/edit.inc:207 mod/mpr/edit.inc:413
-#: mod/mpr/edit.inc:452 mod/mpr/add.inc:465 mod/mpr/add.inc:504
+#: mod/mpr/view.inc:71 mod/mpr/view.inc:92 mod/mpr/search.inc:269
+#: mod/mpr/edit.inc:223 mod/mpr/edit.inc:233 mod/mpr/edit.inc:452
+#: mod/mpr/edit.inc:491 mod/mpr/add.inc:492 mod/mpr/add.inc:531
 msgid "Comments"
 msgstr ""
 
-#: mod/mpr/view.inc:70 mod/mpr/edit.inc:177 mod/mpr/edit.inc:423
-#: mod/mpr/add.inc:475
+#: mod/mpr/view.inc:75 mod/mpr/edit.inc:190 mod/mpr/edit.inc:462
+#: mod/mpr/add.inc:502
 msgid "Contact Details"
 msgstr ""
 
-#: mod/mpr/view.inc:74 mod/mpr/edit.inc:179 mod/mpr/edit.inc:440
-#: mod/mpr/add.inc:89 mod/mpr/add.inc:492
+#: mod/mpr/view.inc:79 mod/mpr/edit.inc:193 mod/mpr/edit.inc:479
+#: mod/mpr/add.inc:104 mod/mpr/add.inc:519
 msgid "Postal Code"
 msgstr ""
 
-#: mod/mpr/view.inc:75 mod/mpr/edit.inc:180 mod/mpr/edit.inc:441
-#: mod/mpr/add.inc:90 mod/mpr/add.inc:493 mod/dvr/edt_indv.inc:231
+#: mod/mpr/view.inc:80 mod/mpr/edit.inc:195 mod/mpr/edit.inc:480
+#: mod/mpr/add.inc:105 mod/mpr/add.inc:520 mod/dvr/edt_indv.inc:231
 #: mod/dvr/edt_indv.inc:427 mod/dvr/add_new_indv.inc:158
 #: mod/dvr/add_new_indv.inc:405
 msgid "Home Phone"
 msgstr ""
 
-#: mod/mpr/view.inc:83 mod/mpr/edit.inc:204 mod/mpr/edit.inc:449
-#: mod/mpr/add.inc:117 mod/mpr/add.inc:501 mod/dvr/edt_indv.inc:455
+#: mod/mpr/view.inc:89 mod/mpr/edit.inc:227 mod/mpr/edit.inc:488
+#: mod/mpr/add.inc:132 mod/mpr/add.inc:528 mod/dvr/edt_indv.inc:455
 #: mod/dvr/edt_indv.inc:674 mod/dvr/add_new_indv.inc:432
 #: mod/dvr/add_new_indv.inc:660
 msgid "Blood Type"
 msgstr ""
 
-#: mod/mpr/view.inc:84 mod/mpr/search.inc:264 mod/mpr/edit.inc:205
-#: mod/mpr/edit.inc:450 mod/mpr/add.inc:502
+#: mod/mpr/view.inc:90 mod/mpr/search.inc:269 mod/mpr/edit.inc:229
+#: mod/mpr/edit.inc:489 mod/mpr/add.inc:529
 msgid "Last Seen"
 msgstr ""
 
-#: mod/mpr/view.inc:85 mod/mpr/search.inc:264 mod/mpr/edit.inc:206
-#: mod/mpr/edit.inc:451 mod/mpr/add.inc:503
+#: mod/mpr/view.inc:91 mod/mpr/search.inc:269 mod/mpr/edit.inc:231
+#: mod/mpr/edit.inc:490 mod/mpr/add.inc:530
 msgid "Last Clothing"
 msgstr ""
 
-#: mod/mpr/view.inc:89
+#: mod/mpr/view.inc:95
 msgid "People that are tracking"
 msgstr ""
 
-#: mod/mpr/view.inc:91 mod/mpr/search.inc:258 mod/mpr/search.inc:284
-#: mod/mpr/search.inc:368 mod/mpr/edit.inc:687 mod/msg/handler_cap_view.inc:65
+#: mod/mpr/view.inc:97 mod/mpr/search.inc:263 mod/mpr/search.inc:289
+#: mod/mpr/search.inc:373 mod/mpr/edit.inc:726 mod/msg/handler_cap_view.inc:65
 #: mod/msg/handler_cap_view.inc:74 mod/msg/handler_cap_view.inc:85
 msgid "View"
 msgstr ""
 
-#: mod/mpr/view.inc:96
+#: mod/mpr/view.inc:102
 msgid "Click to edit"
 msgstr ""
 
@@ -6315,45 +6315,55 @@ msgstr ""
 msgid "Last"
 msgstr ""
 
-#: mod/mpr/search.inc:231 mod/mpr/edit.inc:369
+#: mod/mpr/search.inc:211 mod/mpr/home.inc:55 mod/mpr/main.inc:57
+#: mod/mpr/main.inc:446
+msgid "Report a Missing Person"
+msgstr ""
+
+#: mod/mpr/search.inc:213 mod/mpr/home.inc:57 mod/mpr/main.inc:59
+#: mod/mpr/main.inc:449
+msgid "Report a Found Person"
+msgstr ""
+
+#: mod/mpr/search.inc:236 mod/mpr/edit.inc:408
 msgid "Person"
 msgstr ""
 
-#: mod/mpr/search.inc:233
+#: mod/mpr/search.inc:238
 msgid "Associated People"
 msgstr ""
 
-#: mod/mpr/search.inc:234
+#: mod/mpr/search.inc:239
 msgid "Missing Details"
 msgstr ""
 
-#: mod/mpr/search.inc:236
+#: mod/mpr/search.inc:241
 msgid "Reported Person"
 msgstr ""
 
-#: mod/mpr/search.inc:237 mod/mpr/search.inc:290 mod/mpr/search.inc:355
-#: mod/mpr/search.inc:377 mod/rms/handler_mng_ff.inc:159
+#: mod/mpr/search.inc:242 mod/mpr/search.inc:295 mod/mpr/search.inc:360
+#: mod/mpr/search.inc:382 mod/rms/handler_mng_ff.inc:159
 #: mod/rms/lib_rms.inc:870
 msgid "Select"
 msgstr ""
 
-#: mod/mpr/search.inc:259 mod/mpr/edit.inc:700 mod/mpr/admin.inc:227
+#: mod/mpr/search.inc:264 mod/mpr/edit.inc:739 mod/mpr/admin.inc:227
 msgid "Add Tracker"
 msgstr ""
 
-#: mod/mpr/search.inc:259
+#: mod/mpr/search.inc:264
 msgid "Associate another person"
 msgstr ""
 
-#: mod/mpr/search.inc:270 mod/mpr/search.inc:374
+#: mod/mpr/search.inc:275 mod/mpr/search.inc:379
 msgid "Change the status to Alive & Well"
 msgstr ""
 
-#: mod/mpr/search.inc:272 mod/mpr/search.inc:374
+#: mod/mpr/search.inc:277 mod/mpr/search.inc:379
 msgid "Click to change to found"
 msgstr ""
 
-#: mod/mpr/search.inc:275 mod/mpr/audit.inc:26
+#: mod/mpr/search.inc:280 mod/mpr/audit.inc:26
 msgid "Audit"
 msgstr ""
 
@@ -6365,77 +6375,84 @@ msgstr ""
 msgid "Change the status"
 msgstr ""
 
-#: mod/mpr/edit.inc:153
+#: mod/mpr/edit.inc:157
 msgid "Please enter any of the following details on the person"
 msgstr ""
 
-#: mod/mpr/edit.inc:166 mod/mpr/edit.inc:306
+#: mod/mpr/edit.inc:179 mod/mpr/edit.inc:345
 msgid "Replace Current Picture"
 msgstr ""
 
-#: mod/mpr/edit.inc:174 mod/mpr/edit.inc:311 mod/mpr/images.inc:24
-#: mod/mpr/add.inc:81 mod/mpr/add.inc:85 mod/mpr/add.inc:365
-#: mod/mpr/add.inc:366 mod/dvr/edt_indv.inc:189 mod/dvr/edt_indv.inc:214
+#: mod/mpr/edit.inc:187 mod/mpr/edit.inc:350 mod/mpr/images.inc:24
+#: mod/mpr/add.inc:96 mod/mpr/add.inc:100 mod/mpr/add.inc:392
+#: mod/mpr/add.inc:393 mod/dvr/edt_indv.inc:189 mod/dvr/edt_indv.inc:214
 #: mod/dvr/add_new_indv.inc:130 mod/dvr/add_new_indv.inc:144
 msgid "Upload Picture"
 msgstr ""
 
-#: mod/mpr/edit.inc:175
+#: mod/mpr/edit.inc:188
 msgid "Previously Uploaded Image"
 msgstr ""
 
-#: mod/mpr/edit.inc:232 mod/mpr/add.inc:151
+#: mod/mpr/edit.inc:259 mod/mpr/add.inc:166
 msgid "Height should be a value in centimeters(cm)"
 msgstr ""
 
-#: mod/mpr/edit.inc:238 mod/mpr/add.inc:162
+#: mod/mpr/edit.inc:265 mod/mpr/add.inc:177
 msgid "Please enter the full name of the missing person"
 msgstr ""
 
-#: mod/mpr/edit.inc:260
+#: mod/mpr/edit.inc:276 mod/mpr/add.inc:188
+#, php-format
+msgid ""
+"The Identification Number you entered is existed. Click %s to check it or "
+"correct the data you entered."
+msgstr ""
+
+#: mod/mpr/edit.inc:299
 msgid "Invalid image type.Please try again!"
 msgstr ""
 
-#: mod/mpr/edit.inc:333 mod/mpr/add.inc:181 mod/mpr/add.inc:387
+#: mod/mpr/edit.inc:372 mod/mpr/add.inc:208 mod/mpr/add.inc:414
 msgid "Invalid image type please try again"
 msgstr ""
 
-#: mod/mpr/edit.inc:455
+#: mod/mpr/edit.inc:494
 msgid "Reporting People"
 msgstr ""
 
-#: mod/mpr/edit.inc:465 mod/mpr/edit.inc:678
+#: mod/mpr/edit.inc:504 mod/mpr/edit.inc:717
 msgid "Relationship"
 msgstr ""
 
-#: mod/mpr/edit.inc:482 mod/admin/mmc_main.inc:140 mod/admin/mmc_main.inc:161
+#: mod/mpr/edit.inc:521 mod/admin/mmc_main.inc:140 mod/admin/mmc_main.inc:161
 msgid "Confirm"
 msgstr ""
 
-#: mod/mpr/edit.inc:484
+#: mod/mpr/edit.inc:523
 msgid "Is the information that you've entered correct?"
 msgstr ""
 
-#: mod/mpr/edit.inc:486 mod/mpr/add.inc:232 mod/mpr/add.inc:248
+#: mod/mpr/edit.inc:525 mod/mpr/add.inc:259 mod/mpr/add.inc:275
 #: mod/sync/handler_upload.inc:109 mod/admin/mmc_main.inc:147
 #: mod/admin/mmc_main.inc:167
 msgid "Yes"
 msgstr ""
 
-#: mod/mpr/edit.inc:487 mod/mpr/add.inc:232 mod/mpr/add.inc:248
+#: mod/mpr/edit.inc:526 mod/mpr/add.inc:259 mod/mpr/add.inc:275
 #: mod/sync/handler_upload.inc:109
 msgid "No"
 msgstr ""
 
-#: mod/mpr/edit.inc:671
+#: mod/mpr/edit.inc:710
 msgid "Current Trackers"
 msgstr ""
 
-#: mod/mpr/edit.inc:693
+#: mod/mpr/edit.inc:732
 msgid "Click to remove the tracker"
 msgstr ""
 
-#: mod/mpr/edit.inc:700
+#: mod/mpr/edit.inc:739
 msgid "Add a tracker"
 msgstr ""
 
@@ -6680,10 +6697,6 @@ msgid ""
 msgstr ""
 
 #: mod/mpr/home.inc:55
-msgid "Report a missing person"
-msgstr ""
-
-#: mod/mpr/home.inc:55
 msgid "Report details about a missing person"
 msgstr ""
 
@@ -6693,10 +6706,6 @@ msgstr ""
 
 #: mod/mpr/home.inc:56
 msgid "Update the details of missing person entered to the database previously"
-msgstr ""
-
-#: mod/mpr/home.inc:57
-msgid "Report a found person"
 msgstr ""
 
 #: mod/mpr/home.inc:57
@@ -6731,16 +6740,8 @@ msgstr ""
 msgid "Search for a Person"
 msgstr ""
 
-#: mod/mpr/main.inc:57
-msgid "Report a Missing Person"
-msgstr ""
-
 #: mod/mpr/main.inc:58
 msgid "Edit a Missing Person"
-msgstr ""
-
-#: mod/mpr/main.inc:59
-msgid "Report a Found Person"
 msgstr ""
 
 #: mod/mpr/main.inc:62
@@ -6753,12 +6754,12 @@ msgstr ""
 
 #: mod/mpr/main.inc:157 mod/mpr/main.inc:163 mod/mpr/main.inc:176
 #: mod/mpr/main.inc:185 mod/mpr/main.inc:217 mod/mpr/main.inc:226
-#: mod/mpr/main.inc:243
+#: mod/mpr/main.inc:246
 msgid "Edit Missing Person Entry"
 msgstr ""
 
-#: mod/mpr/main.inc:179 mod/mpr/main.inc:207 mod/mpr/main.inc:295
-#: mod/mpr/main.inc:308 mod/mpr/main.inc:331
+#: mod/mpr/main.inc:179 mod/mpr/main.inc:207 mod/mpr/main.inc:298
+#: mod/mpr/main.inc:312 mod/mpr/main.inc:339
 msgid "Add a tracker to"
 msgstr ""
 
@@ -6767,36 +6768,36 @@ msgstr ""
 msgid "Are you sure you want to delete tracker %s from tracker list"
 msgstr ""
 
-#: mod/mpr/main.inc:245
+#: mod/mpr/main.inc:248
 msgid "Edit Found Person Entry"
 msgstr ""
 
-#: mod/mpr/main.inc:261
+#: mod/mpr/main.inc:264
 msgid "View Person"
 msgstr ""
 
-#: mod/mpr/main.inc:347
+#: mod/mpr/main.inc:355
 msgid "Found Person Entry"
 msgstr ""
 
-#: mod/mpr/main.inc:353
+#: mod/mpr/main.inc:361
 msgid "Missing Person Entry"
 msgstr ""
 
-#: mod/mpr/main.inc:363 mod/mpr/main.inc:373 mod/mpr/main.inc:412
-#: mod/mpr/main.inc:421 mod/mpr/add.inc:507
+#: mod/mpr/main.inc:371 mod/mpr/main.inc:381 mod/mpr/main.inc:420
+#: mod/mpr/main.inc:429 mod/mpr/add.inc:534
 msgid "Reporting Person"
 msgstr ""
 
-#: mod/mpr/main.inc:367
+#: mod/mpr/main.inc:375
 msgid "Person Details"
 msgstr ""
 
-#: mod/mpr/main.inc:380 mod/mpr/main.inc:407 inc/lib_validate.inc:125
+#: mod/mpr/main.inc:388 mod/mpr/main.inc:415 inc/lib_validate.inc:125
 msgid "The "
 msgstr ""
 
-#: mod/mpr/main.inc:390
+#: mod/mpr/main.inc:398
 msgid "Please Select the person who is reporting"
 msgstr ""
 
@@ -6804,180 +6805,180 @@ msgstr ""
 msgid "Add Another Picture"
 msgstr ""
 
-#: mod/mpr/add.inc:48
+#: mod/mpr/add.inc:49
 msgid ""
 "Please do a search and check whether the person you are looking for is "
 "already exists"
 msgstr ""
 
-#: mod/mpr/add.inc:60
+#: mod/mpr/add.inc:61
 msgid ""
 "If you have any information about missing person's identity numbers, Please "
 "include them since it will be helpful for finding the person. Otherwise "
 "please ignore."
 msgstr ""
 
-#: mod/mpr/add.inc:62 mod/dvr/edt_indv.inc:179
+#: mod/mpr/add.inc:65 mod/dvr/edt_indv.inc:179
 msgid ""
 "Specify the Identity card Number, Although this is not required this will be "
 "useful in searching for the person"
 msgstr ""
 
-#: mod/mpr/add.inc:63 mod/dvr/edt_indv.inc:182
+#: mod/mpr/add.inc:69 mod/dvr/edt_indv.inc:182
 msgid ""
 "Please Specify the passport number, Although this is not required this will "
 "be useful in searching for the person"
 msgstr ""
 
-#: mod/mpr/add.inc:64 mod/dvr/edt_indv.inc:185
+#: mod/mpr/add.inc:71 mod/dvr/edt_indv.inc:185
 msgid ""
 "Please Specify the driving License number, Although this is not required "
 "this will be useful in searching for the person"
 msgstr ""
 
-#: mod/mpr/add.inc:68
+#: mod/mpr/add.inc:75
 msgid "Please enter any of the following details on the person:"
 msgstr ""
 
-#: mod/mpr/add.inc:71 mod/dvr/add_new_indv.inc:87
+#: mod/mpr/add.inc:86 mod/dvr/add_new_indv.inc:87
 msgid ""
 "Family name, or the surname could be specified for matching of people with "
 "similar Family names"
 msgstr ""
 
-#: mod/mpr/add.inc:72 mod/dvr/add_new_indv.inc:91
+#: mod/mpr/add.inc:87 mod/dvr/add_new_indv.inc:91
 msgid ""
 "You may also specify the local name, even in different script than English"
 msgstr ""
 
-#: mod/mpr/add.inc:83
+#: mod/mpr/add.inc:98
 msgid ""
 "If you have a picture of the missing person, please upload the picture. So, "
 "that it will be easy for us to identify the person. <br />It is not "
 "required, so if you don't have a picture no need to upload."
 msgstr ""
 
-#: mod/mpr/add.inc:87
+#: mod/mpr/add.inc:102
 msgid "Missing Person's Contact Information"
 msgstr ""
 
-#: mod/mpr/add.inc:88
+#: mod/mpr/add.inc:103
 msgid "Your address can be specified to contact you"
 msgstr ""
 
-#: mod/mpr/add.inc:89
+#: mod/mpr/add.inc:104
 msgid "Specify a postal code, if it is available"
 msgstr ""
 
-#: mod/mpr/add.inc:105
+#: mod/mpr/add.inc:120
 msgid "Select Missing Person's Origin"
 msgstr ""
 
-#: mod/mpr/add.inc:112
+#: mod/mpr/add.inc:127
 msgid "Enter the value in centimeters(cm)"
 msgstr ""
 
-#: mod/mpr/add.inc:114
+#: mod/mpr/add.inc:129
 msgid "Other Distinctive Features"
 msgstr ""
 
-#: mod/mpr/add.inc:118
+#: mod/mpr/add.inc:133
 msgid "Last Seen location"
 msgstr ""
 
-#: mod/mpr/add.inc:119
+#: mod/mpr/add.inc:134
 msgid "Description of clothing and appearance when last seen"
 msgstr ""
 
-#: mod/mpr/add.inc:120
+#: mod/mpr/add.inc:135
 msgid "Other information that would help us to find this person"
 msgstr ""
 
-#: mod/mpr/add.inc:157 mod/pref/ims_config.inc:48 mod/admin/ims_level.inc:82
+#: mod/mpr/add.inc:172 mod/pref/ims_config.inc:48 mod/admin/ims_level.inc:82
 #: mod/admin/ims_level.inc:247 mod/admin/ims_level.inc:425
 #: mod/admin/ims_assign.inc:88 mod/admin/ims_config.inc:40
 msgid "You have not completed the form"
 msgstr ""
 
-#: mod/mpr/add.inc:227
+#: mod/mpr/add.inc:254
 msgid ""
 "We are collecting the information on the person who is reporting the missing "
 "person due to the following reasons."
 msgstr ""
 
-#: mod/mpr/add.inc:227
+#: mod/mpr/add.inc:254
 msgid "To inform back on finding the missing person"
 msgstr ""
 
-#: mod/mpr/add.inc:227
+#: mod/mpr/add.inc:254
 msgid ""
 "In a situation where the person who is reporting also a victim of the "
 "disaster. The details given here would help to associate he/she with his/her "
 "relatives."
 msgstr ""
 
-#: mod/mpr/add.inc:230
+#: mod/mpr/add.inc:257
 msgid "Details on Person who is reporting on missing person"
 msgstr ""
 
-#: mod/mpr/add.inc:231
+#: mod/mpr/add.inc:258
 msgid "Reported Before"
 msgstr ""
 
-#: mod/mpr/add.inc:232
+#: mod/mpr/add.inc:259
 msgid "Have you reported anyone? "
 msgstr ""
 
-#: mod/mpr/add.inc:248
+#: mod/mpr/add.inc:275
 msgid "Are you a disaster victim too? "
 msgstr ""
 
-#: mod/mpr/add.inc:264
+#: mod/mpr/add.inc:291
 msgid "If you are a victim, Please specify the status"
 msgstr ""
 
-#: mod/mpr/add.inc:270
+#: mod/mpr/add.inc:297
 msgid "Details of the reporting person"
 msgstr ""
 
-#: mod/mpr/add.inc:272
+#: mod/mpr/add.inc:299
 msgid ""
 "NOTE : If you have reported before, we will use the following information to "
 "perform a search to see you are in our database or not."
 msgstr ""
 
-#: mod/mpr/add.inc:292
+#: mod/mpr/add.inc:319
 msgid "IMPORTANT : At least one of the following contact method is required"
 msgstr ""
 
-#: mod/mpr/add.inc:323
+#: mod/mpr/add.inc:350
 msgid "Please enter the full name of the reporting person"
 msgstr ""
 
-#: mod/mpr/add.inc:328
+#: mod/mpr/add.inc:355
 msgid "Please enter a valid E-mail"
 msgstr ""
 
-#: mod/mpr/add.inc:339
+#: mod/mpr/add.inc:366
 msgid "Please enter any contact method of the reporting person"
 msgstr ""
 
-#: mod/mpr/add.inc:362
+#: mod/mpr/add.inc:389
 msgid ""
 "If you have a picture of the missing person, please upload the picture. So, "
 "that it will be easy for us to identify the person. <br />If you don't have "
 "a picture to upload just click the \"Next\" button."
 msgstr ""
 
-#: mod/mpr/add.inc:424
+#: mod/mpr/add.inc:451
 msgid "Missing Person"
 msgstr ""
 
-#: mod/mpr/add.inc:510
+#: mod/mpr/add.inc:537
 msgid "Relation"
 msgstr ""
 
-#: mod/mpr/add.inc:524
+#: mod/mpr/add.inc:551
 msgid "Click on the \"Next\" Button to go back to the main screen."
 msgstr ""
 
@@ -10439,7 +10440,7 @@ msgstr ""
 #: mod/rms/handler_req_sch.inc:211 mod/rms/handler_plg_ls.inc:83
 #: mod/rms/handler_plg_sch.inc:287 mod/rms/handler_plg_sch.inc:289
 #: mod/rms/lib_rms.inc:907 mod/msg/handler_cap_edit.inc:88
-#: mod/msg/handler_cap_new.inc:79 inc/lib_security/acl_form.inc:497
+#: mod/msg/handler_cap_new.inc:79 inc/lib_security/acl_form.inc:500
 msgid "Date"
 msgstr ""
 
@@ -11664,7 +11665,7 @@ msgstr ""
 msgid "Language"
 msgstr ""
 
-#: mod/msg/handler_cap_new.inc:127 inc/lib_security/acl_form.inc:502
+#: mod/msg/handler_cap_new.inc:127 inc/lib_security/acl_form.inc:505
 msgid "Event"
 msgstr ""
 
@@ -12160,15 +12161,15 @@ msgstr ""
 msgid "are mandatory and must be filled."
 msgstr ""
 
-#: inc/lib_security/lib_auth.inc:521
+#: inc/lib_security/lib_auth.inc:522
 msgid "Full name is a required field. Please enter a value."
 msgstr ""
 
-#: inc/lib_security/lib_auth.inc:609
+#: inc/lib_security/lib_auth.inc:610
 msgid "User does not exist"
 msgstr ""
 
-#: inc/lib_security/lib_auth.inc:611
+#: inc/lib_security/lib_auth.inc:612
 msgid "User was successfully removed"
 msgstr ""
 
@@ -12228,104 +12229,104 @@ msgstr ""
 msgid "Role"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:171
+#: inc/lib_security/acl_form.inc:172
 msgid "Edit User-Role Assignments"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:172
+#: inc/lib_security/acl_form.inc:173
 msgid ""
 "Rows are User ,Columns are Roles ,Intersection shows\n"
 "whether the User is a member of the Role or not."
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:181 inc/lib_security/acl_form.inc:373
+#: inc/lib_security/acl_form.inc:182 inc/lib_security/acl_form.inc:376
 msgid "User"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:239
+#: inc/lib_security/acl_form.inc:241
 msgid "Select the Role you want to edit permissions of "
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:245 inc/lib_security/auth_form.inc:137
+#: inc/lib_security/acl_form.inc:247 inc/lib_security/auth_form.inc:137
 msgid "Select Role"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:246
+#: inc/lib_security/acl_form.inc:248
 msgid "Roles"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:261
+#: inc/lib_security/acl_form.inc:263
 msgid ""
 "Rows are Data Classificatons ,Columns are\n"
 "Create,Read,Update,Delete ,Intersection shows whether the Role has\n"
 "Create,Read,Update,Delete permissions to the Data Classificatons"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:272
+#: inc/lib_security/acl_form.inc:274
 msgid "Data Classifications"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:333
+#: inc/lib_security/acl_form.inc:336
 msgid "Edit the Data Classification for each table"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:360
+#: inc/lib_security/acl_form.inc:363
 msgid "Rows are Users ,Columns are the possible status values"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:362
+#: inc/lib_security/acl_form.inc:365
 msgid "<strong>Active</strong> - The user can login and perform operations."
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:363
+#: inc/lib_security/acl_form.inc:366
 msgid ""
 "<strong>Locked</strong> - The user is withheld from performing operations on "
 "the system temporarily."
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:364
+#: inc/lib_security/acl_form.inc:367
 msgid ""
 "<strong>Banned</strong> - The user is not allowed to perform any operation "
 "on the system permenantly."
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:375 inc/lib_security/acl_form.inc:440
+#: inc/lib_security/acl_form.inc:378 inc/lib_security/acl_form.inc:443
 msgid "Locked"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:376 inc/lib_security/acl_form.inc:441
+#: inc/lib_security/acl_form.inc:379 inc/lib_security/acl_form.inc:444
 msgid "Banned"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:384 inc/lib_security/acl_form.inc:448
+#: inc/lib_security/acl_form.inc:387 inc/lib_security/acl_form.inc:451
 msgid ""
 "Password locking is disabled system wide. Locks will not take any effect "
 "until it is enabled."
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:384 inc/lib_security/acl_form.inc:448
+#: inc/lib_security/acl_form.inc:387 inc/lib_security/acl_form.inc:451
 msgid "Click here to enable locking"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:429
+#: inc/lib_security/acl_form.inc:432
 msgid ""
 "Rows are Locked Users ,Columns are the possible status\n"
 "values"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:438
+#: inc/lib_security/acl_form.inc:441
 msgid "Locked User"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:498
+#: inc/lib_security/acl_form.inc:501
 msgid "Time"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:499 inc/handler_login.inc:24
+#: inc/lib_security/acl_form.inc:502 inc/handler_login.inc:24
 msgid "User Name"
 msgstr ""
 
-#: inc/lib_security/acl_form.inc:501
+#: inc/lib_security/acl_form.inc:504
 msgid "Event Type"
 msgstr ""
 
@@ -12422,43 +12423,43 @@ msgstr ""
 msgid "The Password was succesfully updated"
 msgstr ""
 
-#: inc/lib_location.inc:606
+#: inc/lib_location.inc:601
 msgid "If you know any of the following, please select Only one of them first"
 msgstr ""
 
-#: inc/lib_location.inc:606
+#: inc/lib_location.inc:601
 msgid " , the selection will populate the set of Location select boxes "
 msgstr ""
 
-#: inc/lib_location.inc:608
+#: inc/lib_location.inc:603
 msgid "* Camp/Shelter "
 msgstr ""
 
-#: inc/lib_location.inc:612
+#: inc/lib_location.inc:607
 msgid "* an Inventory "
 msgstr ""
 
-#: inc/lib_location.inc:616
+#: inc/lib_location.inc:611
 msgid "* an Organization "
 msgstr ""
 
-#: inc/lib_location.inc:628
+#: inc/lib_location.inc:623
 msgid "Select a Camp/Shelter"
 msgstr ""
 
-#: inc/lib_location.inc:652
+#: inc/lib_location.inc:647
 msgid "Shelter/Camp"
 msgstr ""
 
-#: inc/lib_location.inc:660
+#: inc/lib_location.inc:655
 msgid "Select an Organization"
 msgstr ""
 
-#: inc/lib_location.inc:673
+#: inc/lib_location.inc:668
 msgid "Organizations"
 msgstr ""
 
-#: inc/lib_location.inc:733
+#: inc/lib_location.inc:728
 msgid ""
 "This location name is already in the database. Do you want to add anyway?  "
 "&nbsp&nbsp&nbsp<b><a href='#' onclick='_shn_loc_val_name();'>Add anyway</a></"
@@ -12466,19 +12467,19 @@ msgid ""
 "again."
 msgstr ""
 
-#: inc/lib_location.inc:743
+#: inc/lib_location.inc:738
 msgid ""
 "Containts numbers. These are not allowed. Please remove them and try again."
 msgstr ""
 
-#: inc/lib_location.inc:825
+#: inc/lib_location.inc:820
 msgid ""
 "Select the location based at.  This is hierarchical. For example think you "
 "are based  in the country 'Sri lanka' ,district 'Colombo' ,and village "
 "'dehiwala'.  start by selecting the country ,once you select country"
 msgstr ""
 
-#: inc/lib_location.inc:911
+#: inc/lib_location.inc:906
 msgid ""
 "Select the location based at.  This is hierarchical. For example think you "
 "are based  in the  'Sri lanka' ,district 'Colombo' ,and village 'dehiwala'.  "
@@ -12491,7 +12492,7 @@ msgid ""
 "'administration' section."
 msgstr ""
 
-#: inc/lib_location.inc:973
+#: inc/lib_location.inc:968
 msgid ""
 "Select the location based at.  This is hierarchical. For example think you "
 "are based  in the country 'Sri lanka' ,district 'Colombo' ,and village "
@@ -12753,34 +12754,34 @@ msgstr ""
 msgid " field should be valid (yyyy-mm-dd)"
 msgstr ""
 
-#: inc/lib_validate.inc:235
+#: inc/lib_validate.inc:252
 msgid ""
 " Containts special characters. These are not allowed. Please remove them and "
 "try again."
 msgstr ""
 
-#: inc/lib_validate.inc:318
+#: inc/lib_validate.inc:335
 msgid " is a required field, please enter a value."
 msgstr ""
 
-#: inc/lib_validate.inc:322
+#: inc/lib_validate.inc:339
 msgid "You exceeded the field size for "
 msgstr ""
 
-#: inc/lib_validate.inc:322
+#: inc/lib_validate.inc:339
 msgid ".Field size is "
 msgstr ""
 
-#: inc/lib_validate.inc:348 inc/lib_validate.inc:356
+#: inc/lib_validate.inc:365 inc/lib_validate.inc:373
 msgid ""
 "Required field can not be empty! You have to select a value from the list box"
 msgstr ""
 
-#: inc/lib_validate.inc:377
+#: inc/lib_validate.inc:394
 msgid "User already exists"
 msgstr ""
 
-#: inc/lib_validate.inc:400
+#: inc/lib_validate.inc:417
 msgid "User name cannot be part of the password"
 msgstr ""
 
