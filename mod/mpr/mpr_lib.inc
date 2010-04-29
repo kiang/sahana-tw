@@ -35,7 +35,7 @@ function shn_mpr_search_show_verticle($details) {
     <TR>
         <TD>
 <?php
-            if (shn_show_thumb_url($details[$i]['p_uuid'], 'database', 'mpr', 'addmp_img', false)) echo '<br /><a href="index.php?mod=' . $global['module'] . '&act=editmp&id=' . $details[$i]['p_uuid'] . '">' . $details[$i]['full_name'] . '</a><br />';
+            if (shn_show_thumb_url($details[$i]['p_uuid'], 'database', 'mpr', 'addmp_img', false)) echo '<br /><a href="index.php?mod=' . $global['module'] . '&act=editmp&id=' . $details[$i]['p_uuid'] . '">' . $details[$i]['family_name'] . $details[$i]['full_name'] . '</a><br />';
             else {
                 echo '<br /><a href="index.php?mod=' . $global['module'] . '&act=editmp&id=' . $details[$i]['p_uuid'] . '">' . $details[$i]['full_name'] . '</a><br />';
                 echo ($details[$i]['height'] ? _('Height : ') . $details[$i]['height'] . '<br>' : '');
@@ -99,7 +99,7 @@ function shn_mpr_home_show_mpr($type = "missing", $limit = 5, $offset) {
     $incident_join = "INNER JOIN resource_to_incident e ON a.p_uuid = e.x_uuid ";
     $sql_missing = "
             SELECT
-                a.p_uuid AS p_uuid, a.full_name AS full_name, 
+                a.p_uuid AS p_uuid, a.full_name AS full_name, a.family_name as family_name,
                 b.height AS height, b.weight AS weight, 
                 b.opt_eye_color AS opt_eye_color, 
                 b.opt_skin_color AS opt_skin_color, b.opt_hair_color AS opt_hair_color, 
@@ -114,7 +114,7 @@ function shn_mpr_home_show_mpr($type = "missing", $limit = 5, $offset) {
             ORDER BY d.updated DESC";
     $sql_found = "
             SELECT
-                a.p_uuid AS p_uuid, a.full_name AS full_name, 
+                a.p_uuid AS p_uuid, a.full_name AS full_name, a.family_name as family_name,
                 b.height AS height, b.weight AS weight, 
                 b.opt_eye_color AS opt_eye_color, 
                 b.opt_skin_color AS opt_skin_color, b.opt_hair_color AS opt_hair_color, 

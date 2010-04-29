@@ -249,7 +249,7 @@ function shn_mpr_search_show_result($details) {
         <TD>
 <?php
             shn_show_thumb_url($detail['p_uuid'], null, 'mpr', 'addmp_img');
-            echo '<br><a title="' . _('Edit') . '" href="index.php?mod=' . $global['module'] . '&act=editmp&id=' . $detail['p_uuid'] . '">' . $detail['full_name'] . '</a><br>' . $detail['family_name'] . '<br>' . $detail['l10n_name'];
+            echo '<br><a title="' . _('Edit') . '" href="index.php?mod=' . $global['module'] . '&act=editmp&id=' . $detail['p_uuid'] . '">' . $detail['family_name'] . $detail['full_name'] . '</a><br>' . $detail['l10n_name'];
 ?>
         </TD>
         <TD>
