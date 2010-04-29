@@ -336,7 +336,7 @@ function shn_form_opt_select($opt_field, $label, $select_opts = "", $extra_opts 
     }
     $res = $global['db']->Execute($q);
     if (isset($extra_opts['select']) || $extra_opts['select'] == true) echo "<option value='select'>- Select -</option>";
-    while (!res == NULL && !$res->EOF) {
+    while (!empty($res) && !$res->EOF) {
         $sel = ($res->fields[1] == $value) ? 'selected="selected"' : null;
 ?>
 	<option value="<?php echo $res->fields[1] ?>" <?php echo $sel ?>><?php echo _lc($res->fields[2]) ?></option>

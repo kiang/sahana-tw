@@ -57,7 +57,8 @@ family members.'); ?>
         <li><a href="index.php?mod=mpr&act=search&type=found"><b><?php echo _('Report a Found Person'); ?></b></a><br/><?php echo _('Report information if the displaced person is found'); ?>
         <li><a href="index.php?mod=mpr&act=list_missing"><b><?php echo _('List missing people'); ?></b></a><br/><?php echo _('List all the missing person information available in the database'); ?></li>
         <li><a href="index.php?mod=mpr&act=list_found"><b><?php echo _('List found people'); ?></b></a><br/><?php echo _('Lias all the information of found displaced people'); ?></li>
-        
+        <li><a href="index.php?mod=mpr&act=list_injured"><b><?php echo _('List injured people'); ?></b></a><br/><?php echo _('Lias all the information of found injured people'); ?></li>
+        <li><a href="index.php?mod=mpr&act=list_deceased"><b><?php echo _('List deceased people'); ?></b></a><br/><?php echo _('Lias all the information of found deceased people'); ?></li>
 </ul>
 <br/>
 

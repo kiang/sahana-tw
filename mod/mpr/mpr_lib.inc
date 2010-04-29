@@ -91,56 +91,46 @@ function shn_mpr_search_show_verticle($details) {
  * @access public
  * @return void
  */
-function shn_mpr_home_show_mpr($type = "missing", $limit = 5, $offset) {
+function shn_mpr_home_show_mpr($type = "missing", $limit = 5, $offset = 0) {
     global $global;
     #$incident_ids = shn_db_get_all_incidents($_SESSION['user_pref_ims_incident_id']);
     #$incident_sql = implode($incident_ids,"','");
     #$incident_sql = "'$incident_sql'";
-    $incident_join = "INNER JOIN resource_to_incident e ON a.p_uuid = e.x_uuid ";
-    $sql_missing = "
-            SELECT
+    $sql = "SELECT
                 a.p_uuid AS p_uuid, a.full_name AS full_name, a.family_name as family_name,
-                b.height AS height, b.weight AS weight, 
-                b.opt_eye_color AS opt_eye_color, 
-                b.opt_skin_color AS opt_skin_color, b.opt_hair_color AS opt_hair_color, 
-                c.last_seen AS last_seen, c.last_clothing AS last_clothing, 
-                c.comments AS comments 
-            FROM person_uuid a 
-            LEFT OUTER JOIN person_physical b USING (p_uuid) 
+                b.height AS height, b.weight AS weight,
+                b.opt_eye_color AS opt_eye_color,
+                b.opt_skin_color AS opt_skin_color, b.opt_hair_color AS opt_hair_color,
+                c.last_seen AS last_seen, c.last_clothing AS last_clothing,
+                c.comments AS comments
+            FROM person_uuid a
+            LEFT OUTER JOIN person_physical b USING (p_uuid)
             INNER JOIN person_missing c USING (p_uuid)
-            INNER JOIN person_status d USING (p_uuid) 
-            $incident_join 
-            WHERE d.opt_status = 'mis' AND e.incident_id = '{$_SESSION['user_pref_ims_incident_id']}' 
-            ORDER BY d.updated DESC";
-    $sql_found = "
-            SELECT
-                a.p_uuid AS p_uuid, a.full_name AS full_name, a.family_name as family_name,
-                b.height AS height, b.weight AS weight, 
-                b.opt_eye_color AS opt_eye_color, 
-                b.opt_skin_color AS opt_skin_color, b.opt_hair_color AS opt_hair_color, 
-                c.last_seen AS last_seen, c.last_clothing AS last_clothing, 
-                c.comments AS comments 
-            FROM person_uuid a 
-            LEFT OUTER JOIN person_physical b USING (p_uuid) 
-            INNER JOIN person_missing c USING (p_uuid)
-            INNER JOIN person_status d USING (p_uuid) 
-            $incident_join
-            WHERE d.opt_status != 'mis' AND e.incident_id = '{$_SESSION['user_pref_ims_incident_id']}'
-            ORDER BY d.updated DESC";
-    $final_sql = "";
-    if ($type == 'missing') {
-        $final_sql = $sql_missing;
-        $rs = $global['db']->SelectLimit($sql_missing, $limit, $offset);
-    } elseif ($type == 'found') {
-        $final_sql = $sql_found;
-        $rs = $global['db']->SelectLimit($sql_found, $limit, $offset);
+            INNER JOIN person_status d USING (p_uuid)
+            INNER JOIN resource_to_incident e ON a.p_uuid = e.x_uuid
+            WHERE e.incident_id = '{$_SESSION['user_pref_ims_incident_id']}'";
+    switch($type) {
+        case 'found':
+            $sql .= ' AND d.opt_status != \'mis\'';
+            break;
+        case 'injured':
+            $sql .= ' AND d.opt_status = \'inj\'';
+            break;
+        case 'deceased':
+            $sql .= ' AND d.opt_status = \'dec\'';
+            break;
+        case 'missing':
+        default:
+            $sql .= ' AND d.opt_status = \'mis\'';
     }
+    $sql .= "ORDER BY d.updated DESC";
+    $rs = $global['db']->SelectLimit($sql, $limit, $offset);
     if ($rs) {
         $arr = $rs->GetAll();
         //  shn_mpr_search_show_verticle($arr);
         $_SESSION['result'] = $arr;
     }
-    $rs1 = $global['db']->Execute($final_sql);
+    $rs1 = $global['db']->Execute($sql);
     //print 'missing'.$rs1;
     $count = 0;
     while (!$rs1->EOF) {
@@ -149,4 +139,3 @@ function shn_mpr_home_show_mpr($type = "missing", $limit = 5, $offset) {
     }
     return $count;
 }
-?>
