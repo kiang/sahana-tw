@@ -52,9 +52,9 @@ family members.'); ?>
 <strong><?php echo _("Description of Actions:"); ?></strong><br/>
     <ul>
         <li><a href="index.php?mod=mpr&act=search&type=all"><b><?php echo _('Search for a person'); ?> </b></a><br/><?php echo _('Search to see whether a person is lost contact with people known to him or her'); ?></li>
-        <li><a href="index.php?mod=mpr&act=addmp&type=missing"><b><?php echo _('Report a missing person'); ?> </b> </a><br/><?php echo _('Report details about a missing person'); ?></li>
+        <li><a href="index.php?mod=mpr&act=search&type=missing"><b><?php echo _('Report a missing person'); ?> </b> </a><br/><?php echo _('Report details about a missing person'); ?></li>
         <li><a href="index.php?mod=mpr&act=search&type=missing"><b><?php echo _('Edit missing person'); ?></b></a><br/><?php echo _('Update the details of missing person entered to the database previously'); ?></li>
-        <li><a href="index.php?mod=mpr&act=addmp&type=found"><b><?php echo _('Report a found person'); ?></b></a><br/><?php echo _('Report information if the displaced person is found'); ?>
+        <li><a href="index.php?mod=mpr&act=search&type=found"><b><?php echo _('Report a found person'); ?></b></a><br/><?php echo _('Report information if the displaced person is found'); ?>
         <li><a href="index.php?mod=mpr&act=list_missing"><b><?php echo _('List missing people'); ?></b></a><br/><?php echo _('List all the missing person information available in the database'); ?></li>
         <li><a href="index.php?mod=mpr&act=list_found"><b><?php echo _('List found people'); ?></b></a><br/><?php echo _('Lias all the information of found displaced people'); ?></li>
         

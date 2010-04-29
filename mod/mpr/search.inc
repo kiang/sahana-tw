@@ -207,6 +207,11 @@ function shn_mpr_search_nav() {
         //Right at Last
         echo '<li><a href="index.php?mod=' . $global['module'] . '&act=' . $_GET['act'] . '&seq=' . $_REQUEST['seq'] . '&offset=' . ($total - $limit) . '">' . _('Last') . '  ' . $limit . ' ' . _('Records') . ' &gt;&gt;|</a></li>';
     }
+    if($_SESSION['mpr']['search']['type'] == 'missing') {
+        echo '<li><a href="index.php?mod=' . $global['module'] . '&act=addmp&type=missing">' . _("Report a Missing Person") . '</a></li>';
+    } elseif($_SESSION['mpr']['search']['type'] == 'found') {
+        echo '<li><a href="index.php?mod=' . $global['module'] . '&act=addmp&type=found">' . _("Report a Found Person") . '</a></li>';
+    }
 ?>
 </ul>
 <?php
@@ -413,6 +418,7 @@ class SearchQuery {
     /* {{{ public variables */
     var $isvictim;
     var $missing_only;
+    var $found_only;
     var $istracker;
     var $incident_list;
     var $incident_id;
@@ -555,26 +561,34 @@ class SearchQuery {
      * @return string
      */
     function get_sql() {
-        $sql = "SELECT person_status.p_uuid FROM person_status ";
+        $sql = "SELECT person_status.p_uuid FROM person_status WHERE 1";
         if(!empty($this->__joins)) {
             foreach($this->__joins as $joins) $sql.= $joins;
         }
         //if incident_id is given join that
         if (!empty($this->incident_id) || !empty($this->incident_list)) $sql.= " INNER JOIN resource_to_incident ON resource_to_incident.x_uuid = person_status.p_uuid ";
-        if ($this->__where) {
-            $sql.= " WHERE (";
-            foreach($this->__where as $where) $sql.= $where . " OR ";
-            $sql = substr($sql, 0, strlen($sql) - 3);
-            $sql.= " ) ";
-            if (!empty($this->incident_id)) $sql.= " AND resource_to_incident.incident_id = '{$this->incident_id}' ";
-            elseif (!empty($this->incident_list)) $sql.= " AND resource_to_incident.incident_id IN ({$this->incident_list}) ";
-            if ($this->isvictim) $sql.= " AND person_status.isvictim = TRUE ";
-            if ($this->missing_only) $sql.= " AND person_status.opt_status = 'mis' ";
-            if ($this->istracker) {
-                $sql.= " AND person_status.istracker = TRUE ";
-            }
-            $sql.= " GROUP BY 1";
+        if (!empty($this->__where)) {
+            $sql.= " AND (" . implode(' OR ', $this->__where) . ") ";
         }
+        if (!empty($this->incident_id)) {
+            $sql .= " AND resource_to_incident.incident_id = '{$this->incident_id}' ";
+        }
+        elseif (!empty($this->incident_list)) {
+            $sql .= " AND resource_to_incident.incident_id IN ({$this->incident_list}) ";
+        }
+        if ($this->isvictim) {
+            $sql .= " AND person_status.isvictim = TRUE ";
+        }
+        if ($this->missing_only) {
+            $sql .= " AND person_status.opt_status = 'mis' ";
+        }
+        elseif ($this->found_only) {
+            $sql .= " AND person_status.opt_status != 'mis' ";
+        }
+        if ($this->istracker) {
+            $sql .= " AND person_status.istracker = TRUE ";
+        }
+        $sql.= " GROUP BY 1";
         return $sql;
     }
     /* }}} */

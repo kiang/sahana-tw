@@ -54,9 +54,9 @@ function shn_mpr_mainmenu() {
     shn_mod_menuopen(_("Missing Person Registry"));
     shn_mod_menuitem("default", _("Home"));
     shn_mod_menuitem("search&type=all", _("Search for a Person"));
-    shn_mod_menuitem("addmp&type=missing", _("Report a Missing Person"));
+    shn_mod_menuitem("search&type=missing", _("Report a Missing Person"));
     shn_mod_menuitem("search&type=missing", _("Edit a Missing Person"));
-    shn_mod_menuitem("addmp&type=found", _("Report a Found Person"));
+    shn_mod_menuitem("search&type=found", _("Report a Found Person"));
     //    shn_mod_menuitem("rpt_default&type=found",_("Reports"));
     shn_sub_mod_menuopen(_("Reports"));
     shn_mod_menuitem("list_missing", _("List Missing People"), $module);
@@ -441,7 +441,16 @@ function shn_mpr_addmp() {
  */
 function shn_mpr_search() {
     global $global;
-    echo '<h1 align="center">Search</h1>';
+    if ($_REQUEST['type'] == 'missing') {
+        $_SESSION['mpr']['search']['type'] = 'missing';
+        echo '<h1 align="center">' . _("Report a Missing Person") . '</h1>';
+    } elseif($_REQUEST['type'] == 'found') {
+        $_SESSION['mpr']['search']['type'] = 'found';
+        echo '<h1 align="center">' . _("Report a Found Person") . '</h1>';
+    } else {
+        $_SESSION['mpr']['search']['type'] = 'all';
+        echo '<h1 align="center">' . _('Search') . '</h1>';
+    }
     require ($global['approot'] . 'mod/mpr/search.inc');
     //Controller for Normal Search
     if ($_GET['act'] == 'search') {
@@ -454,19 +463,24 @@ function shn_mpr_search() {
                     $search_sql = new SearchQuery();
                     if (!empty($_POST['name'])) {
                         $search_sql->set_name($_POST['name']);
+                        $_SESSION['mpr']['search']['keyword']['name'] = $_POST['name'];
                     }
                     if (!empty($_POST['idcard'])) {
                         $search_sql->set_idcard_no($_POST['idcard']);
+                        $_SESSION['mpr']['search']['keyword']['idcard'] = $_POST['idcard'];
                     }
                     if (!empty($_POST['anycard'])) {
                         $search_sql->set_serial_no($_POST['anycard']);
+                        $_SESSION['mpr']['search']['keyword']['anycard'] = $_POST['anycard'];
                     }
                     #$search_sql->isvictim = true;
                     if (!empty($_REQUEST['all_incidents']))
                         $search_sql->incident_list = "'" . implode(shn_db_get_all_incidents($_SESSION['user_pref_ims_incident_id']), "','") . "'";
-                    if ($_REQUEST['type'] == 'missing') {
+                    if ($_SESSION['mpr']['search']['type'] == 'missing') {
                         $search_sql->missing_only = true;
                         $search_sql->isvictim = true;
+                    } elseif($_SESSION['mpr']['search']['type'] == 'found') {
+                        $search_sql->found_only = true;
                     }
                     #debug($search_sql->get_sql());
                     $arr = shn_mpr_search_result_vw($search_sql->get_sql());

@@ -51,21 +51,22 @@ function shn_mpr_search_show_verticle($details) {
 ?>
         </TD>
 <?php
-            if ($details[$i + 1]) {
+            $nextIndex = $i + 1;
+            if (isset($details[$nextIndex])) {
 ?>
         <TD>
 <?php
-                if (shn_show_thumb_url($details[$i + 1]['p_uuid'], 'database', 'mpr', 'addmp_img')) echo '<br /><a href="index.php?mod=' . $global['module'] . '&act=editmp&id=' . $details[$i + 1]['p_uuid'] . '">' . $details[$i + 1]['full_name'] . '</a><br />';
+                if (shn_show_thumb_url($details[$nextIndex]['p_uuid'], 'database', 'mpr', 'addmp_img')) echo '<br /><a href="index.php?mod=' . $global['module'] . '&act=editmp&id=' . $details[$nextIndex]['p_uuid'] . '">' . $details[$nextIndex]['full_name'] . '</a><br />';
                 else {
-                    echo '<br /><a href="index.php?mod=' . $global['module'] . '&act=editmp&id=' . $details[$i + 1]['p_uuid'] . '">' . $details[$i + 1]['full_name'] . '</a><br />';
-                    echo ($details[$i + 1]['height'] ? _('Height : ') . $details[$i + 1]['height'] . '<br>' : '');
-                    echo ($details[$i + 1]['weight'] ? _('Weight : ') . $details[$i + 1]['weight'] . '<br>' : '');
-                    echo ($details[$i + 1]['opt_eye_color'] ? _('Eye Colour : ') . shn_get_field_opt($details[$i + 1]['opt_eye_color'], 'opt_eye_color') . '<br>' : '');
-                    echo ($details[$i + 1]['opt_skin_color'] ? _('Skin Colour : ') . shn_get_field_opt($details[$i + 1]['opt_skin_color'], 'opt_skin_color') . '<br>' : '');
-                    echo ($details[$i + 1]['opt_hair_color'] ? _('Hair Colour : ') . shn_get_field_opt($details[$i + 1]['opt_hair_color'], 'opt_hair_color') . '<br>' : '');
-                    echo ($details[$i + 1]['last_seen'] ? _('Last Seen : ') . $details[$i + 1]['last_seen'] . '<br>' : '');
-                    echo ($details[$i + 1]['last_clothing'] ? _('Last Clothing : ') . $details[$i + 1]['last_clothing'] . '<br>' : '');
-                    echo ($details[$i + 1]['comments'] ? _('Comments : ') . $details[$i + 1]['comments'] : '');
+                    echo '<br /><a href="index.php?mod=' . $global['module'] . '&act=editmp&id=' . $details[$nextIndex]['p_uuid'] . '">' . $details[$nextIndex]['full_name'] . '</a><br />';
+                    echo ($details[$nextIndex]['height'] ? _('Height : ') . $details[$nextIndex]['height'] . '<br>' : '');
+                    echo ($details[$nextIndex]['weight'] ? _('Weight : ') . $details[$nextIndex]['weight'] . '<br>' : '');
+                    echo ($details[$nextIndex]['opt_eye_color'] ? _('Eye Colour : ') . shn_get_field_opt($details[$nextIndex]['opt_eye_color'], 'opt_eye_color') . '<br>' : '');
+                    echo ($details[$nextIndex]['opt_skin_color'] ? _('Skin Colour : ') . shn_get_field_opt($details[$nextIndex]['opt_skin_color'], 'opt_skin_color') . '<br>' : '');
+                    echo ($details[$nextIndex]['opt_hair_color'] ? _('Hair Colour : ') . shn_get_field_opt($details[$nextIndex]['opt_hair_color'], 'opt_hair_color') . '<br>' : '');
+                    echo ($details[$nextIndex]['last_seen'] ? _('Last Seen : ') . $details[$nextIndex]['last_seen'] . '<br>' : '');
+                    echo ($details[$nextIndex]['last_clothing'] ? _('Last Clothing : ') . $details[$nextIndex]['last_clothing'] . '<br>' : '');
+                    echo ($details[$nextIndex]['comments'] ? _('Comments : ') . $details[$nextIndex]['comments'] : '');
                 }
                 echo '<br /><a href="index.php?mod=admin&act=ims_assign&id=' . $details[$i]['p_uuid'] . '" class="hideprint">' . _('Assign to more incidents') . '</a>';
 ?>

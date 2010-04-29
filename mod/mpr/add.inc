@@ -59,15 +59,29 @@ function shn_mpr_addmp_entry($errors = false) {
 ?>
     <p><?php echo _('If you have any information about missing person\'s identity numbers, Please include them since it will be helpful for finding the person. Otherwise please ignore.'); ?></p>
 <?php
-    shn_form_text(_('Identity Card Number'), 'idcard', 'size="30"', array('help' => _('Specify the Identity card Number, Although this is not required this will be useful in searching for the person')));
-    shn_form_text(_('Passport Number'), 'passport', 'size="30"', array('help' => _('Please Specify the passport number, Although this is not required this will be useful in searching for the person')));
+    shn_form_text(_('Identity Card Number'), 'idcard', 'size="30"', array(
+        'value' => (isset($_SESSION['mpr']['search']['keyword']['idcard'])) ? $_SESSION['mpr']['search']['keyword']['idcard'] : '',
+        'help' => _('Specify the Identity card Number, Although this is not required this will be useful in searching for the person')
+        ));
+    shn_form_text(_('Passport Number'), 'passport', 'size="30"', array(
+        'value' => (isset($_SESSION['mpr']['search']['keyword']['anycard'])) ? $_SESSION['mpr']['search']['keyword']['anycard'] : '',
+        'help' => _('Please Specify the passport number, Although this is not required this will be useful in searching for the person')
+        ));
     shn_form_text(_('Driving License'), 'drv_license', 'size="30"', array('help' => _('Please Specify the driving License number, Although this is not required this will be useful in searching for the person')));
     shn_form_fsclose();
     shn_form_fsopen(_('Basic Details'));
 ?>
 <p><?php echo _('Please enter any of the following details on the person:'); ?></p> 
 <?php
-    shn_form_text(_('Full Name'), 'full_name', 'size="30"', array('req' => true, 'help' => 'You are required to specify the full name in order to identify the entry'));
+    shn_form_text(_('Full Name'), 'full_name', 'size="30"', array(
+        'value' => (isset($_SESSION['mpr']['search']['keyword']['name'])) ? $_SESSION['mpr']['search']['keyword']['name'] : '',
+        'req' => true,
+        'help' => 'You are required to specify the full name in order to identify the entry'));
+    foreach(array('idcard', 'anycard', 'name') AS $searchKey) {
+        if(isset($_SESSION['mpr']['search']['keyword'][$searchKey])) {
+            unset($_SESSION['mpr']['search']['keyword'][$searchKey]);
+        }
+    }
     shn_form_text(_('Family Name'), 'family_name', 'size="30"', array('help' => _('Family name, or the surname could be specified for matching of people with similar Family names')));
     shn_form_text(_('Local Name'), 'local_name', 'size="30"', array('help' => _('You may also specify the local name, even in different script than English')));
     shn_form_date(_("Date of Birth"), 'dob', $extra_opts = NULL);
