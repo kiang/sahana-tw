@@ -441,10 +441,12 @@ function shn_mpr_addmp() {
  */
 function shn_mpr_search() {
     global $global;
-    if ($_REQUEST['type'] == 'missing') {
+    $type = isset($_REQUEST['type']) ? $_REQUEST['type'] : (
+            isset($_SESSION['mpr']['search']['type']) ? $_SESSION['mpr']['search']['type'] : 'all');
+    if ($type == 'missing') {
         $_SESSION['mpr']['search']['type'] = 'missing';
         echo '<h1 align="center">' . _("Report a Missing Person") . '</h1>';
-    } elseif($_REQUEST['type'] == 'found') {
+    } elseif($type == 'found') {
         $_SESSION['mpr']['search']['type'] = 'found';
         echo '<h1 align="center">' . _("Report a Found Person") . '</h1>';
     } else {

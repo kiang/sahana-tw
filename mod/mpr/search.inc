@@ -36,6 +36,8 @@ function shn_clean_type_parameter($type) {
  * @return void
  */
 function shn_mpr_search_default() {
+    $type = isset($_REQUEST['type']) ? $_REQUEST['type'] : (
+            isset($_SESSION['mpr']['search']['type']) ? $_SESSION['mpr']['search']['type'] : 'all');
     shn_form_fopen("search", null, array('req_message' => false));
     shn_form_fsopen(_('Basic Search'));
     echo '<div>' . _('Please try to lookup the people with the the fields below') . '</div><br />';
@@ -48,7 +50,7 @@ function shn_mpr_search_default() {
     #shn_form_label("<a href=\"index.php?mod=mpr&act=search_adv&type={$_GET['type']}\">[Advance Search]</a>","");
     shn_form_fsclose();
     shn_form_hidden(array('seq' => 'result'));
-    shn_form_hidden(array('type' => shn_clean_type_parameter($_REQUEST['type'])));
+    shn_form_hidden(array('type' => shn_clean_type_parameter($type)));
     shn_form_fclose();
 }
 /* }}} */
