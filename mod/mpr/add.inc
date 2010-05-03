@@ -60,6 +60,7 @@ function shn_mpr_addmp_entry($errors = false) {
 ?>
 <p><?php echo _('Please enter any of the following details on the person:'); ?></p> 
 <?php
+    shn_form_text(_('Family Name'), 'family_name', 'size="30"', array('help' => _('Family name, or the surname could be specified for matching of people with similar Family names')));
     shn_form_text(_('Full Name'), 'full_name', 'size="30"', array(
         'value' => (isset($_SESSION['mpr']['search']['keyword']['name'])) ? $_SESSION['mpr']['search']['keyword']['name'] : '',
         'req' => true,
@@ -69,7 +70,6 @@ function shn_mpr_addmp_entry($errors = false) {
             unset($_SESSION['mpr']['search']['keyword'][$searchKey]);
         }
     }
-    shn_form_text(_('Family Name'), 'family_name', 'size="30"', array('help' => _('Family name, or the surname could be specified for matching of people with similar Family names')));
     shn_form_text(_('Local Name'), 'local_name', 'size="30"', array('help' => _('You may also specify the local name, even in different script than English')));
     shn_form_date(_("Date of Birth"), 'dob', $extra_opts = NULL);
     //shn_form_text(_('Date of Birth   (YYYY-MM-DD)'),'dob','size=8');
@@ -450,6 +450,10 @@ function shn_mpr_addmp_confirm() {
     shn_form_fopen("end_flow", null, array('req_message' => false));
     shn_form_fsopen(_('Missing Person'));
     shn_form_hidden(array('seq' => 'commit'));
+?>
+    <p><?php echo _('Click on the "Next" Button to go back to the main screen.'); ?></p>
+<?php
+    shn_form_submit(_('Next'));
     shn_show_thumb_url($_SESSION['mpr_add']['entry']['p_uuid'], 'database', 'mpr', 'addmp_img', true);
 ?>
     <hr>

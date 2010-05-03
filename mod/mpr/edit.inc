@@ -148,11 +148,11 @@ function shn_mpr_editmp_entry($errors = false) {
 ?>
 <p><?php echo _('Please enter any of the following details on the person'); ?>:</p>
 	<?php
+    shn_form_text(_('Family Name'), 'family_name', 'size="40"', array(
+        'value' => isset($_SESSION['mpr_edit']['entry']['family_name']) ? $_SESSION['mpr_edit']['entry']['family_name'] : ''));
     shn_form_text(_('Full Name'), 'full_name', 'size="40"', array(
         'value' => isset($_SESSION['mpr_edit']['entry']['full_name']) ? $_SESSION['mpr_edit']['entry']['full_name'] : '',
         'req' => true));
-    shn_form_text(_('Family Name'), 'family_name', 'size="40"', array(
-        'value' => isset($_SESSION['mpr_edit']['entry']['family_name']) ? $_SESSION['mpr_edit']['entry']['family_name'] : ''));
     shn_form_text(_('Local Name'), 'local_name', 'size="40"', array(
         'value' => isset($_SESSION['mpr_edit']['entry']['local_name']) ? $_SESSION['mpr_edit']['entry']['local_name'] : ''));
     shn_form_date(_("Date of Birth"), 'dob', array(
@@ -405,6 +405,13 @@ function shn_mpr_editmp_confirm() {
     global $global;
     global $conf;
     shn_form_fopen("editmp", null);
+    shn_form_fsopen(_("Confirm"));
+?>
+<p><?php echo _('Is the information that you\'ve entered correct?'); ?></p>
+<?php
+    shn_form_submit(_('Yes'), 'name="yes"');
+    shn_form_submit(_('No'), 'name="no"');
+    shn_form_fsclose();
     shn_form_fsopen(_("Person"));
     shn_form_hidden(array('seq' => 'commit'));
     shn_show_thumb_url($_SESSION['mpr_edit']['entry']['p_uuid'], null, 'mpr', 'addmp_img', false);
