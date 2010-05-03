@@ -21,8 +21,6 @@
  * @license        http://www.gnu.org/copyleft/lesser.html GNU Lesser General
  * Public License (LGPL)
  */
-error_reporting(E_ALL ^ E_NOTICE);
-ini_set("display_errors", "1");
 // include the sahana libraries.
 include_once $global['approot'] . '/inc/lib_menu.inc';
 include_once $global['approot'] . '/inc/lib_form.inc';

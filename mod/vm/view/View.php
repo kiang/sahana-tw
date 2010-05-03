@@ -61,10 +61,10 @@ class View {
      */
     function showPagingNavigation($url, $use_post = false) {
         global $global;
-        $res = $global['vm_page_result'];
-        $rpp = $global['vm_page_rpp'];
+        $res = isset($global['vm_page_result']) ? $global['vm_page_result'] : '';
+        $rpp = isset($global['vm_page_rpp']) ? $global['vm_page_rpp'] : '';
         //if no records were found return
-        if ($res->RecordCount() == 0) {
+        if (empty($res) || $res->RecordCount() == 0) {
             return;
         }
         if (isset($_REQUEST['page'])) {
