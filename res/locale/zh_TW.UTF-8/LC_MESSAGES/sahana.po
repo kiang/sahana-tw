@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-04-29 20:32+0800\n"
-"PO-Revision-Date: 2010-04-29 20:33+0800\n"
+"PO-Revision-Date: 2010-05-03 15:39+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "請填寫名稱"
 
 #: mod/vm/lib/Constants.php:70
 msgid "Please specify a prefered contact medium to send confirmation message."
-msgstr ""
+msgstr "請確認聯絡資訊，以便寄送確認訊息。"
 
 #: mod/vm/lib/Constants.php:71
 msgid "Please specify a contact personal mobile number"
@@ -1463,11 +1463,11 @@ msgstr "性別："
 
 #: tools/tpl_languages.php:177
 msgid "Type of Identification :"
-msgstr "身份類型"
+msgstr "身份證件類型"
 
 #: tools/tpl_languages.php:178
 msgid "Identification Number :"
-msgstr "身份證字號"
+msgstr "身份證件號碼"
 
 #: tools/tpl_languages.php:179
 msgid "Create a Sahana account"
@@ -13795,80 +13795,75 @@ msgstr "切換到"
 
 #: DB L10N Start from here field_options/option_description,
 msgid "family"
-msgstr ""
+msgstr "家庭"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "company"
 msgstr "公司"
 
 #: field_options/option_description,
 msgid "society"
-msgstr ""
+msgstr "社團"
 
 #: field_options/option_description,
 msgid "tourists"
-msgstr ""
+msgstr "旅客"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "other"
 msgstr "其他"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "==Select Option=="
-msgstr "選取選項"
+msgstr "選項"
 
 #: field_options/option_description,
 msgid "National Identity Card"
-msgstr ""
+msgstr "身份證件"
 
 #: field_options/option_description,
 msgid "Passport"
-msgstr ""
+msgstr "護照"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Driving License Number"
-msgstr "銀行帳號"
+msgstr "駕駛執照"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Alive & Well"
-msgstr "全部OK"
+msgstr "倖存"
 
 #: field_options/option_description,
 msgid "Injured"
-msgstr ""
+msgstr "受傷"
 
 #: field_options/option_description,
 msgid "Deceased"
-msgstr ""
+msgstr "已故"
 
 #: field_options/option_description,
 msgid "Father"
-msgstr ""
+msgstr "父親"
 
 #: field_options/option_description,
 msgid "Mother"
-msgstr ""
+msgstr "母親"
 
 #: field_options/option_description,
 msgid "Brother"
-msgstr ""
+msgstr "兄弟"
 
 #: field_options/option_description,
 msgid "Sister"
-msgstr ""
+msgstr "姊妹"
 
 #: field_options/option_description,
 msgid "GrandFather"
-msgstr ""
+msgstr "祖父"
 
 #: field_options/option_description,
 msgid "GrandMother"
-msgstr ""
+msgstr "祖母"
 
 #: field_options/option_description,
 msgid "GrandFatherPaternal"
@@ -13888,121 +13883,111 @@ msgstr ""
 
 #: field_options/option_description,
 msgid "Friend"
-msgstr ""
+msgstr "朋友"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Home(permanent address)"
-msgstr "發送到總公司"
+msgstr "家裡永久住址"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Contact Person"
-msgstr "業務員"
+msgstr "聯絡人"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Personal Mobile"
-msgstr "手機號碼"
+msgstr "個人手機"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Current Phone"
-msgstr "電話"
+msgstr "現用電話"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Current Mobile"
-msgstr "手機號碼"
+msgstr "現用手機"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Email address"
-msgstr "電子信箱"
+msgstr "電子郵件"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Fax Number"
-msgstr "傳真"
+msgstr "傳真號碼"
 
 #: field_options/option_description,
 msgid "Instant Messenger"
-msgstr ""
+msgstr "即時通"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Permanent home address)"
-msgstr "發送到總公司"
+msgstr "永久住家地址"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Impact location"
-msgstr "地點維護"
+msgstr "受災地點"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Current location"
-msgstr "地點維護"
+msgstr "現在位置"
 
 #: field_options/option_description,
 msgid "Unknown"
-msgstr ""
+msgstr "未知"
 
 #: field_options/option_description,
 msgid "Infant (0-1)"
-msgstr ""
+msgstr "嬰兒 (0-1)"
 
 #: field_options/option_description,
 msgid "Child (1-15)"
-msgstr ""
+msgstr "兒童 (1-15)"
 
 #: field_options/option_description,
 msgid "Young Adult (16-21)"
-msgstr ""
+msgstr "青年(16-21)"
 
 #: field_options/option_description,
 msgid "Adult (22-50)"
-msgstr ""
+msgstr "成年人(22-50)"
 
 #: field_options/option_description,
 msgid "Senior Citizen (50+)"
-msgstr ""
+msgstr "老年人(50+)"
 
 #: field_options/option_description,
 msgid "United Kingdom"
-msgstr ""
+msgstr "英國"
 
 #: field_options/option_description,
 msgid "Sri Lanka"
-msgstr ""
+msgstr "斯里蘭卡"
 
 #: field_options/option_description,
 msgid "Filipino"
-msgstr ""
+msgstr " 菲律賓人"
 
 #: field_options/option_description,
 msgid "Buddhist"
-msgstr ""
+msgstr "佛教"
 
 #: field_options/option_description,
 msgid "Christian"
-msgstr ""
+msgstr "基督教"
 
 #: field_options/option_description,
 msgid "Muslim"
-msgstr ""
+msgstr "穆斯林"
 
 #: field_options/option_description,
 msgid "Single"
-msgstr ""
+msgstr "單身"
 
 #: field_options/option_description,
 msgid "Married"
-msgstr ""
+msgstr "已婚"
 
 #: field_options/option_description,
 msgid "Divorced"
-msgstr ""
+msgstr "離婚"
 
 #: field_options/option_description,
 msgid "A+"
@@ -14038,39 +14023,39 @@ msgstr ""
 
 #: field_options/option_description,
 msgid "Black"
-msgstr ""
+msgstr "黑色"
 
 #: field_options/option_description,
 msgid "Light Brown"
-msgstr ""
+msgstr "淺棕色"
 
 #: field_options/option_description,
 msgid "Blue"
-msgstr ""
+msgstr "藍色"
 
 #: field_options/option_description,
 msgid "Dark Brown"
-msgstr ""
+msgstr "深棕色"
 
 #: field_options/option_description,
 msgid "Fair"
-msgstr ""
+msgstr "金黃色"
 
 #: field_options/option_description,
 msgid "White"
-msgstr ""
+msgstr "白色"
 
 #: field_options/option_description,
 msgid "Brown"
-msgstr ""
+msgstr "棕色"
 
 #: field_options/option_description,
 msgid "Red"
-msgstr ""
+msgstr "紅色"
 
 #: field_options/option_description,
 msgid "Blond"
-msgstr ""
+msgstr "金黃色"
 
 #: field_options/option_description,
 #, fuzzy
@@ -14078,9 +14063,8 @@ msgid "NGO Run Camp"
 msgstr "付款走向報表"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Temporary Shelter"
-msgstr "移動臨時檔案時錯誤"
+msgstr "臨時庇護所"
 
 #: field_options/option_description,
 msgid "Government Evacuation Center"
@@ -14092,88 +14076,83 @@ msgstr ""
 
 #: field_options/option_description,
 msgid "Sanitation Facilities"
-msgstr ""
+msgstr "盥洗設備"
 
 #: field_options/option_description,
 msgid "Water Facilities"
-msgstr ""
+msgstr "淨水設備"
 
 #: field_options/option_description,
 msgid "Medical Facilities"
-msgstr ""
+msgstr "醫療設備"
 
 #: field_options/option_description,
 msgid "Government"
-msgstr ""
+msgstr "政府"
 
 #: field_options/option_description,
 msgid "Private"
-msgstr ""
+msgstr "私人"
 
 #: field_options/option_description,
 msgid "NGO"
-msgstr ""
+msgstr "非營利組織"
 
 #: field_options/option_description,
 msgid "International NGO"
-msgstr ""
+msgstr "國際非營利組織"
 
 #: field_options/option_description,
 msgid "Multinational NGO"
-msgstr ""
+msgstr "跨國非營利組織"
 
 #: field_options/option_description,
 msgid "Department"
-msgstr ""
+msgstr "部門"
 
 #: field_options/option_description,
 msgid "Subsidiary"
 msgstr ""
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Branch"
-msgstr "分公司"
+msgstr "分工司"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Supplier of Goods"
-msgstr "原產地"
+msgstr "物品供應"
 
 #: field_options/option_description,
 msgid "Communications"
-msgstr ""
+msgstr "溝通"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Medical Services"
-msgstr "越庫作業服務訂單"
+msgstr "醫療服務"
 
 #: field_options/option_description,
 msgid "Rehabilitation"
-msgstr ""
+msgstr "復原"
 
 #: field_options/option_description,
 msgid "Education"
-msgstr ""
+msgstr "教育"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Country"
 msgstr "國家"
 
 #: field_options/option_description,
 msgid "State"
-msgstr ""
+msgstr "州/省"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "City"
-msgstr "城市"
+msgstr "縣市"
 
 #: field_options/option_description,
 msgid "depth"
-msgstr ""
+msgstr "深度"
 
 #: field_options/option_description,
 #, fuzzy
@@ -14181,143 +14160,136 @@ msgid "number of page records"
 msgstr "顯示記錄數目上限"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "the frequency of report update"
-msgstr "更新 EDI 設定"
+msgstr "報告更新頻率"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "the frequency of chart update"
-msgstr "更新 EDI 設定"
+msgstr "圖表更新頻率"
 
 #: field_options/option_description,
 msgid "Village"
-msgstr ""
+msgstr "村莊"
 
 #: field_options/option_description,
 msgid "Temple"
-msgstr ""
+msgstr "廟宇"
 
 #: field_options/option_description,
 msgid "School"
-msgstr ""
+msgstr "學校"
 
 #: field_options/option_description,
 msgid "Coordinator"
-msgstr ""
+msgstr "協調人"
 
 #: field_options/option_description,
 msgid "Chief Of Village"
-msgstr ""
+msgstr "村長"
 
 #: field_options/option_description,
 msgid "Monk"
-msgstr ""
+msgstr "師父"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "General"
 msgstr "一般"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Person Status"
-msgstr "狀況代號"
+msgstr "人員狀態"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Damage Status"
-msgstr "狀況代號"
+msgstr "損害狀態"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Disaster Status"
-msgstr "狀況代號"
+msgstr "災難狀態"
 
 #: field_options/option_description,
 msgid "Help Needed"
-msgstr ""
+msgstr "所需協助"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Emergency Phone Contact"
-msgstr "聯繫電話"
+msgstr "緊急聯絡電話"
 
 #: field_options/option_description,
 msgid "General Skills-Animals-Animal Control Vehicles"
-msgstr ""
+msgstr "一般技巧/動物/駕駛動物機械"
 
 #: field_options/option_description,
 msgid "General Skills-Animals-Animal Handling"
-msgstr ""
+msgstr "一般技巧/動物/處理動物"
 
 #: field_options/option_description,
 msgid "General Skills-Animals-Grief Counseling"
-msgstr ""
+msgstr "一般技巧/動物/悲傷輔導"
 
 #: field_options/option_description,
 msgid "General Skills-Animals-Horse Trailers"
-msgstr ""
+msgstr "一般性技術-動物-駕駛馬拖車"
 
 #: field_options/option_description,
 msgid "General Skills-Animals-Livestock Vehicles"
-msgstr ""
+msgstr "一般性技術-動物-駕駛家畜類交通工具"
 
 #: field_options/option_description,
 msgid "General Skills-Animals-Other"
-msgstr ""
+msgstr "一般性技術-動物-其他"
 
 #: field_options/option_description,
 msgid "General Skills-Animals-Veterinarian"
-msgstr ""
+msgstr "一般性技術-動物-獸醫"
 
 #: field_options/option_description,
 msgid "General Skills-Animals-Veterinary Technician"
-msgstr ""
+msgstr "一般性技術-動物-獸醫技術員"
 
 #: field_options/option_description,
 msgid "General Skills-Automotive-Body Repair"
-msgstr ""
+msgstr "一般性技術-汽車-汽車體修復"
 
 #: field_options/option_description,
 msgid "General Skills-Automotive-Engine Repair"
-msgstr ""
+msgstr "一般性技術-汽車-引擎修復"
 
 #: field_options/option_description,
 msgid "General Skills-Automotive-Lights, Electrical"
-msgstr ""
+msgstr "一般性技術-汽車-車燈、線路修復"
 
 #: field_options/option_description,
 msgid "General Skills-Automotive-Other"
-msgstr ""
+msgstr "一般性技術-汽車-其他"
 
 #: field_options/option_description,
 msgid "General Skills-Automotive-Tire Repair"
-msgstr ""
+msgstr "一般性技術-汽車-輪胎修復"
 
 #: field_options/option_description,
 msgid "General Skills-Automotive-Wheel and Brake Repair"
-msgstr ""
+msgstr "一般性技術-汽車-方向盤與煞車修復"
 
 #: field_options/option_description,
 msgid "General Skills-Baby and Child Care-Aide"
-msgstr ""
+msgstr "一般性技術-嬰幼兒照護-幫手"
 
 #: field_options/option_description,
 msgid "General Skills-Baby and Child Care-Leader"
-msgstr ""
+msgstr "一般性技術-嬰幼兒照護-領導者"
 
 #: field_options/option_description,
 msgid "General Skills-Baby and Child Care-Other"
-msgstr ""
+msgstr "一般性技術-嬰幼兒照護-其他"
 
 #: field_options/option_description,
 msgid "General Skills-Construction Services-Glass Service"
-msgstr ""
+msgstr "一般性技術-建築服務-玻璃服務"
 
 #: field_options/option_description,
 msgid "General Skills-Construction Services-House Repair"
-msgstr ""
+msgstr "一般性技術-建築服務-房屋修復"
 
 #: field_options/option_description,
 msgid "General Skills-Construction Services-Inspection, B"
@@ -14325,79 +14297,79 @@ msgstr ""
 
 #: field_options/option_description,
 msgid "General Skills-Construction Services-Other"
-msgstr ""
+msgstr "一般性技術-建築-其他"
 
 #: field_options/option_description,
 msgid "General Skills-Construction Services-Roofing"
-msgstr ""
+msgstr "一般性技術-建築服務-屋頂相關"
 
 #: field_options/option_description,
 msgid "General Skills-Construction Services-Window Repair"
-msgstr ""
+msgstr "一般性技術-建築服務-窗戶修復"
 
 #: field_options/option_description,
 msgid "General Skills-Electrical-External Wiring"
-msgstr ""
+msgstr "一般性技術-電路-外部電路"
 
 #: field_options/option_description,
 msgid "General Skills-Electrical-Internal Wiring"
-msgstr ""
+msgstr "一般性技術-電路-內部電路"
 
 #: field_options/option_description,
 msgid "General Skills-Electrical-Other"
-msgstr ""
+msgstr "一般性技術-電路-其他"
 
 #: field_options/option_description,
 msgid "General Skills-Food Service-Cooking"
-msgstr ""
+msgstr "一般性技術-料理-煮食"
 
 #: field_options/option_description,
 msgid "General Skills-Food Service-Directing"
-msgstr ""
+msgstr "一般性技術-料理-指導"
 
 #: field_options/option_description,
 msgid "General Skills-Food Service-Other"
-msgstr ""
+msgstr "一般性技術-料理-其他"
 
 #: field_options/option_description,
 msgid "General Skills-Food Service-Preparing"
-msgstr ""
+msgstr "一般性技術-料理-備料"
 
 #: field_options/option_description,
 msgid "General Skills-Food Service-Serving"
-msgstr ""
+msgstr "一般性技術-料理-外場"
 
 #: field_options/option_description,
 msgid "General Skills-Hazardous Materials-Asbestos"
-msgstr ""
+msgstr "一般性技術-危險性材料-石棉"
 
 #: field_options/option_description,
 msgid "General Skills-Hazardous Materials-Chemicals"
-msgstr ""
+msgstr "一般性技術-危險性材料-化學物質"
 
 #: field_options/option_description,
 msgid "General Skills-Hazardous Materials-Explosives"
-msgstr ""
+msgstr "一般性技術-危險性材料-易爆物"
 
 #: field_options/option_description,
 msgid "General Skills-Hazardous Materials-Flammables"
-msgstr ""
+msgstr "一般性技術-危險性材料-易燃物"
 
 #: field_options/option_description,
 msgid "General Skills-Hazardous Materials-Gases"
-msgstr ""
+msgstr "一般性技術-危險性材料-瓦斯"
 
 #: field_options/option_description,
 msgid "General Skills-Hazardous Materials-Identification"
-msgstr ""
+msgstr "一般性技術-危險性材料-易爆物"
 
 #: field_options/option_description,
 msgid "General Skills-Hazardous Materials-Other"
-msgstr ""
+msgstr "一般性技術-危險性材料-其他"
 
 #: field_options/option_description,
 msgid "General Skills-Hazardous Materials-Radioactive "
-msgstr ""
+msgstr "一般性技術-危險性材料-放射性物質"
 
 #: field_options/option_description,
 msgid "General Skills-Information Services-Book Restorati"
@@ -14405,19 +14377,19 @@ msgstr ""
 
 #: field_options/option_description,
 msgid "General Skills-Information Services-Computer"
-msgstr ""
+msgstr "一般性技術- 資訊服務-電腦"
 
 #: field_options/option_description,
 msgid "General Skills-Information Services-Data Entry"
-msgstr ""
+msgstr "一般性技術- 資訊服務-資料輸入"
 
 #: field_options/option_description,
 msgid "General Skills-Information Services-Hardware (Comp"
-msgstr ""
+msgstr "一般性技術- 資訊服務-硬體"
 
 #: field_options/option_description,
 msgid "General Skills-Information Services-Other"
-msgstr ""
+msgstr "一般性技術- 資訊服務-其他"
 
 #: field_options/option_description,
 msgid "General Skills-Information Services-Software (Comp"
@@ -14425,43 +14397,43 @@ msgstr ""
 
 #: field_options/option_description,
 msgid "General Skills-Information Services-Telephone Repa"
-msgstr ""
+msgstr "一般性技術- 資訊服務-電話修復（待確認）"
 
 #: field_options/option_description,
 msgid "General Skills-Medical-Assist to Physician"
-msgstr ""
+msgstr "一般性技術- 醫療服務-內科醫師助手"
 
 #: field_options/option_description,
 msgid "General Skills-Medical-Counseling"
-msgstr ""
+msgstr "一般性技術- 醫療服務-諮商輔導"
 
 #: field_options/option_description,
 msgid "General Skills-Medical-Dentist"
-msgstr ""
+msgstr "一般性技術- 醫療服務-牙醫"
 
 #: field_options/option_description,
 msgid "General Skills-Medical-First Aid"
-msgstr ""
+msgstr "一般性技術- 醫療服務-急救"
 
 #: field_options/option_description,
 msgid "General Skills-Medical-Medical, Ambulance"
-msgstr ""
+msgstr "一般性技術- 醫療服務- 救護車醫療"
 
 #: field_options/option_description,
 msgid "General Skills-Medical-Nurse"
-msgstr ""
+msgstr "一般性技術- 醫療服務- 護理"
 
 #: field_options/option_description,
 msgid "General Skills-Medical-Other"
-msgstr ""
+msgstr "一般性技術- 醫療服務- 其他"
 
 #: field_options/option_description,
 msgid "General Skills-Medical-Physician"
-msgstr ""
+msgstr "一般性技術- 醫療服務- 內科"
 
 #: field_options/option_description,
 msgid "General Skills-Medical-Technician"
-msgstr ""
+msgstr "一般性技術- 醫療服務- 技術員"
 
 #: field_options/option_description,
 msgid "General Skills-Plumbing-Other"
@@ -14477,99 +14449,99 @@ msgstr ""
 
 #: field_options/option_description,
 msgid "General Skills-Tree-Evaluation of Needs"
-msgstr ""
+msgstr "一般性技術-樹木-需求評估"
 
 #: field_options/option_description,
 msgid "General Skills-Tree-Other"
-msgstr ""
+msgstr "一般性技術-樹木-其他"
 
 #: field_options/option_description,
 msgid "General Skills-Tree-Removal of Trees"
-msgstr ""
+msgstr "一般性技術-樹木-遷移樹木"
 
 #: field_options/option_description,
 msgid "General Skills-Tree-Trimming of Trees"
-msgstr ""
+msgstr "一般性技術-樹木-樹木修剪"
 
 #: field_options/option_description,
 msgid "Unskilled-Other-Baby Care Help"
-msgstr ""
+msgstr "非技術性-其他-嬰幼兒照顧協助"
 
 #: field_options/option_description,
 msgid "Unskilled-Other-Clerical"
-msgstr ""
+msgstr "非技術性-其他-抄寫"
 
 #: field_options/option_description,
 msgid "Unskilled-Other-Food Help"
-msgstr ""
+msgstr "非技術性-其他-食物準備協助"
 
 #: field_options/option_description,
 msgid "Unskilled-Other-Heavy Labor (Moving, Erecting Tent"
-msgstr ""
+msgstr "非技術性-其他-負重勞工（搬移、安裝帳棚等）"
 
 #: field_options/option_description,
 msgid "Unskilled-Other-Light Labor (Cleanup)"
-msgstr ""
+msgstr "非技術性-其他-非負重勞工（清潔）"
 
 #: field_options/option_description,
 msgid "Unskilled-Other-Messenger (Local People Preferred)"
-msgstr ""
+msgstr "非技術性-其他-傳訊者（當地人喜愛的）"
 
 #: field_options/option_description,
 msgid "Unskilled-Other-Miscellaneous"
-msgstr ""
+msgstr "非技術性-其他-多面像的"
 
 #: field_options/option_description,
 msgid "Resources-Vehicle-Own Aircraft"
-msgstr ""
+msgstr "資源-交通工具-擁有直昇機"
 
 #: field_options/option_description,
 msgid "Resources-Building Aide-Own Backhoe"
-msgstr ""
+msgstr "資源-建築工具-擁有反鏟挖土機"
 
 #: field_options/option_description,
 msgid "Resources-Building Aide-Own Bulldozer"
-msgstr ""
+msgstr "資源-建築工具-擁有推土機"
 
 #: field_options/option_description,
 msgid "Resources-Building Aide-Own Crane"
-msgstr ""
+msgstr "資源-建築工具-擁有起重機"
 
 #: field_options/option_description,
 msgid "Resources-Building Aide-Own Forklift"
-msgstr ""
+msgstr "資源-建築工具-擁有鏟車"
 
 #: field_options/option_description,
 msgid "Resources-Building Aide-Own Heavy Equipment"
-msgstr ""
+msgstr "資源-建築工具-擁有重型機具"
 
 #: field_options/option_description,
 msgid "Resources-Vehicle-Own Medical; Ambulance"
-msgstr ""
+msgstr "資源-交通工具-擁有醫療救護車"
 
 #: field_options/option_description,
 msgid "Resources-Vehicle-Own Other"
-msgstr ""
+msgstr "資源-交通工具-擁有其他"
 
 #: field_options/option_description,
 msgid "Resources-Vehicle-Own Refrigerated"
-msgstr ""
+msgstr "資源-交通工具-擁有冷凍設備"
 
 #: field_options/option_description,
 msgid "Resources-Vehicle-Own Steamshovel"
-msgstr ""
+msgstr "資源-交通工具-擁有蒸汽鏟"
 
 #: field_options/option_description,
 msgid "Resources-Vehicle-Own Truck"
-msgstr ""
+msgstr "資源-交通工具-擁有卡車"
 
 #: field_options/option_description,
 msgid "Resources-Vehicle-Own Van, Car"
-msgstr ""
+msgstr "資源-交通工具-擁有九人坐轎卡車"
 
 #: field_options/option_description,
 msgid "Resources-Vehicle-Own Boat(s)"
-msgstr ""
+msgstr "資源-交通工具-擁有船"
 
 #: field_options/option_description,
 #, fuzzy
@@ -14607,33 +14579,31 @@ msgstr ""
 
 #: field_options/option_description,
 msgid "Unskilled-With Tools-with Wheelbarrow"
-msgstr ""
+msgstr "非技術性- 使用獨輪手推車"
 
 #: field_options/option_description,
 msgid "Unskilled-With Tools-with Yard Tools"
-msgstr ""
+msgstr "非技術性-使用園藝工具"
 
 #: field_options/option_description,
 msgid "Restriction-No Heavy Lifting"
-msgstr ""
+msgstr "限制-不能負重"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Restriction-Can not drive"
-msgstr "配置不能再次執行"
+msgstr "限制-不會駕駛"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Restriction-Can not swim"
-msgstr "配置不能再次執行"
+msgstr "限制-不會游泳"
 
 #: field_options/option_description,
 msgid "Restriction-Handicapped"
-msgstr ""
+msgstr "限制-身心障礙"
 
 #: field_options/option_description,
 msgid "Site Manager"
-msgstr ""
+msgstr "專案管理員"
 
 #: ct_unit/name,
 msgid "kl"
@@ -14641,28 +14611,27 @@ msgstr ""
 
 #: ct_unit/name,
 msgid "microlitre"
-msgstr ""
+msgstr "微升"
 
 #: ct_unit/name,
 msgid "gal"
-msgstr ""
+msgstr "加侖"
 
 #: ct_unit/name,
 msgid "Truck"
-msgstr ""
+msgstr "卡車"
 
 #: ct_unit/name,
-#, fuzzy
 msgid "Box"
 msgstr "盒"
 
 #: ct_unit/name,
 msgid "Bottle"
-msgstr ""
+msgstr "瓶"
 
 #: ct_unit/name,
 msgid "Bag"
-msgstr ""
+msgstr "袋"
 
 #: ct_unit/name,
 msgid "Piece"
@@ -14679,7 +14648,7 @@ msgstr ""
 
 #: ct_unit/name,
 msgid "Packet"
-msgstr ""
+msgstr "包"
 
 #: ct_unit/name,
 msgid "Tablet"
@@ -14687,65 +14656,63 @@ msgstr ""
 
 #: ct_unit/name,
 msgid "Capsule"
-msgstr ""
+msgstr "膠囊"
 
 #: ct_unit/name,
 msgid "Vial"
-msgstr ""
+msgstr "小瓶裝"
 
 #: ct_unit/name,
 msgid "Ampoule"
-msgstr ""
+msgstr "安瓿（一次用量的針劑）"
 
 #: ct_unit/name,
 msgid "Suspension"
-msgstr ""
+msgstr "暫停"
 
 #: ct_unit/name,
 msgid "mg"
-msgstr ""
+msgstr "毫克"
 
 #: ct_unit/name,
 msgid "microgram"
-msgstr ""
+msgstr "毫克"
 
 #: ct_unit/name,
 msgid "m"
-msgstr ""
+msgstr "公尺"
 
 #: ct_unit/name,
 msgid "km"
-msgstr ""
+msgstr "公里"
 
 #: ct_unit/name,
 msgid "l"
-msgstr ""
+msgstr "公升"
 
 #: ct_unit/name,
 msgid "ml"
-msgstr ""
+msgstr "毫升"
 
 #: ct_unit_type/description,
 msgid "Mass"
-msgstr ""
+msgstr "質量"
 
 #: ct_unit_type/description,
-#, fuzzy
 msgid "Length"
 msgstr "長度"
 
 #: ct_unit_type/description,
-#, fuzzy
 msgid "Volume"
-msgstr "體積"
+msgstr "容量"
 
 #: ct_unit_type/description,
 msgid "Miscellaneous"
-msgstr ""
+msgstr "多方面的"
 
 #: ct_unit_type/description,
 msgid "Medical"
-msgstr ""
+msgstr "醫療"
 
 #~ msgid "Report a missing person"
 #~ msgstr "通報失蹤者"
