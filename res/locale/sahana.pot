@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-29 20:32+0800\n"
+"POT-Creation-Date: 2010-05-03 16:27+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -426,24 +426,25 @@ msgstr ""
 #: mod/ims/reg_inv.inc:111 mod/ims/reg_inv.inc:157 mod/cs/lib_cs.inc:193
 #: mod/gis/wm_fns.inc:100 mod/gis/wm_fns.inc:129 mod/gis/main_fns.inc:88
 #: mod/gis/main_fns.inc:117 mod/gis/gis_fns.inc:180 mod/mpr/search.inc:82
-#: mod/mpr/search.inc:208 mod/mpr/edit.inc:236 mod/mpr/edit.inc:351
-#: mod/mpr/edit.inc:745 mod/mpr/images.inc:26 mod/mpr/add.inc:137
-#: mod/mpr/add.inc:329 mod/mpr/add.inc:395 mod/mpr/add.inc:553
-#: mod/sync/handler_upload.inc:71 mod/admin/location.inc:58 mod/cr/edit.inc:67
-#: mod/cr/edit.inc:216 mod/cr/edit.inc:590 mod/cr/camp.inc:75
-#: mod/cr/camp.inc:96 mod/cr/camp.inc:175 mod/cr/camp.inc:659
-#: mod/dvr/edt_grp.inc:395 mod/dvr/search_individual.inc:50
-#: mod/dvr/search_individual.inc:139 mod/dvr/search_group.inc:45
-#: mod/dvr/search_group.inc:142 mod/dvr/add_new_grp.inc:274
-#: mod/dvr/add_new_grp.inc:316 mod/dvr/edt_indv.inc:268
-#: mod/dvr/add_new_indv.inc:536 mod/rms/handler_req_new.inc:45
-#: mod/rms/handler_req_new.inc:79 mod/rms/handler_req_new.inc:131
-#: mod/rms/handler_req_ls.inc:63 mod/rms/handler_plg_ls.inc:57
-#: mod/rms/handler_plg_new.inc:44 mod/rms/handler_plg_new.inc:65
-#: mod/rms/handler_mng_ff.inc:115 mod/rms/handler_mng_ff.inc:260
-#: mod/rms/lib_rms.inc:1338 mod/msg/handler_cap_new.inc:99
-#: mod/msg/handler_cap_new.inc:167 mod/msg/handler_cap_new.inc:187
-#: inc/lib_paging.inc:139 inc/lib_paging.inc:222
+#: mod/mpr/search.inc:215 mod/mpr/edit.inc:236 mod/mpr/edit.inc:351
+#: mod/mpr/edit.inc:752 mod/mpr/images.inc:26 mod/mpr/add.inc:137
+#: mod/mpr/add.inc:329 mod/mpr/add.inc:395 mod/mpr/add.inc:456
+#: mod/mpr/add.inc:557 mod/sync/handler_upload.inc:71
+#: mod/admin/location.inc:58 mod/cr/edit.inc:67 mod/cr/edit.inc:216
+#: mod/cr/edit.inc:590 mod/cr/camp.inc:75 mod/cr/camp.inc:96
+#: mod/cr/camp.inc:175 mod/cr/camp.inc:659 mod/dvr/edt_grp.inc:395
+#: mod/dvr/search_individual.inc:50 mod/dvr/search_individual.inc:139
+#: mod/dvr/search_group.inc:45 mod/dvr/search_group.inc:142
+#: mod/dvr/add_new_grp.inc:274 mod/dvr/add_new_grp.inc:316
+#: mod/dvr/edt_indv.inc:268 mod/dvr/add_new_indv.inc:536
+#: mod/rms/handler_req_new.inc:45 mod/rms/handler_req_new.inc:79
+#: mod/rms/handler_req_new.inc:131 mod/rms/handler_req_ls.inc:63
+#: mod/rms/handler_plg_ls.inc:57 mod/rms/handler_plg_new.inc:44
+#: mod/rms/handler_plg_new.inc:65 mod/rms/handler_mng_ff.inc:115
+#: mod/rms/handler_mng_ff.inc:260 mod/rms/lib_rms.inc:1338
+#: mod/msg/handler_cap_new.inc:99 mod/msg/handler_cap_new.inc:167
+#: mod/msg/handler_cap_new.inc:187 inc/lib_paging.inc:139
+#: inc/lib_paging.inc:222
 msgid "Next"
 msgstr ""
 
@@ -583,7 +584,7 @@ msgstr ""
 #: tools/tpl_languages.php:7 tools/tpl_languages.php:23
 #: tools/tpl_languages.php:98 mod/or/process_org.inc:33
 #: mod/or/process_org.inc:41 mod/ims/view_edit_item.inc:65
-#: mod/ims/mini_quantity.inc:249 mod/mpr/search.inc:254 mod/cr/edit.inc:172
+#: mod/ims/mini_quantity.inc:249 mod/mpr/search.inc:256 mod/cr/edit.inc:172
 #: mod/cr/edit.inc:258 mod/cr/edit.inc:553 mod/cr/camp.inc:617
 #: mod/msg/handler_cap_edit.inc:46
 msgid "Edit"
@@ -658,8 +659,8 @@ msgstr ""
 #: mod/rs/sample.inc:225 mod/rs/sample.inc:280 mod/cs/supplier_report.inc:29
 #: mod/cs/drill_down.inc:51 mod/cs/edit.inc:177 mod/cs/edit.inc:383
 #: mod/cs/edit.inc:503 mod/cs/add.inc:427 mod/mpr/search.inc:74
-#: mod/mpr/search.inc:75 mod/mpr/search.inc:360 mod/mpr/edit.inc:503
-#: mod/mpr/edit.inc:716 mod/mpr/add.inc:301 mod/mpr/add.inc:536
+#: mod/mpr/search.inc:75 mod/mpr/search.inc:362 mod/mpr/edit.inc:510
+#: mod/mpr/edit.inc:723 mod/mpr/add.inc:301 mod/mpr/add.inc:540
 #: mod/sync/handler_upload.inc:90 mod/admin/ims_level.inc:30
 #: mod/admin/ims_level.inc:61 mod/admin/ims_level.inc:173
 #: mod/admin/ims_level.inc:219 mod/admin/ims_level.inc:356
@@ -723,7 +724,7 @@ msgid "Assigned"
 msgstr ""
 
 #: tools/tpl_languages.php:39 mod/ims/optimize.inc:495 mod/ims/view_inv.inc:65
-#: mod/mpr/search.inc:242
+#: mod/mpr/search.inc:244
 msgid "Actions"
 msgstr ""
 
@@ -826,13 +827,13 @@ msgid "Volunteers to Assign"
 msgstr ""
 
 #: tools/tpl_languages.php:76 tools/tpl_languages.php:200
-#: mod/mpr/search.inc:359 mod/mpr/edit.inc:502
+#: mod/mpr/search.inc:361 mod/mpr/edit.inc:509
 msgid "Picture"
 msgstr ""
 
 #: tools/tpl_languages.php:77 tools/tpl_languages.php:299
 #: tools/tpl_languages.php:314 mod/ims/search.inc:142 mod/ims/search.inc:215
-#: mod/mpr/search.inc:361 mod/mpr/edit.inc:143 mod/mpr/add.inc:51
+#: mod/mpr/search.inc:363 mod/mpr/edit.inc:143 mod/mpr/add.inc:51
 #: mod/mpr/add.inc:52 mod/rms/handler_req_ls.inc:135
 #: mod/rms/handler_req_ls.inc:175 mod/rms/handler_req_sch.inc:99
 #: mod/rms/handler_req_sch.inc:205 mod/rms/handler_req_sch.inc:211
@@ -1373,7 +1374,7 @@ msgstr ""
 msgid "Go to Previous Page"
 msgstr ""
 
-#: tools/tpl_languages.php:241 mod/mpr/search.inc:203
+#: tools/tpl_languages.php:241 mod/mpr/search.inc:210
 #: mod/rms/handler_req_ls.inc:54 mod/rms/handler_plg_ls.inc:48
 #: inc/lib_paging.inc:117 inc/lib_paging.inc:208
 msgid "Previous"
@@ -1534,8 +1535,8 @@ msgid "No skills defined."
 msgstr ""
 
 #: tools/tpl_languages.php:287 tools/tpl_languages.php:365
-#: mod/or/admin_forms.inc:131 mod/or/admin_forms.inc:189 mod/mpr/edit.inc:718
-#: mod/mpr/edit.inc:730 mod/admin/location.inc:141 mod/admin/lc_db.inc:95
+#: mod/or/admin_forms.inc:131 mod/or/admin_forms.inc:189 mod/mpr/edit.inc:725
+#: mod/mpr/edit.inc:737 mod/admin/location.inc:141 mod/admin/lc_db.inc:95
 #: mod/admin/lc_add_new_language.inc:36 mod/msg/class_cap_alert.inc:417
 #: mod/msg/class_cap_alert.inc:421 mod/msg/class_cap_alert.inc:438
 #: mod/msg/class_cap_alert.inc:442
@@ -1592,7 +1593,7 @@ msgstr ""
 msgid "Total Monetary Value"
 msgstr ""
 
-#: tools/tpl_languages.php:304 mod/mpr/view.inc:26 mod/mpr/search.inc:239
+#: tools/tpl_languages.php:304 mod/mpr/view.inc:26 mod/mpr/search.inc:241
 #: mod/rms/handler_req_ls.inc:94 mod/rms/handler_req_sch.inc:216
 #: mod/rms/handler_plg_ls.inc:95 mod/rms/handler_plg_sch.inc:291
 msgid "Details"
@@ -1918,9 +1919,9 @@ msgstr ""
 #: mod/or/report.inc:466 mod/or/view_org.inc:92 mod/or/view_org.inc:405
 #: mod/or/view_org.inc:472 mod/or/lib_or.inc:639 mod/ims/search.inc:381
 #: mod/ims/search.inc:498 mod/ims/ims_report.inc:436 mod/ims/view_inv.inc:59
-#: mod/mpr/view.inc:78 mod/mpr/edit.inc:191 mod/mpr/edit.inc:464
-#: mod/mpr/add.inc:103 mod/mpr/add.inc:321 mod/mpr/add.inc:504
-#: mod/mpr/add.inc:538 mod/cr/search.inc:43 mod/cr/search.inc:120
+#: mod/mpr/view.inc:78 mod/mpr/edit.inc:191 mod/mpr/edit.inc:471
+#: mod/mpr/add.inc:103 mod/mpr/add.inc:321 mod/mpr/add.inc:508
+#: mod/mpr/add.inc:542 mod/cr/search.inc:43 mod/cr/search.inc:120
 #: mod/cr/edit.inc:42 mod/cr/edit.inc:134 mod/cr/edit.inc:498
 #: mod/cr/edit.inc:564 mod/cr/reports.inc:61 mod/cr/reports.inc:164
 #: mod/cr/camp.inc:45 mod/cr/camp.inc:562 mod/cr/camp.inc:633
@@ -2209,7 +2210,7 @@ msgid "No Records"
 msgstr ""
 
 #: mod/or/view_org.inc:222 mod/or/view_org.inc:542 mod/mpr/mpr_lib.inc:50
-#: mod/mpr/mpr_lib.inc:71 mod/mpr/search.inc:280 mod/dvr/lib.inc:150
+#: mod/mpr/mpr_lib.inc:71 mod/mpr/search.inc:282 mod/dvr/lib.inc:150
 #: mod/dvr/lib.inc:170
 msgid "Assign to more incidents"
 msgstr ""
@@ -2248,7 +2249,7 @@ msgid "Close"
 msgstr ""
 
 #: mod/or/view_org.inc:568 mod/or/view_org.inc:578 mod/mpr/view.inc:103
-#: mod/mpr/search.inc:391 mod/rms/handler_mng_ff.inc:109
+#: mod/mpr/search.inc:393 mod/rms/handler_mng_ff.inc:109
 msgid "Back"
 msgstr ""
 
@@ -2343,12 +2344,12 @@ msgid ""
 "if you offer medical services select it"
 msgstr ""
 
-#: mod/or/lib_or.inc:640 mod/mpr/add.inc:322 mod/mpr/add.inc:539
+#: mod/or/lib_or.inc:640 mod/mpr/add.inc:322 mod/mpr/add.inc:543
 msgid "Phone"
 msgstr ""
 
 #: mod/or/lib_or.inc:641 mod/mpr/view.inc:81 mod/mpr/edit.inc:197
-#: mod/mpr/edit.inc:481 mod/mpr/add.inc:106 mod/mpr/add.inc:521
+#: mod/mpr/edit.inc:488 mod/mpr/add.inc:106 mod/mpr/add.inc:525
 #: mod/dvr/edt_grp.inc:288 mod/dvr/edt_grp.inc:490 mod/dvr/add_new_grp.inc:224
 #: mod/dvr/add_new_grp.inc:390 mod/dvr/edt_indv.inc:234
 #: mod/dvr/edt_indv.inc:428 mod/dvr/add_new_indv.inc:161
@@ -2363,7 +2364,7 @@ msgid "Fax"
 msgstr ""
 
 #: mod/or/lib_or.inc:643 mod/home/main.inc:52 mod/home/main.inc:182
-#: mod/mpr/add.inc:323 mod/mpr/add.inc:540 mod/dvr/edt_grp.inc:294
+#: mod/mpr/add.inc:323 mod/mpr/add.inc:544 mod/dvr/edt_grp.inc:294
 #: mod/dvr/edt_grp.inc:492 mod/dvr/add_new_grp.inc:230
 #: mod/dvr/add_new_grp.inc:392 mod/rms/handler_req_new.inc:38
 #: mod/rms/handler_req_new.inc:75 mod/rms/handler_plg_new.inc:37
@@ -5813,7 +5814,7 @@ msgid "Contact Person  Phone"
 msgstr ""
 
 #: mod/gis/main_fns.inc:84 mod/mpr/view.inc:85 mod/mpr/edit.inc:226
-#: mod/mpr/edit.inc:484 mod/mpr/add.inc:131 mod/mpr/add.inc:524
+#: mod/mpr/edit.inc:491 mod/mpr/add.inc:131 mod/mpr/add.inc:528
 #: mod/dvr/edt_indv.inc:457 mod/dvr/edt_indv.inc:677
 #: mod/dvr/add_new_indv.inc:434 mod/dvr/add_new_indv.inc:663
 msgid "Other Details"
@@ -6056,8 +6057,8 @@ msgid "Comments : "
 msgstr ""
 
 #: mod/mpr/view.inc:36 mod/mpr/search.inc:68 mod/mpr/search.inc:69
-#: mod/mpr/edit.inc:171 mod/mpr/edit.inc:420 mod/mpr/add.inc:82
-#: mod/mpr/add.inc:460 mod/dvr/search_individual.inc:125
+#: mod/mpr/edit.inc:171 mod/mpr/edit.inc:427 mod/mpr/add.inc:82
+#: mod/mpr/add.inc:464 mod/dvr/search_individual.inc:125
 #: mod/dvr/search_individual.inc:126 mod/dvr/search_group.inc:130
 #: mod/dvr/search_group.inc:131 mod/dvr/edt_indv.inc:176
 #: mod/dvr/edt_indv.inc:419 mod/dvr/add_new_indv.inc:117
@@ -6066,14 +6067,14 @@ msgid "Identity"
 msgstr ""
 
 #: mod/mpr/view.inc:39 mod/mpr/search.inc:44 mod/mpr/edit.inc:172
-#: mod/mpr/edit.inc:423 mod/mpr/add.inc:86 mod/mpr/add.inc:463
+#: mod/mpr/edit.inc:430 mod/mpr/add.inc:86 mod/mpr/add.inc:467
 #: mod/dvr/edt_indv.inc:180 mod/dvr/edt_indv.inc:420
 #: mod/dvr/add_new_indv.inc:121 mod/dvr/add_new_indv.inc:398
 msgid "Identity Card Number"
 msgstr ""
 
 #: mod/mpr/view.inc:40 mod/mpr/search.inc:71 mod/mpr/edit.inc:174
-#: mod/mpr/edit.inc:424 mod/mpr/add.inc:90 mod/mpr/add.inc:464
+#: mod/mpr/edit.inc:431 mod/mpr/add.inc:90 mod/mpr/add.inc:468
 #: mod/dvr/search_individual.inc:128 mod/dvr/search_group.inc:133
 #: mod/dvr/edt_indv.inc:183 mod/dvr/edt_indv.inc:421
 #: mod/dvr/add_new_indv.inc:124 mod/dvr/add_new_indv.inc:399
@@ -6081,7 +6082,7 @@ msgid "Passport Number"
 msgstr ""
 
 #: mod/mpr/view.inc:42 mod/mpr/search.inc:72 mod/mpr/edit.inc:176
-#: mod/mpr/edit.inc:425 mod/mpr/add.inc:94 mod/mpr/add.inc:465
+#: mod/mpr/edit.inc:432 mod/mpr/add.inc:94 mod/mpr/add.inc:469
 #: mod/dvr/search_individual.inc:129 mod/dvr/edt_indv.inc:186
 #: mod/dvr/edt_indv.inc:422 mod/dvr/add_new_indv.inc:127
 #: mod/dvr/add_new_indv.inc:400
@@ -6089,14 +6090,14 @@ msgid "Driving License"
 msgstr ""
 
 #: mod/mpr/view.inc:47 mod/mpr/search.inc:80 mod/mpr/edit.inc:147
-#: mod/mpr/edit.inc:429 mod/mpr/add.inc:59 mod/mpr/add.inc:469
+#: mod/mpr/edit.inc:436 mod/mpr/add.inc:59 mod/mpr/add.inc:473
 #: mod/dvr/search_individual.inc:137 mod/dvr/edt_indv.inc:141
 #: mod/dvr/add_new_indv.inc:80
 msgid "Basic Details"
 msgstr ""
 
-#: mod/mpr/view.inc:50 mod/mpr/search.inc:76 mod/mpr/edit.inc:151
-#: mod/mpr/edit.inc:432 mod/mpr/add.inc:63 mod/mpr/add.inc:472
+#: mod/mpr/view.inc:50 mod/mpr/search.inc:76 mod/mpr/edit.inc:153
+#: mod/mpr/edit.inc:439 mod/mpr/add.inc:64 mod/mpr/add.inc:476
 #: mod/cr/edit.inc:54 mod/cr/edit.inc:147 mod/cr/edit.inc:505
 #: mod/cr/edit.inc:577 mod/cr/camp.inc:56 mod/cr/camp.inc:569
 #: mod/cr/camp.inc:646 mod/dvr/edt_grp.inc:235
@@ -6110,8 +6111,8 @@ msgstr ""
 msgid "Full Name"
 msgstr ""
 
-#: mod/mpr/view.inc:51 mod/mpr/search.inc:77 mod/mpr/edit.inc:154
-#: mod/mpr/edit.inc:433 mod/mpr/add.inc:72 mod/mpr/add.inc:473
+#: mod/mpr/view.inc:51 mod/mpr/search.inc:77 mod/mpr/edit.inc:151
+#: mod/mpr/edit.inc:440 mod/mpr/add.inc:63 mod/mpr/add.inc:477
 #: mod/dvr/reporting.inc:43 mod/dvr/edt_grp.inc:239
 #: mod/dvr/search_individual.inc:88 mod/dvr/search_individual.inc:134
 #: mod/dvr/search_group.inc:72 mod/dvr/search_group.inc:139
@@ -6121,7 +6122,7 @@ msgid "Family Name"
 msgstr ""
 
 #: mod/mpr/view.inc:52 mod/mpr/search.inc:78 mod/mpr/edit.inc:156
-#: mod/mpr/edit.inc:434 mod/mpr/add.inc:73 mod/mpr/add.inc:474
+#: mod/mpr/edit.inc:441 mod/mpr/add.inc:73 mod/mpr/add.inc:478
 #: mod/dvr/reporting.inc:44 mod/dvr/edt_grp.inc:243
 #: mod/dvr/search_individual.inc:135 mod/dvr/search_group.inc:73
 #: mod/dvr/search_group.inc:140 mod/dvr/add_new_grp.inc:202
@@ -6130,121 +6131,121 @@ msgstr ""
 msgid "Local Name"
 msgstr ""
 
-#: mod/mpr/view.inc:53 mod/mpr/edit.inc:158 mod/mpr/edit.inc:435
-#: mod/mpr/add.inc:74 mod/mpr/add.inc:475 mod/dvr/edt_indv.inc:157
+#: mod/mpr/view.inc:53 mod/mpr/edit.inc:158 mod/mpr/edit.inc:442
+#: mod/mpr/add.inc:74 mod/mpr/add.inc:479 mod/dvr/edt_indv.inc:157
 #: mod/dvr/add_new_indv.inc:97
 msgid "Date of Birth"
 msgstr ""
 
-#: mod/mpr/view.inc:54 mod/mpr/edit.inc:161 mod/mpr/edit.inc:436
-#: mod/mpr/add.inc:76 mod/mpr/add.inc:476 mod/dvr/edt_indv.inc:161
+#: mod/mpr/view.inc:54 mod/mpr/edit.inc:161 mod/mpr/edit.inc:443
+#: mod/mpr/add.inc:76 mod/mpr/add.inc:480 mod/dvr/edt_indv.inc:161
 #: mod/dvr/add_new_indv.inc:102
 msgid "Age Group"
 msgstr ""
 
-#: mod/mpr/view.inc:55 mod/mpr/edit.inc:163 mod/mpr/edit.inc:437
-#: mod/mpr/add.inc:77 mod/mpr/add.inc:477 mod/dvr/edt_indv.inc:164
+#: mod/mpr/view.inc:55 mod/mpr/edit.inc:163 mod/mpr/edit.inc:444
+#: mod/mpr/add.inc:77 mod/mpr/add.inc:481 mod/dvr/edt_indv.inc:164
 #: mod/dvr/edt_indv.inc:414 mod/dvr/add_new_indv.inc:105
 #: mod/dvr/add_new_indv.inc:392
 msgid "Gender"
 msgstr ""
 
-#: mod/mpr/view.inc:56 mod/mpr/edit.inc:165 mod/mpr/edit.inc:438
-#: mod/mpr/add.inc:78 mod/mpr/add.inc:478 mod/dvr/edt_indv.inc:167
+#: mod/mpr/view.inc:56 mod/mpr/edit.inc:165 mod/mpr/edit.inc:445
+#: mod/mpr/add.inc:78 mod/mpr/add.inc:482 mod/dvr/edt_indv.inc:167
 #: mod/dvr/edt_indv.inc:415 mod/dvr/add_new_indv.inc:108
 #: mod/dvr/add_new_indv.inc:393
 msgid "Marital Status"
 msgstr ""
 
-#: mod/mpr/view.inc:57 mod/mpr/edit.inc:167 mod/mpr/edit.inc:439
-#: mod/mpr/add.inc:79 mod/mpr/add.inc:479 mod/dvr/edt_indv.inc:170
+#: mod/mpr/view.inc:57 mod/mpr/edit.inc:167 mod/mpr/edit.inc:446
+#: mod/mpr/add.inc:79 mod/mpr/add.inc:483 mod/dvr/edt_indv.inc:170
 #: mod/dvr/edt_indv.inc:416 mod/dvr/add_new_indv.inc:111
 #: mod/dvr/add_new_indv.inc:394
 msgid "Religion"
 msgstr ""
 
-#: mod/mpr/view.inc:58 mod/mpr/edit.inc:168 mod/mpr/edit.inc:440
-#: mod/mpr/add.inc:80 mod/mpr/add.inc:480 mod/dvr/edt_indv.inc:173
+#: mod/mpr/view.inc:58 mod/mpr/edit.inc:168 mod/mpr/edit.inc:447
+#: mod/mpr/add.inc:80 mod/mpr/add.inc:484 mod/dvr/edt_indv.inc:173
 #: mod/dvr/edt_indv.inc:417 mod/dvr/add_new_indv.inc:114
 #: mod/dvr/add_new_indv.inc:395
 msgid "Race"
 msgstr ""
 
-#: mod/mpr/view.inc:63 mod/mpr/edit.inc:212 mod/mpr/edit.inc:444
-#: mod/mpr/add.inc:123 mod/mpr/add.inc:484 mod/dvr/edt_indv.inc:651
+#: mod/mpr/view.inc:63 mod/mpr/edit.inc:212 mod/mpr/edit.inc:451
+#: mod/mpr/add.inc:123 mod/mpr/add.inc:488 mod/dvr/edt_indv.inc:651
 #: mod/dvr/add_new_indv.inc:637
 msgid "Physical Details"
 msgstr ""
 
-#: mod/mpr/view.inc:66 mod/mpr/search.inc:259 mod/mpr/edit.inc:213
-#: mod/mpr/edit.inc:447 mod/mpr/add.inc:124 mod/mpr/add.inc:487
+#: mod/mpr/view.inc:66 mod/mpr/search.inc:261 mod/mpr/edit.inc:213
+#: mod/mpr/edit.inc:454 mod/mpr/add.inc:124 mod/mpr/add.inc:491
 #: mod/dvr/edt_indv.inc:654 mod/dvr/add_new_indv.inc:640
 msgid "Eye Colour"
 msgstr ""
 
-#: mod/mpr/view.inc:67 mod/mpr/search.inc:259 mod/mpr/edit.inc:215
-#: mod/mpr/edit.inc:448 mod/mpr/add.inc:125 mod/mpr/add.inc:488
+#: mod/mpr/view.inc:67 mod/mpr/search.inc:261 mod/mpr/edit.inc:215
+#: mod/mpr/edit.inc:455 mod/mpr/add.inc:125 mod/mpr/add.inc:492
 #: mod/dvr/edt_indv.inc:656 mod/dvr/add_new_indv.inc:642
 msgid "Skin Colour"
 msgstr ""
 
-#: mod/mpr/view.inc:68 mod/mpr/search.inc:259 mod/mpr/edit.inc:217
-#: mod/mpr/edit.inc:449 mod/mpr/add.inc:126 mod/mpr/add.inc:489
+#: mod/mpr/view.inc:68 mod/mpr/search.inc:261 mod/mpr/edit.inc:217
+#: mod/mpr/edit.inc:456 mod/mpr/add.inc:126 mod/mpr/add.inc:493
 #: mod/dvr/edt_indv.inc:658 mod/dvr/add_new_indv.inc:644
 msgid "Hair Colour"
 msgstr ""
 
-#: mod/mpr/view.inc:69 mod/mpr/search.inc:259 mod/mpr/edit.inc:219
-#: mod/mpr/edit.inc:450 mod/mpr/add.inc:127 mod/mpr/add.inc:490
+#: mod/mpr/view.inc:69 mod/mpr/search.inc:261 mod/mpr/edit.inc:219
+#: mod/mpr/edit.inc:457 mod/mpr/add.inc:127 mod/mpr/add.inc:494
 #: mod/dvr/edt_indv.inc:453 mod/dvr/edt_indv.inc:661
 #: mod/dvr/add_new_indv.inc:430 mod/dvr/add_new_indv.inc:647
 msgid "Height"
 msgstr ""
 
-#: mod/mpr/view.inc:70 mod/mpr/search.inc:259 mod/mpr/edit.inc:221
-#: mod/mpr/edit.inc:451 mod/mpr/add.inc:128 mod/mpr/add.inc:491
+#: mod/mpr/view.inc:70 mod/mpr/search.inc:261 mod/mpr/edit.inc:221
+#: mod/mpr/edit.inc:458 mod/mpr/add.inc:128 mod/mpr/add.inc:495
 #: mod/dvr/edt_indv.inc:454 mod/dvr/edt_indv.inc:668
 #: mod/dvr/add_new_indv.inc:431 mod/dvr/add_new_indv.inc:654
 msgid "Weight"
 msgstr ""
 
-#: mod/mpr/view.inc:71 mod/mpr/view.inc:92 mod/mpr/search.inc:271
-#: mod/mpr/edit.inc:223 mod/mpr/edit.inc:233 mod/mpr/edit.inc:452
-#: mod/mpr/edit.inc:491 mod/mpr/add.inc:492 mod/mpr/add.inc:531
+#: mod/mpr/view.inc:71 mod/mpr/view.inc:92 mod/mpr/search.inc:273
+#: mod/mpr/edit.inc:223 mod/mpr/edit.inc:233 mod/mpr/edit.inc:459
+#: mod/mpr/edit.inc:498 mod/mpr/add.inc:496 mod/mpr/add.inc:535
 msgid "Comments"
 msgstr ""
 
-#: mod/mpr/view.inc:75 mod/mpr/edit.inc:190 mod/mpr/edit.inc:462
-#: mod/mpr/add.inc:502
+#: mod/mpr/view.inc:75 mod/mpr/edit.inc:190 mod/mpr/edit.inc:469
+#: mod/mpr/add.inc:506
 msgid "Contact Details"
 msgstr ""
 
-#: mod/mpr/view.inc:79 mod/mpr/edit.inc:193 mod/mpr/edit.inc:479
-#: mod/mpr/add.inc:104 mod/mpr/add.inc:519
+#: mod/mpr/view.inc:79 mod/mpr/edit.inc:193 mod/mpr/edit.inc:486
+#: mod/mpr/add.inc:104 mod/mpr/add.inc:523
 msgid "Postal Code"
 msgstr ""
 
-#: mod/mpr/view.inc:80 mod/mpr/edit.inc:195 mod/mpr/edit.inc:480
-#: mod/mpr/add.inc:105 mod/mpr/add.inc:520 mod/dvr/edt_indv.inc:231
+#: mod/mpr/view.inc:80 mod/mpr/edit.inc:195 mod/mpr/edit.inc:487
+#: mod/mpr/add.inc:105 mod/mpr/add.inc:524 mod/dvr/edt_indv.inc:231
 #: mod/dvr/edt_indv.inc:427 mod/dvr/add_new_indv.inc:158
 #: mod/dvr/add_new_indv.inc:405
 msgid "Home Phone"
 msgstr ""
 
-#: mod/mpr/view.inc:89 mod/mpr/edit.inc:227 mod/mpr/edit.inc:488
-#: mod/mpr/add.inc:132 mod/mpr/add.inc:528 mod/dvr/edt_indv.inc:455
+#: mod/mpr/view.inc:89 mod/mpr/edit.inc:227 mod/mpr/edit.inc:495
+#: mod/mpr/add.inc:132 mod/mpr/add.inc:532 mod/dvr/edt_indv.inc:455
 #: mod/dvr/edt_indv.inc:674 mod/dvr/add_new_indv.inc:432
 #: mod/dvr/add_new_indv.inc:660
 msgid "Blood Type"
 msgstr ""
 
-#: mod/mpr/view.inc:90 mod/mpr/search.inc:271 mod/mpr/edit.inc:229
-#: mod/mpr/edit.inc:489 mod/mpr/add.inc:529
+#: mod/mpr/view.inc:90 mod/mpr/search.inc:273 mod/mpr/edit.inc:229
+#: mod/mpr/edit.inc:496 mod/mpr/add.inc:533
 msgid "Last Seen"
 msgstr ""
 
-#: mod/mpr/view.inc:91 mod/mpr/search.inc:271 mod/mpr/edit.inc:231
-#: mod/mpr/edit.inc:490 mod/mpr/add.inc:530
+#: mod/mpr/view.inc:91 mod/mpr/search.inc:273 mod/mpr/edit.inc:231
+#: mod/mpr/edit.inc:497 mod/mpr/add.inc:534
 msgid "Last Clothing"
 msgstr ""
 
@@ -6252,8 +6253,8 @@ msgstr ""
 msgid "People that are tracking"
 msgstr ""
 
-#: mod/mpr/view.inc:97 mod/mpr/search.inc:265 mod/mpr/search.inc:291
-#: mod/mpr/search.inc:375 mod/mpr/edit.inc:726 mod/msg/handler_cap_view.inc:65
+#: mod/mpr/view.inc:97 mod/mpr/search.inc:267 mod/mpr/search.inc:293
+#: mod/mpr/search.inc:377 mod/mpr/edit.inc:733 mod/msg/handler_cap_view.inc:65
 #: mod/msg/handler_cap_view.inc:74 mod/msg/handler_cap_view.inc:85
 msgid "View"
 msgstr ""
@@ -6293,77 +6294,85 @@ msgstr ""
 msgid "Identity Card"
 msgstr ""
 
-#: mod/mpr/search.inc:184 mod/mpr/search.inc:194
-msgid "Total"
-msgstr ""
-
-#: mod/mpr/search.inc:184 mod/mpr/search.inc:194
-msgid "Records were found"
-msgstr ""
-
-#: mod/mpr/search.inc:201
-msgid "First"
-msgstr ""
-
-#: mod/mpr/search.inc:201 mod/mpr/search.inc:203 mod/mpr/search.inc:208
-#: mod/mpr/search.inc:210 mod/rms/handler_req_ls.inc:148
-#: mod/rms/handler_plg_ls.inc:131
-msgid "Records"
-msgstr ""
-
-#: mod/mpr/search.inc:210
-msgid "Last"
-msgstr ""
-
-#: mod/mpr/search.inc:213 mod/mpr/home.inc:55 mod/mpr/main.inc:57
+#: mod/mpr/search.inc:159 mod/mpr/home.inc:55 mod/mpr/main.inc:57
 #: mod/mpr/main.inc:458
 msgid "Report a Missing Person"
 msgstr ""
 
-#: mod/mpr/search.inc:215 mod/mpr/home.inc:57 mod/mpr/main.inc:59
+#: mod/mpr/search.inc:161 mod/mpr/home.inc:57 mod/mpr/main.inc:59
 #: mod/mpr/main.inc:461
 msgid "Report a Found Person"
 msgstr ""
 
-#: mod/mpr/search.inc:238 mod/mpr/edit.inc:408
+#: mod/mpr/search.inc:164
+#, php-format
+msgid ""
+"If you found the person you would like to report is existed in the system. "
+"Please click the name of the person in the list above, and set yourself as "
+"tracker for him. Or click %s"
+msgstr ""
+
+#: mod/mpr/search.inc:191 mod/mpr/search.inc:201
+msgid "Total"
+msgstr ""
+
+#: mod/mpr/search.inc:191 mod/mpr/search.inc:201
+msgid "Records were found"
+msgstr ""
+
+#: mod/mpr/search.inc:208
+msgid "First"
+msgstr ""
+
+#: mod/mpr/search.inc:208 mod/mpr/search.inc:210 mod/mpr/search.inc:215
+#: mod/mpr/search.inc:217 mod/rms/handler_req_ls.inc:148
+#: mod/rms/handler_plg_ls.inc:131
+msgid "Records"
+msgstr ""
+
+#: mod/mpr/search.inc:217
+msgid "Last"
+msgstr ""
+
+#: mod/mpr/search.inc:240 mod/mpr/edit.inc:415
 msgid "Person"
 msgstr ""
 
-#: mod/mpr/search.inc:240
+#: mod/mpr/search.inc:242
 msgid "Associated People"
 msgstr ""
 
-#: mod/mpr/search.inc:241
+#: mod/mpr/search.inc:243
 msgid "Missing Details"
 msgstr ""
 
-#: mod/mpr/search.inc:243
+#: mod/mpr/search.inc:245
 msgid "Reported Person"
 msgstr ""
 
-#: mod/mpr/search.inc:244 mod/mpr/search.inc:297 mod/mpr/search.inc:362
-#: mod/mpr/search.inc:384 mod/rms/handler_mng_ff.inc:159
+#: mod/mpr/search.inc:246 mod/mpr/search.inc:299 mod/mpr/search.inc:364
+#: mod/mpr/search.inc:386 mod/rms/handler_mng_ff.inc:159
 #: mod/rms/lib_rms.inc:870
 msgid "Select"
 msgstr ""
 
-#: mod/mpr/search.inc:266 mod/mpr/edit.inc:739 mod/mpr/admin.inc:227
+#: mod/mpr/search.inc:268 mod/mpr/edit.inc:746 mod/mpr/admin.inc:227
 msgid "Add Tracker"
 msgstr ""
 
-#: mod/mpr/search.inc:266
+#: mod/mpr/search.inc:268
 msgid "Associate another person"
 msgstr ""
 
-#: mod/mpr/search.inc:277 mod/mpr/search.inc:381
+#: mod/mpr/search.inc:279 mod/mpr/search.inc:383
 msgid "Change the status to Alive & Well"
 msgstr ""
 
-#: mod/mpr/search.inc:279 mod/mpr/search.inc:381
+#: mod/mpr/search.inc:281 mod/mpr/search.inc:383
 msgid "Click to change to found"
 msgstr ""
 
-#: mod/mpr/search.inc:282 mod/mpr/audit.inc:26
+#: mod/mpr/search.inc:284 mod/mpr/audit.inc:26
 msgid "Audit"
 msgstr ""
 
@@ -6417,42 +6426,43 @@ msgstr ""
 msgid "Invalid image type please try again"
 msgstr ""
 
-#: mod/mpr/edit.inc:494
-msgid "Reporting People"
-msgstr ""
-
-#: mod/mpr/edit.inc:504 mod/mpr/edit.inc:717
-msgid "Relationship"
-msgstr ""
-
-#: mod/mpr/edit.inc:521 mod/admin/mmc_main.inc:140 mod/admin/mmc_main.inc:161
+#: mod/mpr/edit.inc:408 mod/mpr/edit.inc:528 mod/admin/mmc_main.inc:140
+#: mod/admin/mmc_main.inc:161
 msgid "Confirm"
 msgstr ""
 
-#: mod/mpr/edit.inc:523
+#: mod/mpr/edit.inc:410 mod/mpr/edit.inc:530
 msgid "Is the information that you've entered correct?"
 msgstr ""
 
-#: mod/mpr/edit.inc:525 mod/mpr/add.inc:259 mod/mpr/add.inc:275
-#: mod/sync/handler_upload.inc:109 mod/admin/mmc_main.inc:147
-#: mod/admin/mmc_main.inc:167
+#: mod/mpr/edit.inc:412 mod/mpr/edit.inc:532 mod/mpr/add.inc:259
+#: mod/mpr/add.inc:275 mod/sync/handler_upload.inc:109
+#: mod/admin/mmc_main.inc:147 mod/admin/mmc_main.inc:167
 msgid "Yes"
 msgstr ""
 
-#: mod/mpr/edit.inc:526 mod/mpr/add.inc:259 mod/mpr/add.inc:275
-#: mod/sync/handler_upload.inc:109
+#: mod/mpr/edit.inc:413 mod/mpr/edit.inc:533 mod/mpr/add.inc:259
+#: mod/mpr/add.inc:275 mod/sync/handler_upload.inc:109
 msgid "No"
 msgstr ""
 
-#: mod/mpr/edit.inc:710
+#: mod/mpr/edit.inc:501
+msgid "Reporting People"
+msgstr ""
+
+#: mod/mpr/edit.inc:511 mod/mpr/edit.inc:724
+msgid "Relationship"
+msgstr ""
+
+#: mod/mpr/edit.inc:717
 msgid "Current Trackers"
 msgstr ""
 
-#: mod/mpr/edit.inc:732
+#: mod/mpr/edit.inc:739
 msgid "Click to remove the tracker"
 msgstr ""
 
-#: mod/mpr/edit.inc:739
+#: mod/mpr/edit.inc:746
 msgid "Add a tracker"
 msgstr ""
 
@@ -6817,7 +6827,7 @@ msgid "Missing Person Entry"
 msgstr ""
 
 #: mod/mpr/main.inc:381 mod/mpr/main.inc:391 mod/mpr/main.inc:430
-#: mod/mpr/main.inc:439 mod/mpr/add.inc:534
+#: mod/mpr/main.inc:439 mod/mpr/add.inc:538
 msgid "Reporting Person"
 msgstr ""
 
@@ -6847,7 +6857,7 @@ msgstr ""
 msgid "Please enter any of the following details on the person:"
 msgstr ""
 
-#: mod/mpr/add.inc:72 mod/dvr/add_new_indv.inc:87
+#: mod/mpr/add.inc:63 mod/dvr/add_new_indv.inc:87
 msgid ""
 "Family name, or the surname could be specified for matching of people with "
 "similar Family names"
@@ -7006,12 +7016,12 @@ msgstr ""
 msgid "Missing Person"
 msgstr ""
 
-#: mod/mpr/add.inc:537
-msgid "Relation"
+#: mod/mpr/add.inc:454 mod/mpr/add.inc:555
+msgid "Click on the \"Next\" Button to go back to the main screen."
 msgstr ""
 
-#: mod/mpr/add.inc:551
-msgid "Click on the \"Next\" Button to go back to the main screen."
+#: mod/mpr/add.inc:541
+msgid "Relation"
 msgstr ""
 
 #: mod/sync/lib_sync_ajax.inc:33

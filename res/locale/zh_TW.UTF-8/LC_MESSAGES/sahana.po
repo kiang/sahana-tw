@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-29 20:32+0800\n"
-"PO-Revision-Date: 2010-05-03 15:39+0800\n"
+"POT-Creation-Date: 2010-05-03 16:27+0800\n"
+"PO-Revision-Date: 2010-05-03 16:31+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -471,15 +471,16 @@ msgstr "前往下一頁"
 #: mod/gis/main_fns.inc:117
 #: mod/gis/gis_fns.inc:180
 #: mod/mpr/search.inc:82
-#: mod/mpr/search.inc:208
+#: mod/mpr/search.inc:215
 #: mod/mpr/edit.inc:236
 #: mod/mpr/edit.inc:351
-#: mod/mpr/edit.inc:745
+#: mod/mpr/edit.inc:752
 #: mod/mpr/images.inc:26
 #: mod/mpr/add.inc:137
 #: mod/mpr/add.inc:329
 #: mod/mpr/add.inc:395
-#: mod/mpr/add.inc:553
+#: mod/mpr/add.inc:456
+#: mod/mpr/add.inc:557
 #: mod/sync/handler_upload.inc:71
 #: mod/admin/location.inc:58
 #: mod/cr/edit.inc:67
@@ -703,7 +704,7 @@ msgstr "刪除"
 #: mod/or/process_org.inc:41
 #: mod/ims/view_edit_item.inc:65
 #: mod/ims/mini_quantity.inc:249
-#: mod/mpr/search.inc:254
+#: mod/mpr/search.inc:256
 #: mod/cr/edit.inc:172
 #: mod/cr/edit.inc:258
 #: mod/cr/edit.inc:553
@@ -820,11 +821,11 @@ msgstr "更新"
 #: mod/cs/add.inc:427
 #: mod/mpr/search.inc:74
 #: mod/mpr/search.inc:75
-#: mod/mpr/search.inc:360
-#: mod/mpr/edit.inc:503
-#: mod/mpr/edit.inc:716
+#: mod/mpr/search.inc:362
+#: mod/mpr/edit.inc:510
+#: mod/mpr/edit.inc:723
 #: mod/mpr/add.inc:301
-#: mod/mpr/add.inc:536
+#: mod/mpr/add.inc:540
 #: mod/sync/handler_upload.inc:90
 #: mod/admin/ims_level.inc:30
 #: mod/admin/ims_level.inc:61
@@ -903,7 +904,7 @@ msgstr "指派"
 #: tools/tpl_languages.php:39
 #: mod/ims/optimize.inc:495
 #: mod/ims/view_inv.inc:65
-#: mod/mpr/search.inc:242
+#: mod/mpr/search.inc:244
 msgid "Actions"
 msgstr "狀態/動作"
 
@@ -1028,8 +1029,8 @@ msgstr "可進行指派的志工"
 
 #: tools/tpl_languages.php:76
 #: tools/tpl_languages.php:200
-#: mod/mpr/search.inc:359
-#: mod/mpr/edit.inc:502
+#: mod/mpr/search.inc:361
+#: mod/mpr/edit.inc:509
 msgid "Picture"
 msgstr "圖片"
 
@@ -1038,7 +1039,7 @@ msgstr "圖片"
 #: tools/tpl_languages.php:314
 #: mod/ims/search.inc:142
 #: mod/ims/search.inc:215
-#: mod/mpr/search.inc:361
+#: mod/mpr/search.inc:363
 #: mod/mpr/edit.inc:143
 #: mod/mpr/add.inc:51
 #: mod/mpr/add.inc:52
@@ -1628,7 +1629,7 @@ msgid "Go to Previous Page"
 msgstr "到前一頁"
 
 #: tools/tpl_languages.php:241
-#: mod/mpr/search.inc:203
+#: mod/mpr/search.inc:210
 #: mod/rms/handler_req_ls.inc:54
 #: mod/rms/handler_plg_ls.inc:48
 #: inc/lib_paging.inc:117
@@ -1812,8 +1813,8 @@ msgstr "沒有被定義的技能"
 #: tools/tpl_languages.php:365
 #: mod/or/admin_forms.inc:131
 #: mod/or/admin_forms.inc:189
-#: mod/mpr/edit.inc:718
-#: mod/mpr/edit.inc:730
+#: mod/mpr/edit.inc:725
+#: mod/mpr/edit.inc:737
 #: mod/admin/location.inc:141
 #: mod/admin/lc_db.inc:95
 #: mod/admin/lc_add_new_language.inc:36
@@ -1882,7 +1883,7 @@ msgstr "最後總計價值"
 
 #: tools/tpl_languages.php:304
 #: mod/mpr/view.inc:26
-#: mod/mpr/search.inc:239
+#: mod/mpr/search.inc:241
 #: mod/rms/handler_req_ls.inc:94
 #: mod/rms/handler_req_sch.inc:216
 #: mod/rms/handler_plg_ls.inc:95
@@ -2257,11 +2258,11 @@ msgstr "組織領域"
 #: mod/ims/view_inv.inc:59
 #: mod/mpr/view.inc:78
 #: mod/mpr/edit.inc:191
-#: mod/mpr/edit.inc:464
+#: mod/mpr/edit.inc:471
 #: mod/mpr/add.inc:103
 #: mod/mpr/add.inc:321
-#: mod/mpr/add.inc:504
-#: mod/mpr/add.inc:538
+#: mod/mpr/add.inc:508
+#: mod/mpr/add.inc:542
 #: mod/cr/search.inc:43
 #: mod/cr/search.inc:120
 #: mod/cr/edit.inc:42
@@ -2598,7 +2599,7 @@ msgstr "無記錄"
 #: mod/or/view_org.inc:542
 #: mod/mpr/mpr_lib.inc:50
 #: mod/mpr/mpr_lib.inc:71
-#: mod/mpr/search.inc:280
+#: mod/mpr/search.inc:282
 #: mod/dvr/lib.inc:150
 #: mod/dvr/lib.inc:170
 msgid "Assign to more incidents"
@@ -2644,7 +2645,7 @@ msgstr "關閉"
 #: mod/or/view_org.inc:568
 #: mod/or/view_org.inc:578
 #: mod/mpr/view.inc:103
-#: mod/mpr/search.inc:391
+#: mod/mpr/search.inc:393
 #: mod/rms/handler_mng_ff.inc:109
 msgid "Back"
 msgstr "上一步"
@@ -2726,16 +2727,16 @@ msgstr "選擇您的組織所能提供的服務，也就是您的組織可以在
 
 #: mod/or/lib_or.inc:640
 #: mod/mpr/add.inc:322
-#: mod/mpr/add.inc:539
+#: mod/mpr/add.inc:543
 msgid "Phone"
 msgstr "電話"
 
 #: mod/or/lib_or.inc:641
 #: mod/mpr/view.inc:81
 #: mod/mpr/edit.inc:197
-#: mod/mpr/edit.inc:481
+#: mod/mpr/edit.inc:488
 #: mod/mpr/add.inc:106
-#: mod/mpr/add.inc:521
+#: mod/mpr/add.inc:525
 #: mod/dvr/edt_grp.inc:288
 #: mod/dvr/edt_grp.inc:490
 #: mod/dvr/add_new_grp.inc:224
@@ -2759,7 +2760,7 @@ msgstr "傳真"
 #: mod/home/main.inc:52
 #: mod/home/main.inc:182
 #: mod/mpr/add.inc:323
-#: mod/mpr/add.inc:540
+#: mod/mpr/add.inc:544
 #: mod/dvr/edt_grp.inc:294
 #: mod/dvr/edt_grp.inc:492
 #: mod/dvr/add_new_grp.inc:230
@@ -6285,9 +6286,9 @@ msgstr "聯絡人員電話"
 #: mod/gis/main_fns.inc:84
 #: mod/mpr/view.inc:85
 #: mod/mpr/edit.inc:226
-#: mod/mpr/edit.inc:484
+#: mod/mpr/edit.inc:491
 #: mod/mpr/add.inc:131
-#: mod/mpr/add.inc:524
+#: mod/mpr/add.inc:528
 #: mod/dvr/edt_indv.inc:457
 #: mod/dvr/edt_indv.inc:677
 #: mod/dvr/add_new_indv.inc:434
@@ -6582,9 +6583,9 @@ msgstr "備註："
 #: mod/mpr/search.inc:68
 #: mod/mpr/search.inc:69
 #: mod/mpr/edit.inc:171
-#: mod/mpr/edit.inc:420
+#: mod/mpr/edit.inc:427
 #: mod/mpr/add.inc:82
-#: mod/mpr/add.inc:460
+#: mod/mpr/add.inc:464
 #: mod/dvr/search_individual.inc:125
 #: mod/dvr/search_individual.inc:126
 #: mod/dvr/search_group.inc:130
@@ -6599,9 +6600,9 @@ msgstr "身份"
 #: mod/mpr/view.inc:39
 #: mod/mpr/search.inc:44
 #: mod/mpr/edit.inc:172
-#: mod/mpr/edit.inc:423
+#: mod/mpr/edit.inc:430
 #: mod/mpr/add.inc:86
-#: mod/mpr/add.inc:463
+#: mod/mpr/add.inc:467
 #: mod/dvr/edt_indv.inc:180
 #: mod/dvr/edt_indv.inc:420
 #: mod/dvr/add_new_indv.inc:121
@@ -6612,9 +6613,9 @@ msgstr "身份證字號"
 #: mod/mpr/view.inc:40
 #: mod/mpr/search.inc:71
 #: mod/mpr/edit.inc:174
-#: mod/mpr/edit.inc:424
+#: mod/mpr/edit.inc:431
 #: mod/mpr/add.inc:90
-#: mod/mpr/add.inc:464
+#: mod/mpr/add.inc:468
 #: mod/dvr/search_individual.inc:128
 #: mod/dvr/search_group.inc:133
 #: mod/dvr/edt_indv.inc:183
@@ -6627,9 +6628,9 @@ msgstr "護證號碼"
 #: mod/mpr/view.inc:42
 #: mod/mpr/search.inc:72
 #: mod/mpr/edit.inc:176
-#: mod/mpr/edit.inc:425
+#: mod/mpr/edit.inc:432
 #: mod/mpr/add.inc:94
-#: mod/mpr/add.inc:465
+#: mod/mpr/add.inc:469
 #: mod/dvr/search_individual.inc:129
 #: mod/dvr/edt_indv.inc:186
 #: mod/dvr/edt_indv.inc:422
@@ -6641,9 +6642,9 @@ msgstr "駕駛執照"
 #: mod/mpr/view.inc:47
 #: mod/mpr/search.inc:80
 #: mod/mpr/edit.inc:147
-#: mod/mpr/edit.inc:429
+#: mod/mpr/edit.inc:436
 #: mod/mpr/add.inc:59
-#: mod/mpr/add.inc:469
+#: mod/mpr/add.inc:473
 #: mod/dvr/search_individual.inc:137
 #: mod/dvr/edt_indv.inc:141
 #: mod/dvr/add_new_indv.inc:80
@@ -6652,10 +6653,10 @@ msgstr "基本細節"
 
 #: mod/mpr/view.inc:50
 #: mod/mpr/search.inc:76
-#: mod/mpr/edit.inc:151
-#: mod/mpr/edit.inc:432
-#: mod/mpr/add.inc:63
-#: mod/mpr/add.inc:472
+#: mod/mpr/edit.inc:153
+#: mod/mpr/edit.inc:439
+#: mod/mpr/add.inc:64
+#: mod/mpr/add.inc:476
 #: mod/cr/edit.inc:54
 #: mod/cr/edit.inc:147
 #: mod/cr/edit.inc:505
@@ -6682,10 +6683,10 @@ msgstr "名字"
 
 #: mod/mpr/view.inc:51
 #: mod/mpr/search.inc:77
-#: mod/mpr/edit.inc:154
-#: mod/mpr/edit.inc:433
-#: mod/mpr/add.inc:72
-#: mod/mpr/add.inc:473
+#: mod/mpr/edit.inc:151
+#: mod/mpr/edit.inc:440
+#: mod/mpr/add.inc:63
+#: mod/mpr/add.inc:477
 #: mod/dvr/reporting.inc:43
 #: mod/dvr/edt_grp.inc:239
 #: mod/dvr/search_individual.inc:88
@@ -6703,9 +6704,9 @@ msgstr "姓氏"
 #: mod/mpr/view.inc:52
 #: mod/mpr/search.inc:78
 #: mod/mpr/edit.inc:156
-#: mod/mpr/edit.inc:434
+#: mod/mpr/edit.inc:441
 #: mod/mpr/add.inc:73
-#: mod/mpr/add.inc:474
+#: mod/mpr/add.inc:478
 #: mod/dvr/reporting.inc:44
 #: mod/dvr/edt_grp.inc:243
 #: mod/dvr/search_individual.inc:135
@@ -6721,9 +6722,9 @@ msgstr "當地姓名"
 
 #: mod/mpr/view.inc:53
 #: mod/mpr/edit.inc:158
-#: mod/mpr/edit.inc:435
+#: mod/mpr/edit.inc:442
 #: mod/mpr/add.inc:74
-#: mod/mpr/add.inc:475
+#: mod/mpr/add.inc:479
 #: mod/dvr/edt_indv.inc:157
 #: mod/dvr/add_new_indv.inc:97
 msgid "Date of Birth"
@@ -6731,9 +6732,9 @@ msgstr "出生日期"
 
 #: mod/mpr/view.inc:54
 #: mod/mpr/edit.inc:161
-#: mod/mpr/edit.inc:436
+#: mod/mpr/edit.inc:443
 #: mod/mpr/add.inc:76
-#: mod/mpr/add.inc:476
+#: mod/mpr/add.inc:480
 #: mod/dvr/edt_indv.inc:161
 #: mod/dvr/add_new_indv.inc:102
 msgid "Age Group"
@@ -6741,9 +6742,9 @@ msgstr "年齡層"
 
 #: mod/mpr/view.inc:55
 #: mod/mpr/edit.inc:163
-#: mod/mpr/edit.inc:437
+#: mod/mpr/edit.inc:444
 #: mod/mpr/add.inc:77
-#: mod/mpr/add.inc:477
+#: mod/mpr/add.inc:481
 #: mod/dvr/edt_indv.inc:164
 #: mod/dvr/edt_indv.inc:414
 #: mod/dvr/add_new_indv.inc:105
@@ -6753,9 +6754,9 @@ msgstr "性別"
 
 #: mod/mpr/view.inc:56
 #: mod/mpr/edit.inc:165
-#: mod/mpr/edit.inc:438
+#: mod/mpr/edit.inc:445
 #: mod/mpr/add.inc:78
-#: mod/mpr/add.inc:478
+#: mod/mpr/add.inc:482
 #: mod/dvr/edt_indv.inc:167
 #: mod/dvr/edt_indv.inc:415
 #: mod/dvr/add_new_indv.inc:108
@@ -6765,9 +6766,9 @@ msgstr "婚姻狀況"
 
 #: mod/mpr/view.inc:57
 #: mod/mpr/edit.inc:167
-#: mod/mpr/edit.inc:439
+#: mod/mpr/edit.inc:446
 #: mod/mpr/add.inc:79
-#: mod/mpr/add.inc:479
+#: mod/mpr/add.inc:483
 #: mod/dvr/edt_indv.inc:170
 #: mod/dvr/edt_indv.inc:416
 #: mod/dvr/add_new_indv.inc:111
@@ -6777,9 +6778,9 @@ msgstr "宗教"
 
 #: mod/mpr/view.inc:58
 #: mod/mpr/edit.inc:168
-#: mod/mpr/edit.inc:440
+#: mod/mpr/edit.inc:447
 #: mod/mpr/add.inc:80
-#: mod/mpr/add.inc:480
+#: mod/mpr/add.inc:484
 #: mod/dvr/edt_indv.inc:173
 #: mod/dvr/edt_indv.inc:417
 #: mod/dvr/add_new_indv.inc:114
@@ -6789,53 +6790,53 @@ msgstr "種族"
 
 #: mod/mpr/view.inc:63
 #: mod/mpr/edit.inc:212
-#: mod/mpr/edit.inc:444
+#: mod/mpr/edit.inc:451
 #: mod/mpr/add.inc:123
-#: mod/mpr/add.inc:484
+#: mod/mpr/add.inc:488
 #: mod/dvr/edt_indv.inc:651
 #: mod/dvr/add_new_indv.inc:637
 msgid "Physical Details"
 msgstr "身體特徵細節"
 
 #: mod/mpr/view.inc:66
-#: mod/mpr/search.inc:259
+#: mod/mpr/search.inc:261
 #: mod/mpr/edit.inc:213
-#: mod/mpr/edit.inc:447
+#: mod/mpr/edit.inc:454
 #: mod/mpr/add.inc:124
-#: mod/mpr/add.inc:487
+#: mod/mpr/add.inc:491
 #: mod/dvr/edt_indv.inc:654
 #: mod/dvr/add_new_indv.inc:640
 msgid "Eye Colour"
 msgstr "眼睛顏色"
 
 #: mod/mpr/view.inc:67
-#: mod/mpr/search.inc:259
+#: mod/mpr/search.inc:261
 #: mod/mpr/edit.inc:215
-#: mod/mpr/edit.inc:448
+#: mod/mpr/edit.inc:455
 #: mod/mpr/add.inc:125
-#: mod/mpr/add.inc:488
+#: mod/mpr/add.inc:492
 #: mod/dvr/edt_indv.inc:656
 #: mod/dvr/add_new_indv.inc:642
 msgid "Skin Colour"
 msgstr "皮膚顏色"
 
 #: mod/mpr/view.inc:68
-#: mod/mpr/search.inc:259
+#: mod/mpr/search.inc:261
 #: mod/mpr/edit.inc:217
-#: mod/mpr/edit.inc:449
+#: mod/mpr/edit.inc:456
 #: mod/mpr/add.inc:126
-#: mod/mpr/add.inc:489
+#: mod/mpr/add.inc:493
 #: mod/dvr/edt_indv.inc:658
 #: mod/dvr/add_new_indv.inc:644
 msgid "Hair Colour"
 msgstr "頭髮顏色"
 
 #: mod/mpr/view.inc:69
-#: mod/mpr/search.inc:259
+#: mod/mpr/search.inc:261
 #: mod/mpr/edit.inc:219
-#: mod/mpr/edit.inc:450
+#: mod/mpr/edit.inc:457
 #: mod/mpr/add.inc:127
-#: mod/mpr/add.inc:490
+#: mod/mpr/add.inc:494
 #: mod/dvr/edt_indv.inc:453
 #: mod/dvr/edt_indv.inc:661
 #: mod/dvr/add_new_indv.inc:430
@@ -6844,11 +6845,11 @@ msgid "Height"
 msgstr "身高"
 
 #: mod/mpr/view.inc:70
-#: mod/mpr/search.inc:259
+#: mod/mpr/search.inc:261
 #: mod/mpr/edit.inc:221
-#: mod/mpr/edit.inc:451
+#: mod/mpr/edit.inc:458
 #: mod/mpr/add.inc:128
-#: mod/mpr/add.inc:491
+#: mod/mpr/add.inc:495
 #: mod/dvr/edt_indv.inc:454
 #: mod/dvr/edt_indv.inc:668
 #: mod/dvr/add_new_indv.inc:431
@@ -6858,36 +6859,36 @@ msgstr "體重"
 
 #: mod/mpr/view.inc:71
 #: mod/mpr/view.inc:92
-#: mod/mpr/search.inc:271
+#: mod/mpr/search.inc:273
 #: mod/mpr/edit.inc:223
 #: mod/mpr/edit.inc:233
-#: mod/mpr/edit.inc:452
-#: mod/mpr/edit.inc:491
-#: mod/mpr/add.inc:492
-#: mod/mpr/add.inc:531
+#: mod/mpr/edit.inc:459
+#: mod/mpr/edit.inc:498
+#: mod/mpr/add.inc:496
+#: mod/mpr/add.inc:535
 msgid "Comments"
 msgstr "備註"
 
 #: mod/mpr/view.inc:75
 #: mod/mpr/edit.inc:190
-#: mod/mpr/edit.inc:462
-#: mod/mpr/add.inc:502
+#: mod/mpr/edit.inc:469
+#: mod/mpr/add.inc:506
 msgid "Contact Details"
 msgstr "聯絡方式詳細內容"
 
 #: mod/mpr/view.inc:79
 #: mod/mpr/edit.inc:193
-#: mod/mpr/edit.inc:479
+#: mod/mpr/edit.inc:486
 #: mod/mpr/add.inc:104
-#: mod/mpr/add.inc:519
+#: mod/mpr/add.inc:523
 msgid "Postal Code"
 msgstr "郵遞區號"
 
 #: mod/mpr/view.inc:80
 #: mod/mpr/edit.inc:195
-#: mod/mpr/edit.inc:480
+#: mod/mpr/edit.inc:487
 #: mod/mpr/add.inc:105
-#: mod/mpr/add.inc:520
+#: mod/mpr/add.inc:524
 #: mod/dvr/edt_indv.inc:231
 #: mod/dvr/edt_indv.inc:427
 #: mod/dvr/add_new_indv.inc:158
@@ -6897,9 +6898,9 @@ msgstr "住家電話"
 
 #: mod/mpr/view.inc:89
 #: mod/mpr/edit.inc:227
-#: mod/mpr/edit.inc:488
+#: mod/mpr/edit.inc:495
 #: mod/mpr/add.inc:132
-#: mod/mpr/add.inc:528
+#: mod/mpr/add.inc:532
 #: mod/dvr/edt_indv.inc:455
 #: mod/dvr/edt_indv.inc:674
 #: mod/dvr/add_new_indv.inc:432
@@ -6908,18 +6909,18 @@ msgid "Blood Type"
 msgstr "血型"
 
 #: mod/mpr/view.inc:90
-#: mod/mpr/search.inc:271
+#: mod/mpr/search.inc:273
 #: mod/mpr/edit.inc:229
-#: mod/mpr/edit.inc:489
-#: mod/mpr/add.inc:529
+#: mod/mpr/edit.inc:496
+#: mod/mpr/add.inc:533
 msgid "Last Seen"
 msgstr "上一次看見他/她 是在"
 
 #: mod/mpr/view.inc:91
-#: mod/mpr/search.inc:271
+#: mod/mpr/search.inc:273
 #: mod/mpr/edit.inc:231
-#: mod/mpr/edit.inc:490
-#: mod/mpr/add.inc:530
+#: mod/mpr/edit.inc:497
+#: mod/mpr/add.inc:534
 msgid "Last Clothing"
 msgstr "最後的衣著"
 
@@ -6928,10 +6929,10 @@ msgid "People that are tracking"
 msgstr "追蹤者"
 
 #: mod/mpr/view.inc:97
-#: mod/mpr/search.inc:265
-#: mod/mpr/search.inc:291
-#: mod/mpr/search.inc:375
-#: mod/mpr/edit.inc:726
+#: mod/mpr/search.inc:267
+#: mod/mpr/search.inc:293
+#: mod/mpr/search.inc:377
+#: mod/mpr/edit.inc:733
 #: mod/msg/handler_cap_view.inc:65
 #: mod/msg/handler_cap_view.inc:74
 #: mod/msg/handler_cap_view.inc:85
@@ -6977,94 +6978,99 @@ msgstr "所有事故"
 msgid "Identity Card"
 msgstr "身分證"
 
-#: mod/mpr/search.inc:184
-#: mod/mpr/search.inc:194
-msgid "Total"
-msgstr "總計"
-
-#: mod/mpr/search.inc:184
-#: mod/mpr/search.inc:194
-msgid "Records were found"
-msgstr "符合搜尋條件的資料如下"
-
-#: mod/mpr/search.inc:201
-msgid "First"
-msgstr "第一筆"
-
-#: mod/mpr/search.inc:201
-#: mod/mpr/search.inc:203
-#: mod/mpr/search.inc:208
-#: mod/mpr/search.inc:210
-#: mod/rms/handler_req_ls.inc:148
-#: mod/rms/handler_plg_ls.inc:131
-msgid "Records"
-msgstr "記錄"
-
-#: mod/mpr/search.inc:210
-msgid "Last"
-msgstr "最後一筆"
-
-#: mod/mpr/search.inc:213
+#: mod/mpr/search.inc:159
 #: mod/mpr/home.inc:55
 #: mod/mpr/main.inc:57
 #: mod/mpr/main.inc:458
 msgid "Report a Missing Person"
 msgstr "通報失蹤者"
 
-#: mod/mpr/search.inc:215
+#: mod/mpr/search.inc:161
 #: mod/mpr/home.inc:57
 #: mod/mpr/main.inc:59
 #: mod/mpr/main.inc:461
 msgid "Report a Found Person"
 msgstr "通報尋獲者"
 
-#: mod/mpr/search.inc:238
-#: mod/mpr/edit.inc:408
+#: mod/mpr/search.inc:164
+#, php-format
+msgid "If you found the person you would like to report is existed in the system. Please click the name of the person in the list above, and set yourself as tracker for him. Or click %s"
+msgstr "如果您欲通報的失蹤者已經在本系統中，請點選姓名編輯該失蹤者資料，並且將你自己設為追蹤者。如果以下結果沒有您欲通報的失蹤者，請直接進入 %s"
+
+#: mod/mpr/search.inc:191
+#: mod/mpr/search.inc:201
+msgid "Total"
+msgstr "總計"
+
+#: mod/mpr/search.inc:191
+#: mod/mpr/search.inc:201
+msgid "Records were found"
+msgstr "符合搜尋條件的資料如下"
+
+#: mod/mpr/search.inc:208
+msgid "First"
+msgstr "第一筆"
+
+#: mod/mpr/search.inc:208
+#: mod/mpr/search.inc:210
+#: mod/mpr/search.inc:215
+#: mod/mpr/search.inc:217
+#: mod/rms/handler_req_ls.inc:148
+#: mod/rms/handler_plg_ls.inc:131
+msgid "Records"
+msgstr "記錄"
+
+#: mod/mpr/search.inc:217
+msgid "Last"
+msgstr "最後一筆"
+
+#: mod/mpr/search.inc:240
+#: mod/mpr/edit.inc:415
 msgid "Person"
 msgstr "失蹤/受災者"
 
-#: mod/mpr/search.inc:240
+#: mod/mpr/search.inc:242
 msgid "Associated People"
 msgstr "目前追蹤者"
 
-#: mod/mpr/search.inc:241
+#: mod/mpr/search.inc:243
 msgid "Missing Details"
 msgstr "失蹤時的外觀與其他相關特徵"
 
-#: mod/mpr/search.inc:243
+#: mod/mpr/search.inc:245
 msgid "Reported Person"
 msgstr "報告者"
 
-#: mod/mpr/search.inc:244
-#: mod/mpr/search.inc:297
-#: mod/mpr/search.inc:362
-#: mod/mpr/search.inc:384
+#: mod/mpr/search.inc:246
+#: mod/mpr/search.inc:299
+#: mod/mpr/search.inc:364
+#: mod/mpr/search.inc:386
 #: mod/rms/handler_mng_ff.inc:159
 #: mod/rms/lib_rms.inc:870
 msgid "Select"
 msgstr "選取"
 
-#: mod/mpr/search.inc:266
-#: mod/mpr/edit.inc:739
+#: mod/mpr/search.inc:268
+#: mod/mpr/edit.inc:746
 #: mod/mpr/admin.inc:227
 msgid "Add Tracker"
 msgstr "加入追蹤"
 
-#: mod/mpr/search.inc:266
+#: mod/mpr/search.inc:268
 msgid "Associate another person"
 msgstr " 建立其他追蹤者"
 
-#: mod/mpr/search.inc:277
-#: mod/mpr/search.inc:381
+#: mod/mpr/search.inc:279
+#: mod/mpr/search.inc:383
 msgid "Change the status to Alive & Well"
 msgstr "變更狀態為倖存"
 
-#: mod/mpr/search.inc:279
-#: mod/mpr/search.inc:381
+#: mod/mpr/search.inc:281
+#: mod/mpr/search.inc:383
 msgid "Click to change to found"
 msgstr "★點選此處，變更此人為「倖存（且無受傷）」"
 
-#: mod/mpr/search.inc:282
+#: mod/mpr/search.inc:284
 #: mod/mpr/audit.inc:26
 msgid "Audit"
 msgstr "稽核"
@@ -7131,26 +7137,20 @@ msgstr "無效的圖片類型。請再試一次。"
 msgid "Invalid image type please try again"
 msgstr "無效的圖片類型，請再試一次。"
 
-#: mod/mpr/edit.inc:494
-msgid "Reporting People"
-msgstr "通報/追蹤者"
-
-#: mod/mpr/edit.inc:504
-#: mod/mpr/edit.inc:717
-msgid "Relationship"
-msgstr "關聯性"
-
-#: mod/mpr/edit.inc:521
+#: mod/mpr/edit.inc:408
+#: mod/mpr/edit.inc:528
 #: mod/admin/mmc_main.inc:140
 #: mod/admin/mmc_main.inc:161
 msgid "Confirm"
 msgstr "確認"
 
-#: mod/mpr/edit.inc:523
+#: mod/mpr/edit.inc:410
+#: mod/mpr/edit.inc:530
 msgid "Is the information that you've entered correct?"
 msgstr "請確認本頁資料是否正確"
 
-#: mod/mpr/edit.inc:525
+#: mod/mpr/edit.inc:412
+#: mod/mpr/edit.inc:532
 #: mod/mpr/add.inc:259
 #: mod/mpr/add.inc:275
 #: mod/sync/handler_upload.inc:109
@@ -7159,22 +7159,32 @@ msgstr "請確認本頁資料是否正確"
 msgid "Yes"
 msgstr "是"
 
-#: mod/mpr/edit.inc:526
+#: mod/mpr/edit.inc:413
+#: mod/mpr/edit.inc:533
 #: mod/mpr/add.inc:259
 #: mod/mpr/add.inc:275
 #: mod/sync/handler_upload.inc:109
 msgid "No"
 msgstr "否"
 
-#: mod/mpr/edit.inc:710
+#: mod/mpr/edit.inc:501
+msgid "Reporting People"
+msgstr "通報/追蹤者"
+
+#: mod/mpr/edit.inc:511
+#: mod/mpr/edit.inc:724
+msgid "Relationship"
+msgstr "關聯性"
+
+#: mod/mpr/edit.inc:717
 msgid "Current Trackers"
 msgstr "目前追蹤者"
 
-#: mod/mpr/edit.inc:732
+#: mod/mpr/edit.inc:739
 msgid "Click to remove the tracker"
 msgstr "點選此，移除本追蹤者"
 
-#: mod/mpr/edit.inc:739
+#: mod/mpr/edit.inc:746
 msgid "Add a tracker"
 msgstr "新增追蹤者"
 
@@ -7565,7 +7575,7 @@ msgstr "通報失蹤者"
 #: mod/mpr/main.inc:391
 #: mod/mpr/main.inc:430
 #: mod/mpr/main.inc:439
-#: mod/mpr/add.inc:534
+#: mod/mpr/add.inc:538
 msgid "Reporting Person"
 msgstr "通報者"
 
@@ -7595,7 +7605,7 @@ msgstr "請先進行搜尋，以確認您所要找的人是否已經存在本系
 msgid "Please enter any of the following details on the person:"
 msgstr "請輸入該失蹤者的詳細資訊："
 
-#: mod/mpr/add.inc:72
+#: mod/mpr/add.inc:63
 #: mod/dvr/add_new_indv.inc:87
 msgid "Family name, or the surname could be specified for matching of people with similar Family names"
 msgstr "請填入此失蹤者姓氏"
@@ -7738,13 +7748,14 @@ msgstr "如果您有失蹤者的照片，請上傳照片。這樣將有助於找
 msgid "Missing Person"
 msgstr "失蹤者"
 
-#: mod/mpr/add.inc:537
-msgid "Relation"
-msgstr "關聯"
-
-#: mod/mpr/add.inc:551
+#: mod/mpr/add.inc:454
+#: mod/mpr/add.inc:555
 msgid "Click on the \"Next\" Button to go back to the main screen."
 msgstr "點選『下一步』的按鈕，可以回到主畫面。"
+
+#: mod/mpr/add.inc:541
+msgid "Relation"
+msgstr "關聯"
 
 #: mod/sync/lib_sync_ajax.inc:33
 msgid "Combining Data....."

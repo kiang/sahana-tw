@@ -156,6 +156,13 @@ function shn_mpr_search_result_vw($subquery = "SELECT p_uuid FROM person_uuid", 
 </DIV>
 <?php
         shn_mpr_search_nav();
+        $reportLink = '<a href="index.php?mod=' . $global['module'] . '&act=addmp&type=missing">' . _("Report a Missing Person") . '</a>';
+        if($_SESSION['mpr']['search']['type'] == 'found') {
+            $reportLink = '<a href="index.php?mod=' . $global['module'] . '&act=addmp&type=found">' . _("Report a Found Person") . '</a>';
+        }
+
+        echo sprintf(_('If you found the person you would like to report is existed in the system. Please click the name of the person in the list above, and set yourself as tracker for him. Or click %s'),
+                $reportLink);
     }
 }
 /* }}} */
@@ -208,11 +215,6 @@ function shn_mpr_search_nav() {
         echo '<li><a href="index.php?mod=' . $global['module'] . '&act=' . $_GET['act'] . '&seq=' . $_REQUEST['seq'] . '&offset=' . ($offset + $limit) . '">' . _('Next') . ' ' . ($delta < $limit ? $delta : $limit) . ' ' . _('Records') . ' &gt;&gt; </a></li>';
         //Right at Last
         echo '<li><a href="index.php?mod=' . $global['module'] . '&act=' . $_GET['act'] . '&seq=' . $_REQUEST['seq'] . '&offset=' . ($total - $limit) . '">' . _('Last') . '  ' . $limit . ' ' . _('Records') . ' &gt;&gt;|</a></li>';
-    }
-    if($_SESSION['mpr']['search']['type'] == 'missing') {
-        echo '<li><a href="index.php?mod=' . $global['module'] . '&act=addmp&type=missing">' . _("Report a Missing Person") . '</a></li>';
-    } elseif($_SESSION['mpr']['search']['type'] == 'found') {
-        echo '<li><a href="index.php?mod=' . $global['module'] . '&act=addmp&type=found">' . _("Report a Found Person") . '</a></li>';
     }
 ?>
 </ul>

@@ -488,12 +488,15 @@ function shn_mpr_search() {
                     #$search_sql->isvictim = true;
                     if (!empty($_REQUEST['all_incidents']))
                         $search_sql->incident_list = "'" . implode(shn_db_get_all_incidents($_SESSION['user_pref_ims_incident_id']), "','") . "'";
+                    /*
                     if ($_SESSION['mpr']['search']['type'] == 'missing') {
                         $search_sql->missing_only = true;
                         $search_sql->isvictim = true;
                     } elseif($_SESSION['mpr']['search']['type'] == 'found') {
                         $search_sql->found_only = true;
                     }
+                     * 
+                     */
                     #debug($search_sql->get_sql());
                     $arr = shn_mpr_search_result_vw($search_sql->get_sql());
                 }
