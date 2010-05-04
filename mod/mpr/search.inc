@@ -156,13 +156,6 @@ function shn_mpr_search_result_vw($subquery = "SELECT p_uuid FROM person_uuid", 
 </DIV>
 <?php
         shn_mpr_search_nav();
-        $reportLink = '<a href="index.php?mod=' . $global['module'] . '&act=addmp&type=missing">' . _("Report a Missing Person") . '</a>';
-        if($_SESSION['mpr']['search']['type'] == 'found') {
-            $reportLink = '<a href="index.php?mod=' . $global['module'] . '&act=addmp&type=found">' . _("Report a Found Person") . '</a>';
-        }
-
-        echo sprintf(_('If you found the person you would like to report is existed in the system. Please click the name of the person in the list above, and set yourself as tracker for him. Or click %s'),
-                $reportLink);
     }
 }
 /* }}} */
@@ -198,6 +191,10 @@ function shn_mpr_search_nav() {
     $offset = isset($_GET['offset']) ? $_GET['offset'] : 0;
     $total = $_SESSION['mpr']['search']['record_count'];
     $delta = $total - $offset - $limit;
+    $reportLink = '<a href="index.php?mod=' . $global['module'] . '&act=addmp&type=missing">' . _("Report a Missing Person") . '</a>';
+    if ($_SESSION['mpr']['search']['type'] == 'found') {
+        $reportLink = '<a href="index.php?mod=' . $global['module'] . '&act=addmp&type=found">' . _("Report a Found Person") . '</a>';
+    }
     echo '<br /><strong>' . _('Total') . ' ' . $total . ' ' . _('Records were found') . '</strong><br />';
 ?>  
 <ul class="paging">
@@ -219,6 +216,8 @@ function shn_mpr_search_nav() {
 ?>
 </ul>
 <?php
+    echo sprintf(_('If you found the person you would like to report is existed in the system. Please click the name of the person in the list above, and set yourself as tracker for him. Or click %s'),
+            $reportLink);
 }
 /* }}} */
 /* {{{ Display Results  (OLD) */
