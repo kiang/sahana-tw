@@ -71,14 +71,14 @@ shn_form_fopen('default&vm_action=process_add', null, array('enctype' => 'enctyp
 		foreach($contact_types as $code => $name)
 		{
 			if (in_array($code, $prefered_medium)) {
-    			$contact_medium[$code] = _($name);
+    			$contact_medium[$code] = $name;
 			}
 		}
 		shn_form_radio($contact_medium, _('Prefered medium confirmation :'), 'prefered_confirm_medium',null, array('req'=>true));
 
 		foreach($contact_types as $code => $name)
 		{
-			shn_form_text(_($name).' :', 'contact_'.$code, '', array('value' => $info['contact'][$code]));
+			shn_form_text($name.' :', 'contact_'.$code, '', array('value' => $info['contact'][$code]));
 		}
 	shn_form_fsclose();
 

@@ -161,7 +161,7 @@ class DAO {
         $info['skills'] = array();
         $result = $this->execute("SELECT opt_skill_code, option_description FROM vm_vol_skills JOIN field_options ON (opt_skill_code = option_code AND field_name = 'opt_skill_type') WHERE p_uuid = '$id'");
         while (is_object($result) && !$result->EOF) {
-            $info['skills'][$result->fields['opt_skill_code']] = $result->fields['option_description'];
+            $info['skills'][$result->fields['opt_skill_code']] = _($result->fields['option_description']);
             $result->moveNext();
         }
         return $info;
@@ -181,7 +181,7 @@ class DAO {
         $result = $this->execute("select option_code, option_description from field_options where field_name = 'opt_id_type'");
         $id_types = array();
         while (is_object($result) && !$result->EOF) {
-            $id_types[$result->fields['option_code']] = $result->fields['option_description'];
+            $id_types[$result->fields['option_code']] = _($result->fields['option_description']);
             $result->moveNext();
         }
         return $id_types;
@@ -256,7 +256,7 @@ class DAO {
         $result = $this->execute("select option_code, option_description from field_options where field_name = 'opt_contact_type'");
         $contact_types = array();
         while (is_object($result) && !$result->EOF) {
-            $contact_types[$result->fields['option_code']] = $result->fields['option_description'];
+            $contact_types[$result->fields['option_code']] = _($result->fields['option_description']);
             $result->moveNext();
         }
         return $contact_types;
@@ -883,7 +883,7 @@ class DAO {
         $tree->setRoot(new Node(_('Skills and Work Restrictions')));
         // now store the skills in a Tree structure
         while (is_object($result) && !$result->EOF) {
-            $split = preg_split('/' . VM_SKILLS_DELIMETER . '/', $result->fields['option_description']);
+            $split = preg_split('/' . VM_SKILLS_DELIMETER . '/', _($result->fields['option_description']));
             $cur_parent = $tree->root;
             foreach($split as $index => $name) {
                 $name = trim($name);
@@ -1044,7 +1044,7 @@ class DAO {
     function updateAbilityStatus($p_uuid, $ability, $approved) {
         //get the name of the ability for later use in messaging
         $result = $this->execute("SELECT option_description FROM field_options WHERE option_code = '$ability'");
-        $ability_name = $result->fields['option_description'];
+        $ability_name = _($result->fields['option_description']);
         //check to see if we're modifying an existing ability or adding a new ability
         $result = $this->execute("SELECT 1 FROM vm_vol_skills WHERE p_uuid = '$p_uuid' AND opt_skill_code = '$ability'");
         if (!$result->EOF) {
@@ -1633,7 +1633,7 @@ class DAO {
         $result = $this->execute("select opt_skill_code, option_description from vm_vol_skills, field_options where p_uuid = '{$id}' AND opt_skill_code = option_code order by option_description asc");
         $options = array();
         while (!$result == NULL && !$result->EOF) {
-            $options[$result->fields['opt_skill_code']] = $result->fields['option_description'];
+            $options[$result->fields['opt_skill_code']] = _($result->fields['option_description']);
             $result->MoveNext();
         }
         return $options;
