@@ -53,7 +53,7 @@ define('VM_IMAGE_THUMB_HEIGHT', 120);
 define('VM_IMAGE_BIG_WIDTH', 320);
 define('VM_IMAGE_BIG_HEIGHT', 240);
 //the delimeter used for separating skills categories and descriptions, can be regular expression describing more than one delimeter
-define('VM_SKILLS_DELIMETER', '(\-|－|一)');
+define('VM_SKILLS_DELIMETER', '(\-|－|\/)');
 //the maximum acceptable levenshtein distance to use when sorting search results
 define('VM_MAX_LEVENSHTEIN', 255);
 //default number of rows per page for paging display

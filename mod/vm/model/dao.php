@@ -822,7 +822,7 @@ class DAO {
         $tree = new Tree("?mod=vm&amp;stream=text&amp;act=display_js&amp;js=");
         $tree->setRoot(new Node(_('Skills and Work Restrictions')));
         while (is_object($result) && !$result->EOF) {
-            $split = preg_split('/' . VM_SKILLS_DELIMETER . '/', $result->fields['option_description']);
+            $split = preg_split('/' . VM_SKILLS_DELIMETER . '/', _($result->fields['option_description']));
             $cur_parent = $tree->root;
             foreach($split as $index => $name) {
                 $name = trim($name);
@@ -923,7 +923,7 @@ class DAO {
         if (!$result->EOF) {
             $skills = array();
             while (is_object($result) && !$result->EOF) {
-                $skills[$result->fields['code']] = $result->fields['skill'];
+                $skills[$result->fields['code']] = _($result->fields['skill']);
                 $result->moveNext();
             }
             return $skills;
