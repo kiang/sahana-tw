@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-05-03 16:27+0800\n"
-"PO-Revision-Date: 2010-05-03 16:39+0800\n"
+"PO-Revision-Date: 2010-05-06 09:01+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -71,11 +71,11 @@ msgstr "出生日期在未來"
 
 #: mod/vm/lib/Constants.php:80
 msgid "Invalid start hours format"
-msgstr "無效的起始小時格式"
+msgstr "無效的起始時間格式"
 
 #: mod/vm/lib/Constants.php:81
 msgid "Invalid end hours format"
-msgstr "無效的結束小時格式"
+msgstr "無效的結束時間格式"
 
 #: mod/vm/lib/Constants.php:82
 msgid "Please select at least one skill"
@@ -111,7 +111,7 @@ msgstr "系統裡已經有同樣名稱的帳號"
 
 #: mod/vm/lib/Constants.php:90
 msgid "Please select at least one volunteer to send the message to"
-msgstr "請選擇將訊息至少傳給一個志願者"
+msgstr "請選擇將訊息至少傳給一個志工"
 
 #: mod/vm/lib/Constants.php:91
 msgid "Please type a message"
@@ -123,11 +123,11 @@ msgstr "請輸入至少一個搜尋欄位"
 
 #: mod/vm/lib/Constants.php:93
 msgid "Please enter an ID at least 4 characters long if no other fields are specified"
-msgstr "如果沒有指定其他欄位的話，ID 長度至少含4個字元"
+msgstr "如果沒有指定其他欄位的話，帳號長度至少含4個字元"
 
 #: mod/vm/lib/Constants.php:94
 msgid "Please specify both a start and an end date."
-msgstr "請指定開始與結束日期。"
+msgstr "請指定開始與結束日期"
 
 #: mod/vm/lib/Constants.php:95
 msgid "Please select a project"
@@ -139,7 +139,7 @@ msgstr "請指定一個專案管理者"
 
 #: mod/vm/lib/Constants.php:97
 msgid "If you specify an end date for availability, please specify a start date as well"
-msgstr "如果你指定了結束日期，請也要填寫開始日期。"
+msgstr "如果你指定了結束日期，請也要填寫開始日期"
 
 #: mod/vm/lib/Constants.php:98
 msgid "If you specify searching for an entire available date range, please specify both a start and end date"
@@ -175,7 +175,7 @@ msgstr "請填寫正確的電子郵件位址"
 
 #: mod/vm/lib/Constants.php:106
 msgid "Invalid image file."
-msgstr "無效的圖片檔案。"
+msgstr "無效的圖片檔案"
 
 #: mod/vm/lib/Constants.php:107
 msgid "Contact home address character length should be lower than 100"
@@ -219,7 +219,7 @@ msgstr "林落人緊急聯絡資訊需少於20個字"
 
 #: mod/vm/whiz/Whiz.php:32
 msgid "Template error: could not create template cache directory."
-msgstr "版型錯誤：無法建立版型快取目錄。"
+msgstr "版型錯誤：無法建立版型快取目錄"
 
 #: mod/vm/whiz/Whiz.php:42
 msgid "Template error: No such template file:"
@@ -283,11 +283,11 @@ msgstr "您已被分派到"
 
 #: mod/vm/controller/VolunteerController.php:112
 msgid "The image file is invalid, or is not of a supported type."
-msgstr "圖檔不正確，或是不被支援的格式。"
+msgstr "圖檔不正確，或是不被支援的格式"
 
 #: mod/vm/controller/VolunteerController.php:114
 msgid "Changes saved."
-msgstr "已儲存改變。"
+msgstr "已儲存改變"
 
 #: mod/vm/controller/VolunteerController.php:154
 msgid "Your Password has been updated"
@@ -307,7 +307,7 @@ msgstr ""
 
 #: mod/vm/controller/VolunteerController.php:329
 msgid "The specified skill code already exists. Please choose another"
-msgstr "技能編碼已經存在，請另選一個。"
+msgstr "技能編碼已經存在，請另選一個"
 
 #: mod/vm/controller/VolunteerController.php:354
 #: mod/vm/controller/VolunteerController.php:360
@@ -369,7 +369,7 @@ msgstr "名稱："
 #: tools/tpl_languages.php:208
 #: tools/tpl_languages.php:226
 msgid "Loose Name Matching"
-msgstr "寬鬆的名稱查詢"
+msgstr "模糊名稱查詢"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:15
 msgid "(May return many unrelated results)"
@@ -1004,7 +1004,7 @@ msgstr "日期"
 #: tools/tpl_languages.php:65
 #: tools/tpl_languages.php:67
 msgid "Time:"
-msgstr "間"
+msgstr "時間"
 
 #: tools/tpl_languages.php:68
 msgid "now"
@@ -1145,19 +1145,19 @@ msgstr "指定本位志工"
 
 #: tools/tpl_languages.php:94
 msgid "To assign another volunteer, you must perform another search because no other volunteers match the current search criteria"
-msgstr "如果要指派其他志工，請再次查詢。"
+msgstr "如果要指派其他志工，請再次查詢"
 
 #: tools/tpl_languages.php:95
 msgid "No volunteers were found. Please refine your criteria and try again"
-msgstr "沒有符合條件的志工，請調整您的查詢條件並再次查詢。"
+msgstr "沒有符合條件的志工，請調整您的查詢條件並再次查詢"
 
 #: tools/tpl_languages.php:96
 msgid "Alternatively, you can try the"
-msgstr "其他選擇如下，請再次嘗試。"
+msgstr "其他選擇如下，請再次嘗試"
 
 #: tools/tpl_languages.php:97
 msgid "specifying 'Loose Name Matching'"
-msgstr "模糊名稱查詢"
+msgstr "確定的模糊名稱查詢"
 
 #: tools/tpl_languages.php:101
 #: mod/or/lib_or.inc:562
@@ -1200,7 +1200,7 @@ msgstr "職業："
 
 #: tools/tpl_languages.php:111
 msgid "Affiliation:"
-msgstr "會籍："
+msgstr "所屬單位"
 
 #: tools/tpl_languages.php:113
 #: tools/tpl_languages.php:253
@@ -1472,11 +1472,11 @@ msgstr "身份證件號碼"
 
 #: tools/tpl_languages.php:179
 msgid "Create a Sahana account"
-msgstr "建立一個sahana帳號"
+msgstr "建立一個sahanaTW帳號"
 
 #: tools/tpl_languages.php:180
 msgid "Remember this information, because you will use it to log into Sahana."
-msgstr "請記住以下資訊，未來您將會以此資訊登入Sahana系統"
+msgstr "請記住以下資訊，未來您將會以此資訊登入SahanaTW系統"
 
 #: tools/tpl_languages.php:181
 #, fuzzy
@@ -1545,7 +1545,7 @@ msgstr "聯絡資訊"
 
 #: tools/tpl_languages.php:201
 msgid "Optionally, you may upload a picture to identify yourself."
-msgstr "您可以上傳一張能代表自己的照片。"
+msgstr "您可以上傳一張能代表自己的照片"
 
 #: tools/tpl_languages.php:202
 #, fuzzy
@@ -1582,11 +1582,11 @@ msgstr "進階搜尋"
 
 #: tools/tpl_languages.php:218
 msgid "Search results are returned only if they match ALL selected fields."
-msgstr "只有全部條件都符合的結果才會被顯示出來。"
+msgstr "只有全部條件都符合的結果才會被顯示出來"
 
 #: tools/tpl_languages.php:220
 msgid "Filter volunteer results by any one of the following fields:"
-msgstr "請以下列任一欄位過濾志工查詢結果。"
+msgstr "請以下列任一欄位過濾志工查詢結果"
 
 #: tools/tpl_languages.php:224
 #, fuzzy
@@ -1600,7 +1600,7 @@ msgstr "選項"
 
 #: tools/tpl_languages.php:227
 msgid "Find similar sounding names"
-msgstr "尋找任何發音相似的名字。"
+msgstr "尋找任何發音相似的名字"
 
 #: tools/tpl_languages.php:228
 msgid "Show only unassigned"
@@ -1710,7 +1710,7 @@ msgstr "建立專案或組織報告"
 
 #: tools/tpl_languages.php:266
 msgid "Report by Specific Volunteers"
-msgstr "回報已尋獲者"
+msgstr "由特定志工回報"
 
 #: tools/tpl_languages.php:267
 msgid "To add a volunteer to the list, select one in the 'List of Volunteers' below and click on 'Add'."
@@ -1827,7 +1827,7 @@ msgstr "刪除"
 
 #: tools/tpl_languages.php:288
 msgid "In order to begin, please log in using the Sahana account you just created."
-msgstr "請以Sahana帳戶資料登入，以便開始。"
+msgstr "請以SahanaTW帳戶資料登入，以便開始。"
 
 #: tools/tpl_languages.php:289
 #: tools/tpl_languages.php:290
@@ -1863,7 +1863,7 @@ msgstr "組織"
 
 #: tools/tpl_languages.php:297
 msgid "All Volunteers that Ever Worked on any Projects"
-msgstr "所有服務過任一專案的志工。"
+msgstr "所有服務過任一專案的志工"
 
 #: tools/tpl_languages.php:301
 msgid "Total Positions Held"
@@ -2181,7 +2181,7 @@ msgstr "新登錄的組織"
 
 #: mod/or/lib_or_rss.inc:21
 msgid "This List contains the newly registered organizations to the organization module of the Sahana System."
-msgstr "此列表包含了所有新註冊的組織。"
+msgstr "此列表包含了所有新註冊的組織"
 
 #: mod/or/lib_or_rss.inc:39
 msgid "This is a "
@@ -6953,7 +6953,7 @@ msgstr "搜尋"
 
 #: mod/mpr/search.inc:43
 msgid "Please try to lookup the people with the the fields below"
-msgstr "請以搜尋方式找出您欲編輯的失蹤/受難者資料"
+msgstr "請以搜尋方式確認您欲尋找/通報的人是否已在資料庫內"
 
 #: mod/mpr/search.inc:45
 #: mod/dvr/search_individual.inc:47
@@ -6990,7 +6990,7 @@ msgstr "通報失蹤者"
 #: mod/mpr/main.inc:59
 #: mod/mpr/main.inc:461
 msgid "Report a Found Person"
-msgstr "通報尋獲者"
+msgstr "通報倖存者"
 
 #: mod/mpr/search.inc:164
 #, php-format
@@ -7005,7 +7005,7 @@ msgstr "總計"
 #: mod/mpr/search.inc:191
 #: mod/mpr/search.inc:201
 msgid "Records were found"
-msgstr "符合搜尋條件的資料如下"
+msgstr "筆符合搜尋條件的資料"
 
 #: mod/mpr/search.inc:208
 msgid "First"
@@ -7125,7 +7125,7 @@ msgstr "請輸入失蹤者的全名"
 #: mod/mpr/add.inc:188
 #, php-format
 msgid "The Identification Number you entered is existed. Click %s to check it or correct the data you entered."
-msgstr ""
+msgstr "這個身份證字號已經登入在本系統內，請點選 %s確認其資料是否正確，或是重新確認您欲輸入的資料。"
 
 #: mod/mpr/edit.inc:299
 msgid "Invalid image type.Please try again!"
@@ -7262,9 +7262,8 @@ msgid "This is the list of found people"
 msgstr "以下是尋獲人員清單"
 
 #: mod/mpr/list_injured.inc:19
-#, fuzzy
 msgid "Injured People"
-msgstr "業務員"
+msgstr "受傷者名單"
 
 #: mod/mpr/admin.inc:33
 #: mod/mpr/admin.inc:175
@@ -7420,7 +7419,7 @@ msgid ""
 "of people finding each other. For example if two members of the a family unit is\n"
 "looking for the head of the family, we can use this data at least to connect those two\n"
 "family members."
-msgstr "失蹤者登錄為針對失蹤者與尋獲者的線上佈告欄。這個布告欄可以清楚收集並整理關於失蹤者與倖存者的資訊，以及正在尋找他們的親人或朋友資訊，這樣能夠增加彼此互相找到的機會。"
+msgstr "失蹤者登錄為針對失蹤者與倖存者的線上佈告欄。這個布告欄可以清楚收集並整理關於失蹤者與倖存者的資訊，以及正在尋找他們的親人或朋友資訊，這樣能夠增加彼此互相找到的機會。"
 
 #: mod/mpr/home.inc:46
 msgid "Submitting information about the individual such as identification numbers, physical appearance, last seen location, status, etc"
@@ -7472,31 +7471,27 @@ msgstr "列出目前資料庫中所有既存的失蹤人口"
 
 #: mod/mpr/home.inc:59
 msgid "List found people"
-msgstr "尋獲者清單"
+msgstr "倖存者清單"
 
 #: mod/mpr/home.inc:59
 msgid "Lias all the information of found displaced people"
 msgstr "列出目前資料庫中所有已尋獲人口的資料"
 
 #: mod/mpr/home.inc:60
-#, fuzzy
 msgid "List injured people"
-msgstr "定義業務員"
+msgstr "受傷者名單"
 
 #: mod/mpr/home.inc:60
-#, fuzzy
 msgid "Lias all the information of found injured people"
-msgstr "列出目前資料庫中所有已尋獲人口的資料"
+msgstr "列出目前資料庫中所有受傷人員的資料"
 
 #: mod/mpr/home.inc:61
-#, fuzzy
 msgid "List deceased people"
-msgstr "定義業務員"
+msgstr "身故者名單"
 
 #: mod/mpr/home.inc:61
-#, fuzzy
 msgid "Lias all the information of found deceased people"
-msgstr "列出目前資料庫中所有已尋獲人口的資料"
+msgstr "列出目前資料庫中所有已確認身故者的資料"
 
 #: mod/mpr/home.inc:75
 msgid "Latest updates on Found People"
@@ -7523,14 +7518,12 @@ msgid "List Found People"
 msgstr "倖存者名單"
 
 #: mod/mpr/main.inc:64
-#, fuzzy
 msgid "List Injured People"
-msgstr "定義業務員"
+msgstr "受傷者名單"
 
 #: mod/mpr/main.inc:65
-#, fuzzy
 msgid "List Deceased People"
-msgstr "定義業務員"
+msgstr "身故者名單"
 
 #: mod/mpr/main.inc:167
 #: mod/mpr/main.inc:173
@@ -14228,15 +14221,15 @@ msgstr "緊急聯絡電話"
 
 #: field_options/option_description,
 msgid "General Skills-Animals-Animal Control Vehicles"
-msgstr "一般技巧/動物/駕駛動物機械"
+msgstr "一般性技術/動物/駕駛動物機械"
 
 #: field_options/option_description,
 msgid "General Skills-Animals-Animal Handling"
-msgstr "一般技巧/動物/處理動物"
+msgstr "一般性技術/動物/處理動物"
 
 #: field_options/option_description,
 msgid "General Skills-Animals-Grief Counseling"
-msgstr "一般技巧/動物/悲傷輔導"
+msgstr "一般性技術/動物/悲傷輔導"
 
 #: field_options/option_description,
 msgid "General Skills-Animals-Horse Trailers"
@@ -14372,7 +14365,7 @@ msgstr "一般性技術-危險性材料-瓦斯"
 
 #: field_options/option_description,
 msgid "General Skills-Hazardous Materials-Identification"
-msgstr "一般性技術-危險性材料-易爆物"
+msgstr "一般性技術-危險性材料-Identification"
 
 #: field_options/option_description,
 msgid "General Skills-Hazardous Materials-Other"
@@ -14404,7 +14397,7 @@ msgstr "一般性技術- 資訊服務-其他"
 
 #: field_options/option_description,
 msgid "General Skills-Information Services-Software (Comp"
-msgstr ""
+msgstr "一般性技術-資訊服務-軟體"
 
 #: field_options/option_description,
 msgid "General Skills-Information Services-Telephone Repa"
@@ -14552,12 +14545,11 @@ msgstr "資源-交通工具-擁有九人坐轎卡車"
 
 #: field_options/option_description,
 msgid "Resources-Vehicle-Own Boat(s)"
-msgstr "資源-交通工具-擁有船"
+msgstr "資源-交通工具-擁有船隻"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Resources-Warehouse-Forklift"
-msgstr "啟動倉庫管理"
+msgstr "資源-倉庫-堆高機"
 
 #: field_options/option_description,
 #, fuzzy
@@ -14590,11 +14582,11 @@ msgstr ""
 
 #: field_options/option_description,
 msgid "Unskilled-With Tools-with Wheelbarrow"
-msgstr "非技術性- 使用獨輪手推車"
+msgstr "非技術性- 使用工具-使用獨輪手推車"
 
 #: field_options/option_description,
 msgid "Unskilled-With Tools-with Yard Tools"
-msgstr "非技術性-使用園藝工具"
+msgstr "非技術性-使用工具-使用園藝工具"
 
 #: field_options/option_description,
 msgid "Restriction-No Heavy Lifting"
