@@ -119,7 +119,11 @@ class VolunteerController extends VolunteerView implements Controller {
                         $this->displayVolunteer($v->p_uuid);
                     }
                 } else {
-                    $this->addVolunteer();
+                    if(!empty($getvars['p_uuid'])) {
+                        $this->addVolunteer(new Volunteer($getvars['p_uuid']));
+                    } else {
+                        $this->addVolunteer();
+                    }
                 }
                 break;
             case 'display_add':
