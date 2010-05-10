@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-05-03 16:27+0800\n"
-"PO-Revision-Date: 2010-05-06 09:01+0800\n"
-"Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
+"PO-Revision-Date: 2010-05-10 18:03+0800\n"
+"Last-Translator: Hsiaojan <hsiaojan.liu@gmail.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3598,12 +3598,12 @@ msgstr "新增物資"
 
 #: mod/ims/add_item.inc:55
 msgid "Add items to the Inventory"
-msgstr "增加物品到倉庫"
+msgstr "新增物資到倉庫"
 
 #: mod/ims/add_item.inc:109
 #: mod/ims/optimize.inc:887
 msgid "* Item : "
-msgstr "* 物品："
+msgstr "* 物資："
 
 #: mod/ims/add_item.inc:110
 msgid "*  Amount : "
@@ -3624,7 +3624,7 @@ msgstr "每單位成本："
 
 #: mod/ims/add_item.inc:126
 msgid "Cost of a unit which you are going to select below "
-msgstr "您要選擇的物品的單位成本"
+msgstr "您要選擇的物資的單位成本"
 
 #: mod/ims/add_item.inc:139
 #: mod/ims/search.inc:104
@@ -3636,7 +3636,7 @@ msgstr "您要選擇的物品的單位成本"
 #: mod/ims/mini_quantity.inc:109
 #: mod/rms/handler_mng_ff.inc:287
 msgid "Inventory : "
-msgstr "庫存："
+msgstr "倉庫："
 
 #: mod/ims/add_item.inc:139
 msgid "If this box does not contain preferred inventory name  please go through the List Inventories Menu and add an Inventory first"
@@ -3669,23 +3669,23 @@ msgstr "如果您要選的組織不在這個清單裡，請到組織註冊模組
 
 #: mod/ims/process_inv.inc:137
 msgid " Inventory was successfully added"
-msgstr "成功新增庫存"
+msgstr "成功新增倉庫"
 
 #: mod/ims/process_inv.inc:217
 msgid " Inventory was successfully deleted"
-msgstr "成功刪除庫存！"
+msgstr "成功刪除倉庫！"
 
 #: mod/ims/process_inv.inc:221
 msgid "Inventory Registry"
-msgstr "庫存登錄"
+msgstr "登錄倉庫"
 
 #: mod/ims/process_inv.inc:335
 msgid " Inventory was successfully updated"
-msgstr "成功更新庫存"
+msgstr "成功更新倉庫"
 
 #: mod/ims/reg_inv.inc:28
 msgid "Add an Inventory"
-msgstr "新增一筆庫存"
+msgstr "新增一筆倉庫"
 
 #: mod/ims/reg_inv.inc:38
 #: mod/ims/view_inv.inc:195
@@ -3718,11 +3718,11 @@ msgstr "無效的使用者名稱"
 
 #: mod/ims/search.inc:31
 msgid "Search Inventories"
-msgstr "搜尋庫存"
+msgstr "搜尋倉庫"
 
 #: mod/ims/search.inc:32
 msgid "Search Item"
-msgstr "搜尋物品"
+msgstr "搜尋物資"
 
 #: mod/ims/search.inc:35
 msgid "Search : "
@@ -3735,27 +3735,27 @@ msgstr "根據所選擇的條件進行搜尋"
 #: mod/ims/search.inc:51
 #: mod/ims/search.inc:76
 msgid "Search an inventory item"
-msgstr "搜尋庫存物品"
+msgstr "搜尋庫存物資"
 
 #: mod/ims/search.inc:83
 msgid "Search items "
-msgstr "搜尋物品 "
+msgstr "搜尋物資"
 
 #: mod/ims/search.inc:84
 msgid "Search by Item name   : "
-msgstr "依物品名稱搜尋 ："
+msgstr "依物資名稱搜尋 ："
 
 #: mod/ims/search.inc:86
 msgid "Item available"
-msgstr "可用的物品"
+msgstr "可用的物資"
 
 #: mod/ims/search.inc:87
 msgid "Item to be destroyed"
-msgstr "要銷毀的物品"
+msgstr "要銷毀的物資"
 
 #: mod/ims/search.inc:88
 msgid "Item already destroyed"
-msgstr "物品已銷毀"
+msgstr "已銷毀物資"
 
 #: mod/ims/search.inc:89
 msgid "  Status  : "
@@ -3776,7 +3776,7 @@ msgstr "搜尋結果"
 #: mod/ims/mini_quantity.inc:86
 #: mod/dvr/admin.inc:114
 msgid "Item Name"
-msgstr "物品名稱"
+msgstr "物資名稱"
 
 #: mod/ims/search.inc:139
 #: mod/ims/search.inc:212
@@ -3836,7 +3836,7 @@ msgstr "單位"
 #: mod/rms/handler_plg_sch.inc:289
 #: mod/rms/handler_mng_ff.inc:198
 msgid "Inventory"
-msgstr "存貨清單"
+msgstr "倉庫列表"
 
 #: mod/ims/search.inc:143
 #: mod/ims/search.inc:216
@@ -3854,11 +3854,11 @@ msgstr "總數"
 
 #: mod/ims/search.inc:207
 msgid "Alternate Items:"
-msgstr "替代物品"
+msgstr "替代物資"
 
 #: mod/ims/search.inc:277
 msgid "Total Alternate Items Amount"
-msgstr "總替代物品數量"
+msgstr "總替代物資數量"
 
 #: mod/ims/search.inc:318
 msgid "Search for Inventories by name and by Location"
@@ -3866,11 +3866,11 @@ msgstr "依據名稱與位置搜尋"
 
 #: mod/ims/search.inc:323
 msgid "Search by Inventory name   : "
-msgstr "搜尋庫存名稱："
+msgstr "以倉庫名稱搜尋："
 
 #: mod/ims/search.inc:323
 msgid "Enter either the name of the inventory or the location of the inventory or both Inventory name and location and click on the search button below"
-msgstr "輸入物資集散地的名稱，或者位置，或者兩者，並按下面的搜尋按鈕"
+msgstr "輸入倉庫的名稱，或者位置，或者兩者，並按下面的搜尋按鈕"
 
 #: mod/ims/search.inc:327
 msgid "Search by Location"
@@ -3878,11 +3878,11 @@ msgstr "依位置搜尋"
 
 #: mod/ims/search.inc:338
 msgid "Search by Inventory Owner's Details"
-msgstr "搜尋庫存擁有者的細節"
+msgstr "搜尋倉庫管理者的細節"
 
 #: mod/ims/search.inc:339
 msgid "Any of the Details of Inventory Owner : "
-msgstr "任何庫存擁有者的詳細資訊："
+msgstr "任何倉庫管理者的詳細資訊："
 
 #: mod/ims/search.inc:339
 msgid "Enter any of the details of the Inventory Owner and click on the Search button below. Name of the Inventory Owner, Address of the Inventory Owner, Contact Numbers of the Inventory Owner, e-mail address of the Inventory Owner or web site of the inventory are accepted to the search"
@@ -3964,7 +3964,7 @@ msgstr "庫存選擇"
 #: mod/ims/optimize.inc:65
 #: mod/ims/optimize.inc:364
 msgid "If this box does not contain prefered inventory name  please go through the Multiple Inventory Management Menu and add an Inventory first"
-msgstr "如果沒有倉庫可選，請先使用多倉庫管理選單，新增一個倉庫。"
+msgstr "如果沒有倉庫可選，請先使用倉庫管理選單，新增一個倉庫。"
 
 #: mod/ims/optimize.inc:77
 msgid "Relative Items Selection"
@@ -4002,7 +4002,7 @@ msgstr "相關物資選擇"
 #: mod/rms/lib_rms.inc:907
 #: mod/rms/lib_rms.inc:935
 msgid "Item"
-msgstr "物品"
+msgstr "物資"
 
 #: mod/ims/optimize.inc:87
 #: mod/ims/optimize.inc:257
@@ -4021,7 +4021,7 @@ msgstr "成功設置相關物資"
 
 #: mod/ims/optimize.inc:200
 msgid "Select Alternative Item/Items"
-msgstr "選擇替代物資"
+msgstr "選擇欲設定替代品之物資項目"
 
 #: mod/ims/optimize.inc:235
 #: mod/ims/optimize.inc:901
@@ -4169,7 +4169,7 @@ msgstr "物資名稱："
 
 #: mod/ims/optimize.inc:1078
 msgid "Inventory Name :"
-msgstr "庫存名稱："
+msgstr "倉庫名稱："
 
 #: mod/ims/optimize.inc:1082
 #: mod/ims/optimize.inc:1374
@@ -4241,7 +4241,7 @@ msgstr "XHTML"
 #: mod/ims/ims_report.inc:134
 #: mod/ims/main.inc:56
 msgid "Expired Items"
-msgstr "過期的物品"
+msgstr "過期的物資"
 
 #: mod/ims/ims_report.inc:156
 #: mod/ims/ims_report.inc:240
@@ -4272,7 +4272,7 @@ msgstr "動作"
 #: mod/ims/ims_report.inc:216
 #: mod/ims/main.inc:57
 msgid "Destroyed Items"
-msgstr "銷毀的物品"
+msgstr "銷毀的物資"
 
 #: mod/ims/ims_report.inc:241
 msgid "Expire_Date"
@@ -4318,7 +4318,7 @@ msgstr "設施"
 
 #: mod/ims/ims_report.inc:495
 msgid "Item Prediction Report"
-msgstr "物品預測報表"
+msgstr "物資預測報表"
 
 #: mod/ims/ims_report.inc:505
 #: mod/ims/ims_report.inc:585
@@ -4347,7 +4347,7 @@ msgstr "發送數量"
 #: mod/ims/ims_report.inc:679
 #: mod/ims/transfer_inv.inc:461
 msgid "Inventory From"
-msgstr "Inventory From"
+msgstr "來自"
 
 #: mod/ims/ims_report.inc:682
 #: mod/ims/transfer_inv.inc:464
@@ -4359,7 +4359,7 @@ msgstr "授權者"
 #: mod/ims/transfer_inv.inc:465
 #: mod/ims/main.inc:59
 msgid "Transit Item"
-msgstr "運送物品"
+msgstr "物資移倉"
 
 #: mod/ims/lib_ims.inc:395
 msgid "Inventory Space : "
@@ -4372,7 +4372,7 @@ msgstr "新增活動<br> (您的組織在這場災難中也許有分支機構或
 #: mod/ims/lib_ims_rss.inc:22
 #: mod/ims/home.inc:114
 msgid "Expired item List"
-msgstr "過期的物品清單"
+msgstr "過期的物資清單"
 
 #: mod/ims/lib_ims_rss.inc:22
 msgid "Following are a list of items which have been expired recently in SAHANA inventory."
@@ -4402,7 +4402,7 @@ msgstr "低於重新訂購標準的物資"
 
 #: mod/ims/lib_ims_rss.inc:44
 msgid "Following are a list of items which are below reorder level"
-msgstr "以下為低於再訂購標準的物資列表"
+msgstr "以下為低於最低庫存標準的物資列表"
 
 #: mod/ims/lib_ims_rss.inc:54
 msgid "Minimum Quantity "
@@ -4414,11 +4414,11 @@ msgstr "需要"
 
 #: mod/ims/lib_ims_rss.inc:65
 msgid "Transit item List"
-msgstr "轉送物品清單"
+msgstr "移倉物資清單"
 
 #: mod/ims/lib_ims_rss.inc:65
 msgid "Items which are in transit."
-msgstr "在運送中途的物資。"
+msgstr "在移倉中途的物資。"
 
 #: mod/ims/lib_ims_rss.inc:75
 msgid "An amount of "
@@ -4444,7 +4444,7 @@ msgstr "由"
 
 #: mod/ims/view_edit_item.inc:27
 msgid "Item Registry"
-msgstr "物品登記"
+msgstr "物資登記"
 
 #: mod/ims/view_edit_item.inc:50
 #: mod/ims/view_inv.inc:34
@@ -4477,15 +4477,15 @@ msgstr "庫存轉移"
 
 #: mod/ims/view_edit_item.inc:147
 msgid "Send Item"
-msgstr "送出物品"
+msgstr "送出物資"
 
 #: mod/ims/view_edit_item.inc:175
 msgid " Item was successfully updated"
-msgstr "物品已成功更新"
+msgstr "物資已成功更新"
 
 #: mod/ims/errors.inc:16
 msgid "Inventory name is essential for registration. Please complete and submit again"
-msgstr "登錄時必須填寫物資集散地名稱，請填寫完整並重新送出。"
+msgstr "登錄時必須填寫倉庫名稱，請填寫完整並重新送出。"
 
 #: mod/ims/errors.inc:17
 msgid "Inventory type is essential for registration. Please complete and submit again"
@@ -4497,7 +4497,7 @@ msgstr "登錄時必須填寫物資集散地領域（sector），請填寫完整
 
 #: mod/ims/errors.inc:19
 msgid "Inventory location is essential for registration. Please complete and submit again"
-msgstr "登錄時必須填寫物資集散地位置，請填寫完整並重新送出。"
+msgstr "登錄時必須填寫物資庫存位置，請填寫完整並重新送出。"
 
 #: mod/ims/errors.inc:20
 msgid "User name is essential for registration. Please complete and submit again"
@@ -4557,7 +4557,7 @@ msgstr "必須填寫數量。請填寫完成再重新送出"
 
 #: mod/ims/errors.inc:40
 msgid "Inventory is essential. Please complete and submit again "
-msgstr "必須填寫物資集散地，請填寫完成再重新送出"
+msgstr "必須填寫物資庫存地，請填寫完成再重新送出"
 
 #: mod/ims/errors.inc:41
 msgid "The inventory doesn't have sufficient amount to transfer. Please check the amount again and resubmit the form"
@@ -4593,7 +4593,7 @@ msgstr "請輸入每單位成本的數值"
 
 #: mod/ims/errors.inc:49
 msgid "Expire date should be greater than Manufactured date"
-msgstr "過期日期必須晚於製造日期"
+msgstr "到期日期必須晚於製造日期"
 
 #: mod/ims/errors.inc:50
 msgid "Please enter a numeric value for item Re-Order value"
@@ -4621,11 +4621,11 @@ msgstr "請選擇你需要的類別或者你已選擇次目錄，不是物資"
 
 #: mod/ims/errors.inc:56
 msgid "Please complete either inventory name or base location"
-msgstr "請輸入物資集散地的名稱或地點"
+msgstr "請輸入倉庫的名稱或地點"
 
 #: mod/ims/errors.inc:57
 msgid "Please enter any of the details of the owner of the inventory and submit again."
-msgstr "請輸入任何與庫存所有者的細節資訊，並再次送出"
+msgstr "請輸入任何與庫存管理者的細節資訊，並再次送出"
 
 #: mod/ims/errors.inc:58
 msgid "Alternete item has already been set"
@@ -4645,7 +4645,7 @@ msgstr "時間數值必須為一數值"
 
 #: mod/ims/errors.inc:62
 msgid "Please add an inventory first "
-msgstr "請先新增庫存"
+msgstr "請先新增倉庫"
 
 #: mod/ims/view_inv.inc:24
 msgid "Register a New Inventory"
@@ -4665,11 +4665,11 @@ msgstr "庫存登錄資訊"
 
 #: mod/ims/transfer_inv.inc:25
 msgid "Send Items between Inventories"
-msgstr "在庫存處之間發送物品"
+msgstr "物資運送"
 
 #: mod/ims/transfer_inv.inc:26
 msgid "Please select the Item to be sent"
-msgstr "請選取要發送的物品"
+msgstr "請選取要發送的物資"
 
 #: mod/ims/transfer_inv.inc:64
 #: mod/ims/main.inc:846
@@ -4681,20 +4681,20 @@ msgstr "頁面編號"
 #: mod/ims/transfer_inv.inc:67
 #: mod/ims/transfer_inv.inc:221
 msgid "Send Item between Inventories"
-msgstr "在庫存清單之間發送項目"
+msgstr "在倉庫之間移動物資"
 
 #: mod/ims/transfer_inv.inc:100
 #: mod/ims/transfer_inv.inc:154
 msgid "state"
-msgstr "state"
+msgstr "狀態"
 
 #: mod/ims/transfer_inv.inc:229
 msgid "Item Send : "
-msgstr "項目發送："
+msgstr "發送物資："
 
 #: mod/ims/transfer_inv.inc:231
 msgid "Amount Send: "
-msgstr "總數發送："
+msgstr "發送總數："
 
 #: mod/ims/transfer_inv.inc:245
 msgid "Select the Measurement unit for entered amount. If this box does not contain the desired measurement unit please go back to the catalogue system and add"
@@ -4702,7 +4702,7 @@ msgstr "選擇輸入數量的測量單位。如果沒有所需的單位，請回
 
 #: mod/ims/transfer_inv.inc:248
 msgid "Inventory From : "
-msgstr "Inventory From : "
+msgstr "來自"
 
 #: mod/ims/transfer_inv.inc:252
 msgid "Destination : "
@@ -4761,11 +4761,11 @@ msgstr "授權來自："
 
 #: mod/ims/transfer_inv.inc:319
 msgid "Person who is sending Item"
-msgstr "發送物品的人員"
+msgstr "發送物資的人員"
 
 #: mod/ims/transfer_inv.inc:320
 msgid "Requested by : "
-msgstr "需求者："
+msgstr "需求窗口："
 
 #: mod/ims/transfer_inv.inc:321
 msgid "Destribution Method : "
@@ -4829,7 +4829,7 @@ msgstr "駕駛者駕照號碼"
 
 #: mod/ims/transfer_inv.inc:403
 msgid "Item sent successfully"
-msgstr "物品成功運送"
+msgstr "已成功運送的物資"
 
 #: mod/ims/transfer_inv.inc:421
 #: mod/ims/transfer_inv.inc:423
@@ -4838,20 +4838,20 @@ msgstr "頁碼編號"
 
 #: mod/ims/transfer_inv.inc:427
 msgid "Item Transit"
-msgstr "物品傳送"
+msgstr "移倉物資"
 
 #: mod/ims/transfer_inv.inc:528
 msgid "Item Transit "
-msgstr "物品運送"
+msgstr "移倉物資"
 
 #: mod/ims/transfer_inv.inc:578
 msgid "Received Item"
-msgstr "接收物品"
+msgstr "接收物資"
 
 #: mod/ims/transfer_inv.inc:580
 #: mod/ims/mini_quantity.inc:87
 msgid "Item Name : "
-msgstr "物品名稱："
+msgstr "物資名稱："
 
 #: mod/ims/transfer_inv.inc:582
 msgid "Received Amount : "
@@ -4875,7 +4875,7 @@ msgstr "授權者："
 
 #: mod/ims/transfer_inv.inc:606
 msgid "Person who received Item"
-msgstr "接收物品的人員"
+msgstr "接收物資的人員"
 
 #: mod/ims/transfer_inv.inc:622
 msgid "Received"
@@ -4883,7 +4883,7 @@ msgstr "已接收"
 
 #: mod/ims/transfer_inv.inc:657
 msgid "Item Received successfully"
-msgstr "物品成功接收"
+msgstr "物資已成功被接收"
 
 #: mod/ims/transfer_inv.inc:689
 msgid "Destination is essential. Please complete and submit again"
@@ -4899,7 +4899,7 @@ msgstr "Sahana庫存管理系統是一個用來掌握您的救援物資庫存及
 
 #: mod/ims/home.inc:31
 msgid "Find Items:"
-msgstr "尋找物品："
+msgstr "尋找物資："
 
 #: mod/ims/home.inc:31
 msgid " Enables end user to search items available in ware houses. End-User is also allowed to search available items, expired items and already destroyed items. "
@@ -4907,27 +4907,27 @@ msgstr "讓使用者搜尋現有庫存的物資。使用者也可以搜尋所有
 
 #: mod/ims/home.inc:32
 msgid "List Inventories:"
-msgstr "列出庫存："
+msgstr "倉庫列表"
 
 #: mod/ims/home.inc:32
 msgid " Facilitates to manage multiple Inventories and enables end-user to add,edit or delete Inventories."
-msgstr "管理多個庫存，並讓使用者可以增加、管理或刪除庫存的功能。"
+msgstr "同時列出所有倉庫，使用者可以進行增加、管理或刪除倉庫與庫存資訊。"
 
 #: mod/ims/home.inc:33
 msgid "List Items:"
-msgstr "列出物品："
+msgstr "庫存物資列表"
 
 #: mod/ims/home.inc:33
 msgid " Enables end-user to add,edit or delete item for inventories and also enables to transfer items between two inventories"
-msgstr "使用者可以增加、管理或刪除物資，也可以在物資集散地間進行調撥。"
+msgstr "使用者可以增加、管理或刪除物資，也可以在倉庫間進行調撥。"
 
 #: mod/ims/home.inc:34
 msgid "Re-Order Level:"
-msgstr "重新訂購層級："
+msgstr "最低庫存標準："
 
 #: mod/ims/home.inc:34
 msgid " Enables end-user to add,edit or delete defined Re-Order Level for an inventory for  particular items "
-msgstr "使用者可以為特定庫存的物資，增加、管理或刪除再訂購的標準。"
+msgstr "使用者可以為特定庫存的物資，增加、管理或刪除最低庫存標準。"
 
 #: mod/ims/home.inc:35
 msgid "Reports:"
@@ -4935,7 +4935,7 @@ msgstr "報表："
 
 #: mod/ims/home.inc:35
 msgid " Generate reports about expired items, destroyed items and also generates report about the items in which the total amount is lower than the Re-Order Level "
-msgstr "產生過期的、已銷毀的物資報告，並且產出有關總數低於再訂購標準的物資報告。"
+msgstr "產生過期的、已銷毀的物資報告，並且產出有關總數低於最低庫存標準的物資報告。"
 
 #: mod/ims/home.inc:36
 msgid "Optimization:"
@@ -4947,41 +4947,40 @@ msgstr "預測特定庫存調往另一個集散地、從另一個集散地接收
 
 #: mod/ims/home.inc:41
 msgid "Recently added items "
-msgstr "最近新增的物品"
+msgstr "最近新增的物資"
 
 #: mod/ims/home.inc:115
 msgid "Items bellow Re-order Level"
-msgstr "低於在訂購標準的物資"
+msgstr "低於最低庫存標準的物資"
 
 #: mod/ims/home.inc:116
 msgid "Transit Item List"
-msgstr "傳送物品清單"
+msgstr "移倉物資清單"
 
 #: mod/ims/main.inc:45
 msgid "Inventories"
-msgstr "存貨清單"
+msgstr "倉庫列表"
 
 #: mod/ims/main.inc:49
 #: mod/cs/edit.inc:69
 msgid "Items"
-msgstr "項目"
+msgstr "物資"
 
 #: mod/ims/main.inc:50
 msgid "Add/List Items"
-msgstr "新增/列出物品"
+msgstr "新增物資"
 
 #: mod/ims/main.inc:51
 msgid "Send Items"
-msgstr "寄送項目"
+msgstr "物資運送"
 
 #: mod/ims/main.inc:52
-#, fuzzy
 msgid "Transit Items"
-msgstr "控制項目"
+msgstr "運送中的物資"
 
 #: mod/ims/main.inc:58
 msgid "Items to Re-order"
-msgstr "再次訂購品項"
+msgstr "最低庫存物資品項"
 
 #: mod/ims/main.inc:61
 #: mod/ims/main.inc:765
@@ -5060,15 +5059,15 @@ msgstr "下載 PDF 報表"
 #: mod/ims/mini_quantity.inc:34
 #: mod/ims/mini_quantity.inc:183
 msgid "Item Selection for Re-Order Level"
-msgstr "重新訂購標準的物資選擇"
+msgstr "最低庫存標準"
 
 #: mod/ims/mini_quantity.inc:113
 msgid "Item Quantity "
-msgstr "物品數量"
+msgstr "物資數量"
 
 #: mod/ims/mini_quantity.inc:114
 msgid "Re-Order Level : "
-msgstr "重新訂購標準："
+msgstr "最低庫存標準："
 
 #: mod/ims/mini_quantity.inc:129
 msgid "Select the Measurement unit for entered amount. If this box does not contain your prefered unit go back to the catalogue system and add a measurement unit"
@@ -5077,7 +5076,7 @@ msgstr "選擇用於數量的測量單位。如果沒有你需要的單位，請
 #: mod/ims/mini_quantity.inc:212
 #: mod/ims/mini_quantity.inc:215
 msgid "Add Re-Order Level"
-msgstr "新增重新訂購標準"
+msgstr "新增最低庫存標準"
 
 #: mod/ims/mini_quantity.inc:222
 msgid "Records per Page"
@@ -5531,7 +5530,7 @@ msgstr "請輸入基本單位名稱"
 
 #: mod/cs/lib_cs_validate.inc:147
 msgid "Please Enter the Item/catalog name to be searched"
-msgstr "請輸入要搜尋的物品/型錄名稱"
+msgstr "請輸入要搜尋的物資/型錄名稱"
 
 #: mod/cs/lib_cs_validate.inc:151
 msgid "Please Select either Item or catalog radio button to search"
@@ -5547,7 +5546,7 @@ msgstr "-----選擇搜尋-----"
 
 #: mod/cs/search.inc:23
 msgid "Item/Catalog"
-msgstr "物品/目錄"
+msgstr "物資/目錄"
 
 #: mod/cs/search.inc:23
 #: mod/cs/search.inc:158
@@ -5575,7 +5574,7 @@ msgstr "名稱："
 
 #: mod/cs/search.inc:42
 msgid "Enter the Item/catalog to be searched"
-msgstr "輸入要搜尋的物品或類別"
+msgstr "輸入要搜尋的物資或類別"
 
 #: mod/cs/search.inc:43
 #: mod/cs/add.inc:448
@@ -5660,15 +5659,15 @@ msgstr "子目錄"
 
 #: mod/cs/edit.inc:242
 msgid "Using Delete, you will lose all the records of the particular catalogs, Items, Unit or Unit Types. </b>By deleting a catalog You will lose all the entries under the particular catalog."
-msgstr "若使用刪除動作，您會失去該類別的所有記錄，包括物品、單位或單位種類。刪除一個目錄，你會失去所有目錄裡的項目。"
+msgstr "若使用刪除動作，您會失去該類別的所有記錄，包括物資、單位或單位種類。刪除一個目錄，你會失去所有目錄裡的項目。"
 
 #: mod/cs/edit.inc:263
 msgid "Details Of the catalog/Item"
-msgstr "目錄/物品的細節"
+msgstr "目錄/物資的細節"
 
 #: mod/cs/edit.inc:265
 msgid "Catalog / Item Name   : "
-msgstr "目錄/物品名稱："
+msgstr "目錄/物資名稱："
 
 #: mod/cs/edit.inc:268
 #: mod/cs/edit.inc:547
@@ -5681,11 +5680,11 @@ msgstr "說明："
 
 #: mod/cs/edit.inc:297
 msgid "Operation failed. You can not Delete this Catalog/ Item. Because there are sub catalogs/Items under this catalog OR it has been used by the INVENTORY MANAGEMENT SYSTEM."
-msgstr "操作失敗。您不能刪除此目錄/物品。因為有子目錄/物資在此目錄下，或者它已被庫存管理系統使用。"
+msgstr "操作失敗。您不能刪除此目錄/物資品。因為有子目錄/物資在此目錄下，或者它已被庫存管理系統使用。"
 
 #: mod/cs/edit.inc:304
 msgid "Item/Catalog was deleted"
-msgstr "已刪除物品/類別"
+msgstr "已刪除物資/類別"
 
 #: mod/cs/edit.inc:336
 #: mod/cs/edit.inc:464
@@ -5739,7 +5738,7 @@ msgstr "單位類型已被刪除"
 #: mod/cs/conf.inc:23
 #: mod/cs/main.inc:42
 msgid "Aid Catalog"
-msgstr "援助目錄"
+msgstr "救援物資目錄"
 
 #: mod/cs/lib_cs.inc:173
 #: mod/sync/handler_download.inc:66
@@ -5862,7 +5861,7 @@ msgstr "瀏覽所有目前已登錄的目錄、援助物資類型和他們所關
 
 #: mod/cs/home.inc:35
 msgid "Add Main Catalog"
-msgstr "新增主要目錄"
+msgstr "新增主目錄"
 
 #: mod/cs/home.inc:35
 msgid "Do this first to create base groupings by major aid type (e.g. Food and Nutrition)"
@@ -5879,11 +5878,11 @@ msgstr "在同一目錄中可以有多個物資的子分類和子目錄。例如
 #: mod/cs/home.inc:37
 #: mod/cs/main.inc:50
 msgid "Add Aid Item Type"
-msgstr "新增援助物資的類型"
+msgstr "新增子目錄"
 
 #: mod/cs/home.inc:37
 msgid "Add New Aid Items Types to the Sahana System"
-msgstr "新增新的援助物資類型到Sahana系統"
+msgstr "新增新的援助物資品項"
 
 #: mod/cs/home.inc:38
 #: mod/cs/main.inc:51
@@ -5894,36 +5893,35 @@ msgstr "新增度量單位"
 
 #: mod/cs/home.inc:38
 msgid "Associate a measurement scale to an Aid Item Type. For example the Item Type, Rice would be measured in Kilograms"
-msgstr "關聯一個度量單位到此援助物資類型。比如：米的度量單位是公斤。"
+msgstr "新增救援物資所需要的度量衡單位"
 
 #: mod/cs/main.inc:44
 msgid "View Aid Catalog"
-msgstr "瀏覽援助目錄"
+msgstr "瀏覽物資目錄清單"
 
 #: mod/cs/main.inc:45
 msgid "Drill Down Catalog"
-msgstr "分級目錄"
+msgstr "分層瀏覽物資目錄清單"
 
 #: mod/cs/main.inc:46
 msgid "Search Item Types"
-msgstr "搜尋物資類型"
+msgstr "搜尋救援物資"
 
 #: mod/cs/main.inc:47
-#, fuzzy
 msgid "Modify Catalog"
-msgstr "修改列"
+msgstr "編輯援助物資目錄清單"
 
 #: mod/cs/main.inc:48
 msgid "Add New Catalog"
-msgstr "新增目錄"
+msgstr "新增主目錄"
 
 #: mod/cs/main.inc:49
 msgid "Add Aid Category"
-msgstr "新增救援物資"
+msgstr "新增物資品項"
 
 #: mod/cs/main.inc:77
 msgid "Select the Search Type in the select box that you need to search. By selecting catalog/Item, you are able to Search for a Item or a catalog and by selecting Unit, you are able to search for Units."
-msgstr "在選擇方塊中選擇您要搜尋的型態。若選擇類別/物品，就能搜尋類別或物品；若選擇單位，就能搜尋單位。"
+msgstr "在選擇方塊中選擇您要搜尋的型態。若選擇類別/物資，就能搜尋類別或物資；若選擇單位，就能搜尋單位。"
 
 #: mod/cs/main.inc:108
 msgid "Search catalog/item"
@@ -5971,11 +5969,11 @@ msgstr "在新增物資類型詳細資訊前，首先選擇上層類別"
 
 #: mod/cs/main.inc:252
 msgid "Here you are able to view, edit and Delete all the catalogs, Items, Units and Unit Types which are handled by the catalog system. "
-msgstr "這裡您可以觀看、編輯和刪除分類系統中的類別、物品、單位和單位種類資料。"
+msgstr "這裡您可以觀看、編輯和刪除分類系統中的類別、物資、單位和單位種類資料。"
 
 #: mod/cs/main.inc:252
 msgid "Using Delete, you will lose all the records of the particular catalogs, Items, Unit or Unit Types."
-msgstr "若使用刪除動作，您會失去該類別的所有記錄，包括物品、單位或單位種類。"
+msgstr "若使用刪除動作，您會失去該類別的所有記錄，包括物資、單位或單位種類。"
 
 #: mod/cs/main.inc:278
 msgid "Edit catalog / item"
@@ -6148,7 +6146,7 @@ msgstr "操作失敗。資料庫中沒有ct_unit_type和ct_unit資料表。請�
 
 #: mod/cs/add.inc:419
 msgid "Click on the parent catalogue that you need to add sub catalogue or Item under it."
-msgstr "點選您想要新增子目錄或物品的上一級目錄。"
+msgstr "點選您想要新增子目錄或物資的上一級目錄。"
 
 #: mod/gis/wm_fns.inc:172
 msgid "Detail Name Cannot be empty."
@@ -11471,7 +11469,7 @@ msgstr "在資料庫中沒有符合您條件的需求"
 #: mod/rms/handler_plg_sch.inc:348
 #: mod/rms/lib_rms.inc:517
 msgid "RMS Home"
-msgstr "RMS 首頁"
+msgstr "需求管理 首頁"
 
 #: mod/rms/handler_req_ls.inc:219
 #: mod/rms/handler_req_ls.inc:236
@@ -11553,7 +11551,7 @@ msgstr "新增允諾捐贈"
 
 #: mod/rms/handler_home.inc:62
 msgid "Donate items through the  system"
-msgstr "透過本系統捐贈物品"
+msgstr "透過本系統捐贈物資"
 
 #: mod/rms/handler_home.inc:63
 #: mod/rms/main.inc:56
@@ -11905,7 +11903,7 @@ msgstr "捐贈者名稱"
 
 #: mod/rms/lib_rms.inc:854
 msgid "fulfilled_quantity"
-msgstr "fulfilled_quantity"
+msgstr "需滿足數量"
 
 #: mod/rms/lib_rms.inc:854
 msgid "Select to fulfill"
@@ -11922,7 +11920,7 @@ msgstr "需求滿足狀態"
 
 #: mod/rms/lib_rms.inc:907
 msgid "Requested"
-msgstr "已需求"
+msgstr "需求"
 
 #: mod/rms/lib_rms.inc:907
 msgid "Fulfiled"
@@ -14124,7 +14122,7 @@ msgstr "分工司"
 
 #: field_options/option_description,
 msgid "Supplier of Goods"
-msgstr "物品供應"
+msgstr "物資供應"
 
 #: field_options/option_description,
 msgid "Communications"
