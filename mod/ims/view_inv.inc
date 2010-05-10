@@ -154,7 +154,7 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
 <?php
         if ($flag == true) {
 ?>
-    <td><a href="index.php?mod=ims&act=add_item_main_page&inv_id=<?php echo $inv_id ?>"><?php print ("Add Item"); ?></a><?php print "   ,"; ?><a href="index.php?mod=ims&act=view_inv&id=<?php echo $res_org->fields[0] ?>"><?php print ("Edit Inventory"); ?></a></td>
+    <td><a href="index.php?mod=ims&act=add_item_main_page&inv_id=<?php echo $inv_id ?>"><?php print ("Add Item"); ?></a><?php print "   ,"; ?><a href="index.php?mod=ims&act=view_edit_item&id=<?php echo $res_org->fields[0] ?>"><?php print ("Review items"); ?></a></td>
 <?php
         } else {;
         }
