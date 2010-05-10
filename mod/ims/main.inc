@@ -45,7 +45,7 @@ function shn_ims_mainmenu() {
     shn_mod_menuitem("view_inv", _("Inventories"), $module);
     // shn_mod_menuitem("search_item",_("Find Items"),$module);
     // shn_mod_menuitem("search_inventory",_("Find Inventories"),$module);
-    //shn_mod_menuitem("view_edit_item",_("Add/List Items"),$module);
+    shn_mod_menuitem("view_edit_item",_("Add/List Items"),$module);
     shn_sub_mod_menuopen(_("Items"));
     shn_sub_mod_menuitem("add_item_main_page", _("Add/List Items"), $module);
     shn_sub_mod_menuitem("send_item", _("Send Items"), $module);
