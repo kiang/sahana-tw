@@ -243,7 +243,7 @@ function _shn_ims_view_edit_reorder_page($page_number, $Limit = null) {
     <table>
         <thead>
         <td><?php echo _("Item"); ?></td>
-        <td><?php echo _("Amount"); ?></td>
+        <td><?php echo _("R-OL Amount"); ?></td>
         <td><?php echo _("Unit"); ?></td>
         <td><?php echo _("Inventory"); ?></td>
         <td><?php echo _("Edit"); ?></td>
