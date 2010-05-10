@@ -293,14 +293,12 @@ function _shn_cs_delete_item() {
     global $global;
     $db = $global["db"];
     $inuse_flag_return = item_cat_inuse($id);
-    if ($inuse_flag_return == true) {
+    if (!is_array($inuse_flag_return)) {
         add_warning(_("Operation failed. You can not Delete this Catalog/ Item. Because there are sub catalogs/Items under this catalog OR it has been used by the INVENTORY MANAGEMENT SYSTEM."));
         show_item_cat_table();
     } else {
-        $query = "DELETE FROM ct_catalogue WHERE ct_uuid = '$id' ";
-        $res = $db->Execute($query);
-        $query2 = "DELETE FROM ct_cat_unit WHERE ct_uuid = '$id' ";
-        $res2 = $db->Execute($query2);
+        $db->Execute('DELETE FROM ct_catalogue WHERE ct_uuid IN ("' . implode('","', $inuse_flag_return) . '")');
+        $db->Execute('DELETE FROM ct_cat_unit WHERE ct_uuid IN ("' . implode('","', $inuse_flag_return) . '")');
         add_confirmation(_("Item/Catalog was deleted"));
         show_item_cat_table();
     }
@@ -350,15 +348,27 @@ function item_cat_inuse($item_cat_id) {
     global $global;
     $db = $global["db"];
     $inuse_flag = false;
-    $query = "SELECT * FROM ct_catalogue WHERE parentid='$item_cat_id' ";
-    $res = $db->Execute($query);
-    if (!$res == NULL && !$res->EOF) {
-        $inuse_flag = true;
-    }
     if (_shn_ims_find_catalogid($item_cat_id)) {
         $inuse_flag = true;
+    } else {
+        $query = "SELECT ct_uuid FROM ct_catalogue WHERE parentid='$item_cat_id' ";
+        $res = $db->Execute($query);
+        $subCategories[] = $item_cat_id;
     }
-    return $inuse_flag;
+    while ($inuse_flag === false && !$res == NULL && !$res->EOF) {
+        $check = item_cat_inuse($res->fields['ct_uuid']);
+        if($check === true) {
+            $inuse_flag = true;
+        } else {
+            $subCategories = array_merge($subCategories, $check);
+        }
+        $res->MoveNext();
+    }
+    if($inuse_flag === true) {
+        return $inuse_flag;
+    } else {
+        return $subCategories;
+    }
 }
 /**
  * This function shows the Unit table. Submit the result to shn_cs_edit_cat_select_submit() in main.inc.
