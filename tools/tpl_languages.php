@@ -197,6 +197,7 @@ _('Start Date :');
 _('End Date :');
 _('Base Location');
 _('Contact Information');
+_('Prefered medium confirmation :');
 _('Picture');
 _('Optionally, you may upload a picture to identify yourself.');
 _('Image file:');

@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-03 16:27+0800\n"
-"PO-Revision-Date: 2010-05-10 18:03+0800\n"
-"Last-Translator: Hsiaojan <hsiaojan.liu@gmail.com>\n"
+"POT-Creation-Date: 2010-05-11 12:03+0800\n"
+"PO-Revision-Date: 2010-05-11 12:05+0800\n"
+"Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -289,40 +289,40 @@ msgstr "圖檔不正確，或是不被支援的格式"
 msgid "Changes saved."
 msgstr "已儲存改變"
 
-#: mod/vm/controller/VolunteerController.php:154
+#: mod/vm/controller/VolunteerController.php:158
 msgid "Your Password has been updated"
 msgstr "你的密碼已更新"
 
-#: mod/vm/controller/VolunteerController.php:207
+#: mod/vm/controller/VolunteerController.php:211
 msgid "Message Sent"
 msgstr "消息已送出"
 
-#: mod/vm/controller/VolunteerController.php:318
+#: mod/vm/controller/VolunteerController.php:322
 msgid "Please specify both a skill description and skill code"
 msgstr "請輸入技能說明與編碼"
 
-#: mod/vm/controller/VolunteerController.php:322
+#: mod/vm/controller/VolunteerController.php:326
 msgid "Skill code should be 4 - 5 letters"
 msgstr ""
 
-#: mod/vm/controller/VolunteerController.php:329
+#: mod/vm/controller/VolunteerController.php:333
 msgid "The specified skill code already exists. Please choose another"
 msgstr "技能編碼已經存在，請另選一個"
 
-#: mod/vm/controller/VolunteerController.php:354
-#: mod/vm/controller/VolunteerController.php:360
+#: mod/vm/controller/VolunteerController.php:358
+#: mod/vm/controller/VolunteerController.php:364
 msgid "Approval information has been updated"
 msgstr "核准資訊已更新"
 
-#: mod/vm/controller/VolunteerController.php:376
+#: mod/vm/controller/VolunteerController.php:380
 msgid "There was a problem logging your time. Please go back and try again."
 msgstr "記錄你的時間發生了錯誤。請返回再試一次"
 
-#: mod/vm/controller/VolunteerController.php:378
+#: mod/vm/controller/VolunteerController.php:382
 msgid "Error logging time:"
 msgstr "錯誤的登錄/記錄時間："
 
-#: mod/vm/controller/VolunteerController.php:635
+#: mod/vm/controller/VolunteerController.php:639
 msgid "Volunteer Management Report"
 msgstr "志工管理報告"
 
@@ -347,27 +347,27 @@ msgid "Volunteer has been successfully assigned"
 msgstr "已經成功地指派志工"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:10
-#: tools/tpl_languages.php:205
-#: tools/tpl_languages.php:221
+#: tools/tpl_languages.php:206
+#: tools/tpl_languages.php:222
 msgid "Personal Information"
 msgstr "個人資訊"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:13
-#: tools/tpl_languages.php:206
-#: tools/tpl_languages.php:222
+#: tools/tpl_languages.php:207
+#: tools/tpl_languages.php:223
 msgid "Any ID Number:"
 msgstr "任意編號："
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:14
 #: tools/tpl_languages.php:100
-#: tools/tpl_languages.php:207
-#: tools/tpl_languages.php:223
+#: tools/tpl_languages.php:208
+#: tools/tpl_languages.php:224
 msgid "Name:"
 msgstr "名稱："
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:15
-#: tools/tpl_languages.php:208
-#: tools/tpl_languages.php:226
+#: tools/tpl_languages.php:209
+#: tools/tpl_languages.php:227
 msgid "Loose Name Matching"
 msgstr "模糊名稱查詢"
 
@@ -377,31 +377,31 @@ msgstr "(也許傳回了許多不相關的結果)"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:18
 #: tools/tpl_languages.php:188
-#: tools/tpl_languages.php:209
-#: tools/tpl_languages.php:230
+#: tools/tpl_languages.php:210
+#: tools/tpl_languages.php:231
 msgid "Skills"
 msgstr "技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
-#: tools/tpl_languages.php:210
-#: tools/tpl_languages.php:231
+#: tools/tpl_languages.php:211
+#: tools/tpl_languages.php:232
 msgid "Require ALL skills below"
 msgstr "需要下面所有技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
-#: tools/tpl_languages.php:211
-#: tools/tpl_languages.php:232
+#: tools/tpl_languages.php:212
+#: tools/tpl_languages.php:233
 msgid "Require ANY skills below"
 msgstr "需要下面任意技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
-#: tools/tpl_languages.php:212
+#: tools/tpl_languages.php:213
 msgid "Skills Matching:"
 msgstr "查詢技能："
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:24
 #: tools/tpl_languages.php:143
-#: tools/tpl_languages.php:213
+#: tools/tpl_languages.php:214
 #: mod/or/search.inc:49
 #: mod/or/main.inc:34
 #: mod/ims/search.inc:24
@@ -417,8 +417,8 @@ msgstr "查詢技能："
 #: mod/cs/search.inc:46
 #: mod/cs/search.inc:129
 #: mod/cs/search.inc:198
-#: mod/cs/main.inc:76
-#: mod/cs/main.inc:89
+#: mod/cs/main.inc:74
+#: mod/cs/main.inc:87
 #: mod/cs/add.inc:84
 #: mod/cs/add.inc:245
 #: mod/mpr/search.inc:49
@@ -435,19 +435,19 @@ msgid "Search"
 msgstr "搜尋"
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:46
-#: tools/tpl_languages.php:244
+#: tools/tpl_languages.php:245
 #: inc/lib_paging.inc:129
 msgid "Go to Page No "
 msgstr "前往頁碼："
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:61
-#: tools/tpl_languages.php:245
+#: tools/tpl_languages.php:246
 #: inc/lib_paging.inc:137
 msgid "Go to Last Page"
 msgstr "前往最後一頁"
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:62
-#: tools/tpl_languages.php:246
+#: tools/tpl_languages.php:247
 #: inc/lib_paging.inc:139
 msgid "Go to Next Page"
 msgstr "前往下一頁"
@@ -455,7 +455,7 @@ msgstr "前往下一頁"
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:62
 #: mod/gis/wm_fns.php:100
 #: mod/gis/wm_fns.php:129
-#: tools/tpl_languages.php:247
+#: tools/tpl_languages.php:248
 #: mod/or/reg_org.inc:95
 #: mod/or/reg_org.inc:120
 #: mod/or/reg_org.inc:270
@@ -471,7 +471,7 @@ msgstr "前往下一頁"
 #: mod/gis/main_fns.inc:117
 #: mod/gis/gis_fns.inc:180
 #: mod/mpr/search.inc:82
-#: mod/mpr/search.inc:215
+#: mod/mpr/search.inc:212
 #: mod/mpr/edit.inc:236
 #: mod/mpr/edit.inc:351
 #: mod/mpr/edit.inc:752
@@ -672,15 +672,15 @@ msgstr "取消"
 #: tools/tpl_languages.php:24
 #: tools/tpl_languages.php:73
 #: tools/tpl_languages.php:99
-#: tools/tpl_languages.php:342
-#: tools/tpl_languages.php:374
+#: tools/tpl_languages.php:343
+#: tools/tpl_languages.php:375
 #: mod/or/view_org.inc:436
 #: mod/ims/view_edit_item.inc:66
 #: mod/ims/view_inv.inc:217
 #: mod/ims/mini_quantity.inc:250
-#: mod/cs/edit.inc:279
-#: mod/cs/edit.inc:443
-#: mod/cs/edit.inc:559
+#: mod/cs/edit.inc:285
+#: mod/cs/edit.inc:465
+#: mod/cs/edit.inc:581
 #: mod/mpr/admin.inc:342
 #: mod/admin/ims_level.inc:31
 #: mod/admin/ims_level.inc:175
@@ -704,7 +704,7 @@ msgstr "刪除"
 #: mod/or/process_org.inc:41
 #: mod/ims/view_edit_item.inc:65
 #: mod/ims/mini_quantity.inc:249
-#: mod/mpr/search.inc:256
+#: mod/mpr/search.inc:255
 #: mod/cr/edit.inc:172
 #: mod/cr/edit.inc:258
 #: mod/cr/edit.inc:553
@@ -744,14 +744,14 @@ msgstr "預計志工人數"
 #: tools/tpl_languages.php:35
 #: tools/tpl_languages.php:46
 #: tools/tpl_languages.php:55
-#: tools/tpl_languages.php:357
-#: tools/tpl_languages.php:363
+#: tools/tpl_languages.php:358
+#: tools/tpl_languages.php:364
 #: mod/rs/sample.inc:167
 #: mod/rs/sample.inc:281
 #: mod/cs/supplier_report.inc:30
 #: mod/cs/search.inc:82
 #: mod/cs/search.inc:221
-#: mod/cs/edit.inc:504
+#: mod/cs/edit.inc:526
 #: mod/cs/add.inc:428
 #: mod/mpr/admin.inc:341
 #: mod/mpr/admin.inc:368
@@ -785,8 +785,8 @@ msgid "Task"
 msgstr "任務"
 
 #: tools/tpl_languages.php:19
-#: tools/tpl_languages.php:249
-#: tools/tpl_languages.php:341
+#: tools/tpl_languages.php:250
+#: tools/tpl_languages.php:342
 #: mod/or/admin_forms.inc:142
 #: mod/or/admin_forms.inc:200
 #: mod/mpr/admin.inc:193
@@ -807,8 +807,8 @@ msgstr "更新"
 #: tools/tpl_languages.php:20
 #: tools/tpl_languages.php:52
 #: tools/tpl_languages.php:75
-#: tools/tpl_languages.php:251
-#: tools/tpl_languages.php:298
+#: tools/tpl_languages.php:252
+#: tools/tpl_languages.php:299
 #: mod/or/lib_or.inc:638
 #: mod/rs/sample.inc:166
 #: mod/rs/sample.inc:225
@@ -816,12 +816,12 @@ msgstr "更新"
 #: mod/cs/supplier_report.inc:29
 #: mod/cs/drill_down.inc:51
 #: mod/cs/edit.inc:177
-#: mod/cs/edit.inc:383
-#: mod/cs/edit.inc:503
+#: mod/cs/edit.inc:404
+#: mod/cs/edit.inc:525
 #: mod/cs/add.inc:427
 #: mod/mpr/search.inc:74
 #: mod/mpr/search.inc:75
-#: mod/mpr/search.inc:362
+#: mod/mpr/search.inc:361
 #: mod/mpr/edit.inc:510
 #: mod/mpr/edit.inc:723
 #: mod/mpr/add.inc:301
@@ -880,7 +880,7 @@ msgstr "志工已指派至"
 
 #: tools/tpl_languages.php:32
 #: tools/tpl_languages.php:43
-#: tools/tpl_languages.php:318
+#: tools/tpl_languages.php:319
 msgid "Positions"
 msgstr "職位"
 
@@ -902,9 +902,9 @@ msgid "Assigned"
 msgstr "指派"
 
 #: tools/tpl_languages.php:39
-#: mod/ims/optimize.inc:495
+#: mod/ims/optimize.inc:500
 #: mod/ims/view_inv.inc:65
-#: mod/mpr/search.inc:244
+#: mod/mpr/search.inc:243
 msgid "Actions"
 msgstr "狀態/動作"
 
@@ -942,7 +942,7 @@ msgstr "沒有志工被指派到"
 
 #: tools/tpl_languages.php:50
 #: tools/tpl_languages.php:112
-#: tools/tpl_languages.php:252
+#: tools/tpl_languages.php:253
 msgid "Project"
 msgstr "專案"
 
@@ -951,13 +951,13 @@ msgid "Project Information"
 msgstr "專案資訊"
 
 #: tools/tpl_languages.php:53
-#: tools/tpl_languages.php:237
+#: tools/tpl_languages.php:238
 #, fuzzy
 msgid "Start date :"
 msgstr "開始日期"
 
 #: tools/tpl_languages.php:54
-#: tools/tpl_languages.php:238
+#: tools/tpl_languages.php:239
 #, fuzzy
 msgid "End date :"
 msgstr "結束日期"
@@ -988,7 +988,7 @@ msgid "Project to assign to"
 msgstr "本專案指派給"
 
 #: tools/tpl_languages.php:63
-#: tools/tpl_languages.php:336
+#: tools/tpl_languages.php:337
 #: mod/or/process_org.inc:33
 #: mod/or/process_org.inc:38
 #: inc/lib_security/acl_form.inc:250
@@ -1028,18 +1028,18 @@ msgid "Volunteers to Assign"
 msgstr "可進行指派的志工"
 
 #: tools/tpl_languages.php:76
-#: tools/tpl_languages.php:200
-#: mod/mpr/search.inc:361
+#: tools/tpl_languages.php:201
+#: mod/mpr/search.inc:360
 #: mod/mpr/edit.inc:509
 msgid "Picture"
 msgstr "圖片"
 
 #: tools/tpl_languages.php:77
-#: tools/tpl_languages.php:299
-#: tools/tpl_languages.php:314
+#: tools/tpl_languages.php:300
+#: tools/tpl_languages.php:315
 #: mod/ims/search.inc:142
 #: mod/ims/search.inc:215
-#: mod/mpr/search.inc:363
+#: mod/mpr/search.inc:362
 #: mod/mpr/edit.inc:143
 #: mod/mpr/add.inc:51
 #: mod/mpr/add.inc:52
@@ -1058,8 +1058,8 @@ msgid "Status"
 msgstr "狀態"
 
 #: tools/tpl_languages.php:78
-#: tools/tpl_languages.php:300
-#: tools/tpl_languages.php:317
+#: tools/tpl_languages.php:301
+#: tools/tpl_languages.php:318
 #, fuzzy
 msgid "Affiliation"
 msgstr "會籍："
@@ -1072,7 +1072,7 @@ msgstr "專案 - 職位"
 #: tools/tpl_languages.php:82
 #: tools/tpl_languages.php:104
 #: tools/tpl_languages.php:195
-#: tools/tpl_languages.php:234
+#: tools/tpl_languages.php:235
 #: mod/cr/edit.inc:436
 #: mod/cr/camp.inc:500
 msgid "Availability"
@@ -1096,7 +1096,7 @@ msgid "Identification"
 msgstr "身份識別"
 
 #: tools/tpl_languages.php:86
-#: tools/tpl_languages.php:229
+#: tools/tpl_languages.php:230
 #: mod/or/report.inc:465
 #: mod/or/view_org.inc:91
 #: mod/or/view_org.inc:471
@@ -1135,7 +1135,7 @@ msgid "Unassigned"
 msgstr "未指派"
 
 #: tools/tpl_languages.php:92
-#: tools/tpl_languages.php:307
+#: tools/tpl_languages.php:308
 msgid "Position:"
 msgstr "職位"
 
@@ -1203,7 +1203,7 @@ msgid "Affiliation:"
 msgstr "所屬單位"
 
 #: tools/tpl_languages.php:113
-#: tools/tpl_languages.php:253
+#: tools/tpl_languages.php:254
 msgid "Position"
 msgstr "職稱"
 
@@ -1543,93 +1543,98 @@ msgstr "特殊需求"
 msgid "Contact Information"
 msgstr "聯絡資訊"
 
-#: tools/tpl_languages.php:201
+#: tools/tpl_languages.php:200
+#, fuzzy
+msgid "Prefered medium confirmation :"
+msgstr "返回確認派送"
+
+#: tools/tpl_languages.php:202
 msgid "Optionally, you may upload a picture to identify yourself."
 msgstr "您可以上傳一張能代表自己的照片"
 
-#: tools/tpl_languages.php:202
+#: tools/tpl_languages.php:203
 #, fuzzy
 msgid "Image file:"
 msgstr "圖片檔案 (.JPG)"
 
-#: tools/tpl_languages.php:203
+#: tools/tpl_languages.php:204
 msgid "Current picture"
 msgstr "最近的照片"
 
-#: tools/tpl_languages.php:204
-#: tools/tpl_languages.php:219
+#: tools/tpl_languages.php:205
+#: tools/tpl_languages.php:220
 msgid "Please enter at least one field below:"
 msgstr "請輸入至少一個欄位"
 
-#: tools/tpl_languages.php:214
+#: tools/tpl_languages.php:215
 msgid "Advanced Search Criteria"
 msgstr "進階搜尋條件"
 
-#: tools/tpl_languages.php:215
+#: tools/tpl_languages.php:216
 msgid "Back to Basic Search"
 msgstr "返回搜尋頁面"
 
-#: tools/tpl_languages.php:216
+#: tools/tpl_languages.php:217
 msgid "Basic Search Criteria"
 msgstr "搜尋條件"
 
-#: tools/tpl_languages.php:217
+#: tools/tpl_languages.php:218
 #: mod/mpr/search.inc:67
 #: mod/dvr/search_individual.inc:124
 #: mod/dvr/search_group.inc:111
 msgid "Advanced Search"
 msgstr "進階搜尋"
 
-#: tools/tpl_languages.php:218
+#: tools/tpl_languages.php:219
 msgid "Search results are returned only if they match ALL selected fields."
 msgstr "只有全部條件都符合的結果才會被顯示出來"
 
-#: tools/tpl_languages.php:220
+#: tools/tpl_languages.php:221
 msgid "Filter volunteer results by any one of the following fields:"
 msgstr "請以下列任一欄位過濾志工查詢結果"
 
-#: tools/tpl_languages.php:224
+#: tools/tpl_languages.php:225
 #, fuzzy
 msgid "advanced"
 msgstr "進階搜尋"
 
-#: tools/tpl_languages.php:225
+#: tools/tpl_languages.php:226
 #, fuzzy
 msgid "Options"
 msgstr "選項"
 
-#: tools/tpl_languages.php:227
+#: tools/tpl_languages.php:228
 msgid "Find similar sounding names"
 msgstr "尋找任何發音相似的名字"
 
-#: tools/tpl_languages.php:228
+#: tools/tpl_languages.php:229
 msgid "Show only unassigned"
 msgstr "僅顯示為指派"
 
-#: tools/tpl_languages.php:233
+#: tools/tpl_languages.php:234
 msgid "and_skills"
 msgstr "以及技巧"
 
-#: tools/tpl_languages.php:235
+#: tools/tpl_languages.php:236
 msgid "Volunteer must be available for the ENTIRE time specified below"
 msgstr ""
 
-#: tools/tpl_languages.php:236
+#: tools/tpl_languages.php:237
 msgid "Volunteer must be available for ANY PORTION of the time specified below"
 msgstr ""
 
-#: tools/tpl_languages.php:239
+#: tools/tpl_languages.php:240
 #, fuzzy
 msgid "Page"
 msgstr "頁"
 
-#: tools/tpl_languages.php:240
+#: tools/tpl_languages.php:241
 #: inc/lib_paging.inc:117
 msgid "Go to Previous Page"
 msgstr "到前一頁"
 
-#: tools/tpl_languages.php:241
-#: mod/mpr/search.inc:210
+#: tools/tpl_languages.php:242
+#: mod/mpr/search.inc:207
 #: mod/rms/handler_req_ls.inc:54
 #: mod/rms/handler_plg_ls.inc:48
 #: inc/lib_paging.inc:117
@@ -1637,164 +1642,164 @@ msgstr "到前一頁"
 msgid "Previous"
 msgstr "前一筆"
 
-#: tools/tpl_languages.php:242
+#: tools/tpl_languages.php:243
 #: inc/lib_paging.inc:118
 msgid "Go to First Page"
 msgstr "前往第一頁"
 
-#: tools/tpl_languages.php:243
+#: tools/tpl_languages.php:244
 #: inc/lib_paging.inc:118
 msgid "1"
 msgstr "1"
 
-#: tools/tpl_languages.php:248
+#: tools/tpl_languages.php:249
 #: inc/lib_paging.inc:147
 #: inc/lib_paging.inc:227
 msgid "Records per page"
 msgstr "每頁資料筆數"
 
-#: tools/tpl_languages.php:250
+#: tools/tpl_languages.php:251
 msgid "hours for review on"
 msgstr "審視的時數"
 
-#: tools/tpl_languages.php:254
+#: tools/tpl_languages.php:255
 msgid "Pay Rate "
 msgstr "時薪"
 
-#: tools/tpl_languages.php:255
+#: tools/tpl_languages.php:256
 #, fuzzy
 msgid "Start "
 msgstr "開始日期"
 
-#: tools/tpl_languages.php:256
+#: tools/tpl_languages.php:257
 msgid "End "
 msgstr "結束日期"
 
-#: tools/tpl_languages.php:257
+#: tools/tpl_languages.php:258
 msgid "Approved:"
 msgstr "已核准"
 
-#: tools/tpl_languages.php:258
+#: tools/tpl_languages.php:259
 msgid "Denied:"
 msgstr "已拒絕"
 
-#: tools/tpl_languages.php:259
+#: tools/tpl_languages.php:260
 msgid "Report on My Projects"
 msgstr "我的專案報表"
 
-#: tools/tpl_languages.php:260
+#: tools/tpl_languages.php:261
 #: mod/rs/sample.inc:49
 #: mod/rs/sample.inc:117
 msgid "Create Report"
 msgstr "建立報表"
 
-#: tools/tpl_languages.php:261
+#: tools/tpl_languages.php:262
 msgid "Create Custom Report"
 msgstr "建立客制化報表"
 
-#: tools/tpl_languages.php:262
+#: tools/tpl_languages.php:263
 msgid "Filter by Project, Organization, or Both"
 msgstr "以「專案」、「組織」或是兩者兼取進行過濾"
 
-#: tools/tpl_languages.php:263
+#: tools/tpl_languages.php:264
 msgid "By Project:"
 msgstr "依專案"
 
-#: tools/tpl_languages.php:264
+#: tools/tpl_languages.php:265
 msgid "By Organization:"
 msgstr "依組織"
 
-#: tools/tpl_languages.php:265
+#: tools/tpl_languages.php:266
 msgid "Create Project or Organization Report"
 msgstr "建立專案或組織報告"
 
-#: tools/tpl_languages.php:266
+#: tools/tpl_languages.php:267
 msgid "Report by Specific Volunteers"
 msgstr "由特定志工回報"
 
-#: tools/tpl_languages.php:267
+#: tools/tpl_languages.php:268
 msgid "To add a volunteer to the list, select one in the 'List of Volunteers' below and click on 'Add'."
 msgstr "如欲增加一個志工，請點選下列志工清單中的任一位，再點選「增加」"
 
-#: tools/tpl_languages.php:268
+#: tools/tpl_languages.php:269
 msgid "To remove a volunteer from the list, click on the remove link next to his name."
 msgstr "如欲移除任一志工，請點選志工名字旁邊的「移除」按鈕"
 
-#: tools/tpl_languages.php:269
-#: tools/tpl_languages.php:390
+#: tools/tpl_languages.php:270
+#: tools/tpl_languages.php:391
 msgid "List of Volunteers :"
 msgstr "志工清單"
 
-#: tools/tpl_languages.php:270
+#: tools/tpl_languages.php:271
 msgid "Create Custom Report for these Volunteers"
 msgstr "建立這群志工的客制化報表"
 
-#: tools/tpl_languages.php:271
+#: tools/tpl_languages.php:272
 #, fuzzy
 msgid "You must select at least one volunteer if reporting by volunteer."
 msgstr "請選擇將訊息至少傳給一個志願者"
 
-#: tools/tpl_languages.php:272
-#: tools/tpl_languages.php:276
+#: tools/tpl_languages.php:273
+#: tools/tpl_languages.php:277
 #: mod/pref/ims_menu.inc:9
 #: inc/lib_security/auth_form.inc:204
 msgid "Change Password"
 msgstr "變更密碼"
 
-#: tools/tpl_languages.php:273
+#: tools/tpl_languages.php:274
 msgid "Current Password :"
 msgstr "原有密碼"
 
-#: tools/tpl_languages.php:274
+#: tools/tpl_languages.php:275
 #, fuzzy
 msgid "New Password :"
 msgstr "新密碼"
 
-#: tools/tpl_languages.php:275
+#: tools/tpl_languages.php:276
 msgid "Re-Type New Password :"
 msgstr "重新輸入密碼"
 
-#: tools/tpl_languages.php:277
+#: tools/tpl_languages.php:278
 msgid "Pending Hours Approval"
 msgstr "核准延後服務時數"
 
-#: tools/tpl_languages.php:278
+#: tools/tpl_languages.php:279
 #, fuzzy
 msgid "Name :"
 msgstr "名稱"
 
-#: tools/tpl_languages.php:279
+#: tools/tpl_languages.php:280
 #, fuzzy
 msgid "Project :"
 msgstr "專案"
 
-#: tools/tpl_languages.php:280
+#: tools/tpl_languages.php:281
 #, fuzzy
 msgid "View Hours"
 msgstr "檢視期間"
 
-#: tools/tpl_languages.php:281
+#: tools/tpl_languages.php:282
 msgid "Skills Modifications"
 msgstr "編輯技能資訊"
 
-#: tools/tpl_languages.php:282
+#: tools/tpl_languages.php:283
 msgid "Add a new skill"
 msgstr "新增技能項目"
 
-#: tools/tpl_languages.php:283
+#: tools/tpl_languages.php:284
 msgid "Skill Description :"
 msgstr "技能描述"
 
-#: tools/tpl_languages.php:284
+#: tools/tpl_languages.php:285
 msgid "Code [4-5 letter unique abbreviation] : "
 msgstr ""
 
-#: tools/tpl_languages.php:285
-#: tools/tpl_languages.php:358
+#: tools/tpl_languages.php:286
 #: tools/tpl_languages.php:359
-#: tools/tpl_languages.php:370
+#: tools/tpl_languages.php:360
 #: tools/tpl_languages.php:371
-#: tools/tpl_languages.php:391
+#: tools/tpl_languages.php:372
+#: tools/tpl_languages.php:392
 #: mod/cs/add.inc:114
 #: mod/cs/add.inc:295
 #: mod/cs/add.inc:375
@@ -1805,12 +1810,12 @@ msgstr ""
 msgid "Add"
 msgstr "增加"
 
-#: tools/tpl_languages.php:286
+#: tools/tpl_languages.php:287
 msgid "No skills defined."
 msgstr "沒有被定義的技能"
 
-#: tools/tpl_languages.php:287
-#: tools/tpl_languages.php:365
+#: tools/tpl_languages.php:288
+#: tools/tpl_languages.php:366
 #: mod/or/admin_forms.inc:131
 #: mod/or/admin_forms.inc:189
 #: mod/mpr/edit.inc:725
@@ -1825,65 +1830,65 @@ msgstr "沒有被定義的技能"
 msgid "Remove"
 msgstr "刪除"
 
-#: tools/tpl_languages.php:288
+#: tools/tpl_languages.php:289
 msgid "In order to begin, please log in using the Sahana account you just created."
 msgstr "請以SahanaTW帳戶資料登入，以便開始。"
 
-#: tools/tpl_languages.php:289
 #: tools/tpl_languages.php:290
+#: tools/tpl_languages.php:291
 msgid "View Printer Friendly Version"
 msgstr "瀏覽友善列印版本"
 
-#: tools/tpl_languages.php:291
+#: tools/tpl_languages.php:292
 msgid "Viewing Report For"
 msgstr "瀏覽報表"
 
-#: tools/tpl_languages.php:292
+#: tools/tpl_languages.php:293
 msgid "Specific Volunteers"
 msgstr "定義志工"
 
-#: tools/tpl_languages.php:293
+#: tools/tpl_languages.php:294
 msgid "All Volunteers Part of Organization:"
 msgstr "組織內所有志工"
 
-#: tools/tpl_languages.php:294
+#: tools/tpl_languages.php:295
 msgid "Restricting Results by Project:"
 msgstr "專案的限制說明"
 
-#: tools/tpl_languages.php:295
-#: tools/tpl_languages.php:312
+#: tools/tpl_languages.php:296
+#: tools/tpl_languages.php:313
 #, fuzzy
 msgid "Project:"
 msgstr "專案"
 
-#: tools/tpl_languages.php:296
+#: tools/tpl_languages.php:297
 #, fuzzy
 msgid "Organization:"
 msgstr "組織"
 
-#: tools/tpl_languages.php:297
+#: tools/tpl_languages.php:298
 msgid "All Volunteers that Ever Worked on any Projects"
 msgstr "所有服務過任一專案的志工"
 
-#: tools/tpl_languages.php:301
+#: tools/tpl_languages.php:302
 msgid "Total Positions Held"
 msgstr "現有職位"
 
-#: tools/tpl_languages.php:302
-#: tools/tpl_languages.php:319
-#: tools/tpl_languages.php:322
+#: tools/tpl_languages.php:303
+#: tools/tpl_languages.php:320
+#: tools/tpl_languages.php:323
 msgid "Total Hours"
 msgstr "總時數"
 
-#: tools/tpl_languages.php:303
-#: tools/tpl_languages.php:323
+#: tools/tpl_languages.php:304
+#: tools/tpl_languages.php:324
 #, fuzzy
 msgid "Total Monetary Value"
 msgstr "最後總計價值"
 
-#: tools/tpl_languages.php:304
+#: tools/tpl_languages.php:305
 #: mod/mpr/view.inc:26
-#: mod/mpr/search.inc:241
+#: mod/mpr/search.inc:240
 #: mod/rms/handler_req_ls.inc:94
 #: mod/rms/handler_req_sch.inc:216
 #: mod/rms/handler_plg_ls.inc:95
@@ -1891,285 +1896,285 @@ msgstr "最後總計價值"
 msgid "Details"
 msgstr "細節"
 
-#: tools/tpl_languages.php:305
-#: tools/tpl_languages.php:315
+#: tools/tpl_languages.php:306
+#: tools/tpl_languages.php:316
 #: inc/lib_security/acl_form.inc:377
 #: inc/lib_security/acl_form.inc:442
 msgid "Active"
 msgstr "活動中"
 
-#: tools/tpl_languages.php:306
-#: tools/tpl_languages.php:316
+#: tools/tpl_languages.php:307
+#: tools/tpl_languages.php:317
 msgid "Retired"
 msgstr "已退休"
 
-#: tools/tpl_languages.php:308
+#: tools/tpl_languages.php:309
 msgid "Position Status:"
 msgstr "職位狀態"
 
-#: tools/tpl_languages.php:309
+#: tools/tpl_languages.php:310
 msgid "Hours:"
 msgstr "時數"
 
-#: tools/tpl_languages.php:310
+#: tools/tpl_languages.php:311
 msgid "Hourly Rate:"
 msgstr "時薪"
 
-#: tools/tpl_languages.php:311
+#: tools/tpl_languages.php:312
 #, fuzzy
 msgid "Monetary Value:"
 msgstr "總價值"
 
-#: tools/tpl_languages.php:313
+#: tools/tpl_languages.php:314
 msgid "no positions held"
 msgstr "沒有職位被保留"
 
-#: tools/tpl_languages.php:320
+#: tools/tpl_languages.php:321
 msgid "Total Payment"
 msgstr "付款總金額"
 
-#: tools/tpl_languages.php:321
+#: tools/tpl_languages.php:322
 msgid "none"
 msgstr "無"
 
-#: tools/tpl_languages.php:324
+#: tools/tpl_languages.php:325
 msgid "Administrative Functions"
 msgstr "管理功能"
 
-#: tools/tpl_languages.php:325
+#: tools/tpl_languages.php:326
 msgid "The following is a description of each administrative function for the VM module"
 msgstr ""
 
-#: tools/tpl_languages.php:326
-#: tools/tpl_languages.php:349
+#: tools/tpl_languages.php:327
+#: tools/tpl_languages.php:350
 msgid "Access Control Modifications"
 msgstr "權限控管調整"
 
-#: tools/tpl_languages.php:327
+#: tools/tpl_languages.php:328
 msgid "Modify how access to the VM module is handled"
 msgstr ""
 
-#: tools/tpl_languages.php:328
-#: tools/tpl_languages.php:350
+#: tools/tpl_languages.php:329
+#: tools/tpl_languages.php:351
 msgid "Update Search Registry"
 msgstr "更新搜尋登錄"
 
-#: tools/tpl_languages.php:329
+#: tools/tpl_languages.php:330
 msgid "Since a volunteer's name may change in other places in Sahana, you may have to periodically update the search registry with current sounds-like name matching for volunteer searching"
 msgstr ""
 
-#: tools/tpl_languages.php:330
-#: tools/tpl_languages.php:351
+#: tools/tpl_languages.php:331
+#: tools/tpl_languages.php:352
 msgid "Clear Template Cache"
 msgstr "清除範本快取記憶"
 
-#: tools/tpl_languages.php:331
+#: tools/tpl_languages.php:332
 msgid "Delete all PHP templates that have been cached"
 msgstr "刪除所有已經快取的 PHP 樣板"
 
-#: tools/tpl_languages.php:332
-#: tools/tpl_languages.php:352
+#: tools/tpl_languages.php:333
+#: tools/tpl_languages.php:353
 #, fuzzy
 msgid "Audit ACL"
 msgstr "稽核"
 
-#: tools/tpl_languages.php:333
+#: tools/tpl_languages.php:334
 msgid "Verify that all 'act' and 'vm_action' combinations in the VM code are under access control and that all VM tables/views are classified"
 msgstr ""
 
-#: tools/tpl_languages.php:334
-#: tools/tpl_languages.php:337
+#: tools/tpl_languages.php:335
+#: tools/tpl_languages.php:338
 #: inst/setup.inc:299
 msgid "Access Control"
 msgstr "權限控制"
 
-#: tools/tpl_languages.php:335
+#: tools/tpl_languages.php:336
 #, fuzzy
 msgid "Please select a situation below to modify access to:"
 msgstr "請指定一個情境，以修改存取"
 
-#: tools/tpl_languages.php:338
+#: tools/tpl_languages.php:339
 #: mod/sync/lib_report.inc:46
 #: mod/admin/lc_db.inc:81
 msgid "Table Name"
 msgstr "資料表名稱"
 
-#: tools/tpl_languages.php:339
+#: tools/tpl_languages.php:340
 #: inc/lib_security/acl_form.inc:276
 msgid "Create"
 msgstr "新建"
 
-#: tools/tpl_languages.php:340
+#: tools/tpl_languages.php:341
 #: inc/lib_security/acl_form.inc:276
 msgid "Read"
 msgstr "讀取"
 
-#: tools/tpl_languages.php:343
+#: tools/tpl_languages.php:344
 msgid "Remove From List"
 msgstr "從清單中移除"
 
-#: tools/tpl_languages.php:344
+#: tools/tpl_languages.php:345
 #, fuzzy
 msgid "Special Constraints"
 msgstr "特殊訂單"
 
-#: tools/tpl_languages.php:345
+#: tools/tpl_languages.php:346
 #, fuzzy
 msgid "on"
 msgstr "於"
 
-#: tools/tpl_languages.php:346
+#: tools/tpl_languages.php:347
 #, fuzzy
 msgid "Save Changes"
 msgstr "儲存修改"
 
-#: tools/tpl_languages.php:347
+#: tools/tpl_languages.php:348
 msgid "Cancel Changes"
 msgstr "取消修改"
 
-#: tools/tpl_languages.php:348
+#: tools/tpl_languages.php:349
 msgid "VM Admin Home"
 msgstr "志工管理首頁"
 
-#: tools/tpl_languages.php:353
+#: tools/tpl_languages.php:354
 #, fuzzy
 msgid "ACL Audit"
 msgstr "稽核"
 
-#: tools/tpl_languages.php:354
+#: tools/tpl_languages.php:355
 msgid "All access requests in the database and in the VM code match."
 msgstr ""
 
-#: tools/tpl_languages.php:355
+#: tools/tpl_languages.php:356
 msgid "Warning:"
 msgstr "提醒："
 
-#: tools/tpl_languages.php:356
+#: tools/tpl_languages.php:357
 msgid "The following requests in the VM code are not under access control:"
 msgstr ""
 
-#: tools/tpl_languages.php:360
+#: tools/tpl_languages.php:361
 msgid "Please enter a description"
 msgstr "請輸入描述"
 
-#: tools/tpl_languages.php:361
-#: tools/tpl_languages.php:366
+#: tools/tpl_languages.php:362
+#: tools/tpl_languages.php:367
 #: inc/lib_stream_html.inc:80
 msgid "Warning"
 msgstr "提醒"
 
-#: tools/tpl_languages.php:362
+#: tools/tpl_languages.php:363
 #, fuzzy
 msgid "The following requests in the database are never referenced"
 msgstr "在資料庫中沒有符合您條件的需求"
 
-#: tools/tpl_languages.php:364
+#: tools/tpl_languages.php:365
 msgid "Remove From Database"
 msgstr "從資料庫移除"
 
-#: tools/tpl_languages.php:367
+#: tools/tpl_languages.php:368
 msgid "The following database tables/views have not been given any classification level"
 msgstr ""
 
-#: tools/tpl_languages.php:368
+#: tools/tpl_languages.php:369
 #, fuzzy
 msgid "Table"
 msgstr "啟用"
 
-#: tools/tpl_languages.php:369
+#: tools/tpl_languages.php:370
 #, fuzzy
 msgid "Classification Level"
 msgstr "活躍層次"
 
-#: tools/tpl_languages.php:372
+#: tools/tpl_languages.php:373
 #: mod/vm/menu.inc:62
 msgid "Inbox"
 msgstr "收信箱"
 
-#: tools/tpl_languages.php:373
+#: tools/tpl_languages.php:374
 #: mod/vm/menu.inc:63
 msgid "Outbox"
 msgstr "寄信箱"
 
-#: tools/tpl_languages.php:375
+#: tools/tpl_languages.php:376
 #, fuzzy
 msgid "From"
 msgstr "由"
 
-#: tools/tpl_languages.php:376
-#: tools/tpl_languages.php:387
-#: mod/ims/optimize.inc:572
-#: mod/ims/optimize.inc:657
-#: mod/ims/optimize.inc:824
-#: mod/ims/optimize.inc:836
-#: mod/ims/optimize.inc:1046
+#: tools/tpl_languages.php:377
+#: tools/tpl_languages.php:388
+#: mod/ims/optimize.inc:577
+#: mod/ims/optimize.inc:662
+#: mod/ims/optimize.inc:829
+#: mod/ims/optimize.inc:841
+#: mod/ims/optimize.inc:1051
 #: mod/ims/ims_report.inc:680
 #: mod/ims/transfer_inv.inc:462
 msgid "To"
 msgstr "到"
 
-#: tools/tpl_languages.php:377
+#: tools/tpl_languages.php:378
 #: mod/ims/ims_report.inc:681
 #: mod/ims/transfer_inv.inc:463
 msgid "Date Sent"
 msgstr "發送日期"
 
-#: tools/tpl_languages.php:378
+#: tools/tpl_languages.php:379
 msgid "Preview"
 msgstr "預覽"
 
-#: tools/tpl_languages.php:379
-#: tools/tpl_languages.php:385
+#: tools/tpl_languages.php:380
+#: tools/tpl_languages.php:386
 msgid "Are you sure you want to delete this message?"
 msgstr "您確定要刪除這個訊息？"
 
-#: tools/tpl_languages.php:380
+#: tools/tpl_languages.php:381
 #, fuzzy
 msgid "Your"
 msgstr "您的參考號"
 
-#: tools/tpl_languages.php:381
+#: tools/tpl_languages.php:382
 msgid "is empty"
 msgstr "空白"
 
-#: tools/tpl_languages.php:382
+#: tools/tpl_languages.php:383
 msgid "Message not found."
 msgstr "沒有訊息"
 
-#: tools/tpl_languages.php:383
+#: tools/tpl_languages.php:384
 #, fuzzy
 msgid "Back to Inbox"
 msgstr "返回目錄"
 
-#: tools/tpl_languages.php:384
+#: tools/tpl_languages.php:385
 #, fuzzy
 msgid "Back to Outbox"
 msgstr "返回目錄"
 
-#: tools/tpl_languages.php:386
+#: tools/tpl_languages.php:387
 msgid "Delete this message"
 msgstr "刪除這則訊息"
 
-#: tools/tpl_languages.php:388
+#: tools/tpl_languages.php:389
 msgid "To List:"
 msgstr "收件者清單"
 
-#: tools/tpl_languages.php:389
+#: tools/tpl_languages.php:390
 msgid "To add a volunteer to the 'To' list, select one in the 'List of Volunteers' below and click on 'Add'. To remove a volunteer from the 'To' list, click on the remove link next to his name."
 msgstr "如欲將任一志工加入收件者清單，先點選志工清單中的名字，再點選「增加」。如欲將志工名字自收件者移除，點選志工姓名旁邊的移除連結。"
 
-#: tools/tpl_languages.php:392
+#: tools/tpl_languages.php:393
 #: mod/msg/handler_cap_edit.inc:109
 #: mod/msg/handler_cap_new.inc:372
 msgid "Message"
 msgstr "訊息"
 
-#: tools/tpl_languages.php:393
+#: tools/tpl_languages.php:394
 #, fuzzy
 msgid "Message :"
 msgstr "訊息"
 
-#: tools/tpl_languages.php:394
+#: tools/tpl_languages.php:395
 #: mod/ims/transfer_inv.inc:336
 #: mod/msg/message_forms.inc:446
 msgid "Send"
@@ -2450,9 +2455,9 @@ msgstr "可用的設施"
 #: mod/ims/add_item.inc:160
 #: mod/ims/view_inv.inc:216
 #: mod/rs/config.inc:47
-#: mod/cs/edit.inc:278
-#: mod/cs/edit.inc:442
-#: mod/cs/edit.inc:558
+#: mod/cs/edit.inc:284
+#: mod/cs/edit.inc:464
+#: mod/cs/edit.inc:580
 #: mod/cs/_admin.inc:50
 #: mod/cs/_admin.inc:79
 #: mod/cs/add.inc:200
@@ -2599,7 +2604,7 @@ msgstr "無記錄"
 #: mod/or/view_org.inc:542
 #: mod/mpr/mpr_lib.inc:50
 #: mod/mpr/mpr_lib.inc:71
-#: mod/mpr/search.inc:282
+#: mod/mpr/search.inc:281
 #: mod/dvr/lib.inc:150
 #: mod/dvr/lib.inc:170
 msgid "Assign to more incidents"
@@ -2630,11 +2635,11 @@ msgid "GIS Map"
 msgstr "GIS 地圖"
 
 #: mod/or/view_org.inc:434
-#: mod/ims/view_edit_item.inc:146
+#: mod/ims/view_edit_item.inc:153
 #: mod/ims/view_inv.inc:215
-#: mod/cs/edit.inc:277
-#: mod/cs/edit.inc:441
-#: mod/cs/edit.inc:557
+#: mod/cs/edit.inc:283
+#: mod/cs/edit.inc:463
+#: mod/cs/edit.inc:579
 #: mod/admin/location.inc:98
 #: mod/cr/edit.inc:170
 #: mod/rms/handler_mng_ff.inc:40
@@ -2645,7 +2650,7 @@ msgstr "關閉"
 #: mod/or/view_org.inc:568
 #: mod/or/view_org.inc:578
 #: mod/mpr/view.inc:103
-#: mod/mpr/search.inc:393
+#: mod/mpr/search.inc:392
 #: mod/rms/handler_mng_ff.inc:109
 msgid "Back"
 msgstr "上一步"
@@ -3044,7 +3049,7 @@ msgid "Find the organisation(s) by specifying its details."
 msgstr "根據指定資訊尋找組織"
 
 #: mod/or/home.inc:63
-#: mod/cs/main.inc:251
+#: mod/cs/main.inc:249
 msgid "View And Edit"
 msgstr "檢視與編輯"
 
@@ -3591,7 +3596,7 @@ msgstr "關於 Sahana"
 #: mod/ims/add_item.inc:37
 #: mod/ims/view_edit_item.inc:42
 #: mod/ims/view_edit_item.inc:45
-#: mod/cs/main.inc:228
+#: mod/cs/main.inc:226
 #: mod/dvr/admin.inc:125
 msgid "Add Item"
 msgstr "新增物資"
@@ -3601,7 +3606,7 @@ msgid "Add items to the Inventory"
 msgstr "新增物資到倉庫"
 
 #: mod/ims/add_item.inc:109
-#: mod/ims/optimize.inc:887
+#: mod/ims/optimize.inc:892
 msgid "* Item : "
 msgstr "* 物資："
 
@@ -3630,8 +3635,8 @@ msgstr "您要選擇的物資的單位成本"
 #: mod/ims/search.inc:104
 #: mod/ims/optimize.inc:65
 #: mod/ims/optimize.inc:235
-#: mod/ims/optimize.inc:364
-#: mod/ims/optimize.inc:901
+#: mod/ims/optimize.inc:369
+#: mod/ims/optimize.inc:906
 #: mod/ims/mini_quantity.inc:99
 #: mod/ims/mini_quantity.inc:109
 #: mod/rms/handler_mng_ff.inc:287
@@ -3771,7 +3776,7 @@ msgstr "搜尋結果"
 
 #: mod/ims/search.inc:138
 #: mod/ims/search.inc:211
-#: mod/ims/optimize.inc:688
+#: mod/ims/optimize.inc:693
 #: mod/ims/ims_report.inc:236
 #: mod/ims/mini_quantity.inc:86
 #: mod/dvr/admin.inc:114
@@ -3787,7 +3792,6 @@ msgstr "物資名稱"
 #: mod/ims/transfer_inv.inc:95
 #: mod/ims/transfer_inv.inc:149
 #: mod/ims/home.inc:51
-#: mod/ims/mini_quantity.inc:246
 #: mod/rms/handler_mng_ff.inc:197
 msgid "Amount"
 msgstr "總數"
@@ -3796,9 +3800,9 @@ msgstr "總數"
 #: mod/ims/search.inc:213
 #: mod/ims/optimize.inc:86
 #: mod/ims/optimize.inc:256
-#: mod/ims/optimize.inc:494
-#: mod/ims/optimize.inc:692
-#: mod/ims/optimize.inc:1208
+#: mod/ims/optimize.inc:499
+#: mod/ims/optimize.inc:697
+#: mod/ims/optimize.inc:1213
 #: mod/ims/ims_report.inc:55
 #: mod/ims/ims_report.inc:155
 #: mod/ims/ims_report.inc:238
@@ -3822,9 +3826,9 @@ msgstr "單位"
 #: mod/ims/search.inc:214
 #: mod/ims/optimize.inc:85
 #: mod/ims/optimize.inc:255
-#: mod/ims/optimize.inc:491
-#: mod/ims/optimize.inc:689
-#: mod/ims/optimize.inc:1205
+#: mod/ims/optimize.inc:496
+#: mod/ims/optimize.inc:694
+#: mod/ims/optimize.inc:1210
 #: mod/ims/ims_report.inc:56
 #: mod/ims/ims_report.inc:158
 #: mod/ims/ims_report.inc:239
@@ -3955,14 +3959,14 @@ msgstr "選擇相關的物資"
 
 #: mod/ims/optimize.inc:56
 #: mod/ims/optimize.inc:226
-#: mod/ims/optimize.inc:356
-#: mod/ims/optimize.inc:889
+#: mod/ims/optimize.inc:361
+#: mod/ims/optimize.inc:894
 #: mod/rms/handler_plg_new.inc:115
 msgid "Inventory Selection"
 msgstr "庫存選擇"
 
 #: mod/ims/optimize.inc:65
-#: mod/ims/optimize.inc:364
+#: mod/ims/optimize.inc:369
 msgid "If this box does not contain prefered inventory name  please go through the Multiple Inventory Management Menu and add an Inventory first"
 msgstr "如果沒有倉庫可選，請先使用倉庫管理選單，新增一個倉庫。"
 
@@ -4024,7 +4028,7 @@ msgid "Select Alternative Item/Items"
 msgstr "選擇欲設定替代品之物資項目"
 
 #: mod/ims/optimize.inc:235
-#: mod/ims/optimize.inc:901
+#: mod/ims/optimize.inc:906
 msgid "If this box does not contain preferred inventory name  please go through the Multiple Inventory Management Menu and add an Inventory first"
 msgstr "如果沒倉庫可選，請先使用多倉庫管理選單，新增一個倉庫。"
 
@@ -4032,79 +4036,79 @@ msgstr "如果沒倉庫可選，請先使用多倉庫管理選單，新增一個
 msgid "Alternative Items Selection"
 msgstr "替代物資選擇"
 
-#: mod/ims/optimize.inc:341
+#: mod/ims/optimize.inc:346
 msgid "Alternate item successfully set"
 msgstr "已成功設置替代物資"
 
-#: mod/ims/optimize.inc:366
+#: mod/ims/optimize.inc:371
 msgid "Prediction Type"
 msgstr "預估類型"
 
-#: mod/ims/optimize.inc:371
-#: mod/ims/optimize.inc:908
+#: mod/ims/optimize.inc:376
+#: mod/ims/optimize.inc:913
 msgid "Prediction Type : "
 msgstr "預估類型："
 
-#: mod/ims/optimize.inc:377
-#: mod/ims/optimize.inc:915
+#: mod/ims/optimize.inc:382
+#: mod/ims/optimize.inc:920
 msgid "Algorithm Selection : "
 msgstr "演算法選擇："
 
-#: mod/ims/optimize.inc:379
+#: mod/ims/optimize.inc:384
 msgid "Time Period to make Prediction"
 msgstr "進行預測的時間長度"
 
-#: mod/ims/optimize.inc:381
 #: mod/ims/optimize.inc:386
-#: mod/ims/optimize.inc:919
+#: mod/ims/optimize.inc:391
 #: mod/ims/optimize.inc:924
+#: mod/ims/optimize.inc:929
 msgid "Time Period : "
 msgstr "時間長度："
 
-#: mod/ims/optimize.inc:381
-#: mod/ims/optimize.inc:919
+#: mod/ims/optimize.inc:386
+#: mod/ims/optimize.inc:924
 msgid "Time period which you are going to make prediction"
 msgstr "你必須作出預估的時間長度"
 
-#: mod/ims/optimize.inc:388
-#: mod/ims/optimize.inc:927
-#: mod/ims/optimize.inc:1016
+#: mod/ims/optimize.inc:393
+#: mod/ims/optimize.inc:932
+#: mod/ims/optimize.inc:1021
 msgid "Customized Report"
 msgstr "客製化報表"
 
-#: mod/ims/optimize.inc:397
-#: mod/ims/optimize.inc:935
-#: mod/ims/optimize.inc:956
+#: mod/ims/optimize.inc:402
+#: mod/ims/optimize.inc:940
+#: mod/ims/optimize.inc:961
 msgid "Daily Report"
 msgstr "每日報表"
 
-#: mod/ims/optimize.inc:398
-#: mod/ims/optimize.inc:936
-#: mod/ims/optimize.inc:978
+#: mod/ims/optimize.inc:403
+#: mod/ims/optimize.inc:941
+#: mod/ims/optimize.inc:983
 msgid "Weekly Report"
 msgstr "每週報表"
 
-#: mod/ims/optimize.inc:399
-#: mod/ims/optimize.inc:937
-#: mod/ims/optimize.inc:997
+#: mod/ims/optimize.inc:404
+#: mod/ims/optimize.inc:942
+#: mod/ims/optimize.inc:1002
 msgid "Monthly Report"
 msgstr "每月報表"
 
-#: mod/ims/optimize.inc:474
+#: mod/ims/optimize.inc:479
 msgid "Forecasting by Inventory"
 msgstr "根據庫存來預估"
 
-#: mod/ims/optimize.inc:490
+#: mod/ims/optimize.inc:495
 msgid "Item name"
 msgstr "物資名稱"
 
-#: mod/ims/optimize.inc:492
+#: mod/ims/optimize.inc:497
 msgid "Forecasted Value"
 msgstr "預估值"
 
-#: mod/ims/optimize.inc:493
-#: mod/ims/optimize.inc:691
-#: mod/ims/optimize.inc:1342
+#: mod/ims/optimize.inc:498
+#: mod/ims/optimize.inc:696
+#: mod/ims/optimize.inc:1347
 #: mod/ims/ims_report.inc:31
 #: mod/ims/main.inc:54
 #: mod/ims/mini_quantity.inc:49
@@ -4112,101 +4116,101 @@ msgstr "預估值"
 msgid "Re-Order Level"
 msgstr "重新訂購的標準"
 
-#: mod/ims/optimize.inc:572
+#: mod/ims/optimize.inc:577
 msgid "Pie Chart to forecasting Since "
 msgstr "圓餅圖預測，since"
 
-#: mod/ims/optimize.inc:657
-#: mod/ims/optimize.inc:824
-#: mod/ims/optimize.inc:836
+#: mod/ims/optimize.inc:662
+#: mod/ims/optimize.inc:829
+#: mod/ims/optimize.inc:841
 msgid "Bar Chart to forecasting Since "
 msgstr "柱狀圖預測，since"
 
-#: mod/ims/optimize.inc:671
+#: mod/ims/optimize.inc:676
 msgid "Prediction Report for Relative items"
 msgstr "關聯物資預估報表"
 
-#: mod/ims/optimize.inc:690
+#: mod/ims/optimize.inc:695
 msgid "Forecasted Amount"
 msgstr "預估總數 "
 
-#: mod/ims/optimize.inc:693
-#: mod/ims/optimize.inc:1206
+#: mod/ims/optimize.inc:698
+#: mod/ims/optimize.inc:1211
 msgid "Relation to"
 msgstr "關聯到"
 
-#: mod/ims/optimize.inc:855
+#: mod/ims/optimize.inc:860
 msgid "Select Item to Predict"
 msgstr "選擇物資做預估"
 
-#: mod/ims/optimize.inc:879
+#: mod/ims/optimize.inc:884
 msgid "Item Prediction"
 msgstr "物資預估"
 
-#: mod/ims/optimize.inc:886
+#: mod/ims/optimize.inc:891
 msgid "Selected Item"
 msgstr "已選擇項目"
 
-#: mod/ims/optimize.inc:910
+#: mod/ims/optimize.inc:915
 msgid "Algorithm Selection"
 msgstr "演算法選擇"
 
-#: mod/ims/optimize.inc:917
+#: mod/ims/optimize.inc:922
 msgid "Time Period one to predict"
 msgstr "用來預估的時間長度"
 
-#: mod/ims/optimize.inc:1046
+#: mod/ims/optimize.inc:1051
 msgid "Prediction Report Since "
 msgstr "預估報表, since"
 
-#: mod/ims/optimize.inc:1051
+#: mod/ims/optimize.inc:1056
 msgid "Prediction Records"
 msgstr "預估記錄 "
 
-#: mod/ims/optimize.inc:1074
+#: mod/ims/optimize.inc:1079
 msgid "Item Name :"
 msgstr "物資名稱："
 
-#: mod/ims/optimize.inc:1078
+#: mod/ims/optimize.inc:1083
 msgid "Inventory Name :"
 msgstr "倉庫名稱："
 
-#: mod/ims/optimize.inc:1082
-#: mod/ims/optimize.inc:1374
+#: mod/ims/optimize.inc:1087
+#: mod/ims/optimize.inc:1379
 msgid "Forecasted Value :"
 msgstr "預估值："
 
-#: mod/ims/optimize.inc:1086
-#: mod/ims/optimize.inc:1375
+#: mod/ims/optimize.inc:1091
+#: mod/ims/optimize.inc:1380
 #: mod/cs/add.inc:283
 msgid "Unit :"
 msgstr "單位："
 
-#: mod/ims/optimize.inc:1090
+#: mod/ims/optimize.inc:1095
 msgid "Relative Items"
 msgstr "相關項目"
 
-#: mod/ims/optimize.inc:1091
+#: mod/ims/optimize.inc:1096
 msgid "Re-Order level"
 msgstr "加訂等級"
 
-#: mod/ims/optimize.inc:1204
+#: mod/ims/optimize.inc:1209
 msgid "Relational Item"
 msgstr "相關物資"
 
-#: mod/ims/optimize.inc:1207
+#: mod/ims/optimize.inc:1212
 msgid "Forecast"
 msgstr "預估"
 
-#: mod/ims/optimize.inc:1372
+#: mod/ims/optimize.inc:1377
 msgid "Item_name :"
 msgstr "Item_name："
 
-#: mod/ims/optimize.inc:1373
+#: mod/ims/optimize.inc:1378
 msgid "Inventory :"
 msgstr "庫存："
 
-#: mod/ims/optimize.inc:1378
+#: mod/ims/optimize.inc:1383
 msgid "Re-order level will not be exceeded in given time period"
 msgstr "在給定時間內，不會超過加訂等級"
 
@@ -4355,7 +4359,7 @@ msgid "Authorized Person"
 msgstr "授權者"
 
 #: mod/ims/ims_report.inc:683
-#: mod/ims/view_edit_item.inc:148
+#: mod/ims/view_edit_item.inc:155
 #: mod/ims/transfer_inv.inc:465
 #: mod/ims/main.inc:59
 msgid "Transit Item"
@@ -4463,7 +4467,7 @@ msgstr "可用存貨"
 msgid "Supplier Name"
 msgstr "供應商名稱"
 
-#: mod/ims/view_edit_item.inc:86
+#: mod/ims/view_edit_item.inc:93
 #: mod/ims/view_inv.inc:47
 #: mod/ims/transfer_inv.inc:84
 #: mod/ims/transfer_inv.inc:441
@@ -4471,15 +4475,15 @@ msgstr "供應商名稱"
 msgid "Go to Page : "
 msgstr "前往頁面："
 
-#: mod/ims/view_edit_item.inc:140
+#: mod/ims/view_edit_item.inc:147
 msgid "Inventory Transfer"
 msgstr "庫存轉移"
 
-#: mod/ims/view_edit_item.inc:147
+#: mod/ims/view_edit_item.inc:154
 msgid "Send Item"
 msgstr "送出物資"
 
-#: mod/ims/view_edit_item.inc:175
+#: mod/ims/view_edit_item.inc:182
 msgid " Item was successfully updated"
 msgstr "物資已成功更新"
 
@@ -4961,14 +4965,19 @@ msgstr "移倉物資清單"
 msgid "Inventories"
 msgstr "倉庫列表"
 
+#: mod/ims/main.inc:48
+msgid "Add/List Items"
+msgstr "新增物資"
+
 #: mod/ims/main.inc:49
 #: mod/cs/edit.inc:69
 msgid "Items"
 msgstr "物資"
 
 #: mod/ims/main.inc:50
-msgid "Add/List Items"
-msgstr "新增物資"
+#, fuzzy
+msgid "Add Items"
+msgstr "新增產品"
 
 #: mod/ims/main.inc:51
 msgid "Send Items"
@@ -5081,6 +5090,11 @@ msgstr "新增最低庫存標準"
 #: mod/ims/mini_quantity.inc:222
 msgid "Records per Page"
 msgstr "每頁筆數"
+
+#: mod/ims/mini_quantity.inc:246
+#, fuzzy
+msgid "R-OL Amount"
+msgstr "原來金額"
 
 #: mod/rs/search.inc:25
 msgid "Here you can search for reports and charts. Select the category that you need to search for."
@@ -5283,6 +5297,7 @@ msgstr "進行精確搜尋"
 #: mod/rs/sample.inc:168
 #: mod/cs/drill_down.inc:53
 #: mod/cs/edit.inc:179
+#: mod/cs/edit.inc:268
 #: mod/cs/add.inc:29
 #: mod/cs/add.inc:108
 #: mod/cs/add.inc:274
@@ -5298,7 +5313,7 @@ msgstr "增加資料表 & 建立報表"
 
 #: mod/rs/sample.inc:226
 #: mod/cs/search.inc:160
-#: mod/cs/edit.inc:384
+#: mod/cs/edit.inc:406
 msgid "Multiplier"
 msgstr "乘數"
 
@@ -5601,7 +5616,7 @@ msgid "Select Measurement Unit Type"
 msgstr "選擇測量單位的種類"
 
 #: mod/cs/search.inc:127
-#: mod/cs/edit.inc:425
+#: mod/cs/edit.inc:447
 msgid "Unit Name   : "
 msgstr "單位名稱："
 
@@ -5622,8 +5637,8 @@ msgid "Unit Type Name"
 msgstr "單位類型名稱"
 
 #: mod/cs/edit.inc:39
-#: mod/cs/edit.inc:371
-#: mod/cs/edit.inc:491
+#: mod/cs/edit.inc:392
+#: mod/cs/edit.inc:513
 #: mod/cs/report.inc:27
 #: mod/cs/report.inc:52
 #: mod/cs/report.inc:77
@@ -5632,14 +5647,14 @@ msgid "Catalogs and Items"
 msgstr "目錄與項目"
 
 #: mod/cs/edit.inc:40
-#: mod/cs/edit.inc:372
-#: mod/cs/edit.inc:492
+#: mod/cs/edit.inc:393
+#: mod/cs/edit.inc:514
 msgid "Unit Types"
 msgstr "單位類型"
 
 #: mod/cs/edit.inc:41
-#: mod/cs/edit.inc:373
-#: mod/cs/edit.inc:493
+#: mod/cs/edit.inc:394
+#: mod/cs/edit.inc:515
 msgid "Units"
 msgstr "單位"
 
@@ -5661,16 +5676,27 @@ msgstr "子目錄"
 msgid "Using Delete, you will lose all the records of the particular catalogs, Items, Unit or Unit Types. </b>By deleting a catalog You will lose all the entries under the particular catalog."
 msgstr "若使用刪除動作，您會失去該類別的所有記錄，包括物資、單位或單位種類。刪除一個目錄，你會失去所有目錄裡的項目。"
 
-#: mod/cs/edit.inc:263
+#: mod/cs/edit.inc:265
 msgid "Details Of the catalog/Item"
 msgstr "目錄/物資的細節"
 
-#: mod/cs/edit.inc:265
+#: mod/cs/edit.inc:267
 msgid "Catalog / Item Name   : "
 msgstr "目錄/物資名稱："
 
-#: mod/cs/edit.inc:268
-#: mod/cs/edit.inc:547
+#: mod/cs/edit.inc:270
+#: mod/cs/add.inc:30
+#: mod/cs/add.inc:82
+msgid "e.g. medical, drugs, health"
+msgstr "例如：醫療，藥品，健康"
+
+#: mod/cs/edit.inc:271
+#: mod/cs/add.inc:30
+msgid "Enter a keyword which will help you to search particular catalog/item easily, when you add sub catalogs or items under this main catalog."
+msgstr "當您在主目錄下新增子目錄或子項目時，請輸入一個關鍵字，以助於搜尋特定的目錄/項目。"
+
+#: mod/cs/edit.inc:274
+#: mod/cs/edit.inc:569
 #: mod/cs/add.inc:27
 #: mod/cs/add.inc:106
 #: mod/cs/add.inc:272
@@ -5678,17 +5704,17 @@ msgstr "目錄/物資名稱："
 msgid "Description   : "
 msgstr "說明："
 
-#: mod/cs/edit.inc:297
+#: mod/cs/edit.inc:303
 msgid "Operation failed. You can not Delete this Catalog/ Item. Because there are sub catalogs/Items under this catalog OR it has been used by the INVENTORY MANAGEMENT SYSTEM."
 msgstr "操作失敗。您不能刪除此目錄/物資品。因為有子目錄/物資在此目錄下，或者它已被庫存管理系統使用。"
 
-#: mod/cs/edit.inc:304
+#: mod/cs/edit.inc:308
 msgid "Item/Catalog was deleted"
 msgstr "已刪除物資/類別"
 
-#: mod/cs/edit.inc:336
-#: mod/cs/edit.inc:464
-#: mod/cs/edit.inc:580
+#: mod/cs/edit.inc:345
+#: mod/cs/edit.inc:486
+#: mod/cs/edit.inc:602
 #: mod/cs/add.inc:60
 #: mod/cs/add.inc:136
 #: mod/cs/add.inc:219
@@ -5697,41 +5723,46 @@ msgstr "已刪除物資/類別"
 msgid " was successfully saved in the database"
 msgstr "已成功儲存在資料庫裡"
 
-#: mod/cs/edit.inc:423
+#: mod/cs/edit.inc:405
+#, fuzzy
+msgid "Measurement Unit Type"
+msgstr "貸方傳票類別"
+
+#: mod/cs/edit.inc:445
 msgid "Details Of the Unit"
 msgstr "單位的詳細資訊"
 
-#: mod/cs/edit.inc:428
-#: mod/cs/edit.inc:430
+#: mod/cs/edit.inc:450
+#: mod/cs/edit.inc:452
 msgid "Multiplier   : "
 msgstr "乘數："
 
-#: mod/cs/edit.inc:428
-#: mod/cs/edit.inc:430
+#: mod/cs/edit.inc:450
+#: mod/cs/edit.inc:452
 msgid "Specify the multiplier of the particular unit to the base unit of the unit type"
 msgstr "指定該單位和同種類的基本單位之間的乘數"
 
-#: mod/cs/edit.inc:470
+#: mod/cs/edit.inc:492
 msgid "Operation failed. You can not Delete this Unit. Because it has been used in INVENTORY MANAGEMENT SYSTEM."
 msgstr "操作失敗。您不能刪除此單位。因為它已被庫存管理系統使用。"
 
-#: mod/cs/edit.inc:475
+#: mod/cs/edit.inc:497
 msgid "Unit was Deleted"
 msgstr "單位已被刪除"
 
-#: mod/cs/edit.inc:542
+#: mod/cs/edit.inc:564
 msgid "Details Of the Unit Type"
 msgstr "單位類型的詳細資訊"
 
-#: mod/cs/edit.inc:544
+#: mod/cs/edit.inc:566
 msgid "Unit Type Name   : "
 msgstr "單位類型名稱："
 
-#: mod/cs/edit.inc:586
+#: mod/cs/edit.inc:608
 msgid "Operation failed. You can not Delete this Unit type. There are units added under this unit type."
 msgstr "操作失敗。您不能刪除此單位類型。已有單位被新增到此類型下。"
 
-#: mod/cs/edit.inc:591
+#: mod/cs/edit.inc:613
 msgid "Unit type was deleted"
 msgstr "單位類型已被刪除"
 
@@ -5885,9 +5916,9 @@ msgid "Add New Aid Items Types to the Sahana System"
 msgstr "新增新的援助物資品項"
 
 #: mod/cs/home.inc:38
-#: mod/cs/main.inc:51
-#: mod/cs/main.inc:194
-#: mod/cs/main.inc:202
+#: mod/cs/main.inc:52
+#: mod/cs/main.inc:192
+#: mod/cs/main.inc:200
 msgid "Add Measurement Unit"
 msgstr "新增度量單位"
 
@@ -5919,79 +5950,84 @@ msgstr "新增主目錄"
 msgid "Add Aid Category"
 msgstr "新增物資品項"
 
-#: mod/cs/main.inc:77
+#: mod/cs/main.inc:51
+#, fuzzy
+msgid "Add Measurement Unit Type"
+msgstr "新增度量單位"
+
+#: mod/cs/main.inc:75
 msgid "Select the Search Type in the select box that you need to search. By selecting catalog/Item, you are able to Search for a Item or a catalog and by selecting Unit, you are able to search for Units."
 msgstr "在選擇方塊中選擇您要搜尋的型態。若選擇類別/物資，就能搜尋類別或物資；若選擇單位，就能搜尋單位。"
 
-#: mod/cs/main.inc:108
+#: mod/cs/main.inc:106
 msgid "Search catalog/item"
 msgstr "搜尋目錄/物資"
 
-#: mod/cs/main.inc:123
+#: mod/cs/main.inc:121
 msgid "Search units"
 msgstr "搜尋單位"
 
-#: mod/cs/main.inc:132
+#: mod/cs/main.inc:130
 msgid "Search unit types"
 msgstr "搜尋單位類型"
 
-#: mod/cs/main.inc:147
+#: mod/cs/main.inc:145
 msgid "Add New Aid Catalog"
 msgstr "新增新的援助目錄"
 
-#: mod/cs/main.inc:148
+#: mod/cs/main.inc:146
 msgid "Please add the details of the New Aid Catalog below"
 msgstr "請新增新的援助目錄的詳細資料"
 
-#: mod/cs/main.inc:155
+#: mod/cs/main.inc:153
 msgid "Add A New Category"
 msgstr "新增一個新目錄"
 
-#: mod/cs/main.inc:156
+#: mod/cs/main.inc:154
 msgid "The Aid Catolog can be divided in to categories or classified by the type of item. You can create a hierachy of categories. First select the parent category that you wish to place this new category under:"
 msgstr "援助目錄可被按類別或物資類型分類。您可以創建一個分級的類別。首先選擇一個您想要放置此新類別的上級類別："
 
-#: mod/cs/main.inc:172
+#: mod/cs/main.inc:170
 msgid "Add New Category"
 msgstr "新增新目錄"
 
-#: mod/cs/main.inc:195
+#: mod/cs/main.inc:193
 msgid " This feature allows to add measurement unit/units. Before adding a sub category you have to add the measurement unit/units that is  used by the particular category."
 msgstr "這項功能讓您新增單位。在新增次類別之前，您必須先新增該次類別所需的單位。"
 
-#: mod/cs/main.inc:220
+#: mod/cs/main.inc:218
 msgid "Add Item Type: Select Category"
 msgstr "新增物資類型：選擇目錄"
 
-#: mod/cs/main.inc:221
+#: mod/cs/main.inc:219
 msgid "First select the parent category, before proceeding to add the Item Type details"
 msgstr "在新增物資類型詳細資訊前，首先選擇上層類別"
 
-#: mod/cs/main.inc:252
+#: mod/cs/main.inc:250
 msgid "Here you are able to view, edit and Delete all the catalogs, Items, Units and Unit Types which are handled by the catalog system. "
 msgstr "這裡您可以觀看、編輯和刪除分類系統中的類別、物資、單位和單位種類資料。"
 
-#: mod/cs/main.inc:252
+#: mod/cs/main.inc:250
 msgid "Using Delete, you will lose all the records of the particular catalogs, Items, Unit or Unit Types."
 msgstr "若使用刪除動作，您會失去該類別的所有記錄，包括物資、單位或單位種類。"
 
-#: mod/cs/main.inc:278
+#: mod/cs/main.inc:276
 msgid "Edit catalog / item"
 msgstr "編輯目錄/項目"
 
-#: mod/cs/main.inc:303
+#: mod/cs/main.inc:301
 msgid "Edit Unit"
 msgstr "編輯單位"
 
-#: mod/cs/main.inc:314
+#: mod/cs/main.inc:312
 msgid "Edit Unit Type"
 msgstr "編輯單位類型"
 
-#: mod/cs/main.inc:330
+#: mod/cs/main.inc:328
 msgid "Add Unit Type"
 msgstr "新增單位類型"
 
-#: mod/cs/main.inc:334
+#: mod/cs/main.inc:332
 msgid "Here you are able to add Unit type. For every Unit type you have to add a base unit. Eg. If you add volume as the unit type, Litre can be specified as the base unit."
 msgstr "這裡您可以新增單位種類。每種單位都需要一個基本單位，比方說，如果您加入體積這個單位種類，就可以用公升當基本單位。"
 
@@ -6003,15 +6039,6 @@ msgstr "目錄細節"
 #: mod/cs/add.inc:82
 msgid " "
 msgstr " "
-
-#: mod/cs/add.inc:30
-#: mod/cs/add.inc:82
-msgid "e.g. medical, drugs, health"
-msgstr "例如：醫療，藥品，健康"
-
-#: mod/cs/add.inc:30
-msgid "Enter a keyword which will help you to search particular catalog/item easily, when you add sub catalogs or items under this main catalog."
-msgstr "當您在主目錄下新增子目錄或子項目時，請輸入一個關鍵字，以助於搜尋特定的目錄/項目。"
 
 #: mod/cs/add.inc:52
 msgid "Operation failed. Catalog name called "
@@ -6797,7 +6824,7 @@ msgid "Physical Details"
 msgstr "身體特徵細節"
 
 #: mod/mpr/view.inc:66
-#: mod/mpr/search.inc:261
+#: mod/mpr/search.inc:260
 #: mod/mpr/edit.inc:213
 #: mod/mpr/edit.inc:454
 #: mod/mpr/add.inc:124
@@ -6808,7 +6835,7 @@ msgid "Eye Colour"
 msgstr "眼睛顏色"
 
 #: mod/mpr/view.inc:67
-#: mod/mpr/search.inc:261
+#: mod/mpr/search.inc:260
 #: mod/mpr/edit.inc:215
 #: mod/mpr/edit.inc:455
 #: mod/mpr/add.inc:125
@@ -6819,7 +6846,7 @@ msgid "Skin Colour"
 msgstr "皮膚顏色"
 
 #: mod/mpr/view.inc:68
-#: mod/mpr/search.inc:261
+#: mod/mpr/search.inc:260
 #: mod/mpr/edit.inc:217
 #: mod/mpr/edit.inc:456
 #: mod/mpr/add.inc:126
@@ -6830,7 +6857,7 @@ msgid "Hair Colour"
 msgstr "頭髮顏色"
 
 #: mod/mpr/view.inc:69
-#: mod/mpr/search.inc:261
+#: mod/mpr/search.inc:260
 #: mod/mpr/edit.inc:219
 #: mod/mpr/edit.inc:457
 #: mod/mpr/add.inc:127
@@ -6843,7 +6870,7 @@ msgid "Height"
 msgstr "身高"
 
 #: mod/mpr/view.inc:70
-#: mod/mpr/search.inc:261
+#: mod/mpr/search.inc:260
 #: mod/mpr/edit.inc:221
 #: mod/mpr/edit.inc:458
 #: mod/mpr/add.inc:128
@@ -6857,7 +6884,7 @@ msgstr "體重"
 
 #: mod/mpr/view.inc:71
 #: mod/mpr/view.inc:92
-#: mod/mpr/search.inc:273
+#: mod/mpr/search.inc:272
 #: mod/mpr/edit.inc:223
 #: mod/mpr/edit.inc:233
 #: mod/mpr/edit.inc:459
@@ -6907,7 +6934,7 @@ msgid "Blood Type"
 msgstr "血型"
 
 #: mod/mpr/view.inc:90
-#: mod/mpr/search.inc:273
+#: mod/mpr/search.inc:272
 #: mod/mpr/edit.inc:229
 #: mod/mpr/edit.inc:496
 #: mod/mpr/add.inc:533
@@ -6915,7 +6942,7 @@ msgid "Last Seen"
 msgstr "上一次看見他/她 是在"
 
 #: mod/mpr/view.inc:91
-#: mod/mpr/search.inc:273
+#: mod/mpr/search.inc:272
 #: mod/mpr/edit.inc:231
 #: mod/mpr/edit.inc:497
 #: mod/mpr/add.inc:534
@@ -6927,9 +6954,9 @@ msgid "People that are tracking"
 msgstr "追蹤者"
 
 #: mod/mpr/view.inc:97
-#: mod/mpr/search.inc:267
-#: mod/mpr/search.inc:293
-#: mod/mpr/search.inc:377
+#: mod/mpr/search.inc:266
+#: mod/mpr/search.inc:292
+#: mod/mpr/search.inc:376
 #: mod/mpr/edit.inc:733
 #: mod/msg/handler_cap_view.inc:65
 #: mod/msg/handler_cap_view.inc:74
@@ -6976,99 +7003,99 @@ msgstr "所有事故"
 msgid "Identity Card"
 msgstr "身分證"
 
-#: mod/mpr/search.inc:159
+#: mod/mpr/search.inc:184
+#: mod/mpr/search.inc:198
+msgid "Total"
+msgstr "總計"
+
+#: mod/mpr/search.inc:184
+#: mod/mpr/search.inc:198
+msgid "Records were found"
+msgstr "筆符合搜尋條件的資料"
+
+#: mod/mpr/search.inc:194
 #: mod/mpr/home.inc:55
 #: mod/mpr/main.inc:57
 #: mod/mpr/main.inc:458
 msgid "Report a Missing Person"
 msgstr "通報失蹤者"
 
-#: mod/mpr/search.inc:161
+#: mod/mpr/search.inc:196
 #: mod/mpr/home.inc:57
 #: mod/mpr/main.inc:59
 #: mod/mpr/main.inc:461
 msgid "Report a Found Person"
 msgstr "通報倖存者"
 
-#: mod/mpr/search.inc:164
-#, php-format
-msgid "If you found the person you would like to report is existed in the system. Please click the name of the person in the list above, and set yourself as tracker for him. Or click %s"
-msgstr "如果您欲通報的失蹤者已經在本系統中，請點選姓名編輯該失蹤者資料，並且將你自己設為追蹤者。如果以下結果沒有您欲通報的失蹤者，請直接進入 %s"
-
-#: mod/mpr/search.inc:191
-#: mod/mpr/search.inc:201
-msgid "Total"
-msgstr "總計"
-
-#: mod/mpr/search.inc:191
-#: mod/mpr/search.inc:201
-msgid "Records were found"
-msgstr "筆符合搜尋條件的資料"
-
-#: mod/mpr/search.inc:208
+#: mod/mpr/search.inc:205
 msgid "First"
 msgstr "第一筆"
 
-#: mod/mpr/search.inc:208
-#: mod/mpr/search.inc:210
-#: mod/mpr/search.inc:215
-#: mod/mpr/search.inc:217
+#: mod/mpr/search.inc:205
+#: mod/mpr/search.inc:207
+#: mod/mpr/search.inc:212
+#: mod/mpr/search.inc:214
 #: mod/rms/handler_req_ls.inc:148
 #: mod/rms/handler_plg_ls.inc:131
 msgid "Records"
 msgstr "記錄"
 
-#: mod/mpr/search.inc:217
+#: mod/mpr/search.inc:214
 msgid "Last"
 msgstr "最後一筆"
 
-#: mod/mpr/search.inc:240
+#: mod/mpr/search.inc:219
+#, php-format
+msgid "If you found the person you would like to report is existed in the system. Please click the name of the person in the list above, and set yourself as tracker for him. Or click %s"
+msgstr "如果您欲通報的失蹤者已經在本系統中，請點選姓名編輯該失蹤者資料，並且將你自己設為追蹤者。如果以下結果沒有您欲通報的失蹤者，請直接進入 %s"
+
+#: mod/mpr/search.inc:239
 #: mod/mpr/edit.inc:415
 msgid "Person"
 msgstr "失蹤/受災者"
 
-#: mod/mpr/search.inc:242
+#: mod/mpr/search.inc:241
 msgid "Associated People"
 msgstr "目前追蹤者"
 
-#: mod/mpr/search.inc:243
+#: mod/mpr/search.inc:242
 msgid "Missing Details"
 msgstr "失蹤時的外觀與其他相關特徵"
 
-#: mod/mpr/search.inc:245
+#: mod/mpr/search.inc:244
 msgid "Reported Person"
 msgstr "報告者"
 
-#: mod/mpr/search.inc:246
-#: mod/mpr/search.inc:299
-#: mod/mpr/search.inc:364
-#: mod/mpr/search.inc:386
+#: mod/mpr/search.inc:245
+#: mod/mpr/search.inc:298
+#: mod/mpr/search.inc:363
+#: mod/mpr/search.inc:385
 #: mod/rms/handler_mng_ff.inc:159
 #: mod/rms/lib_rms.inc:870
 msgid "Select"
 msgstr "選取"
 
-#: mod/mpr/search.inc:268
+#: mod/mpr/search.inc:267
 #: mod/mpr/edit.inc:746
 #: mod/mpr/admin.inc:227
 msgid "Add Tracker"
 msgstr "加入追蹤"
 
-#: mod/mpr/search.inc:268
+#: mod/mpr/search.inc:267
 msgid "Associate another person"
 msgstr " 建立其他追蹤者"
 
-#: mod/mpr/search.inc:279
-#: mod/mpr/search.inc:383
+#: mod/mpr/search.inc:278
+#: mod/mpr/search.inc:382
 msgid "Change the status to Alive & Well"
 msgstr "變更狀態為倖存"
 
-#: mod/mpr/search.inc:281
-#: mod/mpr/search.inc:383
+#: mod/mpr/search.inc:280
+#: mod/mpr/search.inc:382
 msgid "Click to change to found"
 msgstr "★點選此處，變更此人為「倖存（且無受傷）」"
 
-#: mod/mpr/search.inc:284
+#: mod/mpr/search.inc:283
 #: mod/mpr/audit.inc:26
 msgid "Audit"
 msgstr "稽核"
