@@ -306,11 +306,16 @@ function _shn_ims_alternate_item_db($parent_id, $catalog_id, $inv_id) {
     $i = $db->Execute($q);
     $q1 = "SELECT unit FROM ims_item_records WHERE catalog_id='$catalog_id';";
     $i1 = $db->Execute($q1);
+    /*
+     * Disable unit check in alternate item addition
+     *
     if (convert_to_base_unit($i->fields['unit']) != convert_to_base_unit($i1->fields['unit'])) {
         add_error(SHN_ERR_IMS_UNIT_MISMATCH);
         shn_ims_alternate_item();
         return false;
     }
+     * 
+     */
     if ($inv_id == 'all') {
         $sql = "SELECT * FROM ims_alternate WHERE catalog_id='$parent_id' AND alternate='$alternate';";
         $ims = $db->Execute($sql);
