@@ -280,7 +280,7 @@ function shn_cs_additem_form1_result($is_keyword_search = false) {
     shn_form_fsclose();
     $myoptions = array();
     shn_form_fsopen(_('Measurement Unit'));
-    shn_form_multi_select('unit_select', $myoptions, _("Unit :"), 'size=20 multiple="multiple"');
+    shn_form_multi_select('unit_select', $myoptions, _("Unit :"), 'multiple="multiple" style="width: 150px;"');
     shn_form_fsclose();
     /*
     //This functionality should be moved to Inventory management
