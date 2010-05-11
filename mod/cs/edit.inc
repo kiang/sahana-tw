@@ -247,13 +247,15 @@ function _shn_cs_edit_cat_select_submit_result() {
 
     if(isset($_POST['id'])){
     	$name = $_POST['item_cat_name'];
+        $keyword = $_POST['keyword'];
     	$description = $_POST['description'];
     }
     else{
-    	$query = "SELECT name,description FROM ct_catalogue WHERE ct_uuid = '$id' ";
+    	$query = "SELECT name,keyword,description FROM ct_catalogue WHERE ct_uuid = '$id' ";
     	$res = $db->Execute($query);
 
     	$name = $res->fields["name"];
+        $keyword = $res->fields["keyword"];
     	$description = $res->fields["description"];
     }
 
@@ -263,6 +265,10 @@ function _shn_cs_edit_cat_select_submit_result() {
     shn_form_fsopen(_('Details Of the catalog/Item'));
     $extra_opts['value'] = $name;
     shn_form_text(_("Catalog / Item Name   : "), 'item_cat_name', 'size="50"', $extra_opts);
+    shn_form_text(_('Keyword'), 'keyword', 'size="50"', array(
+        'value' => $keyword,
+        'note' => _('e.g. medical, drugs, health'),
+        'help' => _('Enter a keyword which will help you to search particular catalog/item easily, when you add sub catalogs or items under this main catalog.')));
     $extra_opts['req'] = false;
     $extra_opts['value'] = $description;
     shn_form_text(_("Description   : "), 'description', 'size="50"', $extra_opts);
@@ -319,6 +325,7 @@ function _shn_cs_edit_cat_form_submit_result() {
     }else if($action == 'edit') {
         if (!_shn_cs_validate_edit_calelog_item()) {
             $name = trim($_POST['item_cat_name']);
+            $keyword = trim($_POST['keyword']);
             $description = trim($_POST['description']);
 
             $id = trim($_POST['id']);
@@ -328,7 +335,11 @@ function _shn_cs_edit_cat_form_submit_result() {
                 shn_cs_edit_cat_select_submit();
             }
             else {
-                $query = "UPDATE ct_catalogue SET name = '$name' , description = '$description' WHERE ct_uuid = '$id' ";
+                $query = "UPDATE ct_catalogue
+                SET name = '$name',
+                keyword = '$keyword',
+                description = '$description'
+                WHERE ct_uuid = '$id' ";
                 $res = $db->Execute($query);
 
                 add_confirmation($name . _(" was successfully saved in the database"));
