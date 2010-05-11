@@ -402,20 +402,21 @@ function show_unit_table() {
 	<table>
 	<thead>
         <td><strong><?php echo _("Name") ?></strong></td>
+        <td><strong><?php echo _("Measurement Unit Type") ?></strong></td>
         <td><strong><?php echo _("Multiplier") ?></strong></td>
-    </thead>
+        </thead>
     <TBODY>
     <?php
-    $query = "SELECT * FROM ct_unit";
+    $query = "SELECT CUT.name AS type_name, CU.* FROM ct_unit AS CU
+        INNER JOIN ct_unit_type AS CUT ON CUT.unit_type_uuid = CU.unit_type_uuid
+        ORDER BY type_name ASC, CU.name ASC";
     $res = $db->Execute($query);
     while (!$res == NULL && !$res->EOF) {
-        $name = $res->fields["name"];
-        $multiplier = $res->fields["multiplier"];
-        $unit_id = $res->fields["unit_uuid"];
 ?>
 	    <tr>
-	        <td><a href="index.php?mod=cs&amp;act=edit_unit_select_submit&amp;id=<?php echo $unit_id ?>"><?php print $name; ?></a></td>
-	        <td><?php print $multiplier; ?></td>
+	        <td><a href="index.php?mod=cs&amp;act=edit_unit_select_submit&amp;id=<?php echo $res->fields["unit_uuid"]; ?>"><?php echo $res->fields["name"]; ?></a></td>
+                <td><?php echo $res->fields["type_name"]; ?></td>
+	        <td><?php echo $res->fields["multiplier"]; ?></td>
 	    </tr>
 	    <?php
         $res->MoveNext();
