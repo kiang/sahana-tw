@@ -432,7 +432,7 @@ function shn_location_jscript($start, $to, $parent = false) {
 
                         var option_data=results[i].split(":");
                         opt.value = option_data[0] ;
-                        opt.text = option_data[1].replace(/[^A-Za-z]$/,"");
+                        opt.text = option_data[1];
                         x.options[x.options.length] = opt;//i+1
 
                     }

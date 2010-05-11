@@ -1046,7 +1046,7 @@ function _shn_rms_ct_cat_js($max, $form, $change, $item_flag = false) {
                 for (i=1; i<results.length-1; i=i+2, j++){
                     opt = document.createElement("option") ;
                     opt.value = results[i] ;
-                    opt.text = results[i+1].replace(/[^A-Za-z]$/,"");
+                    opt.text = results[i+1];
                     x[0].options[j] = opt;
                     x[0].selectedIndex=-1;
                 }

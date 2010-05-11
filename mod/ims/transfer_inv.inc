@@ -864,7 +864,7 @@ function handleHttpResponse(){
                     
                          opt = document.createElement("option") ;
                           opt.value = results[i] ;
-                          opt.text = results[i+1].replace(/[^A-Za-z]$/,"");
+                          opt.text = results[i+1];
                           x[0].options[j] = opt;
                             }
                     }

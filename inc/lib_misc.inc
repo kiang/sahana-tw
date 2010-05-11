@@ -81,7 +81,7 @@ function shn_reset_form_javascript($form, $reset_what) {
             for (i=0; i<results.length; i++){
 		 	    opt = document.createElement("option") ;
   			    opt.value = results[i] ;
-  			    opt.text = results[i].replace(/[^A-Za-z]$/,"");
+  			    opt.text = results[i];
                 x[0].options[i] = opt;
 
             }
