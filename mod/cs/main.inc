@@ -49,9 +49,7 @@ function shn_cs_mainmenu() {
     shn_mod_menuitem("additem", _("Add Aid Item Type"));
     shn_mod_menuitem("addsub", _("Add Aid Category"));
     shn_mod_menuitem("addunit",_("Add Measurement Unit"));
-    //shn_mod_menuitem("addunit",_("Add Measurement Unit"));
-    //shn_mod_menuitem("addunittype",_("Add Measurement Unit Type")); // relocate to admin section
-    //shn_mod_menuitem("addunit",_("Add Measurement Unit")); // relocate to admin section
+    shn_mod_menuitem("addunittype",_("Add Measurement Unit Type")); // relocate to admin section
     shn_sub_mod_menuclose();
     //shn_mod_menuitem("supplier_report",_("Supplier Report")); // Supplier report should be in Inventory
     shn_mod_menuclose();
