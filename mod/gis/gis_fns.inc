@@ -180,6 +180,7 @@ function shn_gis_add_marker_map_form($name_of_map = "Area Map", $nameOfPoint = "
     shn_form_submit(_("Next"), $button_submit_opts);
     shn_form_fsclose();
     if ($conf['gis']) {
+        $extra_opts['marker'] = 'single';
         shn_form_fsopen($name_of_map);
         shn_form_hidden(array('loc_x' => ''));
         shn_form_hidden(array('loc_y' => ''));
