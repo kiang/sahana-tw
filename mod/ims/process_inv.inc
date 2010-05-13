@@ -309,6 +309,8 @@ function _shn_ims_edit_org() {
     } else {
         $equipment = $_POST['equipment'];
     }
+    $lat = $_POST['lat_edited'];
+    $lon = $_POST['lon_edited'];
     $resources = $_POST['resources'];
     $space = $_POST['space'];
     if (!$error) {
@@ -317,6 +319,8 @@ function _shn_ims_edit_org() {
         $q = "UPDATE ims_inventory_records SET inventory_name='{$org_name}',man_power='{$man_power}',equipment='{$equipment}',resources='{$resources}',space='{$space}' WHERE inv_uuid='{$org_id}'";
         $res = $db->Execute($q);
         $q = "UPDATE location_details SET location_id='{$bsd_village}',address='{$contact_address}' WHERE poc_uuid='{$org_id}'";
+        $res = $db->Execute($q);
+        $q = "UPDATE gis_location SET map_northing={$lat},map_easting={$lon} WHERE poc_uuid='{$org_id}'";
         $res = $db->Execute($q);
         $set_field_values = array($contact_name, $contact_phone, $contact_mobile, $contact_fax, $contact_mail, $contact_web);
         $contact_type_field_name = array('name', 'curr', 'pmob', 'fax', 'email', 'web');
