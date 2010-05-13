@@ -775,14 +775,13 @@ function shn_location_del($loc) {
     $loc_str = array();
     $loc_str = shn_location_get_descendants($loc, $loc_str);
     $loc_arr = split(",", $loc_str);
-    $q = "delete from location where loc_uuid='{$loc}'";
-    $db->Execute($q);
     foreach($loc_arr as $val) {
         $q = "delete from location where loc_uuid='{$val}'";
         $db->Execute($q);
     }
-    $msg = "Location was succesfully deleted";
-    add_confirmation($msg);
+    $q = "delete from location where loc_uuid='{$loc}'";
+    $db->Execute($q);
+    add_confirmation(_('Location was succesfully deleted'));
 }
 function shn_location_edit($loc) {
     global $global;
