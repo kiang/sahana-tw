@@ -161,7 +161,7 @@ function shn_ims_report_destroyed() {
     _shn_ims_report_destroyed();
 }
 function shn_ims_report_transit_item() {
-    print ("<h1><center>Transit Items</center></h1>");
+    print ('<h1><center>' . _('Transit Item Report') . '</center></h1>');
     include_once ('ims_report.inc');
     _shn_ims_transfer_item_report();
 }
