@@ -774,14 +774,16 @@ function shn_location_del($loc) {
     $db = $global['db'];
     $loc_str = array();
     $loc_str = shn_location_get_descendants($loc, $loc_str);
-    $loc_arr = split(",", $loc_str);
-    foreach($loc_arr as $val) {
-        $q = "delete from location where loc_uuid='{$val}'";
-        $db->Execute($q);
+    $queryResult = false;
+    if(!empty($loc_str)) {
+        $queryResult = $db->Execute('DELETE FROM location WHERE loc_uuid IN ("' . implode('","', $loc_str) . '")');
     }
     $q = "delete from location where loc_uuid='{$loc}'";
-    $db->Execute($q);
-    add_confirmation(_('Location was succesfully deleted'));
+    if($queryResult && $db->Execute($q)) {
+        add_confirmation(_('Location was succesfully deleted'));
+    } else {
+        add_error(_('The location you are trying to delete is in use. If you want to delete it, please remove related data first.'));
+    }
 }
 function shn_location_edit($loc) {
     global $global;
