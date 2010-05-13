@@ -118,43 +118,46 @@ function show_map_with_markers($array) {
 	  
 	//<![CDATA[
         var onloadfunc = window.onload;
+        var bounds = new GLatLngBounds();
 	window.onload=function show_map_markers_js()
 	{
-			if(GBrowserIsCompatible())
-			{
-				function createMarker(point,html) {
-        			var marker = new GMarker(point);
-        			GEvent.addListener(marker, "click", function() {
-          				marker.openInfoWindowHtml(html);
-        			});
-        		return marker;
-      			}
-      			
-      			var map = new GMap2(document.getElementById("map"));
-      			map.addControl(new GLargeMapControl());
-	       		//map.addControl(new GSmallMapControl());
-				map.addControl(new GMapTypeControl());//satellite image switch
-				
-				map.setCenter(new GLatLng(<?=$conf['mod_gis_center_y'] ?>,<?=$conf['mod_gis_center_x'] ?>), <?=$conf['mod_gis_zoom'] ?>,G_SATELLITE_MAP);
+            if(GBrowserIsCompatible()) {
+            function createMarker(point,html) {
+                var marker = new GMarker(point);
+                GEvent.addListener(marker, "click", function() {
+                    marker.openInfoWindowHtml(html);
+                });
+                return marker;
+            }
+
+            var map = new GMap2(document.getElementById("map"));
+            map.addControl(new GLargeMapControl());
+            //map.addControl(new GSmallMapControl());
+            map.addControl(new GMapTypeControl());//satellite image switch
+            var initialPoint = new GLatLng(<?=$conf['mod_gis_center_y'] ?>,<?=$conf['mod_gis_center_x'] ?>);
+            bounds.extend(initialPoint);
+            map.setCenter(initialPoint, <?=$conf['mod_gis_zoom'] ?>,G_SATELLITE_MAP);
+            var point;
+            var marker;
 <?php
+    $pre_url = "index.php?";
     for ($i = 0;$i < sizeof($array);$i++) {
         $lat = $array[$i]["lat"];
         $lon = $array[$i]["lon"];
         $name = $array[$i]["name"];
-        $url = $array[$i]["url"];
-        $pre_url = "index.php?";
-        $url = $pre_url . $url;
+        $url = $pre_url . $array[$i]["url"];
 ?>	
-					var point = new GLatLng(<?=$lon
-?>,<?=$lat
-?>);
-      				var marker = createMarker(point,'<div id="wiki_info"><strong><?=_lc(str_replace("'", "\'", "$name")) ?></strong><br><a href="<?=$url ?>">View</a></div>');
-      				map.addOverlay(marker);
+            point = new GLatLng(<?php echo $lon; ?>,<?php echo $lat; ?>);
+            bounds.extend(point);
+            marker = createMarker(point,
+            '<div id="wiki_info"><strong><?php echo _lc(str_replace("'", "\'", "$name")); ?></strong><br><a href="<?php echo $url; ?>">View</a></div>');
+            map.addOverlay(marker);
 <?php
     }
 ?>
-      		}
-      		else{
+            map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds));
+      	}
+        else {
       			alert("Incompatible");
       			}      			
 		onloadfunc();

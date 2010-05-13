@@ -388,6 +388,9 @@ function shn_ims_view_inv_submit() {
     // $req_act = "_shn_ims_" . $act . "_org";
     // $allow = (!shn_acl_check_perms_action($_SESSION['user_id'],$req_act) || !$acl_enabled)? true : false;
     switch ($act) {
+        case "gis":
+            _shn_ims_view_map_form_inv();
+            break;
         case "edit":
             _shn_ims_edit_org();
         break;
@@ -404,10 +407,8 @@ function shn_ims_view_inv() {
 ?>
 <?php
     if (empty($_REQUEST['id'])) {
-?>
-<h2> Inventory Registry</h2>
-<?php $Limit = 20;
-        _shn_ims_viewform_allorg(null, null, $Limit);
+        echo '<h2>' . _('Inventory Registry') . '</h2>';
+        _shn_ims_viewform_allorg(null, null, $Limit = 20);
     } else {
         _shn_ims_viewform_org($_REQUEST['id'], $Limit = 20);
     }

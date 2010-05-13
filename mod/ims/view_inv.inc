@@ -178,10 +178,12 @@ function _shn_ims_viewform_org($org_id, $error = false) {
         $q = "SELECT location_id FROM location_details WHERE poc_uuid='{$org_id}'";
         $res_loc = $db->Execute($q);
         $bsd_village = $res_loc->fields[0];
+        $q = "SELECT * FROM gis_location WHERE poc_uuid='{$org_id}'";
+        $res = $db->Execute($q);
+        $lat = $res->fields["map_northing"];
+        $lon = $res->fields["map_easting"];
     }
-?>
-<h2><?php echo _("Inventory Registration Information of ") . "<em>" . $org_name ?></em></h2>
-<?php
+    echo '<h2>' . _('Inventory Registration Information of ') . '<em>' . $org_name . '</em></h2>';
     if (!empty($error)) display_errors();
 ?>
 <div id="formcontainer">
@@ -198,6 +200,27 @@ function _shn_ims_viewform_org($org_id, $error = false) {
     shn_form_fsopen(_("Base Location"));
     //shn_location_form(1,5,$bsd_village);
     shn_location($range, $value = $bsd_village, $parent = null, $extra_opts = null);
+    shn_form_fsclose();
+    shn_form_fsopen(_("Map Location"));
+    $extra_opts['req'] = false;
+    $lat = isset($lat) ? $lat : 0;
+    if(!empty($_SESSION['inv']['lat_edited'])) {
+        $lat = $_SESSION['inv']['lat_edited'];
+        unset($_SESSION['inv']['lat_edited']);
+    }
+    $extra_opts['value'] = $lat;
+    shn_form_text(_("Latitude : "), 'lat_edited', 'size="40"', $extra_opts);
+    $lon = isset($lon) ? $lon : 0;
+    if(!empty($_SESSION['inv']['lon_edited'])) {
+        $lon = $_SESSION['inv']['lon_edited'];
+        unset($_SESSION['inv']['lon_edited']);
+    }
+    $extra_opts['value'] = $lon;
+    shn_form_text(_("Longitude : "), 'lon_edited', 'size="40"', $extra_opts);
+    $extra_opts['br'] = false;
+    shn_form_button(_("GIS Map"), "onClick='change_action(\"gis\")'", $extra_opts);
+    shn_form_hidden(array('lat' => $lat));
+    shn_form_hidden(array('lon' => $lon));
     shn_form_fsclose();
     shn_form_fsopen(_("Contact Information"));
     _shn_ims_display_contact_person($error, true, $org_id);
@@ -248,13 +271,35 @@ function _shn_ims_reg_inv_actions($action) {
         }
     }
 }
+function _shn_ims_view_map_form_inv() {
+    global $global;
+    include_once $global['approot'] . "/mod/gis/gis_fns.inc";
+    $org_id = isset($_POST['org_id']) ? $_POST['org_id'] : '';
+    shn_form_fopen("view_inv&id=" . $org_id);
 ?>
-
-<script type="text/javascript">
-    function change_action(action){
-        var x=document.getElementsByName('action');
-         x[0].value=action;
-         document.view_inv.submit();
-         return;
-    }
-</script>
+	<center><?php
+    //create the submit button
+    shn_form_submit(_("Back"));
+?></center><?php
+    $map_arr = array();
+    $url = "mod=ims&act=view_inv&id=" . $org_id;
+    array_push($map_arr, array(
+        'lat' => isset($_POST["lat_edited"]) ? $_POST["lat_edited"] : '',
+        'lon' => isset($_POST["lon_edited"]) ? $_POST["lon_edited"] : '',
+        'name' => isset($_POST["org_name"]) ? $_POST["org_name"] : '',
+        'id' => isset($_POST["org_id"]) ? $_POST["org_id"] : '',
+        'url' => $url));
+    $_SESSION['inv']['lat_edited'] = $map_arr[0]['lat'];
+    $_SESSION['inv']['lon_edited'] = $map_arr[0]['lon'];
+    shn_gis_map_with_markers($map_arr);
+?>
+		<br />
+		<center><?php
+    //create the submit button
+    shn_form_submit(_("Back"));
+?></center>
+		<br />
+		<?php
+    //close the form
+    shn_form_fclose();
+}

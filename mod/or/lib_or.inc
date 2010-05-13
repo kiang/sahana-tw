@@ -614,7 +614,6 @@ function _shn_or_display_org_sub_type($error = false, $multi = false, $value = N
 function _shn_or_display_sector($error = false, $value = NULL, $info = true) {
     if ($value != NULL) {
         $extra_opts['value'] = $value;
-        var_dump($extra_opts['value']);
         // $extra_opts['req']=false;
         
     } else {
