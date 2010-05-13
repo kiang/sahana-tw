@@ -38,7 +38,11 @@ function show_wiki_map($category = "all", $date = 0) {
     shn_form_submit(_("Filter"));
     shn_form_fclose();
     $db = $global['db'];
-    $query = "select a.wiki_uuid,a.name,a.description,a.url,date(a.event_date) as event_date,a.author,a.editable,b.map_northing,b.map_easting from gis_wiki as a, gis_location as b where a.wiki_uuid=b.poc_uuid " . (($category == 'all') ? " " : " and opt_category='{$category}'");
+    $query = "SELECT a.wiki_uuid,a.name,a.description,a.url,
+        date(a.event_date) as event_date,a.author,a.editable,b.map_northing,b.map_easting
+        FROM gis_wiki as a, gis_location as b
+        WHERE a.wiki_uuid=b.poc_uuid " .
+    ((empty($category) || $category == 'all') ? " " : " and opt_category='{$category}'");
     $res = $db->Execute($query);
     //create array
     $map_array = array();
@@ -46,7 +50,7 @@ function show_wiki_map($category = "all", $date = 0) {
     while (!$res->EOF) {
         $editable = $res->fields['editable'];
         if ($editable == 1) {
-            $edit_url = "<a href=" . "index.php?mod=gis&act=wm_edit&seq=ewmp&wmid=" . $res->fields['wiki_uuid'] . "> Edit</a>";
+            $edit_url = "<a href=index.php?mod=gis&act=wm_edit&seq=ewmp&wmid=" . $res->fields['wiki_uuid'] . "> Edit</a>";
         } else $edit_url = "";
         //handle images
         //@todo: image type
@@ -232,19 +236,20 @@ function shn_wiki_map_commit() {
     include_once $global['approot'] . "/inc/lib_form.inc";
     include_once $global['approot'] . "/inc/lib_image.inc";
     include_once $global['approot'] . "/inc/lib_errors.inc";
+    include $global['approot'] . "/mod/gis/gis_fns.inc";
     //$id = shn_create_uuid();
     $db = $global['db'];
     $wiki_id = shn_create_uuid('wm');
     //$gis_id=shn_create_uuid('g');
-    $gis_id = 0;
+    $gis_id = shn_gis_dbinsert($wiki_id, 0, null, $_SESSION['loc_x'], $_SESSION['loc_y'], NULL);
+    shn_gis_dbinsert_feature($wiki_id, $_SESSION['loc_y'], $_SESSION['loc_x']);
+    $query = "insert into gis_location values (
+    '{$gis_id}','0','','{$_SESSION['loc_y']}','{$_SESSION['loc_x']}', '{$_SESSION['wiki_url']}','{$_SESSION['wiki_evnt_date']}','{$edit}','{$_SESSION['wiki_author']}','{$view_public}')";
     $edit = ($_SESSION['edit_public'] == 'edit') ? 1 : 0;
     $view_public = ($_SESSION['view_public'] == 'view') ? 1 : 0;
-    $query = " insert into gis_wiki (wiki_uuid,gis_uuid,name,description,opt_category,url,event_date,editable,author,approved)  values ('{$wiki_id}','{$gis_id}','{$_SESSION['wiki_name']}','{$_SESSION['wiki_text']}','{$_SESSION['opt_wikimap_type']}', '{$_SESSION['wiki_url']}','{$_SESSION['wiki_evnt_date']}','{$edit}','{$_SESSION['wiki_author']}','{$view_public}')";
+    $query = "insert into gis_wiki (wiki_uuid,gis_uuid,name,description,opt_category,url,event_date,editable,author,approved)  values ('{$wiki_id}','{$gis_id}','{$_SESSION['wiki_name']}','{$_SESSION['wiki_text']}','{$_SESSION['opt_wikimap_type']}', '{$_SESSION['wiki_url']}','{$_SESSION['wiki_evnt_date']}','{$edit}','{$_SESSION['wiki_author']}','{$view_public}')";
     $res = $db->Execute($query);
     //var_dump($_SESSION);
-    include $global['approot'] . "/mod/gis/gis_fns.inc";
-    shn_gis_dbinsert($wiki_id, 0, null, $_SESSION['loc_x'], $_SESSION['loc_y'], NULL);
-    shn_gis_dbinsert_feature($wiki_id, $_SESSION['loc_y'], $_SESSION['loc_x']);
     if (!($_FILES['image']['error'] == UPLOAD_ERR_NO_FILE)) {
         //handle image upload from previous page
         $info = getimagesize($_FILES['image']['tmp_name']);

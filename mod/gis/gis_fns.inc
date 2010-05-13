@@ -120,6 +120,7 @@ function shn_gis_dbinsert($uuid, $loc_id, $gis, $ycoord, $xcoord, $projection) {
 	'{$uuid}', '{$loc_id}', '{$gis}', '{$ycoord}', '{$xcoord}', '{$projection}', NULL , '{$gis_id}'
 	)";
     $res = $db->Execute($q);
+    return $gis_id;
 }
 /**
  * Database entry api for gis data
