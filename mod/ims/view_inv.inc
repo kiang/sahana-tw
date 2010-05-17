@@ -19,7 +19,8 @@ include_once $global['approot'] . "/inc/lib_errors.inc";
 require_once $global['approot'] . "/inc/lib_location.inc";
 include_once "lib_ims.inc";
 function _shn_ims_viewform_allorg($no = NULL, $page_number = NULL, $Limit = NULL) {
-    $form_opts['name'] = "view_inv";
+    _shn_ims_action_change_javascript('action');
+    $form_opts['name'] = 'view';
     shn_form_fopen("reg_inv_actions", null, $form_opts);
     shn_form_fsopen(_("Register a New Inventory"));
     $extra_opts['br'] = false;
@@ -169,6 +170,7 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
 function _shn_ims_viewform_org($org_id, $error = false) {
     include_once "lib_ims.inc";
     global $global;
+    _shn_ims_action_change_javascript('action');
     $db = $global['db'];
     $q = "SELECT inv_uuid,parent_id,inventory_name,reg_no,man_power,resources,space FROM  ims_inventory_records WHERE inv_uuid='{$org_id}'";
     $res_org = $db->Execute($q);
@@ -241,7 +243,6 @@ function _shn_ims_viewform_org($org_id, $error = false) {
     shn_form_hidden(array('action' => '0'));
     shn_form_hidden(array('org_id' => $org_id));
     shn_form_hidden(array('bsd_village' => $bsd_village));
-    _shn_ims_action_change_javascript("action");
 ?>
 </center>
 <br />
