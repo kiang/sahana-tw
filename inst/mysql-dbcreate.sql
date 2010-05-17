@@ -683,7 +683,8 @@ CREATE TABLE camp_reg (
     women INT,
     family INT,
     children INT,
-    total INT, 
+    total INT,
+    modified DATE NULL,
     PRIMARY KEY (c_uuid)
 );
 
