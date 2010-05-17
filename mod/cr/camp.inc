@@ -62,9 +62,10 @@ function _shn_cr_cadd_start($errors = false) {
     shn_form_text(_("Capacity"), "capacity", 'size="10"');
     shn_form_text(_("Men"), "men", 'size="10"');
     shn_form_text(_("Women"), "women", 'size="10"');
-    shn_form_text(_("Children"), "children", 'size="10"');
+    shn_form_text(_("Children( 1 ~ 12 years old )"), "children", 'size="10"');
+    echo '<hr />';
     shn_form_text(_("Infected Count"), "family", 'size="10"');
-    shn_form_text(_("Total Count"), "total", 'size="10"');
+    shn_form_date(_('Update time'), 'modified');
     shn_form_fsclose();
     /*
     $hospital_help=_("Check this if you want to enter hospital information related to this {$conf['mod_cr_alt']}");
@@ -127,15 +128,17 @@ function _shn_cr_cadd_chk($errors = false) {
         } else {
             $_SESSION['camp_children'] = $_POST['children'];
         }
-        if ($_POST['total'] == null) {
-            $_SESSION['camp_total'] = 0;
-        } else {
-            $_SESSION['camp_total'] = $_POST['total'];
-        }
+        $_SESSION['camp_total'] = $_SESSION['camp_men']
+        + $_SESSION['camp_women'] + $_SESSION['camp_children'];
         if ($_POST['capacity'] == null) {
             $_SESSION['camp_capacity'] = 0;
         } else {
             $_SESSION['camp_capacity'] = $_POST['capacity'];
+        }
+        if (empty($_POST['modified'])) {
+            $_SESSION['camp_modified'] = '';
+        } else {
+            $_SESSION['camp_modified'] = $_POST['modified'];
         }
         $_SESSION['contact_mob'] = $_POST['contact_mob'];
         $_SESSION['occupation'] = $_POST['occupation'];
@@ -240,15 +243,17 @@ function _shn_cr_sel_map($errors = false) {
         } else {
             $_SESSION['camp_children'] = $_POST['children'];
         }
-        if ($_POST['total'] == null) {
-            $_SESSION['camp_total'] = 0;
-        } else {
-            $_SESSION['camp_total'] = $_POST['total'];
-        }
+        $_SESSION['camp_total'] = $_SESSION['camp_men']
+        + $_SESSION['camp_women'] + $_SESSION['camp_children'];
         if ($_POST['capacity'] == null) {
             $_SESSION['camp_capacity'] = 0;
         } else {
             $_SESSION['camp_capacity'] = $_POST['capacity'];
+        }
+        if (empty($_POST['modified'])) {
+            $_SESSION['camp_modified'] = '';
+        } else {
+            $_SESSION['camp_modified'] = $_POST['modified'];
         }
         if (isset($_POST['hospital'])) {
             $_SESSION['hospital'] = true;
@@ -379,12 +384,12 @@ function _shn_cr_validate_error() {
     }
     if ($_POST['children'] != null || $_POST['women'] != null || $_POST['men'] != null) {
         $totalcount = $_POST['children'] + $_POST['women'] + $_POST['men'];
-        if ($totalcount != $_POST['total']) {
-            add_error("The total count should be equal to men,women and children count");
+        if ($_POST['family'] > $totalcount) {
+            add_error(_('The Infected count should be less or equal than the total count'));
             $error_flag = true;
         }
-        if ($_POST['family'] > $totalcount) {
-            add_error("The Infected count should be less or equal than the total count");
+        if($_POST['capacity'] < $totalcount) {
+            add_error(_('The capacity should be greater or equal than the total count'));
             $error_flag = true;
         }
     }
@@ -458,7 +463,12 @@ function _shn_cr_cadd_commit_db() {
     $q = "INSERT INTO camp_general(c_uuid,name,location_id,opt_camp_type,address,capacity) VALUES('{$uid}','{$_SESSION['camp_name']}','{$loc_id}','{$_SESSION['opt_camp_type']}','{$_SESSION['camp_address']}','{$_SESSION['camp_capacity']}')";
     $res = $db->Execute($q);
     //enter into camp_reg table
-    $q = "INSERT INTO camp_reg (c_uuid,admin_name,admin_no,men,women,family,children,total) VALUES ('{$uid}','{$_SESSION['camp_contact_name']}','{$_SESSION['camp_contact_number']}','{$_SESSION['camp_men']}','{$_SESSION['camp_women']}','{$_SESSION['camp_family']}','{$_SESSION['camp_children']}','{$_SESSION['camp_total']}')";
+    $q = "INSERT INTO camp_reg (c_uuid,admin_name,admin_no,men,women,family,
+    children,total,modified) VALUES ('{$uid}',
+    '{$_SESSION['camp_contact_name']}','{$_SESSION['camp_contact_number']}',
+    '{$_SESSION['camp_men']}','{$_SESSION['camp_women']}',
+    '{$_SESSION['camp_family']}','{$_SESSION['camp_children']}',
+    '{$_SESSION['camp_total']}', '{$_SESSION['camp_modified']}')";
     $res = $db->Execute($q);
     // insert into camp admin
     $qa = "INSERT INTO camp_admin(c_uuid,contact_puuid) VALUES ('{$uid}','{$puid}')";
@@ -575,9 +585,11 @@ function _shn_cr_cadd_confir($errors = false) {
     shn_form_label(_("Capacity") . " : ", $_SESSION['camp_capacity']);
     shn_form_label(_("Men") . " : ", $_SESSION['camp_men']);
     shn_form_label(_("Women") . " : ", $_SESSION['camp_women']);
-    shn_form_label(_("Children") . " : ", $_SESSION['camp_children']);
-    shn_form_label(_("Infected Count") . " : ", $_SESSION['camp_family']);
+    shn_form_label(_("Children( 1 ~ 12 years old )") . " : ", $_SESSION['camp_children']);
     shn_form_label(_("Total Count") . " : ", $_SESSION['camp_total']);
+    echo '<hr />';
+    shn_form_label(_("Infected Count") . " : ", $_SESSION['camp_family']);
+    shn_form_label(_('Update time') . " : ", $_SESSION['camp_modified']);
     shn_form_hidden(array('seq' => 'commit'));
     shn_form_fsclose();
     shn_form_fsopen(_('GPS Coordinates'));
@@ -652,9 +664,12 @@ function _shn_cr_cedt_add($errors = false) {
     shn_form_text(_("Capacity"), "capacity", 'size="10"', array('value' => $_SESSION['camp_capacity']));
     shn_form_text(_("Men"), "men", 'size="10"', array('value' => $_SESSION['camp_men']));
     shn_form_text(_("Women"), "women", 'size="10"', array('value' => $_SESSION['camp_women']));
-    shn_form_text(_("Children"), "children", 'size="10"', array('value' => $_SESSION['camp_children']));
+    shn_form_text(_("Children( 1 ~ 12 years old )"), "children", 'size="10"', array('value' => $_SESSION['camp_children']));
+    echo '<hr />';
     shn_form_text(_("Infected Count"), "family", 'size="10"', array('value' => $_SESSION['camp_family']));
-    shn_form_text(_("Total Count"), "total", 'size="10"', array('value' => $_SESSION['camp_total']));
+    shn_form_date(_('Update time'), 'modified', array(
+        'value' => $_SESSION['camp_modified']
+    ));
     shn_form_fsclose();
     shn_form_submit(_("Next"));
     shn_form_fclose();

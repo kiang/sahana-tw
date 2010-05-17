@@ -60,9 +60,12 @@ function _shn_cr_cedt_start($errors = false) {
     shn_form_text(_("Capacity"), "capacity", 'size="10"', array('value' => $_SESSION['camp_capacity']));
     shn_form_text(_("Men"), "men", 'size="10"', array('value' => $_SESSION['camp_men']));
     shn_form_text(_("Women"), "women", 'size="10"', array('value' => $_SESSION['camp_women']));
-    shn_form_text(_("Children"), "children", 'size="10"', array('value' => $_SESSION['camp_children']));
+    shn_form_text(_("Children( 1 ~ 12 years old )"), "children", 'size="10"', array('value' => $_SESSION['camp_children']));
+    echo '<hr />';
     shn_form_text(_("Infected Count"), "family", 'size="10"', array('value' => $_SESSION['camp_family']));
-    shn_form_text(_("Total Count"), "total", 'size="10"', array('value' => $_SESSION['camp_total']));
+    shn_form_date(_('Update time'), 'modified', array(
+        'value' => $_SESSION['camp_modified']
+    ));
     shn_form_fsclose();
     shn_form_submit(_("Next"));
     shn_form_fclose();
@@ -153,9 +156,11 @@ function shn_cr_all_view() {
     shn_form_label(_("Capacity"), $_SESSION['camp_capacity']);
     shn_form_label(_("Men"), $_SESSION['camp_men']);
     shn_form_label(_("Women"), $_SESSION['camp_women']);
-    shn_form_label(_("Children"), $_SESSION['camp_children']);
+    shn_form_label(_("Children( 1 ~ 12 years old )"), $_SESSION['camp_children']);
+    shn_form_label(_("Total Count") . " : ", $_SESSION['camp_total']);
+    echo '<hr />';
     shn_form_label(_("Infected Count"), $_SESSION['camp_family']);
-    shn_form_label(_("Total Count"), $_SESSION['camp_total']);
+    shn_form_label(_('Update time'), $_SESSION['camp_modified']);
     shn_form_fsclose();
     $sql = "SELECT option_description FROM field_options WHERE option_code IN (SELECT opt_camp_service FROM camp_services WHERE c_uuid = '{$_SESSION['editid']}') AND field_name = 'opt_camp_service'";
     $res = $global['db']->Execute($sql);
@@ -192,7 +197,9 @@ function _shn_cr_cedt_chk($errors = false) {
     $_SESSION['camp_men'] = $_POST['men'];
     $_SESSION['camp_women'] = $_POST['women'];
     $_SESSION['camp_children'] = $_POST['children'];
-    $_SESSION['camp_total'] = $_POST['total'];
+    $_SESSION['camp_total'] = $_SESSION['camp_men']
+        + $_SESSION['camp_women'] + $_SESSION['camp_children'];
+    $_SESSION['camp_modified'] = $_POST['modified'];
     $_SESSION['cr_loc'] = shn_location_get_form_submit_loc();
     //var_dump($_SESSION);
     
@@ -288,15 +295,6 @@ function _shn_cr_validate_error() {
             $error_flag = true;
         }
     }
-    if (!(null == ($_POST['total']))) {
-        if (!is_numeric(trim($_POST['total']))) {
-            add_error(_("The total count is not a valid number"));
-            $error_flag = true;
-        } else if (!positive_number($_POST['total'])) {
-            add_error(_("The total count cannot be negative"));
-            $error_flag = true;
-        }
-    }
     if (!(null == ($_POST['men']))) {
         if (!is_numeric(trim($_POST['men']))) {
             add_error(_("The men count is not a valid number"));
@@ -326,12 +324,12 @@ function _shn_cr_validate_error() {
     }
     if ($_POST['children'] != null || $_POST['women'] != null || $_POST['men'] != null) {
         $totalcount = $_POST['children'] + $_POST['women'] + $_POST['men'];
-        if ($totalcount != $_POST['total']) {
-            add_error("The total count should be equal to men,women and children count");
-            $error_flag = true;
-        }
         if ($_POST['family'] > $totalcount) {
             add_error("The Infected count should be less or equal than the total count");
+            $error_flag = true;
+        }
+        if($_POST['capacity'] < $totalcount) {
+            add_error(_('The capacity should be greater or equal than the total count'));
             $error_flag = true;
         }
     }
@@ -351,7 +349,11 @@ function positive_number($nr) {
 function _shn_cr_get_session($camp_id) {
     global $global;
     $db = $global['db'];
-    $query = "SELECT a.name,a.location_id,a.opt_camp_type,a.address,a.capacity,b.admin_name,b.admin_no,b.family,b.total,b.men,b.women,b.children FROM camp_general AS a LEFT OUTER JOIN camp_reg AS b ON a.c_uuid=b.c_uuid WHERE a.c_uuid='{$camp_id}'";
+    $query = "SELECT a.name,a.location_id,a.opt_camp_type,a.address,
+    a.capacity,b.admin_name,b.admin_no,b.family,b.total,b.men,b.women,
+    b.children,b.modified FROM camp_general AS a
+    LEFT OUTER JOIN camp_reg AS b ON a.c_uuid=b.c_uuid
+    WHERE a.c_uuid='{$camp_id}'";
     $res = $db->Execute($query);
     $_SESSION['camp_name'] = $res->fields['name'];
     $_SESSION['opt_camp_type'] = $res->fields['opt_camp_type'];
@@ -365,6 +367,7 @@ function _shn_cr_get_session($camp_id) {
     $_SESSION['camp_children'] = $res->fields['children'];
     $_SESSION['camp_total'] = $res->fields['total'];
     $_SESSION['camp_capacity'] = $res->fields['capacity'];
+    $_SESSION['camp_modified'] = $res->fields['modified'];
     $query = "SELECT * FROM contact WHERE pgoc_uuid=(SELECT contact_puuid FROM camp_admin WHERE c_uuid='{$camp_id}')";
     $res = $db->Execute($query);
     $_SESSION['camp_contact_mob'] = $res->fields['contact_value'];
@@ -395,7 +398,16 @@ function _shn_cr_cedt_commit() {
         $q = "update camp_general set name='{$_SESSION['camp_name']}',location_id='{$loc_id}',opt_camp_type='{$_SESSION['opt_camp_type']}',address='{$_SESSION['camp_address']}',capacity={$_SESSION['camp_capacity']} where c_uuid='{$_SESSION['editid']}'";
         $res = $db->Execute($q);
         //enter into camp_reg table
-        $q = "update camp_reg set admin_name='{$_SESSION['camp_contact_name']}',admin_no='{$_SESSION['camp_contact_number']}',men='{$_SESSION['camp_men']}',women='{$_SESSION['camp_women']}',family={$_SESSION['camp_family']},children='{$_SESSION['camp_children']}',total={$_SESSION['camp_total']} where c_uuid='{$_SESSION['editid']}'";
+        $q = "update camp_reg set
+        admin_name='{$_SESSION['camp_contact_name']}',
+        admin_no='{$_SESSION['camp_contact_number']}',
+        men='{$_SESSION['camp_men']}',
+        women='{$_SESSION['camp_women']}',
+        family={$_SESSION['camp_family']},
+        children='{$_SESSION['camp_children']}',
+        total={$_SESSION['camp_total']},
+        modified='{$_SESSION['camp_modified']}'
+        where c_uuid='{$_SESSION['editid']}'";
         $res = $db->Execute($q);
         $qb = "UPDATE person_details set occupation='{$_SESSION['camp_occupation']}' where p_uuid='$pid'";
         $resb = $db->Execute($qb);
@@ -511,9 +523,11 @@ function _shn_cr_cedit_confir() {
     shn_form_label(_("Capacity") . " : ", $_SESSION['camp_capacity']);
     shn_form_label(_("Men") . " : ", $_SESSION['camp_men']);
     shn_form_label(_("Women") . " : ", $_SESSION['camp_women']);
-    shn_form_label(_("Children") . " : ", $_SESSION['camp_children']);
-    shn_form_label(_("Infected Count") . " : ", $_SESSION['camp_family']);
+    shn_form_label(_("Children( 1 ~ 12 years old )") . " : ", $_SESSION['camp_children']);
     shn_form_label(_("Total Count") . " : ", $_SESSION['camp_total']);
+    echo '<hr />';
+    shn_form_label(_("Infected Count") . " : ", $_SESSION['camp_family']);
+    shn_form_label(_('Update time') . " : ", $_SESSION['camp_modified']);
     shn_form_hidden(array('seq' => 'commit'));
     shn_form_fsclose();
     /*shn_form_fsopen(_('GPS Coordinates'));
@@ -583,9 +597,12 @@ function _shn_cr_cedit_second() {
     shn_form_text(_("Capacity"), "capacity", 'size="10"', array('value' => $_SESSION['camp_capacity']));
     shn_form_text(_("Men"), "men", 'size="10"', array('value' => $_SESSION['camp_men']));
     shn_form_text(_("Women"), "women", 'size="10"', array('value' => $_SESSION['camp_women']));
-    shn_form_text(_("Children"), "children", 'size="10"', array('value' => $_SESSION['camp_children']));
+    shn_form_text(_("Children( 1 ~ 12 years old )"), "children", 'size="10"', array('value' => $_SESSION['camp_children']));
+    echo '<hr />';
     shn_form_text(_("Infected Count"), "family", 'size="10"', array('value' => $_SESSION['camp_family']));
-    shn_form_text(_("Total Count"), "total", 'size="10"', array('value' => $_SESSION['camp_total']));
+    shn_form_date(_('Update time'), 'modified', array(
+        'value' => $_SESSION['camp_modified']
+    ));
     shn_form_fsclose();
     shn_form_submit(_("Next"));
     shn_form_fclose();

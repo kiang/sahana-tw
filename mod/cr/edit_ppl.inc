@@ -62,7 +62,7 @@ function _shn_cr_cedt_start($errors = false) {
 <tr>
 <td>
 <?php
-    shn_form_text(_("Children"), "children", 'size="5"', array('value' => $_SESSION['camp_children']));
+    shn_form_text(_("Children( 1 ~ 12 years old )"), "children", 'size="5"', array('value' => $_SESSION['camp_children']));
 ?>
 </td>
 </tr>
@@ -71,6 +71,16 @@ function _shn_cr_cedt_start($errors = false) {
 <td>
 <?php
     shn_form_text(_("Total Infected"), "infected_count", 'size="5"', array('value' => $_SESSION['camp_infected']));
+?>
+</td>
+</tr>
+
+<tr>
+<td>
+<?php
+    shn_form_date(_('Update time'), 'modified', array(
+        'value' => $_SESSION['camp_modified']
+    ));
 ?>
 </td>
 </tr>
@@ -90,6 +100,7 @@ function _shn_cr_cedt_chk($errors = false) {
     $_SESSION['camp_men'] = $_POST['men'];
     $_SESSION['camp_women'] = $_POST['women'];
     $_SESSION['camp_children'] = $_POST['children'];
+    $_SESSION['camp_modified'] = $_POST['modified'];
     $_SESSION['camp_total'] = $_SESSION['camp_men'] + $_SESSION['camp_women'] + $_SESSION['camp_children'];
 }
 function _shn_cr_validate_error() {
@@ -125,9 +136,14 @@ function _shn_cr_validate_error() {
             $error_flag = true;
         }
     }
-    $total = $_POST['men'] + $_POST['women'] + $_POST['children'];
-    if ($total != null && $total < $_POST['infected_count']) {
-        add_error(_('Infected Count should be less or equal than total'));
+    $totalcount = $_POST['men'] + $_POST['women'] + $_POST['children'];
+    if ($totalcount != null && $totalcount < $_POST['infected_count']) {
+        add_error(_('The Infected count should be less or equal than the total count'));
+        $error_flag = true;
+    }
+
+    if($_POST['capacity'] < $totalcount) {
+        add_error(_('The capacity should be greater or equal than the total count'));
         $error_flag = true;
     }
     return $error_flag;

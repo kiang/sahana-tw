@@ -50,7 +50,8 @@ function show_wiki_map($category = "all", $date = 0) {
     while (!$res->EOF) {
         $editable = $res->fields['editable'];
         if ($editable == 1) {
-            $edit_url = "<a href=index.php?mod=gis&act=wm_edit&seq=ewmp&wmid=" . $res->fields['wiki_uuid'] . "> Edit</a>";
+            $edit_url = '<a href=index.php?mod=gis&act=wm_edit&seq=ewmp&wmid='
+            . $res->fields['wiki_uuid'] . '>' . _('Edit') . '</a>';
         } else $edit_url = "";
         //handle images
         //@todo: image type
@@ -73,7 +74,19 @@ function show_wiki_map($category = "all", $date = 0) {
                 }
             }
         }
-        array_push($map_array, array("lat" => $res->fields['map_northing'], "lon" => $res->fields['map_easting'], "name" => $res->fields['name'], "desc" => $res->fields['description'], "url" => $res->fields['url'], "author" => $res->fields['author'], "edit" => $edit_url, "date" => $res->fields['event_date'], "wiki_id" => $res->fields['wiki_uuid'], "image" => $image_path, "img_w" => 100, "img_h" => 100));
+        array_push($map_array, array(
+            "lat" => $res->fields['map_northing'],
+            "lon" => $res->fields['map_easting'],
+            "name" => $res->fields['name'],
+            "desc" => $res->fields['description'],
+            "url" => $res->fields['url'],
+            "author" => $res->fields['author'],
+            "edit" => $edit_url,
+            "date" => $res->fields['event_date'],
+            "wiki_id" => $res->fields['wiki_uuid'],
+            "image" => $image_path,
+            "img_w" => 100,
+            "img_h" => 100));
         $res->MoveNext();
     }
     //call gis api
