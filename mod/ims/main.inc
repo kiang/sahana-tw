@@ -361,19 +361,16 @@ function shn_ims_reg_inv($error = false) {
     //_shn_ims_test();
     _shn_ims_regform_inv($error);
 }
-function shn_ims_reg_inv_gis() {
+
+function shn_ims_reg_inv_cr() {
     require_once ("reg_inv.inc");
     if (_shn_ims_validate_reg_inv()) {
         display_errors();
         shn_ims_reg_inv();
     } else {
-        // print ("test");
-        _shn_ims_reg_inv_gis();
+        include_once ("process_inv.inc");
+        _shn_ims_reg_inv_cr();
     }
-}
-function shn_ims_reg_inv_cr() {
-    include_once ("process_inv.inc");
-    _shn_ims_reg_inv_cr();
 }
 function shn_ims_reg_operation_cr() {
     include_once ("process_inv.inc");

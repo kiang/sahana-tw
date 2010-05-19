@@ -32,18 +32,18 @@ function _shn_ims_regform_inv($error = false) {
 <div id="formcontainer">
 <?php
     //shn_form_fopen("reg_inv_cr");
-    shn_form_fopen("reg_inv_gis");
+    shn_form_fopen("reg_inv_cr", null, array('req' => false));
+    shn_form_hidden(array('seq' => 'img'));
     shn_form_fsopen(_('Primary Details'));
     $extra_opts['req'] = true;
     shn_form_text(_("Inventory Name : "), 'org_name', 'size="40"', $extra_opts);
-    // shn_form_text(_("Registration Number : "),'reg_no','size="50"');
     shn_form_fsclose();
     $parent = _shn_ims_get_start_loc();
     $range = array("start" => 1, "end" => 5);
     shn_form_fsopen(_("Location"));
-    //shn_location_form_org(1,5);
     shn_location($range, $value = null, $parent = null, $extra_opts = null);
     shn_form_fsclose();
+    shn_gis_add_marker_map_form();
     shn_form_fsopen(_("Contact Information"));
     _shn_ims_display_contact_person($error, true, null);
     shn_form_fsclose();
@@ -124,39 +124,6 @@ function _shn_ims_regform_operation($error = false) {
 ?>
 <?php
 // end of form
-function _shn_ims_reg_inv_gis() {
-    //$bsd_village=trim($_POST[$range["end"]]);
-    //$end=trim($_POST[$range["end"]]);
-    $_SESSION['ims']['inv_name'] = trim($_POST['org_name']);
-    $_SESSION['ims']['contact_name'] = trim($_POST['contact_name']);
-    $_SESSION['ims']['contact_add'] = trim($_POST['contact_add']);
-    $_SESSION['ims']['contact_phone'] = trim($_POST['contact_phone']);
-    $_SESSION['ims']['contact_mobile'] = trim($_POST['contact_mobile']);
-    $_SESSION['ims']['contact_fax'] = trim($_POST['contact_fax']);
-    $_SESSION['ims']['contact_mail'] = trim($_POST['contact_mail']);
-    $_SESSION['ims']['contact_web'] = trim($_POST['contact_web']);
-    $_SESSION['ims']['man_power'] = trim($_POST['man_power']);
-    $_SESSION['ims']['equipment'] = trim($_POST['equipment']);
-    $_SESSION['ims']['resources'] = trim($_POST['resources']);
-    $_SESSION['ims']['space'] = trim($_POST['space']);
-    //$range=trim($_POST["range"]);
-    $_SESSION['ims_1'] = $_POST['1'];
-    $_SESSION['ims_2'] = $_POST['2'];
-    $_SESSION['ims_3'] = $_POST['3'];
-    $_SESSION['ims_4'] = $_POST['4'];
-    $_SESSION['ims_5'] = $_POST['5'];
-    //$bsd_village=_shn_ims_get_locid();
-    shn_form_fopen("reg_inv_cr", null, array('req' => false));
-    //optionally, add additional form details, sequence information
-    shn_form_hidden(array('seq' => 'img'));
-    //call appropriate gis api method
-    shn_gis_add_marker_map_form();
-    //shn_form_fclose();
-    $_SESSION['ims']['bsd_village'] = shn_location_get_form_submit_loc();
-    //shn_form_hidden(array('range'=>$range));
-    shn_form_submit(_("Next"));
-    shn_form_fclose();
-}
 function _shn_ims_validate_reg_inv() {
     $error_flag = false;
     $VARCHAR = 100;

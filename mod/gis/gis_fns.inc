@@ -178,7 +178,6 @@ function shn_gis_add_marker_map_form($name_of_map = "Area Map", $nameOfPoint = "
     shn_form_fsopen(_("GPS Coordinates"));
     shn_form_text(_("Northing / Latitude"), "gps_y", 'size="60"');
     shn_form_text(_("Easting / Longitude"), "gps_x", 'size="60"');
-    shn_form_submit(_("Next"), $button_submit_opts);
     shn_form_fsclose();
     if ($conf['gis']) {
         $extra_opts['marker'] = 'single';
@@ -198,8 +197,6 @@ simply click on the center of the pointer.");
     } else {
         shn_gis_print_msg();
     }
-    //shn_form_fclose();
-    
 }
 /**
  * Add map with simple markers from database
