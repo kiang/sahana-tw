@@ -604,12 +604,32 @@ function _shn_cr_cedit_second() {
 ?>
 
 	<?php
-    global $global;
+    global $global, $range, $conf;
     include_once $global['approot'] . "/inc/lib_location.inc";
-    global $range;
     shn_form_fsopen(_("Location Details"));
     shn_location($range, $_SESSION['cr']['loc']);
     shn_form_fsclose();
+    shn_form_fsopen(_("Map Location"));
+    $extra_opts['req'] = false;
+    $extra_opts['value'] = $_SESSION['camp_lat'];
+    shn_form_text(_("Latitude : "), 'gps_x', 'size="40"', $extra_opts);
+    $extra_opts['value'] = $_SESSION['camp_lon'];
+    shn_form_text(_("Longitude : "), 'gps_y', 'size="40"', $extra_opts);
+    shn_form_fsclose();
+    if ($conf['gis']) {
+        $extra_opts['marker'] = 'single';
+        shn_form_fsopen($name_of_map);
+        $plugin_name = $conf['mod_gis_dflt'];
+        include $global['approot'] . "/mod/gis/plugins/" . "$plugin_name" . "/handler_" . "$plugin_name" . ".inc";
+        echo "<div class='message information'>";
+        echo _("You can move around and enlarge/reduce the size of the area you want using
+the scale on upper left corner of the map. By clicking on a map you can
+mark your location with a pointer. If you want to remove the pointer,
+simply click on the center of the pointer.");
+        echo "</div>";
+        show_add_marker_map($nameOfPoint, $extra_opts);
+        shn_form_fsclose();
+    }
     //-----------------------------------------
     shn_form_fsopen(_("Contact Person Details"));
     shn_form_text(_("Full Name"), "camp_contact_name", 'size="60"', array('value' => $_SESSION['camp_contact_name']));
