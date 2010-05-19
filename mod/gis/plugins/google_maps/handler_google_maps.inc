@@ -62,11 +62,17 @@ function show_add_marker_map($name, $extra_opts = null) {
         <div id="map" style="width: <?=$conf['mod_gis_width'] ?>px; height: <?=$conf['mod_gis_height'] ?>px"></div>
 	<script src="http://maps.google.com/maps?file=api&v=2&key=<?php echo $key ?>" type="text/javascript"></script>
 	<script type="text/javascript">
-	  
 	//<![CDATA[
         $(function() {
             var map = new GMap2($('#map').get(0));
             var gpsTextTrigger = false;
+            <?php
+            if(isset($extra_opts['marker']) && $extra_opts['marker'] === 'single') {
+                echo 'var markerSingle = true;';
+            } else {
+                echo 'var markerSingle = false;';
+            }
+            ?>
             if($('input[name=gps_x]').length == 1) {
                 gpsTextTrigger = true;
             }
@@ -77,11 +83,13 @@ function show_add_marker_map($name, $extra_opts = null) {
                 <?php echo $conf['mod_gis_zoom']; ?>,G_SATELLITE_MAP);
             GEvent.addListener(map, 'click', function(overlay, point) {
                 if (overlay) {
-                    map.removeOverlay(overlay);
+                    if(!markerSingle) {
+                        map.removeOverlay(overlay);
+                    }
                 } else {
-                    <?php if (isset($extra_opts) && $extra_opts['marker'] === 'single'): ?>
-                    map.clearOverlays();
-                    <?php endif; ?>
+                    if(markerSingle) {
+                        map.clearOverlays();
+                    }
                     map.addOverlay(new GMarker(point));
                     // store x,y coords in hidden variables named loc_x, loc_y
                     // must be set via calling page
@@ -97,9 +105,9 @@ function show_add_marker_map($name, $extra_opts = null) {
             if(gpsTextTrigger) {
                 $('input[name=gps_x],input[name=gps_y]').change(function() {
                     var textPoint = new GLatLng($('input[name=gps_y]').val(), $('input[name=gps_x]').val());
-                    <?php if (isset($extra_opts) && $extra_opts['marker'] === 'single'): ?>
-                    map.clearOverlays();
-                    <?php endif; ?>
+                    if(markerSingle) {
+                        map.clearOverlays();
+                    }
                     map.addOverlay(new GMarker(textPoint));
                     map.setCenter(textPoint,<?php echo $conf['mod_gis_zoom']; ?>,G_SATELLITE_MAP);
                 });
