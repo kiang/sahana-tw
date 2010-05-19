@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-05-11 12:03+0800\n"
-"PO-Revision-Date: 2010-05-11 12:05+0800\n"
-"Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
+"PO-Revision-Date: 2010-05-18 16:55+0800\n"
+"Last-Translator: Hsiaojan <hsiaojan.liu@gmail.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -549,10 +549,11 @@ msgstr "狀態影像"
 msgid "Upload Image"
 msgstr "上傳影像"
 
+# 為符合使用UI，因此中文改為一般地圖，與英文並不對稱
 #: mod/gis/wm_fns.php:155
 #: mod/gis/wm_fns.inc:155
 msgid "Mapping Client"
-msgstr "對應用戶端"
+msgstr "一般地圖"
 
 #: mod/gis/wm_fns.php:172
 msgid "Detail Name Cannot be empty"
@@ -973,7 +974,7 @@ msgstr "結束日期"
 #: mod/ims/view_inv.inc:198
 #: inc/lib_location.inc:1060
 msgid "Base Location"
-msgstr "基本位置"
+msgstr "所在位置與地址"
 
 #: tools/tpl_languages.php:60
 msgid "You are currently not assigned as a site manager to any projects."
@@ -2247,7 +2248,7 @@ msgstr "選取您提供的服務，也就是您的組織在做什麼。例如醫
 #: mod/or/reg_org.inc:238
 #: mod/or/view_org.inc:391
 msgid "Organization Sector"
-msgstr "組織領域"
+msgstr "組織服務內容"
 
 #: mod/or/search.inc:42
 #: mod/or/reg_org.inc:81
@@ -2377,16 +2378,16 @@ msgstr "組織登錄"
 
 #: mod/or/reg_org.inc:36
 msgid "These are the basic details of an organization. Organization name is required , but the Registration number is optional"
-msgstr "這些是組織的基本資訊。組織名稱為必填，註冊號碼為選填。"
+msgstr "這些是組織的基本資訊。組織名稱為必填，登記字號為選填。"
 
 #: mod/or/reg_org.inc:45
 msgid "If your organization is registered under the government, please enter your Company Registration Number"
-msgstr "如果您的組織有像政府登記，請輸入您的註冊號碼"
+msgstr "如果您的組織有像政府登記，請輸入您的登記字號"
 
 #: mod/or/reg_org.inc:46
 #: mod/or/reg_org.inc:156
 msgid "Registration Number(if any) : "
-msgstr "註冊號碼（若有）："
+msgstr "登記字號（若有）："
 
 #: mod/or/reg_org.inc:69
 msgid "Select the location based at.  This is hierarchical. For example if you are based  in the country 'Sri lanka' ,district 'Colombo' ,and village 'Dehiwala',  start by selecting the country. Once you select the country all the divisions of that country will be shown in the next select box.  In this case all districts in 'Sri lanka' will appear . From those select a district, which inturn will show the village list in the next select box. Select 'dehiwala' and it is done! Please note that the levels can be customized, hence it does not need to always be 'country'->'district'->'village'. It is configurable from the 'administration' section."
@@ -2620,7 +2621,7 @@ msgstr "這是基本的組織資訊。組織名稱為必填，註冊號碼是選
 
 #: mod/or/view_org.inc:373
 msgid "Registration Number : "
-msgstr "註冊號碼："
+msgstr "登記字號："
 
 #: mod/or/view_org.inc:413
 msgid "Latitude : "
@@ -2728,7 +2729,7 @@ msgstr "請選擇您是否是上層組織的部門、分會…等等"
 
 #: mod/or/lib_or.inc:625
 msgid "Select the services your organization provides ,that is what you do as an organization or services your organization can provide in a disaster. e.g. if you offer medical services select it"
-msgstr "選擇您的組織所能提供的服務，也就是您的組織可以在災難中所能做的事情，例如提供醫療服務。"
+msgstr "主要服務：選擇您的組織在災難中所提供的最主要服務，例如醫療服務。"
 
 #: mod/or/lib_or.inc:640
 #: mod/mpr/add.inc:322
@@ -2963,7 +2964,7 @@ msgstr "組織類型"
 #: mod/or/admin.inc:36
 #: mod/or/admin_forms.inc:163
 msgid "Organization Sectors"
-msgstr "組織類別"
+msgstr "組織服務項目"
 
 #: mod/or/admin.inc:32
 msgid "Organisation Registry Configuration."
@@ -2979,7 +2980,7 @@ msgstr "更改組織的類型（新增、編輯或刪除）"
 
 #: mod/or/admin.inc:36
 msgid "Change the organization sectors, (add new, edit or delete)"
-msgstr "更改組織的領域（新增、編輯或刪除）"
+msgstr "更改組織的服務項目（新增、編輯或刪除）"
 
 #: mod/or/admin.inc:83
 msgid "Organization services were succesfully added/removed "
@@ -3051,11 +3052,11 @@ msgstr "根據指定資訊尋找組織"
 #: mod/or/home.inc:63
 #: mod/cs/main.inc:249
 msgid "View And Edit"
-msgstr "檢視與編輯"
+msgstr "瀏覽與編輯全部組織"
 
 #: mod/or/home.inc:64
 msgid "View a list of registered organizations. Their details can be viewed / edited by clicking on the appropriate links."
-msgstr "檢視已登錄的組織的列表。點選適當的連結，即可檢視/編輯。"
+msgstr "瀏覽已登錄的組織的列表。點選組織名稱連結，即可進行瀏覽與編輯。"
 
 #: mod/or/home.inc:74
 msgid "Service Coverage"
@@ -4114,7 +4115,7 @@ msgstr "預估值"
 #: mod/ims/mini_quantity.inc:49
 #: mod/ims/mini_quantity.inc:205
 msgid "Re-Order Level"
-msgstr "重新訂購的標準"
+msgstr "最低庫存標準"
 
 #: mod/ims/optimize.inc:577
 msgid "Pie Chart to forecasting Since "
@@ -4363,7 +4364,7 @@ msgstr "授權者"
 #: mod/ims/transfer_inv.inc:465
 #: mod/ims/main.inc:59
 msgid "Transit Item"
-msgstr "物資移倉"
+msgstr "物資移倉紀錄"
 
 #: mod/ims/lib_ims.inc:395
 msgid "Inventory Space : "
@@ -4448,7 +4449,7 @@ msgstr "由"
 
 #: mod/ims/view_edit_item.inc:27
 msgid "Item Registry"
-msgstr "物資登記"
+msgstr "物資清單與新增登記"
 
 #: mod/ims/view_edit_item.inc:50
 #: mod/ims/view_inv.inc:34
@@ -4477,11 +4478,11 @@ msgstr "前往頁面："
 
 #: mod/ims/view_edit_item.inc:147
 msgid "Inventory Transfer"
-msgstr "庫存轉移"
+msgstr "物資運送/移倉"
 
 #: mod/ims/view_edit_item.inc:154
 msgid "Send Item"
-msgstr "送出物資"
+msgstr "物資運送/發送"
 
 #: mod/ims/view_edit_item.inc:182
 msgid " Item was successfully updated"
@@ -4657,7 +4658,7 @@ msgstr "登錄新的庫存清單/倉庫"
 
 #: mod/ims/view_inv.inc:27
 msgid "Add Inventory"
-msgstr "新增庫存"
+msgstr "新增倉庫"
 
 #: mod/ims/view_inv.inc:63
 msgid "Other <br /> Facilities"
@@ -4669,7 +4670,7 @@ msgstr "庫存登錄資訊"
 
 #: mod/ims/transfer_inv.inc:25
 msgid "Send Items between Inventories"
-msgstr "物資運送"
+msgstr "在倉庫之間移動物資"
 
 #: mod/ims/transfer_inv.inc:26
 msgid "Please select the Item to be sent"
@@ -4842,7 +4843,7 @@ msgstr "頁碼編號"
 
 #: mod/ims/transfer_inv.inc:427
 msgid "Item Transit"
-msgstr "移倉物資"
+msgstr "移倉物資清單"
 
 #: mod/ims/transfer_inv.inc:528
 msgid "Item Transit "
@@ -4919,7 +4920,7 @@ msgstr "同時列出所有倉庫，使用者可以進行增加、管理或刪除
 
 #: mod/ims/home.inc:33
 msgid "List Items:"
-msgstr "庫存物資列表"
+msgstr "物資列表"
 
 #: mod/ims/home.inc:33
 msgid " Enables end-user to add,edit or delete item for inventories and also enables to transfer items between two inventories"
@@ -4967,7 +4968,7 @@ msgstr "倉庫列表"
 
 #: mod/ims/main.inc:48
 msgid "Add/List Items"
-msgstr "新增物資"
+msgstr "新增物資/物資清單"
 
 #: mod/ims/main.inc:49
 #: mod/cs/edit.inc:69
@@ -4975,17 +4976,16 @@ msgid "Items"
 msgstr "物資"
 
 #: mod/ims/main.inc:50
-#, fuzzy
 msgid "Add Items"
-msgstr "新增產品"
+msgstr "新增物資"
 
 #: mod/ims/main.inc:51
 msgid "Send Items"
-msgstr "物資運送"
+msgstr "物資運送/發送"
 
 #: mod/ims/main.inc:52
 msgid "Transit Items"
-msgstr "運送中的物資"
+msgstr "物資移倉"
 
 #: mod/ims/main.inc:58
 msgid "Items to Re-order"
@@ -4994,7 +4994,7 @@ msgstr "最低庫存物資品項"
 #: mod/ims/main.inc:61
 #: mod/ims/main.inc:765
 msgid "Map by Inventory"
-msgstr "庫存地圖"
+msgstr "倉庫地圖"
 
 #: mod/ims/main.inc:63
 msgid "Optimization"
@@ -5092,9 +5092,8 @@ msgid "Records per Page"
 msgstr "每頁筆數"
 
 #: mod/ims/mini_quantity.inc:246
-#, fuzzy
 msgid "R-OL Amount"
-msgstr "原來金額"
+msgstr "最低庫存數量"
 
 #: mod/rs/search.inc:25
 msgid "Here you can search for reports and charts. Select the category that you need to search for."
@@ -5666,7 +5665,7 @@ msgstr "單位"
 #: mod/rms/handler_plg_ls.inc:112
 #: mod/rms/handler_plg_sch.inc:36
 msgid "All"
-msgstr "所有"
+msgstr "全部"
 
 #: mod/cs/edit.inc:69
 msgid "Sub Catalogs"
@@ -5724,9 +5723,8 @@ msgid " was successfully saved in the database"
 msgstr "已成功儲存在資料庫裡"
 
 #: mod/cs/edit.inc:405
-#, fuzzy
 msgid "Measurement Unit Type"
-msgstr "貸方傳票類別"
+msgstr "度量單位類型"
 
 #: mod/cs/edit.inc:445
 msgid "Details Of the Unit"
@@ -5900,7 +5898,7 @@ msgstr "先按照主要的物資類型，建立基礎分類（例如：食品和
 
 #: mod/cs/home.inc:36
 msgid "Add (sub)-Category"
-msgstr "新增（子）目錄"
+msgstr "新增子目錄"
 
 #: mod/cs/home.inc:36
 msgid "Within a Catalog there can be many sub-classifications or sub-categories of items. For example if the Base Catalog is Food and Nutrition a sub category would be Dry Food"
@@ -5909,7 +5907,7 @@ msgstr "在同一目錄中可以有多個物資的子分類和子目錄。例如
 #: mod/cs/home.inc:37
 #: mod/cs/main.inc:50
 msgid "Add Aid Item Type"
-msgstr "新增子目錄"
+msgstr "新增物資品項"
 
 #: mod/cs/home.inc:37
 msgid "Add New Aid Items Types to the Sahana System"
@@ -5948,7 +5946,7 @@ msgstr "新增主目錄"
 
 #: mod/cs/main.inc:49
 msgid "Add Aid Category"
-msgstr "新增物資品項"
+msgstr "新增子目錄"
 
 #: mod/cs/main.inc:51
 #, fuzzy
@@ -7226,9 +7224,8 @@ msgid "Welcome to the Sahana FOSS Disaster Management System Sahana is an integr
 msgstr "歡迎來到 Sahana FOSS 災難管理系統。Sahana 是一套功能可擴充的災難管理網頁應用程式，可協助解決災後大規模的人道問題。應用領域和欲解決的問題如下："
 
 #: mod/mpr/list_deceased.inc:19
-#, fuzzy
 msgid "Deceased People"
-msgstr "業務員"
+msgstr "已故人員"
 
 #: mod/mpr/audit.inc:51
 msgid "User Making Changes"
@@ -9831,7 +9828,7 @@ msgstr "依名稱搜尋"
 
 #: mod/cr/main_fns.inc:48
 msgid "Search for shelter by name or type of the shelter"
-msgstr "按名稱或庇護所類型，搜尋庇護所"
+msgstr "以庇護所名稱或類型進行搜尋"
 
 #: mod/cr/main_fns.inc:49
 #: mod/cr/main.inc:31
@@ -9840,7 +9837,7 @@ msgstr "依地址搜尋"
 
 #: mod/cr/main_fns.inc:49
 msgid "Search the shelter by its location"
-msgstr "依位置搜尋庇護所"
+msgstr "依地址位置搜尋庇護所"
 
 #: mod/cr/main_fns.inc:50
 msgid "Add shelter"
@@ -9856,11 +9853,11 @@ msgstr "編輯庇護所"
 
 #: mod/cr/main_fns.inc:51
 msgid "Update informations regarding shelters"
-msgstr "更新關於庇護所的資訊"
+msgstr "更新庇護所的資訊"
 
 #: mod/cr/main_fns.inc:52
 msgid "View all shelters"
-msgstr "檢視所有庇護所"
+msgstr "瀏覽所有庇護所"
 
 #: mod/cr/main_fns.inc:52
 msgid "List information of all shelters"
@@ -9868,7 +9865,7 @@ msgstr "列出所有庇護所的資訊"
 
 #: mod/cr/main_fns.inc:53
 msgid "View by location"
-msgstr "依地點x檢視"
+msgstr "依地點瀏覽庇護所"
 
 #: mod/cr/main_fns.inc:53
 msgid "List shelters according to location"
@@ -9876,35 +9873,35 @@ msgstr "根據地點列出庇護所"
 
 #: mod/cr/main_fns.inc:54
 msgid "View admin details"
-msgstr "檢視管理詳情"
+msgstr "瀏覽庇護所管理者資訊"
 
 #: mod/cr/main_fns.inc:54
 msgid "List shelters by shelter administrator's name"
-msgstr "依照庇護所管理者名稱列出庇護所"
+msgstr "瀏覽庇護所管理者聯絡詳細資訊"
 
 #: mod/cr/main_fns.inc:55
 msgid "Map by location"
-msgstr "依地點顯示地圖"
+msgstr "庇護所地圖"
 
 #: mod/cr/main_fns.inc:55
 msgid "Graphical representation of shelter locations on a map"
-msgstr "在地圖上圖形化顯示庇護所地點"
+msgstr "以GIS地圖顯示各庇護所位置"
 
 #: mod/cr/main_fns.inc:56
 msgid "Map by infection"
-msgstr "按感染程度呈現地圖"
+msgstr "以地圖瀏覽感染程度"
 
 #: mod/cr/main_fns.inc:56
 msgid "Graphical representation of shelter by infections"
-msgstr "依感染情況以地圖顯示庇護所"
+msgstr "以GIS地圖顯示各庇護所感染情況"
 
 #: mod/cr/main_fns.inc:57
 msgid "Map by population"
-msgstr "依據人口顯示地圖"
+msgstr "以地圖瀏覽收容人數"
 
 #: mod/cr/main_fns.inc:57
 msgid "Graphical representation of shelters by their population density"
-msgstr "依人口密度以地圖顯示庇護所"
+msgstr "以GIS地圖顯示各庇護所收容人數與收容密度"
 
 #: mod/cr/main_fns.inc:63
 msgid "Most occupied Shelters"
@@ -9916,7 +9913,7 @@ msgstr "最新的庇護所"
 
 #: mod/cr/main_fns.inc:223
 msgid "Map of Shelters by Location"
-msgstr "依地點查詢庇護所地圖"
+msgstr "庇護所地圖"
 
 #: mod/cr/main_fns.inc:263
 msgid "Infected"
@@ -9924,7 +9921,7 @@ msgstr "已感染"
 
 #: mod/cr/main_fns.inc:280
 msgid "Map of Shelters by Infected Population"
-msgstr "按感染人口查看庇護所地圖"
+msgstr "以GIS地圖顯示各庇護所感染人數"
 
 #: mod/cr/main_fns.inc:285
 #: mod/cr/main_fns.inc:353
@@ -9933,7 +9930,7 @@ msgstr "說明(Legend)"
 
 #: mod/cr/main_fns.inc:329
 msgid "Filled"
-msgstr "已填寫"
+msgstr "（據填寫資料顯示）"
 
 #: mod/cr/acl.inc:22
 msgid "ACL Base for Camps Registry is already installed"
@@ -10148,7 +10145,7 @@ msgstr "婦產科"
 
 #: mod/cr/camp.inc:162
 msgid "Shelter Checklist"
-msgstr "庇護所檢查清單"
+msgstr "庇護所設備與所提供服務"
 
 #: mod/cr/camp.inc:269
 msgid "Plot the Shelter Location OR Enter its GPS coordinates below"
@@ -10216,11 +10213,11 @@ msgstr "新增庇護所"
 
 #: mod/cr/main.inc:36
 msgid "View All Shelters"
-msgstr "查看所有庇護所"
+msgstr "瀏覽所有庇護所"
 
 #: mod/cr/main.inc:37
 msgid "View By Location"
-msgstr "依地點觀看"
+msgstr "依地點瀏覽"
 
 #: mod/cr/main.inc:38
 msgid "View Admin Details"
@@ -10228,7 +10225,7 @@ msgstr "查看管理詳情"
 
 #: mod/cr/main.inc:40
 msgid "Map by Location"
-msgstr "依地點觀看地圖"
+msgstr "庇護所地圖"
 
 #: mod/cr/main.inc:41
 msgid "Map by Infection"
@@ -11523,7 +11520,7 @@ msgstr "回到需求搜尋"
 
 #: mod/rms/conf.inc:22
 msgid "Request/Aid Management"
-msgstr "需求/援助管理"
+msgstr "需求/捐贈/資源媒合管理"
 
 #: mod/rms/handler_home.inc:32
 msgid "Sahana Request Management System is a central online repository where all relief organizations, relief workers, government agents and camp sites for displaced personnel can coordinate the supply of aid with their demand. It allows users to allocate the available resources to fulfill the demands effectively and efficiently."
@@ -11539,7 +11536,7 @@ msgstr "可客製化的援助分類"
 
 #: mod/rms/handler_home.inc:49
 msgid "Filtered search of aid pledges and requests"
-msgstr "援助捐贈和需求的篩選式搜尋"
+msgstr "捐贈物資與需求的篩選式搜尋"
 
 #: mod/rms/handler_home.inc:52
 msgid "Ability to track partial fulfillment of the request"
@@ -11574,7 +11571,7 @@ msgstr "需求的搜尋"
 #: mod/rms/handler_home.inc:62
 #: mod/rms/main.inc:55
 msgid "New Pledge"
-msgstr "新增允諾捐贈"
+msgstr "新增捐贈物資"
 
 #: mod/rms/handler_home.inc:62
 msgid "Donate items through the  system"
@@ -11583,7 +11580,7 @@ msgstr "透過本系統捐贈物資"
 #: mod/rms/handler_home.inc:63
 #: mod/rms/main.inc:56
 msgid "List Pledges"
-msgstr "列出允諾捐贈"
+msgstr "捐贈物資清單"
 
 #: mod/rms/handler_home.inc:63
 msgid "List all the donations done through the system"
@@ -11592,11 +11589,11 @@ msgstr "列出所有透過本系統完成的捐贈"
 #: mod/rms/handler_home.inc:64
 #: mod/rms/main.inc:57
 msgid "Search Pledges"
-msgstr "搜尋允諾捐贈"
+msgstr "搜尋捐贈物資"
 
 #: mod/rms/handler_home.inc:64
 msgid "Search for pledges"
-msgstr "允諾捐贈物資的搜尋"
+msgstr "搜尋捐贈物資"
 
 #: mod/rms/handler_home.inc:65
 msgid "Fulfill Requests"
@@ -11608,7 +11605,7 @@ msgstr "在災難事件裡媒合需求和捐贈"
 
 #: mod/rms/handler_home.inc:72
 msgid "New Pledges"
-msgstr "新增允諾捐贈"
+msgstr "新增捐贈物資登錄"
 
 #: mod/rms/handler_home.inc:73
 msgid "New Requests"
@@ -11616,7 +11613,7 @@ msgstr "新的需求"
 
 #: mod/rms/handler_mng_stat.inc:19
 msgid "Request / Pledge Statistics"
-msgstr "需求/允諾捐贈統計"
+msgstr "需求/捐贈物資統計"
 
 #: mod/rms/handler_plg_ls.inc:19
 msgid "Pledge List"
@@ -11663,17 +11660,17 @@ msgstr "已廢棄"
 
 #: mod/rms/handler_plg_ls.inc:141
 msgid "There are no Pledges on the Database that matches your criteria"
-msgstr "在資料庫裡沒有與您的條件相符的允諾捐贈"
+msgstr "在資料庫裡沒有與您的條件相符的捐贈物資"
 
 #: mod/rms/handler_plg_ls.inc:142
 #: mod/rms/handler_plg_ls.inc:198
 #: mod/rms/handler_plg_ls.inc:206
 msgid "Back to Pledge List"
-msgstr "回到允諾捐贈列表"
+msgstr "回到捐贈物資列表清單"
 
 #: mod/rms/handler_plg_new.inc:19
 msgid "Enter New Pledge"
-msgstr "輸入新的允諾捐贈"
+msgstr "輸入新的物資捐贈"
 
 #: mod/rms/handler_plg_new.inc:25
 msgid "New Donor"
@@ -11719,15 +11716,15 @@ msgstr "已成功加入允諾捐增資料。"
 
 #: mod/rms/handler_plg_sch.inc:19
 msgid "Search for Pledges"
-msgstr "搜尋允諾捐贈"
+msgstr "搜尋捐贈物資"
 
 #: mod/rms/handler_plg_sch.inc:71
 msgid "No pledges found"
-msgstr "沒有找到允諾捐贈的物資"
+msgstr "沒有找到符合的捐贈物資"
 
 #: mod/rms/handler_plg_sch.inc:348
 msgid "Back to Pledge Search"
-msgstr "回到允諾捐贈搜尋"
+msgstr "回到捐贈物資搜尋"
 
 #: mod/rms/handler_mng_ff.inc:20
 msgid "Fulfil Requests"
@@ -11765,21 +11762,23 @@ msgstr "數量"
 msgid "Used"
 msgstr "已使用"
 
+# context confirm needed
 #: mod/rms/handler_mng_ff.inc:169
 msgid "This shows the list of pledges that have the selected item, "
-msgstr "列出擁有所選擇的物資的允諾捐贈者列表，"
+msgstr "列出擁有所選擇的物資的捐贈者列表，"
 
 #: mod/rms/handler_mng_ff.inc:170
 msgid "Please select a pledge from the request to be fulfilled."
 msgstr "請從要滿足的需求裡選擇一個捐贈者。"
 
+# 尚待確認context
 #: mod/rms/handler_mng_ff.inc:178
 msgid "No Pledges have been registered !!!"
-msgstr "尚未有允諾捐贈者的登錄資料!!!"
+msgstr "尚未有捐贈物資被登錄!!!"
 
 #: mod/rms/handler_mng_ff.inc:248
 msgid "Allocate items from a pledge to fulfill a request, "
-msgstr "從允諾捐贈裡分配物資，以滿足需求，"
+msgstr "從捐贈物資裡分配物資，以滿足需求，"
 
 #: mod/rms/handler_mng_ff.inc:249
 msgid "The 'Maximum Allocatable Quantity' is the maximum you are allowed to allocate."
@@ -11787,7 +11786,7 @@ msgstr "'最大可分配的數量'，是您可分配的數量的最大值。"
 
 #: mod/rms/handler_mng_ff.inc:253
 msgid "Allocate items from the selected pledge to the request"
-msgstr "從選擇的允諾捐贈者裡，分配物資以滿足需求"
+msgstr "從選擇的捐贈物資裡，分配物資以滿足需求"
 
 #: mod/rms/handler_mng_ff.inc:256
 #: mod/rms/handler_mng_ff.inc:284
@@ -11828,11 +11827,11 @@ msgstr "已成功新增滿足需求的資料。"
 
 #: mod/rms/lib_rms_rss.inc:21
 msgid "Newly made Pledges"
-msgstr "最新的允諾"
+msgstr "最新的捐贈物資"
 
 #: mod/rms/lib_rms_rss.inc:21
 msgid "This List contains newly made pledges in sahana Request Aid Management system"
-msgstr "此列表包含了在 Sahana 需求/援助管理系統裡新加入的允諾資料（pledge，承諾要捐助物資）"
+msgstr "此列表包含了在 Sahana 需求/捐贈/資源媒合管理系統裡新加入的捐贈物資資料"
 
 #: mod/rms/lib_rms_rss.inc:31
 msgid "This pledge was made on "
@@ -11876,7 +11875,7 @@ msgstr "搜尋需求"
 
 #: mod/rms/main.inc:54
 msgid "Pledges"
-msgstr "允諾捐贈"
+msgstr "捐贈物資"
 
 #: mod/rms/main.inc:59
 msgid "Manage"
@@ -11955,7 +11954,7 @@ msgstr "已滿足"
 
 #: mod/rms/lib_rms.inc:939
 msgid "Pledge Items"
-msgstr "允諾捐贈的物資"
+msgstr "捐贈物資的品項"
 
 #: mod/rms/lib_rms.inc:1142
 msgid "There is no any root catalogue found. "
@@ -12159,7 +12158,7 @@ msgstr "群組名稱"
 
 #: mod/msg/message_forms.inc:160
 msgid "Mail IDs/Phone Numbers Count"
-msgstr "Mail IDs/Phone Numbers Count"
+msgstr "電子郵件信箱/手機號碼"
 
 #: mod/msg/message_forms.inc:207
 msgid "View and Edit Group"
@@ -13441,11 +13440,11 @@ msgstr "成功更改密碼！"
 
 #: inc/lib_location.inc:601
 msgid "If you know any of the following, please select Only one of them first"
-msgstr "請只選擇一筆資料（If you know any of the following, please select Only one of them first）"
+msgstr "請只選擇一筆資料"
 
 #: inc/lib_location.inc:601
 msgid " , the selection will populate the set of Location select boxes "
-msgstr "，選擇的項目會計算出位置（populate the set of Location select boxes ）"
+msgstr "，選擇的項目會計算出位置"
 
 #: inc/lib_location.inc:603
 msgid "* Camp/Shelter "
@@ -14087,9 +14086,8 @@ msgid "Blond"
 msgstr "金黃色"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "NGO Run Camp"
-msgstr "付款走向報表"
+msgstr "民間移動帳棚"
 
 #: field_options/option_description,
 msgid "Temporary Shelter"
