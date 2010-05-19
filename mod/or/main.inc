@@ -54,21 +54,6 @@ function shn_or_reg_org($error = false) {
 }
 function shn_or_reg_org_confirm() {
     include_once ("reg_org.inc");
-    $error = _shn_or_check_org_reg_map_info_complete();
-    if ($error == false) {
-        // patch to fix gis coordinate validation and return to the same form.
-        /*if( $_SESSION['org']['parent_id']==null){
-        _shn_or_regform_org(true);
-        }else{
-        _shn_or_regform_operation(false);
-        }*/
-        _shn_or_reg_gis_map();
-    } else {
-        _shn_or_regconfirm_org();
-    }
-}
-function shn_or_reg_org_gis_map() {
-    include_once ("reg_org.inc");
     $error = _shn_or_check_org_reg_info_complete();
     if ($error) {
         if ($_SESSION['org']['parent_id'] == null) {
@@ -77,9 +62,10 @@ function shn_or_reg_org_gis_map() {
             _shn_or_regform_operation(false);
         }
     } else {
-        _shn_or_reg_gis_map();
+        _shn_or_regconfirm_org();
     }
 }
+
 function shn_or_reg_org_cr() {
     switch ($_POST["action"]) {
         case "edit":

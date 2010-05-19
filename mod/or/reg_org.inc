@@ -19,8 +19,8 @@ require_once $global['approot'] . "/inc/lib_location.inc";
 include_once $global['approot'] . "/inc/lib_security/lib_acl.inc";
 include_once "lib_or.inc";
 function _shn_or_regform_org($error = false) {
-    global $global;
-    global $conf;
+    global $global, $conf;
+    include $global['approot'] . "/mod/gis/gis_fns.inc";
     $db = $global['db'];
 ?>
 <h2><?php echo _('Organization Registration') ?></h2>
@@ -30,7 +30,8 @@ function _shn_or_regform_org($error = false) {
 ?>  
 <div id="formcontainer">
 <?php
-    shn_form_fopen("reg_org_gis_map");
+    shn_form_fopen("reg_org_confirm", null, array('req' => false));
+    shn_form_hidden(array('seq' => 'img'));
     shn_form_fsopen(_("Primary Details"));
     $extra_opts['req'] = true;
 ?><div class="info"><?php echo _("These are the basic details of an organization. Organization name is required , but the Registration number is optional"); ?> </div><br /><?php
@@ -80,6 +81,7 @@ function _shn_or_regform_org($error = false) {
     $extra_opts['help'] = (_("In addition to the hierarchical location , you may specify the address of the organization here. "));
     shn_form_text(_("Address"), 'loc_txt', 'size="40"', $extra_opts);
     shn_form_fsclose();
+    shn_gis_add_marker_map_form();
     // Contact infomation
     shn_form_fsopen(_("Contact Information"));
     _shn_or_display_contact_person($error, false, null);
@@ -106,25 +108,7 @@ function _shn_or_regform_org($error = false) {
     // end of form
     
 }
-function _shn_or_reg_gis_map() {
-    global $global;
-    include_once $global['approot'] . "/mod/gis/gis_fns.inc";
-    shn_form_fopen("reg_org_confirm", null, array('req' => false));
-    shn_form_hidden(array('seq' => 'img'));
-    shn_gis_add_marker_map_form("Area Map", "", null, array('marker' => 'single'));
-?>
-    <br />
-<center>
-<?php
-    //create the submit button
-    shn_form_submit(_("Next"));
-?>
-</center>
-<br />
-<?php
-    //close the form
-    shn_form_fclose();
-}
+
 function _shn_or_regconfirm_org() {
     global $global;
     global $conf;
@@ -211,8 +195,8 @@ function _shn_or_regconfirm_org() {
     
 }
 function _shn_or_regform_operation($error = false, $parent_org = null) {
-    global $global;
-    global $conf;
+    global $global, $conf;
+    include $global['approot'] . "/mod/gis/gis_fns.inc";
     $db = $global['db'];
     $q = "SELECT name FROM org_main WHERE o_uuid='{$parent_org}'";
     $res = $db->Execute($q);
@@ -224,7 +208,8 @@ function _shn_or_regform_operation($error = false, $parent_org = null) {
                
 <div id="formcontainer">
 <?php
-    shn_form_fopen("reg_org_gis_map");
+    shn_form_fopen("reg_org_confirm", null, array('req' => false));
+    shn_form_hidden(array('seq' => 'img'));
     shn_form_fsopen(_('Holding Company'));
     _shn_or_display_orgs(false, false, $parent_org);
     shn_form_fsclose();
@@ -255,6 +240,7 @@ function _shn_or_regform_operation($error = false, $parent_org = null) {
     }
     shn_form_text(_("Address"), 'loc_txt', 'size="40"', $extra_opts);
     shn_form_fsclose();
+    shn_gis_add_marker_map_form();
     shn_form_fsopen(_("Contact Information"));
     _shn_or_display_contact_person($error, false, null);
     shn_form_fsclose();

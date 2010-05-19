@@ -172,8 +172,7 @@ function shn_gis_add_marker_map($name_of_map = "Area Map", $name = null) {
  * @return void
  */
 function shn_gis_add_marker_map_form($name_of_map = "Area Map", $nameOfPoint = "", $button_submit_opts = null, $extra_opts = null) {
-    global $global;
-    global $conf;
+    global $global, $conf;
     include_once ($global['approot'] . '/inc/lib_form.inc');
     shn_form_fsopen(_("GPS Coordinates"));
     shn_form_text(_("Northing / Latitude"), "gps_y", 'size="60"');

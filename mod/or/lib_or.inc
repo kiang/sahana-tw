@@ -855,32 +855,14 @@ function _shn_or_get_suplier_name($suplier_id) {
     //$inventory_array[$inv_id]=$ims0->fields['inventory_name'];
     
 }
-function _shn_or_check_org_reg_map_info_complete() {
-    if ($_POST['loc_x'] != null && $_POST['loc_y'] != null) {
-        $_SESSION['org']['loc_x'] = $_POST['loc_x'];
-        $_SESSION['org']['loc_y'] = $_POST['loc_y'];
-        return true;
-    } else {
-        if (strlen(trim($_POST['gps_x'])) == 0 || shn_valid_x_coordinate(trim($_POST['gps_x']))) {
-            $_SESSION['org']['loc_x'] = $_POST['gps_x'];
-        } else {
-            return false;
-        }
-        if (strlen(trim($_POST['gps_y'])) == 0 || shn_valid_y_coordinate($_POST['gps_y'])) {
-            $_SESSION['org']['loc_y'] = $_POST['gps_y'];
-        } else {
-            return false;
-        }
-        return true;
-    }
-}
+
 function _shn_or_check_org_reg_map_info_complete_in_edit() {
     if ($_POST['loc_x"} != null && $_POST{"loc_y'] != null) {
         $_SESSION['org']['loc_x'] = $_POST['loc_x'];
         $_SESSION['org']['loc_y'] = $_POST['loc_y'];
         return true;
     } else {
-        if (strlen(trim($_POST['gps_x"})) == 0 || shn_valid_x_coordinate(trim($_POST{"gps_x']))) {
+        if (strlen(trim($_POST['gps_x'])) == 0 || shn_valid_x_coordinate(trim($_POST['gps_x']))) {
             $_SESSION['org']['gps_x'] = $_POST['gps_x'];
         } else {
             return false;
@@ -914,6 +896,18 @@ function _shn_or_check_org_reg_info_complete() {
         $error = true;
     }
 
+    if ($_POST['loc_x'] != null && $_POST['loc_y'] != null) {
+        $_SESSION['org']['loc_x'] = $_POST['loc_x'];
+        $_SESSION['org']['loc_y'] = $_POST['loc_y'];
+    } else {
+        if (isset($_POST['gps_x']) && shn_valid_x_coordinate(trim($_POST['gps_x']))) {
+            $_SESSION['org']['loc_x'] = $_POST['gps_x'];
+        }
+        if (isset($_POST['gps_y']) || shn_valid_y_coordinate($_POST['gps_y'])) {
+            $_SESSION['org']['loc_y'] = $_POST['gps_y'];
+        }
+    }
+
     if ($_SESSION['org']['parent_id'] == '' && $_SESSION['org']['parent_id'] == NULL) {
         list($error, $_SESSION['org']['name']) = (shn_validate_field($_POST['org_name'], "Organization Name", $VARCHAR, true))?array($error, $_POST['org_name']):array(true, NULL);
         shn_check_for_special_char($_SESSION['org']['name'], _('Organization Name'));
@@ -922,10 +916,6 @@ function _shn_or_check_org_reg_info_complete() {
         list($error, $_SESSION['org']['name']) = (shn_validate_field($_POST['org_name'], "Operation/Branch", $VARCHAR, true))?array($error, $_POST['org_name']):array(true, NULL);
         shn_check_for_special_char($_SESSION['org']['name'], _('Operation/Branch '));
     }
-    /* if($_SESSION['org']['name'] != NULL && $_SESSION['org']['name'] != '')
-    {
-    	shn_check_for_special_char($_SESSION['org']['name'], _('Organization '));
-    }*/
     if ($parent_org == true) {
         list($error, $_SESSION['org']['type']) = (shn_validate_opt_field('opt_org_type', $_POST['opt_org_type'], "Organization Type", $VARCHAR, false)) ? array($error, $_POST['opt_org_type']) : array(true, NULL);
     } else {
