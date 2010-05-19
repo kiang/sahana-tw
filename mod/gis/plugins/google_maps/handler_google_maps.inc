@@ -59,47 +59,55 @@ function show_add_marker_map($name, $extra_opts = null) {
     $db = $global['db'];
     $key = $conf['mod_gis_google_key'];
 ?>
+        <div id="map" style="width: <?=$conf['mod_gis_width'] ?>px; height: <?=$conf['mod_gis_height'] ?>px"></div>
 	<script src="http://maps.google.com/maps?file=api&v=2&key=<?php echo $key ?>" type="text/javascript"></script>
 	<script type="text/javascript">
 	  
 	//<![CDATA[
-        var onloadfunc = window.onload;
-	window.onload=function show_map_add_mkr_js()
-	{
-			var map = new GMap2(document.getElementById("map"));
-			map.addControl(new GLargeMapControl());
-	       //map.addControl(new GSmallMapControl());
-			map.addControl(new GMapTypeControl());//satellite image switch
-				 
-			map.setCenter(new GLatLng(<?=$conf['mod_gis_center_y'] ?>,<?=$conf['mod_gis_center_x'] ?>), <?=$conf['mod_gis_zoom'] ?>,G_SATELLITE_MAP);			
-			GEvent.addListener(map, 'click', function(overlay, point) {
-	  		if (overlay) {
-				var html = "<?php echo $name ?>";
-				//overlay.openInfoWindowHtml(html);
-				map.removeOverlay(overlay);
-			} 
-			else {
-				<?php if (isset($extra_opts) && $extra_opts['marker'] === 'single') { ?>
-				map.clearOverlays();
-				<?php
-    } ?>
-				map.addOverlay(new GMarker(point));
-				// store x,y coords in hidden variables named loc_x, loc_y
-				// must be set via calling page
-				var x_point=document.getElementsByName("loc_x");
-				var y_point=document.getElementsByName("loc_y");
-				x_point[0].value=point.lng();
-				y_point[0].value=point.lat();
-				//alert(x_point[0].value);
-			}	
-		});		
-		onloadfunc();	
-	}		
+        $(function() {
+            var map = new GMap2($('#map').get(0));
+            var gpsTextTrigger = false;
+            if($('input[name=gps_x]').length == 1) {
+                gpsTextTrigger = true;
+            }
+            map.addControl(new GLargeMapControl());
+            map.addControl(new GMapTypeControl());//satellite image switch
+            map.setCenter(
+                new GLatLng(<?php echo $conf['mod_gis_center_y']; ?>,<?php echo $conf['mod_gis_center_x']; ?>),
+                <?php echo $conf['mod_gis_zoom']; ?>,G_SATELLITE_MAP);
+            GEvent.addListener(map, 'click', function(overlay, point) {
+                if (overlay) {
+                    map.removeOverlay(overlay);
+                } else {
+                    <?php if (isset($extra_opts) && $extra_opts['marker'] === 'single'): ?>
+                    map.clearOverlays();
+                    <?php endif; ?>
+                    map.addOverlay(new GMarker(point));
+                    // store x,y coords in hidden variables named loc_x, loc_y
+                    // must be set via calling page
+                    if(gpsTextTrigger) {
+                        $('input[name=gps_x]').val(point.lng());
+                        $('input[name=gps_y]').val(point.lat());
+                    } else {
+                        $('input[name=loc_x]').val(point.lng());
+                        $('input[name=loc_y]').val(point.lat());
+                    }
+                }
+            })
+            if(gpsTextTrigger) {
+                $('input[name=gps_x],input[name=gps_y]').change(function() {
+                    var textPoint = new GLatLng($('input[name=gps_y]').val(), $('input[name=gps_x]').val());
+                    <?php if (isset($extra_opts) && $extra_opts['marker'] === 'single'): ?>
+                    map.clearOverlays();
+                    <?php endif; ?>
+                    map.addOverlay(new GMarker(textPoint));
+                    map.setCenter(textPoint,<?php echo $conf['mod_gis_zoom']; ?>,G_SATELLITE_MAP);
+                });
+            }
+        })
 	//]]>	
 	
 	</script>
-	<div id="map" style="width: <?=$conf['mod_gis_width'] ?>px; height: <?=$conf['mod_gis_height'] ?>px"></div>
-	
 <?php
 }
 /**
