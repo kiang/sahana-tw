@@ -34,19 +34,24 @@ function shn_display_xhtml_head($arrPostfix = null, $theme = null, $title = null
         <link rel="stylesheet" media="screen, projection" type="text/css" href="theme/<?=$theme ?>/sahana.css" />
 	<link rel="stylesheet" media="print" type="text/css" href="theme/<?=$theme ?>/print.css" />
 	<link rel="stylesheet" media="handheld" type="text/css" href="theme/<?=$theme ?>/mobile.css" />
-    <script type="text/javascript" src="res/js/libsahana.js"></script>
-    <script type="text/javascript" src="theme/<?=$theme
-?>/sahana.js"></script>
-    <script type="text/javascript" src="res/js/popup.js"></script> 
-    <script type="text/javascript" src="res/js/locale.js"></script>
-    <script type="text/javascript" src="res/js/reload.js"></script>
-    <script type="text/javascript" src="index.php?stream=text&amp;mod=home&amp;act=help"></script> 
+        <script type="text/javascript" src="res/js/jquery.js"></script>
+        <script type="text/javascript" src="res/js/jquery-ui.js"></script>
+        <script type="text/javascript" src="res/js/libsahana.js"></script>
+        <script type="text/javascript" src="theme/<?php echo $theme; ?>/sahana.js"></script>
+        <script type="text/javascript" src="res/js/popup.js"></script>
+        <script type="text/javascript" src="res/js/locale.js"></script>
+        <script type="text/javascript" src="res/js/reload.js"></script>
+        <script type="text/javascript" src="index.php?stream=text&amp;mod=home&amp;act=help"></script>
 <?php
     if ($arrPostfix != null) {
         foreach($arrPostfix as $i) {
             echo '        ' . $i . "\n";
         }
     }
-    echo "    </head>\n";
-}
 ?>
+    </head>
+<?php
+    return;
+    // The string below just try to fix the notice of editor
+    ?></html><?php
+}
