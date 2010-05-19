@@ -107,13 +107,11 @@ function shn_gis_amap() {
     shn_form_fsopen(_("Location Information"));
     echo _("Plot the Location OR Enter its GPS coordinates ");
     shn_form_fsclose();
-    shn_form_hidden(array('loc_x' => ''));
-    shn_form_hidden(array('loc_y' => ''));
     global $global;
     $db = $global['db'];
     global $conf;
     include $global['approot'] . "/mod/gis/gis_fns.inc";
-    shn_gis_add_marker_map_form("Area Map", $_POST['location_name'], null, array('marker' => 'single'));
+    shn_gis_add_marker_map_form("Area Map", $_POST['location_name']);
     shn_form_submit(_("Next"));
     shn_form_fclose();
 }

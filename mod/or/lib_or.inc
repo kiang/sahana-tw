@@ -896,16 +896,11 @@ function _shn_or_check_org_reg_info_complete() {
         $error = true;
     }
 
-    if ($_POST['loc_x'] != null && $_POST['loc_y'] != null) {
-        $_SESSION['org']['loc_x'] = $_POST['loc_x'];
-        $_SESSION['org']['loc_y'] = $_POST['loc_y'];
-    } else {
-        if (isset($_POST['gps_x']) && shn_valid_x_coordinate(trim($_POST['gps_x']))) {
-            $_SESSION['org']['loc_x'] = $_POST['gps_x'];
-        }
-        if (isset($_POST['gps_y']) || shn_valid_y_coordinate($_POST['gps_y'])) {
-            $_SESSION['org']['loc_y'] = $_POST['gps_y'];
-        }
+    if (isset($_POST['gps_x']) && shn_valid_x_coordinate(trim($_POST['gps_x']))) {
+        $_SESSION['org']['loc_x'] = $_POST['gps_x'];
+    }
+    if (isset($_POST['gps_y']) || shn_valid_y_coordinate($_POST['gps_y'])) {
+        $_SESSION['org']['loc_y'] = $_POST['gps_y'];
     }
 
     if ($_SESSION['org']['parent_id'] == '' && $_SESSION['org']['parent_id'] == NULL) {
@@ -922,17 +917,9 @@ function _shn_or_check_org_reg_info_complete() {
         list($error, $_SESSION['org']['type']) = (shn_validate_opt_field('opt_org_sub_type', $_POST['opt_org_sub_type'], "Organization Sub Type", $VARCHAR, false)) ? array($error, $_POST['opt_org_sub_type']) : array(true, NULL);
     }
     list($error, $_SESSION['org']['sector']) = (shn_validate_opt_field('opt_sector_type', $_POST['opt_sector_type'], "Organization Sector", $VARCHAR, true)) ? array($error, $_POST['opt_sector_type']) : array(true, NULL);
-    // the following two are used only in edit org form
-    /*if(isset($_POST['gps_x'])){
-    $_SESSION['org']['gps_x']=$_POST['gps_x'];
-    }
-    if(isset($_POST['gps_y'])){
-    $_SESSION['org']['gps_y']=$_POST['gps_y'];
-    }*/
+
     $loc = shn_location_get_form_submit_loc();
     if ($loc == - 1) {
-        //$error=true;
-        //add_error(SHN_ERR_OR_LOCATION_INCOMPLETE);
         $_SESSION['org']['loc'] = $loc;
     } else {
         $_SESSION['org']['loc'] = $loc;

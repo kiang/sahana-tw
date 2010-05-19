@@ -81,7 +81,10 @@ function _shn_or_regform_org($error = false) {
     $extra_opts['help'] = (_("In addition to the hierarchical location , you may specify the address of the organization here. "));
     shn_form_text(_("Address"), 'loc_txt', 'size="40"', $extra_opts);
     shn_form_fsclose();
-    shn_gis_add_marker_map_form();
+    shn_gis_add_marker_map_form($name_of_map = "Area Map", $nameOfPoint = "", $button_submit_opts = null, $extra_opts = array(
+        'gps_x' => isset($_SESSION['org']['loc_x']) ? $_SESSION['org']['loc_x'] : '',
+        'gps_y' => isset($_SESSION['org']['loc_y']) ? $_SESSION['org']['loc_y'] : '',
+    ));
     // Contact infomation
     shn_form_fsopen(_("Contact Information"));
     _shn_or_display_contact_person($error, false, null);
@@ -240,7 +243,10 @@ function _shn_or_regform_operation($error = false, $parent_org = null) {
     }
     shn_form_text(_("Address"), 'loc_txt', 'size="40"', $extra_opts);
     shn_form_fsclose();
-    shn_gis_add_marker_map_form();
+    shn_gis_add_marker_map_form($name_of_map = "Area Map", $nameOfPoint = "", $button_submit_opts = null, $extra_opts = array(
+        'gps_x' => isset($_SESSION['org']['loc_x']) ? $_SESSION['org']['loc_x'] : '',
+        'gps_y' => isset($_SESSION['org']['loc_y']) ? $_SESSION['org']['loc_y'] : '',
+    ));
     shn_form_fsopen(_("Contact Information"));
     _shn_or_display_contact_person($error, false, null);
     shn_form_fsclose();
