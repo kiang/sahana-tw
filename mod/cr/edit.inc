@@ -22,18 +22,15 @@ include_once $global['approot'] . "/inc/lib_location.inc";
 global $editid;
 function _shn_cr_cedt_start($errors = false) {
     if ($errors) display_errors();
-    global $global;
+    global $global, $range, $conf;
     $db = $global['db'];
 ?>
-<h2><?php echo _("Update Existing Shelter") ?></h2>
+<h2><?php echo _("Update Existing Shelter"); ?></h2>
 	<?php
-    /*$query="select c_uuid from camp_general where name='{$_REQUEST['cmp_id']}'";
-    $res=$db->Execute($query);
-    $editid=$res->fields['c_uuid'];*/
     $editid = $_REQUEST['cmp_id'];
     $_SESSION['editid'] = $editid;
     _shn_cr_get_session($editid);
-    shn_form_fopen(ecmp);
+    shn_form_fopen('ecmp');
     shn_form_fsopen(_("General Details"));
     shn_form_hidden(array('seq' => 'chk'));
     shn_form_hidden(array('cmp_id' => $_SESSION['editid']));
@@ -41,14 +38,30 @@ function _shn_cr_cedt_start($errors = false) {
     shn_form_opt_select("opt_camp_type", _("Shelter Type"), null, array('value' => $_SESSION['opt_camp_type']));
     shn_form_textarea(_("Address"), "camp_address", null, array('value' => $_SESSION['camp_address']));
     shn_form_fsclose();
-?>
-
-	<?php
-    global $global;
-    global $range;
     shn_form_fsopen(_("Location Details"));
     shn_location($range, $_SESSION['opt_location_type']);
     shn_form_fsclose();
+    shn_form_fsopen(_("Map Location"));
+    $extra_opts['req'] = false;
+    $extra_opts['value'] = $_SESSION['camp_lat'];
+    shn_form_text(_("Latitude : "), 'gps_x', 'size="40"', $extra_opts);
+    $extra_opts['value'] = $_SESSION['camp_lon'];
+    shn_form_text(_("Longitude : "), 'gps_y', 'size="40"', $extra_opts);
+    shn_form_fsclose();
+    if ($conf['gis']) {
+        $extra_opts['marker'] = 'single';
+        shn_form_fsopen($name_of_map);
+        $plugin_name = $conf['mod_gis_dflt'];
+        include $global['approot'] . "/mod/gis/plugins/" . "$plugin_name" . "/handler_" . "$plugin_name" . ".inc";
+        echo "<div class='message information'>";
+        echo _("You can move around and enlarge/reduce the size of the area you want using
+the scale on upper left corner of the map. By clicking on a map you can
+mark your location with a pointer. If you want to remove the pointer,
+simply click on the center of the pointer.");
+        echo "</div>";
+        show_add_marker_map($nameOfPoint, $extra_opts);
+        shn_form_fsclose();
+    }
     //-----------------------------------------
     shn_form_fsopen(_("Contact Person Details"));
     shn_form_text(_("Full Name"), "camp_contact_name", 'size="60"', array('value' => $_SESSION['camp_contact_name']));
@@ -201,7 +214,8 @@ function _shn_cr_cedt_chk($errors = false) {
         + $_SESSION['camp_women'] + $_SESSION['camp_children'];
     $_SESSION['camp_modified'] = $_POST['modified'];
     $_SESSION['cr_loc'] = shn_location_get_form_submit_loc();
-    //var_dump($_SESSION);
+    $_SESSION['camp_lat'] = $_POST['gps_x'];
+    $_SESSION['camp_lon'] = $_POST['gps_y'];
     
 ?>
 <h2><?=("Shelter Checklist") ?></h2>
@@ -374,6 +388,10 @@ function _shn_cr_get_session($camp_id) {
     $query = "SELECT occupation FROM person_details WHERE p_uuid=(SELECT contact_puuid FROM camp_admin WHERE c_uuid='{$camp_id}');";
     $res = $db->Execute($query);
     $_SESSION['camp_occupation'] = $res->fields['occupation'];
+    $query = "SELECT map_northing, map_easting FROM gis_location WHERE poc_uuid='$camp_id';";
+    $res = $db->Execute($query);
+    $_SESSION['camp_lat'] = $res->fields["map_northing"];
+    $_SESSION['camp_lon'] = $res->fields["map_easting"];
 }
 function _shn_cr_get_locid() {
     if ($_SESSION['cr_5'] != null) return $_SESSION['cr_5'];
@@ -414,6 +432,8 @@ function _shn_cr_cedt_commit() {
         // insert into admin contact
         $qc = "UPDATE contact SET contact_value='{$_SESSION['camp_contact_mob']}' WHERE pgoc_uuid='{$pid}' AND opt_contact_type='cmob'";
         $resc = $db->Execute($qc);
+        $q = "UPDATE gis_location SET map_northing={$_SESSION['camp_lat']},map_easting={$_SESSION['camp_lon']} WHERE poc_uuid='{$_SESSION['editid']}'";
+        $res = $db->Execute($q);
         /*insert services into camp_services table
         //currently add checked values
         foreach($_SESSION['opt_camp_service'] as $a => $b){
@@ -512,6 +532,10 @@ function _shn_cr_cedit_confir() {
     shn_form_fsopen(_('Location Details'));
     $location = _shn_cr_location_string($_SESSION['cr']['loc']);
     shn_form_label(_("Location") . " : ", $location);
+    shn_form_fsclose();
+    shn_form_fsopen(_("Map Location"));
+    shn_form_label(_("Latitude : "), $_SESSION['camp_lat']);
+    shn_form_label(_("Longitude : "), $_SESSION['camp_lon']);
     shn_form_fsclose();
     shn_form_fsopen(_('Contact Person Details'));
     shn_form_label(_("Full Name") . " : ", $_SESSION['camp_contact_name']);

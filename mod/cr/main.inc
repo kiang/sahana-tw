@@ -46,4 +46,3 @@ function shn_cr_mainmenu() {
     // Display Sahana main menu
     include $global['approot'] . "/inc/handler_mainmenu.inc";
 }
-?>
