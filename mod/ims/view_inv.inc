@@ -169,7 +169,7 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
 }
 function _shn_ims_viewform_org($org_id, $error = false) {
     include_once "lib_ims.inc";
-    global $global;
+    global $global, $conf;
     _shn_ims_action_change_javascript('action');
     $db = $global['db'];
     $q = "SELECT inv_uuid,parent_id,inventory_name,reg_no,man_power,resources,space FROM  ims_inventory_records WHERE inv_uuid='{$org_id}'";
@@ -206,24 +206,36 @@ function _shn_ims_viewform_org($org_id, $error = false) {
     shn_form_fsopen(_("Map Location"));
     $extra_opts['req'] = false;
     $lat = isset($lat) ? $lat : 0;
-    if(!empty($_SESSION['inv']['lat_edited'])) {
-        $lat = $_SESSION['inv']['lat_edited'];
-        unset($_SESSION['inv']['lat_edited']);
+    if(!empty($_SESSION['inv']['gps_x'])) {
+        $lat = $_SESSION['inv']['gps_x'];
+        unset($_SESSION['inv']['gps_x']);
     }
     $extra_opts['value'] = $lat;
-    shn_form_text(_("Latitude : "), 'lat_edited', 'size="40"', $extra_opts);
+    shn_form_text(_("Latitude : "), 'gps_x', 'size="40"', $extra_opts);
     $lon = isset($lon) ? $lon : 0;
-    if(!empty($_SESSION['inv']['lon_edited'])) {
-        $lon = $_SESSION['inv']['lon_edited'];
-        unset($_SESSION['inv']['lon_edited']);
+    if(!empty($_SESSION['inv']['gps_y'])) {
+        $lon = $_SESSION['inv']['gps_y'];
+        unset($_SESSION['inv']['gps_y']);
     }
     $extra_opts['value'] = $lon;
-    shn_form_text(_("Longitude : "), 'lon_edited', 'size="40"', $extra_opts);
-    $extra_opts['br'] = false;
-    shn_form_button(_("GIS Map"), "onClick='change_action(\"gis\")'", $extra_opts);
-    shn_form_hidden(array('lat' => $lat));
-    shn_form_hidden(array('lon' => $lon));
+    shn_form_text(_("Longitude : "), 'gps_y', 'size="40"', $extra_opts);
     shn_form_fsclose();
+    if ($conf['gis']) {
+        $extra_opts['marker'] = 'single';
+        shn_form_fsopen($name_of_map);
+        shn_form_hidden(array('loc_x' => ''));
+        shn_form_hidden(array('loc_y' => ''));
+        $plugin_name = $conf['mod_gis_dflt'];
+        include $global['approot'] . "/mod/gis/plugins/" . "$plugin_name" . "/handler_" . "$plugin_name" . ".inc";
+        echo "<div class='message information'>";
+        echo _("You can move around and enlarge/reduce the size of the area you want using
+the scale on upper left corner of the map. By clicking on a map you can
+mark your location with a pointer. If you want to remove the pointer,
+simply click on the center of the pointer.");
+        echo "</div>";
+        show_add_marker_map($nameOfPoint, $extra_opts);
+        shn_form_fsclose();
+    }
     shn_form_fsopen(_("Contact Information"));
     _shn_ims_display_contact_person($error, true, $org_id);
     shn_form_fsclose();
@@ -285,13 +297,13 @@ function _shn_ims_view_map_form_inv() {
     $map_arr = array();
     $url = "mod=ims&act=view_inv&id=" . $org_id;
     array_push($map_arr, array(
-        'lat' => isset($_POST["lat_edited"]) ? $_POST["lat_edited"] : '',
-        'lon' => isset($_POST["lon_edited"]) ? $_POST["lon_edited"] : '',
+        'lat' => isset($_POST["gps_x"]) ? $_POST["gps_x"] : '',
+        'lon' => isset($_POST["gps_y"]) ? $_POST["gps_y"] : '',
         'name' => isset($_POST["org_name"]) ? $_POST["org_name"] : '',
         'id' => isset($_POST["org_id"]) ? $_POST["org_id"] : '',
         'url' => $url));
-    $_SESSION['inv']['lat_edited'] = $map_arr[0]['lat'];
-    $_SESSION['inv']['lon_edited'] = $map_arr[0]['lon'];
+    $_SESSION['inv']['gps_x'] = $map_arr[0]['lat'];
+    $_SESSION['inv']['gps_y'] = $map_arr[0]['lon'];
     shn_gis_map_with_markers($map_arr);
 ?>
 		<br />

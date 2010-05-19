@@ -111,6 +111,7 @@ function show_add_marker_map($name, $extra_opts = null) {
                     map.addOverlay(new GMarker(textPoint));
                     map.setCenter(textPoint,<?php echo $conf['mod_gis_zoom']; ?>,G_SATELLITE_MAP);
                 });
+                $('input[name=gps_x]').trigger('change');
             }
         })
 	//]]>	

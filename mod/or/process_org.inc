@@ -378,8 +378,8 @@ function _shn_or_edit_org() {
     list($error, $sector) = (shn_validate_opt_field('opt_sector_type', $_SESSION['org']['sector'], "Organization Sector", $VARCHAR, true)) ? array($error, $_SESSION['org']['sector']) : array(true, NULL);
     $loc = shn_location_get_form_submit_loc();
     $loc = (isset($loc) && $loc > - 1) ? $loc : isset($_SESSION['org']['loc']) ? $_SESSION['org']['loc'] : -1;
-    $lat = $_SESSION['org']['lat_edited'];
-    $lon = $_SESSION['org']['lon_edited'];
+    $lat = $_SESSION['org']['gps_x'];
+    $lon = $_SESSION['org']['gps_y'];
     if (trim(strlen($_SESSION['org']['reg_no'])) > $VARCHAR) {
         add_error(SHN_ERR_OR_REG_MAX);
         $error = true;

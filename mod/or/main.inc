@@ -179,12 +179,12 @@ function shn_or_view_org_submit() {
             $map_check = _shn_or_check_org_reg_map_info_complete_in_edit();
             if ($map_check) {
                 // set the lattitude and logitude as loc_y and loc_x in session if not set
-                // we are sure that lat_edited is in the session because of
+                // we are sure that gps_x is in the session because of
                 // the _shn_or_check_org_reg_info_complete() call.
-                $_SESSION['org']['loc_x'] = $_SESSION['org']['lon_edited'];
-                // we are sure that lat_edited is in the session because of
+                $_SESSION['org']['loc_x'] = $_SESSION['org']['gps_y'];
+                // we are sure that gps_x is in the session because of
                 // the _shn_or_check_org_reg_info_complete() call.
-                $_SESSION['org']['loc_y'] = $_SESSION['org']['lat_edited'];
+                $_SESSION['org']['loc_y'] = $_SESSION['org']['gps_x'];
             } else {
                 $error = true;
             }

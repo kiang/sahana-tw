@@ -297,7 +297,7 @@ field_options.option_code=sector.opt_sector and field_options.field_name='opt_se
 }
 function _shn_or_viewform_org($org_id, $error = false) {
     include_once "lib_or.inc";
-    global $global;
+    global $global, $conf;
     $db = $global['db'];
     $q = "SELECT om.o_uuid,om.parent_id,om.name,om.reg_no,om.man_power,om.resources FROM org_main om WHERE om.o_uuid='{$org_id}'";
     $res_org = $db->Execute($q);
@@ -408,17 +408,29 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
     // Contact infomatio
     shn_form_fsopen(_("Map Location"));
     $extra_opts['req'] = false;
-    $lat = isset($lat) ? $lat : $_SESSION['org']['lat_edited'];
+    $lat = isset($lat) ? $lat : $_SESSION['org']['gps_x'];
     $extra_opts['value'] = $lat;
-    shn_form_text(_("Latitude : "), 'lat_edited', 'size="40"', $extra_opts);
-    $lon = isset($lon) ? $lon : $_SESSION['org']['lon_edited'];
+    shn_form_text(_("Latitude : "), 'gps_x', 'size="40"', $extra_opts);
+    $lon = isset($lon) ? $lon : $_SESSION['org']['gps_y'];
     $extra_opts['value'] = $lon;
-    shn_form_text(_("Longitude : "), 'lon_edited', 'size="40"', $extra_opts);
-    $extra_opts['br'] = false;
-    shn_form_button(_("GIS Map"), "onClick='change_action(\"gis\")'", $extra_opts);
-    shn_form_hidden(array('lat' => $lat));
-    shn_form_hidden(array('lon' => $lon));
+    shn_form_text(_("Longitude : "), 'gps_y', 'size="40"', $extra_opts);
     shn_form_fsclose();
+    if ($conf['gis']) {
+        $extra_opts['marker'] = 'single';
+        shn_form_fsopen($name_of_map);
+        shn_form_hidden(array('loc_x' => ''));
+        shn_form_hidden(array('loc_y' => ''));
+        $plugin_name = $conf['mod_gis_dflt'];
+        include $global['approot'] . "/mod/gis/plugins/" . "$plugin_name" . "/handler_" . "$plugin_name" . ".inc";
+        echo "<div class='message information'>";
+        echo _("You can move around and enlarge/reduce the size of the area you want using
+the scale on upper left corner of the map. By clicking on a map you can
+mark your location with a pointer. If you want to remove the pointer,
+simply click on the center of the pointer.");
+        echo "</div>";
+        show_add_marker_map($nameOfPoint, $extra_opts);
+        shn_form_fsclose();
+    }
     shn_form_fsopen(_("Contact Information"));
     _shn_or_display_contact_person($error, false, $org_id);
     shn_form_fsclose();
@@ -569,7 +581,7 @@ function _shn_or_view_map_form_org() {
 ?></center><?php
     $map_arr = array();
     $url = "mod=or&act=edit_org&org_id=" . isset($_POST["org_id"]) ? $_POST["org_id"] : $_SESSION['org']['org_id'];
-    array_push($map_arr, array('lat' => isset($_POST["lat_edited"]) ? $_POST["lat_edited"] : $_SESSION['org']['lat_edited'], 'lon' => isset($_POST["lon_edited"]) ? $_POST["lon_edited"] : $_SESSION['org']['lon_edited'], 'name' => isset($_POST["org_name"]) ? $_POST["org_name"] : $_SESSION['org']['name'], 'id' => isset($_POST["org_id"]) ? $_POST["org_id"] : $_SESSION['org']['org_id'], 'url' => $url));
+    array_push($map_arr, array('lat' => isset($_POST["gps_x"]) ? $_POST["gps_x"] : $_SESSION['org']['gps_x'], 'lon' => isset($_POST["gps_y"]) ? $_POST["gps_y"] : $_SESSION['org']['gps_y'], 'name' => isset($_POST["org_name"]) ? $_POST["org_name"] : $_SESSION['org']['name'], 'id' => isset($_POST["org_id"]) ? $_POST["org_id"] : $_SESSION['org']['org_id'], 'url' => $url));
     shn_gis_map_with_markers($map_arr);
 ?>
 		<br />

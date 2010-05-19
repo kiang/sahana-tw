@@ -309,8 +309,8 @@ function _shn_ims_edit_org() {
     } else {
         $equipment = $_POST['equipment'];
     }
-    $lat = $_POST['lat_edited'];
-    $lon = $_POST['lon_edited'];
+    $lat = $_POST['gps_x'];
+    $lon = $_POST['gps_y'];
     $resources = $_POST['resources'];
     $space = $_POST['space'];
     if (!$error) {

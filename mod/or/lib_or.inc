@@ -880,13 +880,13 @@ function _shn_or_check_org_reg_map_info_complete_in_edit() {
         $_SESSION['org']['loc_y'] = $_POST['loc_y'];
         return true;
     } else {
-        if (strlen(trim($_POST['lat_edited"})) == 0 || shn_valid_x_coordinate(trim($_POST{"lat_edited']))) {
-            $_SESSION['org']['lat_edited'] = $_POST['lat_edited'];
+        if (strlen(trim($_POST['gps_x"})) == 0 || shn_valid_x_coordinate(trim($_POST{"gps_x']))) {
+            $_SESSION['org']['gps_x'] = $_POST['gps_x'];
         } else {
             return false;
         }
-        if (strlen(trim($_POST['lon_edited'])) == 0 || shn_valid_y_coordinate($_POST['lon_edited'])) {
-            $_SESSION['org']['lon_edited'] = $_POST['lon_edited'];
+        if (strlen(trim($_POST['gps_y'])) == 0 || shn_valid_y_coordinate($_POST['gps_y'])) {
+            $_SESSION['org']['gps_y'] = $_POST['gps_y'];
         } else {
             return false;
         }
@@ -933,11 +933,11 @@ function _shn_or_check_org_reg_info_complete() {
     }
     list($error, $_SESSION['org']['sector']) = (shn_validate_opt_field('opt_sector_type', $_POST['opt_sector_type'], "Organization Sector", $VARCHAR, true)) ? array($error, $_POST['opt_sector_type']) : array(true, NULL);
     // the following two are used only in edit org form
-    /*if(isset($_POST['lat_edited'])){
-    $_SESSION['org']['lat_edited']=$_POST['lat_edited'];
+    /*if(isset($_POST['gps_x'])){
+    $_SESSION['org']['gps_x']=$_POST['gps_x'];
     }
-    if(isset($_POST['lon_edited'])){
-    $_SESSION['org']['lon_edited']=$_POST['lon_edited'];
+    if(isset($_POST['gps_y'])){
+    $_SESSION['org']['gps_y']=$_POST['gps_y'];
     }*/
     $loc = shn_location_get_form_submit_loc();
     if ($loc == - 1) {
