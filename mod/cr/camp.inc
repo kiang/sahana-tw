@@ -27,12 +27,7 @@ function _shn_cr_cadd_start($errors = false) {
 <?php
     shn_form_fopen('acmp');
     shn_form_fsopen(_("General Details"));
-    //check for gis and goto mapping page
-    if ($conf['gis']) {
-        shn_form_hidden(array('seq' => 'gis'));
-    } else {
-        shn_form_hidden(array('seq' => 'chk'));
-    }
+    shn_form_hidden(array('seq' => 'chk'));
     shn_form_text(_("Shelter Name"), "camp_name", 'size="50"', array('req' => true));
     shn_form_opt_select("opt_camp_type", _("Shelter Type"));
 ?>
@@ -51,6 +46,24 @@ function _shn_cr_cadd_start($errors = false) {
     shn_form_fsopen(_("Location Details"));
     shn_location($range);
     shn_form_fsclose();
+    shn_form_fsopen(_("Map Location"));
+    shn_form_text(_("Latitude : "), 'gps_x', 'size="40"');
+    shn_form_text(_("Longitude : "), 'gps_y', 'size="40"');
+    shn_form_fsclose();
+    if ($conf['gis']) {
+        $extra_opts['marker'] = 'single';
+        shn_form_fsopen($name_of_map);
+        $plugin_name = $conf['mod_gis_dflt'];
+        include $global['approot'] . "/mod/gis/plugins/" . "$plugin_name" . "/handler_" . "$plugin_name" . ".inc";
+        echo "<div class='message information'>";
+        echo _("You can move around and enlarge/reduce the size of the area you want using
+the scale on upper left corner of the map. By clicking on a map you can
+mark your location with a pointer. If you want to remove the pointer,
+simply click on the center of the pointer.");
+        echo "</div>";
+        show_add_marker_map($nameOfPoint, $extra_opts);
+        shn_form_fsclose();
+    }
     //-------------------------
     shn_form_fsopen(_("Contact Person Details"));
     shn_form_text(_("Full Name"), "camp_contact_name", 'size="60"', array('help' => 'Enter Details of the person in charge of the Shelter'));
@@ -98,69 +111,57 @@ function _shn_cr_hos_bed($errors = false) {
 }
 function _shn_cr_cadd_chk($errors = false) {
     if ($errors) display_errors;
-    global $global;
-    global $conf;
-    if (!$conf['gis']) {
-        //add to session if GIS module is not enabled
-        $_SESSION['camp_name'] = $_POST['camp_name'];
-        $_SESSION['opt_camp_type'] = $_POST['opt_camp_type'];
-        $_SESSION['opt_location_type'] = $_POST['opt_location_type'];
-        $_SESSION['camp_address'] = $_POST['camp_address'];
-        $_SESSION['camp_contact_name'] = $_POST['camp_contact_name'];
-        $_SESSION['camp_contact_number'] = $_POST['camp_contact_number'];
-        if ($_POST['family'] == null) {
-            $_SESSION['camp_family'] = 0;
-        } else {
-            $_SESSION['camp_family'] = $_POST['family'];
-        }
-        if ($_POST['men'] == null) {
-            $_SESSION['camp_men'] = 0;
-        } else {
-            $_SESSION['camp_men'] = $_POST['men'];
-        }
-        if ($_POST['women'] == null) {
-            $_SESSION['camp_women'] = 0;
-        } else {
-            $_SESSION['camp_women'] = $_POST['women'];
-        }
-        if ($_POST['children'] == null) {
-            $_SESSION['camp_children'] = 0;
-        } else {
-            $_SESSION['camp_children'] = $_POST['children'];
-        }
-        $_SESSION['camp_total'] = $_SESSION['camp_men']
-        + $_SESSION['camp_women'] + $_SESSION['camp_children'];
-        if ($_POST['capacity'] == null) {
-            $_SESSION['camp_capacity'] = 0;
-        } else {
-            $_SESSION['camp_capacity'] = $_POST['capacity'];
-        }
-        if (empty($_POST['modified'])) {
-            $_SESSION['camp_modified'] = '';
-        } else {
-            $_SESSION['camp_modified'] = $_POST['modified'];
-        }
-        $_SESSION['contact_mob'] = $_POST['contact_mob'];
-        $_SESSION['occupation'] = $_POST['occupation'];
-        $_SESSION['cr_1'] = $_POST['1'];
-        $_SESSION['cr_2'] = $_POST['2'];
-        $_SESSION['cr_3'] = $_POST['3'];
-        $_SESSION['cr_4'] = $_POST['4'];
-        $_SESSION['cr_5'] = $_POST['5'];
-        if (isset($_POST['hospital'])) {
-            $_SESSION['hospital'] = true;
-        }
+    global $global, $conf;
+    $_SESSION['camp_name'] = $_POST['camp_name'];
+    $_SESSION['opt_camp_type'] = $_POST['opt_camp_type'];
+    $_SESSION['opt_location_type'] = $_POST['opt_location_type'];
+    $_SESSION['camp_address'] = $_POST['camp_address'];
+    $_SESSION['camp_contact_name'] = $_POST['camp_contact_name'];
+    $_SESSION['camp_contact_number'] = $_POST['camp_contact_number'];
+    if ($_POST['family'] == null) {
+        $_SESSION['camp_family'] = 0;
     } else {
-        if ((null == $_POST['gps_x']) && null == $_POST['gps_y']) {
-            $_SESSION['gis_loc_x'] = $_POST['loc_x'];
-            $_SESSION['gis_loc_y'] = $_POST['loc_y'];
-        } else {
-            $_POST['loc_x'] = $_POST['gps_x'];
-            $_POST['loc_y'] = $_POST['gps_y'];
-            $_SESSION['gis_loc_x'] = $_POST['loc_x'];
-            $_SESSION['gis_loc_y'] = $_POST['loc_y'];
-        }
+        $_SESSION['camp_family'] = $_POST['family'];
     }
+    if ($_POST['men'] == null) {
+        $_SESSION['camp_men'] = 0;
+    } else {
+        $_SESSION['camp_men'] = $_POST['men'];
+    }
+    if ($_POST['women'] == null) {
+        $_SESSION['camp_women'] = 0;
+    } else {
+        $_SESSION['camp_women'] = $_POST['women'];
+    }
+    if ($_POST['children'] == null) {
+        $_SESSION['camp_children'] = 0;
+    } else {
+        $_SESSION['camp_children'] = $_POST['children'];
+    }
+    $_SESSION['camp_total'] = $_SESSION['camp_men']
+            + $_SESSION['camp_women'] + $_SESSION['camp_children'];
+    if ($_POST['capacity'] == null) {
+        $_SESSION['camp_capacity'] = 0;
+    } else {
+        $_SESSION['camp_capacity'] = $_POST['capacity'];
+    }
+    if (empty($_POST['modified'])) {
+        $_SESSION['camp_modified'] = '';
+    } else {
+        $_SESSION['camp_modified'] = $_POST['modified'];
+    }
+    $_SESSION['contact_mob'] = $_POST['contact_mob'];
+    $_SESSION['occupation'] = $_POST['occupation'];
+    $_SESSION['cr_1'] = $_POST['1'];
+    $_SESSION['cr_2'] = $_POST['2'];
+    $_SESSION['cr_3'] = $_POST['3'];
+    $_SESSION['cr_4'] = $_POST['4'];
+    $_SESSION['cr_5'] = $_POST['5'];
+    if (isset($_POST['hospital'])) {
+        $_SESSION['hospital'] = true;
+    }
+    $_SESSION['gis_loc_x'] = $_POST['gps_x'];
+    $_SESSION['gis_loc_y'] = $_POST['gps_y'];
 ?>
 <h2><?php echo _("Shelter Checklist") ?></h2>
 <?php
@@ -209,79 +210,6 @@ function _shn_cr_create_cid($val) {
     $id = shn_create_uuid($val);
     //echo "ID IS: $id";
     return $id;
-}
-function _shn_cr_sel_map($errors = false) {
-    if ($errors) {
-        display_errors();
-    } else {
-        global $global;
-        include $global['approot'] . "/inc/lib_location.inc";
-        $_SESSION['cr']['loc'] = shn_location_get_form_submit_loc();
-        $_SESSION['camp_name'] = $_POST['camp_name'];
-        $_SESSION['opt_camp_type'] = $_POST['opt_camp_type'];
-        $_SESSION['opt_location_type'] = $_POST['opt_location_type'];
-        $_SESSION['camp_address'] = $_POST['camp_address'];
-        $_SESSION['camp_contact_name'] = $_POST['camp_contact_name'];
-        $_SESSION['camp_contact_number'] = $_POST['camp_contact_number'];
-        if ($_POST['family'] == null) {
-            $_SESSION['camp_family'] = 0;
-        } else {
-            $_SESSION['camp_family'] = $_POST['family'];
-        }
-        if ($_POST['men'] == null) {
-            $_SESSION['camp_men'] = 0;
-        } else {
-            $_SESSION['camp_men'] = $_POST['men'];
-        }
-        if ($_POST['women'] == null) {
-            $_SESSION['camp_women'] = 0;
-        } else {
-            $_SESSION['camp_women'] = $_POST['women'];
-        }
-        if ($_POST['children'] == null) {
-            $_SESSION['camp_children'] = 0;
-        } else {
-            $_SESSION['camp_children'] = $_POST['children'];
-        }
-        $_SESSION['camp_total'] = $_SESSION['camp_men']
-        + $_SESSION['camp_women'] + $_SESSION['camp_children'];
-        if ($_POST['capacity'] == null) {
-            $_SESSION['camp_capacity'] = 0;
-        } else {
-            $_SESSION['camp_capacity'] = $_POST['capacity'];
-        }
-        if (empty($_POST['modified'])) {
-            $_SESSION['camp_modified'] = '';
-        } else {
-            $_SESSION['camp_modified'] = $_POST['modified'];
-        }
-        if (isset($_POST['hospital'])) {
-            $_SESSION['hospital'] = true;
-        }
-        $_SESSION['cr_loc'] = shn_location_get_form_submit_loc();
-        $_SESSION['cr_1'] = $_POST['loc_select_1'];
-        $_SESSION['cr_2'] = $_POST['loc_select_2'];
-        $_SESSION['cr_3'] = $_POST['loc_select_3'];
-        $_SESSION['cr_4'] = $_POST['loc_select_4'];
-        $_SESSION['cr_5'] = $_POST['loc_select_5'];
-        $_SESSION['contact_mob'] = $_POST['contact_mob'];
-        $_SESSION['occupation'] = $_POST['occupation'];
-    }
-    global $global;
-    global $conf;
-    shn_form_fopen(acmp, null, array('req' => false));
-    shn_form_fsopen(_("Location Information"));
-    echo _("Plot the Shelter Location OR Enter its GPS coordinates below");
-    shn_form_hidden(array('seq' => 'chk'));
-    shn_form_fsclose();
-    //call gis api
-    include $global['approot'] . "/mod/gis/gis_fns.inc";
-    shn_gis_add_marker_map_form("GIS Map", $_POST['camp_name'], null, array('marker' => 'single'));
-?>
-	
-	<?php
-    shn_form_submit("Next");
-    shn_form_fclose();
 }
 /**
  * @todo: change variables to lat=y. lon=x

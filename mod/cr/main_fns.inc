@@ -205,10 +205,6 @@ function shn_cr_acmp() {
             _shn_cr_hos_bed();
             //_shn_cr_cadd_start(true);
             break;
-        case 'gis':
-            if (_shn_cr_validate_error()) _shn_cr_cadd_start(true);
-            else _shn_cr_sel_map();
-            break;
         case 'confir':
             _shn_cr_cadd_confir();
             break;
