@@ -284,35 +284,3 @@ function _shn_ims_reg_inv_actions($action) {
         }
     }
 }
-function _shn_ims_view_map_form_inv() {
-    global $global;
-    include_once $global['approot'] . "/mod/gis/gis_fns.inc";
-    $org_id = isset($_POST['org_id']) ? $_POST['org_id'] : '';
-    shn_form_fopen("view_inv&id=" . $org_id);
-?>
-	<center><?php
-    //create the submit button
-    shn_form_submit(_("Back"));
-?></center><?php
-    $map_arr = array();
-    $url = "mod=ims&act=view_inv&id=" . $org_id;
-    array_push($map_arr, array(
-        'lat' => isset($_POST["gps_x"]) ? $_POST["gps_x"] : '',
-        'lon' => isset($_POST["gps_y"]) ? $_POST["gps_y"] : '',
-        'name' => isset($_POST["org_name"]) ? $_POST["org_name"] : '',
-        'id' => isset($_POST["org_id"]) ? $_POST["org_id"] : '',
-        'url' => $url));
-    $_SESSION['inv']['gps_x'] = $map_arr[0]['lat'];
-    $_SESSION['inv']['gps_y'] = $map_arr[0]['lon'];
-    shn_gis_map_with_markers($map_arr);
-?>
-		<br />
-		<center><?php
-    //create the submit button
-    shn_form_submit(_("Back"));
-?></center>
-		<br />
-		<?php
-    //close the form
-    shn_form_fclose();
-}

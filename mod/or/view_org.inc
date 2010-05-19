@@ -569,29 +569,3 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
 		</tr>
 		<?php
 }
-function _shn_or_view_map_form_org() {
-    global $global;
-    include_once $global['approot'] . "/mod/gis/gis_fns.inc";
-    shn_form_fopen("view_org_submit");
-    shn_form_hidden(array("action" => 'edit'));
-?>
-	<center><?php
-    //create the submit button
-    shn_form_submit(_("Back"));
-?></center><?php
-    $map_arr = array();
-    $url = "mod=or&act=edit_org&org_id=" . isset($_POST["org_id"]) ? $_POST["org_id"] : $_SESSION['org']['org_id'];
-    array_push($map_arr, array('lat' => isset($_POST["gps_x"]) ? $_POST["gps_x"] : $_SESSION['org']['gps_x'], 'lon' => isset($_POST["gps_y"]) ? $_POST["gps_y"] : $_SESSION['org']['gps_y'], 'name' => isset($_POST["org_name"]) ? $_POST["org_name"] : $_SESSION['org']['name'], 'id' => isset($_POST["org_id"]) ? $_POST["org_id"] : $_SESSION['org']['org_id'], 'url' => $url));
-    shn_gis_map_with_markers($map_arr);
-?>
-		<br />
-		<center><?php
-    //create the submit button
-    shn_form_submit(_("Back"));
-?></center>
-		<br />
-		<?php
-    //close the form
-    shn_form_fclose();
-}
-?>

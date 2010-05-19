@@ -169,11 +169,6 @@ function shn_or_view_org_submit() {
     // require_once ($global['approot'].'inc/lib_security/authenticate.inc');
     $act = $_POST['action'];
     switch ($act) {
-        case "gis":
-            //put values to session
-            _shn_or_check_org_reg_info_complete();
-            _shn_or_view_map_form_org();
-        break;
         case "confirm_edit":
             $error = _shn_or_check_org_reg_info_complete();
             $map_check = _shn_or_check_org_reg_map_info_complete_in_edit();
