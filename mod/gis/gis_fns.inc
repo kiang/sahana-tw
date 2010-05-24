@@ -225,8 +225,7 @@ function shn_gis_map_with_markers($array) {
  * @return void
  */
 function shn_gis_map_with_wiki_markers($array) {
-    global $global;
-    global $conf;
+    global $global, $conf;
     if ($conf['gis']) {
         $plugin_name = $conf['mod_gis_dflt'];
         include $global['approot'] . "/mod/gis/plugins/" . "$plugin_name" . "/handler_" . "$plugin_name" . ".inc";

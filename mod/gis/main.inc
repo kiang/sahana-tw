@@ -103,7 +103,7 @@ function shn_gis_wm_edit() {
 }
 }
 function shn_gis_swik() {
-    $opt_wikimap_type = '';
+    $opt_wikimap_type = 'all';
     if (!empty($_POST['opt_wikimap_type'])) {
         $opt_wikimap_type = $_POST['opt_wikimap_type'];
     }

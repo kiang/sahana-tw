@@ -192,8 +192,7 @@ function show_map_with_markers($array) {
  * called by shn_gis_map_with_wiki_markers in gis api
  */
 function show_map_with_wiki_marker($array) {
-    global $global;
-    global $conf;
+    global $global, $conf;
     $db = $global['db'];
     $key = $conf['mod_gis_google_key'];
 ?>

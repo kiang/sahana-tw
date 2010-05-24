@@ -23,17 +23,18 @@
  * @TODO filter by date
  */
 function show_wiki_map($category = "all", $date = 0) {
-    global $global;
-    global $conf;
+    global $global, $conf;
     include $global['approot'] . "/mod/gis/gis_fns.inc";
     include_once $global['approot'] . "/inc/lib_form.inc";
     //default to all categories
     //set to something else if load problems occur, especially online
-    print ("<h2>" . _("View Situation Map") . "</h2>");
+    echo "<h2>" . _("View Situation Map") . "</h2>";
     if (!isset($category)) $category = "all";
     shn_form_fopen('swik', null, array('req' => false));
     shn_form_fsopen(_("Filter Options"));
-    shn_form_opt_select("opt_wikimap_type", _("Situation Type"), null, array('all' => true));
+    shn_form_opt_select("opt_wikimap_type", _("Situation Type"), null, array(
+        'all' => true, 'value' => $category,
+        ));
     shn_form_fsclose();
     shn_form_submit(_("Filter"));
     shn_form_fclose();
