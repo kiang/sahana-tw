@@ -12,129 +12,147 @@
 * @package    sahana
 * @subpackage or
 */
-include_once ($global['approot'] . '/inc/lib_form.inc');
-include_once "admin_forms.inc";
-function _shn_or_adm_sub_menu() {
-?>
-<div id="submenu_v">
-<a href="index.php?mod=or&act=adm_or_type"><?php echo _("Organization Types") ?></a> 
-<a href="index.php?mod=or&act=adm_sector"><?php echo _("Organization Sectors") ?></a>
-<!--<a href="index.php?mod=or&act=adm_location_range">Set Location Range</a>
-<a href="index.php?mod=or&act=adm_location">Set starting Location</a> -->
-</div>
+include_once $global['approot'] . '/inc/lib_form.inc';
+require_once ('acl.inc');
 
-<br>
-<?php
+function _shn_or_adm_sub_menu() {
+    shn_adm_menuopen('');
+    shn_adm_menuitem('adm_opt_org_type', _('Organization Types'));
+    shn_adm_menuitem('adm_opt_sector_type', _('Organization Sectors'));
+    shn_adm_menuitem('adm_opt_org_sub_type', _('Relationship to the Holding Company'));
+    shn_adm_menuclose();
 }
+
 function shn_or_adm_default() {
+    global $conf;
+    shn_or_adm_opt_org_type();
+}
+
+function shn_or_adm_opt_org_type() {
     _shn_or_adm_sub_menu();
-?>
-    <h2> <?php echo _("Organisation Registry Configuration.") ?> </h2><br/>
-    <p><?php echo _("Use the following links or the above tabs to chage organization types and sectors.") ?></p>
-<ul>
-    <li><b><a href="index.php?mod=or&act=adm_or_type"><?php echo _("Organization Types") ?></a></b><br/> - <?php echo _("Change the types of organizations, (add new, edit or delete)") ?></li><br/>
-    <li><b><a href="index.php?mod=or&act=adm_sector"><?php echo _("Organization Sectors") ?></a></b><br/> - <?php echo _("Change the organization sectors, (add new, edit or delete)") ?></li><br/>
-</ul>
-    
-<?php
+    _shn_or_adm_field_options_form('opt_org_type');
 }
-function shn_or_adm_or_type() {
+
+function shn_or_adm_opt_sector_type() {
     _shn_or_adm_sub_menu();
-    shn_or_adm_or_type_form();
+    _shn_or_adm_field_options_form('opt_sector_type');
 }
-function shn_or_adm_type_cr() {
-    global $global;
-    include_once $global['approot'] . 'inc/lib_misc.inc';
-    $db = $global['db'];
-    $add = explode(",", $_POST['added']);
-    $remove = explode(",", $_POST['removed']);
-    for ($i = 1;$i < count($add) - 1;$i++) {
-        $key = shn_create_unique_database_field_value($add[$i], 2, "field_options", "option_code");
-        $q = "INSERT INTO field_options(field_name,option_code,option_description) VALUES('opt_org_type','$key','$add[$i]')";
-        $res = $db->Execute($q);
-    }
-    for ($i = 1;$i < count($remove);$i++) {
-        $q = "DELETE FROM field_options WHERE field_name='opt_org_type' AND option_code='" . $remove[$i] . "'";
-        $res = $db->Execute($q);
-    }
-    $msg = "Organization types were succesfully added/removed ";
-    add_confirmation($msg);
-    shn_or_adm_or_type();
-}
-function shn_or_adm_sector() {
+
+function shn_or_adm_opt_org_sub_type() {
     _shn_or_adm_sub_menu();
-    shn_or_adm_or_sector_form();
+    _shn_or_adm_field_options_form('opt_org_sub_type');
 }
-function shn_or_adm_sector_cr() {
+
+function _shn_or_update_option($optioncode, $optiondescription) {
     global $global;
-    include_once $global['approot'] . 'inc/lib_misc.inc';
-    $db = $global['db'];
-    $add = explode(",", $_POST['added']);
-    $remove = explode(",", $_POST['removed']);
-    for ($i = 1;$i < count($add) - 1;$i++) {
-        $key = shn_create_unique_database_field_value($add[$i], 2, "field_options", "option_code");
-        $q = "INSERT INTO field_options(field_name,option_code,option_description) VALUES('opt_sector_type','$key','$add[$i]')";
-        $res = $db->Execute($q);
-    }
-    for ($i = 1;$i < count($remove);$i++) {
-        $q = "DELETE FROM field_options WHERE field_name='opt_sector_type' AND option_code='" . $remove[$i] . "'";
-        $res = $db->Execute($q);
-    }
-    $msg = _("Organization services were succesfully added/removed ");
-    add_confirmation($msg);
-    shn_or_adm_sector();
+    $sql = "UPDATE field_options SET option_description='{$optiondescription}' WHERE option_code='{$optioncode}'";
+    $global['db']->Execute($sql);
 }
-function shn_or_adm_acl_install() {
+
+function _shn_or_insert_option($field_name, $optioncode, $optiondescription) {
     global $global;
-    $db = $global["db"];
-    $q = "SELECT value FROM config WHERE module_id='or' AND confkey='acl_base'";
-    $res_acl = $db->Execute($q);
-    if (!$res_acl->EOF && $res_acl->fields[0] == 'installed') {
-        $msg = "ACL Base for Organization Registry is already installed";
+    $sql = "INSERT INTO field_options (field_name,option_code,option_description) VALUES ('{$field_name}','{$optioncode}','{$optiondescription}')";
+    $global['db']->Execute($sql);
+    if ($sql) {
+        add_confirmation(_($_POST['new_desc'] . ' was successfully added.'));
     }
-    include_once $global['approot'] . 'inc/lib_security/acl_api.inc';
-    include_once $global['approot'] . 'inc/lib_security/acl.inc';
-    //  include_once $global['approot'].'inc/lib_security/authenticate.inc';
-    $acl = new SahanaACL(NULL);
-    /** start of or specifc ACL entries
-     *
-     */
-    // add a module named "or"
-    $res = shn_acl_add_module("or", "organization reg");
-    /** action groups **/
-    // add an action group named "deny_admin" under the module "or"
-    $res = shn_acl_add_action_group("or", "deny_admin", "deny admin group");
-    $res = shn_acl_add_action("or", "deny_admin", "shn_or_acl_setup", "Display ACL configuration info");
-    $res = shn_acl_add_action("or", "deny_admin", "shn_or_adm_default", "Display Admin page");
-    $res = shn_acl_add_action("or", "deny_admin", "shn_or_adm_or_type", "Display Admin Or type page");
-    $res = shn_acl_add_action("or", "deny_admin", "shn_or_adm_sector", "Display Admin Or sector page");
-    $res = shn_acl_add_action("or", "deny_admin", "shn_or_adm_location_range", "Display Admin Or location range page");
-    $res = shn_acl_add_action("or", "deny_admin", "shn_or_adm_location", "Display Admin Or location page");
-    //deny permission for 'deny_admin' action group with in 'or' to 'guest' role
-    $res = shn_acl_add_perms_action_group_role('guest', 'or', 'deny_admin');
-    $res = shn_acl_add_perms_action_group_role('user', 'or', 'deny_admin');
-    // add an action group named "deny_user" under the module "or"
-    $res = shn_acl_add_action_group("or", "deny_user", "deny user group");
-    //add an action name 'shn_or_reg_org"  under above action groups
-    $res = shn_acl_add_action("or", "deny_user", "shn_or_reg_org", "Display Organization Registration form");
-    $res = shn_acl_add_action("or", "deny_user", "shn_or_reg_org_cr", "Save Organization Registration info");
-    $res = shn_acl_add_action("or", "deny_user", "shn_or_reg_operation", "Save Operation Registration form");
-    $res = shn_acl_add_action("or", "deny_user", "shn_or_reg_operation_cr", "Save Operation Registration form");
-    $res = shn_acl_add_action("or", "deny_user", "_shn_or_edit_org", "edit Org Registration form");
-    $res = shn_acl_add_action("or", "deny_user", "_shn_or_del_org", "delete Org Registration form");
-    $res = shn_acl_add_perms_action_group_role('guest', 'or', 'deny_user');
-    if ($res_acl->EOF) {
-        $q = "INSERT INTO config VALUES('or','acl_base','installed')";
-    } else {
-        $q = "UPDATE config set value='installed' WHERE module_id='or' AND confkey='acl_base'";
-    }
-    $res = $db->Execute($q);
-    $msg = _("ACL Base for Organization Registry was succesfully installed");
-?>
-    <div id="result_msg">
-       <?php echo $msg; ?>
-    </div>
-    <br />
-<?php
+    $_POST['new_code'] = $_POST['new_desc'] = null;
 }
-?>
+
+function _shn_or_delete_option($optioncode) {
+    global $global;
+    $sql = "DELETE FROM field_options WHERE option_code='{$optioncode}'";
+    $global['db']->Execute($sql);
+    add_confirmation(_('Field was successfully deleted.'));
+}
+
+function is_optioncode_exists($optioncode) {
+    $found = false;
+    global $global;
+    $sql = "SELECT * FROM field_options WHERE option_code='{$optioncode}'";
+    $res = $global['db']->Execute($sql);
+    while (!$res->EOF) {
+        $code = $res->fields['option_code'];
+        $found = true;
+        $res->MoveNext();
+    }
+    return $found;
+}
+
+function _shn_or_adm_field_options_form($type) {
+    global $global;
+    global $conf;
+    $button_type = isset($_POST['button_name']) ? $_POST['button_name'] : '';
+    if ($button_type == _('Update')) {
+        $sql = "SELECT field_name, option_code, option_description  FROM field_options WHERE field_name = '{$type}'";
+        $sel = $global['db']->GetAll($sql);
+        $count = 0;
+        foreach ($sel as $row) {
+            $opcode = $row['option_code'];
+            $fname = $row['field_name'];
+            $code = $_POST[$opcode];
+            $desc = isset($_POST[$count]) ? $_POST[$count] : '';
+            ++$count;
+            $todelete = isset($_POST[$count]) ? $_POST[$count] : '';
+            ++$count;
+            if ($todelete == 'on') {
+                _shn_or_delete_option($code);
+            } else {
+                _shn_or_update_option($code, $desc);
+            }
+        }
+    } else if ($button_type == _('AddNew')) {
+        if (empty($_POST['new_code'])) {
+            add_error(_("Please enter the code"));
+            display_errors();
+        } else if(empty($_POST['new_desc'])) {
+            add_error(_("Please  enter the description"));
+            display_errors();
+        } else if (is_optioncode_exists($_POST['new_code'])) {
+            add_error(_("Code already exists"));
+            display_errors();
+        } else _shn_or_insert_option($type, $_POST['new_code'], $_POST['new_desc']);
+    }
+    $sql = "SELECT field_name, option_code, option_description  FROM field_options WHERE field_name = '{$type}'";
+    $arr = $global['db']->GetAll($sql);
+    if (!empty($arr)) {
+        shn_form_fopen('adm_' . $type, null);
+        shn_form_fsopen(_('Update'));
+        shn_form_hidden(array('seq' => 'update'));
+        ?>
+<table>
+    <thead>
+        <td><strong><?php echo _('Code'); ?></strong></td>
+        <td width="100%"><strong><?php echo _('Description'); ?></strong></td>
+        <td width="100%"><strong><?php echo _('Delete'); ?></strong></td>
+    </thead>
+    <tbody>
+        <?php
+        $count = 0;
+        foreach ($arr as $row) {
+            ?>
+        <tr>
+            <td><input type="text" READONLY name="<?=$row['option_code']; ?>"
+                       value="<?=$row['option_code']; ?>"  />
+            </td>
+            <td><input type="text" name="<?=$count++;?>"
+                       value="<?=$row['option_description']; ?>" />
+            </td>
+            <td><input type="checkbox" name="<?=$count++;?>" />
+            </td>
+        </tr>
+            <?php
+        }
+        ?>
+    </tbody>
+</table>
+        <?php
+        shn_form_submit(_('Update'), "name='button_name'");
+        shn_form_fsclose();
+    }
+    shn_form_fsopen(_('Add New '));
+    shn_form_text(_("Code"), 'new_code', null, array('req' => true));
+    shn_form_text(_("Description"), 'new_desc', null, array('req' => true));
+    shn_form_submit(_('AddNew'), "name='button_name'");
+    shn_form_fclose();
+}
