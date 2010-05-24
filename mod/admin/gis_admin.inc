@@ -241,11 +241,10 @@ function shn_gis_adm_mod() {
  * @access private
  */
 function shn_gis_adm_commit() {
+    global $global;
+    $db = $global['db'];
     if ((shn_valid_x_coordinate($_POST['x_center'])) && (shn_valid_y_coordinate($_POST['y_center']))) {
         add_confirmation(_("Changes were saved"));
-        global $global;
-        $db = $global['db'];
-        //$gm="UPDATE config SET value = '{$_POST['key']}' WHERE module_id = 'gis' AND confkey = 'google_key'";
         if (!null == $_POST['x_center']) {
             $query = "SELECT * FROM config WHERE confkey='mod_gis_center_x' AND module_id='gis'";
             $res = $db->Execute($query);
@@ -271,7 +270,7 @@ function shn_gis_adm_commit() {
     } else {
         add_error(_("Coordinates invalid: should be between -180 & 180"));
     }
-    if (!null == $_POST['mod_gis']) {
+    if (!empty($_POST['mod_gis'])) {
         $query = "SELECT * FROM config WHERE confkey='mod_gis_dflt' AND module_id='gis'";
         $res = $db->Execute($query);
         if (!$res->EOF) {
@@ -284,4 +283,3 @@ function shn_gis_adm_commit() {
     }
     shn_gis_adm_default();
 }
-?>
