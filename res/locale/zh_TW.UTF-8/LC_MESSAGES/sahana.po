@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-11 12:03+0800\n"
-"PO-Revision-Date: 2010-05-18 16:55+0800\n"
-"Last-Translator: Hsiaojan <hsiaojan.liu@gmail.com>\n"
+"POT-Creation-Date: 2010-05-24 19:39+0800\n"
+"PO-Revision-Date: 2010-05-24 19:47+0800\n"
+"Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -422,7 +422,7 @@ msgstr "查詢技能："
 #: mod/cs/add.inc:84
 #: mod/cs/add.inc:245
 #: mod/mpr/search.inc:49
-#: mod/mpr/admin.inc:183
+#: mod/mpr/admin.inc:196
 #: mod/mpr/main.inc:464
 #: mod/cr/search.inc:180
 #: mod/cr/search.inc:187
@@ -453,23 +453,18 @@ msgid "Go to Next Page"
 msgstr "前往下一頁"
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:62
-#: mod/gis/wm_fns.php:100
-#: mod/gis/wm_fns.php:129
 #: tools/tpl_languages.php:248
-#: mod/or/reg_org.inc:95
-#: mod/or/reg_org.inc:120
-#: mod/or/reg_org.inc:270
-#: mod/or/lib_or.inc:793
+#: mod/or/reg_org.inc:100
+#: mod/or/reg_org.inc:262
+#: mod/or/lib_or.inc:792
 #: mod/ws/reg.inc:52
 #: mod/ims/reg_inv.inc:59
 #: mod/ims/reg_inv.inc:111
-#: mod/ims/reg_inv.inc:157
 #: mod/cs/lib_cs.inc:193
-#: mod/gis/wm_fns.inc:100
-#: mod/gis/wm_fns.inc:129
+#: mod/gis/wm_fns.inc:118
+#: mod/gis/wm_fns.inc:147
 #: mod/gis/main_fns.inc:88
-#: mod/gis/main_fns.inc:117
-#: mod/gis/gis_fns.inc:180
+#: mod/gis/main_fns.inc:115
 #: mod/mpr/search.inc:82
 #: mod/mpr/search.inc:212
 #: mod/mpr/edit.inc:236
@@ -483,13 +478,13 @@ msgstr "前往下一頁"
 #: mod/mpr/add.inc:557
 #: mod/sync/handler_upload.inc:71
 #: mod/admin/location.inc:58
-#: mod/cr/edit.inc:67
-#: mod/cr/edit.inc:216
-#: mod/cr/edit.inc:590
-#: mod/cr/camp.inc:75
-#: mod/cr/camp.inc:96
-#: mod/cr/camp.inc:175
-#: mod/cr/camp.inc:659
+#: mod/cr/edit.inc:86
+#: mod/cr/edit.inc:240
+#: mod/cr/edit.inc:657
+#: mod/cr/camp.inc:92
+#: mod/cr/camp.inc:113
+#: mod/cr/camp.inc:182
+#: mod/cr/camp.inc:562
 #: mod/dvr/edt_grp.inc:395
 #: mod/dvr/search_individual.inc:50
 #: mod/dvr/search_individual.inc:139
@@ -516,136 +511,6 @@ msgstr "前往下一頁"
 #: inc/lib_paging.inc:222
 msgid "Next"
 msgstr "下一頁"
-
-#: mod/gis/wm_fns.php:32
-#: mod/gis/wm_fns.inc:32
-#: mod/gis/main_fns.inc:37
-msgid "View Situation Map"
-msgstr "檢視災害狀態地圖"
-
-#: mod/gis/wm_fns.php:35
-#: mod/gis/wm_fns.inc:35
-msgid "Filter Options"
-msgstr "過濾選項"
-
-#: mod/gis/wm_fns.php:36
-#: mod/gis/wm_fns.inc:36
-msgid "Situation Type"
-msgstr "狀態類型"
-
-#: mod/gis/wm_fns.php:38
-#: mod/or/report.inc:447
-#: mod/gis/wm_fns.inc:38
-msgid "Filter"
-msgstr "過濾器"
-
-#: mod/gis/wm_fns.php:97
-#: mod/gis/wm_fns.inc:97
-msgid "Situation Image"
-msgstr "狀態影像"
-
-#: mod/gis/wm_fns.php:98
-#: mod/gis/wm_fns.inc:98
-msgid "Upload Image"
-msgstr "上傳影像"
-
-# 為符合使用UI，因此中文改為一般地圖，與英文並不對稱
-#: mod/gis/wm_fns.php:155
-#: mod/gis/wm_fns.inc:155
-msgid "Mapping Client"
-msgstr "一般地圖"
-
-#: mod/gis/wm_fns.php:172
-msgid "Detail Name Cannot be empty"
-msgstr "必須填寫詳細姓名"
-
-#: mod/gis/wm_fns.php:178
-#: mod/gis/wm_fns.inc:178
-msgid "Add Situation Detail"
-msgstr "新增狀態詳情"
-
-#: mod/gis/wm_fns.php:181
-#: mod/gis/wm_fns.inc:181
-msgid "Main Details"
-msgstr "主要細節"
-
-#: mod/gis/wm_fns.php:183
-#: mod/gis/wm_fns.inc:183
-msgid "Name of Detail"
-msgstr "細節名稱"
-
-#: mod/gis/wm_fns.php:184
-#: mod/gis/wm_fns.inc:184
-msgid "Wiki Type"
-msgstr "Wiki 類型"
-
-#: mod/gis/wm_fns.php:185
-#: mod/gis/wm_fns.php:210
-#: mod/gis/wm_fns.inc:185
-#: mod/gis/wm_fns.inc:210
-msgid "Detail Summary"
-msgstr "詳情摘要"
-
-#: mod/gis/wm_fns.php:187
-#: mod/gis/wm_fns.inc:187
-msgid "Extra Details"
-msgstr "額外細節"
-
-#: mod/gis/wm_fns.php:188
-#: mod/gis/wm_fns.inc:188
-msgid "URL"
-msgstr "URL"
-
-#: mod/gis/wm_fns.php:190
-#: mod/gis/wm_fns.inc:190
-msgid "Date of Event"
-msgstr "事件日期"
-
-#: mod/gis/wm_fns.php:192
-#: mod/gis/wm_fns.inc:192
-msgid "Wikimap Options"
-msgstr "Wiki地圖選項"
-
-#: mod/gis/wm_fns.php:193
-#: mod/gis/wm_fns.inc:193
-#: mod/admin/mmc_main.inc:13
-msgid "Author"
-msgstr "作者"
-
-#: mod/gis/wm_fns.php:194
-#: mod/gis/wm_fns.inc:194
-msgid "Publicly Editable"
-msgstr "可公開編輯的"
-
-#: mod/gis/wm_fns.php:195
-#: mod/gis/wm_fns.inc:195
-msgid "Publicly Viewable"
-msgstr "可公開查看的"
-
-#: mod/gis/wm_fns.php:197
-#: mod/gis/wm_fns.inc:197
-msgid "Add Detail"
-msgstr "新增細節"
-
-#: mod/gis/wm_fns.php:209
-#: mod/gis/wm_fns.inc:209
-msgid "Update Detail"
-msgstr "更新細節"
-
-#: mod/gis/wm_fns.php:215
-#: mod/gis/wm_fns.inc:215
-msgid "Commit Detail"
-msgstr "增加細節"
-
-#: mod/gis/wm_fns.php:226
-#: mod/gis/wm_fns.inc:226
-msgid "Succesfully updated description"
-msgstr "已成功更新說明"
-
-#: mod/gis/wm_fns.php:271
-#: mod/gis/wm_fns.inc:271
-msgid "Succesfully added wiki item "
-msgstr "已成功新增wiki項目"
 
 #: tools/tpl_languages.php:2
 msgid "Delete Project"
@@ -675,21 +540,22 @@ msgstr "取消"
 #: tools/tpl_languages.php:99
 #: tools/tpl_languages.php:343
 #: tools/tpl_languages.php:375
-#: mod/or/view_org.inc:436
+#: mod/or/view_org.inc:451
 #: mod/ims/view_edit_item.inc:66
-#: mod/ims/view_inv.inc:217
+#: mod/ims/view_inv.inc:257
 #: mod/ims/mini_quantity.inc:250
 #: mod/cs/edit.inc:285
 #: mod/cs/edit.inc:465
 #: mod/cs/edit.inc:581
-#: mod/mpr/admin.inc:342
+#: mod/mpr/admin.inc:355
 #: mod/admin/ims_level.inc:31
 #: mod/admin/ims_level.inc:175
 #: mod/admin/ims_level.inc:358
 #: mod/admin/ims_assign.inc:18
 #: mod/admin/ims_assign.inc:35
 #: mod/admin/location.inc:100
-#: mod/cr/edit.inc:173
+#: mod/cr/edit.inc:194
+#: mod/cr/admin.inc:203
 #: mod/dvr/admin.inc:57
 #: mod/rms/handler_req_ls.inc:98
 #: mod/rms/lib_rms.inc:489
@@ -705,11 +571,12 @@ msgstr "刪除"
 #: mod/or/process_org.inc:41
 #: mod/ims/view_edit_item.inc:65
 #: mod/ims/mini_quantity.inc:249
+#: mod/gis/wm_fns.inc:55
 #: mod/mpr/search.inc:255
-#: mod/cr/edit.inc:172
-#: mod/cr/edit.inc:258
-#: mod/cr/edit.inc:553
-#: mod/cr/camp.inc:617
+#: mod/cr/edit.inc:193
+#: mod/cr/edit.inc:282
+#: mod/cr/edit.inc:594
+#: mod/cr/camp.inc:517
 #: mod/msg/handler_cap_edit.inc:46
 msgid "Edit"
 msgstr "編輯"
@@ -754,8 +621,10 @@ msgstr "預計志工人數"
 #: mod/cs/search.inc:221
 #: mod/cs/edit.inc:526
 #: mod/cs/add.inc:428
-#: mod/mpr/admin.inc:341
-#: mod/mpr/admin.inc:368
+#: mod/mpr/admin.inc:354
+#: mod/mpr/admin.inc:383
+#: mod/cr/admin.inc:202
+#: mod/cr/admin.inc:231
 #: mod/dvr/edt_grp.inc:449
 #: mod/dvr/edt_grp.inc:524
 #: mod/dvr/add_new_grp.inc:354
@@ -790,16 +659,19 @@ msgstr "任務"
 #: tools/tpl_languages.php:342
 #: mod/or/admin_forms.inc:142
 #: mod/or/admin_forms.inc:200
-#: mod/mpr/admin.inc:193
-#: mod/mpr/admin.inc:295
-#: mod/mpr/admin.inc:330
-#: mod/mpr/admin.inc:363
+#: mod/mpr/admin.inc:206
+#: mod/mpr/admin.inc:314
+#: mod/mpr/admin.inc:348
+#: mod/mpr/admin.inc:378
 #: mod/pref/ims_config.inc:39
 #: mod/admin/ims_level.inc:49
 #: mod/admin/ims_level.inc:206
 #: mod/admin/ims_level.inc:391
 #: mod/admin/ims_config.inc:30
 #: mod/admin/lc_ui_translate_update.inc:25
+#: mod/cr/admin.inc:162
+#: mod/cr/admin.inc:196
+#: mod/cr/admin.inc:226
 #: mod/dvr/admin.inc:105
 #: inc/lib_security/acl_form.inc:276
 msgid "Update"
@@ -810,7 +682,7 @@ msgstr "更新"
 #: tools/tpl_languages.php:75
 #: tools/tpl_languages.php:252
 #: tools/tpl_languages.php:299
-#: mod/or/lib_or.inc:638
+#: mod/or/lib_or.inc:637
 #: mod/rs/sample.inc:166
 #: mod/rs/sample.inc:225
 #: mod/rs/sample.inc:280
@@ -904,7 +776,7 @@ msgstr "指派"
 
 #: tools/tpl_languages.php:39
 #: mod/ims/optimize.inc:500
-#: mod/ims/view_inv.inc:65
+#: mod/ims/view_inv.inc:66
 #: mod/mpr/search.inc:243
 msgid "Actions"
 msgstr "狀態/動作"
@@ -966,13 +838,13 @@ msgstr "結束日期"
 #: tools/tpl_languages.php:56
 #: tools/tpl_languages.php:198
 #: mod/or/search.inc:40
-#: mod/or/reg_org.inc:70
-#: mod/or/reg_org.inc:177
-#: mod/or/reg_org.inc:242
+#: mod/or/reg_org.inc:71
+#: mod/or/reg_org.inc:164
+#: mod/or/reg_org.inc:230
 #: mod/or/view_org.inc:397
 #: mod/ims/reg_inv.inc:92
-#: mod/ims/view_inv.inc:198
-#: inc/lib_location.inc:1060
+#: mod/ims/view_inv.inc:202
+#: inc/lib_location.inc:1061
 msgid "Base Location"
 msgstr "所在位置與地址"
 
@@ -1074,8 +946,7 @@ msgstr "專案 - 職位"
 #: tools/tpl_languages.php:104
 #: tools/tpl_languages.php:195
 #: tools/tpl_languages.php:235
-#: mod/cr/edit.inc:436
-#: mod/cr/camp.inc:500
+#: mod/cr/edit.inc:471
 msgid "Availability"
 msgstr "可利用性"
 
@@ -1100,12 +971,12 @@ msgstr "身份識別"
 #: tools/tpl_languages.php:230
 #: mod/or/report.inc:465
 #: mod/or/view_org.inc:91
-#: mod/or/view_org.inc:471
+#: mod/or/view_org.inc:486
 #: mod/ims/reg_inv.inc:43
 #: mod/admin/location.inc:38
 #: mod/cr/search.inc:42
 #: mod/cr/search.inc:119
-#: mod/cr/edit.inc:502
+#: mod/cr/edit.inc:537
 #: mod/cr/reports.inc:62
 #: mod/cr/reports.inc:116
 #: mod/dvr/add_new_grp.inc:406
@@ -1532,13 +1403,13 @@ msgid "Special needs:"
 msgstr "特殊需求"
 
 #: tools/tpl_languages.php:199
-#: mod/or/reg_org.inc:84
-#: mod/or/reg_org.inc:185
-#: mod/or/reg_org.inc:258
-#: mod/or/view_org.inc:422
+#: mod/or/reg_org.inc:89
+#: mod/or/reg_org.inc:172
+#: mod/or/reg_org.inc:250
+#: mod/or/view_org.inc:437
 #: mod/ims/reg_inv.inc:47
 #: mod/ims/reg_inv.inc:97
-#: mod/ims/view_inv.inc:202
+#: mod/ims/view_inv.inc:242
 #: mod/dvr/edt_indv.inc:424
 #: mod/dvr/add_new_indv.inc:402
 msgid "Contact Information"
@@ -2206,19 +2077,19 @@ msgid "Search for Organizations by Name,Type,Service and Location"
 msgstr "依名稱、類型、服務和位置來搜尋組織"
 
 #: mod/or/search.inc:29
-#: mod/or/reg_org.inc:34
-#: mod/or/reg_org.inc:143
-#: mod/or/reg_org.inc:231
+#: mod/or/reg_org.inc:35
+#: mod/or/reg_org.inc:130
+#: mod/or/reg_org.inc:219
 #: mod/or/view_org.inc:363
 #: mod/ims/add_item.inc:108
-#: mod/ims/reg_inv.inc:36
-#: mod/ims/view_inv.inc:192
+#: mod/ims/reg_inv.inc:37
+#: mod/ims/view_inv.inc:196
 msgid "Primary Details"
 msgstr "主要的細節"
 
 #: mod/or/search.inc:31
-#: mod/or/reg_org.inc:40
-#: mod/or/reg_org.inc:154
+#: mod/or/reg_org.inc:41
+#: mod/or/reg_org.inc:141
 #: mod/or/view_org.inc:371
 msgid "Organization Name : "
 msgstr "組織名稱："
@@ -2228,12 +2099,12 @@ msgid "Please select whether you are a government organization,multinational ect
 msgstr "請選擇您是否是政府單位、跨國組織…等等"
 
 #: mod/or/search.inc:35
-#: mod/or/reg_org.inc:48
-#: mod/or/reg_org.inc:162
+#: mod/or/reg_org.inc:49
+#: mod/or/reg_org.inc:149
 #: mod/or/report.inc:464
 #: mod/or/view_org.inc:90
 #: mod/or/view_org.inc:383
-#: mod/or/view_org.inc:470
+#: mod/or/view_org.inc:485
 #: mod/ims/ims_report.inc:434
 msgid "Organization Type"
 msgstr "組織型態"
@@ -2243,25 +2114,25 @@ msgid "Select the services your provide ,i.e what you do as an organization. e.g
 msgstr "選取您提供的服務，也就是您的組織在做什麼。例如醫療服務供應商。"
 
 #: mod/or/search.inc:38
-#: mod/or/reg_org.inc:55
-#: mod/or/reg_org.inc:170
-#: mod/or/reg_org.inc:238
+#: mod/or/reg_org.inc:56
+#: mod/or/reg_org.inc:157
+#: mod/or/reg_org.inc:226
 #: mod/or/view_org.inc:391
 msgid "Organization Sector"
 msgstr "組織服務內容"
 
 #: mod/or/search.inc:42
-#: mod/or/reg_org.inc:81
-#: mod/or/reg_org.inc:256
+#: mod/or/reg_org.inc:82
+#: mod/or/reg_org.inc:244
 #: mod/or/report.inc:466
 #: mod/or/view_org.inc:92
 #: mod/or/view_org.inc:405
-#: mod/or/view_org.inc:472
-#: mod/or/lib_or.inc:639
+#: mod/or/view_org.inc:487
+#: mod/or/lib_or.inc:638
 #: mod/ims/search.inc:381
 #: mod/ims/search.inc:498
 #: mod/ims/ims_report.inc:436
-#: mod/ims/view_inv.inc:59
+#: mod/ims/view_inv.inc:60
 #: mod/mpr/view.inc:78
 #: mod/mpr/edit.inc:191
 #: mod/mpr/edit.inc:471
@@ -2271,15 +2142,15 @@ msgstr "組織服務內容"
 #: mod/mpr/add.inc:542
 #: mod/cr/search.inc:43
 #: mod/cr/search.inc:120
-#: mod/cr/edit.inc:42
-#: mod/cr/edit.inc:134
-#: mod/cr/edit.inc:498
-#: mod/cr/edit.inc:564
+#: mod/cr/edit.inc:39
+#: mod/cr/edit.inc:153
+#: mod/cr/edit.inc:533
+#: mod/cr/edit.inc:605
 #: mod/cr/reports.inc:61
 #: mod/cr/reports.inc:164
-#: mod/cr/camp.inc:45
-#: mod/cr/camp.inc:562
-#: mod/cr/camp.inc:633
+#: mod/cr/camp.inc:40
+#: mod/cr/camp.inc:460
+#: mod/cr/camp.inc:533
 #: mod/dvr/reporting.inc:46
 #: mod/dvr/reporting.inc:87
 #: mod/dvr/edt_grp.inc:297
@@ -2376,85 +2247,91 @@ msgstr "組織登錄"
 msgid "Organization Registration"
 msgstr "組織登錄"
 
-#: mod/or/reg_org.inc:36
+#: mod/or/reg_org.inc:37
 msgid "These are the basic details of an organization. Organization name is required , but the Registration number is optional"
 msgstr "這些是組織的基本資訊。組織名稱為必填，登記字號為選填。"
 
-#: mod/or/reg_org.inc:45
+#: mod/or/reg_org.inc:46
 msgid "If your organization is registered under the government, please enter your Company Registration Number"
 msgstr "如果您的組織有像政府登記，請輸入您的登記字號"
 
-#: mod/or/reg_org.inc:46
-#: mod/or/reg_org.inc:156
+#: mod/or/reg_org.inc:47
+#: mod/or/reg_org.inc:143
 msgid "Registration Number(if any) : "
 msgstr "登記字號（若有）："
 
-#: mod/or/reg_org.inc:69
+#: mod/or/reg_org.inc:70
 msgid "Select the location based at.  This is hierarchical. For example if you are based  in the country 'Sri lanka' ,district 'Colombo' ,and village 'Dehiwala',  start by selecting the country. Once you select the country all the divisions of that country will be shown in the next select box.  In this case all districts in 'Sri lanka' will appear . From those select a district, which inturn will show the village list in the next select box. Select 'dehiwala' and it is done! Please note that the levels can be customized, hence it does not need to always be 'country'->'district'->'village'. It is configurable from the 'administration' section."
 msgstr "先選擇第一個層級-國家，接著下面的層級選項就會跟著出現，例如：縣市。"
 
-#: mod/or/reg_org.inc:80
-#: mod/or/reg_org.inc:251
+#: mod/or/reg_org.inc:81
+#: mod/or/reg_org.inc:239
 msgid "In addition to the hierarchical location , you may specify the address of the organization here. "
 msgstr "除了階層式的位置之外，你也可在此填寫組織的詳細地址。"
 
-#: mod/or/reg_org.inc:87
-#: mod/ims/view_inv.inc:205
+#: mod/or/reg_org.inc:92
+#: mod/ims/view_inv.inc:245
 msgid "Facilities Available"
 msgstr "可使用的設施"
 
-#: mod/or/reg_org.inc:133
-#: mod/cr/edit.inc:490
-#: mod/cr/camp.inc:554
+#: mod/or/reg_org.inc:120
+#: mod/cr/edit.inc:525
+#: mod/cr/camp.inc:452
 msgid "Confirm Registration Details of "
 msgstr "確認登錄細節"
 
-#: mod/or/reg_org.inc:150
+#: mod/or/reg_org.inc:137
 msgid "An Organization by the name "
 msgstr "An Organization by the name "
 
-#: mod/or/reg_org.inc:150
+#: mod/or/reg_org.inc:137
 msgid " exists already. May be you should change the name?"
 msgstr "已經存在。您要修改名稱嗎？"
 
-#: mod/or/reg_org.inc:179
+#: mod/or/reg_org.inc:166
 msgid "Latitude= "
 msgstr "緯度："
 
-#: mod/or/reg_org.inc:179
+#: mod/or/reg_org.inc:166
 msgid " Longitude= "
 msgstr "經度："
 
-#: mod/or/reg_org.inc:180
+#: mod/or/reg_org.inc:167
 #: mod/or/lib_or.inc:126
 #: mod/ims/lib_ims.inc:1466
 #: inc/lib_location.inc:103
 msgid "Organization Location"
 msgstr "組織位置"
 
-#: mod/or/reg_org.inc:181
+#: mod/or/reg_org.inc:168
 msgid "Organization Location Address"
 msgstr "組織位置地址"
 
-#: mod/or/reg_org.inc:182
+#: mod/or/reg_org.inc:169
 #: mod/or/view_org.inc:409
+#: mod/ims/view_inv.inc:206
+#: mod/gis/gis_fns.inc:177
+#: mod/cr/edit.inc:44
+#: mod/cr/edit.inc:539
+#: mod/cr/edit.inc:615
+#: mod/cr/camp.inc:49
 msgid "Map Location"
 msgstr "地圖位置"
 
-#: mod/or/reg_org.inc:188
-#: mod/or/reg_org.inc:261
-#: mod/or/view_org.inc:425
+#: mod/or/reg_org.inc:175
+#: mod/or/reg_org.inc:253
+#: mod/or/view_org.inc:440
 #: mod/ims/reg_inv.inc:50
 #: mod/ims/reg_inv.inc:100
 msgid "Facilities Avaliable"
 msgstr "可用的設施"
 
-#: mod/or/reg_org.inc:197
-#: mod/or/view_org.inc:435
+#: mod/or/reg_org.inc:184
+#: mod/or/view_org.inc:450
 #: mod/or/admin_forms.inc:50
 #: mod/or/admin_forms.inc:87
 #: mod/ims/add_item.inc:160
-#: mod/ims/view_inv.inc:216
+#: mod/ims/view_inv.inc:256
 #: mod/rs/config.inc:47
 #: mod/cs/edit.inc:284
 #: mod/cs/edit.inc:464
@@ -2484,7 +2361,7 @@ msgstr "可用的設施"
 msgid "Save"
 msgstr "儲存"
 
-#: mod/or/reg_org.inc:198
+#: mod/or/reg_org.inc:185
 #: mod/dvr/edt_grp.inc:533
 #: mod/dvr/add_new_grp.inc:433
 #: mod/dvr/edt_indv.inc:466
@@ -2492,24 +2369,24 @@ msgstr "儲存"
 msgid "Edit Details"
 msgstr "編輯細節"
 
-#: mod/or/reg_org.inc:220
+#: mod/or/reg_org.inc:207
 msgid "Add an Operation/Branch under the Organization "
 msgstr "在組織之下加入作業/分支 "
 
-#: mod/or/reg_org.inc:222
+#: mod/or/reg_org.inc:209
 msgid "Your Organization might be having branches or carrying out relief operations in this disaster. Then information of those operations is usefull "
 msgstr "您的組織在這場災難中也許正有分支或是進行著救援作業。因此這些作業的資訊是很有用的。"
 
-#: mod/or/reg_org.inc:228
+#: mod/or/reg_org.inc:216
 msgid "Holding Company"
 msgstr "所屬組織"
 
-#: mod/or/reg_org.inc:233
+#: mod/or/reg_org.inc:221
 #: mod/ims/reg_inv.inc:86
 msgid "Operation/Branch Name : "
 msgstr "營運/分支機構名稱："
 
-#: mod/or/reg_org.inc:235
+#: mod/or/reg_org.inc:223
 msgid "Relationship to the Holding Company"
 msgstr "與所屬組織的關係"
 
@@ -2551,17 +2428,22 @@ msgstr "未涵蓋"
 msgid "Organization Report by Sector"
 msgstr "依領域區分的組織報表"
 
+#: mod/or/report.inc:447
+#: mod/gis/wm_fns.inc:39
+msgid "Filter"
+msgstr "過濾器"
+
 #: mod/or/report.inc:461
 #: mod/or/view_org.inc:87
-#: mod/or/view_org.inc:467
-#: mod/or/lib_or.inc:920
+#: mod/or/view_org.inc:482
+#: mod/or/lib_or.inc:908
 #: mod/ims/ims_report.inc:432
 msgid "Organization Name"
 msgstr "組織名稱"
 
 #: mod/or/report.inc:462
 #: mod/or/view_org.inc:88
-#: mod/or/view_org.inc:468
+#: mod/or/view_org.inc:483
 msgid "Incidents"
 msgstr "事故"
 
@@ -2572,7 +2454,7 @@ msgstr "提供服務"
 
 #: mod/or/report.inc:467
 #: mod/ims/ims_report.inc:437
-#: mod/ims/main.inc:463
+#: mod/ims/main.inc:458
 msgid "Contact Number"
 msgstr "聯絡號碼"
 
@@ -2585,15 +2467,15 @@ msgid "Your are viewing page no "
 msgstr "你正在瀏覽頁"
 
 #: mod/or/view_org.inc:89
-#: mod/or/view_org.inc:469
+#: mod/or/view_org.inc:484
 msgid "Services Provided"
 msgstr "提供的服務"
 
 #: mod/or/view_org.inc:93
-#: mod/or/view_org.inc:473
+#: mod/or/view_org.inc:488
 #: mod/ims/search.inc:382
 #: mod/ims/search.inc:499
-#: mod/ims/view_inv.inc:60
+#: mod/ims/view_inv.inc:61
 msgid "Contact Numbers"
 msgstr "聯絡號碼"
 
@@ -2602,7 +2484,7 @@ msgid "No Records"
 msgstr "無記錄"
 
 #: mod/or/view_org.inc:222
-#: mod/or/view_org.inc:542
+#: mod/or/view_org.inc:557
 #: mod/mpr/mpr_lib.inc:50
 #: mod/mpr/mpr_lib.inc:71
 #: mod/mpr/search.inc:281
@@ -2623,38 +2505,68 @@ msgstr "這是基本的組織資訊。組織名稱為必填，註冊號碼是選
 msgid "Registration Number : "
 msgstr "登記字號："
 
-#: mod/or/view_org.inc:413
+#: mod/or/view_org.inc:411
+#: mod/ims/view_inv.inc:208
+#: mod/gis/gis_fns.inc:179
+#: mod/cr/edit.inc:46
+#: mod/cr/edit.inc:617
+#: mod/cr/camp.inc:51
+msgid "Click on the button \"Update the location\" will update the map location if you did manually modify the values of position."
+msgstr "重新輸入經緯度，點選「重新定位」，下方地圖座標即會更新"
+
+#: mod/or/view_org.inc:416
+#: mod/ims/view_inv.inc:217
+#: mod/cr/edit.inc:50
+#: mod/cr/edit.inc:540
+#: mod/cr/edit.inc:621
+#: mod/cr/camp.inc:53
 msgid "Latitude : "
 msgstr "緯度："
 
-#: mod/or/view_org.inc:416
+#: mod/or/view_org.inc:419
+#: mod/ims/view_inv.inc:224
+#: mod/cr/edit.inc:52
+#: mod/cr/edit.inc:541
+#: mod/cr/edit.inc:623
+#: mod/cr/camp.inc:54
 msgid "Longitude : "
 msgstr "經度："
 
-#: mod/or/view_org.inc:418
-msgid "GIS Map"
-msgstr "GIS 地圖"
+#: mod/or/view_org.inc:420
+#: mod/ims/view_inv.inc:225
+#: mod/gis/gis_fns.inc:187
+#: mod/cr/edit.inc:53
+#: mod/cr/edit.inc:624
+#: mod/cr/camp.inc:55
+msgid "Update the location"
+msgstr "重新定位"
 
-#: mod/or/view_org.inc:434
+#: mod/or/view_org.inc:430
+#: mod/ims/view_inv.inc:235
+#: mod/gis/gis_fns.inc:197
+#: mod/cr/edit.inc:61
+#: mod/cr/edit.inc:632
+#: mod/cr/camp.inc:63
+msgid ""
+"You can move around and enlarge/reduce the size of the area you want using\n"
+"the scale on upper left corner of the map. By clicking on a map you can\n"
+"mark your location with a pointer."
+msgstr ""
+"您可以四處拖動並且用左上角的刻度放大/縮小您想看的地區。\n"
+"重新點擊地圖上任一位置，及改變原來的標記。"
+
+#: mod/or/view_org.inc:449
 #: mod/ims/view_edit_item.inc:153
-#: mod/ims/view_inv.inc:215
+#: mod/ims/view_inv.inc:255
 #: mod/cs/edit.inc:283
 #: mod/cs/edit.inc:463
 #: mod/cs/edit.inc:579
 #: mod/admin/location.inc:98
-#: mod/cr/edit.inc:170
+#: mod/cr/edit.inc:191
 #: mod/rms/handler_mng_ff.inc:40
 #: mod/msg/message_forms.inc:234
 msgid "Close"
 msgstr "關閉"
-
-#: mod/or/view_org.inc:568
-#: mod/or/view_org.inc:578
-#: mod/mpr/view.inc:103
-#: mod/mpr/search.inc:392
-#: mod/rms/handler_mng_ff.inc:109
-msgid "Back"
-msgstr "上一步"
 
 #: mod/or/errors.inc:15
 #: mod/or/errors.inc:22
@@ -2727,17 +2639,17 @@ msgstr "請選擇您的組織的類型。例如政府單位、跨國非政府組
 msgid "please select whether you are Department,Branch,ect of the parent organization"
 msgstr "請選擇您是否是上層組織的部門、分會…等等"
 
-#: mod/or/lib_or.inc:625
+#: mod/or/lib_or.inc:624
 msgid "Select the services your organization provides ,that is what you do as an organization or services your organization can provide in a disaster. e.g. if you offer medical services select it"
 msgstr "主要服務：選擇您的組織在災難中所提供的最主要服務，例如醫療服務。"
 
-#: mod/or/lib_or.inc:640
+#: mod/or/lib_or.inc:639
 #: mod/mpr/add.inc:322
 #: mod/mpr/add.inc:543
 msgid "Phone"
 msgstr "電話"
 
-#: mod/or/lib_or.inc:641
+#: mod/or/lib_or.inc:640
 #: mod/mpr/view.inc:81
 #: mod/mpr/edit.inc:197
 #: mod/mpr/edit.inc:488
@@ -2758,11 +2670,11 @@ msgstr "電話"
 msgid "Mobile"
 msgstr "行動電話"
 
-#: mod/or/lib_or.inc:642
+#: mod/or/lib_or.inc:641
 msgid "Fax"
 msgstr "傳真"
 
-#: mod/or/lib_or.inc:643
+#: mod/or/lib_or.inc:642
 #: mod/home/main.inc:52
 #: mod/home/main.inc:182
 #: mod/mpr/add.inc:323
@@ -2778,178 +2690,178 @@ msgstr "傳真"
 msgid "Email"
 msgstr "電子郵件"
 
-#: mod/or/lib_or.inc:644
+#: mod/or/lib_or.inc:643
 msgid "Website"
 msgstr "網站"
 
-#: mod/or/lib_or.inc:647
+#: mod/or/lib_or.inc:646
 msgid "Please provide contact details that can be used to contact your organization in a disaster"
 msgstr "請提供聯絡資訊，以便在發生災難時與您的組織聯絡"
 
-#: mod/or/lib_or.inc:683
+#: mod/or/lib_or.inc:682
 msgid "Name of the person to be contacted in a disaster"
 msgstr "在發生災難時可以聯絡的聯絡人姓名"
 
-#: mod/or/lib_or.inc:684
+#: mod/or/lib_or.inc:683
 #: mod/ims/lib_ims.inc:360
 msgid "Name : "
 msgstr "姓名："
 
-#: mod/or/lib_or.inc:686
+#: mod/or/lib_or.inc:685
 msgid "Address of a person to be contacted in a disaster"
 msgstr "在發生災難時可以用來聯絡的聯絡人地址"
 
-#: mod/or/lib_or.inc:687
+#: mod/or/lib_or.inc:686
 #: mod/ims/lib_ims.inc:363
 msgid "Address : "
 msgstr "地址："
 
-#: mod/or/lib_or.inc:689
+#: mod/or/lib_or.inc:688
 msgid "Land line number to be contacted in a disaster"
 msgstr "發生災難時可以用來聯絡的電話號碼"
 
-#: mod/or/lib_or.inc:690
+#: mod/or/lib_or.inc:689
 #: mod/ims/lib_ims.inc:365
 msgid "Phone : "
 msgstr "電話："
 
-#: mod/or/lib_or.inc:692
+#: mod/or/lib_or.inc:691
 msgid "Mobile Phone number to be contacted in a disaster"
 msgstr "發生災難時可以用來聯絡的行動電話號碼"
 
-#: mod/or/lib_or.inc:693
+#: mod/or/lib_or.inc:692
 #: mod/ims/lib_ims.inc:367
 msgid "Mobile No : "
 msgstr "手機號碼："
 
-#: mod/or/lib_or.inc:695
+#: mod/or/lib_or.inc:694
 msgid "Fax number to be contacted in a disaster"
 msgstr "發生災難時可以用來聯絡的傳真號碼"
 
-#: mod/or/lib_or.inc:696
+#: mod/or/lib_or.inc:695
 #: mod/ims/lib_ims.inc:369
 msgid "Fax : "
 msgstr "傳真："
 
-#: mod/or/lib_or.inc:698
+#: mod/or/lib_or.inc:697
 msgid "Email address to be contacted in a disaster"
 msgstr "發生災難時可以用來聯絡的電子郵件位址"
 
-#: mod/or/lib_or.inc:699
+#: mod/or/lib_or.inc:698
 #: mod/ims/lib_ims.inc:371
 msgid "Email : "
 msgstr "電子郵件："
 
-#: mod/or/lib_or.inc:701
+#: mod/or/lib_or.inc:700
 msgid "Website of the Organization"
 msgstr "組織的網站"
 
-#: mod/or/lib_or.inc:702
+#: mod/or/lib_or.inc:701
 #: mod/ims/lib_ims.inc:373
 msgid "Website : "
 msgstr "網址："
 
-#: mod/or/lib_or.inc:705
+#: mod/or/lib_or.inc:704
 msgid "Please document the facilities available in your organization. This information  should provide a rough idea of the resources available in your organization and is useful to plan relief operations"
 msgstr "請說明您的組織可供運用的的設施。此訊息應該包括您的組織可供運用的資源，這對於制定救災計畫非常有幫助。"
 
-#: mod/or/lib_or.inc:708
+#: mod/or/lib_or.inc:707
 #: mod/ims/search.inc:383
 #: mod/ims/search.inc:500
 #: mod/ims/ims_report.inc:438
-#: mod/ims/view_inv.inc:61
-#: mod/ims/main.inc:465
+#: mod/ims/view_inv.inc:62
+#: mod/ims/main.inc:460
 msgid "Man Power"
 msgstr "人力"
 
-#: mod/or/lib_or.inc:709
+#: mod/or/lib_or.inc:708
 #: mod/ims/search.inc:384
 #: mod/ims/search.inc:501
 #: mod/ims/ims_report.inc:439
-#: mod/ims/view_inv.inc:62
+#: mod/ims/view_inv.inc:63
 msgid "Equipment"
 msgstr "設備"
 
-#: mod/or/lib_or.inc:710
+#: mod/or/lib_or.inc:709
 msgid "Resources"
 msgstr "資源"
 
-#: mod/or/lib_or.inc:730
+#: mod/or/lib_or.inc:729
 msgid "Specify the workforce(Men/Women) in your organization. This amount would be useful in identifying the potential number of volunteers in the event of a disaster"
 msgstr "詳細說明您的組織的人力資源（男/女）。這對於災難發生時尋找志工的可能數量非常重要。"
 
-#: mod/or/lib_or.inc:731
+#: mod/or/lib_or.inc:730
 msgid "You can specify the man power as a number or give details up to 100 characters."
 msgstr "您可以指定人力資源的數量，或是提供詳細資訊（50字以內）。"
 
-#: mod/or/lib_or.inc:732
+#: mod/or/lib_or.inc:731
 #: mod/ims/lib_ims.inc:389
 msgid "Man Power : "
 msgstr "人力："
 
-#: mod/or/lib_or.inc:734
+#: mod/or/lib_or.inc:733
 msgid "Specify the kind of equipment you have,that will be useful in Disaster Relief Operations"
 msgstr "詳細說明您擁有的設備類型，這在請在救災行動（Disaster Relief Operations）中非常重要"
 
-#: mod/or/lib_or.inc:735
+#: mod/or/lib_or.inc:734
 #: mod/ims/lib_ims.inc:391
 msgid "Equipment : "
 msgstr "設備："
 
-#: mod/or/lib_or.inc:737
+#: mod/or/lib_or.inc:736
 msgid "Specify any other resource that you think might be useful in Disaster Relief Operations"
 msgstr "請在救災行動（Disaster Relief Operations）裡詳細說明您認為會有幫助的任何資源"
 
-#: mod/or/lib_or.inc:738
+#: mod/or/lib_or.inc:737
 #: mod/ims/lib_ims.inc:393
 msgid "Other relevant resources : "
 msgstr "其他相關資源："
 
-#: mod/or/lib_or.inc:742
+#: mod/or/lib_or.inc:741
 #: mod/ims/lib_ims.inc:399
 msgid "Account Name : "
 msgstr "帳號名稱："
 
-#: mod/or/lib_or.inc:742
+#: mod/or/lib_or.inc:741
 #: mod/ims/lib_ims.inc:399
 msgid "* User Name for Login: "
 msgstr "* 使用者登入名稱："
 
-#: mod/or/lib_or.inc:742
+#: mod/or/lib_or.inc:741
 #: mod/ims/lib_ims.inc:399
 msgid "* Password for Login: "
 msgstr "* 登入密碼："
 
-#: mod/or/lib_or.inc:742
+#: mod/or/lib_or.inc:741
 #: mod/ims/lib_ims.inc:399
 msgid "* Confirm Password: "
 msgstr "* 確認密碼："
 
-#: mod/or/lib_or.inc:772
+#: mod/or/lib_or.inc:771
 msgid "Select the Disaster/event/incident"
 msgstr "選取災難/事件/事故"
 
-#: mod/or/lib_or.inc:774
+#: mod/or/lib_or.inc:773
 msgid "Since there are multiple incidents you required to select relevant incidents "
 msgstr "由於有多個事故，您必須選擇最有關的事故 "
 
-#: mod/or/lib_or.inc:784
+#: mod/or/lib_or.inc:783
 msgid "Choose related incidents:The Default Incident is Highlighted"
 msgstr "選擇相關事故：預設事故是反白/加亮的"
 
-#: mod/or/lib_or.inc:835
+#: mod/or/lib_or.inc:834
 msgid "select related incidents"
 msgstr "選取相關的事故"
 
-#: mod/or/lib_or.inc:839
+#: mod/or/lib_or.inc:838
 msgid "Add Operation"
 msgstr "新增作業"
 
-#: mod/or/lib_or.inc:839
+#: mod/or/lib_or.inc:838
 msgid "(Your Organization might be having branches or carrying out relief operations in this disaster. Then information of those operations is usefull : )"
 msgstr "（您的組織在這場災難中也許有分支機構或是進行救援作業。因此這些運作的資訊是很有幫助的。）"
 
-#: mod/or/lib_or.inc:924
+#: mod/or/lib_or.inc:912
 #, fuzzy
 msgid "Operation/Branch "
 msgstr "客戶分公司"
@@ -3125,11 +3037,11 @@ msgstr "組織涵蓋範圍"
 msgid "Organizations by Sector"
 msgstr "根據領域區分組織"
 
-#: mod/or/main.inc:210
+#: mod/or/main.inc:191
 msgid "Branches or departments are registerd with the Organization. Please remove them first"
 msgstr "該組織的分會或單位已經登錄，請先移除該些分會或單位。"
 
-#: mod/or/main.inc:320
+#: mod/or/main.inc:301
 msgid "Back to Search Page"
 msgstr "回到搜尋頁面"
 
@@ -3234,8 +3146,8 @@ msgstr ""
 "在這裡，你會得到一個 API Key、密碼、和秘密存取碼。API Key 和密碼與你的帳號相連的，用來識別該請求的來源。"
 
 #: mod/ws/reg.inc:104
-#: mod/cr/edit.inc:552
-#: mod/cr/camp.inc:616
+#: mod/cr/edit.inc:593
+#: mod/cr/camp.inc:516
 #: mod/dvr/edt_grp.inc:450
 #: mod/dvr/add_new_grp.inc:355
 #: mod/dvr/edt_indv.inc:684
@@ -3673,19 +3585,20 @@ msgstr "供應者組織："
 msgid "If this box does not contain the organization name please go to the Organization Registry module and get your organization Registered "
 msgstr "如果您要選的組織不在這個清單裡，請到組織註冊模組裡登錄。"
 
-#: mod/ims/process_inv.inc:137
+#: mod/ims/process_inv.inc:161
 msgid " Inventory was successfully added"
 msgstr "成功新增倉庫"
 
-#: mod/ims/process_inv.inc:217
+#: mod/ims/process_inv.inc:241
 msgid " Inventory was successfully deleted"
 msgstr "成功刪除倉庫！"
 
-#: mod/ims/process_inv.inc:221
+#: mod/ims/process_inv.inc:245
+#: mod/ims/main.inc:404
 msgid "Inventory Registry"
 msgstr "登錄倉庫"
 
-#: mod/ims/process_inv.inc:335
+#: mod/ims/process_inv.inc:363
 msgid " Inventory was successfully updated"
 msgstr "成功更新倉庫"
 
@@ -3693,8 +3606,8 @@ msgstr "成功更新倉庫"
 msgid "Add an Inventory"
 msgstr "新增一筆倉庫"
 
-#: mod/ims/reg_inv.inc:38
-#: mod/ims/view_inv.inc:195
+#: mod/ims/reg_inv.inc:39
+#: mod/ims/view_inv.inc:199
 msgid "Inventory Name : "
 msgstr "倉庫名稱："
 
@@ -3710,15 +3623,15 @@ msgstr "倉庫單元"
 msgid "Extra Information"
 msgstr "額外資訊"
 
-#: mod/ims/reg_inv.inc:178
+#: mod/ims/reg_inv.inc:145
 msgid "Inventory Name cannot be empty."
 msgstr "倉庫名稱不能為空的。"
 
-#: mod/ims/reg_inv.inc:186
+#: mod/ims/reg_inv.inc:153
 msgid "Inventory Name already exists."
 msgstr "倉庫名稱已經存在。"
 
-#: mod/ims/reg_inv.inc:194
+#: mod/ims/reg_inv.inc:161
 msgid "Invalid contact name"
 msgstr "無效的使用者名稱"
 
@@ -3895,14 +3808,14 @@ msgstr "輸入物資集散地負責人的任何詳細資訊，並點擊下面的
 
 #: mod/ims/search.inc:379
 #: mod/ims/search.inc:496
-#: mod/ims/view_inv.inc:57
-#: mod/ims/main.inc:460
+#: mod/ims/view_inv.inc:58
+#: mod/ims/main.inc:455
 msgid "Inventory Name"
 msgstr "倉庫名稱"
 
 #: mod/ims/search.inc:380
 #: mod/ims/search.inc:497
-#: mod/ims/view_inv.inc:58
+#: mod/ims/view_inv.inc:59
 msgid "Country of Origin/GIS"
 msgstr "來源國家/GIS"
 
@@ -3918,7 +3831,7 @@ msgstr "設施"
 
 #: mod/ims/search.inc:386
 #: mod/ims/search.inc:503
-#: mod/ims/view_inv.inc:64
+#: mod/ims/view_inv.inc:65
 msgid "Inventory Space"
 msgstr "庫存空間"
 
@@ -4312,12 +4225,12 @@ msgid " has atleast one organization providing the service."
 msgstr " 至少有一個組織提供服務。"
 
 #: mod/ims/ims_report.inc:435
-#: mod/ims/main.inc:461
+#: mod/ims/main.inc:456
 msgid "Country of Origin"
 msgstr "原始國籍"
 
 #: mod/ims/ims_report.inc:440
-#: mod/ims/main.inc:466
+#: mod/ims/main.inc:461
 msgid "Facilities"
 msgstr "設施"
 
@@ -4362,7 +4275,6 @@ msgstr "授權者"
 #: mod/ims/ims_report.inc:683
 #: mod/ims/view_edit_item.inc:155
 #: mod/ims/transfer_inv.inc:465
-#: mod/ims/main.inc:59
 msgid "Transit Item"
 msgstr "物資移倉紀錄"
 
@@ -4452,7 +4364,7 @@ msgid "Item Registry"
 msgstr "物資清單與新增登記"
 
 #: mod/ims/view_edit_item.inc:50
-#: mod/ims/view_inv.inc:34
+#: mod/ims/view_inv.inc:35
 #: mod/ims/transfer_inv.inc:76
 #: mod/ims/transfer_inv.inc:435
 msgid "Records Per Page : "
@@ -4469,7 +4381,7 @@ msgid "Supplier Name"
 msgstr "供應商名稱"
 
 #: mod/ims/view_edit_item.inc:93
-#: mod/ims/view_inv.inc:47
+#: mod/ims/view_inv.inc:48
 #: mod/ims/transfer_inv.inc:84
 #: mod/ims/transfer_inv.inc:441
 #: mod/ims/mini_quantity.inc:234
@@ -4652,19 +4564,19 @@ msgstr "時間數值必須為一數值"
 msgid "Please add an inventory first "
 msgstr "請先新增倉庫"
 
-#: mod/ims/view_inv.inc:24
+#: mod/ims/view_inv.inc:25
 msgid "Register a New Inventory"
 msgstr "登錄新的庫存清單/倉庫"
 
-#: mod/ims/view_inv.inc:27
+#: mod/ims/view_inv.inc:28
 msgid "Add Inventory"
 msgstr "新增倉庫"
 
-#: mod/ims/view_inv.inc:63
+#: mod/ims/view_inv.inc:64
 msgid "Other <br /> Facilities"
 msgstr "其他<br/>設施"
 
-#: mod/ims/view_inv.inc:183
+#: mod/ims/view_inv.inc:188
 msgid "Inventory Registration Information of "
 msgstr "庫存登錄資訊"
 
@@ -4677,9 +4589,9 @@ msgid "Please select the Item to be sent"
 msgstr "請選取要發送的物資"
 
 #: mod/ims/transfer_inv.inc:64
-#: mod/ims/main.inc:846
-#: mod/ims/main.inc:862
-#: mod/ims/main.inc:876
+#: mod/ims/main.inc:841
+#: mod/ims/main.inc:857
+#: mod/ims/main.inc:871
 msgid "Page Number : "
 msgstr "頁面編號"
 
@@ -4991,8 +4903,14 @@ msgstr "物資移倉"
 msgid "Items to Re-order"
 msgstr "最低庫存物資品項"
 
+#: mod/ims/main.inc:59
+#: mod/ims/main.inc:164
+#, fuzzy
+msgid "Transit Item Report"
+msgstr "年度供應商報表"
+
 #: mod/ims/main.inc:61
-#: mod/ims/main.inc:765
+#: mod/ims/main.inc:760
 msgid "Map by Inventory"
 msgstr "倉庫地圖"
 
@@ -5017,51 +4935,51 @@ msgid "Prediction by Inventory"
 msgstr "根據庫存做預測"
 
 #: mod/ims/main.inc:174
-#: mod/ims/main.inc:808
-#: mod/ims/main.inc:823
+#: mod/ims/main.inc:803
+#: mod/ims/main.inc:818
 msgid "Download the PDF report here"
 msgstr "下載 PDF 報表"
 
 #: mod/ims/main.inc:177
-#: mod/ims/main.inc:793
-#: mod/ims/main.inc:811
-#: mod/ims/main.inc:826
+#: mod/ims/main.inc:788
+#: mod/ims/main.inc:806
+#: mod/ims/main.inc:821
 msgid "Download the ODS report here"
 msgstr "下載 ODS 報表"
 
 #: mod/ims/main.inc:180
-#: mod/ims/main.inc:796
-#: mod/ims/main.inc:814
-#: mod/ims/main.inc:829
+#: mod/ims/main.inc:791
+#: mod/ims/main.inc:809
+#: mod/ims/main.inc:824
 msgid "Download the XHTML report here"
 msgstr "下載 XHTML 報表"
 
 #: mod/ims/main.inc:262
-#: mod/ims/main.inc:552
+#: mod/ims/main.inc:547
 msgid "Record has been deleted successfully"
 msgstr "紀錄已成功刪除"
 
-#: mod/ims/main.inc:456
+#: mod/ims/main.inc:451
 msgid "Search Result"
 msgstr "搜尋結果"
 
-#: mod/ims/main.inc:462
+#: mod/ims/main.inc:457
 msgid "Contact Address"
 msgstr "聯絡人地址"
 
-#: mod/ims/main.inc:464
+#: mod/ims/main.inc:459
 msgid "Contact Email"
 msgstr "聯絡人電子郵件"
 
-#: mod/ims/main.inc:467
+#: mod/ims/main.inc:462
 msgid "Space"
 msgstr "空間"
 
-#: mod/ims/main.inc:650
+#: mod/ims/main.inc:645
 msgid "Select Inventory to Predict"
 msgstr "選擇要預測的庫存"
 
-#: mod/ims/main.inc:790
+#: mod/ims/main.inc:785
 msgid "Download The PDF report here"
 msgstr "下載 PDF 報表"
 
@@ -6173,15 +6091,111 @@ msgstr "操作失敗。資料庫中沒有ct_unit_type和ct_unit資料表。請�
 msgid "Click on the parent catalogue that you need to add sub catalogue or Item under it."
 msgstr "點選您想要新增子目錄或物資的上一級目錄。"
 
-#: mod/gis/wm_fns.inc:172
+#: mod/gis/wm_fns.inc:31
+#: mod/gis/main_fns.inc:37
+msgid "View Situation Map"
+msgstr "檢視災害狀態地圖"
+
+#: mod/gis/wm_fns.inc:34
+msgid "Filter Options"
+msgstr "過濾選項"
+
+#: mod/gis/wm_fns.inc:35
+msgid "Situation Type"
+msgstr "狀態類型"
+
+#: mod/gis/wm_fns.inc:115
+msgid "Situation Image"
+msgstr "狀態影像"
+
+#: mod/gis/wm_fns.inc:116
+msgid "Upload Image"
+msgstr "上傳影像"
+
+# 為符合使用UI，因此中文改為一般地圖，與英文並不對稱
+#: mod/gis/wm_fns.inc:173
+msgid "Mapping Client"
+msgstr "一般地圖"
+
+#: mod/gis/wm_fns.inc:190
 msgid "Detail Name Cannot be empty."
 msgstr "名稱欄位不得空白"
 
-#: mod/gis/plugins/google_maps/handler_google_maps.inc:209
+#: mod/gis/wm_fns.inc:196
+msgid "Add Situation Detail"
+msgstr "新增狀態詳情"
+
+#: mod/gis/wm_fns.inc:199
+msgid "Main Details"
+msgstr "主要細節"
+
+#: mod/gis/wm_fns.inc:201
+msgid "Name of Detail"
+msgstr "細節名稱"
+
+#: mod/gis/wm_fns.inc:202
+msgid "Wiki Type"
+msgstr "Wiki 類型"
+
+#: mod/gis/wm_fns.inc:203
+#: mod/gis/wm_fns.inc:228
+msgid "Detail Summary"
+msgstr "詳情摘要"
+
+#: mod/gis/wm_fns.inc:205
+msgid "Extra Details"
+msgstr "額外細節"
+
+#: mod/gis/wm_fns.inc:206
+msgid "URL"
+msgstr "URL"
+
+#: mod/gis/wm_fns.inc:208
+msgid "Date of Event"
+msgstr "事件日期"
+
+#: mod/gis/wm_fns.inc:210
+msgid "Wikimap Options"
+msgstr "Wiki地圖選項"
+
+#: mod/gis/wm_fns.inc:211
+#: mod/admin/mmc_main.inc:13
+msgid "Author"
+msgstr "作者"
+
+#: mod/gis/wm_fns.inc:212
+msgid "Publicly Editable"
+msgstr "可公開編輯的"
+
+#: mod/gis/wm_fns.inc:213
+msgid "Publicly Viewable"
+msgstr "可公開查看的"
+
+#: mod/gis/wm_fns.inc:215
+msgid "Add Detail"
+msgstr "新增細節"
+
+#: mod/gis/wm_fns.inc:227
+msgid "Update Detail"
+msgstr "更新細節"
+
+#: mod/gis/wm_fns.inc:233
+msgid "Commit Detail"
+msgstr "增加細節"
+
+#: mod/gis/wm_fns.inc:244
+msgid "Succesfully updated description"
+msgstr "已成功更新說明"
+
+#: mod/gis/wm_fns.inc:290
+msgid "Succesfully added wiki item "
+msgstr "已成功新增wiki項目"
+
+#: mod/gis/plugins/google_maps/handler_google_maps.inc:230
 msgid "Date: "
 msgstr "日期："
 
-#: mod/gis/plugins/google_maps/handler_google_maps.inc:213
+#: mod/gis/plugins/google_maps/handler_google_maps.inc:234
 msgid "anonymous"
 msgstr "匿名"
 
@@ -6224,7 +6238,7 @@ msgstr "完成"
 #: mod/gis/admin_bk.inc:227
 #: mod/gis/admin_bk.inc:235
 #: mod/admin/gis_admin.inc:236
-#: mod/admin/gis_admin.inc:245
+#: mod/admin/gis_admin.inc:247
 msgid "Changes were saved"
 msgstr "已儲存改變"
 
@@ -6328,7 +6342,6 @@ msgid "Significance of  Landmark"
 msgstr "地標顯著性"
 
 #: mod/gis/main_fns.inc:107
-#: mod/cr/camp.inc:268
 msgid "Location Information"
 msgstr "地點資訊"
 
@@ -6336,7 +6349,7 @@ msgstr "地點資訊"
 msgid "Plot the Location OR Enter its GPS coordinates "
 msgstr "點選位置或輸入它的 GPS 座標 "
 
-#: mod/gis/main_fns.inc:147
+#: mod/gis/main_fns.inc:145
 msgid "Your Landmark has been succesfully added. "
 msgstr "您已成功加入地標。"
 
@@ -6368,31 +6381,15 @@ msgstr "GIS 功能已經關閉。請聯絡管理者以啟用此功能。"
 msgid "Coordinates Added"
 msgstr "已新增座標"
 
-#: mod/gis/gis_fns.inc:177
-#: mod/cr/camp.inc:583
-msgid "GPS Coordinates"
-msgstr "GPS 座標"
-
-#: mod/gis/gis_fns.inc:178
+#: mod/gis/gis_fns.inc:181
 msgid "Northing / Latitude"
 msgstr "北緯"
 
-#: mod/gis/gis_fns.inc:179
+#: mod/gis/gis_fns.inc:184
 msgid "Easting / Longitude"
 msgstr "東經"
 
-#: mod/gis/gis_fns.inc:189
-msgid ""
-"You can move around and enlarge/reduce the size of the area you want using\n"
-"the scale on upper left corner of the map. By clicking on a map you can\n"
-"mark your location with a pointer. If you want to remove the pointer,\n"
-"simply click on the center of the pointer."
-msgstr ""
-"您可以四處拖動並且用左上角的刻度放大/縮小您想看的地區。\n"
-"點擊地圖，可以標記您的地點。\n"
-"如果您想移除標記，只要點選標記的中心即可。"
-
-#: mod/gis/gis_fns.inc:251
+#: mod/gis/gis_fns.inc:255
 msgid "Please configure GIS module plugins as Google Maps, Because Openlayers Map is not available in the 0.6 stable release"
 msgstr ""
 
@@ -6680,13 +6677,13 @@ msgstr "基本細節"
 #: mod/mpr/edit.inc:439
 #: mod/mpr/add.inc:64
 #: mod/mpr/add.inc:476
-#: mod/cr/edit.inc:54
-#: mod/cr/edit.inc:147
-#: mod/cr/edit.inc:505
-#: mod/cr/edit.inc:577
-#: mod/cr/camp.inc:56
-#: mod/cr/camp.inc:569
-#: mod/cr/camp.inc:646
+#: mod/cr/edit.inc:70
+#: mod/cr/edit.inc:166
+#: mod/cr/edit.inc:544
+#: mod/cr/edit.inc:641
+#: mod/cr/camp.inc:72
+#: mod/cr/camp.inc:467
+#: mod/cr/camp.inc:546
 #: mod/dvr/edt_grp.inc:235
 #: mod/dvr/search_individual.inc:87
 #: mod/dvr/search_individual.inc:133
@@ -6966,6 +6963,12 @@ msgstr "檢視"
 msgid "Click to edit"
 msgstr "點選這裡開始編輯"
 
+#: mod/mpr/view.inc:103
+#: mod/mpr/search.inc:392
+#: mod/rms/handler_mng_ff.inc:109
+msgid "Back"
+msgstr "上一步"
+
 #: mod/mpr/list_missing.inc:20
 msgid "Missing People"
 msgstr "失蹤者"
@@ -7075,7 +7078,7 @@ msgstr "選取"
 
 #: mod/mpr/search.inc:267
 #: mod/mpr/edit.inc:746
-#: mod/mpr/admin.inc:227
+#: mod/mpr/admin.inc:241
 msgid "Add Tracker"
 msgstr "加入追蹤"
 
@@ -7212,8 +7215,8 @@ msgid "Add a tracker"
 msgstr "新增追蹤者"
 
 #: mod/mpr/conf.inc:23
-#: mod/mpr/admin.inc:32
-#: mod/mpr/admin.inc:218
+#: mod/mpr/admin.inc:33
+#: mod/mpr/admin.inc:232
 #: mod/mpr/home.inc:21
 #: mod/mpr/main.inc:54
 msgid "Missing Person Registry"
@@ -7287,150 +7290,161 @@ msgstr "以下是尋獲人員清單"
 msgid "Injured People"
 msgstr "受傷者名單"
 
-#: mod/mpr/admin.inc:33
-#: mod/mpr/admin.inc:175
+#: mod/mpr/admin.inc:34
+#: mod/mpr/admin.inc:188
 msgid "General Configuration"
 msgstr "一般設定"
 
-#: mod/mpr/admin.inc:35
-#: mod/mpr/admin.inc:112
+#: mod/mpr/admin.inc:36
+#: mod/mpr/admin.inc:118
 msgid "Manage Age Groups"
 msgstr "管理年齡區分"
 
-#: mod/mpr/admin.inc:36
-#: mod/mpr/admin.inc:120
+#: mod/mpr/admin.inc:37
+#: mod/mpr/admin.inc:127
 msgid "Manage Race"
 msgstr "管理種族"
 
-#: mod/mpr/admin.inc:37
-#: mod/mpr/admin.inc:128
+#: mod/mpr/admin.inc:38
+#: mod/mpr/admin.inc:136
 msgid "Manage Religion"
 msgstr "管理宗教"
 
-#: mod/mpr/admin.inc:38
+#: mod/mpr/admin.inc:39
 msgid "Manage Blood Group"
 msgstr "管理血型分組"
 
-#: mod/mpr/admin.inc:39
+#: mod/mpr/admin.inc:40
 msgid "Manage Eye Colors"
 msgstr "管理眼睛顏色"
 
-#: mod/mpr/admin.inc:40
+#: mod/mpr/admin.inc:41
 msgid "Manage Hair Colors"
 msgstr "管理頭髮顏色"
 
-#: mod/mpr/admin.inc:41
+#: mod/mpr/admin.inc:42
 msgid "Manage Skin Colors"
 msgstr "管理皮膚顏色"
 
-#: mod/mpr/admin.inc:55
+#: mod/mpr/admin.inc:57
 msgid "Welcome to the Missing Person Registry admin page"
 msgstr "歡迎來到失蹤者登錄管理頁面"
 
-#: mod/mpr/admin.inc:56
+#: mod/mpr/admin.inc:58
 msgid "Please use the navigation menu above to configure each field."
 msgstr "請使用上方的導覽選單來設定每個欄位。"
 
-#: mod/mpr/admin.inc:68
+#: mod/mpr/admin.inc:70
 msgid "Please enter the no of images per page."
 msgstr "請輸入每頁要顯示的圖片數量。"
 
-#: mod/mpr/admin.inc:72
+#: mod/mpr/admin.inc:74
 msgid "Search limit should be a number"
 msgstr "搜尋限制應為數字"
 
-#: mod/mpr/admin.inc:103
+#: mod/mpr/admin.inc:108
 msgid "Manage Search"
 msgstr "管理搜尋"
 
-#: mod/mpr/admin.inc:136
+#: mod/mpr/admin.inc:145
 msgid "Manage Blood Groups"
 msgstr "管理血型分組"
 
-#: mod/mpr/admin.inc:144
+#: mod/mpr/admin.inc:154
 msgid "Manage Eye Color"
 msgstr "管理眼睛顏色"
 
-#: mod/mpr/admin.inc:152
+#: mod/mpr/admin.inc:163
 msgid "Manage Hair Color"
 msgstr "管理頭髮顏色"
 
-#: mod/mpr/admin.inc:160
+#: mod/mpr/admin.inc:172
 msgid "Manage Skin Color"
 msgstr "管理皮膚顏色"
 
-#: mod/mpr/admin.inc:173
+#: mod/mpr/admin.inc:186
 msgid "Updated"
 msgstr "已更新"
 
-#: mod/mpr/admin.inc:187
+#: mod/mpr/admin.inc:200
 msgid "Number of images per page"
 msgstr "每頁的圖片數量"
 
-#: mod/mpr/admin.inc:210
+#: mod/mpr/admin.inc:224
 msgid "ACL Base for Missing Person Registry is already installed, This is a reinstall"
 msgstr "已安裝用於失蹤者登錄的 ACL 資料庫，此為重新安裝"
 
-#: mod/mpr/admin.inc:219
+#: mod/mpr/admin.inc:233
 #: mod/cr/acl.inc:34
 msgid "Deny admin group"
 msgstr "拒絕管理群組"
 
-#: mod/mpr/admin.inc:220
+#: mod/mpr/admin.inc:234
 #: mod/cr/acl.inc:36
 msgid "Display Admin page"
 msgstr "顯示管理頁面"
 
-#: mod/mpr/admin.inc:225
+#: mod/mpr/admin.inc:239
 msgid "Add Person"
 msgstr "新增人員"
 
-#: mod/mpr/admin.inc:226
+#: mod/mpr/admin.inc:240
 msgid "Edit Person"
 msgstr "編輯人員"
 
-#: mod/mpr/admin.inc:232
+#: mod/mpr/admin.inc:246
 msgid "ACL Base for Missing Person Registry was successfully installed"
 msgstr "成功安裝用於失蹤者登錄的 ACL 資料庫已"
 
-#: mod/mpr/admin.inc:261
+#: mod/mpr/admin.inc:277
+#: mod/cr/admin.inc:142
 #: mod/dvr/admin.inc:158
 msgid "Field was successfully deleted."
 msgstr "已成功刪除欄位。"
 
-#: mod/mpr/admin.inc:287
+#: mod/mpr/admin.inc:305
+#: mod/cr/admin.inc:133
 msgid " was successfully added."
 msgstr "已經加入"
 
-#: mod/mpr/admin.inc:314
-#: mod/mpr/admin.inc:369
+#: mod/mpr/admin.inc:332
+#: mod/mpr/admin.inc:384
+#: mod/cr/admin.inc:180
+#: mod/cr/admin.inc:232
 msgid "AddNew"
 msgstr "新增"
 
-#: mod/mpr/admin.inc:318
-msgid "Please  enter the code"
-msgstr "請輸入編碼"
+#: mod/mpr/admin.inc:334
+#: mod/cr/admin.inc:182
+#, fuzzy
+msgid "Please enter the code"
+msgstr "輸入項目代號"
 
-#: mod/mpr/admin.inc:319
+#: mod/mpr/admin.inc:337
+#: mod/cr/admin.inc:185
 msgid "Please  enter the description"
 msgstr "請輸入說明"
 
-#: mod/mpr/admin.inc:322
+#: mod/mpr/admin.inc:340
+#: mod/cr/admin.inc:188
 msgid "Code already exists"
 msgstr "code 已存在"
 
-#: mod/mpr/admin.inc:340
-#: mod/mpr/admin.inc:367
+#: mod/mpr/admin.inc:353
+#: mod/mpr/admin.inc:382
+#: mod/cr/admin.inc:201
+#: mod/cr/admin.inc:230
 #: mod/dvr/admin.inc:55
 #: mod/msg/handler_cap_edit.inc:103
 #: mod/msg/handler_cap_new.inc:94
 msgid "Code"
 msgstr "Code"
 
-#: mod/mpr/admin.inc:366
+#: mod/mpr/admin.inc:381
 #: mod/admin/ims_level.inc:60
 #: mod/admin/ims_level.inc:217
 #: mod/admin/ims_level.inc:402
+#: mod/cr/admin.inc:229
 msgid "Add New "
 msgstr "新增"
 
@@ -8419,12 +8433,12 @@ msgid "Fields marked with * are required (entry is compulsory)"
 msgstr "標有 * 的是必要欄位（必須填寫）"
 
 #: mod/admin/location.inc:85
-#: mod/cr/edit.inc:49
-#: mod/cr/edit.inc:500
-#: mod/cr/edit.inc:572
-#: mod/cr/camp.inc:51
-#: mod/cr/camp.inc:564
-#: mod/cr/camp.inc:641
+#: mod/cr/edit.inc:41
+#: mod/cr/edit.inc:535
+#: mod/cr/edit.inc:612
+#: mod/cr/camp.inc:46
+#: mod/cr/camp.inc:462
+#: mod/cr/camp.inc:541
 msgid "Location Details"
 msgstr "地點詳情"
 
@@ -9439,7 +9453,7 @@ msgstr ""
 "\t本初子午線（格林威治標準時間）的經度是零度，而且它的東側為正，跨越歐洲和亞洲。西側為負\n"
 "\t跨越大西洋洲和美洲。"
 
-#: mod/admin/gis_admin.inc:272
+#: mod/admin/gis_admin.inc:271
 msgid "Coordinates invalid: should be between -180 & 180"
 msgstr "座標無效：應為-180到180之間"
 
@@ -9454,57 +9468,54 @@ msgstr "新模組翻譯合併成功"
 
 #: mod/cr/search.inc:41
 #: mod/cr/search.inc:118
-#: mod/cr/edit.inc:40
-#: mod/cr/edit.inc:104
-#: mod/cr/edit.inc:494
-#: mod/cr/edit.inc:562
+#: mod/cr/edit.inc:37
+#: mod/cr/edit.inc:123
+#: mod/cr/edit.inc:529
+#: mod/cr/edit.inc:603
 #: mod/cr/reports.inc:59
 #: mod/cr/reports.inc:162
 #: mod/cr/reports.inc:212
-#: mod/cr/camp.inc:36
-#: mod/cr/camp.inc:558
-#: mod/cr/camp.inc:631
+#: mod/cr/camp.inc:31
+#: mod/cr/camp.inc:456
+#: mod/cr/camp.inc:531
 msgid "Shelter Name"
 msgstr "庇護所名稱"
 
 #: mod/cr/search.inc:44
 #: mod/cr/search.inc:121
 #: mod/cr/search.inc:183
-#: mod/cr/edit.inc:41
-#: mod/cr/edit.inc:105
-#: mod/cr/edit.inc:497
-#: mod/cr/edit.inc:563
+#: mod/cr/edit.inc:38
+#: mod/cr/edit.inc:124
+#: mod/cr/edit.inc:532
+#: mod/cr/edit.inc:604
 #: mod/cr/reports.inc:60
 #: mod/cr/reports.inc:163
-#: mod/cr/camp.inc:37
-#: mod/cr/camp.inc:561
-#: mod/cr/camp.inc:632
+#: mod/cr/admin.inc:22
+#: mod/cr/camp.inc:32
+#: mod/cr/camp.inc:459
+#: mod/cr/camp.inc:532
 msgid "Shelter Type"
 msgstr "庇護所類型"
 
 #: mod/cr/search.inc:45
 #: mod/cr/search.inc:122
-#: mod/cr/edit.inc:65
-#: mod/cr/edit.inc:158
-#: mod/cr/edit.inc:516
-#: mod/cr/edit.inc:588
+#: mod/cr/edit.inc:176
+#: mod/cr/edit.inc:554
 #: mod/cr/reports.inc:67
-#: mod/cr/camp.inc:67
-#: mod/cr/camp.inc:580
-#: mod/cr/camp.inc:657
+#: mod/cr/camp.inc:477
 msgid "Total Count"
 msgstr "總數"
 
 #: mod/cr/search.inc:46
 #: mod/cr/search.inc:123
-#: mod/cr/edit.inc:60
-#: mod/cr/edit.inc:153
-#: mod/cr/edit.inc:511
-#: mod/cr/edit.inc:583
+#: mod/cr/edit.inc:76
+#: mod/cr/edit.inc:172
+#: mod/cr/edit.inc:550
+#: mod/cr/edit.inc:647
 #: mod/cr/edit_ppl.inc:42
-#: mod/cr/camp.inc:62
-#: mod/cr/camp.inc:575
-#: mod/cr/camp.inc:652
+#: mod/cr/camp.inc:78
+#: mod/cr/camp.inc:473
+#: mod/cr/camp.inc:552
 #: mod/dvr/reporting.inc:88
 msgid "Capacity"
 msgstr "庇護所容量"
@@ -9538,246 +9549,248 @@ msgstr "地址"
 msgid "Update Existing Shelter"
 msgstr "更新現有的庇護所"
 
-#: mod/cr/edit.inc:37
-#: mod/cr/edit.inc:95
-#: mod/cr/edit.inc:493
-#: mod/cr/edit.inc:559
+#: mod/cr/edit.inc:34
+#: mod/cr/edit.inc:114
+#: mod/cr/edit.inc:528
+#: mod/cr/edit.inc:600
 #: mod/cr/edit_ppl.inc:34
 #: mod/cr/camp.inc:29
-#: mod/cr/camp.inc:557
-#: mod/cr/camp.inc:629
+#: mod/cr/camp.inc:455
+#: mod/cr/camp.inc:529
 msgid "General Details"
 msgstr "一般詳情"
 
-#: mod/cr/edit.inc:53
-#: mod/cr/edit.inc:146
-#: mod/cr/edit.inc:504
-#: mod/cr/edit.inc:576
-#: mod/cr/camp.inc:55
-#: mod/cr/camp.inc:568
-#: mod/cr/camp.inc:645
+#: mod/cr/edit.inc:69
+#: mod/cr/edit.inc:165
+#: mod/cr/edit.inc:543
+#: mod/cr/edit.inc:640
+#: mod/cr/camp.inc:71
+#: mod/cr/camp.inc:466
+#: mod/cr/camp.inc:545
 msgid "Contact Person Details"
 msgstr "聯絡人的詳細資訊"
 
-#: mod/cr/edit.inc:55
-#: mod/cr/edit.inc:148
-#: mod/cr/edit.inc:506
-#: mod/cr/edit.inc:578
-#: mod/cr/camp.inc:57
-#: mod/cr/camp.inc:570
-#: mod/cr/camp.inc:647
+#: mod/cr/edit.inc:71
+#: mod/cr/edit.inc:167
+#: mod/cr/edit.inc:545
+#: mod/cr/edit.inc:642
+#: mod/cr/camp.inc:73
+#: mod/cr/camp.inc:468
+#: mod/cr/camp.inc:547
 msgid "Phone Number"
 msgstr "電話號碼"
 
-#: mod/cr/edit.inc:56
-#: mod/cr/edit.inc:149
-#: mod/cr/edit.inc:507
-#: mod/cr/edit.inc:579
-#: mod/cr/camp.inc:58
-#: mod/cr/camp.inc:571
-#: mod/cr/camp.inc:648
+#: mod/cr/edit.inc:72
+#: mod/cr/edit.inc:168
+#: mod/cr/edit.inc:546
+#: mod/cr/edit.inc:643
+#: mod/cr/camp.inc:74
+#: mod/cr/camp.inc:469
+#: mod/cr/camp.inc:548
 msgid "Mobile Number"
 msgstr "手機號碼"
 
-#: mod/cr/edit.inc:57
-#: mod/cr/edit.inc:150
-#: mod/cr/edit.inc:508
-#: mod/cr/edit.inc:580
-#: mod/cr/camp.inc:59
-#: mod/cr/camp.inc:572
-#: mod/cr/camp.inc:649
+#: mod/cr/edit.inc:73
+#: mod/cr/edit.inc:169
+#: mod/cr/edit.inc:547
+#: mod/cr/edit.inc:644
+#: mod/cr/camp.inc:75
+#: mod/cr/camp.inc:470
+#: mod/cr/camp.inc:549
 msgid "Occupation"
 msgstr "職業"
 
-#: mod/cr/edit.inc:59
-#: mod/cr/edit.inc:152
-#: mod/cr/edit.inc:510
-#: mod/cr/edit.inc:582
-#: mod/cr/camp.inc:61
-#: mod/cr/camp.inc:574
-#: mod/cr/camp.inc:651
+#: mod/cr/edit.inc:75
+#: mod/cr/edit.inc:171
+#: mod/cr/edit.inc:549
+#: mod/cr/edit.inc:646
+#: mod/cr/camp.inc:77
+#: mod/cr/camp.inc:472
+#: mod/cr/camp.inc:551
 msgid "Shelter Population"
 msgstr "庇護所人數"
 
-#: mod/cr/edit.inc:61
-#: mod/cr/edit.inc:154
-#: mod/cr/edit.inc:512
-#: mod/cr/edit.inc:584
+#: mod/cr/edit.inc:77
+#: mod/cr/edit.inc:173
+#: mod/cr/edit.inc:551
+#: mod/cr/edit.inc:648
 #: mod/cr/edit_ppl.inc:50
-#: mod/cr/camp.inc:63
-#: mod/cr/camp.inc:576
-#: mod/cr/camp.inc:653
+#: mod/cr/camp.inc:79
+#: mod/cr/camp.inc:474
+#: mod/cr/camp.inc:553
 msgid "Men"
 msgstr "男性"
 
-#: mod/cr/edit.inc:62
-#: mod/cr/edit.inc:155
-#: mod/cr/edit.inc:513
-#: mod/cr/edit.inc:585
+#: mod/cr/edit.inc:78
+#: mod/cr/edit.inc:174
+#: mod/cr/edit.inc:552
+#: mod/cr/edit.inc:649
 #: mod/cr/edit_ppl.inc:57
-#: mod/cr/camp.inc:64
-#: mod/cr/camp.inc:577
-#: mod/cr/camp.inc:654
+#: mod/cr/camp.inc:80
+#: mod/cr/camp.inc:475
+#: mod/cr/camp.inc:554
 msgid "Women"
 msgstr "女性"
 
-#: mod/cr/edit.inc:63
-#: mod/cr/edit.inc:156
-#: mod/cr/edit.inc:514
-#: mod/cr/edit.inc:586
+#: mod/cr/edit.inc:79
+#: mod/cr/edit.inc:175
+#: mod/cr/edit.inc:553
+#: mod/cr/edit.inc:650
 #: mod/cr/edit_ppl.inc:65
-#: mod/cr/camp.inc:65
-#: mod/cr/camp.inc:578
-#: mod/cr/camp.inc:655
-#: mod/dvr/edt_grp.inc:311
-#: mod/dvr/edt_grp.inc:498
-#: mod/dvr/add_new_grp.inc:250
-#: mod/dvr/add_new_grp.inc:398
-msgid "Children"
-msgstr "兒童"
+#: mod/cr/camp.inc:81
+#: mod/cr/camp.inc:476
+#: mod/cr/camp.inc:555
+msgid "Children( 1 ~ 12 years old )"
+msgstr ""
 
-#: mod/cr/edit.inc:64
-#: mod/cr/edit.inc:157
-#: mod/cr/edit.inc:515
-#: mod/cr/edit.inc:587
-#: mod/cr/camp.inc:66
-#: mod/cr/camp.inc:579
-#: mod/cr/camp.inc:656
+#: mod/cr/edit.inc:81
+#: mod/cr/edit.inc:178
+#: mod/cr/edit.inc:556
+#: mod/cr/edit.inc:652
+#: mod/cr/camp.inc:83
+#: mod/cr/camp.inc:479
+#: mod/cr/camp.inc:557
 msgid "Infected Count"
 msgstr "感染人數"
 
-#: mod/cr/edit.inc:74
+#: mod/cr/edit.inc:82
+#: mod/cr/edit.inc:179
+#: mod/cr/edit.inc:557
+#: mod/cr/edit.inc:653
+#: mod/cr/edit_ppl.inc:81
+#: mod/cr/camp.inc:84
+#: mod/cr/camp.inc:480
+#: mod/cr/camp.inc:558
+msgid "Update time"
+msgstr "更新時間"
+
+#: mod/cr/edit.inc:93
 msgid "Do You Really Want to Delete?"
 msgstr "您確定要刪除？"
 
-#: mod/cr/edit.inc:86
+#: mod/cr/edit.inc:105
 msgid "Shelter Details"
 msgstr "庇護所細節"
 
-#: mod/cr/edit.inc:163
+#: mod/cr/edit.inc:184
 msgid "Available services"
 msgstr "可提供的服務"
 
-#: mod/cr/edit.inc:203
-#: mod/cr/edit.inc:524
-#: mod/cr/camp.inc:166
-#: mod/cr/camp.inc:587
+#: mod/cr/edit.inc:227
+#: mod/cr/edit.inc:565
+#: mod/cr/camp.inc:173
+#: mod/cr/camp.inc:487
 msgid "Services / Facilities Available"
 msgstr "可提供的服務/設備"
 
-#: mod/cr/edit.inc:228
+#: mod/cr/edit.inc:252
 msgid "Deleted Shelter Succesfully"
 msgstr "成功刪除庇護所"
 
-#: mod/cr/edit.inc:254
+#: mod/cr/edit.inc:278
+#: mod/cr/camp.inc:435
 #: mod/cr/main.inc:34
 msgid "Edit Shelter"
 msgstr "編輯庇護所"
 
-#: mod/cr/edit.inc:256
+#: mod/cr/edit.inc:280
 msgid "Name of Shelter to edit"
 msgstr "編輯庇護所名稱"
 
-#: mod/cr/edit.inc:270
+#: mod/cr/edit.inc:294
 msgid "Please enter the shelter  name"
 msgstr "請輸入庇護所名稱"
 
-#: mod/cr/edit.inc:275
-#: mod/cr/edit_ppl.inc:100
-#: mod/cr/camp.inc:313
+#: mod/cr/edit.inc:299
+#: mod/cr/edit_ppl.inc:111
+#: mod/cr/camp.inc:249
 msgid "The infected count is not a valid number"
 msgstr "感染人數不是有效的數字"
 
-#: mod/cr/edit.inc:278
-#: mod/cr/camp.inc:316
+#: mod/cr/edit.inc:302
+#: mod/cr/camp.inc:252
 msgid "The infected count cannot be negative"
 msgstr "感染人數不可為負值"
 
-#: mod/cr/edit.inc:284
-#: mod/cr/edit_ppl.inc:106
-#: mod/cr/camp.inc:337
+#: mod/cr/edit.inc:308
+#: mod/cr/edit_ppl.inc:117
+#: mod/cr/camp.inc:273
 msgid "The capacity is not a valid number"
 msgstr "容量不是有效的數字"
 
-#: mod/cr/edit.inc:287
-#: mod/cr/camp.inc:340
+#: mod/cr/edit.inc:311
+#: mod/cr/camp.inc:276
 msgid "The capacity cannot be negative"
 msgstr "容量必須大於零"
 
-#: mod/cr/edit.inc:293
-#: mod/cr/camp.inc:346
-msgid "The total count is not a valid number"
-msgstr "總人數不是有效的數字"
-
-#: mod/cr/edit.inc:296
-#: mod/cr/camp.inc:349
-msgid "The total count cannot be negative"
-msgstr "總人數不能是負值"
-
-#: mod/cr/edit.inc:302
-#: mod/cr/edit_ppl.inc:112
-#: mod/cr/camp.inc:355
+#: mod/cr/edit.inc:317
+#: mod/cr/edit_ppl.inc:123
+#: mod/cr/camp.inc:291
 msgid "The men count is not a valid number"
 msgstr "男性人數不是有效的數字"
 
-#: mod/cr/edit.inc:305
-#: mod/cr/camp.inc:358
+#: mod/cr/edit.inc:320
+#: mod/cr/camp.inc:294
 msgid "The men count cannot be negative"
 msgstr "男性人數不能是負值"
 
-#: mod/cr/edit.inc:311
-#: mod/cr/edit_ppl.inc:118
-#: mod/cr/camp.inc:364
+#: mod/cr/edit.inc:326
+#: mod/cr/edit_ppl.inc:129
+#: mod/cr/camp.inc:300
 msgid "The women count is not a valid number"
 msgstr "女性人數不是有效的數字"
 
-#: mod/cr/edit.inc:314
-#: mod/cr/camp.inc:367
+#: mod/cr/edit.inc:329
+#: mod/cr/camp.inc:303
 msgid "The women count cannot be negative"
 msgstr "女性人數不能是負值"
 
-#: mod/cr/edit.inc:320
-#: mod/cr/edit_ppl.inc:124
-#: mod/cr/camp.inc:373
+#: mod/cr/edit.inc:335
+#: mod/cr/edit_ppl.inc:135
+#: mod/cr/camp.inc:309
 msgid "The children count is not a valid number"
 msgstr "兒童人數不是有效的數字"
 
-#: mod/cr/edit.inc:323
-#: mod/cr/camp.inc:376
+#: mod/cr/edit.inc:338
+#: mod/cr/camp.inc:312
 msgid "The children count cannot be negative"
 msgstr "兒童人數不能是負值"
 
-#: mod/cr/edit.inc:426
+#: mod/cr/edit.inc:349
+#: mod/cr/edit_ppl.inc:146
+#: mod/cr/camp.inc:323
+#, fuzzy
+msgid "The capacity should be greater or equal than the total count"
+msgstr "感染人數應少於或等於總人數"
+
+#: mod/cr/edit.inc:461
 msgid "You have succesfully edited shelter "
 msgstr "您成功地編輯了庇護所資訊。"
 
-#: mod/cr/edit.inc:428
+#: mod/cr/edit.inc:463
 msgid "The availability of Services & Facilities of the shelter are as follows"
 msgstr "庇護所可提供的服務和設備如下"
 
-#: mod/cr/edit.inc:435
-#: mod/cr/camp.inc:499
+#: mod/cr/edit.inc:470
 msgid "Service Type"
 msgstr "服務類型"
 
-#: mod/cr/edit.inc:454
-#: mod/cr/edit.inc:538
-#: mod/cr/camp.inc:516
-#: mod/cr/camp.inc:601
+#: mod/cr/edit.inc:489
+#: mod/cr/edit.inc:579
+#: mod/cr/camp.inc:501
 msgid "Available"
 msgstr "可使用"
 
-#: mod/cr/edit.inc:461
-#: mod/cr/camp.inc:524
+#: mod/cr/edit.inc:496
 msgid "NOT AVAILABLE"
 msgstr "不可使用"
 
-#: mod/cr/edit.inc:477
+#: mod/cr/edit.inc:512
 msgid "Use the Navigation Menu to Continue"
 msgstr "用導覽選單繼續操作"
 
-#: mod/cr/edit.inc:544
-#: mod/cr/camp.inc:607
+#: mod/cr/edit.inc:585
+#: mod/cr/camp.inc:507
 msgid "Not Available"
 msgstr "不可使用"
 
@@ -9823,6 +9836,7 @@ msgid "GIS Reports of Shelter"
 msgstr "庇護所的GIS報表"
 
 #: mod/cr/main_fns.inc:48
+#: mod/cr/camp.inc:437
 msgid "Search by Name"
 msgstr "依名稱搜尋"
 
@@ -9831,6 +9845,7 @@ msgid "Search for shelter by name or type of the shelter"
 msgstr "以庇護所名稱或類型進行搜尋"
 
 #: mod/cr/main_fns.inc:49
+#: mod/cr/camp.inc:438
 #: mod/cr/main.inc:31
 msgid "Search by address"
 msgstr "依地址搜尋"
@@ -9911,24 +9926,24 @@ msgstr "人數最多的庇護所"
 msgid "Newest  Shelters"
 msgstr "最新的庇護所"
 
-#: mod/cr/main_fns.inc:223
+#: mod/cr/main_fns.inc:219
 msgid "Map of Shelters by Location"
 msgstr "庇護所地圖"
 
-#: mod/cr/main_fns.inc:263
+#: mod/cr/main_fns.inc:259
 msgid "Infected"
 msgstr "已感染"
 
-#: mod/cr/main_fns.inc:280
+#: mod/cr/main_fns.inc:276
 msgid "Map of Shelters by Infected Population"
 msgstr "以GIS地圖顯示各庇護所感染人數"
 
-#: mod/cr/main_fns.inc:285
-#: mod/cr/main_fns.inc:353
+#: mod/cr/main_fns.inc:281
+#: mod/cr/main_fns.inc:349
 msgid "Legend"
 msgstr "說明(Legend)"
 
-#: mod/cr/main_fns.inc:329
+#: mod/cr/main_fns.inc:325
 msgid "Filled"
 msgstr "（據填寫資料顯示）"
 
@@ -9964,15 +9979,17 @@ msgstr "更新現有的受難者"
 msgid "Total Infected"
 msgstr "總感染人數"
 
-#: mod/cr/edit_ppl.inc:130
-msgid "Infected Count should be less or equal than total"
+#: mod/cr/edit_ppl.inc:141
+#: mod/cr/camp.inc:319
+#, fuzzy
+msgid "The Infected count should be less or equal than the total count"
 msgstr "感染人數應少於或等於總人數"
 
-#: mod/cr/edit_ppl.inc:163
+#: mod/cr/edit_ppl.inc:179
 msgid "You have succesfully edited the people count "
 msgstr "您成功編輯了人數"
 
-#: mod/cr/edit_ppl.inc:167
+#: mod/cr/edit_ppl.inc:183
 #: mod/cr/edit_bed.inc:237
 msgid "Use the navigation menu to continue"
 msgstr "使用導覽選單繼續"
@@ -10049,65 +10066,61 @@ msgstr "未指定的地點"
 msgid "Configure Form Display"
 msgstr "設定表單顯示"
 
-#: mod/cr/admin.inc:30
-msgid " Administration"
-msgstr "管理"
-
-#: mod/cr/admin.inc:50
+#: mod/cr/admin.inc:39
 #: mod/dvr/admin.inc:107
 msgid "Add Service / Facility"
 msgstr "新增服務/設施"
 
-#: mod/cr/admin.inc:51
+#: mod/cr/admin.inc:40
 #: mod/dvr/admin.inc:52
 msgid "Currently Available Services/Facilities"
 msgstr "目前可使用的服務/設施"
 
-#: mod/cr/admin.inc:54
+#: mod/cr/admin.inc:43
 msgid "Service Name"
 msgstr "服務名稱"
 
-#: mod/cr/admin.inc:55
+#: mod/cr/admin.inc:44
 msgid "Service Abbrevation [3 letter unique abbr. to store in the database]"
 msgstr "服務縮寫 [在資料庫中作為唯一辨識用的三個字母的縮寫]："
 
-#: mod/cr/admin.inc:57
+#: mod/cr/admin.inc:46
 msgid "Add Service"
 msgstr "增加服務"
 
-#: mod/cr/admin.inc:58
+#: mod/cr/admin.inc:47
 msgid "Delete Service"
 msgstr "刪除服務"
 
-#: mod/cr/admin.inc:69
+#: mod/cr/admin.inc:59
 msgid "Unable to delete the service"
 msgstr "無法刪除服務項目"
 
-#: mod/cr/admin.inc:71
+#: mod/cr/admin.inc:61
 msgid "Service deleted successfuly"
 msgstr "刪除服務成功"
 
-#: mod/cr/admin.inc:77
+#: mod/cr/admin.inc:67
 msgid "Service assigned in camps deleted successfuly"
 msgstr "成功刪除營區指派的服務"
 
-#: mod/cr/admin.inc:87
+#: mod/cr/admin.inc:77
 msgid "Abbrevation exist, please insert unique abbrevation"
 msgstr "縮寫名稱已存在，請輸入唯一的縮寫名稱"
 
-#: mod/cr/admin.inc:96
+#: mod/cr/admin.inc:86
 msgid "Added values"
 msgstr "新增數值"
 
-#: mod/cr/admin.inc:98
+#: mod/cr/admin.inc:88
 msgid "Abbrevation should in 3 characters"
 msgstr "縮寫名稱需為3個字母"
 
-#: mod/cr/admin.inc:101
+#: mod/cr/admin.inc:91
 msgid "Please fill in empty values"
 msgstr "請在空值處填入"
 
-#: mod/cr/admin.inc:105
+#: mod/cr/admin.inc:95
 msgid "Nothing to add"
 msgstr "無需補充"
 
@@ -10115,101 +10128,103 @@ msgstr "無需補充"
 msgid "Register New "
 msgstr "登錄新的"
 
-#: mod/cr/camp.inc:86
+#: mod/cr/camp.inc:103
 msgid "Hospital Capabilities"
 msgstr "醫院容量"
 
-#: mod/cr/camp.inc:88
+#: mod/cr/camp.inc:105
 msgid "Number of Beds"
 msgstr "床位數"
 
-#: mod/cr/camp.inc:90
+#: mod/cr/camp.inc:107
 msgid "ICU"
 msgstr "加護病房"
 
-#: mod/cr/camp.inc:91
+#: mod/cr/camp.inc:108
 msgid "Medicine"
 msgstr "內科"
 
-#: mod/cr/camp.inc:92
+#: mod/cr/camp.inc:109
 msgid "Surgery"
 msgstr "外科"
 
-#: mod/cr/camp.inc:93
+#: mod/cr/camp.inc:110
 msgid "Paediatrics"
 msgstr "小兒科"
 
-#: mod/cr/camp.inc:94
+#: mod/cr/camp.inc:111
 msgid "Obstetrics"
 msgstr "婦產科"
 
-#: mod/cr/camp.inc:162
+#: mod/cr/camp.inc:169
 msgid "Shelter Checklist"
 msgstr "庇護所設備與所提供服務"
 
-#: mod/cr/camp.inc:269
-msgid "Plot the Shelter Location OR Enter its GPS coordinates below"
-msgstr "標出庇護所位置，或是填入 GPS 座標"
-
-#: mod/cr/camp.inc:307
+#: mod/cr/camp.inc:243
 msgid "Please enter the shelter name"
 msgstr "請輸入庇護所名稱"
 
-#: mod/cr/camp.inc:406
+#: mod/cr/camp.inc:282
+msgid "The total count is not a valid number"
+msgstr "總人數不是有效的數字"
+
+#: mod/cr/camp.inc:285
+msgid "The total count cannot be negative"
+msgstr "總人數不能是負值"
+
+#: mod/cr/camp.inc:342
 msgid "The ICU beds is not a valid number"
 msgstr "加護病床不是有效的數字"
 
-#: mod/cr/camp.inc:412
+#: mod/cr/camp.inc:348
 msgid "The medicine beds is not a valid number"
 msgstr "內科床位不是有效的數字"
 
-#: mod/cr/camp.inc:418
+#: mod/cr/camp.inc:354
 msgid "The surgery beds is not a valid number"
 msgstr "外科床位數不是有效的數字"
 
-#: mod/cr/camp.inc:424
+#: mod/cr/camp.inc:360
 msgid "The paediatrics Beds is not a valid number"
 msgstr "小兒科床數不是有效的數字"
 
-#: mod/cr/camp.inc:430
+#: mod/cr/camp.inc:366
 msgid "The obstetrics Beds is not a valid number"
 msgstr "婦產科床位不是有效的數字"
 
-#: mod/cr/camp.inc:486
+#: mod/cr/camp.inc:427
 msgid "You have succesfully registered shelter "
 msgstr "您成功登錄了庇護所"
 
-#: mod/cr/camp.inc:490
-msgid "The availability of services & facilities of the shelter are as follows:"
-msgstr "庇護所可用的服務和設備如下："
+#: mod/cr/camp.inc:431
+#: mod/cr/camp.inc:433
+#: mod/cr/main.inc:33
+msgid "Add Shelter"
+msgstr "新增庇護所"
 
-#: mod/cr/camp.inc:541
-msgid "Use the Left Navigation Menu to Continue."
-msgstr "用左側導覽選單繼續操作"
-
-#: mod/cr/camp.inc:566
+#: mod/cr/camp.inc:464
 msgid "Location : "
 msgstr "地點："
 
-#: mod/cr/camp.inc:584
+#: mod/cr/camp.inc:483
+msgid "GPS Coordinates"
+msgstr "GPS 座標"
+
+#: mod/cr/camp.inc:484
 msgid "Latitude"
 msgstr "緯度"
 
-#: mod/cr/camp.inc:585
+#: mod/cr/camp.inc:485
 msgid "Longitude"
 msgstr "經度"
 
-#: mod/cr/camp.inc:626
+#: mod/cr/camp.inc:526
 msgid "Register New Shelter"
 msgstr "登錄新的庇護所"
 
 #: mod/cr/main.inc:30
 msgid "Search by name"
 msgstr "依名稱搜尋"
-
-#: mod/cr/main.inc:33
-msgid "Add Shelter"
-msgstr "新增庇護所"
 
 #: mod/cr/main.inc:36
 msgid "View All Shelters"
@@ -10572,6 +10587,13 @@ msgstr "成年女性"
 #: mod/dvr/edt_grp.inc:310
 msgid "Enter the number of children if known (Optional)"
 msgstr "如有，輸入兒童人數（選填）"
+
+#: mod/dvr/edt_grp.inc:311
+#: mod/dvr/edt_grp.inc:498
+#: mod/dvr/add_new_grp.inc:250
+#: mod/dvr/add_new_grp.inc:398
+msgid "Children"
+msgstr "兒童"
 
 #: mod/dvr/edt_grp.inc:315
 #: mod/dvr/add_new_grp.inc:254
@@ -13483,15 +13505,23 @@ msgstr "該位置名稱已經存在資料庫。你還是想要新增嗎？   �
 msgid "Containts numbers. These are not allowed. Please remove them and try again."
 msgstr "內含數量。These are not allowed. Please remove them and try again."
 
-#: inc/lib_location.inc:820
+#: inc/lib_location.inc:783
+msgid "Location was succesfully deleted"
+msgstr "地點刪除成功"
+
+#: inc/lib_location.inc:785
+msgid "The location you are trying to delete is in use. If you want to delete it, please remove related data first."
+msgstr ""
+
+#: inc/lib_location.inc:821
 msgid "Select the location based at.  This is hierarchical. For example think you are based  in the country 'Sri lanka' ,district 'Colombo' ,and village 'dehiwala'.  start by selecting the country ,once you select country"
 msgstr "選擇所在的位置。這是階層式的。舉例來說，位置是台灣、高雄縣、甲仙鄉，請先選擇國家，然後再選擇縣市、鄉鎮。"
 
-#: inc/lib_location.inc:906
+#: inc/lib_location.inc:907
 msgid "Select the location based at.  This is hierarchical. For example think you are based  in the  'Sri lanka' ,district 'Colombo' ,and village 'dehiwala'.  start by selecting the  ,once you select all the divisions of that country will populate the next select box.  therefore in this case all the districts in 'Sri lanka' appear . From those select a district which will populate the village list in the next select box. So select 'dehiwala' and you have done it!please note that the levels can be customized, therefore it does not need to be 'country'->'district'->'village' ,always. Its configurable from the 'administration' section."
 msgstr "請選擇「台灣 Taiwan」"
 
-#: inc/lib_location.inc:968
+#: inc/lib_location.inc:969
 msgid ""
 "Select the location based at.  This is hierarchical. For example think you are based  in the country 'Sri lanka' ,district 'Colombo' ,and village 'dehiwala'.  start by selecting the country ,once you select country \n"
 "all the divisions of that country will populate the next select box.  therefore in this case all the districts in 'Sri lanka' appear . From those select a district which will populate the village list in the next select box. So select 'dehiwala' and you have done it! \n"
@@ -14740,6 +14770,19 @@ msgstr "多方面的"
 msgid "Medical"
 msgstr "醫療"
 
+#~ msgid "Detail Name Cannot be empty"
+#~ msgstr "必須填寫詳細姓名"
+#~ msgid "GIS Map"
+#~ msgstr "GIS 地圖"
+#~ msgid " Administration"
+#~ msgstr "管理"
+#~ msgid "Plot the Shelter Location OR Enter its GPS coordinates below"
+#~ msgstr "標出庇護所位置，或是填入 GPS 座標"
+#~ msgid ""
+#~ "The availability of services & facilities of the shelter are as follows:"
+#~ msgstr "庇護所可用的服務和設備如下："
+#~ msgid "Use the Left Navigation Menu to Continue."
+#~ msgstr "用左側導覽選單繼續操作"
 #~ msgid "Report a missing person"
 #~ msgstr "通報失蹤者"
 #~ msgid "Report a found person"
