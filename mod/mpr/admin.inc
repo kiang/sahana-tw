@@ -323,7 +323,6 @@ function _shn_mpr_adm_field_options_form($type) {
             ++$count;
             $todelete = isset($_POST[$count]) ? $_POST[$count] : '';
             ++$count;
-            //print $code.$todelete;
             if ($todelete == 'on') {
                 _shn_mpr_delete_option($code);
             } else {
@@ -331,16 +330,16 @@ function _shn_mpr_adm_field_options_form($type) {
             }
         }
     } else if ($button_type == _('AddNew')) {
-        $code = $_POST['new_code'];
-        $desc = $_POST['new_desc'];
-        if ($code == null | $desc == null) {
-            if ($code == null) add_error(_("Please  enter the code"));
-            if ($desc == null) add_error(_("Please  enter the description"));
+        if (empty($_POST['new_code'])) {
+            add_error(_("Please enter the code"));
             display_errors();
-        } else if (is_optioncode_exists($code)) {
+        } else if(empty($_POST['new_desc'])) {
+            add_error(_("Please  enter the description"));
+            display_errors();
+        } else if (is_optioncode_exists($_POST['new_code'])) {
             add_error(_("Code already exists"));
             display_errors();
-        } else _shn_mpr_insert_option($type, $code, $desc);
+        } else _shn_mpr_insert_option($type, $_POST['new_code'], $_POST['new_desc']);
     }
     $sql = "SELECT field_name, option_code, option_description  FROM field_options WHERE field_name = '{$type}'";
     $arr = $global['db']->GetAll($sql);
@@ -350,33 +349,30 @@ function _shn_mpr_adm_field_options_form($type) {
         shn_form_hidden(array('seq' => 'update'));
         ?>
 <table>
-    <script language="JavaScript">
-
-    </script>
-
-
     <thead>
-    <td><strong><?php echo _('Code'); ?></strong></td>
-    <td width="100%"><strong><?php echo _('Description'); ?></strong></td>
-    <td width="100%"><strong><?php echo _('Delete'); ?></strong></td>
-</thead>
+        <td><strong><?php echo _('Code'); ?></strong></td>
+        <td width="100%"><strong><?php echo _('Description'); ?></strong></td>
+        <td width="100%"><strong><?php echo _('Delete'); ?></strong></td>
+    </thead>
+    <tbody>
         <?php
         $count = 0;
         foreach ($arr as $row) {
             ?>
-<tr>
-    <td><input type="text" READONLY name="<?=$row['option_code']; ?>" 
-               value="<?=$row['option_code']; ?>"  />
-    </td>
-    <td><input type="text" name="<?=$count++;?>" 
-               value="<?=$row['option_description']; ?>" />
-    </td>
-    <td><input type="checkbox" name="<?=$count++;?>" />
-    </td>
-</tr>
+        <tr>
+            <td><input type="text" READONLY name="<?=$row['option_code']; ?>"
+                       value="<?=$row['option_code']; ?>"  />
+            </td>
+            <td><input type="text" name="<?=$count++;?>"
+                       value="<?=$row['option_description']; ?>" />
+            </td>
+            <td><input type="checkbox" name="<?=$count++;?>" />
+            </td>
+        </tr>
             <?php
         }
         ?>
+    </tbody>
 </table>
         <?php
         shn_form_submit(_('Update'), "name='button_name'");

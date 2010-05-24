@@ -17,20 +17,14 @@ include_once ($global['approot'] . '/inc/lib_form.inc');
 require_once ('acl.inc');
 
 function _shn_cr_adm_sub_menu() {
-    ?>
-<div id="submenu_v">
-    <a href="index.php?mod=cr&act=adm_forms"><?php echo _("Configure Form Display") ?></a>
-</div>
-<br>
-    <?php
+    shn_adm_menuopen('');
+    shn_adm_menuitem("adm_forms", _("Configure Form Display"));
+    shn_adm_menuitem("adm_opt_camp_type", _("Shelter Type"));
+    shn_adm_menuclose();
 }
 
 function shn_cr_adm_default() {
-    // _shn_cr_adm_sub_menu();
     global $conf;
-    ?>
-<h2><?=$conf['mod_cr_name'] . _(" Administration") ?></h2>
-    <?php
     shn_cr_adm_forms();
 }
 
@@ -41,15 +35,6 @@ function shn_cr_adm_forms() {
 
 function _shn_cr_adm_form_change() {
     global $global;
-    /*
-    shn_form_fopen(adm_form_setdivision);
-    shn_form_fsopen("Select Division");
-    shn_form_hidden(array('seq'=>'commit'));
-    shn_form_opt_select("opt_location_type","Select Type to be displayed as Division for camps");
-    shn_form_fsclose();
-    shn_form_submit("Set Division");
-    shn_form_fclose();
-    */
     shn_form_fopen('adm_form_commit', null, array("req" => false));
     shn_form_fsopen(_("Add Service / Facility"));
     shn_form_opt_select("opt_camp_service", _("Currently Available Services/Facilities"));
@@ -119,7 +104,6 @@ function shn_cr_adm_form_setdivision() {
     $res = $db->Execute($q);
     if ($res->EOF) {
         //insert first time
-        //echo "first time";
         $q = "INSERT INTO config(module_id,confkey,value) VALUES ('cr', 'division_type','{$_POST['opt_location_type']}')";
         $res = $db->Execute($q);
     } else {
@@ -128,4 +112,123 @@ function shn_cr_adm_form_setdivision() {
         $ref = $db->Execute($q);
     }
     shn_cr_adm_default();
+}
+
+function shn_cr_adm_opt_camp_type() {
+    _shn_cr_adm_sub_menu();
+    _shn_cr_adm_field_options_form('opt_camp_type');
+}
+
+function _shn_cr_update_option($optioncode, $optiondescription) {
+    global $global;
+    $sql = "UPDATE field_options SET option_description='{$optiondescription}' WHERE option_code='{$optioncode}'";
+    $global['db']->Execute($sql);
+}
+
+function _shn_cr_insert_option($field_name, $optioncode, $optiondescription) {
+    global $global;
+    $sql = "INSERT INTO field_options (field_name,option_code,option_description) VALUES ('{$field_name}','{$optioncode}','{$optiondescription}')";
+    $global['db']->Execute($sql);
+    if ($sql) {
+        add_confirmation(_($_POST['new_desc'] . ' was successfully added.'));
+    }
+    $_POST['new_code'] = $_POST['new_desc'] = null;
+}
+
+function _shn_cr_delete_option($optioncode) {
+    global $global;
+    $sql = "DELETE FROM field_options WHERE option_code='{$optioncode}'";
+    $global['db']->Execute($sql);
+    add_confirmation(_('Field was successfully deleted.'));
+}
+
+function is_optioncode_exists($optioncode) {
+    $found = false;
+    global $global;
+    $sql = "SELECT * FROM field_options WHERE option_code='{$optioncode}'";
+    $res = $global['db']->Execute($sql);
+    while (!$res->EOF) {
+        $code = $res->fields['option_code'];
+        $found = true;
+        $res->MoveNext();
+    }
+    return $found;
+}
+
+function _shn_cr_adm_field_options_form($type) {
+    global $global;
+    global $conf;
+    $button_type = isset($_POST['button_name']) ? $_POST['button_name'] : '';
+    if ($button_type == _('Update')) {
+        $sql = "SELECT field_name, option_code, option_description  FROM field_options WHERE field_name = '{$type}'";
+        $sel = $global['db']->GetAll($sql);
+        $count = 0;
+        foreach ($sel as $row) {
+            $opcode = $row['option_code'];
+            $fname = $row['field_name'];
+            $code = $_POST[$opcode];
+            $desc = isset($_POST[$count]) ? $_POST[$count] : '';
+            ++$count;
+            $todelete = isset($_POST[$count]) ? $_POST[$count] : '';
+            ++$count;
+            if ($todelete == 'on') {
+                _shn_cr_delete_option($code);
+            } else {
+                _shn_cr_update_option($code, $desc);
+            }
+        }
+    } else if ($button_type == _('AddNew')) {
+        if (empty($_POST['new_code'])) {
+            add_error(_("Please enter the code"));
+            display_errors();
+        } else if(empty($_POST['new_desc'])) {
+            add_error(_("Please  enter the description"));
+            display_errors();
+        } else if (is_optioncode_exists($_POST['new_code'])) {
+            add_error(_("Code already exists"));
+            display_errors();
+        } else _shn_cr_insert_option($type, $_POST['new_code'], $_POST['new_desc']);
+    }
+    $sql = "SELECT field_name, option_code, option_description  FROM field_options WHERE field_name = '{$type}'";
+    $arr = $global['db']->GetAll($sql);
+    if (!empty($arr)) {
+        shn_form_fopen('adm_' . $type, null);
+        shn_form_fsopen(_('Update'));
+        shn_form_hidden(array('seq' => 'update'));
+        ?>
+<table>
+    <thead>
+        <td><strong><?php echo _('Code'); ?></strong></td>
+        <td width="100%"><strong><?php echo _('Description'); ?></strong></td>
+        <td width="100%"><strong><?php echo _('Delete'); ?></strong></td>
+    </thead>
+    <tbody>
+        <?php
+        $count = 0;
+        foreach ($arr as $row) {
+            ?>
+        <tr>
+            <td><input type="text" READONLY name="<?=$row['option_code']; ?>"
+                       value="<?=$row['option_code']; ?>"  />
+            </td>
+            <td><input type="text" name="<?=$count++;?>"
+                       value="<?=$row['option_description']; ?>" />
+            </td>
+            <td><input type="checkbox" name="<?=$count++;?>" />
+            </td>
+        </tr>
+            <?php
+        }
+        ?>
+    </tbody>
+</table>
+        <?php
+        shn_form_submit(_('Update'), "name='button_name'");
+        shn_form_fsclose();
+    }
+    shn_form_fsopen(_('Add New '));
+    shn_form_text(_("Code"), 'new_code', null, array('req' => true));
+    shn_form_text(_("Description"), 'new_desc', null, array('req' => true));
+    shn_form_submit(_('AddNew'), "name='button_name'");
+    shn_form_fclose();
 }
