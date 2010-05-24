@@ -12,29 +12,33 @@
 * @author   Chathra Hendehewa <chathra@opensource.lk>
 * @author   Mifan Careem <mifan@opensource.lk>
 * @copyright  Lanka Software Foundation - http://www.opensource.lk
-*/
+ */
 include_once ($global['approot'] . '/inc/lib_form.inc');
 require_once ('acl.inc');
+
 function _shn_cr_adm_sub_menu() {
-?>
+    ?>
 <div id="submenu_v">
-<a href="index.php?mod=cr&act=adm_forms"><?php echo _("Configure Form Display") ?></a>
+    <a href="index.php?mod=cr&act=adm_forms"><?php echo _("Configure Form Display") ?></a>
 </div>
 <br>
-<?php
+    <?php
 }
+
 function shn_cr_adm_default() {
     // _shn_cr_adm_sub_menu();
     global $conf;
-?>
-   <h2><?=$conf['mod_cr_name'] . _(" Administration") ?></h2>
-   <?php
+    ?>
+<h2><?=$conf['mod_cr_name'] . _(" Administration") ?></h2>
+    <?php
     shn_cr_adm_forms();
 }
+
 function shn_cr_adm_forms() {
     _shn_cr_adm_sub_menu();
     _shn_cr_adm_form_change();
 }
+
 function _shn_cr_adm_form_change() {
     global $global;
     /*
@@ -58,6 +62,7 @@ function _shn_cr_adm_form_change() {
     shn_form_submit(_("Delete Service"), "name=delete");
     shn_form_fclose();
 }
+
 function shn_cr_adm_form_commit() {
     global $global;
     $db = $global['db'];
@@ -106,6 +111,7 @@ function shn_cr_adm_form_commit() {
     }
     shn_cr_adm_default();
 }
+
 function shn_cr_adm_form_setdivision() {
     global $global;
     $db = $global['db'];
@@ -123,5 +129,3 @@ function shn_cr_adm_form_setdivision() {
     }
     shn_cr_adm_default();
 }
-?>
-

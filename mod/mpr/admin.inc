@@ -18,6 +18,7 @@
  */
 include_once ($global['approot'] . '/inc/lib_form.inc');
 include_once ($global['approot'] . '/inc/lib_validate.inc');
+
 /* {{{ Sub Menus */
 /**
  * shn_mpr_adminmenu
@@ -41,6 +42,7 @@ function shn_mpr_adminmenu() {
     shn_adm_menuitem("adm_opt_skin_color", _("Manage Skin Colors"));
     shn_adm_menuclose();
 }
+
 /* }}} */
 /* {{{ Default */
 /**
@@ -51,13 +53,13 @@ function shn_mpr_adminmenu() {
  */
 function shn_mpr_adm_default() {
     shn_mpr_adminmenu();
-?> <br></br> 
-    <p><b><?php echo _("Welcome to the Missing Person Registry admin page"); ?> </b></p>
-    <p><?php echo _("Please use the navigation menu above to configure each field."); ?> </p>
-<?php
-    //shn_mpr_adm_gen();
-    
+    ?> <br />
+<p><b><?php echo _("Welcome to the Missing Person Registry admin page"); ?> </b></p>
+<p><?php echo _("Please use the navigation menu above to configure each field."); ?> </p>
+    <?php
+//shn_mpr_adm_gen();
 }
+
 /* }}} */
 //temporary fix
 function _shn_mpr_adm_gen_validate() {
@@ -73,6 +75,7 @@ function _shn_mpr_adm_gen_validate() {
     }
     return $error_flag;
 }
+
 //added by isuru
 function shn_mpr_insert_to_config($val) {
     global $global;
@@ -82,6 +85,7 @@ function shn_mpr_insert_to_config($val) {
     $q2 = "insert into config values('','mpr','mod_mpr_pictures_per_page','{$val}')";
     $db->Execute($q2);
 }
+
 /* {{{ shn_mpr_adm_gen */
 function shn_mpr_adm_gen() {
     shn_mpr_adminmenu();
@@ -96,129 +100,139 @@ function shn_mpr_adm_gen() {
         _shn_mpr_adm_gen();
     }
 }
+
 /* }}} */
 /* {{{ shn_mpr_adm_images */
 function shn_mpr_adm_images() {
     shn_mpr_adminmenu();
-?><br /><h2><?php echo _("Manage Search"); ?></h2>
-<?php
+    ?><br /><h2><?php echo _("Manage Search"); ?></h2>
+    <?php
 }
+
 /* }}} */
 /* {{{ shn_mpr_adm_age */
 function shn_mpr_adm_opt_age_group() {
     shn_mpr_adminmenu();
     //print 'button is'.$_POST['button_name'];
-    
-?><br /><h2><?php echo _("Manage Age Groups"); ?></h2>
-<?php
+
+    ?><br /><h2><?php echo _("Manage Age Groups"); ?></h2>
+    <?php
     _shn_mpr_adm_field_options_controller('opt_age_group');
 }
+
 /* }}} */
 /* {{{ shn_mpr_adm_age */
 function shn_mpr_adm_opt_race() {
     shn_mpr_adminmenu();
-?><br /><h2><?php echo _("Manage Race"); ?></h2>
-<?php
+    ?><br /><h2><?php echo _("Manage Race"); ?></h2>
+    <?php
     _shn_mpr_adm_field_options_controller('opt_race');
 }
+
 /* }}} */
 /* {{{ shn_mpr_adm_age */
 function shn_mpr_adm_opt_religion() {
     shn_mpr_adminmenu();
-?><br /><h2><?php echo _("Manage Religion"); ?></h2>
-<?php
+    ?><br /><h2><?php echo _("Manage Religion"); ?></h2>
+    <?php
     _shn_mpr_adm_field_options_controller('opt_religion');
 }
+
 /* }}} */
 /* {{{ shn_mpr_adm_age */
 function shn_mpr_adm_opt_blood_type() {
     shn_mpr_adminmenu();
-?><br /><h2><?php echo _("Manage Blood Groups"); ?></h2>
-<?php
+    ?><br /><h2><?php echo _("Manage Blood Groups"); ?></h2>
+    <?php
     _shn_mpr_adm_field_options_controller('opt_blood_type');
 }
+
 /* }}} */
 /* {{{ shn_mpr_adm_age */
 function shn_mpr_adm_opt_eye_color() {
     shn_mpr_adminmenu();
-?><br /><h2><?php echo _("Manage Eye Color"); ?></h2>
-<?php
+    ?><br /><h2><?php echo _("Manage Eye Color"); ?></h2>
+    <?php
     _shn_mpr_adm_field_options_controller('opt_eye_color');
 }
+
 /* }}} */
 /* {{{ shn_mpr_adm_age */
 function shn_mpr_adm_opt_hair_color() {
     shn_mpr_adminmenu();
-?><br /><h2><?php echo _("Manage Hair Color"); ?></h2>
-<?php
+    ?><br /><h2><?php echo _("Manage Hair Color"); ?></h2>
+    <?php
     _shn_mpr_adm_field_options_controller('opt_hair_color');
 }
+
 /* }}} */
 /* {{{ shn_mpr_adm_age */
 function shn_mpr_adm_opt_skin_color() {
     shn_mpr_adminmenu();
-?><br /><h2><?php echo _("Manage Skin Color"); ?></h2>
-<?php
-    _shn_mpr_adm_field_options_controller('opt_skin_color');
-}
-/* }}} */
-/* {{{ */
-function _shn_mpr_adm_gen($errors = false, $updated = false) {
-    global $conf;
-    if ($errors) display_errors();
-    if ($updated) {
-?>
-    <p align="center">
-    
-<?php add_confirmation(_("Updated"));
+    ?><br /><h2><?php echo _("Manage Skin Color"); ?></h2>
+        <?php
+        _shn_mpr_adm_field_options_controller('opt_skin_color');
     }
-?><br /><h2><?php echo _("General Configuration"); ?></h2><?php
-    shn_form_fopen("adm_gen", null);
-    shn_form_hidden(array('seq' => 'general'));
-    //shn_form_fsopen(_('Name'));
-    if (!isset($_POST['name'])) $val = array('value' => $conf['mod_mpr_name']);
-    else $val = null;
-    //shn_form_text(_('Module Name'), 'name', 'size="20"', $val);
-    //shn_form_fsclose();
-    shn_form_fsopen(_('Search'));
-    if (!isset($_POST['search_limit'])) $val = array('value' => $conf['mod_mpr_pictures_per_page']);
-    else $val = null;
-    $val['req'] = true;
-    shn_form_text(_('Number of images per page'), 'search_limit', 'size="15"', $val);
-    shn_form_fsclose();
-    #    shn_form_fsopen(_('Upload Pictures'));
-    #    shn_form_select(array('database'=>_('To Database'),
-    #                        'file'=>_('To File')), _('Image save handler'), 'upload_pic_handler');
-    #    shn_form_fsclose();
-    shn_form_submit(_('Update'));
-    shn_form_fclose();
-}
-/* }}} */
-/* {{{ ACL Install */
-/**
- * shn_mpr_adm_acl_install
- *
- * @access public
- * @return void
- */
-function shn_mpr_adm_acl_install() {
-    global $global;
-    $db = $global["db"];
-    $q = "select value from config where module_id='mpr' and confkey='acl_base'";
-    $res_acl = $db->Execute($q);
-    if (!$res_acl->EOF && $res_acl->fields[0] == 'installed') {
-        $msg = _("ACL Base for Missing Person Registry is already installed, This is a reinstall");
+
+    /* }}} */
+    /* {{{ */
+    function _shn_mpr_adm_gen($errors = false, $updated = false) {
+        global $conf;
+        if ($errors) display_errors();
+        if ($updated) {
+            ?>
+<p align="center">
+
+            <?php add_confirmation(_("Updated"));
+        }
+        ?><br /><h2><?php echo _("General Configuration"); ?></h2><?php
+        shn_form_fopen("adm_gen", null);
+        shn_form_hidden(array('seq' => 'general'));
+        //shn_form_fsopen(_('Name'));
+        if (!isset($_POST['name'])) $val = array('value' => $conf['mod_mpr_name']);
+        else $val = null;
+        //shn_form_text(_('Module Name'), 'name', 'size="20"', $val);
+        //shn_form_fsclose();
+        shn_form_fsopen(_('Search'));
+        if (!isset($_POST['search_limit'])) $val = array('value' => $conf['mod_mpr_pictures_per_page']);
+        else $val = null;
+        $val['req'] = true;
+        shn_form_text(_('Number of images per page'), 'search_limit', 'size="15"', $val);
+        shn_form_fsclose();
+        #    shn_form_fsopen(_('Upload Pictures'));
+        #    shn_form_select(array('database'=>_('To Database'),
+        #                        'file'=>_('To File')), _('Image save handler'), 'upload_pic_handler');
+        #    shn_form_fsclose();
+        shn_form_submit(_('Update'));
+        shn_form_fclose();
     }
-    include_once $global['approot'] . 'inc/lib_security/acl_api.inc';
-    include_once $global['approot'] . 'inc/lib_security/acl.inc';
-    include_once $global['approot'] . 'inc/lib_security/authenticate.inc';
-    $acl = new SahanaACL(NULL);
-    /* start of or specifc ACL entries
-    */
-    $res = shn_acl_add_module("mpr", _("Missing Person Registry"));
-    $res = shn_acl_add_action_group("mpr", "deny_admin", _("Deny admin group"));
+
+    /* }}} */
+    /* {{{ ACL Install */
+    /**
+     * shn_mpr_adm_acl_install
+     *
+     * @access public
+     * @return void
+     */
+    function shn_mpr_adm_acl_install() {
+        global $global;
+        $db = $global["db"];
+        $q = "select value from config where module_id='mpr' and confkey='acl_base'";
+        $res_acl = $db->Execute($q);
+        if (!$res_acl->EOF && $res_acl->fields[0] == 'installed') {
+            $msg = _("ACL Base for Missing Person Registry is already installed, This is a reinstall");
+        }
+        include_once $global['approot'] . 'inc/lib_security/acl_api.inc';
+        include_once $global['approot'] . 'inc/lib_security/acl.inc';
+        include_once $global['approot'] . 'inc/lib_security/authenticate.inc';
+        $acl = new SahanaACL(NULL);
+        /* start of or specifc ACL entries
+        */
+        $res = shn_acl_add_module("mpr", _("Missing Person Registry"));
+        $res = shn_acl_add_action_group("mpr", "deny_admin", _("Deny admin group"));
     $res = shn_acl_add_action("mpr", "deny_admin", "shn_mpr_adm_default", _("Display Admin page"));
-    ## Deny permission for 'deny_admin' action group with in 'or' to 'guest' role
+        ## Deny permission for 'deny_admin' action group with in 'or' to 'guest' role
     $res = shn_acl_add_perms_action_group_role('guest', 'mpr', 'deny_admin');
     $res = shn_acl_add_perms_action_group_role('user', 'mpr', 'deny_admin');
     $res = shn_acl_add_action_group("mpr", "deny_user", "Deny user group");
@@ -230,13 +244,14 @@ function shn_mpr_adm_acl_install() {
     else $q = "update config set value='installed' where module_id='mpr' and confkey='acl_base'";
     $res = $db->Execute($q);
     $msg = _("ACL Base for Missing Person Registry was successfully installed");
-?>
-    <div id="result_msg">
-       <?php echo $msg; ?>
-    </div>
-    </br>
-<?php
+    ?>
+<div id="result_msg">
+    <?php echo $msg; ?>
+</div>
+<br />
+    <?php
 }
+
 /* }}} */
 //temporary fix
 function _shn_mpr_adm_field_options_controller($type) {
@@ -248,18 +263,20 @@ function _shn_mpr_adm_field_options_controller($type) {
             } else {
                 _shn_mpr_adm_field_options_form($type, true);
             }
-        break;
+            break;
         default:
             _shn_mpr_adm_field_options_form($type);
-        break;
+            break;
     }
 }
+
 function _shn_mpr_delete_option($optioncode) {
     global $global;
     $sql = "DELETE FROM field_options WHERE option_code='{$optioncode}'";
     $global['db']->Execute($sql);
     add_confirmation(_('Field was successfully deleted.'));
 }
+
 function is_optioncode_exists($optioncode) {
     $found = false;
     global $global;
@@ -272,13 +289,14 @@ function is_optioncode_exists($optioncode) {
     }
     return $found;
 }
+
 function _shn_mpr_update_option($optioncode, $optiondescription) {
     global $global;
     $sql = "UPDATE field_options SET option_description='{$optiondescription}' WHERE option_code='{$optioncode}'";
     $global['db']->Execute($sql);
-    //add_confirmation($optiondescription.' updated');
-    
+//add_confirmation($optiondescription.' updated');
 }
+
 function _shn_mpr_insert_option($field_name, $optioncode, $optiondescription) {
     global $global;
     $sql = "INSERT INTO field_options (field_name,option_code,option_description) VALUES ('{$field_name}','{$optioncode}','{$optiondescription}')";
@@ -288,6 +306,7 @@ function _shn_mpr_insert_option($field_name, $optioncode, $optiondescription) {
     }
     $_POST['new_code'] = $_POST['new_desc'] = null;
 }
+
 function _shn_mpr_adm_field_options_form($type) {
     global $global;
     global $conf;
@@ -296,7 +315,7 @@ function _shn_mpr_adm_field_options_form($type) {
         $sql = "SELECT field_name, option_code, option_description  FROM field_options WHERE field_name = '{$type}'";
         $sel = $global['db']->GetAll($sql);
         $count = 0;
-        foreach($sel as $row) {
+        foreach ($sel as $row) {
             $opcode = $row['option_code'];
             $fname = $row['field_name'];
             $code = $_POST[$opcode];
@@ -329,37 +348,37 @@ function _shn_mpr_adm_field_options_form($type) {
         shn_form_fopen('adm_' . $type, null);
         shn_form_fsopen(_('Update'));
         shn_form_hidden(array('seq' => 'update'));
-?>
+        ?>
 <table>
-<script language="JavaScript">
+    <script language="JavaScript">
 
-</script>
+    </script>
 
 
-<thead>
+    <thead>
     <td><strong><?php echo _('Code'); ?></strong></td>
     <td width="100%"><strong><?php echo _('Description'); ?></strong></td>
     <td width="100%"><strong><?php echo _('Delete'); ?></strong></td>
 </thead>
-<?php
+        <?php
         $count = 0;
-        foreach($arr as $row) {
-?>
+        foreach ($arr as $row) {
+            ?>
 <tr>
     <td><input type="text" READONLY name="<?=$row['option_code']; ?>" 
-            value="<?=$row['option_code']; ?>"  />
+               value="<?=$row['option_code']; ?>"  />
     </td>
-    <td><input type="text" name="<?=$count++; ?>" 
-            value="<?=$row['option_description']; ?>" />
+    <td><input type="text" name="<?=$count++;?>" 
+               value="<?=$row['option_description']; ?>" />
     </td>
-    <td><input type="checkbox" name="<?=$count++; ?>" />
+    <td><input type="checkbox" name="<?=$count++;?>" />
     </td>
 </tr>
-<?php
+            <?php
         }
-?>
+        ?>
 </table>
-<?php
+        <?php
         shn_form_submit(_('Update'), "name='button_name'");
         shn_form_fsclose();
     }
@@ -369,6 +388,7 @@ function _shn_mpr_adm_field_options_form($type) {
     shn_form_submit(_('AddNew'), "name='button_name'");
     shn_form_fclose();
 }
+
 function _shn_mpr_adm_field_options_validate($type, $error = false) {
+
 }
-?>
