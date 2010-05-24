@@ -424,61 +424,18 @@ function _shn_cr_cadd_commit_db() {
     add_confirmation(_("You have succesfully registered shelter ") . $_SESSION["camp_name"]);
 ?>
 	<br />
-	<div id="note">
-		<?php echo _("The availability of services & facilities of the shelter are as follows:") ?>
+	<div id="note" style="text-align: left;">
+            <div><?php echo _('Add Shelter'); ?>:<?php
+            echo sprintf('Please click %s to add another shelter.',
+                    '<a href="index.php?mod=cr&act=acmp"><b>' . _('Add Shelter') . '</b></a>');
+            ?></div>
+            <div><?php echo _('Edit Shelter'); ?>:<?php
+            echo sprintf('To edit current shelter, please do a search with %s or %s first to find the shelter you would like to edit.',
+                    '<a href="index.php?mod=cr&act=srch"><b>' . _('Search by Name') . '</b></a>',
+                    '<a href="index.php?mod=cr&act=srch_address"><b>' . _('Search by address') . '</b></a>');
+            ?></div>
 	</div>
-	<!--<p>Facilities / Services Availability</p>-->
-	<ul>
-	
-	<!--To have the results shown in table format-->
-	<div id ="result">
-	<table>
-	        <thead>
-	        		<td><?php echo _("Service Type") ?></td>
-	            <td><?php echo _("Availability") ?></td>
-	        </thead>
-	        
-	<tbody>
-	<tr>
-	<?php
-    $a = "select option_code,option_description from field_options where field_name='opt_camp_service'";
-    $ref = $db->Execute($a);
-    while (!$ref->EOF) {
-        $val = $ref->fields[0];
-        $name = $ref->fields[1];
-        $flag = false;
-        if (isset($_SESSION['opt_camp_service'])) {
-            foreach($_SESSION['opt_camp_service'] as $a => $b) {
-                if ($val == $b) {
-                    echo "<td>" . _lc($name) . "</td>";
-                    echo "<td>" . _("Available") . "</td>";
-                    //echo "<li>$name :  Available </li><br>";
-                    $flag = true;
-                }
-            }
-        }
-        if (!$flag) {
-            echo "<td>" . _lc($name) . "</td>";
-            echo "<td>" . _("NOT AVAILABLE") . "</td>";
-            //echo "<li class=\"fontspecial\">$name : NOT AVAILABLE </li><br>";
-            
-        }
-?>
-		</tr>
-		<?php
-        $ref->MoveNext();
-    }
-?>
-</tbody>
-</table>
-</div>
-
-</ul>
 <br/>
-<div id="note">
-	<?php echo _("Use the Left Navigation Menu to Continue.") ?>
-</div>
-
 <?php
     unset($_SESSION['hospital']);
 }
