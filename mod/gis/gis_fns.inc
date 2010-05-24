@@ -174,13 +174,17 @@ function shn_gis_add_marker_map($name_of_map = "Area Map", $name = null) {
 function shn_gis_add_marker_map_form($name_of_map = "Area Map", $nameOfPoint = "", $button_submit_opts = null, $extra_opts = array()) {
     global $global, $conf;
     include_once ($global['approot'] . '/inc/lib_form.inc');
-    shn_form_fsopen(_("GPS Coordinates"));
+    shn_form_fsopen(_("Map Location"));
+    echo '<div class=\'message information\'>';
+    echo _('Click on the button "Update the location" will update the map location if you did manually modify the values of position.');
+    echo "</div>";
     shn_form_text(_("Northing / Latitude"), "gps_y", 'size="60"', array(
         'value' => isset($extra_opts['gps_y']) ? $extra_opts['gps_y'] : ''
     ));
     shn_form_text(_("Easting / Longitude"), "gps_x", 'size="60"', array(
         'value' => isset($extra_opts['gps_x']) ? $extra_opts['gps_x'] : ''
     ));
+    shn_form_button(_('Update the location'));
     shn_form_fsclose();
     if ($conf['gis']) {
         $extra_opts['marker'] = 'single';
@@ -192,8 +196,7 @@ function shn_gis_add_marker_map_form($name_of_map = "Area Map", $nameOfPoint = "
         echo "<div class='message information'>";
         echo _("You can move around and enlarge/reduce the size of the area you want using
 the scale on upper left corner of the map. By clicking on a map you can
-mark your location with a pointer. If you want to remove the pointer,
-simply click on the center of the pointer.");
+mark your location with a pointer.");
         echo "</div>";
         show_add_marker_map($nameOfPoint, $extra_opts);
         shn_form_fsclose();

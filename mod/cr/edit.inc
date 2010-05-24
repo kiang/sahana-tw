@@ -42,11 +42,15 @@ function _shn_cr_cedt_start($errors = false) {
     shn_location($range, $_SESSION['opt_location_type']);
     shn_form_fsclose();
     shn_form_fsopen(_("Map Location"));
+    echo '<div class=\'message information\'>';
+    echo _('Click on the button "Update the location" will update the map location if you did manually modify the values of position.');
+    echo "</div>";
     $extra_opts['req'] = false;
     $extra_opts['value'] = $_SESSION['camp_lat'];
     shn_form_text(_("Latitude : "), 'gps_x', 'size="40"', $extra_opts);
     $extra_opts['value'] = $_SESSION['camp_lon'];
     shn_form_text(_("Longitude : "), 'gps_y', 'size="40"', $extra_opts);
+    shn_form_button(_('Update the location'));
     shn_form_fsclose();
     if ($conf['gis']) {
         $extra_opts['marker'] = 'single';
@@ -56,8 +60,7 @@ function _shn_cr_cedt_start($errors = false) {
         echo "<div class='message information'>";
         echo _("You can move around and enlarge/reduce the size of the area you want using
 the scale on upper left corner of the map. By clicking on a map you can
-mark your location with a pointer. If you want to remove the pointer,
-simply click on the center of the pointer.");
+mark your location with a pointer.");
         echo "</div>";
         show_add_marker_map($nameOfPoint, $extra_opts);
         shn_form_fsclose();
@@ -610,11 +613,15 @@ function _shn_cr_cedit_second() {
     shn_location($range, $_SESSION['cr']['loc']);
     shn_form_fsclose();
     shn_form_fsopen(_("Map Location"));
+    echo '<div class=\'message information\'>';
+    echo _('Click on the button "Update the location" will update the map location if you did manually modify the values of position.');
+    echo "</div>";
     $extra_opts['req'] = false;
     $extra_opts['value'] = $_SESSION['camp_lat'];
     shn_form_text(_("Latitude : "), 'gps_x', 'size="40"', $extra_opts);
     $extra_opts['value'] = $_SESSION['camp_lon'];
     shn_form_text(_("Longitude : "), 'gps_y', 'size="40"', $extra_opts);
+    shn_form_button(_('Update the location'));
     shn_form_fsclose();
     if ($conf['gis']) {
         $extra_opts['marker'] = 'single';
@@ -624,8 +631,7 @@ function _shn_cr_cedit_second() {
         echo "<div class='message information'>";
         echo _("You can move around and enlarge/reduce the size of the area you want using
 the scale on upper left corner of the map. By clicking on a map you can
-mark your location with a pointer. If you want to remove the pointer,
-simply click on the center of the pointer.");
+mark your location with a pointer.");
         echo "</div>";
         show_add_marker_map($nameOfPoint, $extra_opts);
         shn_form_fsclose();

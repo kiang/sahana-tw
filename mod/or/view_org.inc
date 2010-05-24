@@ -407,6 +407,9 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
     shn_form_fsclose();
     // Contact infomatio
     shn_form_fsopen(_("Map Location"));
+    echo '<div class=\'message information\'>';
+    echo _('Click on the button "Update the location" will update the map location if you did manually modify the values of position.');
+    echo "</div>";
     $extra_opts['req'] = false;
     $lat = isset($lat) ? $lat : $_SESSION['org']['gps_x'];
     $extra_opts['value'] = $lat;
@@ -414,6 +417,7 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
     $lon = isset($lon) ? $lon : $_SESSION['org']['gps_y'];
     $extra_opts['value'] = $lon;
     shn_form_text(_("Longitude : "), 'gps_y', 'size="40"', $extra_opts);
+    shn_form_button(_('Update the location'));
     shn_form_fsclose();
     if ($conf['gis']) {
         $extra_opts['marker'] = 'single';
@@ -425,8 +429,7 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
         echo "<div class='message information'>";
         echo _("You can move around and enlarge/reduce the size of the area you want using
 the scale on upper left corner of the map. By clicking on a map you can
-mark your location with a pointer. If you want to remove the pointer,
-simply click on the center of the pointer.");
+mark your location with a pointer.");
         echo "</div>";
         show_add_marker_map($nameOfPoint, $extra_opts);
         shn_form_fsclose();
