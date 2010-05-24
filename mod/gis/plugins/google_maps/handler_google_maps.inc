@@ -169,7 +169,7 @@ function show_map_with_markers($array) {
             point = new GLatLng(<?php echo $lon; ?>,<?php echo $lat; ?>);
             bounds.extend(point);
             marker = createMarker(point,
-            '<div id="wiki_info"><strong><?php echo _lc(str_replace("'", "\'", "$name")); ?></strong><br><a href="<?php echo $url; ?>">View</a></div>');
+            '<div id="wiki_info"><strong><?php echo cleanMarkerHtml($name); ?></strong><br><a href="<?php echo $url; ?>">View</a></div>');
             map.addOverlay(marker);
 <?php
     }
@@ -225,7 +225,7 @@ function show_map_with_wiki_marker($array) {
         $lon = $array[$i]["lon"];
         $name = $array[$i]["name"];
         $desc = $array[$i]["desc"];
-        $url = $array[$i]["url"];
+        $url = trim($array[$i]["url"]);
         if (!(($array[$i]["date"]) == "0000-00-00 00:00:00")) {
             $date = _('Date: ') . date('l dS \of F Y', strtotime($array[$i]["date"]));
         } else {
@@ -238,13 +238,19 @@ function show_map_with_wiki_marker($array) {
             //$image="{<img src='{$image}' width='100' height='100' >}";
             $image = ($image ? "<img src=$image width=100 height=100 ><br>" : '');
         } else $image = '';
-        //$edit="help";
-        
+        $markerHtml = '<div id="wiki_info"><strong>';
+        $markerHtml .= cleanMarkerHtml($name) . '</strong><br>';
+        $markerHtml .= cleanMarkerHtml($desc) . '<br>';
+        $markerHtml .= $image . '<br>';
+        if(!empty($url)) {
+            $markerHtml .= '<a href="'.$url.'" target="_blank">'.$url.'</a><br>';
+        }
+        $markerHtml .= $date . '<br><strong>Author:</strong>';
+        $markerHtml .= $author . '<br>' . $edit;
+        $markerHtml .= '</div>';
 ?>	
-					var point = new GLatLng(<?=$lon
-?>,<?=$lat
-?>);
-      				var marker = createMarker(point,'<div id="wiki_info"><strong><?=_lc($name)?></strong><br><?=_lc($desc)?><br><?=$image?><? echo ( trim($url)!='' ? '<a href="'.$url.'" target="_blank">'.$url.'</a>':'') ?><br><?=$date?><br><strong>Author:</strong><?=$author?><br><?=$edit?></div>');
+      				var point = new GLatLng(<?php echo $lon; ?>,<?php echo $lat;?>);
+      				var marker = createMarker(point,'<?php echo $markerHtml; ?>');
       				map.addOverlay(marker);
 <?php
     }
@@ -344,4 +350,7 @@ function show_map_with_custom_markers($array) {
 	<div id="map" style="width: <?=$conf['mod_gis_width'] ?>px; height: <?=$conf['mod_gis_height'] ?>px"></div>
 <?php
 }
-?>
+
+function cleanMarkerHtml($string) {
+    return str_replace(array(chr(10), chr(13), '\''), array('', '', '\\\''), nl2br(_lc($string)));
+}
