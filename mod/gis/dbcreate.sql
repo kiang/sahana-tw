@@ -70,7 +70,7 @@ CREATE TABLE `gis_wiki` (
     `wiki_uuid` VARCHAR(60) NOT NULL,
     `gis_uuid` VARCHAR(60) NOT NULL,
     `name` varchar(50) NOT NULL,
-    `description` VARCHAR(100) default NULL,
+    `description` text default NULL,
     `opt_category` VARCHAR(10),
     `url` varchar(50) NOT NULL,
     `event_date` timestamp NULL,

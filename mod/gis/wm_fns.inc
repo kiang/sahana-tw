@@ -225,7 +225,15 @@ function shn_wiki_edit($id) {
     include_once $global['approot'] . "/inc/lib_form.inc";
     shn_form_fopen('ewik');
     shn_form_fsopen(_("Update Detail"));
-    shn_form_textarea(_("Detail Summary"), "wiki_text", 'size="50"', array('value' => $desc));
+    $items = explode(chr(10), $desc);
+    if(!empty($items)) {
+        echo '<ul>';
+        foreach($items AS $item) {
+            echo '<li>' . $item . '</li>';
+        }
+        echo '</ul>';
+    }
+    shn_form_text(_("Detail Summary"), "wiki_text", 'size="50"');
 ?>
 	<input type="hidden" name="wiki_id" value="<?=$res->fields['wiki_uuid'] ?>">
 <?php
@@ -237,11 +245,18 @@ function shn_wiki_edit_com($id) {
     global $global;
     global $conf;
     $db = $global['db'];
-    //echo $id;
-    //echo "{$_REQUEST['wiki_text']}";
-    $query = "update gis_wiki set description='{$_REQUEST['wiki_text']}' where wiki_uuid='{$id}'";
-    $res = $db->Execute($query);
-    add_confirmation(_('Succesfully updated description'));
+    $_POST['wiki_text'] = trim($_POST['wiki_text']);
+    if(empty($_POST['wiki_text'])) {
+        add_error(_('Please enter the description before updating.'));
+    } else {
+        $_POST['wiki_text'] = date('Y-m-d / ') . str_replace(chr(10), '', $_POST['wiki_text']) . chr(10);
+        $query = 'UPDATE gis_wiki
+            SET description = CONCAT(\'' . $_POST['wiki_text'] . '\', description)
+            WHERE wiki_uuid = \'' . $id . '\'';
+        $res = $db->Execute($query);
+        add_confirmation(_('Succesfully updated description'));
+    }
+    show_wiki_map();
 }
 function shn_wiki_map_commit() {
     global $global;
@@ -261,6 +276,10 @@ function shn_wiki_map_commit() {
     '{$gis_id}','0','','{$_SESSION['loc_y']}','{$_SESSION['loc_x']}', '{$_SESSION['wiki_url']}','{$_SESSION['wiki_evnt_date']}','{$edit}','{$_SESSION['wiki_author']}','{$view_public}')";
     $edit = ($_SESSION['edit_public'] == 'edit') ? 1 : 0;
     $view_public = ($_SESSION['view_public'] == 'view') ? 1 : 0;
+    $_SESSION['wiki_text'] = trim($_SESSION['wiki_text']);
+    if(!empty($_SESSION['wiki_text']) && !empty($_SESSION['wiki_evnt_date'])) {
+        $_SESSION['wiki_text'] = $_SESSION['wiki_evnt_date'] . ' / ' . $_SESSION['wiki_text'];
+    }
     $query = "insert into gis_wiki (wiki_uuid,gis_uuid,name,description,opt_category,url,event_date,editable,author,approved)  values ('{$wiki_id}','{$gis_id}','{$_SESSION['wiki_name']}','{$_SESSION['wiki_text']}','{$_SESSION['opt_wikimap_type']}', '{$_SESSION['wiki_url']}','{$_SESSION['wiki_evnt_date']}','{$edit}','{$_SESSION['wiki_author']}','{$view_public}')";
     $res = $db->Execute($query);
     //var_dump($_SESSION);
@@ -285,12 +304,5 @@ function shn_wiki_map_commit() {
         //create thumbnail
         shn_image_resize($uploadfile, $thumb_path, 100, 100);
     }
-    //shn_form_fopen(null,null,array('req'=>false));
-    // 	shn_form_fsopen(_(" Added Wiki Item"));
     add_confirmation(_("Succesfully added wiki item ") . $_SESSION['wiki_name']);
-    //echo $_SESSION['edit_public'];
-    //shn_form_fsclose();
-    //shn_form_fclose();
-    
 }
-?>
