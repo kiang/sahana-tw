@@ -110,7 +110,7 @@ function show_wiki_add_image() {
     }
     global $global;
     include_once ($global['approot'] . '/inc/lib_form.inc');
-    shn_form_fopen(awik, null, array('enctype' => 'enctype="multipart/form-data"'));
+    shn_form_fopen('awik', null, array('enctype' => 'enctype="multipart/form-data"'));
     shn_form_hidden(array('seq' => 'com'));
     shn_form_fsopen(_("Situation Image"));
     shn_form_upload(_("Upload Image"), 'image');
@@ -140,7 +140,7 @@ function show_wiki_add_map($errors = false) {
         $_SESSION['view_public'] = $_POST['view_public'];
     }
     include $global['approot'] . "/mod/gis/gis_fns.inc";
-    shn_form_fopen(awik, null, array('req' => false));
+    shn_form_fopen('awik', null, array('req' => false));
     shn_form_hidden(array('seq' => 'img'));
     //call gis api
     shn_gis_add_marker_map_form("Area Map", $_POST['location_name'], null, array('marker' => 'single'));
@@ -223,7 +223,7 @@ function shn_wiki_edit($id) {
     $res = $db->Execute($query);
     $desc = $res->fields['description'];
     include_once $global['approot'] . "/inc/lib_form.inc";
-    shn_form_fopen(ewik);
+    shn_form_fopen('ewik');
     shn_form_fsopen(_("Update Detail"));
     shn_form_textarea(_("Detail Summary"), "wiki_text", 'size="50"', array('value' => $desc));
 ?>

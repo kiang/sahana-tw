@@ -66,7 +66,7 @@ function shn_gis_aloc($errors = false) {
     include_once ($global['approot'] . '/inc/lib_errors.inc');
     include $global['approot'] . '/inc/lib_location.inc';
     if ($errors) display_errors();
-    shn_form_fopen(amap);
+    shn_form_fopen('amap');
     shn_form_fsopen(_("Landmark Specific Details"));
     shn_form_text(_("Landmark Name"), "location_name", 'size="60"');
     shn_form_opt_select("opt_landmark_type", _("Landmark Type"));
@@ -103,7 +103,7 @@ function shn_gis_amap() {
     $_SESSION['direction'] = $_POST['direction'];
     $_SESSION['comment'] = $_POST['comment'];
     $_SESSION[$location] = $_POST[$location];
-    shn_form_fopen(com);
+    shn_form_fopen('com');
     shn_form_fsopen(_("Location Information"));
     echo _("Plot the Location OR Enter its GPS coordinates ");
     shn_form_fsclose();

@@ -191,7 +191,7 @@ function shn_gis_adm_showform() {
 	</ul>
 <?php
     shn_form_fclose();
-    shn_form_fopen(adm_commit, null, array('req_message' => false));
+    shn_form_fopen('adm_commit', null, array('req_message' => false));
     shn_form_fsopen(_("Default Center Coordinates"));
     $lat_help = _("Latitude is North-South (Up-Down). Latitude is zero on the equator and positive in the northern hemisphere and negative in the southern hemisphere");
     $lon_help = _("Longitude is West - East (sideways). Longitude is zero on the prime meridian (Greenwich Mean Time) and is positive to the east, across Europe and Asia.  Longitude is negative to the west, across the Atlantic and the Americas.");
