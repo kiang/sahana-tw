@@ -42,14 +42,14 @@ function _shn_or_form_search() {
     shn_form_text(_("Address"), 'loc_txt', 'size="40"', NULL);
     shn_form_fsclose();
 ?>
-</br>
+<br />
     <center>
 <?php
     //create the submit button
     shn_form_submit(_("Search"));
 ?>
 </center>
-    </br>
+    <br />
 <?php
     //close the form
     shn_form_fclose();

@@ -37,9 +37,9 @@ family members.'); ?>
 
 </p>
 
-<br></br>
+<br><br />
     <div><h3><b><em><?=(_("Features Include:")) ?></em></b></h3></div>
-<br></br>
+<br><br />
 
 
 <ul>

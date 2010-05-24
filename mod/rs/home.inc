@@ -19,7 +19,7 @@
     <h2><?php echo _('Reporting System'); ?></h2>
     <div><p><?php echo _('The Reporting System helps to generate reports based on sahana database. It aggregates all the module reports in one place for making easier the user to view, search reports and charts. On the other hand it performs as the administrator interface for sahana module reports.'); ?></p></div>
 
-    <br></br>
+    <br><br />
     <div><h3><b><em><?=(_("Features Include:")) ?></em></b></h3></div>
     <ul>
     <li><b><?php echo _('Module Reports Aggregator'); ?> </b><?php echo _(' - Aggregates all the module reports. This will show a detail view of each module report.'); ?></li>

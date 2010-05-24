@@ -18,7 +18,7 @@ function shn_cs_adm_default() {
 ?>
     <p><?php echo _('Maximum Depth') . " - " . _("enable you to specify the default depth value for the catalog system item selection interface. "); ?></p>
     <p><?php echo _('Number of records for a page') . " - " . _('enable you to specify the number of records that should be shown in a page in the view and edit section'); ?></p>
-    <br></br>
+    <br><br />
     <?php
 }
 function shn_cs_sub_menu() {

@@ -18,9 +18,9 @@
 <div id="home">
     <h2><?php echo _('Aid Catalog and Classification System'); ?></h2>
     <p><?php echo _('The Aid Catalog is used by the Inventory and the Request Management System as a reference classification of all aid item types. Item types are classified and grouped by type (e.g. food, medical) and units are associated to aid types for quantifying purposes by the other modules. The quantities of Aid is not kept in this module but for example in the Inventory and Request / Pledge Management Modules'); ?></p>
-    <br></br>
+    <br><br />
     <div><h3><b><em><?=(_("Features Include:")) ?></em></b></h3></div>
-<br></br>
+<br><br />
     <ul>
         <li><?php echo _('Classification or categorization of items to any level of depth') ?></li>
         <li><?php echo _('Association of measurement units for conversion and summation') ?></li>

@@ -42,14 +42,14 @@ function shn_auth_form_user_del($title = "Delete Usert", $mod = "admin", $act = 
     //$extra_opts['value']=$_SESSION['user'];
     shn_form_fsclose();
 ?>
-</br>
+<br />
 
 <?php
     //create the submit button
     shn_form_submit(_("Remove user"));
 ?>
 
-</br>
+<br />
 <?php
     //close the form
     shn_form_fclose();
@@ -89,7 +89,7 @@ function shn_auth_form_signup($title = "Create Your Account", $mod = "pref", $ac
     shn_form_fsclose();
     shn_form_fsopen(_("Just a couple of more Details to verify that you are not a bot"));
 ?>
-</br>
+<br />
 <img src="index.php?stream=image&mod=pref&act=captcha" />
 <br />
 <?php
@@ -102,7 +102,7 @@ function shn_auth_form_signup($title = "Create Your Account", $mod = "pref", $ac
     shn_form_submit(_("Submit"));
 ?>
 
-</br>
+<br />
 <?php
     //close the form
     shn_form_fclose();
@@ -143,14 +143,14 @@ function shn_auth_form_user_add($title = "Create Your Account", $mod = "admin", 
     shn_form_text(_("OpenID "), 'openid', 'size="30"', null);
     shn_form_fsclose();
 ?>
-</br>
+<br />
 
 <?php
     //create the submit button
     shn_form_submit(_("Submit"));
 ?>
 
-</br>
+<br />
 <?php
     //close the form
     shn_form_fclose();
@@ -204,7 +204,7 @@ function shn_auth_form_ch_pwd($error = false) {
     shn_form_submit(_("Change Password"));
 ?>
 
-</br>
+<br />
 <?php
     //close the form
     shn_form_fclose();
@@ -285,14 +285,14 @@ function shn_auth_form_reset_pwd($error = false) {
     shn_form_password("Confirm New Password", "re_password", null, $extra_opts);
     shn_form_fsclose();
 ?>
-</br>
+<br />
 
 <?php
     //create the submit button
     shn_form_submit(_("Reset Password"));
 ?>
 
-</br>
+<br />
 <?php
     //close the form
     shn_form_fclose();

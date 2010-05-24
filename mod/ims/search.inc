@@ -558,14 +558,14 @@ function _shn_ims_form_search_old() {
     shn_form_opt_select('opt_location_type', 'Location Level', $select_opts, null, null);
 ?></fieldset><?php
 ?>
-</br>
+<br />
     <center>
 <?php
     //create the submit button
     shn_form_submit(_("Search"));
 ?>
 </center>
-    </br>
+    <br />
 <?php
     //close the form
     shn_form_fclose();

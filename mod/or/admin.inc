@@ -134,7 +134,7 @@ function shn_or_adm_acl_install() {
     <div id="result_msg">
        <?php echo $msg; ?>
     </div>
-    </br>
+    <br />
 <?php
 }
 ?>

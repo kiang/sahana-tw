@@ -24,9 +24,9 @@ function shn_gis_default() {
         
 </p>
 
-<br></br>
+<br><br />
     <div><h3><b><em><?=(_("Features Include:")) ?></em></b></h3></div>
-<br></br>
+<br><br />
 <ul>
         <li><?php echo _('Provides a map based view of the disaster situation') ?></li>
         <li><?php echo _('Allows users to collaboratively add markers of the developing disaster situation'); ?></li>

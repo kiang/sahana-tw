@@ -11,7 +11,7 @@
 <br>
 {if !empty($pictureID)}
 <center><img style="padding-bottom: 1em;" src="?mod=vm&amp;act=display_image&amp;stream=image&amp;size=full&amp;id={$pictureID}" /></center>
-{/if} </br>
+{/if} <br />
 <table align="center" border="0">
 	<tr>
 		<br>
@@ -21,7 +21,7 @@
 	<tr>
 		<td><b>_("Gender:")</b></td>
 		<td>{$info.gender}</td>
-	</tr> </br>
+	</tr> <br />
 	{if $view_auth == VM_ACCESS_ALL && !empty($ids)}
 	<tr>
 		<td><b>ID:</b></td>
@@ -152,7 +152,7 @@ $vol_skills->display();
 	<br>
 		<td><b>_("Special Needs:") </b></td>
 		<td>{$special_needs}</td>
-	</br>
+	<br />
 	</tr>
 {/if}
 

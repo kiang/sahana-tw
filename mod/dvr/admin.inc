@@ -100,7 +100,7 @@ function shn_dvr_adm_checklist() {
     } ?>
 </tr>
 </table>
-<br></br>
+<br><br />
 <?php
     shn_form_submit(_("Update"), "name = 'selection'");
     shn_form_fsclose();
