@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-05-24 19:39+0800\n"
-"PO-Revision-Date: 2010-05-24 19:47+0800\n"
+"PO-Revision-Date: 2010-05-24 21:18+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -6161,7 +6161,7 @@ msgstr "Wiki地圖選項"
 #: mod/gis/wm_fns.inc:211
 #: mod/admin/mmc_main.inc:13
 msgid "Author"
-msgstr "作者"
+msgstr "原始訊息發送者"
 
 #: mod/gis/wm_fns.inc:212
 msgid "Publicly Editable"

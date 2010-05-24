@@ -245,7 +245,7 @@ function show_map_with_wiki_marker($array) {
         if(!empty($url)) {
             $markerHtml .= '<a href="'.$url.'" target="_blank">'.$url.'</a><br>';
         }
-        $markerHtml .= '<br><strong>' . _('Author:') . '</strong>';
+        $markerHtml .= '<br><strong>' . _('Author') . ':</strong>';
         $markerHtml .= $author . '<br>' . $edit;
         $markerHtml .= '</div>';
 ?>	
