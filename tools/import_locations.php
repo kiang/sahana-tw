@@ -18,6 +18,8 @@ $levels = array(
 $number = 24;
 $sql = 'INSERT INTO location (loc_uuid, parent_id, opt_location_type, name)
     VALUES (\'%s\',\'%s\',\'%s\',\'%s\')';
+//$db->Execute('TRUNCATE location;');
+//$db->Execute(sprintf($sql, 's5belc-23', '', 1, '台灣 Taiwan'));
 while($line = fgetcsv($fh, 4096)) {
     if(!is_array($line) || count($line) != 3) {
         continue;
@@ -27,14 +29,14 @@ while($line = fgetcsv($fh, 4096)) {
             $levels[2][$line[0]] = 's5belc-' . $number;
             ++$number;
         }
-        if(!isset($levels[3][$line[1]])) {
+        if(!isset($levels[3][$line[0]][$line[1]])) {
             $db->Execute(sprintf($sql, 's5belc-' . $number, $levels[2][$line[0]], '3', $line[1]));
-            $levels[3][$line[1]] = 's5belc-' . $number;
+            $levels[3][$line[0]][$line[1]] = 's5belc-' . $number;
             ++$number;
         }
-        if(!isset($levels[4][$line[2]])) {
-            $db->Execute(sprintf($sql, 's5belc-' . $number, $levels[3][$line[1]], '4', $line[2]));
-            $levels[4][$line[2]] = 's5belc-' . $number;
+        if(!isset($levels[4][$line[0]][$line[1]][$line[2]])) {
+            $db->Execute(sprintf($sql, 's5belc-' . $number, $levels[3][$line[0]][$line[1]], '4', $line[2]));
+            $levels[4][$line[0]][$line[1]][$line[2]] = 's5belc-' . $number;
             ++$number;
         }
     }
