@@ -19,6 +19,7 @@ function _shn_or_adm_sub_menu() {
     shn_adm_menuopen('');
     shn_adm_menuitem('adm_opt_org_type', _('Organization Types'));
     shn_adm_menuitem('adm_opt_sector_type', _('Organization Sectors'));
+    shn_adm_menuitem('adm_opt_org_service', _('Organization Services'));
     shn_adm_menuitem('adm_opt_org_sub_type', _('Relationship to the Holding Company'));
     shn_adm_menuclose();
 }
@@ -41,6 +42,11 @@ function shn_or_adm_opt_sector_type() {
 function shn_or_adm_opt_org_sub_type() {
     _shn_or_adm_sub_menu();
     _shn_or_adm_field_options_form('opt_org_sub_type');
+}
+
+function shn_or_adm_opt_org_service() {
+    _shn_or_adm_sub_menu();
+    _shn_or_adm_field_options_form('opt_org_service');
 }
 
 function _shn_or_update_option($optioncode, $optiondescription) {
@@ -115,8 +121,8 @@ function _shn_or_adm_field_options_form($type) {
     }
     $sql = "SELECT field_name, option_code, option_description  FROM field_options WHERE field_name = '{$type}'";
     $arr = $global['db']->GetAll($sql);
+    shn_form_fopen('adm_' . $type, null);
     if (!empty($arr)) {
-        shn_form_fopen('adm_' . $type, null);
         shn_form_fsopen(_('Update'));
         shn_form_hidden(array('seq' => 'update'));
         ?>

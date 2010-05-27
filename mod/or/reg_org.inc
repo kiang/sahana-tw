@@ -59,6 +59,20 @@ function _shn_or_regform_org($error = false) {
     } else {
         _shn_or_display_sector($error);
     }
+    echo '<div class="info">' . _('Other services : ') . '</div>';
+    $res = $db->Execute("SELECT option_code, option_description
+    FROM field_options WHERE field_name='opt_org_service'");
+    while(!$res->EOF) {
+        echo '<div style="float:left; margin: 20px;">';
+        echo '<input type="checkbox" name="services[]" value="' . $res->fields['option_code'] . '"';
+        if(isset($_SESSION['org']['services']) && in_array($res->fields['option_code'], $_SESSION['org']['services'])) {
+            echo ' checked="checked"';
+        }
+        echo '>';
+        echo $res->fields['option_description'];
+        echo '</div>';
+        $res->MoveNext();
+    }
     shn_form_fsclose();
     // base location
     //  $parent=_shn_or_get_start_loc();
@@ -113,8 +127,7 @@ function _shn_or_regform_org($error = false) {
 }
 
 function _shn_or_regconfirm_org() {
-    global $global;
-    global $conf;
+    global $global, $conf;
     $db = $global['db'];
 ?>
 <h2><?php echo _('Confirm Registration Details of ') . $_SESSION['org']['name'] ?></h2>
@@ -155,6 +168,16 @@ function _shn_or_regconfirm_org() {
         $count++;
     }
     shn_form_label(_("Organization Sector"), $sector);
+    $services = '';
+    $q = "SELECT option_description FROM field_options
+    WHERE field_name='opt_org_service'
+    AND option_code IN ('" . implode('\', \'', $_SESSION['org']['services']) . "')";
+    $res = $db->Execute($q);
+    while(!$res->EOF) {
+        $services .= $res->Fields("option_description") . ', ';
+        $res->MoveNext();
+    }
+    shn_form_label(_("Other services : "), $services);
     shn_form_fsclose();
     /*
     // base location
@@ -225,6 +248,20 @@ function _shn_or_regform_operation($error = false, $parent_org = null) {
     shn_form_fsclose();
     shn_form_fsopen(_("Organization Sector"));
     _shn_or_display_sector($error);
+    echo '<div class="info">' . _('Other services : ') . '</div>';
+    $res = $db->Execute("SELECT option_code, option_description
+    FROM field_options WHERE field_name='opt_org_service'");
+    while(!$res->EOF) {
+        echo '<div style="float:left; margin: 20px;">';
+        echo '<input type="checkbox" name="services[]" value="' . $res->fields['option_code'] . '"';
+        if(isset($_SESSION['org']['services']) && in_array($res->fields['option_code'], $_SESSION['org']['services'])) {
+            echo ' checked="checked"';
+        }
+        echo '>';
+        echo $res->fields['option_description'];
+        echo '</div>';
+        $res->MoveNext();
+    }
     shn_form_fsclose();
     // base location
     shn_form_fsopen(_("Base Location"));

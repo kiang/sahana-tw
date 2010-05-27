@@ -283,13 +283,15 @@ function _shn_or_viewform_org($org_id, $error = false) {
     include_once "lib_or.inc";
     global $global, $conf;
     $db = $global['db'];
-    $q = "SELECT om.o_uuid,om.parent_id,om.name,om.reg_no,om.man_power,om.resources FROM org_main om WHERE om.o_uuid='{$org_id}'";
+    $q = "SELECT om.o_uuid,om.parent_id,om.name,om.reg_no,om.man_power,
+    om.services,om.resources FROM org_main om WHERE om.o_uuid='{$org_id}'";
     $res_org = $db->Execute($q);
     if (!$res_org == NULL && !$res_org->EOF) {
         $parent = _shn_or_is_root($org_id);
         $org_name = $res_org->fields["name"];
         $reg_no = $res_org->fields["reg_no"];
         $parent_id = $res_org->fields['parent_id'];
+        $_SESSION['org']['services'] = explode(',', $res_org->fields['services']);
         if ($parent == true) {
             $type = "opt_org_type";
         } else {
@@ -372,6 +374,20 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
     shn_form_fsclose();
     shn_form_fsopen(_("Organization Sector"));
     _shn_or_display_sector($error, isset($or_sector_arr) ? $or_sector_arr : $_SESSION['org']['sector']);
+    echo '<div class="info">' . _('Other services : ') . '</div>';
+    $res = $db->Execute("SELECT option_code, option_description
+    FROM field_options WHERE field_name='opt_org_service'");
+    while(!$res->EOF) {
+        echo '<div style="float:left; margin: 20px;">';
+        echo '<input type="checkbox" name="services[]" value="' . $res->fields['option_code'] . '"';
+        if(isset($_SESSION['org']['services']) && in_array($res->fields['option_code'], $_SESSION['org']['services'])) {
+            echo ' checked="checked"';
+        }
+        echo '>';
+        echo $res->fields['option_description'];
+        echo '</div>';
+        $res->MoveNext();
+    }
     shn_form_fsclose();
     //$extra_opts["camps"]=true;
     //$extra_opts["org"]=true;
@@ -560,7 +576,7 @@ function _shn_or_view_org($org_id) {
     global $global, $conf;
     $db = $global['db'];
     $q = "SELECT om.o_uuid, om.parent_id, om.name, om.reg_no, om.man_power,
-    om.resources
+    om.resources, om.services
     FROM org_main om WHERE om.o_uuid='{$org_id}'";
     $res_org = $db->Execute($q);
     if (!$res_org == NULL && !$res_org->EOF) {
@@ -568,6 +584,17 @@ function _shn_or_view_org($org_id) {
         $org_name = $res_org->fields["name"];
         $reg_no = $res_org->fields["reg_no"];
         $parent_id = $res_org->fields['parent_id'];
+        $services = explode(',', $res_org->fields['services']);
+        $serviceNames = array();
+        $q = "SELECT option_description
+        FROM field_options
+        WHERE option_code IN ('" . implode('\',\'', $services) ."')
+        AND field_options.field_name='opt_org_service'";
+        $res = $db->Execute($q);
+        while(!$res->EOF) {
+            $serviceNames[] = $res->fields['option_description'];
+            $res->MoveNext();
+        }
         if ($parent == true) {
             $type = "opt_org_type";
         } else {
@@ -666,6 +693,7 @@ function _shn_or_view_org($org_id) {
     }
     echo '<div><span>' . _("Organization Type : ") . '</span><span>' . $org_type . '</span></div>';
     echo '<div><span>' . _("Organization Sector : ") . '</span><span>' . $sector_type . '</span></div>';
+    echo '<div><span>' . _("Other services : ") . '</span><span>' . implode(',', $serviceNames) . '</span></div>';
     shn_form_fsclose();
 
     shn_form_fsopen(_("Base Location"));

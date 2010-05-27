@@ -1003,6 +1003,7 @@ function _shn_or_check_org_reg_info_complete() {
         $_SESSION['org']['equipment'] = $_POST['equipment'];
     }
     $_SESSION['org']['resources'] = $_POST['resources'];
+    $_SESSION['org']['services'] = $_POST['services'];
     return $error;
 }
 function array_copy($src, &$dest, $start, $end) {

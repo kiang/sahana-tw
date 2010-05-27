@@ -65,7 +65,13 @@ function _shn_or_reg_org_cr() {
     if ($error != true) {
         //no validation done on other fields as they are not unique
         $privacy = 0;
-        $q = "insert into org_main(o_uuid,name,opt_org_type,reg_no,man_power,equipment,resources,privacy)values('{$org_id}','{$_SESSION['org']['name']}','{$_SESSION['org']['type']}','{$_SESSION['org']['reg_no']}','{$_SESSION['org']['man_power']}','{$_SESSION['org']['equipment']}','{$_SESSION['org']['resources']}',$privacy)";
+        $q = "insert into org_main(o_uuid,name,opt_org_type,reg_no,man_power,
+        equipment,services,resources,privacy)
+        values('{$org_id}','{$_SESSION['org']['name']}',
+        '{$_SESSION['org']['type']}','{$_SESSION['org']['reg_no']}',
+        '{$_SESSION['org']['man_power']}','{$_SESSION['org']['equipment']}',
+        '" . implode(',', $_SESSION['org']['services']) . "',
+        '{$_SESSION['org']['resources']}',$privacy)";
         $res = $db->Execute($q);
         $q = "insert into resource_to_incident(incident_id,x_uuid) values('{$_SESSION['user_pref_ims_incident_id']}','{$org_id}')";
         $res = $db->Execute($q);
@@ -167,7 +173,14 @@ function _shn_or_reg_operation_cr() {
         if ($error != true) {
             //no validation done on other fields as they are not unique
             $privacy = 0;
-            $q = "INSERT INTO org_main(o_uuid,parent_id,name,opt_org_type,reg_no,man_power,equipment,resources,privacy)VALUES('{$org_id}','{$_SESSION['org']['parent_id']}','{$_SESSION['org']['name']}','{$_SESSION['org']['type']}','{$_SESSION['org']['reg_no']}','{$_SESSION['org']['man_power']}','{$_SESSION['org']['equipment']}','{$_SESSION['org']['resources']}',$privacy)";
+            $q = "INSERT INTO org_main(o_uuid,parent_id,name,opt_org_type,
+            reg_no,man_power,equipment,services,resources,privacy)
+            VALUES('{$org_id}','{$_SESSION['org']['parent_id']}',
+            '{$_SESSION['org']['name']}','{$_SESSION['org']['type']}',
+            '{$_SESSION['org']['reg_no']}','{$_SESSION['org']['man_power']}',
+            '{$_SESSION['org']['equipment']}',
+            '" . implode(',', $_SESSION['org']['services']) . "',
+            '{$_SESSION['org']['resources']}',$privacy)";
             $res = $db->Execute($q);
             $q = "INSERT INTO resource_to_incident(incident_id,x_uuid) VALUES('{$_SESSION['user_pref_ims_incident_id']}','{$org_id}')";
             $res = $db->Execute($q);
@@ -456,7 +469,12 @@ function _shn_or_edit_org() {
     if (!$error) {
         $db = $global['db'];
         //no validation done on other fields as they are not unique
-        $q = "UPDATE org_main SET name='{$org_name}',opt_org_type='{$org_type}',reg_no='{$reg_no}',man_power='{$man_power}',equipment='{$equipment}',resources='{$resources}' where o_uuid='{$org_id}'";
+        $q = "UPDATE org_main SET name='{$org_name}',
+        opt_org_type='{$org_type}',reg_no='{$reg_no}',
+        man_power='{$man_power}', equipment='{$equipment}',
+        services='" . implode(',', $_SESSION['org']['services']) . "',
+        resources='{$resources}'
+        where o_uuid='{$org_id}'";
         $res = $db->Execute($q);
         $q = "DELETE FROM sector WHERE pgoc_uuid='{$org_id}'";
         $res = $db->Execute($q);

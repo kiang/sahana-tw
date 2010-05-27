@@ -618,6 +618,7 @@ CREATE TABLE org_main(
 	reg_no VARCHAR(100),
     	man_power VARCHAR(100),
 	equipment VARCHAR(100),
+        services VARCHAR( 255 ) NULL,
 	resources TEXT,
     	privacy INT(1) DEFAULT 0,
     	archived BOOL DEFAULT 0, 
