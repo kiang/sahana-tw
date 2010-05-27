@@ -75,10 +75,10 @@ function _shn_or_reg_org_cr() {
             $res = $db->Execute($q);
             $i = $i + 1;
         }
-        $q = "insert into location_details(poc_uuid,location_id,address) values('{$org_id}','{$_SESSION['org']['loc']}','{$_SESSION['org']['contact_address']}')";
+        $q = "insert into location_details(poc_uuid,location_id,address) values('{$org_id}','{$_SESSION['org']['loc']}','{$_SESSION['org']['loc_txt']}')";
         $res = $db->Execute($q);
-        if ($_SESSION['org']['loc_txt'] != null) {
-            $q = "insert into contact(pgoc_uuid,opt_contact_type,contact_value) values('{$org_id}','loc_txt','{$_SESSION['org']['loc_txt']}')";
+        if ($_SESSION['org']['contact_address'] != null) {
+            $q = "insert into contact(pgoc_uuid,opt_contact_type,contact_value) values('{$org_id}','loc_txt','{$_SESSION['org']['contact_address']}')";
             $res = $db->Execute($q);
         }
         if ($_SESSION['org']['contact_phone'] != null) {
@@ -177,7 +177,7 @@ function _shn_or_reg_operation_cr() {
                 $res = $db->Execute($q);
                 $i = $i + 1;
             }
-            $q = "INSERT INTO location_details(poc_uuid,location_id,address) VALUES('{$org_id}','{$_SESSION['org']['loc']}','{$_SESSION['org']['contact_address']}')";
+            $q = "INSERT INTO location_details(poc_uuid,location_id,address) VALUES('{$org_id}','{$_SESSION['org']['loc']}','{$_SESSION['org']['loc_txt']}')";
             $res = $db->Execute($q);
             if ($_SESSION['org']['contact_phone'] != null) {
                 $q = "INSERT INTO contact(pgoc_uuid,opt_contact_type,contact_value) VALUES('{$org_id}','curr','{$_SESSION['org']['contact_phone']}')";
@@ -478,16 +478,16 @@ function _shn_or_edit_org() {
         }
         */
         // if($loc!=-1){
-        $q = "UPDATE location_details SET location_id='{$loc}',address='{$contact_address}' WHERE poc_uuid='{$org_id}'";
+        $q = "UPDATE location_details SET location_id='{$loc}',address='{$loc_txt}' WHERE poc_uuid='{$org_id}'";
         $res = $db->Execute($q);
         //}
         $q = "UPDATE gis_location SET map_northing={$lat},map_easting={$lon} WHERE poc_uuid='{$org_id}'";
         $res = $db->Execute($q);
-        if ($loc_txt != null) {
+        if ($contact_address != null) {
             if (shn_or_contact_data_exist($org_id, 'loc_txt') == true) {
-                $q = "UPDATE contact SET contact_value='{$loc_txt}' WHERE pgoc_uuid='{$org_id}' and opt_contact_type='loc_txt'";
+                $q = "UPDATE contact SET contact_value='{$contact_address}' WHERE pgoc_uuid='{$org_id}' and opt_contact_type='loc_txt'";
             } else {
-                $q = "INSERT INTO contact(pgoc_uuid,opt_contact_type,contact_value) VALUES('{$org_id}','loc_txt','{$loc_txt}')";
+                $q = "INSERT INTO contact(pgoc_uuid,opt_contact_type,contact_value) VALUES('{$org_id}','loc_txt','{$contact_address}')";
             }
             $res = $db->Execute($q);
         }

@@ -18,16 +18,16 @@ function shn_or_org_search($limit = null, $org_name = '', $org_type = 'all', $se
     global $global;
     include_once $global['approot'] . "/inc/lib_location.inc";
     $VARCHAR = 100;
+    $addr = trim($addr);
     $db = $global["db"];
     $search_str = "SELECT DISTINCT o_uuid FROM org_main";
     if ($sector != 'all') {
         $search_str.= ",sector";
     }
-    if (strlen(trim($addr)) != 0) {
-        $search_str.= ",contact";
+    if ($loc != - 1 || !empty($addr)) {
+        $search_str.= ",location_details";
     }
     if ($loc != - 1) {
-        $search_str.= ",location_details";
         $loc_arr = array($loc);
         $loc_arr = shn_location_get_descendants($loc, &$loc_arr);
         $loc_str = shn_or_create_database_IN_array($loc_arr);
@@ -42,11 +42,14 @@ function shn_or_org_search($limit = null, $org_name = '', $org_type = 'all', $se
     if ($org_type != 'all') {
         $search_str.= " and org_main.opt_org_type='{$org_type}'";
     }
-    if (strlen(trim($addr)) != 0) {
-        $search_str.= " and pgoc_uuid=org_main.o_uuid and contact_value LIKE  '%{$loc_txt}%' and opt_contact_type='loc_txt'";
+    if (!empty($addr)) {
+        $search_str.= " AND location_details.address LIKE  '%{$addr}%'";
     }
     if ($loc != - 1) {
-        $search_str.= " and location_details.location_id IN {$loc_str} and location_details.poc_uuid=org_main.o_uuid";
+        $search_str.= " AND location_details.location_id IN {$loc_str}";
+    }
+    if (!empty($addr) || $loc != - 1) {
+        $search_str.= " AND location_details.poc_uuid=org_main.o_uuid";
     }
     $org_list = array();
     //print the paging links if paging is enabled
@@ -645,7 +648,7 @@ function _shn_or_display_contact_person($error = false, $confirm = false, $po_uu
     }
 ?><div class="info"><?php echo _("Please provide contact details that can be used to contact your organization in a disaster"); ?> </div><br /><?
     if (!empty($error)) {
-        $contact_address = $_SESSION['org']['contact_address'];
+        $contact_address = $_SESSION['org']['loc_txt'];
         $contact_phone = $_SESSION['org']['contact_phone'];
         $contact_mobile = $_SESSION['org']['contact_mobile'];
         $contact_name = $_SESSION['org']['contact_name'];
@@ -656,7 +659,7 @@ function _shn_or_display_contact_person($error = false, $confirm = false, $po_uu
     if (!shn_is_null($po_uuid)) {
         global $global;
         $db = $global['db'];
-        $q = "SELECT address FROM location_details WHERE poc_uuid='{$po_uuid}'";
+        $q = "SELECT contact_value FROM contact WHERE pgoc_uuid='{$po_uuid}' AND opt_contact_type='loc_txt'";
         $res_addr = $db->Execute($q);
         $contact_address = $res_addr->fields[0];
         $q = "SELECT contact_value FROM contact WHERE pgoc_uuid='{$po_uuid}' AND opt_contact_type='curr'";

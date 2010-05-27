@@ -160,14 +160,11 @@ function _shn_display_org($org_id, $no = null) {
     $db = $global["db"];
     $q = "SELECT o_uuid,parent_id,name,man_power,equipment,resources FROM org_main WHERE o_uuid='{$org_id}'";
     $res_org = $db->Execute($q);
-    $q = "SELECT loc_uuid FROM location,location_details WHERE poc_uuid='{$org_id}' AND location_details.location_id=location.loc_uuid";
+    $q = "SELECT loc_uuid, location_details.address FROM location,location_details
+    WHERE poc_uuid='{$org_id}' AND location_details.location_id=location.loc_uuid";
     $res_temp = $db->Execute($q);
     $loc = $res_temp->fields["loc_uuid"];
-    $q = "SELECT contact_value FROM contact WHERE pgoc_uuid='{$org_id}' AND opt_contact_type='loc_txt'";
-    $res = $db->Execute($q);
-    $loc_txt = $res->fields["contact_value"];
-    $q = "SELECT address FROM location_details WHERE poc_uuid='{$org_id}'";
-    $res_addr = $db->Execute($q);
+    $loc_txt = $res_temp->fields["address"];
     $q = "SELECT contact_value FROM contact WHERE pgoc_uuid='{$org_id}' AND opt_contact_type='curr'";
     $res_phone = $db->Execute($q);
     $q = "SELECT contact_value FROM contact WHERE pgoc_uuid='{$org_id}' AND opt_contact_type='pmob'";
@@ -191,13 +188,12 @@ field_options.option_code=org_main.opt_org_type and field_options.field_name='" 
 field_options.option_code=sector.opt_sector and field_options.field_name='opt_sector_type'";
     $res_sector = $db->Execute($q);
     $location = _shn_org_location_string($loc);
-    //$location .= "<br />".$loc_txt;
     
 ?>
 		<tr>
 			<td><? if ($no != null) {
         echo $no;
-    } ?></td>
+    }; ?></td>
 			<td>
                             <a href="index.php?mod=or&act=show_org&org_id=<?php echo $org_id ?>"><?php echo $res_org->fields['name'] ?></a>
                             <a href="index.php?mod=or&act=edit_org&org_id=<?php echo $org_id; ?>">[<?php echo _("edit") ?>]</a>
@@ -320,16 +316,14 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
                 $res_incident->MoveNext();
             }
         }
-        $q = "SELECT location_id FROM location_details WHERE poc_uuid='{$org_id}'";
+        $q = "SELECT location_id, address FROM location_details WHERE poc_uuid='{$org_id}'";
         $res_loc = $db->Execute($q);
         if (!$res_loc == NULL && !$res_loc->EOF) {
             $loc = $res_loc->fields["location_id"];
+            $loc_txt = $res_loc->fields["address"];
         } else {
             $loc = - 1;
         }
-        $q = "SELECT contact_value FROM contact WHERE pgoc_uuid='{$org_id}' AND opt_contact_type='loc_txt'";
-        $res = $db->Execute($q);
-        $loc_txt = $res->fields["contact_value"];
         $q = "SELECT * FROM gis_location WHERE poc_uuid='{$org_id}'";
         $res = $db->Execute($q);
         $lat = $res->fields["map_northing"];
@@ -601,20 +595,20 @@ function _shn_or_view_org($org_id) {
             $parent_data_arr = explode(":", $parent_node);
             $org_type .= " of <a href='index.php?mod=or&act=show_org&org_id=" . $parent_data_arr[0] . "'>" . $parent_data_arr[1] . "</a>";
         }
-        $q = "SELECT location_id FROM location_details WHERE poc_uuid='{$org_id}'";
+        $q = "SELECT location_id, address FROM location_details WHERE poc_uuid='{$org_id}'";
         $res_loc = $db->Execute($q);
         if (!$res_loc == NULL && !$res_loc->EOF) {
-            $loc = $res_loc->fields["location_id"];
-            $location = _shn_org_location_string($loc);
+            $location = _shn_org_location_string($res_loc->fields["location_id"]) . $res_loc->fields["address"];
         } else {
             $location = '';
         }
-        $q = "SELECT address FROM location_details WHERE poc_uuid='{$org_id}'";
-        $res_addr = $db->Execute($q);
-        $location .= $res_addr->fields[0];
         $contactArray = array(
             'name' => array(
                 'label' => _("Name : "),
+                'value' => '',
+            ),
+            'loc_txt' => array(
+                'label' => _("Address : "),
                 'value' => '',
             ),
             'curr' => array(
@@ -638,7 +632,6 @@ function _shn_or_view_org($org_id) {
                 'value' => '',
             ),
         );
-
         $q = "SELECT opt_contact_type, contact_value FROM contact
         WHERE pgoc_uuid='{$org_id}'
         AND opt_contact_type IN ('" . implode('\',\'', array_keys($contactArray)). "')";
