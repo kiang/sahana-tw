@@ -152,7 +152,6 @@ function shn_or_view_org_submit() {
     include_once ("process_org.inc");
     include_once ("view_org.inc");
     include_once ("reg_org.inc");
-    // require_once ($global['approot'].'inc/lib_security/authenticate.inc');
     $act = $_POST['action'];
     switch ($act) {
         case "confirm_edit":
@@ -218,6 +217,10 @@ function shn_or_view_org() {
 function shn_or_edit_org() {
     include_once ("view_org.inc");
     _shn_or_viewform_org($_GET['org_id']);
+}
+function shn_or_show_org() {
+    include_once ("view_org.inc");
+    _shn_or_view_org($_GET['org_id']);
 }
 function shn_or_drill_report_loc() {
     include_once ("report.inc");
@@ -305,4 +308,3 @@ function shn_or_search_cr() {
 	</div>
     <?php
 }
-?>

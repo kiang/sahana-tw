@@ -20,7 +20,7 @@
 	</usercase>
 	<usercase name="Organization Registration View">
 		<functions>
-			<function>shn_or_edit_org</function>
+			<function>shn_or_show_org</function>
 		</functions>
 		<tables>
 				<table perm="r">org_main</table>
@@ -32,6 +32,7 @@
 	</usercase>
 	<usercase name="Organization Registration Edit/Delete">
 		<functions>
+                        <function>shn_or_edit_org</function>
 			<function>shn_or_view_org_submit</function>
 		</functions>
 		<tables>

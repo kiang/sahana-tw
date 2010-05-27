@@ -20,32 +20,37 @@
  * show basic map
  * called by shn_gis_map in gis api
  */
-function show_map($opt = null) {
-    global $global;
-    global $conf;
+function show_map($opt = array()) {
+    global $global, $conf;
     $key = $conf['mod_gis_google_key'];
 ?>
-	<script src="http://maps.google.com/maps?file=api&v=2&key=<?php echo $key ?>" type="text/javascript"></script>
-	<script type="text/javascript">
-	  
-	//<![CDATA[
-        var onloadfunc = window.onload;
-	window.onload=function show_map_gms()
-	{
-			
-		//alert('map');
-	
-	       var map = new GMap2(document.getElementById("map"));
-				 map.addControl(new GLargeMapControl());
-	       //map.addControl(new GSmallMapControl());
-				 map.addControl(new GMapTypeControl());//satellite image switch
-				 
-				map.setCenter(new GLatLng(<?=$conf['mod_gis_center_y'] != '' ? $conf['mod_gis_center_y'] : 8.5 ?>,<?=$conf['mod_gis_center_x'] != '' ? $conf['mod_gis_center_x'] : 79.5 ?>), <?=$conf['mod_gis_zoom'] ?>,G_SATELLITE_MAP);
-		onloadfunc();
-	}		
-//]]>	
+<script src="http://maps.google.com/maps?file=api&v=2&key=<?php echo $key ?>" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+        $(function() {
+            var map = new GMap2($('#map').get(0));
+            map.addControl(new GLargeMapControl());
+            map.addControl(new GMapTypeControl());
+            map.setCenter(new GLatLng(<?php echo $conf['mod_gis_center_y'] != '' ? $conf['mod_gis_center_y'] : 8.5 ?>,<?php echo $conf['mod_gis_center_x'] != '' ? $conf['mod_gis_center_x'] : 79.5 ?>), <?php echo $conf['mod_gis_zoom']; ?>,G_SATELLITE_MAP);
+            <?php if(!empty($opt['lon']) && !empty($opt['lat']) && !empty($opt['title'])): ?>
+            function createMarker(point,html) {
+                var marker = new GMarker(point);
+                GEvent.addListener(marker, "click", function() {
+                    marker.openInfoWindowHtml(html);
+                });
+                return marker;
+            }
+            var point = new GLatLng(<?php echo $opt['lon']; ?>,<?php echo $opt['lat']; ?>);
+            var marker = new GMarker(point);
+            GEvent.addListener(marker, "click", function() {
+                marker.openInfoWindowHtml('<?php echo $opt['title']; ?>');
+            });
+            map.addOverlay(marker);
+            <?php endif; ?>
+        })
+//]]>
 </script>
-	<div id="map" style="width: <?=$conf['mod_gis_width'] ?>px; height: <?=$conf['mod_gis_height'] ?>px"></div>
+<div id="map" style="width: <?=$conf['mod_gis_width'] ?>px; height: <?=$conf['mod_gis_height'] ?>px"></div>
 <?
 }
 /**

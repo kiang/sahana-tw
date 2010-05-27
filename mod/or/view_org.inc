@@ -176,7 +176,6 @@ function _shn_display_org($org_id, $no = null) {
     $res_email = $db->Execute($q);
     $parent = _shn_or_is_root($org_id);
     if ($parent == false) {
-        //if($no==null){
         $type = "opt_org_sub_type";
         $parent_node = _shn_or_get_parent($org_id);
         $parent_data_arr = split(":", $parent_node);
@@ -187,7 +186,7 @@ function _shn_display_org($org_id, $no = null) {
     $q = "SELECT option_description FROM field_options,org_main WHERE o_uuid='{$org_id}' and
 field_options.option_code=org_main.opt_org_type and field_options.field_name='" . $type . "'";
     $res_type = $db->Execute($q);
-    $org_type = $res_type->fields['option_description'];
+    $org_type = _($res_type->fields['option_description']);
     $q = "SELECT option_description FROM field_options,sector WHERE pgoc_uuid='{$org_id}' and
 field_options.option_code=sector.opt_sector and field_options.field_name='opt_sector_type'";
     $res_sector = $db->Execute($q);
@@ -199,27 +198,16 @@ field_options.option_code=sector.opt_sector and field_options.field_name='opt_se
 			<td><? if ($no != null) {
         echo $no;
     } ?></td>
-			<td><?php
-    /*
-    $parent=$res_org->fields[1];
-    if($parent>0 && $indent){
-    echo "<div id='parent'>";
-    }*/
-?> <a
-				href="index.php?mod=or&act=edit_org&org_id=<?php echo $org_id ?>"><?php echo $res_org->fields['name'] ?></a>
-				<?php
-    /*
-    if($parent>0 && $indent){
-    echo "</div>";
-    }*/
-?></td>
+			<td>
+                            <a href="index.php?mod=or&act=show_org&org_id=<?php echo $org_id ?>"><?php echo $res_org->fields['name'] ?></a>
+                            <a href="index.php?mod=or&act=edit_org&org_id=<?php echo $org_id; ?>">[<?php echo _("edit") ?>]</a>
+			</td>
 			<td><?php
     $incidents = _shn_org_get_incidents($org_id);
     foreach($incidents as $i) {
         echo $i[1] . "<br />";
     }
-?> <a
-				href="index.php?mod=admin&act=ims_assign&id=<?php echo $res_org->fields["o_uuid"] ?>"><?php echo _("Assign to more incidents") ?></a></td>
+?> <a href="index.php?mod=admin&act=ims_assign&id=<?php echo $res_org->fields["o_uuid"] ?>"><?php echo _("Assign to more incidents") ?></a></td>
 			<td><?php
     while (!$res_sector->EOF) {
         echo $res_sector->fields["option_description"] . "<br />";
@@ -571,4 +559,157 @@ field_options.option_code=sector.opt_sector AND field_options.field_name='opt_se
 
 		</tr>
 		<?php
+}
+
+function _shn_or_view_org($org_id) {
+    include_once "lib_or.inc";
+    global $global, $conf;
+    $db = $global['db'];
+    $q = "SELECT om.o_uuid, om.parent_id, om.name, om.reg_no, om.man_power,
+    om.resources
+    FROM org_main om WHERE om.o_uuid='{$org_id}'";
+    $res_org = $db->Execute($q);
+    if (!$res_org == NULL && !$res_org->EOF) {
+        $parent = _shn_or_is_root($org_id);
+        $org_name = $res_org->fields["name"];
+        $reg_no = $res_org->fields["reg_no"];
+        $parent_id = $res_org->fields['parent_id'];
+        if ($parent == true) {
+            $type = "opt_org_type";
+        } else {
+            $type = "opt_org_sub_type";
+        }
+        $q = "SELECT option_description
+        FROM field_options,org_main
+        WHERE o_uuid='{$org_id}'
+        AND field_options.option_code=org_main.opt_org_type
+        AND field_options.field_name='$type'";
+        $res_type = $db->Execute($q);
+        $org_type = _($res_type->fields["option_description"]);
+        $q = "SELECT option_description
+        FROM field_options,sector
+        WHERE pgoc_uuid='{$org_id}'
+        AND field_options.option_code=sector.opt_sector
+        AND field_options.field_name='opt_sector_type'";
+        $res_sector = $db->Execute($q);
+        $sector_type = _($res_sector->fields["option_description"]);
+        
+        if ($parent) {
+            $parent_data = '';
+        } else {
+            $parent_node = _shn_or_get_parent($org_id);
+            $parent_data_arr = explode(":", $parent_node);
+            $org_type .= " of <a href='index.php?mod=or&act=show_org&org_id=" . $parent_data_arr[0] . "'>" . $parent_data_arr[1] . "</a>";
+        }
+        $q = "SELECT location_id FROM location_details WHERE poc_uuid='{$org_id}'";
+        $res_loc = $db->Execute($q);
+        if (!$res_loc == NULL && !$res_loc->EOF) {
+            $loc = $res_loc->fields["location_id"];
+            $location = _shn_org_location_string($loc);
+        } else {
+            $location = '';
+        }
+        $q = "SELECT address FROM location_details WHERE poc_uuid='{$org_id}'";
+        $res_addr = $db->Execute($q);
+        $location .= $res_addr->fields[0];
+        $contactArray = array(
+            'name' => array(
+                'label' => _("Name : "),
+                'value' => '',
+            ),
+            'curr' => array(
+                'label' => _("Phone : "),
+                'value' => '',
+            ),
+            'pmob' => array(
+                'label' => _("Mobile No : "),
+                'value' => '',
+            ),
+            'fax' => array(
+                'label' => _("Fax : "),
+                'value' => '',
+            ),
+            'email' => array(
+                'label' => _("Email : "),
+                'value' => '',
+            ),
+            'web' => array(
+                'label' => _("Website : "),
+                'value' => '',
+            ),
+        );
+
+        $q = "SELECT opt_contact_type, contact_value FROM contact
+        WHERE pgoc_uuid='{$org_id}'
+        AND opt_contact_type IN ('" . implode('\',\'', array_keys($contactArray)). "')";
+        $res = $db->Execute($q);
+        while(!$res->EOF) {
+            $contactArray[$res->fields['opt_contact_type']]['value'] = $res->fields['contact_value'];
+            $res->MoveNext();
+        }
+        $q = "select man_power,equipment,resources from org_main where o_uuid='{$org_id}'";
+        $res_org = $db->Execute($q);
+        if (!$res_org == NULL && !$res_org->EOF) {
+            $man_power = $res_org->fields[0];
+            $equipment = $res_org->fields[1];
+            $resources = $res_org->fields[2];
+        }
+        $q = "SELECT * FROM gis_location WHERE poc_uuid='{$org_id}'";
+        $res = $db->Execute($q);
+        $lat = $res->fields["map_northing"];
+        $lon = $res->fields["map_easting"];
+    } else {
+        echo '<script type="text/javascript">document.location=\'index.php?mod=or&act=view_org\'</script>';
+        return;
+    }
+    echo '<h2>' . _("Organization Registration Information of ") . '<em>' . $org_name . '</em></h2>';
+    shn_form_fopen("view_org_submit", null, $form_opts);
+    shn_form_fsopen(_('Primary Details'));
+    echo '<div><span>' . _("Organization Name : ") . '</span><span>' . $org_name . '</span></div>';
+    if ($parent) {
+        echo '<div><span>' . _("Registration Number : ") . '</span><span>' . $reg_no . '</span></div>';
+    }
+    echo '<div><span>' . _("Organization Type : ") . '</span><span>' . $org_type . '</span></div>';
+    echo '<div><span>' . _("Organization Sector : ") . '</span><span>' . $sector_type . '</span></div>';
+    shn_form_fsclose();
+
+    shn_form_fsopen(_("Base Location"));
+    echo '<div><span>' . _("Address : ") . '</span><span>' . $location . $loc_txt . '</span></div>';
+    shn_form_fsclose();
+
+    shn_form_fsopen(_("Map Location"));
+    echo '<div><span>' . _("Latitude : ") . '</span><span>' . $lat . '</span></div>';
+    echo '<div><span>' . _("Longitude : ") . '</span><span>' . $lon . '</span></div>';
+    $showMap = ((float)$lat + (float)$lon) > 0;
+    if ($conf['gis'] && $showMap) {
+        $plugin_name = $conf['mod_gis_dflt'];
+        include $global['approot'] . "/mod/gis/plugins/" . "$plugin_name" . "/handler_" . "$plugin_name" . ".inc";
+        show_map(array(
+            'lat' => $lat,
+            'lon' => $lon,
+            'title' => $org_name,
+        ));
+        shn_form_fsclose();
+    }
+    shn_form_fsclose();
+
+    shn_form_fsopen(_("Contact Information"));
+    foreach($contactArray AS $contact) {
+        echo '<div><span>' . $contact['label'] . '</span><span>' . $contact['value'] . '</span></div>';
+    }
+    shn_form_fsclose();
+    shn_form_fsopen(_("Facilities Avaliable"));
+    echo '<div><span>' . _("Man Power") . '</span><span>' . $man_power . '</span></div>';
+    echo '<div><span>' . _("Equipment") . '</span><span>' . $equipment . '</span></div>';
+    echo '<div><span>' . _("Resources") . '</span><span>' . $resources . '</span></div>';
+    shn_form_fsclose();
+    echo '<br /><div align="center">';
+    //create the submit button
+    $extra_opts['br'] = false;
+    $extra_opts['req'] = false;
+    shn_form_button(_("Close"), "onClick=\"document.location='index.php?mod=or&act=view_org';\"", $extra_opts);
+    shn_form_button(_("Edit"), "onClick=\"document.location='index.php?mod=or&act=edit_org&org_id={$org_id}';\"", $extra_opts);
+    echo '</div>';
+    //close the form
+    shn_form_fclose(false);
 }
