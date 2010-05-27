@@ -277,8 +277,8 @@ function shn_wiki_map_commit() {
     $edit = ($_SESSION['edit_public'] == 'edit') ? 1 : 0;
     $view_public = ($_SESSION['view_public'] == 'view') ? 1 : 0;
     $_SESSION['wiki_text'] = trim($_SESSION['wiki_text']);
-    if(!empty($_SESSION['wiki_text']) && !empty($_SESSION['wiki_evnt_date'])) {
-        $_SESSION['wiki_text'] = $_SESSION['wiki_evnt_date'] . ' / ' . $_SESSION['wiki_text'];
+    if(!empty($_SESSION['wiki_name']) && !empty($_SESSION['wiki_evnt_date'])) {
+        $_SESSION['wiki_name'] = $_SESSION['wiki_evnt_date'] . ' / ' . $_SESSION['wiki_name'];
     }
     $query = "insert into gis_wiki (wiki_uuid,gis_uuid,name,description,opt_category,url,event_date,editable,author,approved)  values ('{$wiki_id}','{$gis_id}','{$_SESSION['wiki_name']}','{$_SESSION['wiki_text']}','{$_SESSION['opt_wikimap_type']}', '{$_SESSION['wiki_url']}','{$_SESSION['wiki_evnt_date']}','{$edit}','{$_SESSION['wiki_author']}','{$view_public}')";
     $res = $db->Execute($query);
