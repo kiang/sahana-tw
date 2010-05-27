@@ -656,6 +656,8 @@ function _shn_or_view_org($org_id) {
         return;
     }
     echo '<h2>' . _("Organization Registration Information of ") . '<em>' . $org_name . '</em></h2>';
+    $form_opts['name'] = 'view';
+    $form_opts['req_message'] = false;
     shn_form_fopen("view_org_submit", null, $form_opts);
     shn_form_fsopen(_('Primary Details'));
     echo '<div><span>' . _("Organization Name : ") . '</span><span>' . $org_name . '</span></div>';
@@ -700,9 +702,13 @@ function _shn_or_view_org($org_id) {
     //create the submit button
     $extra_opts['br'] = false;
     $extra_opts['req'] = false;
-    shn_form_button(_("Close"), "onClick=\"document.location='index.php?mod=or&act=view_org';\"", $extra_opts);
-    shn_form_button(_("Edit"), "onClick=\"document.location='index.php?mod=or&act=edit_org&org_id={$org_id}';\"", $extra_opts);
+    shn_form_button(_("Close"), "onClick='change_action(\"exit\")'", $extra_opts);
+    shn_form_button(_("Edit"), "onClick='change_action(\"edit\")'", $extra_opts);
+    shn_form_button(_("Delete"), "onClick='change_action(\"del\")'", $extra_opts);
+    shn_form_hidden(array('action' => '0'));
+    shn_form_hidden(array('org_id' => $org_id));
     echo '</div>';
+    _shn_or_action_change_javascript("view", "action");
     //close the form
     shn_form_fclose(false);
 }
