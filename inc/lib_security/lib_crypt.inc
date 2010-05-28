@@ -22,7 +22,7 @@ global $global;
 require_once "constants.inc";
 require_once ($global['approot'] . 'inc/lib_security/lib_auth.inc');
 require_once "errors.inc";
-define(ADODB_SESSION, $global['approot'] . "/3rd/adodb/session");
+define('ADODB_SESSION', $global['approot'] . "/3rd/adodb/session");
 include_once ADODB_SESSION . '/crypt.inc.php';
 function encrypt($data, $key) {
     $md5crypt = & new MD5Crypt();
