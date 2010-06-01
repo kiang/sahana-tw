@@ -478,6 +478,8 @@ class SearchQuery {
         $this->__joins[] = " LEFT OUTER JOIN person_uuid ON person_status.p_uuid = person_uuid.p_uuid ";
         $this->__where[] = " ((person_uuid.full_name LIKE '%{$this->__name}%')
                 OR (person_uuid.family_name LIKE '%{$this->__name}%')
+                OR (CONCAT(person_uuid.family_name,person_uuid.full_name) = '{$this->__name}')
+                OR (CONCAT(person_uuid.full_name,person_uuid.family_name) = '{$this->__name}')
                 OR (person_uuid.l10n_name LIKE '%{$this->__name}%')
                 OR (person_uuid.custom_name LIKE '%{$this->__name}%')) ";
     }
