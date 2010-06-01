@@ -119,7 +119,23 @@ function _shn_or_regform_org($error = false) {
     //close the form
     shn_form_hidden(array('org_type' => '1'));
     shn_form_fclose();
-?>				     
+?>
+<script type="text/javascript">
+//<![CDATA[
+    $(function() {
+        var selectedStack = [];
+        $('#optSectorType').change(function() {
+            var values = $(this).val();
+            if(values.length <= 3) {
+                selectedStack = values;
+            } else {
+                alert('<?php echo _('You could only select 3 options in this field.'); ?>');
+                $(this).val(selectedStack);
+            }
+        });
+    });
+//]]>
+</script>
 </div>
 <?php
     // end of form
