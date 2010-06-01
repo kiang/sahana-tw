@@ -155,11 +155,11 @@ function _shn_cr_cadd_chk($errors = false) {
     }
     $_SESSION['contact_mob'] = $_POST['contact_mob'];
     $_SESSION['occupation'] = $_POST['occupation'];
-    $_SESSION['cr_1'] = $_POST['1'];
-    $_SESSION['cr_2'] = $_POST['2'];
-    $_SESSION['cr_3'] = $_POST['3'];
-    $_SESSION['cr_4'] = $_POST['4'];
-    $_SESSION['cr_5'] = $_POST['5'];
+    $_SESSION['cr_1'] = $_POST['loc_select_1'];
+    $_SESSION['cr_2'] = $_POST['loc_select_2'];
+    $_SESSION['cr_3'] = $_POST['loc_select_3'];
+    $_SESSION['cr_4'] = $_POST['loc_select_4'];
+    $_SESSION['cr_5'] = $_POST['loc_select_5'];
     if (isset($_POST['hospital'])) {
         $_SESSION['hospital'] = true;
     }
@@ -381,15 +381,13 @@ function _shn_cr_get_locid() {
  * @access private
  */
 function _shn_cr_cadd_commit_db() {
-    global $global;
-    global $conf;
+    global $global, $conf;
     include_once ($global['approot'] . '/inc/lib_uuid.inc');
     $db = $global['db'];
     $uid = shn_create_uuid('c');
     $puid = shn_create_uuid('p');
     shn_db_insert_phonetic('camp_name', $uid);
     $loc_id = _shn_cr_get_locid();
-    $loc_id = $_SESSION['cr_loc'];
     //enter into camp table
     $q = "INSERT INTO camp_general(c_uuid,name,location_id,opt_camp_type,address,capacity) VALUES('{$uid}','{$_SESSION['camp_name']}','{$loc_id}','{$_SESSION['opt_camp_type']}','{$_SESSION['camp_address']}','{$_SESSION['camp_capacity']}')";
     $res = $db->Execute($q);

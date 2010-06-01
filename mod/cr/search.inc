@@ -97,14 +97,24 @@ function _shn_cr_srch_rst_address($camp_name, $type = 'all') {
  * @param mixed $type Camp type or All types
  */
 function _shn_cr_srch_rst($camp_name, $type) {
-    global $global;
-    global $conf;
+    global $global, $conf;
     $db = $global['db'];
     //$db->debug=true;
     if ($_REQUEST['edt'] == 'true') $edt = true;
     // Specific Type search
-    $query = " select cg.c_uuid,cg.name,cg.address,cg.location_id," . " option_description,  total,capacity from camp_general as cg, camp_reg as cr , field_options as fo  where cg.c_uuid=cr.c_uuid " . (($type == "all") ? "" : " AND option_code='{$type}' ") . " AND field_name='opt_camp_type'  AND opt_camp_type=fo.option_code " . ((null == $camp_name) ? "" : " AND cg.name LIKE '%{$camp_name}%' ");
-    //$res_cmp =$db->Execute($query);
+    $query = "SELECT cg.c_uuid, cg.name, cg.address, cg.location_id,
+        fo.option_description, cr.total, cg.capacity
+        FROM camp_general AS cg
+        INNER JOIN camp_reg AS cr ON cr.c_uuid = cg.c_uuid
+        INNER JOIN field_options as fo ON fo.option_code = cg.opt_camp_type
+        AND fo.field_name = 'opt_camp_type'
+        WHERE 1";
+    if(!empty($type) && $type != 'all') {
+        $query .= " AND cg.opt_camp_type = '{$type}'";
+    }
+    if(!empty($camp_name)) {
+        $query .= " AND cg.name LIKE '%{$camp_name}%'";
+    }
     
 ?>
 	<h1><?php echo _("Search Results") ?></h1>
