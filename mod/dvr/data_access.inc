@@ -259,7 +259,17 @@ function get_identity_to_person($p_uuid) {
 function get_group_type_and_head_details($group_id) {
     global $global;
     $db = $global['db'];
-    $sql = "select pp.opt_group_type as group_type,pe.p_uuid as head_id ,pe.full_name as full_name,pe.l10n_name as l10n_name,pe.family_name as family_name ,id.serial as nic from group_details pg,person_uuid pe,pgroup pp,identity_to_person id where pp.g_uuid=pg.g_uuid and pe.p_uuid=pg.head_uuid  and id.p_uuid=pe.p_uuid and   id.opt_id_type='idcard' and  pg.g_uuid='{$group_id}'";
+    $sql = 'SELECT pp.opt_group_type as group_type,
+    pe.p_uuid as head_id,
+    pe.full_name as full_name,
+    pe.l10n_name as l10n_name,
+    pe.family_name as family_name,
+    id.serial as nic
+    FROM pgroup AS pp
+    INNER JOIN group_details AS pg ON pg.g_uuid = pp.g_uuid
+    LEFT JOIN person_uuid AS pe ON pe.p_uuid = pg.head_uuid
+    LEFT JOIN identity_to_person AS id ON id.p_uuid = pe.p_uuid AND id.opt_id_type = \'idcard\'
+    WHERE pg.g_uuid = \'' . $group_id . '\'';
     $results = $db->Execute($sql);
     return $results;
 }
