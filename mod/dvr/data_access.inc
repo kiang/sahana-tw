@@ -159,57 +159,66 @@ function _shn_dvr_get_all_groups($incident_id = null, $camp_id = null) {
     return $results;
 }
 function _shn_dvr_get_group_search_results($group_type, $card, $name) {
-    global $global;
-    $db = $global['db'];
-    //print 'group type'.$group_type;
-    //print 'card is'.$card;
-    if ($group_type == '===' & $card == null & $name == null) {
-        $search_q1 = "SELECT distinct pg.g_uuid as group_id,pg.opt_group_type as group_type,pn.full_name as full_name ,pn.family_name as family_name,pn.l10n_name as local_name,id.serial as serial,co.contact_value as address from identity_to_person id,contact co,person_uuid pn,pgroup pg,group_details gd where gd.g_uuid=pg.g_uuid and gd.head_uuid=pn.p_uuid and gd.head_uuid=id.p_uuid and gd.head_uuid=co.pgoc_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard'";
-    } else if ($group_type == "===" & $card == null & $name != null) {
-        $search_q1 = "SELECT pg.g_uuid as group_id,pg.opt_group_type as group_type,pn.full_name as full_name ,pn.family_name as family_name,pn.l10n_name as local_name,id.serial as serial,co.contact_value as address from identity_to_person id,contact co,person_uuid pn,pgroup pg,group_details gd where gd.g_uuid=pg.g_uuid and gd.head_uuid=pn.p_uuid and gd.head_uuid=id.p_uuid and gd.head_uuid=co.pgoc_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' and (pn.full_name like '%{$name}%' or pn.l10n_name like '%{$name}%' or pn.family_name like '%{$name}%') ";
-    } else if ($group_type == "===" & $card != null & $name == null) {
-        $search_q1 = "SELECT pg.g_uuid as group_id,pg.opt_group_type as group_type,pn.full_name as full_name ,pn.family_name as family_name,pn.l10n_name as local_name,id.serial as serial,co.contact_value as address from identity_to_person id,contact co,person_uuid pn,pgroup pg,group_details gd where gd.g_uuid=pg.g_uuid and gd.head_uuid=pn.p_uuid and gd.head_uuid=id.p_uuid and gd.head_uuid=co.pgoc_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' and  id.serial='{$card}'";
-    } else if ($group_type == "===" & $card != null & $name != null) {
-        $search_q1 = "SELECT pg.g_uuid as group_id,pg.opt_group_type as group_type,pn.full_name as full_name ,pn.family_name as family_name,pn.l10n_name as local_name,id.serial as serial,co.contact_value as address from identity_to_person id,contact co,person_uuid pn,pgroup pg,group_details gd where gd.g_uuid=pg.g_uuid and gd.head_uuid=pn.p_uuid and gd.head_uuid=id.p_uuid and gd.head_uuid=co.pgoc_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' and  id.serial='{$card}' and (pn.full_name like '%{$name}%' or pn.l10n_name like '%{$name}%' or pn.family_name like '%{$name}%')";
-    } else if ($group_type != "===" & $card == null & $name == null) {
-        $search_q1 = "SELECT pg.g_uuid as group_id,pg.opt_group_type as group_type,pn.full_name as full_name ,pn.family_name as family_name,pn.l10n_name as local_name,id.serial as serial,co.contact_value as address from identity_to_person id,contact co,person_uuid pn,pgroup pg,group_details gd where gd.g_uuid=pg.g_uuid and gd.head_uuid=pn.p_uuid and gd.head_uuid=id.p_uuid and gd.head_uuid=co.pgoc_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' and  pg.opt_group_type='{$group_type}'";
-    } else if ($group_type != "===" & $card == null & $name != null) {
-        $search_q1 = "SELECT pg.g_uuid as group_id,pg.opt_group_type as group_type,pn.full_name as full_name ,pn.family_name as family_name,pn.l10n_name as local_name,id.serial as serial,co.contact_value as address from identity_to_person id,contact co,person_uuid pn,pgroup pg,group_details gd where gd.g_uuid=pg.g_uuid and gd.head_uuid=pn.p_uuid and gd.head_uuid=id.p_uuid and gd.head_uuid=co.pgoc_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' and  pg.opt_group_type='{$group_type}' and (pn.full_name like '%{$name}%' or pn.l10n_name like '%{$name}%' or pn.family_name like '%{$name}%')";
-    } else if ($group_type != "===" & $card != null & $name == null) {
-        $search_q1 = "SELECT pg.g_uuid as group_id,pg.opt_group_type as group_type,pn.full_name as full_name ,pn.family_name as family_name,pn.l10n_name as local_name,id.serial as serial,co.contact_value as address from identity_to_person id,contact co,person_uuid pn,pgroup pg,group_details gd where gd.g_uuid=pg.g_uuid and gd.head_uuid=pn.p_uuid and gd.head_uuid=id.p_uuid and gd.head_uuid=co.pgoc_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' and  pg.opt_group_type='{$group_type}' and id.serial like '%{$card}%'";
-    } else if ($group_type != "===" & $card != null & $name != null) {
-        $search_q1 = "SELECT pg.g_uuid as group_id,pg.opt_group_type as group_type,pn.full_name as full_name ,pn.family_name as family_name,pn.l10n_name as local_name,id.serial as serial,co.contact_value as address from identity_to_person id,contact co,person_uuid pn,pgroup pg,group_details gd where gd.g_uuid=pg.g_uuid and gd.head_uuid=pn.p_uuid and gd.head_uuid=id.p_uuid and gd.head_uuid=co.pgoc_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' and  pg.opt_group_type='{$group_type}' and id.serial='{$card}' and (pn.full_name like '%{$name}%' or pn.l10n_name like '%{$name}%' or pn.family_name like '%{$name}%')";
+    global $global, $conf;
+    $sql = 'SELECT DISTINCT(pg.g_uuid) AS group_id,
+            pg.opt_group_type AS group_type,
+            pn.full_name AS full_name,
+            pn.family_name AS family_name,
+            pn.l10n_name AS local_name,
+            id.serial AS serial,
+            co.contact_value AS address
+            FROM pgroup AS pg
+            INNER JOIN group_details AS gd ON gd.g_uuid = pg.g_uuid
+            LEFT JOIN person_uuid AS pn ON gd.head_uuid = pn.p_uuid
+            LEFT JOIN identity_to_person AS id ON gd.head_uuid=id.p_uuid AND id.opt_id_type=\'idcard\'
+            LEFT JOIN contact AS co ON gd.head_uuid=co.pgoc_uuid AND co.opt_contact_type=\'address\'
+            WHERE 1';
+    if(!empty($name)) {
+        $sql .= " AND (pn.full_name like '%{$name}%' or pn.l10n_name like '%{$name}%' or pn.family_name like '%{$name}%')";
     }
-    //$results = $db->Execute($search_q1);
-    global $conf;
-    $results = shn_paging_get_report($search_q1, $conf['mod_dvr_results_per_page'], $headers, array('post' => true, 'return' => true));
+    if(!empty($card)) {
+        $sql .= " AND id.serial='{$card}'";
+    }
+    if($group_type != "===") {
+        $sql .= " AND pg.opt_group_type='{$group_type}'";
+    }
+    
+    $results = shn_paging_get_report($sql, $conf['mod_dvr_results_per_page'], $headers, array('post' => true, 'return' => true));
     return $results;
 }
 function _shn_dvr_get_individual_search_results($card, $name, $incident) {
-    global $global;
-    global $conf;
-    $db = $global['db'];
-    if ($card == null & $name == null & $incident == null) {
-        //$search_q1="select pn.full_name,pn,family_name,pn.l10n_name,id.serial,co.contact_value as address from person_to_pgroup persontopg,pgroup pg,person_uuid pn,contact co,identity_to_person id where persontopg.g_uuid=pg.g_uuid and persontopg.p_uuid=pn.p_uuid and persontopg.p_uuid=co.pgoc_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard'";
-        $search = " select distinct pn.p_uuid as pid,pg.opt_group_type as group_type,gd.head_uuid as head_uuid,pn.full_name as full_name,family_name as family_name,pn.l10n_name as local_name,id.serial as serial ,co.contact_value as address from person_to_pgroup persontopg,pgroup pg,group_details gd,person_uuid pn,contact co,identity_to_person id,resource_to_incident res  where gd.g_uuid=pg.g_uuid and persontopg.p_uuid=pn.p_uuid  and pg.g_uuid=persontopg.g_uuid  and res.x_uuid=pn.p_uuid and persontopg.p_uuid=co.pgoc_uuid and id.p_uuid=pn.p_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' and res.incident_id='{$_SESSION['user_pref_ims_incident_id']}' ";
-    } else if ($card == null & $name == null & $incident != null) {
-        $search = "select distinct pn.p_uuid as pid,pg.opt_group_type as group_type,gd.head_uuid as head_uuid,pn.full_name as full_name,family_name as family_name,pn.l10n_name as local_name,id.serial as serial ,co.contact_value as address from person_to_pgroup persontopg,pgroup pg,group_details gd,person_uuid pn,contact co,identity_to_person id,resource_to_incident res where gd.g_uuid=pg.g_uuid and persontopg.p_uuid=pn.p_uuid and pg.g_uuid=persontopg.g_uuid and res.x_uuid=pn.p_uuid and persontopg.p_uuid=co.pgoc_uuid and id.p_uuid=pn.p_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard'  "; //all incidents
-        
-    } else if ($card == null & $name != null & $incident == null) {
-        $search = "select distinct pn.p_uuid as pid,pg.opt_group_type as group_type,gd.head_uuid as head_uuid,pn.full_name as full_name,family_name as family_name,pn.l10n_name as local_name,id.serial as serial ,co.contact_value as address from person_to_pgroup persontopg,pgroup pg,group_details gd,person_uuid pn,contact co,identity_to_person id,resource_to_incident res where gd.g_uuid=pg.g_uuid and persontopg.p_uuid=pn.p_uuid and pg.g_uuid=persontopg.g_uuid and res.x_uuid=pn.p_uuid and persontopg.p_uuid=co.pgoc_uuid and id.p_uuid=pn.p_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' and res.incident_id='{$_SESSION['user_pref_ims_incident_id']}' and (pn.full_name like '%{$name}%' or pn.l10n_name like '%{$name}%' or pn.family_name like '%{$name}%')";
-    } else if ($card == null & $name != null & $incident != null) {
-        $search = "select distinct pn.p_uuid as pid,pg.opt_group_type as group_type,gd.head_uuid as head_uuid,pn.full_name as full_name,family_name as family_name,pn.l10n_name as local_name,id.serial as serial ,co.contact_value as address from person_to_pgroup persontopg,group_details gd,pgroup pg,person_uuid pn,contact co,identity_to_person id,resource_to_incident res where gd.g_uuid=pg.g_uuid and persontopg.p_uuid=pn.p_uuid and pg.g_uuid=persontopg.g_uuid and res.x_uuid=pn.p_uuid and persontopg.p_uuid=co.pgoc_uuid and id.p_uuid=pn.p_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' and  (pn.full_name like '%{$name}%' or pn.l10n_name like '%{$name}%' or pn.family_name like '%{$name}%')";
-    } else if ($card != null & $name == null & $incident == null) {
-        $search = "select distinct pn.p_uuid as pid,pg.opt_group_type as group_type,gd.head_uuid as head_uuid,pn.full_name as full_name,family_name as family_name,pn.l10n_name as local_name,id.serial as serial ,co.contact_value as address from person_to_pgroup persontopg,group_details gd,pgroup pg,person_uuid pn,contact co,identity_to_person id,resource_to_incident res where gd.g_uuid=pg.g_uuid and persontopg.p_uuid=pn.p_uuid  and pg.g_uuid=persontopg.g_uuid and res.x_uuid=pn.p_uuid and persontopg.p_uuid=co.pgoc_uuid and id.p_uuid=pn.p_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' and res.incident_id='{$_SESSION['user_pref_ims_incident_id']}' and id.serial='{$card}'";
-    } else if ($card != null & $name == null & $incident != null) {
-        $search = "select distinct pn.p_uuid as pid,pg.opt_group_type as group_type,gd.head_uuid as head_uuid,pn.full_name as full_name,family_name as family_name,pn.l10n_name as local_name,id.serial as serial ,co.contact_value as address from person_to_pgroup persontopg,group_details gd,pgroup pg,person_uuid pn,contact co,identity_to_person id,resource_to_incident res where gd.g_uuid=pg.g_uuid and persontopg.p_uuid=pn.p_uuid and pg.g_uuid=persontopg.g_uuid and res.x_uuid=pn.p_uuid and persontopg.p_uuid=co.pgoc_uuid and id.p_uuid=pn.p_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard'  and id.serial='{$card}'";
-    } else if ($card != null & $name != null & $incident == null) {
-        $search = "select distinct pn.p_uuid as pid,pg.opt_group_type as group_type,gd.head_uuid as head_uuid,pn.full_name as full_name,family_name as family_name,pn.l10n_name as local_name,id.serial as serial ,co.contact_value as address from person_to_pgroup persontopg,group_details gd,pgroup pg,person_uuid pn,contact co,identity_to_person id,resource_to_incident res where gd.g_uuid=pg.g_uuid and persontopg.p_uuid=pn.p_uuid and pg.g_uuid=persontopg.g_uuid and res.x_uuid=pn.p_uuid and persontopg.p_uuid=co.pgoc_uuid and id.p_uuid=pn.p_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' and  (pn.full_name like '%{$name}%' or pn.l10n_name like '%{$name}%' or pn.family_name like '%{$name}%') and id.serial='{$card}' and res.incident_id='{$_SESSION['user_pref_ims_incident_id']}'";
-    } else if ($card != null & $name != null & $incident != null) {
-        $search = "select distinct pn.p_uuid as pid,pg.opt_group_type as group_type,gd.head_uuid as head_uuid,pn.full_name as full_name,family_name as family_name,pn.l10n_name as local_name,id.serial as serial ,co.contact_value as address from person_to_pgroup persontopg,group_details gd,pgroup pg,person_uuid pn,contact co,identity_to_person id,resource_to_incident res where gd.g_uuid=pg.g_uuid and persontopg.p_uuid=pn.p_uuid and pg.g_uuid=persontopg.g_uuid and res.x_uuid=pn.p_uuid and persontopg.p_uuid=co.pgoc_uuid and id.p_uuid=pn.p_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' and  (pn.full_name like '%{$name}%' or pn.l10n_name like '%{$name}%' or pn.family_name like '%{$name}%') and id.serial='{$card}'";
+    global $global, $conf;
+    $sql = 'SELECT DISTINCT(pn.p_uuid) AS pid,
+        pg.opt_group_type as group_type,
+        gd.head_uuid as head_uuid,
+        pn.full_name as full_name,
+        family_name as family_name,
+        pn.l10n_name as local_name,
+        id.serial as serial,
+        co.contact_value as address
+        FROM person_uuid AS pn
+        INNER JOIN person_to_pgroup AS persontopg ON persontopg.p_uuid = pn.p_uuid
+        INNER JOIN pgroup AS pg ON pg.g_uuid = persontopg.g_uuid
+        INNER JOIN group_details AS gd ON gd.g_uuid = pg.g_uuid
+        INNER JOIN resource_to_incident AS res ON res.x_uuid = pn.p_uuid
+        LEFT JOIN identity_to_person AS id ON id.p_uuid = pn.p_uuid AND id.opt_id_type=\'idcard\'
+        LEFT JOIN contact AS co ON persontopg.p_uuid = co.pgoc_uuid AND co.opt_contact_type=\'address\'
+        WHERE 1';
+    if(!empty($incident)) {
+        $sql .= " AND res.incident_id='{$incident}'";
+    } else {
+        $sql .= " AND res.incident_id='{$_SESSION['user_pref_ims_incident_id']}'";
     }
-    //$results = $db->Execute($search);
-    $results = shn_paging_get_report($search, $conf['mod_dvr_results_per_page'], $headers, array('post' => true, 'return' => true));
+
+    if(!empty($card)) {
+        $sql .= " AND id.serial='{$card}'";
+    }
+
+    if(!empty($name)) {
+        $sql .= " AND (pn.full_name like '%{$name}%' or pn.l10n_name like '%{$name}%' or pn.family_name like '%{$name}%')";
+    }
+
+    $results = shn_paging_get_report($sql, $conf['mod_dvr_results_per_page'], $headers, array('post' => true, 'return' => true));
     return $results;
 }
 function get_person_major_details($person_uuid) {
