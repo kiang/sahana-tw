@@ -39,8 +39,9 @@ function show_wiki_map($category = "all", $date = 0) {
     shn_form_submit(_("Filter"));
     shn_form_fclose();
     $db = $global['db'];
-    $query = "SELECT a.wiki_uuid,a.name,a.description,a.url,
-        date(a.event_date) as event_date,a.author,a.editable,b.map_northing,b.map_easting
+    $query = "SELECT a.wiki_uuid,a.name,a.description,a.opt_category,a.url,
+        date(a.event_date) as event_date,a.author,a.editable,
+        b.map_northing,b.map_easting
         FROM gis_wiki as a, gis_location as b
         WHERE a.wiki_uuid=b.poc_uuid " .
     ((empty($category) || $category == 'all') ? " " : " and opt_category='{$category}'");
@@ -79,6 +80,7 @@ function show_wiki_map($category = "all", $date = 0) {
             "lat" => $res->fields['map_northing'],
             "lon" => $res->fields['map_easting'],
             "name" => $res->fields['name'],
+            'type' => $res->fields['opt_category'],
             "desc" => $res->fields['description'],
             "url" => $res->fields['url'],
             "author" => $res->fields['author'],

@@ -203,32 +203,33 @@ function show_map_with_wiki_marker($array) {
 ?>
 	<script src="http://maps.google.com/maps?file=api&v=2&key=<?php echo $key ?>" type="text/javascript"></script>
 	<script type="text/javascript">
-	  
 	//<![CDATA[
-        var onloadfunc = window.onload;
-	window.onload=function show_map_wiki_js()
-	{
-			if(GBrowserIsCompatible())
-			{
-				function createMarker(point,html) {
-        			var marker = new GMarker(point);
-        			GEvent.addListener(marker, "click", function() {
-          				marker.openInfoWindowHtml(html);
-        			});
-        		return marker;
-      			}
-      			
-      			var map = new GMap2(document.getElementById("map"));
-      			map.addControl(new GLargeMapControl());
-	       		//map.addControl(new GSmallMapControl());
-				map.addControl(new GMapTypeControl());//satellite image switch
-				
-				map.setCenter(new GLatLng(<?=$conf['mod_gis_center_y'] ?>,<?=$conf['mod_gis_center_x'] ?>), <?=$conf['mod_gis_zoom'] ?>,G_SATELLITE_MAP);
+        $(function() {
+            function createMarker(point,html,type) {
+                var marker;
+                if(type != 'gen') {
+                    var icon = new GIcon(G_DEFAULT_ICON, "<?php echo $conf['mod_gis_marker_folder']; ?>icon/"+type+".png");
+                    marker = new GMarker(point,icon);
+                } else {
+                    marker = new GMarker(point);
+                }
+                GEvent.addListener(marker, "click", function() {
+                    marker.openInfoWindowHtml(html);
+                });
+                return marker;
+            }
+            var map = new GMap2($('#map').get(0));
+            map.addControl(new GLargeMapControl());
+            map.addControl(new GMapTypeControl());
+            map.setCenter(new GLatLng(<?=$conf['mod_gis_center_y'] ?>,<?=$conf['mod_gis_center_x'] ?>), <?=$conf['mod_gis_zoom'] ?>,G_SATELLITE_MAP);
+            var point;
+            var marker;
 <?php
     for ($i = 0;$i < sizeof($array);$i++) {
         $lat = $array[$i]["lat"];
         $lon = $array[$i]["lon"];
         $name = $array[$i]["name"];
+        $type = isset($array[$i]["type"]) ? $array[$i]["type"] : 'gen';
         $desc = $array[$i]["desc"];
         $url = trim($array[$i]["url"]);
         if (!(($array[$i]["date"]) == "0000-00-00 00:00:00")) {
@@ -240,7 +241,6 @@ function show_map_with_wiki_marker($array) {
         $edit = $array[$i]["edit"];
         if ($array[$i]["image"] != null) {
             $image = $array[$i]["image"];
-            //$image="{<img src='{$image}' width='100' height='100' >}";
             $image = ($image ? "<img src=$image width=100 height=100 ><br>" : '');
         } else $image = '';
         $markerHtml = '<div id="wiki_info"><strong>';
@@ -253,22 +253,16 @@ function show_map_with_wiki_marker($array) {
         $markerHtml .= '<br><strong>' . _('Author') . ':</strong>';
         $markerHtml .= $author . '<br>' . $edit;
         $markerHtml .= '</div>';
-?>	
-      				var point = new GLatLng(<?php echo $lon; ?>,<?php echo $lat;?>);
-      				var marker = createMarker(point,'<?php echo $markerHtml; ?>');
-      				map.addOverlay(marker);
+?>
+            point = new GLatLng(<?php echo $lon; ?>,<?php echo $lat;?>);
+            marker = createMarker(point,'<?php echo $markerHtml; ?>','<?php echo $type; ?>');
+            map.addOverlay(marker);
 <?php
     }
     $image = null;
 ?>
-      		}
-      		else{
-      			alert("Incompatible");
-      			}      			
-		onloadfunc();
-	}		
+        })
 	//]]>	
-	
 	</script>
 <div id="map" style="width: <?=$conf['mod_gis_width'] ?>px; height: <?=$conf['mod_gis_height'] ?>px"></div>
 <?php
