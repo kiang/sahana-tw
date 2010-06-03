@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-06-03 15:57+0800\n"
-"PO-Revision-Date: 2010-06-03 16:01+0800\n"
+"PO-Revision-Date: 2010-06-03 16:05+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -2279,7 +2279,7 @@ msgstr "可使用的設施"
 
 #: mod/or/reg_org.inc:132
 msgid "You could only select 3 options in this field."
-msgstr ""
+msgstr "這個欄位只能選擇 3 個項目"
 
 #: mod/or/reg_org.inc:149
 #: mod/cr/edit.inc:525
@@ -2734,9 +2734,8 @@ msgid "please select whether you are Department,Branch,ect of the parent organiz
 msgstr "請選擇您是否是上層組織的部門、分會…等等"
 
 #: mod/or/lib_or.inc:627
-#, fuzzy
 msgid "Select the services your organization provides, that is what you do as an organization or services your organization can provide in a disaster. e.g. if you offer medical services select it. This field could accept up to 3 options be selected. You could hold Ctrl key with mouse click to select multiple options."
-msgstr "主要服務：選擇您的組織在災難中所提供的最主要服務，例如醫療服務。"
+msgstr "主要服務：選擇您的組織在災難中所提供的最主要服務，例如醫療服務。這個欄位最多可以選擇 3 個項目，請按壓 Ctrl 鍵加上滑鼠點選來選取多個項目。"
 
 #: mod/or/lib_or.inc:642
 #: mod/mpr/add.inc:322
@@ -2901,9 +2900,8 @@ msgid "(Your Organization might be having branches or carrying out relief operat
 msgstr "（您的組織在這場災難中也許有分支機構或是進行救援作業。因此這些運作的資訊是很有幫助的。）"
 
 #: mod/or/lib_or.inc:915
-#, fuzzy
 msgid "Operation/Branch "
-msgstr "客戶分公司"
+msgstr "辦事處/分公司"
 
 #: mod/or/admin.inc:20
 #: mod/or/admin_forms.inc:105
