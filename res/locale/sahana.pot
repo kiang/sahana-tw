@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-24 19:39+0800\n"
+"POT-Creation-Date: 2010-06-03 15:57+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -398,8 +398,8 @@ msgstr ""
 #: mod/cs/search.inc:46 mod/cs/search.inc:129 mod/cs/search.inc:198
 #: mod/cs/main.inc:74 mod/cs/main.inc:87 mod/cs/add.inc:84 mod/cs/add.inc:245
 #: mod/mpr/search.inc:49 mod/mpr/admin.inc:196 mod/mpr/main.inc:464
-#: mod/cr/search.inc:180 mod/cr/search.inc:187 mod/cr/search.inc:202
-#: mod/cr/search.inc:206 mod/cr/main.inc:29 mod/rms/handler_req_sch.inc:103
+#: mod/cr/search.inc:190 mod/cr/search.inc:197 mod/cr/search.inc:212
+#: mod/cr/search.inc:216 mod/cr/main.inc:29 mod/rms/handler_req_sch.inc:103
 #: mod/rms/handler_plg_sch.inc:68
 msgid "Search"
 msgstr ""
@@ -420,17 +420,17 @@ msgid "Go to Next Page"
 msgstr ""
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:62
-#: tools/tpl_languages.php:248 mod/or/reg_org.inc:100 mod/or/reg_org.inc:262
-#: mod/or/lib_or.inc:792 mod/ws/reg.inc:52 mod/ims/reg_inv.inc:59
-#: mod/ims/reg_inv.inc:111 mod/cs/lib_cs.inc:193 mod/gis/wm_fns.inc:118
-#: mod/gis/wm_fns.inc:147 mod/gis/main_fns.inc:88 mod/gis/main_fns.inc:115
+#: tools/tpl_languages.php:248 mod/or/reg_org.inc:114 mod/or/reg_org.inc:315
+#: mod/or/lib_or.inc:795 mod/ws/reg.inc:52 mod/ims/reg_inv.inc:59
+#: mod/ims/reg_inv.inc:111 mod/cs/lib_cs.inc:193 mod/gis/wm_fns.inc:120
+#: mod/gis/wm_fns.inc:149 mod/gis/main_fns.inc:88 mod/gis/main_fns.inc:115
 #: mod/mpr/search.inc:82 mod/mpr/search.inc:212 mod/mpr/edit.inc:236
 #: mod/mpr/edit.inc:351 mod/mpr/edit.inc:752 mod/mpr/images.inc:26
 #: mod/mpr/add.inc:137 mod/mpr/add.inc:329 mod/mpr/add.inc:395
 #: mod/mpr/add.inc:456 mod/mpr/add.inc:557 mod/sync/handler_upload.inc:71
 #: mod/admin/location.inc:58 mod/cr/edit.inc:86 mod/cr/edit.inc:240
 #: mod/cr/edit.inc:657 mod/cr/camp.inc:92 mod/cr/camp.inc:113
-#: mod/cr/camp.inc:182 mod/cr/camp.inc:562 mod/dvr/edt_grp.inc:395
+#: mod/cr/camp.inc:182 mod/cr/camp.inc:560 mod/dvr/edt_grp.inc:395
 #: mod/dvr/search_individual.inc:50 mod/dvr/search_individual.inc:139
 #: mod/dvr/search_group.inc:45 mod/dvr/search_group.inc:142
 #: mod/dvr/add_new_grp.inc:274 mod/dvr/add_new_grp.inc:316
@@ -467,24 +467,25 @@ msgstr ""
 #: tools/tpl_languages.php:6 tools/tpl_languages.php:24
 #: tools/tpl_languages.php:73 tools/tpl_languages.php:99
 #: tools/tpl_languages.php:343 tools/tpl_languages.php:375
-#: mod/or/view_org.inc:451 mod/ims/view_edit_item.inc:66
-#: mod/ims/view_inv.inc:257 mod/ims/mini_quantity.inc:250 mod/cs/edit.inc:285
-#: mod/cs/edit.inc:465 mod/cs/edit.inc:581 mod/mpr/admin.inc:355
-#: mod/admin/ims_level.inc:31 mod/admin/ims_level.inc:175
-#: mod/admin/ims_level.inc:358 mod/admin/ims_assign.inc:18
-#: mod/admin/ims_assign.inc:35 mod/admin/location.inc:100 mod/cr/edit.inc:194
-#: mod/cr/admin.inc:203 mod/dvr/admin.inc:57 mod/rms/handler_req_ls.inc:98
-#: mod/rms/lib_rms.inc:489 mod/msg/message_forms.inc:233
-#: inc/lib_security/acl_form.inc:276
+#: mod/or/view_org.inc:449 mod/or/view_org.inc:735 mod/or/admin.inc:133
+#: mod/ims/view_edit_item.inc:66 mod/ims/view_inv.inc:257
+#: mod/ims/mini_quantity.inc:250 mod/cs/edit.inc:285 mod/cs/edit.inc:465
+#: mod/cs/edit.inc:581 mod/mpr/admin.inc:355 mod/admin/ims_level.inc:31
+#: mod/admin/ims_level.inc:175 mod/admin/ims_level.inc:358
+#: mod/admin/ims_assign.inc:18 mod/admin/ims_assign.inc:35
+#: mod/admin/location.inc:100 mod/cr/edit.inc:194 mod/cr/admin.inc:203
+#: mod/dvr/admin.inc:57 mod/rms/handler_req_ls.inc:98 mod/rms/lib_rms.inc:489
+#: mod/msg/message_forms.inc:233 inc/lib_security/acl_form.inc:276
 msgid "Delete"
 msgstr ""
 
 #: tools/tpl_languages.php:7 tools/tpl_languages.php:23
 #: tools/tpl_languages.php:98 mod/or/process_org.inc:33
-#: mod/or/process_org.inc:41 mod/ims/view_edit_item.inc:65
-#: mod/ims/mini_quantity.inc:249 mod/gis/wm_fns.inc:55 mod/mpr/search.inc:255
-#: mod/cr/edit.inc:193 mod/cr/edit.inc:282 mod/cr/edit.inc:594
-#: mod/cr/camp.inc:517 mod/msg/handler_cap_edit.inc:46
+#: mod/or/process_org.inc:41 mod/or/view_org.inc:734
+#: mod/ims/view_edit_item.inc:65 mod/ims/mini_quantity.inc:249
+#: mod/gis/wm_fns.inc:56 mod/mpr/search.inc:255 mod/cr/edit.inc:193
+#: mod/cr/edit.inc:282 mod/cr/edit.inc:594 mod/cr/camp.inc:515
+#: mod/msg/handler_cap_edit.inc:46
 msgid "Edit"
 msgstr ""
 
@@ -515,12 +516,13 @@ msgstr ""
 #: tools/tpl_languages.php:14 tools/tpl_languages.php:21
 #: tools/tpl_languages.php:35 tools/tpl_languages.php:46
 #: tools/tpl_languages.php:55 tools/tpl_languages.php:358
-#: tools/tpl_languages.php:364 mod/rs/sample.inc:167 mod/rs/sample.inc:281
-#: mod/cs/supplier_report.inc:30 mod/cs/search.inc:82 mod/cs/search.inc:221
-#: mod/cs/edit.inc:526 mod/cs/add.inc:428 mod/mpr/admin.inc:354
-#: mod/mpr/admin.inc:383 mod/cr/admin.inc:202 mod/cr/admin.inc:231
-#: mod/dvr/edt_grp.inc:449 mod/dvr/edt_grp.inc:524 mod/dvr/add_new_grp.inc:354
-#: mod/dvr/admin.inc:56 mod/msg/handler_cap_new.inc:134
+#: tools/tpl_languages.php:364 mod/or/admin.inc:132 mod/or/admin.inc:161
+#: mod/rs/sample.inc:167 mod/rs/sample.inc:281 mod/cs/supplier_report.inc:30
+#: mod/cs/search.inc:82 mod/cs/search.inc:221 mod/cs/edit.inc:526
+#: mod/cs/add.inc:428 mod/mpr/admin.inc:354 mod/mpr/admin.inc:383
+#: mod/cr/admin.inc:202 mod/cr/admin.inc:231 mod/dvr/edt_grp.inc:449
+#: mod/dvr/edt_grp.inc:524 mod/dvr/add_new_grp.inc:354 mod/dvr/admin.inc:56
+#: mod/msg/handler_cap_new.inc:134
 msgid "Description"
 msgstr ""
 
@@ -541,20 +543,20 @@ msgid "Task"
 msgstr ""
 
 #: tools/tpl_languages.php:19 tools/tpl_languages.php:250
-#: tools/tpl_languages.php:342 mod/or/admin_forms.inc:142
-#: mod/or/admin_forms.inc:200 mod/mpr/admin.inc:206 mod/mpr/admin.inc:314
-#: mod/mpr/admin.inc:348 mod/mpr/admin.inc:378 mod/pref/ims_config.inc:39
-#: mod/admin/ims_level.inc:49 mod/admin/ims_level.inc:206
-#: mod/admin/ims_level.inc:391 mod/admin/ims_config.inc:30
-#: mod/admin/lc_ui_translate_update.inc:25 mod/cr/admin.inc:162
-#: mod/cr/admin.inc:196 mod/cr/admin.inc:226 mod/dvr/admin.inc:105
-#: inc/lib_security/acl_form.inc:276
+#: tools/tpl_languages.php:342 mod/or/admin.inc:92 mod/or/admin.inc:126
+#: mod/or/admin.inc:156 mod/or/admin_forms.inc:142 mod/or/admin_forms.inc:200
+#: mod/mpr/admin.inc:206 mod/mpr/admin.inc:314 mod/mpr/admin.inc:348
+#: mod/mpr/admin.inc:378 mod/pref/ims_config.inc:39 mod/admin/ims_level.inc:49
+#: mod/admin/ims_level.inc:206 mod/admin/ims_level.inc:391
+#: mod/admin/ims_config.inc:30 mod/admin/lc_ui_translate_update.inc:25
+#: mod/cr/admin.inc:162 mod/cr/admin.inc:196 mod/cr/admin.inc:226
+#: mod/dvr/admin.inc:105 inc/lib_security/acl_form.inc:276
 msgid "Update"
 msgstr ""
 
 #: tools/tpl_languages.php:20 tools/tpl_languages.php:52
 #: tools/tpl_languages.php:75 tools/tpl_languages.php:252
-#: tools/tpl_languages.php:299 mod/or/lib_or.inc:637 mod/rs/sample.inc:166
+#: tools/tpl_languages.php:299 mod/or/lib_or.inc:640 mod/rs/sample.inc:166
 #: mod/rs/sample.inc:225 mod/rs/sample.inc:280 mod/cs/supplier_report.inc:29
 #: mod/cs/drill_down.inc:51 mod/cs/edit.inc:177 mod/cs/edit.inc:404
 #: mod/cs/edit.inc:525 mod/cs/add.inc:427 mod/mpr/search.inc:74
@@ -627,7 +629,8 @@ msgstr ""
 msgid "Actions"
 msgstr ""
 
-#: tools/tpl_languages.php:40 mod/cr/search.inc:66 mod/cr/search.inc:143
+#: tools/tpl_languages.php:40 mod/or/view_org.inc:199 mod/cr/search.inc:66
+#: mod/cr/search.inc:153
 msgid "edit"
 msgstr ""
 
@@ -673,9 +676,9 @@ msgid "End date :"
 msgstr ""
 
 #: tools/tpl_languages.php:56 tools/tpl_languages.php:198 mod/or/search.inc:40
-#: mod/or/reg_org.inc:71 mod/or/reg_org.inc:164 mod/or/reg_org.inc:230
-#: mod/or/view_org.inc:397 mod/ims/reg_inv.inc:92 mod/ims/view_inv.inc:202
-#: inc/lib_location.inc:1061
+#: mod/or/reg_org.inc:85 mod/or/reg_org.inc:203 mod/or/reg_org.inc:283
+#: mod/or/view_org.inc:395 mod/or/view_org.inc:699 mod/ims/reg_inv.inc:92
+#: mod/ims/view_inv.inc:202 inc/lib_location.inc:1061
 msgid "Base Location"
 msgstr ""
 
@@ -774,9 +777,9 @@ msgid "Identification"
 msgstr ""
 
 #: tools/tpl_languages.php:86 tools/tpl_languages.php:230
-#: mod/or/report.inc:465 mod/or/view_org.inc:91 mod/or/view_org.inc:486
+#: mod/or/report.inc:465 mod/or/view_org.inc:91 mod/or/view_org.inc:484
 #: mod/ims/reg_inv.inc:43 mod/admin/location.inc:38 mod/cr/search.inc:42
-#: mod/cr/search.inc:119 mod/cr/edit.inc:537 mod/cr/reports.inc:62
+#: mod/cr/search.inc:129 mod/cr/edit.inc:537 mod/cr/reports.inc:62
 #: mod/cr/reports.inc:116 mod/dvr/add_new_grp.inc:406
 #: mod/rms/handler_req_new.inc:129 mod/rms/handler_req_ls.inc:71
 #: mod/rms/handler_req_sch.inc:203 mod/rms/handler_req_sch.inc:209
@@ -827,7 +830,7 @@ msgstr ""
 msgid "specifying 'Loose Name Matching'"
 msgstr ""
 
-#: tools/tpl_languages.php:101 mod/or/lib_or.inc:562 mod/ims/lib_ims.inc:297
+#: tools/tpl_languages.php:101 mod/or/lib_or.inc:565 mod/ims/lib_ims.inc:297
 msgid "Gender:"
 msgstr ""
 
@@ -1189,10 +1192,10 @@ msgstr ""
 msgid "Special needs:"
 msgstr ""
 
-#: tools/tpl_languages.php:199 mod/or/reg_org.inc:89 mod/or/reg_org.inc:172
-#: mod/or/reg_org.inc:250 mod/or/view_org.inc:437 mod/ims/reg_inv.inc:47
-#: mod/ims/reg_inv.inc:97 mod/ims/view_inv.inc:242 mod/dvr/edt_indv.inc:424
-#: mod/dvr/add_new_indv.inc:402
+#: tools/tpl_languages.php:199 mod/or/reg_org.inc:103 mod/or/reg_org.inc:211
+#: mod/or/reg_org.inc:303 mod/or/view_org.inc:435 mod/or/view_org.inc:719
+#: mod/ims/reg_inv.inc:47 mod/ims/reg_inv.inc:97 mod/ims/view_inv.inc:242
+#: mod/dvr/edt_indv.inc:424 mod/dvr/add_new_indv.inc:402
 msgid "Contact Information"
 msgstr ""
 
@@ -1785,14 +1788,14 @@ msgstr ""
 msgid "Search for Organizations by Name,Type,Service and Location"
 msgstr ""
 
-#: mod/or/search.inc:29 mod/or/reg_org.inc:35 mod/or/reg_org.inc:130
-#: mod/or/reg_org.inc:219 mod/or/view_org.inc:363 mod/ims/add_item.inc:108
-#: mod/ims/reg_inv.inc:37 mod/ims/view_inv.inc:196
+#: mod/or/search.inc:29 mod/or/reg_org.inc:35 mod/or/reg_org.inc:159
+#: mod/or/reg_org.inc:258 mod/or/view_org.inc:347 mod/or/view_org.inc:689
+#: mod/ims/add_item.inc:108 mod/ims/reg_inv.inc:37 mod/ims/view_inv.inc:196
 msgid "Primary Details"
 msgstr ""
 
-#: mod/or/search.inc:31 mod/or/reg_org.inc:41 mod/or/reg_org.inc:141
-#: mod/or/view_org.inc:371
+#: mod/or/search.inc:31 mod/or/reg_org.inc:41 mod/or/reg_org.inc:170
+#: mod/or/view_org.inc:355 mod/or/view_org.inc:690
 msgid "Organization Name : "
 msgstr ""
 
@@ -1801,9 +1804,9 @@ msgid ""
 "Please select whether you are a government organization,multinational ect"
 msgstr ""
 
-#: mod/or/search.inc:35 mod/or/reg_org.inc:49 mod/or/reg_org.inc:149
-#: mod/or/report.inc:464 mod/or/view_org.inc:90 mod/or/view_org.inc:383
-#: mod/or/view_org.inc:485 mod/ims/ims_report.inc:434
+#: mod/or/search.inc:35 mod/or/reg_org.inc:49 mod/or/reg_org.inc:178
+#: mod/or/report.inc:464 mod/or/view_org.inc:90 mod/or/view_org.inc:367
+#: mod/or/view_org.inc:483 mod/ims/ims_report.inc:434
 msgid "Organization Type"
 msgstr ""
 
@@ -1813,21 +1816,21 @@ msgid ""
 "you are a supplier select it"
 msgstr ""
 
-#: mod/or/search.inc:38 mod/or/reg_org.inc:56 mod/or/reg_org.inc:157
-#: mod/or/reg_org.inc:226 mod/or/view_org.inc:391
+#: mod/or/search.inc:38 mod/or/reg_org.inc:56 mod/or/reg_org.inc:186
+#: mod/or/reg_org.inc:265 mod/or/view_org.inc:375
 msgid "Organization Sector"
 msgstr ""
 
-#: mod/or/search.inc:42 mod/or/reg_org.inc:82 mod/or/reg_org.inc:244
-#: mod/or/report.inc:466 mod/or/view_org.inc:92 mod/or/view_org.inc:405
-#: mod/or/view_org.inc:487 mod/or/lib_or.inc:638 mod/ims/search.inc:381
+#: mod/or/search.inc:42 mod/or/reg_org.inc:96 mod/or/reg_org.inc:297
+#: mod/or/report.inc:466 mod/or/view_org.inc:92 mod/or/view_org.inc:403
+#: mod/or/view_org.inc:485 mod/or/lib_or.inc:641 mod/ims/search.inc:381
 #: mod/ims/search.inc:498 mod/ims/ims_report.inc:436 mod/ims/view_inv.inc:60
 #: mod/mpr/view.inc:78 mod/mpr/edit.inc:191 mod/mpr/edit.inc:471
 #: mod/mpr/add.inc:103 mod/mpr/add.inc:321 mod/mpr/add.inc:508
-#: mod/mpr/add.inc:542 mod/cr/search.inc:43 mod/cr/search.inc:120
+#: mod/mpr/add.inc:542 mod/cr/search.inc:43 mod/cr/search.inc:130
 #: mod/cr/edit.inc:39 mod/cr/edit.inc:153 mod/cr/edit.inc:533
 #: mod/cr/edit.inc:605 mod/cr/reports.inc:61 mod/cr/reports.inc:164
-#: mod/cr/camp.inc:40 mod/cr/camp.inc:460 mod/cr/camp.inc:533
+#: mod/cr/camp.inc:40 mod/cr/camp.inc:458 mod/cr/camp.inc:531
 #: mod/dvr/reporting.inc:46 mod/dvr/reporting.inc:87 mod/dvr/edt_grp.inc:297
 #: mod/dvr/edt_grp.inc:493 mod/dvr/search_individual.inc:90
 #: mod/dvr/search_group.inc:75 mod/dvr/add_new_grp.inc:233
@@ -1863,50 +1866,54 @@ msgstr ""
 msgid "Change name"
 msgstr ""
 
-#: mod/or/process_org.inc:111 mod/or/process_org.inc:209
+#: mod/or/process_org.inc:117 mod/or/process_org.inc:222
 msgid " Organization was succesfully registered "
 msgstr ""
 
-#: mod/or/process_org.inc:124 mod/or/process_org.inc:128
+#: mod/or/process_org.inc:130 mod/or/process_org.inc:134
 msgid "Register a Branch/Department"
 msgstr ""
 
-#: mod/or/process_org.inc:125
+#: mod/or/process_org.inc:131
 msgid "Now you can add a Branch/Department Under "
 msgstr ""
 
-#: mod/or/process_org.inc:125
+#: mod/or/process_org.inc:131
 msgid "e.g. Health Department,Relief Operations Department. : "
 msgstr ""
 
-#: mod/or/process_org.inc:126
+#: mod/or/process_org.inc:132
 msgid ""
 "Of course you can add Branches/Departments later on through the Register a "
 "Department/Branch link."
 msgstr ""
 
-#: mod/or/process_org.inc:130
+#: mod/or/process_org.inc:136
 msgid "Register another Organization"
 msgstr ""
 
-#: mod/or/process_org.inc:131
+#: mod/or/process_org.inc:137
 msgid "Instead if you wish to add another organization click the button below "
 msgstr ""
 
-#: mod/or/process_org.inc:133 mod/or/main.inc:36
+#: mod/or/process_org.inc:139 mod/or/main.inc:36
 msgid "Register an Organization"
 msgstr ""
 
-#: mod/or/process_org.inc:353
+#: mod/or/process_org.inc:366
 msgid " was succesfully deleted "
 msgstr ""
 
-#: mod/or/process_org.inc:542
+#: mod/or/process_org.inc:560
 msgid " was succesfully updated "
 msgstr ""
 
 #: mod/or/conf.inc:17
 msgid "Organization Registry"
+msgstr ""
+
+#: mod/or/acl.inc:47
+msgid "ACL Base for Organization Registry was succesfully installed"
 msgstr ""
 
 #: mod/or/reg_org.inc:26
@@ -1925,11 +1932,16 @@ msgid ""
 "Company Registration Number"
 msgstr ""
 
-#: mod/or/reg_org.inc:47 mod/or/reg_org.inc:143
+#: mod/or/reg_org.inc:47 mod/or/reg_org.inc:172
 msgid "Registration Number(if any) : "
 msgstr ""
 
-#: mod/or/reg_org.inc:70
+#: mod/or/reg_org.inc:62 mod/or/reg_org.inc:196 mod/or/reg_org.inc:267
+#: mod/or/view_org.inc:377 mod/or/view_org.inc:696
+msgid "Other services : "
+msgstr ""
+
+#: mod/or/reg_org.inc:84
 msgid ""
 "Select the location based at.  This is hierarchical. For example if you are "
 "based  in the country 'Sri lanka' ,district 'Colombo' ,and village "
@@ -1942,57 +1954,61 @@ msgid ""
 ">'village'. It is configurable from the 'administration' section."
 msgstr ""
 
-#: mod/or/reg_org.inc:81 mod/or/reg_org.inc:239
+#: mod/or/reg_org.inc:95 mod/or/reg_org.inc:292
 msgid ""
 "In addition to the hierarchical location , you may specify the address of "
 "the organization here. "
 msgstr ""
 
-#: mod/or/reg_org.inc:92 mod/ims/view_inv.inc:245
+#: mod/or/reg_org.inc:106 mod/ims/view_inv.inc:245
 msgid "Facilities Available"
 msgstr ""
 
-#: mod/or/reg_org.inc:120 mod/cr/edit.inc:525 mod/cr/camp.inc:452
+#: mod/or/reg_org.inc:132
+msgid "You could only select 3 options in this field."
+msgstr ""
+
+#: mod/or/reg_org.inc:149 mod/cr/edit.inc:525 mod/cr/camp.inc:450
 msgid "Confirm Registration Details of "
 msgstr ""
 
-#: mod/or/reg_org.inc:137
+#: mod/or/reg_org.inc:166
 msgid "An Organization by the name "
 msgstr ""
 
-#: mod/or/reg_org.inc:137
+#: mod/or/reg_org.inc:166
 msgid " exists already. May be you should change the name?"
 msgstr ""
 
-#: mod/or/reg_org.inc:166
+#: mod/or/reg_org.inc:205
 msgid "Latitude= "
 msgstr ""
 
-#: mod/or/reg_org.inc:166
+#: mod/or/reg_org.inc:205
 msgid " Longitude= "
 msgstr ""
 
-#: mod/or/reg_org.inc:167 mod/or/lib_or.inc:126 mod/ims/lib_ims.inc:1466
+#: mod/or/reg_org.inc:206 mod/or/lib_or.inc:129 mod/ims/lib_ims.inc:1466
 #: inc/lib_location.inc:103
 msgid "Organization Location"
 msgstr ""
 
-#: mod/or/reg_org.inc:168
+#: mod/or/reg_org.inc:207
 msgid "Organization Location Address"
 msgstr ""
 
-#: mod/or/reg_org.inc:169 mod/or/view_org.inc:409 mod/ims/view_inv.inc:206
-#: mod/gis/gis_fns.inc:177 mod/cr/edit.inc:44 mod/cr/edit.inc:539
-#: mod/cr/edit.inc:615 mod/cr/camp.inc:49
+#: mod/or/reg_org.inc:208 mod/or/view_org.inc:407 mod/or/view_org.inc:703
+#: mod/ims/view_inv.inc:206 mod/gis/gis_fns.inc:177 mod/cr/edit.inc:44
+#: mod/cr/edit.inc:539 mod/cr/edit.inc:615 mod/cr/camp.inc:49
 msgid "Map Location"
 msgstr ""
 
-#: mod/or/reg_org.inc:175 mod/or/reg_org.inc:253 mod/or/view_org.inc:440
-#: mod/ims/reg_inv.inc:50 mod/ims/reg_inv.inc:100
+#: mod/or/reg_org.inc:214 mod/or/reg_org.inc:306 mod/or/view_org.inc:438
+#: mod/or/view_org.inc:724 mod/ims/reg_inv.inc:50 mod/ims/reg_inv.inc:100
 msgid "Facilities Avaliable"
 msgstr ""
 
-#: mod/or/reg_org.inc:184 mod/or/view_org.inc:450 mod/or/admin_forms.inc:50
+#: mod/or/reg_org.inc:223 mod/or/view_org.inc:448 mod/or/admin_forms.inc:50
 #: mod/or/admin_forms.inc:87 mod/ims/add_item.inc:160 mod/ims/view_inv.inc:256
 #: mod/rs/config.inc:47 mod/cs/edit.inc:284 mod/cs/edit.inc:464
 #: mod/cs/edit.inc:580 mod/cs/_admin.inc:50 mod/cs/_admin.inc:79
@@ -2009,30 +2025,30 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: mod/or/reg_org.inc:185 mod/dvr/edt_grp.inc:533 mod/dvr/add_new_grp.inc:433
+#: mod/or/reg_org.inc:224 mod/dvr/edt_grp.inc:533 mod/dvr/add_new_grp.inc:433
 #: mod/dvr/edt_indv.inc:466 mod/dvr/add_new_indv.inc:443
 msgid "Edit Details"
 msgstr ""
 
-#: mod/or/reg_org.inc:207
+#: mod/or/reg_org.inc:246
 msgid "Add an Operation/Branch under the Organization "
 msgstr ""
 
-#: mod/or/reg_org.inc:209
+#: mod/or/reg_org.inc:248
 msgid ""
 "Your Organization might be having branches or carrying out relief operations "
 "in this disaster. Then information of those operations is usefull "
 msgstr ""
 
-#: mod/or/reg_org.inc:216
+#: mod/or/reg_org.inc:255
 msgid "Holding Company"
 msgstr ""
 
-#: mod/or/reg_org.inc:221 mod/ims/reg_inv.inc:86
+#: mod/or/reg_org.inc:260 mod/ims/reg_inv.inc:86
 msgid "Operation/Branch Name : "
 msgstr ""
 
-#: mod/or/reg_org.inc:223
+#: mod/or/reg_org.inc:262 mod/or/admin.inc:23
 msgid "Relationship to the Holding Company"
 msgstr ""
 
@@ -2080,12 +2096,12 @@ msgstr ""
 msgid "Filter"
 msgstr ""
 
-#: mod/or/report.inc:461 mod/or/view_org.inc:87 mod/or/view_org.inc:482
-#: mod/or/lib_or.inc:908 mod/ims/ims_report.inc:432
+#: mod/or/report.inc:461 mod/or/view_org.inc:87 mod/or/view_org.inc:480
+#: mod/or/lib_or.inc:911 mod/ims/ims_report.inc:432
 msgid "Organization Name"
 msgstr ""
 
-#: mod/or/report.inc:462 mod/or/view_org.inc:88 mod/or/view_org.inc:483
+#: mod/or/report.inc:462 mod/or/view_org.inc:88 mod/or/view_org.inc:481
 msgid "Incidents"
 msgstr ""
 
@@ -2105,11 +2121,11 @@ msgstr ""
 msgid "Your are viewing page no "
 msgstr ""
 
-#: mod/or/view_org.inc:89 mod/or/view_org.inc:484
+#: mod/or/view_org.inc:89 mod/or/view_org.inc:482
 msgid "Services Provided"
 msgstr ""
 
-#: mod/or/view_org.inc:93 mod/or/view_org.inc:488 mod/ims/search.inc:382
+#: mod/or/view_org.inc:93 mod/or/view_org.inc:486 mod/ims/search.inc:382
 #: mod/ims/search.inc:499 mod/ims/view_inv.inc:61
 msgid "Contact Numbers"
 msgstr ""
@@ -2118,49 +2134,51 @@ msgstr ""
 msgid "No Records"
 msgstr ""
 
-#: mod/or/view_org.inc:222 mod/or/view_org.inc:557 mod/mpr/mpr_lib.inc:50
+#: mod/or/view_org.inc:206 mod/or/view_org.inc:555 mod/mpr/mpr_lib.inc:50
 #: mod/mpr/mpr_lib.inc:71 mod/mpr/search.inc:281 mod/dvr/lib.inc:150
 #: mod/dvr/lib.inc:170
 msgid "Assign to more incidents"
 msgstr ""
 
-#: mod/or/view_org.inc:354
+#: mod/or/view_org.inc:338
 msgid "Organization Registration Information of <em>"
 msgstr ""
 
-#: mod/or/view_org.inc:365
+#: mod/or/view_org.inc:349
 msgid ""
 "These are the basic details of an organization. Organization name is "
 "required ,but registration  no is optional"
 msgstr ""
 
-#: mod/or/view_org.inc:373
+#: mod/or/view_org.inc:357 mod/or/view_org.inc:692
 msgid "Registration Number : "
 msgstr ""
 
-#: mod/or/view_org.inc:411 mod/ims/view_inv.inc:208 mod/gis/gis_fns.inc:179
+#: mod/or/view_org.inc:409 mod/ims/view_inv.inc:208 mod/gis/gis_fns.inc:179
 #: mod/cr/edit.inc:46 mod/cr/edit.inc:617 mod/cr/camp.inc:51
 msgid ""
 "Click on the button \"Update the location\" will update the map location if "
 "you did manually modify the values of position."
 msgstr ""
 
-#: mod/or/view_org.inc:416 mod/ims/view_inv.inc:217 mod/cr/edit.inc:50
-#: mod/cr/edit.inc:540 mod/cr/edit.inc:621 mod/cr/camp.inc:53
+#: mod/or/view_org.inc:414 mod/or/view_org.inc:704 mod/ims/view_inv.inc:217
+#: mod/cr/edit.inc:50 mod/cr/edit.inc:540 mod/cr/edit.inc:621
+#: mod/cr/camp.inc:53
 msgid "Latitude : "
 msgstr ""
 
-#: mod/or/view_org.inc:419 mod/ims/view_inv.inc:224 mod/cr/edit.inc:52
-#: mod/cr/edit.inc:541 mod/cr/edit.inc:623 mod/cr/camp.inc:54
+#: mod/or/view_org.inc:417 mod/or/view_org.inc:705 mod/ims/view_inv.inc:224
+#: mod/cr/edit.inc:52 mod/cr/edit.inc:541 mod/cr/edit.inc:623
+#: mod/cr/camp.inc:54
 msgid "Longitude : "
 msgstr ""
 
-#: mod/or/view_org.inc:420 mod/ims/view_inv.inc:225 mod/gis/gis_fns.inc:187
+#: mod/or/view_org.inc:418 mod/ims/view_inv.inc:225 mod/gis/gis_fns.inc:187
 #: mod/cr/edit.inc:53 mod/cr/edit.inc:624 mod/cr/camp.inc:55
 msgid "Update the location"
 msgstr ""
 
-#: mod/or/view_org.inc:430 mod/ims/view_inv.inc:235 mod/gis/gis_fns.inc:197
+#: mod/or/view_org.inc:428 mod/ims/view_inv.inc:235 mod/gis/gis_fns.inc:197
 #: mod/cr/edit.inc:61 mod/cr/edit.inc:632 mod/cr/camp.inc:63
 msgid ""
 "You can move around and enlarge/reduce the size of the area you want using\n"
@@ -2168,11 +2186,68 @@ msgid ""
 "mark your location with a pointer."
 msgstr ""
 
-#: mod/or/view_org.inc:449 mod/ims/view_edit_item.inc:153
-#: mod/ims/view_inv.inc:255 mod/cs/edit.inc:283 mod/cs/edit.inc:463
-#: mod/cs/edit.inc:579 mod/admin/location.inc:98 mod/cr/edit.inc:191
-#: mod/rms/handler_mng_ff.inc:40 mod/msg/message_forms.inc:234
+#: mod/or/view_org.inc:447 mod/or/view_org.inc:733
+#: mod/ims/view_edit_item.inc:153 mod/ims/view_inv.inc:255 mod/cs/edit.inc:283
+#: mod/cs/edit.inc:463 mod/cs/edit.inc:579 mod/admin/location.inc:98
+#: mod/cr/edit.inc:191 mod/rms/handler_mng_ff.inc:40
+#: mod/msg/message_forms.inc:234
 msgid "Close"
+msgstr ""
+
+#: mod/or/view_org.inc:634 mod/or/lib_or.inc:686 mod/ims/lib_ims.inc:360
+msgid "Name : "
+msgstr ""
+
+#: mod/or/view_org.inc:638 mod/or/view_org.inc:700 mod/or/lib_or.inc:689
+#: mod/ims/lib_ims.inc:363
+msgid "Address : "
+msgstr ""
+
+#: mod/or/view_org.inc:642 mod/or/lib_or.inc:692 mod/ims/lib_ims.inc:365
+msgid "Phone : "
+msgstr ""
+
+#: mod/or/view_org.inc:646 mod/or/lib_or.inc:695 mod/ims/lib_ims.inc:367
+msgid "Mobile No : "
+msgstr ""
+
+#: mod/or/view_org.inc:650 mod/or/lib_or.inc:698 mod/ims/lib_ims.inc:369
+msgid "Fax : "
+msgstr ""
+
+#: mod/or/view_org.inc:654 mod/or/lib_or.inc:701 mod/ims/lib_ims.inc:371
+msgid "Email : "
+msgstr ""
+
+#: mod/or/view_org.inc:658 mod/or/lib_or.inc:704 mod/ims/lib_ims.inc:373
+msgid "Website : "
+msgstr ""
+
+#: mod/or/view_org.inc:685
+msgid "Organization Registration Information of "
+msgstr ""
+
+#: mod/or/view_org.inc:694
+msgid "Organization Type : "
+msgstr ""
+
+#: mod/or/view_org.inc:695
+msgid "Organization Sector : "
+msgstr ""
+
+#: mod/or/view_org.inc:725 mod/or/lib_or.inc:710 mod/ims/search.inc:383
+#: mod/ims/search.inc:500 mod/ims/ims_report.inc:438 mod/ims/view_inv.inc:62
+#: mod/ims/main.inc:460
+msgid "Man Power"
+msgstr ""
+
+#: mod/or/view_org.inc:726 mod/or/lib_or.inc:711 mod/ims/search.inc:384
+#: mod/ims/search.inc:501 mod/ims/ims_report.inc:439 mod/ims/view_inv.inc:63
+msgid "Equipment"
+msgstr ""
+
+#: mod/or/view_org.inc:727 mod/or/lib_or.inc:712
+msgid "Resources"
 msgstr ""
 
 #: mod/or/errors.inc:15 mod/or/errors.inc:22
@@ -2247,30 +2322,32 @@ msgid ""
 "lower than 100"
 msgstr ""
 
-#: mod/or/lib_or.inc:582
+#: mod/or/lib_or.inc:585
 msgid ""
 "Please specify the type of your organization. That is whether you are a "
 "government organization,multinational NGO, private organization ect."
 msgstr ""
 
-#: mod/or/lib_or.inc:608
+#: mod/or/lib_or.inc:611
 msgid ""
 "please select whether you are Department,Branch,ect of the parent "
 "organization"
 msgstr ""
 
-#: mod/or/lib_or.inc:624
+#: mod/or/lib_or.inc:627
 msgid ""
-"Select the services your organization provides ,that is what you do as an "
+"Select the services your organization provides, that is what you do as an "
 "organization or services your organization can provide in a disaster. e.g. "
-"if you offer medical services select it"
+"if you offer medical services select it. This field could accept up to 3 "
+"options be selected. You could hold Ctrl key with mouse click to select "
+"multiple options."
 msgstr ""
 
-#: mod/or/lib_or.inc:639 mod/mpr/add.inc:322 mod/mpr/add.inc:543
+#: mod/or/lib_or.inc:642 mod/mpr/add.inc:322 mod/mpr/add.inc:543
 msgid "Phone"
 msgstr ""
 
-#: mod/or/lib_or.inc:640 mod/mpr/view.inc:81 mod/mpr/edit.inc:197
+#: mod/or/lib_or.inc:643 mod/mpr/view.inc:81 mod/mpr/edit.inc:197
 #: mod/mpr/edit.inc:488 mod/mpr/add.inc:106 mod/mpr/add.inc:525
 #: mod/dvr/edt_grp.inc:288 mod/dvr/edt_grp.inc:490 mod/dvr/add_new_grp.inc:224
 #: mod/dvr/add_new_grp.inc:390 mod/dvr/edt_indv.inc:234
@@ -2281,11 +2358,11 @@ msgstr ""
 msgid "Mobile"
 msgstr ""
 
-#: mod/or/lib_or.inc:641
+#: mod/or/lib_or.inc:644
 msgid "Fax"
 msgstr ""
 
-#: mod/or/lib_or.inc:642 mod/home/main.inc:52 mod/home/main.inc:182
+#: mod/or/lib_or.inc:645 mod/home/main.inc:52 mod/home/main.inc:182
 #: mod/mpr/add.inc:323 mod/mpr/add.inc:544 mod/dvr/edt_grp.inc:294
 #: mod/dvr/edt_grp.inc:492 mod/dvr/add_new_grp.inc:230
 #: mod/dvr/add_new_grp.inc:392 mod/rms/handler_req_new.inc:38
@@ -2294,210 +2371,185 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: mod/or/lib_or.inc:643
+#: mod/or/lib_or.inc:646
 msgid "Website"
 msgstr ""
 
-#: mod/or/lib_or.inc:646
+#: mod/or/lib_or.inc:649
 msgid ""
 "Please provide contact details that can be used to contact your organization "
 "in a disaster"
 msgstr ""
 
-#: mod/or/lib_or.inc:682
+#: mod/or/lib_or.inc:685
 msgid "Name of the person to be contacted in a disaster"
 msgstr ""
 
-#: mod/or/lib_or.inc:683 mod/ims/lib_ims.inc:360
-msgid "Name : "
-msgstr ""
-
-#: mod/or/lib_or.inc:685
+#: mod/or/lib_or.inc:688
 msgid "Address of a person to be contacted in a disaster"
 msgstr ""
 
-#: mod/or/lib_or.inc:686 mod/ims/lib_ims.inc:363
-msgid "Address : "
-msgstr ""
-
-#: mod/or/lib_or.inc:688
+#: mod/or/lib_or.inc:691
 msgid "Land line number to be contacted in a disaster"
 msgstr ""
 
-#: mod/or/lib_or.inc:689 mod/ims/lib_ims.inc:365
-msgid "Phone : "
-msgstr ""
-
-#: mod/or/lib_or.inc:691
+#: mod/or/lib_or.inc:694
 msgid "Mobile Phone number to be contacted in a disaster"
 msgstr ""
 
-#: mod/or/lib_or.inc:692 mod/ims/lib_ims.inc:367
-msgid "Mobile No : "
-msgstr ""
-
-#: mod/or/lib_or.inc:694
+#: mod/or/lib_or.inc:697
 msgid "Fax number to be contacted in a disaster"
 msgstr ""
 
-#: mod/or/lib_or.inc:695 mod/ims/lib_ims.inc:369
-msgid "Fax : "
-msgstr ""
-
-#: mod/or/lib_or.inc:697
+#: mod/or/lib_or.inc:700
 msgid "Email address to be contacted in a disaster"
 msgstr ""
 
-#: mod/or/lib_or.inc:698 mod/ims/lib_ims.inc:371
-msgid "Email : "
-msgstr ""
-
-#: mod/or/lib_or.inc:700
+#: mod/or/lib_or.inc:703
 msgid "Website of the Organization"
 msgstr ""
 
-#: mod/or/lib_or.inc:701 mod/ims/lib_ims.inc:373
-msgid "Website : "
-msgstr ""
-
-#: mod/or/lib_or.inc:704
+#: mod/or/lib_or.inc:707
 msgid ""
 "Please document the facilities available in your organization. This "
 "information  should provide a rough idea of the resources available in your "
 "organization and is useful to plan relief operations"
 msgstr ""
 
-#: mod/or/lib_or.inc:707 mod/ims/search.inc:383 mod/ims/search.inc:500
-#: mod/ims/ims_report.inc:438 mod/ims/view_inv.inc:62 mod/ims/main.inc:460
-msgid "Man Power"
-msgstr ""
-
-#: mod/or/lib_or.inc:708 mod/ims/search.inc:384 mod/ims/search.inc:501
-#: mod/ims/ims_report.inc:439 mod/ims/view_inv.inc:63
-msgid "Equipment"
-msgstr ""
-
-#: mod/or/lib_or.inc:709
-msgid "Resources"
-msgstr ""
-
-#: mod/or/lib_or.inc:729
+#: mod/or/lib_or.inc:732
 msgid ""
 "Specify the workforce(Men/Women) in your organization. This amount would be "
 "useful in identifying the potential number of volunteers in the event of a "
 "disaster"
 msgstr ""
 
-#: mod/or/lib_or.inc:730
+#: mod/or/lib_or.inc:733
 msgid ""
 "You can specify the man power as a number or give details up to 100 "
 "characters."
 msgstr ""
 
-#: mod/or/lib_or.inc:731 mod/ims/lib_ims.inc:389
+#: mod/or/lib_or.inc:734 mod/ims/lib_ims.inc:389
 msgid "Man Power : "
 msgstr ""
 
-#: mod/or/lib_or.inc:733
+#: mod/or/lib_or.inc:736
 msgid ""
 "Specify the kind of equipment you have,that will be useful in Disaster "
 "Relief Operations"
 msgstr ""
 
-#: mod/or/lib_or.inc:734 mod/ims/lib_ims.inc:391
+#: mod/or/lib_or.inc:737 mod/ims/lib_ims.inc:391
 msgid "Equipment : "
 msgstr ""
 
-#: mod/or/lib_or.inc:736
+#: mod/or/lib_or.inc:739
 msgid ""
 "Specify any other resource that you think might be useful in Disaster Relief "
 "Operations"
 msgstr ""
 
-#: mod/or/lib_or.inc:737 mod/ims/lib_ims.inc:393
+#: mod/or/lib_or.inc:740 mod/ims/lib_ims.inc:393
 msgid "Other relevant resources : "
 msgstr ""
 
-#: mod/or/lib_or.inc:741 mod/ims/lib_ims.inc:399
+#: mod/or/lib_or.inc:744 mod/ims/lib_ims.inc:399
 msgid "Account Name : "
 msgstr ""
 
-#: mod/or/lib_or.inc:741 mod/ims/lib_ims.inc:399
+#: mod/or/lib_or.inc:744 mod/ims/lib_ims.inc:399
 msgid "* User Name for Login: "
 msgstr ""
 
-#: mod/or/lib_or.inc:741 mod/ims/lib_ims.inc:399
+#: mod/or/lib_or.inc:744 mod/ims/lib_ims.inc:399
 msgid "* Password for Login: "
 msgstr ""
 
-#: mod/or/lib_or.inc:741 mod/ims/lib_ims.inc:399
+#: mod/or/lib_or.inc:744 mod/ims/lib_ims.inc:399
 msgid "* Confirm Password: "
 msgstr ""
 
-#: mod/or/lib_or.inc:771
+#: mod/or/lib_or.inc:774
 msgid "Select the Disaster/event/incident"
 msgstr ""
 
-#: mod/or/lib_or.inc:773
+#: mod/or/lib_or.inc:776
 msgid ""
 "Since there are multiple incidents you required to select relevant incidents "
 msgstr ""
 
-#: mod/or/lib_or.inc:783
+#: mod/or/lib_or.inc:786
 msgid "Choose related incidents:The Default Incident is Highlighted"
 msgstr ""
 
-#: mod/or/lib_or.inc:834
+#: mod/or/lib_or.inc:837
 msgid "select related incidents"
 msgstr ""
 
-#: mod/or/lib_or.inc:838
+#: mod/or/lib_or.inc:841
 msgid "Add Operation"
 msgstr ""
 
-#: mod/or/lib_or.inc:838
+#: mod/or/lib_or.inc:841
 msgid ""
 "(Your Organization might be having branches or carrying out relief "
 "operations in this disaster. Then information of those operations is "
 "usefull : )"
 msgstr ""
 
-#: mod/or/lib_or.inc:912
+#: mod/or/lib_or.inc:915
 msgid "Operation/Branch "
 msgstr ""
 
-#: mod/or/admin.inc:20 mod/or/admin.inc:35 mod/or/admin_forms.inc:105
+#: mod/or/admin.inc:20 mod/or/admin_forms.inc:105
 msgid "Organization Types"
 msgstr ""
 
-#: mod/or/admin.inc:21 mod/or/admin.inc:36 mod/or/admin_forms.inc:163
+#: mod/or/admin.inc:21 mod/or/admin_forms.inc:163
 msgid "Organization Sectors"
 msgstr ""
 
-#: mod/or/admin.inc:32
-msgid "Organisation Registry Configuration."
+#: mod/or/admin.inc:22
+msgid "Organization Services"
 msgstr ""
 
-#: mod/or/admin.inc:33
-msgid ""
-"Use the following links or the above tabs to chage organization types and "
-"sectors."
+#: mod/or/admin.inc:63 mod/mpr/admin.inc:305 mod/cr/admin.inc:133
+msgid " was successfully added."
 msgstr ""
 
-#: mod/or/admin.inc:35
-msgid "Change the types of organizations, (add new, edit or delete)"
+#: mod/or/admin.inc:72 mod/mpr/admin.inc:277 mod/cr/admin.inc:142
+#: mod/dvr/admin.inc:158
+msgid "Field was successfully deleted."
 msgstr ""
 
-#: mod/or/admin.inc:36
-msgid "Change the organization sectors, (add new, edit or delete)"
+#: mod/or/admin.inc:110 mod/or/admin.inc:162 mod/mpr/admin.inc:332
+#: mod/mpr/admin.inc:384 mod/cr/admin.inc:180 mod/cr/admin.inc:232
+msgid "AddNew"
 msgstr ""
 
-#: mod/or/admin.inc:83
-msgid "Organization services were succesfully added/removed "
+#: mod/or/admin.inc:112 mod/mpr/admin.inc:334 mod/cr/admin.inc:182
+msgid "Please enter the code"
 msgstr ""
 
-#: mod/or/admin.inc:132
-msgid "ACL Base for Organization Registry was succesfully installed"
+#: mod/or/admin.inc:115 mod/mpr/admin.inc:337 mod/cr/admin.inc:185
+msgid "Please  enter the description"
+msgstr ""
+
+#: mod/or/admin.inc:118 mod/mpr/admin.inc:340 mod/cr/admin.inc:188
+msgid "Code already exists"
+msgstr ""
+
+#: mod/or/admin.inc:131 mod/or/admin.inc:160 mod/mpr/admin.inc:353
+#: mod/mpr/admin.inc:382 mod/cr/admin.inc:201 mod/cr/admin.inc:230
+#: mod/dvr/admin.inc:55 mod/msg/handler_cap_edit.inc:103
+#: mod/msg/handler_cap_new.inc:94
+msgid "Code"
+msgstr ""
+
+#: mod/or/admin.inc:159 mod/mpr/admin.inc:381 mod/admin/ims_level.inc:60
+#: mod/admin/ims_level.inc:217 mod/admin/ims_level.inc:402
+#: mod/cr/admin.inc:229
+msgid "Add New "
 msgstr ""
 
 #: mod/or/home.inc:37
@@ -2623,13 +2675,13 @@ msgstr ""
 msgid "Organizations by Sector"
 msgstr ""
 
-#: mod/or/main.inc:191
+#: mod/or/main.inc:190
 msgid ""
 "Branches or departments are registerd with the Organization. Please remove "
 "them first"
 msgstr ""
 
-#: mod/or/main.inc:301
+#: mod/or/main.inc:304
 msgid "Back to Search Page"
 msgstr ""
 
@@ -2749,7 +2801,7 @@ msgid ""
 "Access Code is a automatically generated 32-character alphanumeric sequence."
 msgstr ""
 
-#: mod/ws/reg.inc:104 mod/cr/edit.inc:593 mod/cr/camp.inc:516
+#: mod/ws/reg.inc:104 mod/cr/edit.inc:593 mod/cr/camp.inc:514
 #: mod/dvr/edt_grp.inc:450 mod/dvr/add_new_grp.inc:355
 #: mod/dvr/edt_indv.inc:684 mod/dvr/add_new_indv.inc:670
 #: mod/rms/handler_req_new.inc:353 mod/rms/handler_plg_new.inc:147
@@ -3287,7 +3339,7 @@ msgstr ""
 msgid "  Status  : "
 msgstr ""
 
-#: mod/ims/search.inc:119 mod/cr/search.inc:33 mod/cr/search.inc:110
+#: mod/ims/search.inc:119 mod/cr/search.inc:33 mod/cr/search.inc:120
 #: mod/cr/main_fns.inc:150 mod/cr/main_fns.inc:170
 msgid "Search Results"
 msgstr ""
@@ -5630,95 +5682,101 @@ msgstr ""
 msgid "Situation Type"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:115
+#: mod/gis/wm_fns.inc:117
 msgid "Situation Image"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:116
+#: mod/gis/wm_fns.inc:118
 msgid "Upload Image"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:173
+#: mod/gis/wm_fns.inc:175
 msgid "Mapping Client"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:190
+#: mod/gis/wm_fns.inc:192
 msgid "Detail Name Cannot be empty."
 msgstr ""
 
-#: mod/gis/wm_fns.inc:196
+#: mod/gis/wm_fns.inc:198
 msgid "Add Situation Detail"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:199
+#: mod/gis/wm_fns.inc:201
 msgid "Main Details"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:201
+#: mod/gis/wm_fns.inc:203
 msgid "Name of Detail"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:202
+#: mod/gis/wm_fns.inc:204
 msgid "Wiki Type"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:203 mod/gis/wm_fns.inc:228
+#: mod/gis/wm_fns.inc:205 mod/gis/wm_fns.inc:238
 msgid "Detail Summary"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:205
+#: mod/gis/wm_fns.inc:207
 msgid "Extra Details"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:206
+#: mod/gis/wm_fns.inc:208
 msgid "URL"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:208
+#: mod/gis/wm_fns.inc:210
 msgid "Date of Event"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:210
+#: mod/gis/wm_fns.inc:212
 msgid "Wikimap Options"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:211 mod/admin/mmc_main.inc:13
+#: mod/gis/wm_fns.inc:213
+#: mod/gis/plugins/google_maps/handler_google_maps.inc:253
+#: mod/admin/mmc_main.inc:13
 msgid "Author"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:212
+#: mod/gis/wm_fns.inc:214
 msgid "Publicly Editable"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:213
+#: mod/gis/wm_fns.inc:215
 msgid "Publicly Viewable"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:215
+#: mod/gis/wm_fns.inc:217
 msgid "Add Detail"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:227
+#: mod/gis/wm_fns.inc:229
 msgid "Update Detail"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:233
+#: mod/gis/wm_fns.inc:243
 msgid "Commit Detail"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:244
+#: mod/gis/wm_fns.inc:252
+msgid "Please enter the description before updating."
+msgstr ""
+
+#: mod/gis/wm_fns.inc:259
 msgid "Succesfully updated description"
 msgstr ""
 
-#: mod/gis/wm_fns.inc:290
+#: mod/gis/wm_fns.inc:309
 msgid "Succesfully added wiki item "
 msgstr ""
 
-#: mod/gis/plugins/google_maps/handler_google_maps.inc:230
+#: mod/gis/plugins/google_maps/handler_google_maps.inc:236
 msgid "Date: "
 msgstr ""
 
-#: mod/gis/plugins/google_maps/handler_google_maps.inc:234
+#: mod/gis/plugins/google_maps/handler_google_maps.inc:240
 msgid "anonymous"
 msgstr ""
 
@@ -6031,6 +6089,10 @@ msgstr ""
 msgid "Date of Event Cannot be empty."
 msgstr ""
 
+#: mod/gis/main.inc:68
+msgid "Detail Summary Cannot be empty."
+msgstr ""
+
 #: mod/gis/admin_bk.inc:42 mod/admin/gis_admin.inc:41
 msgid " Admin Page"
 msgstr ""
@@ -6122,8 +6184,8 @@ msgstr ""
 #: mod/mpr/view.inc:50 mod/mpr/search.inc:76 mod/mpr/edit.inc:153
 #: mod/mpr/edit.inc:439 mod/mpr/add.inc:64 mod/mpr/add.inc:476
 #: mod/cr/edit.inc:70 mod/cr/edit.inc:166 mod/cr/edit.inc:544
-#: mod/cr/edit.inc:641 mod/cr/camp.inc:72 mod/cr/camp.inc:467
-#: mod/cr/camp.inc:546 mod/dvr/edt_grp.inc:235
+#: mod/cr/edit.inc:641 mod/cr/camp.inc:72 mod/cr/camp.inc:465
+#: mod/cr/camp.inc:544 mod/dvr/edt_grp.inc:235
 #: mod/dvr/search_individual.inc:87 mod/dvr/search_individual.inc:133
 #: mod/dvr/search_group.inc:138 mod/dvr/add_new_grp.inc:194
 #: mod/dvr/edt_indv.inc:146 mod/dvr/add_new_indv.inc:85
@@ -6662,43 +6724,6 @@ msgstr ""
 
 #: mod/mpr/admin.inc:246
 msgid "ACL Base for Missing Person Registry was successfully installed"
-msgstr ""
-
-#: mod/mpr/admin.inc:277 mod/cr/admin.inc:142 mod/dvr/admin.inc:158
-msgid "Field was successfully deleted."
-msgstr ""
-
-#: mod/mpr/admin.inc:305 mod/cr/admin.inc:133
-msgid " was successfully added."
-msgstr ""
-
-#: mod/mpr/admin.inc:332 mod/mpr/admin.inc:384 mod/cr/admin.inc:180
-#: mod/cr/admin.inc:232
-msgid "AddNew"
-msgstr ""
-
-#: mod/mpr/admin.inc:334 mod/cr/admin.inc:182
-msgid "Please enter the code"
-msgstr ""
-
-#: mod/mpr/admin.inc:337 mod/cr/admin.inc:185
-msgid "Please  enter the description"
-msgstr ""
-
-#: mod/mpr/admin.inc:340 mod/cr/admin.inc:188
-msgid "Code already exists"
-msgstr ""
-
-#: mod/mpr/admin.inc:353 mod/mpr/admin.inc:382 mod/cr/admin.inc:201
-#: mod/cr/admin.inc:230 mod/dvr/admin.inc:55 mod/msg/handler_cap_edit.inc:103
-#: mod/msg/handler_cap_new.inc:94
-msgid "Code"
-msgstr ""
-
-#: mod/mpr/admin.inc:381 mod/admin/ims_level.inc:60
-#: mod/admin/ims_level.inc:217 mod/admin/ims_level.inc:402
-#: mod/cr/admin.inc:229
-msgid "Add New "
 msgstr ""
 
 #: mod/mpr/home.inc:32
@@ -7699,8 +7724,8 @@ msgid "Fields marked with * are required (entry is compulsory)"
 msgstr ""
 
 #: mod/admin/location.inc:85 mod/cr/edit.inc:41 mod/cr/edit.inc:535
-#: mod/cr/edit.inc:612 mod/cr/camp.inc:46 mod/cr/camp.inc:462
-#: mod/cr/camp.inc:541
+#: mod/cr/edit.inc:612 mod/cr/camp.inc:46 mod/cr/camp.inc:460
+#: mod/cr/camp.inc:539
 msgid "Location Details"
 msgstr ""
 
@@ -8744,30 +8769,30 @@ msgstr ""
 msgid "New module translation merge succesfully"
 msgstr ""
 
-#: mod/cr/search.inc:41 mod/cr/search.inc:118 mod/cr/edit.inc:37
+#: mod/cr/search.inc:41 mod/cr/search.inc:128 mod/cr/edit.inc:37
 #: mod/cr/edit.inc:123 mod/cr/edit.inc:529 mod/cr/edit.inc:603
 #: mod/cr/reports.inc:59 mod/cr/reports.inc:162 mod/cr/reports.inc:212
-#: mod/cr/camp.inc:31 mod/cr/camp.inc:456 mod/cr/camp.inc:531
+#: mod/cr/camp.inc:31 mod/cr/camp.inc:454 mod/cr/camp.inc:529
 msgid "Shelter Name"
 msgstr ""
 
-#: mod/cr/search.inc:44 mod/cr/search.inc:121 mod/cr/search.inc:183
+#: mod/cr/search.inc:44 mod/cr/search.inc:131 mod/cr/search.inc:193
 #: mod/cr/edit.inc:38 mod/cr/edit.inc:124 mod/cr/edit.inc:532
 #: mod/cr/edit.inc:604 mod/cr/reports.inc:60 mod/cr/reports.inc:163
-#: mod/cr/admin.inc:22 mod/cr/camp.inc:32 mod/cr/camp.inc:459
-#: mod/cr/camp.inc:532
+#: mod/cr/admin.inc:22 mod/cr/camp.inc:32 mod/cr/camp.inc:457
+#: mod/cr/camp.inc:530
 msgid "Shelter Type"
 msgstr ""
 
-#: mod/cr/search.inc:45 mod/cr/search.inc:122 mod/cr/edit.inc:176
-#: mod/cr/edit.inc:554 mod/cr/reports.inc:67 mod/cr/camp.inc:477
+#: mod/cr/search.inc:45 mod/cr/search.inc:132 mod/cr/edit.inc:176
+#: mod/cr/edit.inc:554 mod/cr/reports.inc:67 mod/cr/camp.inc:475
 msgid "Total Count"
 msgstr ""
 
-#: mod/cr/search.inc:46 mod/cr/search.inc:123 mod/cr/edit.inc:76
+#: mod/cr/search.inc:46 mod/cr/search.inc:133 mod/cr/edit.inc:76
 #: mod/cr/edit.inc:172 mod/cr/edit.inc:550 mod/cr/edit.inc:647
-#: mod/cr/edit_ppl.inc:42 mod/cr/camp.inc:78 mod/cr/camp.inc:473
-#: mod/cr/camp.inc:552 mod/dvr/reporting.inc:88
+#: mod/cr/edit_ppl.inc:42 mod/cr/camp.inc:78 mod/cr/camp.inc:471
+#: mod/cr/camp.inc:550 mod/dvr/reporting.inc:88
 msgid "Capacity"
 msgstr ""
 
@@ -8775,23 +8800,23 @@ msgstr ""
 msgid "edit people count"
 msgstr ""
 
-#: mod/cr/search.inc:71 mod/cr/search.inc:147
+#: mod/cr/search.inc:71 mod/cr/search.inc:157
 msgid "ebdcnt"
 msgstr ""
 
-#: mod/cr/search.inc:146
+#: mod/cr/search.inc:156
 msgid "eplcnt"
 msgstr ""
 
-#: mod/cr/search.inc:182
+#: mod/cr/search.inc:192
 msgid "Name of Shelter"
 msgstr ""
 
-#: mod/cr/search.inc:199
+#: mod/cr/search.inc:209
 msgid "Search Shelter by Address"
 msgstr ""
 
-#: mod/cr/search.inc:204
+#: mod/cr/search.inc:214
 msgid " Address "
 msgstr ""
 
@@ -8801,67 +8826,67 @@ msgstr ""
 
 #: mod/cr/edit.inc:34 mod/cr/edit.inc:114 mod/cr/edit.inc:528
 #: mod/cr/edit.inc:600 mod/cr/edit_ppl.inc:34 mod/cr/camp.inc:29
-#: mod/cr/camp.inc:455 mod/cr/camp.inc:529
+#: mod/cr/camp.inc:453 mod/cr/camp.inc:527
 msgid "General Details"
 msgstr ""
 
 #: mod/cr/edit.inc:69 mod/cr/edit.inc:165 mod/cr/edit.inc:543
-#: mod/cr/edit.inc:640 mod/cr/camp.inc:71 mod/cr/camp.inc:466
-#: mod/cr/camp.inc:545
+#: mod/cr/edit.inc:640 mod/cr/camp.inc:71 mod/cr/camp.inc:464
+#: mod/cr/camp.inc:543
 msgid "Contact Person Details"
 msgstr ""
 
 #: mod/cr/edit.inc:71 mod/cr/edit.inc:167 mod/cr/edit.inc:545
-#: mod/cr/edit.inc:642 mod/cr/camp.inc:73 mod/cr/camp.inc:468
-#: mod/cr/camp.inc:547
+#: mod/cr/edit.inc:642 mod/cr/camp.inc:73 mod/cr/camp.inc:466
+#: mod/cr/camp.inc:545
 msgid "Phone Number"
 msgstr ""
 
 #: mod/cr/edit.inc:72 mod/cr/edit.inc:168 mod/cr/edit.inc:546
-#: mod/cr/edit.inc:643 mod/cr/camp.inc:74 mod/cr/camp.inc:469
-#: mod/cr/camp.inc:548
+#: mod/cr/edit.inc:643 mod/cr/camp.inc:74 mod/cr/camp.inc:467
+#: mod/cr/camp.inc:546
 msgid "Mobile Number"
 msgstr ""
 
 #: mod/cr/edit.inc:73 mod/cr/edit.inc:169 mod/cr/edit.inc:547
-#: mod/cr/edit.inc:644 mod/cr/camp.inc:75 mod/cr/camp.inc:470
-#: mod/cr/camp.inc:549
+#: mod/cr/edit.inc:644 mod/cr/camp.inc:75 mod/cr/camp.inc:468
+#: mod/cr/camp.inc:547
 msgid "Occupation"
 msgstr ""
 
 #: mod/cr/edit.inc:75 mod/cr/edit.inc:171 mod/cr/edit.inc:549
-#: mod/cr/edit.inc:646 mod/cr/camp.inc:77 mod/cr/camp.inc:472
-#: mod/cr/camp.inc:551
+#: mod/cr/edit.inc:646 mod/cr/camp.inc:77 mod/cr/camp.inc:470
+#: mod/cr/camp.inc:549
 msgid "Shelter Population"
 msgstr ""
 
 #: mod/cr/edit.inc:77 mod/cr/edit.inc:173 mod/cr/edit.inc:551
 #: mod/cr/edit.inc:648 mod/cr/edit_ppl.inc:50 mod/cr/camp.inc:79
-#: mod/cr/camp.inc:474 mod/cr/camp.inc:553
+#: mod/cr/camp.inc:472 mod/cr/camp.inc:551
 msgid "Men"
 msgstr ""
 
 #: mod/cr/edit.inc:78 mod/cr/edit.inc:174 mod/cr/edit.inc:552
 #: mod/cr/edit.inc:649 mod/cr/edit_ppl.inc:57 mod/cr/camp.inc:80
-#: mod/cr/camp.inc:475 mod/cr/camp.inc:554
+#: mod/cr/camp.inc:473 mod/cr/camp.inc:552
 msgid "Women"
 msgstr ""
 
 #: mod/cr/edit.inc:79 mod/cr/edit.inc:175 mod/cr/edit.inc:553
 #: mod/cr/edit.inc:650 mod/cr/edit_ppl.inc:65 mod/cr/camp.inc:81
-#: mod/cr/camp.inc:476 mod/cr/camp.inc:555
+#: mod/cr/camp.inc:474 mod/cr/camp.inc:553
 msgid "Children( 1 ~ 12 years old )"
 msgstr ""
 
 #: mod/cr/edit.inc:81 mod/cr/edit.inc:178 mod/cr/edit.inc:556
-#: mod/cr/edit.inc:652 mod/cr/camp.inc:83 mod/cr/camp.inc:479
-#: mod/cr/camp.inc:557
+#: mod/cr/edit.inc:652 mod/cr/camp.inc:83 mod/cr/camp.inc:477
+#: mod/cr/camp.inc:555
 msgid "Infected Count"
 msgstr ""
 
 #: mod/cr/edit.inc:82 mod/cr/edit.inc:179 mod/cr/edit.inc:557
 #: mod/cr/edit.inc:653 mod/cr/edit_ppl.inc:81 mod/cr/camp.inc:84
-#: mod/cr/camp.inc:480 mod/cr/camp.inc:558
+#: mod/cr/camp.inc:478 mod/cr/camp.inc:556
 msgid "Update time"
 msgstr ""
 
@@ -8878,7 +8903,7 @@ msgid "Available services"
 msgstr ""
 
 #: mod/cr/edit.inc:227 mod/cr/edit.inc:565 mod/cr/camp.inc:173
-#: mod/cr/camp.inc:487
+#: mod/cr/camp.inc:485
 msgid "Services / Facilities Available"
 msgstr ""
 
@@ -8886,7 +8911,7 @@ msgstr ""
 msgid "Deleted Shelter Succesfully"
 msgstr ""
 
-#: mod/cr/edit.inc:278 mod/cr/camp.inc:435 mod/cr/main.inc:34
+#: mod/cr/edit.inc:278 mod/cr/camp.inc:433 mod/cr/main.inc:34
 msgid "Edit Shelter"
 msgstr ""
 
@@ -8954,7 +8979,7 @@ msgstr ""
 msgid "Service Type"
 msgstr ""
 
-#: mod/cr/edit.inc:489 mod/cr/edit.inc:579 mod/cr/camp.inc:501
+#: mod/cr/edit.inc:489 mod/cr/edit.inc:579 mod/cr/camp.inc:499
 msgid "Available"
 msgstr ""
 
@@ -8966,7 +8991,7 @@ msgstr ""
 msgid "Use the Navigation Menu to Continue"
 msgstr ""
 
-#: mod/cr/edit.inc:585 mod/cr/camp.inc:507
+#: mod/cr/edit.inc:585 mod/cr/camp.inc:505
 msgid "Not Available"
 msgstr ""
 
@@ -9016,7 +9041,7 @@ msgstr ""
 msgid "GIS Reports of Shelter"
 msgstr ""
 
-#: mod/cr/main_fns.inc:48 mod/cr/camp.inc:437
+#: mod/cr/main_fns.inc:48 mod/cr/camp.inc:435
 msgid "Search by Name"
 msgstr ""
 
@@ -9024,7 +9049,7 @@ msgstr ""
 msgid "Search for shelter by name or type of the shelter"
 msgstr ""
 
-#: mod/cr/main_fns.inc:49 mod/cr/camp.inc:438 mod/cr/main.inc:31
+#: mod/cr/main_fns.inc:49 mod/cr/camp.inc:436 mod/cr/main.inc:31
 msgid "Search by address"
 msgstr ""
 
@@ -9364,31 +9389,31 @@ msgstr ""
 msgid "The obstetrics Beds is not a valid number"
 msgstr ""
 
-#: mod/cr/camp.inc:427
+#: mod/cr/camp.inc:425
 msgid "You have succesfully registered shelter "
 msgstr ""
 
-#: mod/cr/camp.inc:431 mod/cr/camp.inc:433 mod/cr/main.inc:33
+#: mod/cr/camp.inc:429 mod/cr/camp.inc:431 mod/cr/main.inc:33
 msgid "Add Shelter"
 msgstr ""
 
-#: mod/cr/camp.inc:464
+#: mod/cr/camp.inc:462
 msgid "Location : "
 msgstr ""
 
-#: mod/cr/camp.inc:483
+#: mod/cr/camp.inc:481
 msgid "GPS Coordinates"
 msgstr ""
 
-#: mod/cr/camp.inc:484
+#: mod/cr/camp.inc:482
 msgid "Latitude"
 msgstr ""
 
-#: mod/cr/camp.inc:485
+#: mod/cr/camp.inc:483
 msgid "Longitude"
 msgstr ""
 
-#: mod/cr/camp.inc:526
+#: mod/cr/camp.inc:524
 msgid "Register New Shelter"
 msgstr ""
 
