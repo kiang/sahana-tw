@@ -208,7 +208,7 @@ function show_map_with_wiki_marker($array) {
             function createMarker(point,html,type) {
                 var marker;
                 if(type != 'gen') {
-                    var icon = new GIcon(G_DEFAULT_ICON, "<?php echo $conf['mod_gis_marker_folder']; ?>icon/"+type+".png");
+                    var icon = new GIcon(G_DEFAULT_ICON, "<?php echo $conf['mod_gis_marker_folder']; ?>icon/"+type+".gif");
                     marker = new GMarker(point,icon);
                 } else {
                     marker = new GMarker(point);
