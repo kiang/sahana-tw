@@ -28,6 +28,9 @@ require_once ($global['approot'] . 'inc/lib_security/lib_auth.inc');
 shn_session_start();
 // authenticate user
 $user_data = shn_authenticate_user();
+if(empty($user_data["result"])) {
+    $user_data["result"] = '';
+}
 switch ($user_data["result"]) {
     case LOGGEDIN:
         shn_session_change($user_data);

@@ -335,7 +335,8 @@ function shn_authenticate_user() {
     global $global;
     $db = $global['db'];
     $user_data = array("user_id" => ANONYMOUS_USER, "user" => "Anonymous");
-    if ("logout" == $_GET['act']) {
+    $action = isset($_GET['act']) ? $_GET['act'] : '';
+    if ("logout" == $action) {
         $user_data["user_id"] = ANONYMOUS_USER;
         $user_data["user"] = "Anonymous";
         $user_data["result"] = LOGGEDOUT;
@@ -345,7 +346,7 @@ function shn_authenticate_user() {
     return -1 , so the calling application can identify that
     authentication was not attempted
     */
-    if ("login" != $_GET['act']) {
+    if ("login" != $action) {
         $user_data["user_id"] = - 1;
         return $user_data;
     } else {

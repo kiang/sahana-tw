@@ -36,13 +36,13 @@ if (function_exists("gettext")) {
     if (isset($_POST['locale'])) {
         $getlocale = $_POST['locale'];
     } else {
-        $getlocale = $_GET['locale'];
+        $getlocale = isset($_GET['locale']) ? $_GET['locale'] : '';
     }
     /**
      * Set a cookie to value 'locale'.
      * Set the session key 'locale' to the new 'locale' value.
      */
-    if (isset($getlocale)) {
+    if (!empty($getlocale)) {
         setcookie('locale', $getlocale, $expire_cookie);
         $_SESSION['locale'] = $getlocale;
     } else if (!isset($_COOKIE['locale'])) {
