@@ -21,184 +21,194 @@
 if ($_SESSION['logged_in'] == true) {
     return;
 }
-/*****
-PHP OpenID - OpenID consumer and server library
 
-Copyright (C) 2005 Open Source Consulting, SA. and Dan Libby
+$path_extra = dirname(dirname(dirname(__FILE__))) . '/3rd/php-openid-2.1.3';
+$path = ini_get('include_path');
+$path = $path_extra . PATH_SEPARATOR . $path;
+ini_set('include_path', $path);
 
-This library is free software; you can redistribute it and/or
-modify it under the terms of the GNU Lesser General Public
-License as published by the Free Software Foundation; either
-version 2.1 of the License, or (at your option) any later version.
+/**
+ * Require the OpenID consumer code.
+ */
+require_once "Auth/OpenID/Consumer.php";
 
-This library is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-Lesser General Public License for more details.
+/**
+ * Require the "file store" module, which we'll need to store
+ * OpenID information.
+ */
+require_once "Auth/OpenID/FileStore.php";
 
-You should have received a copy of the GNU Lesser General Public
-License along with this library; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+/**
+ * Require the Simple Registration extension API.
+ */
+require_once "Auth/OpenID/SReg.php";
 
-Reciprocal linking.  The author humbly requests that if you should use
-PHP-OpenID on your website to provide an OpenID enabled service that you
-place a link to the author's website ( http://videntity.org ) somewhere
-that your users can discover it.  You are however under no obligation to
-do so.
+/**
+ * Require the PAPE extension module.
+ */
+require_once "Auth/OpenID/PAPE.php";
 
-More info about PHP OpenID:
-openid@videntity.org
-http://videntity.org/openid/
+global $pape_policy_uris;
+$pape_policy_uris = array(
+			  PAPE_AUTH_MULTI_FACTOR_PHYSICAL,
+			  PAPE_AUTH_MULTI_FACTOR,
+			  PAPE_AUTH_PHISHING_RESISTANT
+			  );
 
-More info about OpenID:
-http://www.openid.net
+function &getStore() {
+    /**
+     * This is where the example will store its OpenID information.
+     * You should change this path if you want the example store to be
+     * created elsewhere.  After you're done playing with the example
+     * script, you'll have to remove this directory manually.
+     */
+    $store_path = "/tmp/_php_consumer_test";
 
-*****/
-// Dumb mode identity verification example.
-//
-// This example is completely stateless, and just requires mod_php >= 4.1.0
-// to run.  Stick the php openid tree somewhere beneath your docroot and go nuts.
-// Once you understand this example you'll know the basics of OpenID
-// and using the PH OpenID library.  You can then move on to more
-// robust examples, and integrating OpenID into your app.
-//
-// Copyright 2005, Janrain, Inc.
-// This gets us everything we need to be an openid consumer.
-global $global;
-require_once ($global['approot'] . "3rd/PHP-OpenID-0.0.8.3/consumer.php");
-define('HOST', $_SERVER['SERVER_NAME']);
-define('PORT', $_SERVER['SERVER_PORT']);
-function my_redirect($url) {
-    header('Location: ' . $url);
-    exit; // okay, so *I* never use exit within a script, but am porting from Python.
-    
-}
-function formArgstoDict() {
-    // Returns a dict of the GET and POST arguments
-    return array_merge($_GET, $_POST);
-}
-function drawAlert($msg) {
-    if ($msg) {
-        return sprintf('<div id="alert">%s</div>', $msg);
+    if (!file_exists($store_path) &&
+        !mkdir($store_path)) {
+        print "Could not create the FileStore directory '$store_path'. ".
+            " Please check the effective permissions.";
+        exit(0);
     }
-    return '';
+
+    return new Auth_OpenID_FileStore($store_path);
 }
-$_message = '';
-function setAlert($m) {
-    global $_message;
-    $_message.= $m;
+
+function &getConsumer() {
+    /**
+     * Create a consumer object using the store object created
+     * earlier.
+     */
+    $store = getStore();
+    $consumer =& new Auth_OpenID_Consumer($store);
+    return $consumer;
 }
-// Our OpenIDConsumer subclass.  See openid.consumer.OpenIDConsumer
-// for more more documentation.
-class SimpleConsumer extends OpenIDConsumer {
-    function verify_return_to($return_to) {
-        $parts = parse_url($return_to);
-        if (!isset($parts["port"])) $parts["port"] = ($parts["scheme"] == 'https' ? 443 : 80);
-        // you should verify return_to host:port string match host and
-        // port of this server
-        if ($parts['host'] != HOST || $parts['port'] != PORT) {
-            return false;
+
+function getScheme() {
+    $scheme = 'http';
+    if (isset($_SERVER['HTTPS']) and $_SERVER['HTTPS'] == 'on') {
+        $scheme .= 's';
+    }
+    return $scheme;
+}
+
+function getReturnTo() {
+    return sprintf("%s://%s:%s%s/",
+                   getScheme(), $_SERVER['SERVER_NAME'],
+                   $_SERVER['SERVER_PORT'],
+                   dirname($_SERVER['PHP_SELF']));
+}
+
+function getTrustRoot() {
+    return sprintf("%s://%s:%s%s/",
+                   getScheme(), $_SERVER['SERVER_NAME'],
+                   $_SERVER['SERVER_PORT'],
+                   dirname($_SERVER['PHP_SELF']));
+}
+
+function openid_auth_push($openid) {
+    $consumer = getConsumer();
+
+    // Begin the OpenID authentication process.
+    $auth_request = $consumer->begin($openid);
+
+    // No auth request means we can't begin OpenID.
+    if (!$auth_request) {
+        add_error("Authentication error; not a valid OpenID.");
+    }
+
+    $sreg_request = Auth_OpenID_SRegRequest::build(
+                                     // Required
+                                     array('nickname'),
+                                     // Optional
+                                     array('fullname', 'email'));
+
+    if ($sreg_request) {
+        $auth_request->addExtension($sreg_request);
+    }
+
+    $policy_uris = $_GET['policies'];
+
+    $pape_request = new Auth_OpenID_PAPE_Request($policy_uris);
+    if ($pape_request) {
+        $auth_request->addExtension($pape_request);
+    }
+
+    // Redirect the user to the OpenID server for authentication.
+    // Store the token for this authentication so we can verify the
+    // response.
+
+    // For OpenID 1, send a redirect.  For OpenID 2, use a Javascript
+    // form to send a POST request to the server.
+    if ($auth_request->shouldSendRedirect()) {
+        $redirect_url = $auth_request->redirectURL(getTrustRoot(),
+                                                   getReturnTo());
+
+        // If the redirect URL can't be built, display an error
+        // message.
+        if (Auth_OpenID::isFailure($redirect_url)) {
+            add_error("Could not redirect to server: " . $redirect_url->message);
+        } else {
+            // Send redirect.
+            header("Location: ".$redirect_url);
         }
-        return true;
+    } else {
+        // Generate form markup and render it.
+        $form_id = 'openid_message';
+        $form_html = $auth_request->htmlMarkup(getTrustRoot(), getReturnTo(),
+                                               false, array('id' => $form_id));
+
+        // Display an error if the form markup couldn't be generated;
+        // otherwise, render the HTML.
+        if (Auth_OpenID::isFailure($form_html)) {
+            add_error("Could not redirect to server: " . $form_html->message);
+        } else {
+            print $form_html;
+        }
     }
-};
-// A handler with application specific callback logic.
-class SimpleActionHandler extends ActionHandler {
-    function SimpleActionHandler($query, $consumer) {
-        $this->query = $query;
-        $this->consumer = $consumer;
-    }
-    // callbacks
-    function doValidLogin($login) {
-        global $global;
+}
+
+function escape($thing) {
+    return htmlentities($thing);
+}
+
+function openid_auth_pull() {
+    $consumer = getConsumer();
+
+    // Complete the authentication process using the server's
+    // response.
+    $return_to = getReturnTo();
+    $response = $consumer->complete($return_to);
+
+    // Check the response status.
+    if ($response->status == Auth_OpenID_CANCEL) {
+        // This means the authentication was cancelled.
+        $msg = 'Verification cancelled.';
+    } else if ($response->status == Auth_OpenID_FAILURE) {
+        // Authentication failed; display the error message.
+        $msg = "OpenID authentication failed: " . $response->message;
+    } else if ($response->status == Auth_OpenID_SUCCESS) {
+        // This means the authentication succeeded; extract the
+        // identity URL and Simple Registration data (if it was
+        // returned).
+        $openid = $response->getDisplayIdentifier();
         include_once $global['approot'] . 'inc/lib_security/lib_auth.inc';
         // here is where you would do what is necessary to log an openid "user"
         // user into your system.  We just print a message confirming the
         // valid login.
-        $user_name = shn_auth_get_openid_user($_SESSION["openid_login"]);
-        if ($user_name == null) {
+        $user_name = shn_auth_get_openid_user($openid);
+        if (empty($user_name)) {
             add_error("There is no registered user with the given OpenID");
-            //$_SESSION['user'] = $this->query['open_id'] ;
-            
         } else {
             $_SESSION['logged_in'] = true;
             $_SESSION['user'] = $user_name;
         }
-        // setAlert( sprintf( '<b>Identity verified!</b> Thanks, ' .
-        //                  '<a href="%s">' .
-        //                '%s</a>', $this->query['open_id'], $this->query['open_id'] ) );
-        
     }
-    function doInvalidLogin() {
-        setAlert('Identity NOT verified!');
-    }
-    function doUserCancelled() {
-        setAlert('Cancelled by user.');
-    }
-    function doCheckAuthRequired($server_url, $return_to, $post_data) {
-        // do openid.mode=check_authentication call, and then change state
-        $response = $this->consumer->check_auth($server_url, $return_to, $post_data, $this->getOpenID());
-        $response->doAction($this);
-    }
-    function doErrorFromServer($message) {
-        setAlert('Error from server: ' . $message);
-    }
-    // helpers
-    function createReturnTo($base_url, $identity_url, $args = null) {
-        if (!is_array($args)) {
-            $args = array();
-        }
-        $args['open_id'] = $identity_url;
-        return oidUtil::append_args($base_url, $args);
-    }
-    function getOpenID() {
-        // return the openid from the original form
-        return $this->query['open_id'];
-    }
-};
-function dispatch() {
-    // generate a dictionary of arguments
-    $query = formArgstoDict();
-    // create consumer and handler objects
-    $consumer = new SimpleConsumer();
-    $handler = new SimpleActionHandler($query, $consumer);
-    // extract identity url from arguments.  Will be null if absent from query.
-    $identity_url = isset($query['identity_url']) ? $query['identity_url'] : null;
-    if ($identity_url) {
-        $ret = $consumer->find_identity_info($identity_url);
-        if (!$ret) {
-            setAlert(sprintf('Unable to find openid server for identity url %s', $identity_url));
-        } else {
-            // found identity server info
-            list($identity_url, $server_id, $server_url) = $ret;
-            // build trust root - this examines the script env and builds
-            // based on your running location.  In practice this may be static.
-            // You will likely want it to be your entire website, not just
-            // this script.
-            $_SESSION["openid_login"] = $query['identity_url'];
-            $trust_root = isset($_SERVER['SCRIPT_URI']) ? $_SERVER['SCRIPT_URI'] : 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
-            // build url to application for use in creating return_to
-            $app_url = isset($_SERVER['SCRIPT_URI']) ? $_SERVER['SCRIPT_URI'] : 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
-            // create return_to url from app_url
-            $return_to = $handler->createReturnTo($app_url, $identity_url);
-            // handle the request
-            $redirect_url = $consumer->handle_request($server_id, $server_url, $return_to, $trust_root);
-            // redirect the user-agent to the server
-            my_redirect($redirect_url);
-        }
-    }
-    // php's url parsing converts '.' to '_'. So we check for both cases.
-    else if (isset($query['openid.mode']) || isset($query['openid_mode'])) {
-        // got a request from the server.  build a Request object and pass
-        // it off to the consumer object.  OpendIDActionHandler handles
-        // the various end cases (see above).
-        $openid = $handler->getOpenID();
-        $req = new ConsumerRequest($openid, $query, 'GET');
-        $response = $consumer->handle_response($req);
-        // let our SimpleActionHandler do the work
-        $response->doAction($handler);
-    }
-};
-// dispatch the event based on url args.
-dispatch();
-?>
+}
+
+$openid = isset($_REQUEST['identity_url']) ? $_REQUEST['identity_url'] : '';
+if(!empty($openid)) {
+    openid_auth_push($openid);
+} elseif(isset($_GET['openid.mode']) || isset($_GET['openid_mode'])) {
+    openid_auth_pull();
+}
