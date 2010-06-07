@@ -1,0 +1,37 @@
+--- Auth/OpenID/BigMath.php	2009-12-02 18:04:08.000000000 +0100
++++ Auth/OpenID/BigMath.php	2009-12-03 10:01:41.000000000 +0100
+@@ -363,33 +362,8 @@
+  */
+ function Auth_OpenID_detectMathLibrary($exts)
+ {
+-    $loaded = false;
+-    
+-    if (!function_exists('dl')) {
+-      return false;
+-    }
+-    
+     foreach ($exts as $extension) {
+-        // See if the extension specified is already loaded.
+-        if ($extension['extension'] &&
+-            extension_loaded($extension['extension'])) {
+-            $loaded = true;
+-        }
+-
+-        // Try to load dynamic modules.
+-        if (!$loaded) {
+-            foreach ($extension['modules'] as $module) {
+-                if (@dl($module . "." . PHP_SHLIB_SUFFIX)) {
+-                    $loaded = true;
+-                    break;
+-                }
+-            }
+-        }
+-
+-        // If the load succeeded, supply an instance of
+-        // Auth_OpenID_MathWrapper which wraps the specified
+-        // module's functionality.
+-        if ($loaded) {
++        if (extension_loaded($extension['extension'])) {
+             return $extension;
+         }
+     }
