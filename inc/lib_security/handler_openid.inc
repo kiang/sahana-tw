@@ -117,11 +117,7 @@ function openid_auth_push($openid) {
         add_error("Authentication error; not a valid OpenID.");
     }
 
-    $sreg_request = Auth_OpenID_SRegRequest::build(
-                                     // Required
-                                     array('nickname'),
-                                     // Optional
-                                     array('fullname', 'email'));
+    $sreg_request = Auth_OpenID_SRegRequest::build();
 
     if ($sreg_request) {
         $auth_request->addExtension($sreg_request);
@@ -130,6 +126,7 @@ function openid_auth_push($openid) {
     $policy_uris = $_GET['policies'];
 
     $pape_request = new Auth_OpenID_PAPE_Request($policy_uris);
+    
     if ($pape_request) {
         $auth_request->addExtension($pape_request);
     }
@@ -157,13 +154,13 @@ function openid_auth_push($openid) {
         $form_id = 'openid_message';
         $form_html = $auth_request->htmlMarkup(getTrustRoot(), getReturnTo(),
                                                false, array('id' => $form_id));
-
         // Display an error if the form markup couldn't be generated;
         // otherwise, render the HTML.
         if (Auth_OpenID::isFailure($form_html)) {
             add_error("Could not redirect to server: " . $form_html->message);
         } else {
             print $form_html;
+            exit();
         }
     }
 }
