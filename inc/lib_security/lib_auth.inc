@@ -586,32 +586,31 @@ function shn_auth_self_signup_cr() {
 }
 function _shn_auth_del_user_cr() {
     global $global;
-    $user = $_POST['users'];
-    $db = $global["db"];
-    $VARCHAR = 100;
-    for ($i = 0;$i < count($user);$i++) {
-        if ($user[$i] != ADMINUSER) {
-            $q = "delete from users where p_uuid='{$user[$i]}'";
+    if(!empty($_POST['users'][0])) {
+        $user = $_POST['users'][0];
+        if($user != ADMINUSER) {
+            $db = $global["db"];
+            $q = 'DELETE FROM password_event_log WHERE p_uuid = \'' . $user . '\'';
             $res = $db->Execute($q);
             if ($res == false) {
                 add_error($db->ErrorMsg());
+                return;
             }
-        }
-    }
-    for ($i = 0;$i < count($user);$i++) {
-        if ($user[$i] != ADMINUSER) {
-            $q = "delete from alt_logins where p_uuid='{$user[$i]}'";
+            $q = 'DELETE FROM alt_logins WHERE p_uuid = \'' . $user . '\'';
             $res = $db->Execute($q);
             if ($res == false) {
                 add_error($db->ErrorMsg());
+                return;
+            }
+            $q = 'DELETE FROM users WHERE p_uuid = \'' . $user . '\'';
+            $res = $db->Execute($q);
+            if ($res == false) {
+                add_error($db->ErrorMsg());
+                return;
             }
         }
     }
-    if ($res == false) {
-        add_error(_("User does not exist"));
-    } else {
-        add_confirmation(_("User was successfully removed"));
-    }
+    add_confirmation(_("User was successfully removed"));
 }
 function _shn_generateSalt($salt = null) {
     if ($salt === null) {
