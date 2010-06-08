@@ -146,16 +146,31 @@ function _shn_dvr_get_all_groups($incident_id = null, $camp_id = null) {
     global $global;
     global $conf;
     $db = $global['db'];
-    if ($incident_id != null) {
-        $search_q1 = "SELECT distinct pg.g_uuid as group_id,pg.opt_group_type as group_type,pn.full_name as full_name ,pn.family_name as family_name,pn.l10n_name as local_name,id.serial as serial,co.contact_value as address FROM identity_to_person id,contact co,person_uuid pn,pgroup pg,group_details gd,resource_to_incident re where re.x_uuid=gd.g_uuid and re.incident_id='{$incident_id}' and gd.g_uuid=pg.g_uuid and gd.head_uuid=pn.p_uuid and gd.head_uuid=id.p_uuid and gd.head_uuid=co.pgoc_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' order by group_type";
-    } else if ($camp_id != null) {
-        $search_q1 = "SELECT distinct pg.g_uuid as group_id,pg.opt_group_type as group_type,pn.full_name as full_name ,pn.family_name as family_name,pn.l10n_name as local_name,id.serial as serial,co.contact_value as address from identity_to_person id,contact co,person_uuid pn,pgroup pg,group_details gd,resource_to_shelter rs where rs.c_uuid='{$camp_id}' and rs.x_uuid=gd.g_uuid and gd.g_uuid=pg.g_uuid and gd.head_uuid=pn.p_uuid and gd.head_uuid=id.p_uuid and gd.head_uuid=co.pgoc_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' order by group_type";
-    } else {
-        $search_q1 = "SELECT distinct pg.g_uuid as group_id,pg.opt_group_type as group_type,pn.full_name as full_name ,pn.family_name as family_name,pn.l10n_name as local_name,id.serial as serial,co.contact_value as address from identity_to_person id,contact co,person_uuid pn,pgroup pg,group_details gd where gd.g_uuid=pg.g_uuid and gd.head_uuid=pn.p_uuid and gd.head_uuid=id.p_uuid and gd.head_uuid=co.pgoc_uuid and co.opt_contact_type='address' and id.opt_id_type='idcard' order by group_type";
+    $query = "SELECT DISTINCT(pg.g_uuid) as group_id,
+            pg.opt_group_type AS group_type,
+            pn.full_name AS full_name,
+            pn.family_name AS family_name,
+            pn.l10n_name AS local_name,
+            id.serial AS serial,
+            co.contact_value AS address
+            FROM pgroup AS pg
+            INNER JOIN group_details AS gd ON gd.g_uuid = pg.g_uuid
+            
+            
+            LEFT JOIN contact AS co ON gd.head_uuid = co.pgoc_uuid
+                AND co.opt_contact_type='address'
+            LEFT JOIN person_uuid AS pn ON gd.head_uuid = pn.p_uuid
+            LEFT JOIN identity_to_person AS id ON gd.head_uuid=id.p_uuid
+                AND id.opt_id_type = 'idcard'";
+    if (!empty($incident_id)) {
+        $query .= ' LEFT JOIN resource_to_incident AS re ON re.x_uuid = gd.g_uuid
+            WHERE re.incident_id=\'' . $incident_id . '\'';
+    } else if (!empty($camp_id)) {
+        $query .= ' LEFT JOIN resource_to_shelter AS rs ON rs.x_uuid = gd.g_uuid
+            WHERE rs.c_uuid=\'' . $camp_id . '\'';
     }
-    $results = $db->Execute($search_q1);
-    $results = shn_paging_get_report($search_q1, $conf['mod_dvr_results_per_page'], NULL, array('post' => false, 'return' => true));
-    //print count($results);
+    $query .= ' ORDER BY group_type';
+    $results = shn_paging_get_report($query, $conf['mod_dvr_results_per_page'], NULL, array('post' => false, 'return' => true));
     return $results;
 }
 function _shn_dvr_get_group_search_results($group_type, $card, $name) {
