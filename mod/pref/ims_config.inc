@@ -62,4 +62,55 @@ function _shn_pref_config_validate() {
         return true;
     }
 }
-?>
+
+function _shn_pref_openid_form($errors = false, $updated = false) {
+    global $global;
+    if ($errors) display_errors();
+    $sql = "SELECT user_name FROM alt_logins WHERE p_uuid='{$_SESSION['user_id']}'";
+    $res = $global['db']->Execute($sql);
+    $openid = '';
+    if(!empty($res->fields['user_name'])) {
+        $openid = $res->fields['user_name'];
+    }
+    echo "<h2>" . _("Change OpenID") . "</h2>";
+    shn_form_fopen("ch_openid", null, array('req_message' => false));
+    shn_form_hidden(array('seq' => 'entry'));
+    shn_form_fsopen(_("OpenID"));
+    shn_form_text('', 'openid', 'size="50"', array(
+        'value' => $openid
+    ));
+    shn_form_fsclose();
+    shn_form_submit(_('Update'));
+    shn_form_fclose();
+}
+
+function _shn_pref_openid_validate() {
+    global $global;
+    //clean the post
+    shn_tools_clean_post(&$local_post);
+    if(!empty($local_post['openid'])) {
+        $openidCheck = $global['db']->Execute("SELECT p_uuid
+                FROM alt_logins WHERE p_uuid != '{$_SESSION['user_id']}'
+                AND user_name = '{$local_post['openid']}'");
+        if(!empty($openidCheck->fields['p_uuid'])) {
+            add_error(_('The OpenID had been used by another user.'));
+            return false;
+        }
+        $sql = "SELECT user_name FROM alt_logins WHERE p_uuid='{$_SESSION['user_id']}'";
+        $res = $global['db']->Execute($sql);
+        if(!empty($res->fields['user_name'])) {
+            if($res->fields['user_name'] != $local_post['openid']) {
+                $global['db']->Execute('UPDATE alt_logins
+                    SET user_name = \'' . $local_post['openid'] . '\'
+                    WHERE p_uuid = \'' . $_SESSION['user_id'] . '\'');
+            }
+        } else {
+            $global['db']->Execute('INSERT INTO alt_logins
+                VALUES (\'' . $_SESSION['user_id'] . '\',
+                    \'' . $local_post['openid'] . '\',
+                    \'openid\')');
+        }
+    }
+    add_confirmation(_("The OpenId was succesfully updated"));
+    return true;
+}

@@ -15,6 +15,23 @@ function shn_pref_ims_config() {
         break;
     }
 }
+
+function shn_pref_ch_openid() {
+    $seq = isset($_POST['seq']) ? $_POST['seq'] : '';
+    switch ($seq) {
+        case 'entry':
+            if (_shn_pref_openid_validate()) {
+                _shn_pref_openid_form(false, true);
+            } else {
+                _shn_pref_openid_form(true, false);
+            }
+        break;
+        default:
+            _shn_pref_openid_form();
+        break;
+    }
+}
+
 function shn_pref_ims_set_incident() {
     $incident_id = addslashes(strip_tags(trim($_REQUEST['incident_id'])));
     shn_user_pref_update('ims', 'incident_id', $incident_id);
@@ -121,4 +138,3 @@ function shn_pref_ch_passwd_cr() {
         add_confirmation($msg);
     }
 }
-?>

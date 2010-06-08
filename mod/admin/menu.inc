@@ -90,7 +90,8 @@ function _shn_admin_acl_user_roles_menu($user_home = false) {
     shn_tabmenu_item("add_user", _("Add Users"), "admin");
     shn_tabmenu_item("del_user", _("Remove Users"), "admin");
     shn_tabmenu_item("acl_user_edit_roles", _("Edit Roles of an User"), "admin");
-    shn_tabmenu_item("reset_pwd", _("Reset Password of an User"), "admin");
+    shn_tabmenu_item("reset_pwd", _("Reset Password of a User"), "admin");
+    shn_tabmenu_item("edit_openid", _("Change OpenID of a User"), "admin");
     shn_tabmenu_item("acl_change_user_status", _("Change User Status"), 'admin');
     shn_tabmenu_item("acl_unlock_user", _("Unlock User"), 'admin');
     shn_tabmenu_close();

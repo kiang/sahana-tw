@@ -333,3 +333,64 @@ function _shn_admin_reset_pwd_cr() {
     // shn_admin_reset_pwd($done);
     
 }
+
+function shn_auth_form_edit_openid($error = false) {
+    global $global;
+    $db = $global['db'];
+    $q = "SELECT U.p_uuid, U.user_name, AL.user_name AS openid
+        FROM users AS U
+        LEFT JOIN alt_logins AS AL ON AL.p_uuid = U.p_uuid
+            AND AL.type = 'openid'
+        ORDER BY U.user_name";
+    $res = $db->Execute($q);
+    $users = array();
+    while (!$res->EOF) {
+        $users[$res->fields["p_uuid"]] = $res->fields["user_name"] . ' - '
+                . $res->fields["openid"];
+        $res->MoveNext();
+    }
+    if ($error) display_errors();
+    echo '<h3>' . _('Edit OpenID') . '</h3>';
+    $act = "edit_openid_cr";
+    $mod = "admin";
+    shn_form_fopen($act, $mod);
+    $extra_opts['req'] = true;
+    shn_form_fsopen(_("Select User"));
+    shn_form_select($users, "Users", 'user', null, $extra_opts);
+    shn_form_fsclose();
+    shn_form_fsopen(_("New OpenID"));
+    shn_form_text('', 'openid', 'size="50"');
+    shn_form_fsclose();
+    echo '<br />';
+    shn_form_submit(_("Save OpenID"));
+    shn_form_fclose();
+}
+function _shn_admin_edit_openid_cr() {
+    global $global;
+    $db = $global["db"];
+    if(!empty($_POST['openid'])) {
+        $openidCheck = $global['db']->Execute("SELECT p_uuid
+                FROM alt_logins WHERE p_uuid != '{$_POST['user']}'
+                AND user_name = '{$_POST['openid']}'");
+        if(!empty($openidCheck->fields['p_uuid'])) {
+            add_error(_('The OpenID had been used by another user.'));
+            return false;
+        }
+        $sql = "SELECT user_name FROM alt_logins WHERE p_uuid='{$_POST['user']}'";
+        $res = $global['db']->Execute($sql);
+        if(!empty($res->fields['user_name'])) {
+            if($res->fields['user_name'] != $_POST['openid']) {
+                $global['db']->Execute('UPDATE alt_logins
+                    SET user_name = \'' . $_POST['openid'] . '\'
+                    WHERE p_uuid = \'' . $_POST['user'] . '\'');
+            }
+        } else {
+            $global['db']->Execute('INSERT INTO alt_logins
+                VALUES (\'' . $_POST['user'] . '\',
+                    \'' . $_POST['openid'] . '\',
+                    \'openid\')');
+        }
+    }
+    add_confirmation(_("The OpenID was succesfully updated"));
+    return true;
+}

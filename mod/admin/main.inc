@@ -194,6 +194,18 @@ function shn_admin_reset_pwd_cr() {
     $done = _shn_admin_reset_pwd_cr();
     _shn_admin_acl_user_menu();
 }
+
+function shn_admin_edit_openid($error = false) {
+    _shn_admin_acl_user_menu();
+    shn_auth_form_edit_openid($error);
+}
+function shn_admin_edit_openid_cr() {
+    include_once "errors.inc";
+    $error = _shn_admin_edit_openid_cr();
+    _shn_admin_acl_user_menu();
+    shn_auth_form_edit_openid($error);
+}
+
 function shn_admin_ch_pwd($error = false) {
     _shn_admin_acl_user_menu();
     shn_auth_form_ch_pwd($error);

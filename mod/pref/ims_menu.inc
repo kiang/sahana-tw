@@ -7,10 +7,10 @@ foreach($currentrole as $key => $val) {
 }
 if ($_SESSION['logged_in'] == true) {
     shn_mod_menuitem("ch_passwd", _("Change Password"));
+    shn_mod_menuitem("ch_openid", _("Change OpenID"));
     if ($user == 'SRS User') {
         shn_mod_menuitem("srs_my_profile", _("Edit SRS My Profile"));
         shn_mod_menuitem("city_lms", _("Learning Management System"));
     }
 }
 shn_mod_menuitem("ims_config", _("Default Incident"));
-?>
