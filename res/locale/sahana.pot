@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-03 15:57+0800\n"
+"POT-Creation-Date: 2010-06-08 17:57+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -546,11 +546,12 @@ msgstr ""
 #: tools/tpl_languages.php:342 mod/or/admin.inc:92 mod/or/admin.inc:126
 #: mod/or/admin.inc:156 mod/or/admin_forms.inc:142 mod/or/admin_forms.inc:200
 #: mod/mpr/admin.inc:206 mod/mpr/admin.inc:314 mod/mpr/admin.inc:348
-#: mod/mpr/admin.inc:378 mod/pref/ims_config.inc:39 mod/admin/ims_level.inc:49
-#: mod/admin/ims_level.inc:206 mod/admin/ims_level.inc:391
-#: mod/admin/ims_config.inc:30 mod/admin/lc_ui_translate_update.inc:25
-#: mod/cr/admin.inc:162 mod/cr/admin.inc:196 mod/cr/admin.inc:226
-#: mod/dvr/admin.inc:105 inc/lib_security/acl_form.inc:276
+#: mod/mpr/admin.inc:378 mod/pref/ims_config.inc:39 mod/pref/ims_config.inc:83
+#: mod/admin/ims_level.inc:49 mod/admin/ims_level.inc:206
+#: mod/admin/ims_level.inc:391 mod/admin/ims_config.inc:30
+#: mod/admin/lc_ui_translate_update.inc:25 mod/cr/admin.inc:162
+#: mod/cr/admin.inc:196 mod/cr/admin.inc:226 mod/dvr/admin.inc:105
+#: inc/lib_security/acl_form.inc:276
 msgid "Update"
 msgstr ""
 
@@ -6191,7 +6192,7 @@ msgstr ""
 #: mod/dvr/edt_indv.inc:146 mod/dvr/add_new_indv.inc:85
 #: mod/rms/handler_req_new.inc:36 mod/rms/handler_req_new.inc:73
 #: mod/rms/handler_plg_new.inc:35 mod/rms/handler_plg_new.inc:59
-#: mod/rms/lib_rms.inc:790 inc/lib_security/lib_auth.inc:520
+#: mod/rms/lib_rms.inc:790 inc/lib_security/lib_auth.inc:531
 #: inc/lib_security/acl_form.inc:503
 msgid "Full Name"
 msgstr ""
@@ -7398,31 +7399,31 @@ msgstr ""
 msgid "Next >>"
 msgstr ""
 
-#: mod/pref/ims_main.inc:42 inc/lib_security/auth_form.inc:225
+#: mod/pref/ims_main.inc:59 inc/lib_security/auth_form.inc:225
 msgid "Old password cannot be empty"
 msgstr ""
 
-#: mod/pref/ims_main.inc:49 inst/setup.inc:653
+#: mod/pref/ims_main.inc:66 inst/setup.inc:653
 msgid "User password cannot be empty"
 msgstr ""
 
-#: mod/pref/ims_main.inc:56 inst/setup.inc:659
+#: mod/pref/ims_main.inc:73 inst/setup.inc:659
 msgid "User Confirm password cannot be empty"
 msgstr ""
 
-#: mod/pref/ims_main.inc:63
+#: mod/pref/ims_main.inc:80
 msgid "User password and confirm password should match"
 msgstr ""
 
-#: mod/pref/ims_main.inc:80
+#: mod/pref/ims_main.inc:97
 msgid "You cannot change the password more than once in one day"
 msgstr ""
 
-#: mod/pref/ims_main.inc:106
+#: mod/pref/ims_main.inc:123
 msgid "You cannot choose one of the recent four passwords"
 msgstr ""
 
-#: mod/pref/ims_main.inc:120
+#: mod/pref/ims_main.inc:137
 msgid " Succesfully changed Password "
 msgstr ""
 
@@ -7434,7 +7435,7 @@ msgstr ""
 msgid "Change default incident"
 msgstr ""
 
-#: mod/pref/ims_config.inc:35 mod/pref/ims_menu.inc:15
+#: mod/pref/ims_config.inc:35 mod/pref/ims_menu.inc:16
 msgid "Default Incident"
 msgstr ""
 
@@ -7453,6 +7454,22 @@ msgstr ""
 
 #: mod/pref/ims_config.inc:56
 msgid "Please select an item from 'Select Incident' box"
+msgstr ""
+
+#: mod/pref/ims_config.inc:75 mod/pref/ims_menu.inc:10
+msgid "Change OpenID"
+msgstr ""
+
+#: mod/pref/ims_config.inc:78 inc/handler_login.inc:47
+msgid "OpenID"
+msgstr ""
+
+#: mod/pref/ims_config.inc:96 inc/lib_security/auth_form.inc:376
+msgid "The OpenID had been used by another user."
+msgstr ""
+
+#: mod/pref/ims_config.inc:114
+msgid "The OpenId was succesfully updated"
 msgstr ""
 
 #: mod/pref/stream.inc:69 mod/pref/main.inc:99
@@ -7476,11 +7493,11 @@ msgstr ""
 msgid "Mutiple Incident Management"
 msgstr ""
 
-#: mod/pref/ims_menu.inc:11
+#: mod/pref/ims_menu.inc:12
 msgid "Edit SRS My Profile"
 msgstr ""
 
-#: mod/pref/ims_menu.inc:12
+#: mod/pref/ims_menu.inc:13
 msgid "Learning Management System"
 msgstr ""
 
@@ -7553,7 +7570,7 @@ msgid "Select Locale"
 msgstr ""
 
 #: mod/admin/lc_setlocale.inc:28 mod/admin/lc_ui_translate.inc:26
-#: mod/admin/main.inc:423
+#: mod/admin/main.inc:435
 msgid "Set Locale"
 msgstr ""
 
@@ -8006,11 +8023,11 @@ msgstr ""
 msgid "Welcome to Users= section"
 msgstr ""
 
-#: mod/admin/acl.inc:32 mod/admin/menu.inc:90 mod/admin/menu.inc:105
+#: mod/admin/acl.inc:32 mod/admin/menu.inc:90 mod/admin/menu.inc:106
 msgid "Add Users"
 msgstr ""
 
-#: mod/admin/acl.inc:33 mod/admin/menu.inc:91 mod/admin/menu.inc:106
+#: mod/admin/acl.inc:33 mod/admin/menu.inc:91 mod/admin/menu.inc:107
 msgid "Remove Users"
 msgstr ""
 
@@ -8178,20 +8195,20 @@ msgstr ""
 msgid "Add/Remove Language"
 msgstr ""
 
-#: mod/admin/menu.inc:58 mod/admin/main.inc:419
+#: mod/admin/menu.inc:58 mod/admin/main.inc:431
 msgid "Language Translation"
 msgstr ""
 
-#: mod/admin/menu.inc:59 mod/admin/main.inc:427
+#: mod/admin/menu.inc:59 mod/admin/main.inc:439
 msgid "Database Translation"
 msgstr ""
 
 #: mod/admin/menu.inc:60 mod/admin/lc_ui_translate.inc:22
-#: mod/admin/lc_ui_translate.inc:36 mod/admin/main.inc:435
+#: mod/admin/lc_ui_translate.inc:36 mod/admin/main.inc:447
 msgid "Interactive Translation"
 msgstr ""
 
-#: mod/admin/menu.inc:61 mod/admin/main.inc:463
+#: mod/admin/menu.inc:61 mod/admin/main.inc:475
 msgid "Update Translation"
 msgstr ""
 
@@ -8224,76 +8241,80 @@ msgid "Edit Roles of an User"
 msgstr ""
 
 #: mod/admin/menu.inc:93
-msgid "Reset Password of an User"
+msgid "Reset Password of a User"
 msgstr ""
 
-#: mod/admin/menu.inc:94 mod/admin/menu.inc:108
+#: mod/admin/menu.inc:94
+msgid "Change OpenID of a User"
+msgstr ""
+
+#: mod/admin/menu.inc:95 mod/admin/menu.inc:109
 msgid "Change User Status"
 msgstr ""
 
-#: mod/admin/menu.inc:95
+#: mod/admin/menu.inc:96
 msgid "Unlock User"
 msgstr ""
 
-#: mod/admin/menu.inc:102
+#: mod/admin/menu.inc:103
 msgid "Welcome to Users section"
 msgstr ""
 
-#: mod/admin/menu.inc:103
+#: mod/admin/menu.inc:104
 msgid "As Administrator , use this section for the following"
 msgstr ""
 
-#: mod/admin/menu.inc:107
+#: mod/admin/menu.inc:108
 msgid "Change User Roles"
 msgstr ""
 
-#: mod/admin/menu.inc:109
+#: mod/admin/menu.inc:110
 msgid "Unlock Users"
 msgstr ""
 
-#: mod/admin/menu.inc:121
+#: mod/admin/menu.inc:122
 msgid "Data Classifications & Role Permissions"
 msgstr ""
 
-#: mod/admin/menu.inc:122
+#: mod/admin/menu.inc:123
 msgid "Data Classifications & System Data "
 msgstr ""
 
-#: mod/admin/menu.inc:129
+#: mod/admin/menu.inc:130
 msgid "Welcome to Privacy section"
 msgstr ""
 
-#: mod/admin/menu.inc:130
+#: mod/admin/menu.inc:131
 msgid "You can set Privacy settings for Data and Roles"
 msgstr ""
 
-#: mod/admin/menu.inc:132
+#: mod/admin/menu.inc:133
 msgid ""
 "If you need to modify, which roles have permissions to create/read/modify "
 "which data, click on the <strong>'Data Classifications & Role Permissions'</"
 "strong> tab on the top of the page."
 msgstr ""
 
-#: mod/admin/menu.inc:133
+#: mod/admin/menu.inc:134
 msgid ""
 "If you need to modify, data sensitivity classifications of the data in the "
 "system, click on the <strong>'Data Classifications & System Data'</strong> "
 "tab on the top of the page."
 msgstr ""
 
-#: mod/admin/menu.inc:145
+#: mod/admin/menu.inc:146
 msgid "Add Role"
 msgstr ""
 
-#: mod/admin/menu.inc:146
+#: mod/admin/menu.inc:147
 msgid "Remove Role"
 msgstr ""
 
-#: mod/admin/menu.inc:147
+#: mod/admin/menu.inc:148
 msgid "Existing Role Permissions"
 msgstr ""
 
-#: mod/admin/menu.inc:148
+#: mod/admin/menu.inc:149
 msgid "Modify Role Permissions"
 msgstr ""
 
@@ -8382,7 +8403,7 @@ msgstr ""
 msgid "Installed Modules"
 msgstr ""
 
-#: mod/admin/mmc_menus.inc:2 mod/admin/main.inc:491
+#: mod/admin/mmc_menus.inc:2 mod/admin/main.inc:503
 msgid "Add New Module"
 msgstr ""
 
@@ -8693,23 +8714,23 @@ msgid ""
 "tools that can be changed in the system"
 msgstr ""
 
-#: mod/admin/main.inc:249
+#: mod/admin/main.inc:261
 msgid "User Locking is enabled now."
 msgstr ""
 
-#: mod/admin/main.inc:252
+#: mod/admin/main.inc:264
 msgid "User Locking is disabled now."
 msgstr ""
 
-#: mod/admin/main.inc:450
+#: mod/admin/main.inc:462
 msgid "sahana/res folder is not writable!"
 msgstr ""
 
-#: mod/admin/main.inc:472 mod/admin/main.inc:481
+#: mod/admin/main.inc:484 mod/admin/main.inc:493
 msgid "Add/Remove language"
 msgstr ""
 
-#: mod/admin/main.inc:482
+#: mod/admin/main.inc:494
 msgid "Language Name and Folder Name cannot be blank"
 msgstr ""
 
@@ -12256,15 +12277,11 @@ msgstr ""
 msgid "are mandatory and must be filled."
 msgstr ""
 
-#: inc/lib_security/lib_auth.inc:522
+#: inc/lib_security/lib_auth.inc:533
 msgid "Full name is a required field. Please enter a value."
 msgstr ""
 
-#: inc/lib_security/lib_auth.inc:610
-msgid "User does not exist"
-msgstr ""
-
-#: inc/lib_security/lib_auth.inc:612
+#: inc/lib_security/lib_auth.inc:623
 msgid "User was successfully removed"
 msgstr ""
 
@@ -12450,6 +12467,7 @@ msgid " data, which is required for this functionality."
 msgstr ""
 
 #: inc/lib_security/auth_form.inc:38 inc/lib_security/auth_form.inc:279
+#: inc/lib_security/auth_form.inc:358
 msgid "Select User"
 msgstr ""
 
@@ -12516,6 +12534,22 @@ msgstr ""
 
 #: inc/lib_security/auth_form.inc:332
 msgid "The Password was succesfully updated"
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:353
+msgid "Edit OpenID"
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:361
+msgid "New OpenID"
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:365
+msgid "Save OpenID"
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:394
+msgid "The OpenID was succesfully updated"
 msgstr ""
 
 #: inc/lib_location.inc:601
@@ -12795,10 +12829,6 @@ msgstr ""
 
 #: inc/handler_login.inc:46
 msgid "OpenId Login"
-msgstr ""
-
-#: inc/handler_login.inc:47
-msgid "OpenID"
 msgstr ""
 
 #: inc/handler_login.inc:50
