@@ -328,7 +328,7 @@ function shn_authenticate_ws_user($user, $pwd, $extra_opts = null) {
  *@return int the user id , if the user exists ,else 0 or -1
  *@access public
  */
-function shn_authenticate_user() {
+function shn_authenticate_user($userName = '') {
     /*need to modify the function to work with the sahana database scheme
     and adodb code, till then return true.
     */
@@ -336,6 +336,9 @@ function shn_authenticate_user() {
     $db = $global['db'];
     $user_data = array("user_id" => ANONYMOUS_USER, "user" => "Anonymous");
     $action = isset($_GET['act']) ? $_GET['act'] : '';
+    if(!empty($userName)) {
+        $action = 'login';
+    }
     if ("logout" == $action) {
         $user_data["user_id"] = ANONYMOUS_USER;
         $user_data["user"] = "Anonymous";
@@ -351,8 +354,13 @@ function shn_authenticate_user() {
         return $user_data;
     } else {
         //authentication is done only as the user requested to login
-        $user = addslashes(strip_tags(trim($_POST['user_name'])));
-        $pwd = addslashes(strip_tags(trim($_POST['password'])));
+        if(!empty($userName)) {
+            $user = $userName;
+        } else {
+            $user = addslashes(strip_tags(trim($_POST['user_name'])));
+            $pwd = addslashes(strip_tags(trim($_POST['password'])));
+        }
+        
         $q = "SELECT salt,p_uuid,status  FROM users
                     WHERE user_name = '$user'";
         $res = $db->Execute($q);
@@ -403,35 +411,37 @@ function shn_authenticate_user() {
             $user_data["user"] = "Anonymous";
             return $user_data;
         }
-        $pwd = substr($pwd, 0, 4) . $salt . substr($pwd, 4);
-        $user_data["result"] = LOGGEDOUT;
-        // Create a digest of the password collected from the challenge
-        $password_digest = md5(trim($pwd));
-        // Formulate the SQL to find the user
-        $q = "  SELECT p_uuid  FROM users
+        if(empty($userName)) {
+            $pwd = substr($pwd, 0, 4) . $salt . substr($pwd, 4);
+            $user_data["result"] = LOGGEDOUT;
+            // Create a digest of the password collected from the challenge
+            $password_digest = md5(trim($pwd));
+            // Formulate the SQL to find the user
+            $q = "SELECT p_uuid  FROM users
                     WHERE user_name = '$user'
                     AND password = '$password_digest' and salt='{$salt}'";
-        $res = $db->Execute($q);
-        if (($res == null) || ($res->EOF)) {
-            /* no result ,so return 1 ,which is  not a valid user_id , the calling
-            application can identify authentication was attempted,but failed
-            */
-            add_error("Login Failed : Invalid user name or password.");
-            shn_acl_log_msg("Login Failed : Invalid Password.", $uid, $user, 1);
-            $user_data["user_id"] = ANONYMOUS_USER;
-            $user_data["user"] = "Anonymous";
-            _shn_auth_lock_user($uid, $status);
-            return $user_data;
-        } else {
-            if ((($status == 'locked') || ($status == 'try1') || ($status == 'try2')) && (shn_acl_is_locking_enabled())) {
-                shn_auth_activate_user($uid);
+            $res = $db->Execute($q);
+            if (($res == null) || ($res->EOF)) {
+                /* no result ,so return 1 ,which is  not a valid user_id , the calling
+                  application can identify authentication was attempted,but failed
+                 */
+                add_error("Login Failed : Invalid user name or password.");
+                shn_acl_log_msg("Login Failed : Invalid Password.", $uid, $user, 1);
+                $user_data["user_id"] = ANONYMOUS_USER;
+                $user_data["user"] = "Anonymous";
+                _shn_auth_lock_user($uid, $status);
+                return $user_data;
             }
-            $user_data["user_id"] = $res->fields["p_uuid"];
-            $user_data["user"] = $user;
-            $user_data["result"] = LOGGEDIN;
-            $global['welcome'] = true;
-            return $user_data;
         }
+
+        if ((($status == 'locked') || ($status == 'try1') || ($status == 'try2')) && (shn_acl_is_locking_enabled())) {
+            shn_auth_activate_user($uid);
+        }
+        $user_data["user_id"] = $res->fields["p_uuid"];
+        $user_data["user"] = $user;
+        $user_data["result"] = LOGGEDIN;
+        $global['welcome'] = true;
+        return $user_data;
     }
 }
 /**

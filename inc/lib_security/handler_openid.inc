@@ -194,11 +194,17 @@ function openid_auth_pull() {
         // user into your system.  We just print a message confirming the
         // valid login.
         $user_name = shn_auth_get_openid_user($openid);
+        if(empty($user_name)) {
+            $user_name = shn_auth_get_openid_user($openid . '/');
+        }
+        if(empty($user_name)) {
+            $user_name = shn_auth_get_openid_user(substr($openid, 0, -1));
+        }
         if (empty($user_name)) {
-            add_error("There is no registered user with the given OpenID");
+            add_error("There is no registered user with the given OpenID: " . $openid);
         } else {
-            $_SESSION['logged_in'] = true;
-            $_SESSION['user'] = $user_name;
+            $user_data = shn_authenticate_user($user_name);
+            shn_session_change($user_data);
         }
     }
 }
