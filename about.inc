@@ -5,7 +5,7 @@ global $about;
  * The about page will be generated using the information provided below.
  */
 
-$about['version'] = '0.6.3';
+$about['version'] = '0.6.4';
 $about['release'] = 'Final';
 $about['release_info'] = 'Final';
-$about['release_date'] = '07-April-2010';
+$about['release_date'] = '08-June-2010';

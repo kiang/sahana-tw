@@ -119,7 +119,7 @@ function shn_admin_conf_list() {
 </script>
 		<?php
     ksort($conf);
-    shn_config_database_fetch(&$dconf, 'all');
+    shn_config_database_fetch($dconf, 'all');
 ?>
 <div id="result">
 <table>

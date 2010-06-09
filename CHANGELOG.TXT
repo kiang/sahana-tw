@@ -1,3 +1,10 @@
+Change Log for Sahana 0.6.4 Maintenance Release
+-------------------------------------------------------------------------------------
+Maintenance release that addresses forward compatibility in PHP 5.3 for variables
+being passed by reference. 
+See: http://bazaar.launchpad.net/~charles-wisniewski/sahana-agasti/0.6.4/revision/3801
+for the diff.
+
 Change Log for Sahana 0.6.3 Security Release
 -------------------------------------------------------------------------------------
 Cumulative release which addresses security vulnerabilities documented here: 

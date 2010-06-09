@@ -420,7 +420,7 @@ function _shn_is_covered_org($loc, $sector, &$count) {
     $incident_arr = array($_SESSION['user_pref_ims_incident_id']);
     shn_get_incident_descendants($_SESSION['user_pref_ims_incident_id'], $incident_arr);
     $loc_arr = array($loc);
-    shn_location_get_descendants($loc, &$loc_arr);
+    shn_location_get_descendants($loc, $loc_arr);
     $org_list = shn_or_org_loc_sector_incident_list($loc_arr, $sector, $incident_arr);
     $count = count($org_list);
 }

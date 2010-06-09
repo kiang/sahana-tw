@@ -23,10 +23,10 @@ function shn_config_load_in_order() {
         // database overrides conf files
         shn_config_base_conf_fetch();
         shn_config_module_conf_fetch('all');
-        shn_config_database_fetch(&$conf, 'all');
+        shn_config_database_fetch($conf, 'all');
     } else {
         // conf files overrides database
-        shn_config_database_fetch(&$conf, 'all');
+        shn_config_database_fetch($conf, 'all');
         shn_config_base_conf_fetch();
         shn_config_module_conf_fetch('all');
     }

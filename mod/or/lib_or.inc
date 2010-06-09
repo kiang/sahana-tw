@@ -29,7 +29,7 @@ function shn_or_org_search($limit = null, $org_name = '', $org_type = 'all', $se
     }
     if ($loc != - 1) {
         $loc_arr = array($loc);
-        $loc_arr = shn_location_get_descendants($loc, &$loc_arr);
+        $loc_arr = shn_location_get_descendants($loc, $loc_arr);
         $loc_str = shn_or_create_database_IN_array($loc_arr);
     }
     $search_str.= " where 1=1 ";
@@ -124,7 +124,7 @@ function _shn_org_location_string($loc) {
     global $global;
     $db = $global["db"];
     $loc_arr = array();
-    shn_get_parents($loc, &$loc_arr);
+    shn_get_parents($loc, $loc_arr);
     if ($loc_arr[0] == 'unknown') {
         shn_form_label(_("Organization Location"), "Unknown");
     } else {
