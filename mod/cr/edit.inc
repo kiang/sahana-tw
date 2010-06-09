@@ -462,54 +462,18 @@ function _shn_cr_cedt_commit() {
 <br />
 <h3><?php echo _("The availability of Services & Facilities of the shelter are as follows") ?></h3>
 
-	<!--To have the results shown in table format-->
-<div id="result">
-	<table>
-		<thead>
-                    <tr>
-			<td><?php echo _("Service Type") ?></td>
-			<td><?php echo _("Availability") ?></td>
-                    </tr>
-		</thead>
-
-		<tbody>
-			<tr>
-
-			<?php
-        $a = "select option_code,option_description from field_options where field_name='opt_camp_service'";
-        $ref = $db->Execute($a);
-        while (!$ref->EOF) {
-            $val = $ref->fields[0];
-            $name = $ref->fields[1];
-            $flag = false;
-            if (isset($_SESSION['opt_camp_service'])) {
-                foreach($_SESSION['opt_camp_service'] as $a => $b) {
-                    if ($val == $b) {
-                        echo "<td>$name</td>";
-                        echo "<td>" . _("Available") . "</td>";
-                        $flag = true;
-                    }
-                }
-            }
-            if (!$flag) {
-                echo "<td>$name</td>";
-                echo "<td>" . _("NOT AVAILABLE") . "</td>";
-                // 					echo "<br>";
-                
-            }
-?>
-			</tr>
-			<?php
-            $ref->MoveNext();
-        }
-?>
-
-		</tbody>
-	</table>
-</div>
+	<div id="note" style="text-align: left;">
+            <div><?php echo _('Add Shelter'); ?>:<?php
+            echo sprintf('Please click %s to add another shelter.',
+                    '<a href="index.php?mod=cr&act=acmp"><b>' . _('Add Shelter') . '</b></a>');
+            ?></div>
+            <div><?php echo _('Edit Shelter'); ?>:<?php
+            echo sprintf('To edit current shelter, please do a search with %s or %s first to find the shelter you would like to edit.',
+                    '<a href="index.php?mod=cr&act=srch"><b>' . _('Search by Name') . '</b></a>',
+                    '<a href="index.php?mod=cr&act=srch_address"><b>' . _('Search by address') . '</b></a>');
+            ?></div>
+	</div>
 <br/>
-<br/>
-<p><?php echo _("Use the Navigation Menu to Continue") ?></p>
 <?php
     } elseif (isset($_POST['edit'])) {
         _shn_cr_cedit_second();
