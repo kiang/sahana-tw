@@ -133,13 +133,19 @@ $conf['proxy_path']='res/lib_proxy.php?url=';
 #	Help and Wiki Urls		  #
 ###############################
 # Default values are given below.
-$conf['wiki_url'] = 'http://wiki.sahana.lk/doku.php?id=doc:nwhome';
+$conf['wiki_url'] = 'http://wiki.sahanafoundation.org/doku.php';
 
-$conf['sahana_url'] = 'http://sahana.lk';
+$conf['sahana_url'] = 'http://www.sahanafoundation.org/';
 
 $conf['forum_url'] = 'http://forum.sahana.lk/';
 
-$conf['chat_url'] = 'http://www.sahana.lk/chat';
+$conf['chat_url'] = 'http://www.sahanafoundation.org/chat';
 
 # end of the config file.
 
+###################################
+#  show sponsor                   #
+###################################
+
+$conf['sponsor'] = 'Sahana Agasti正體中文網站由IBM大中華軟體開發中心協助建置';
+# end of the config file.

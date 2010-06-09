@@ -42,9 +42,9 @@ function shn_home_default() {
         </ul>
     <p>
     <?php
-    echo _("For more detail on Sahana system, see ") . '<a href="http://www.sahana.lk">' . _("Sahana Website") . '</a><br/>';
-    echo _("For live help from the Sahana community on using this application, go to ") . '<a href="http://www.sahana.lk/chat">' . _("Sahana Community Chat") . "</a><br/>";
-    echo _("To access Sahana documentation, go to ") . '<a href="http://wiki.sahana.lk/doku.php?id=doc:nwhome">' . _("Sahana Wiki") . "</a><br/>";
+    echo _("For more detail on Sahana system, see ") . '<a href="http://www.sahanafoundation.org/">' . _("Sahana Website") . '</a><br/>';
+    echo _("For live help from the Sahana community on using this application, go to ") . '<a href="http://www.sahanafoundation.org/chat">' . _("Sahana Community Chat") . "</a><br/>";
+    echo _("To access Sahana documentation, go to ") . '<a href="http://wiki.sahanafoundation.org/doku.php">' . _("Sahana Wiki") . "</a><br/>";
     if ($conf['root_name'] != '') {
         echo '<br/>' . _("Administrator: ") . $conf['root_name'];
     }
@@ -57,6 +57,16 @@ function shn_home_default() {
 ?>
         </p>
     </div>
+<div align="center">
+<p>
+&nbsp;<br />&nbsp;<br />
+<?php
+    if ($conf['sponsor'] != '') {
+        echo  $conf['sponsor'];
+    }
+?>
+</p>
+</div>
 
 <?php
 }
