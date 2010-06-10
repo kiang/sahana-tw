@@ -16,12 +16,23 @@
  * @subpackage google_maps
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  */
+
+/*
+ * Get the configs for gis from database
+ */
+$query = "SELECT confkey, value FROM config WHERE module_id='gis'";
+$res = $global['db']->Execute($query);
+while(!$res->EOF) {
+    $conf[$res->fields['confkey']] = $res->fields['value'];
+    $res->MoveNext();
+}
+
 /**
  * show basic map
  * called by shn_gis_map in gis api
  */
 function show_map($opt = array()) {
-    global $global, $conf;
+    global $conf;
     $key = $conf['mod_gis_google_key'];
 ?>
 <script src="http://maps.google.com/maps?file=api&v=2&key=<?php echo $key ?>" type="text/javascript"></script>
@@ -59,9 +70,7 @@ function show_map($opt = array()) {
  * called by shn_gis_add_marker_map_form in gis api
  */
 function show_add_marker_map($name, $extra_opts = null) {
-    global $global;
     global $conf;
-    $db = $global['db'];
     $key = $conf['mod_gis_google_key'];
 ?>
         <div id="map" style="width: <?=$conf['mod_gis_width'] ?>px; height: <?=$conf['mod_gis_height'] ?>px"></div>
@@ -132,9 +141,7 @@ function show_add_marker_map($name, $extra_opts = null) {
  *
  */
 function show_map_with_markers($array) {
-    global $global;
     global $conf;
-    $db = $global['db'];
     $key = $conf['mod_gis_google_key'];
 ?>
 	<script src="http://maps.google.com/maps?file=api&v=2&key=<?php echo $key ?>" type="text/javascript"></script>
@@ -197,8 +204,7 @@ function show_map_with_markers($array) {
  * called by shn_gis_map_with_wiki_markers in gis api
  */
 function show_map_with_wiki_marker($array) {
-    global $global, $conf;
-    $db = $global['db'];
+    global $conf;
     $key = $conf['mod_gis_google_key'];
 ?>
 	<script src="http://maps.google.com/maps?file=api&v=2&key=<?php echo $key ?>" type="text/javascript"></script>
@@ -275,9 +281,7 @@ function show_map_with_wiki_marker($array) {
  * called by shn_gis_density_map in gis api
  */
 function show_map_with_custom_markers($array) {
-    global $global;
-    global $conf;
-    $db = $global['db'];
+    global $conf, $global;
     $key = $conf['mod_gis_google_key'];
 ?>
 	<script src="http://maps.google.com/maps?file=api&v=2&key=<?php echo $key ?>" type="text/javascript"></script>
