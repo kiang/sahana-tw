@@ -123,6 +123,20 @@ function shn_gis_adm_show_mods() {
     $db = $global['db'];
     include_once ($global['approot'] . '/inc/lib_modules.inc');
     include_once ($global['approot'] . '/inc/lib_form.inc');
+    $query = "SELECT * FROM config WHERE confkey='mod_gis_center_x' AND module_id='gis'";
+    $result = $db->Execute($query);
+    if (isset($result) && !$result->EOF) {
+        $x_center = $result->fields['value'];
+    } else {
+        $x_center = $conf['mod_gis_center_x'];
+    }
+    $query = "SELECT * FROM config WHERE confkey='mod_gis_center_y' AND module_id='gis'";
+    $result = $db->Execute($query);
+    if (isset($result) && !$result->EOF) {
+        $y_center = $result->fields['value'];
+    } else {
+        $y_center = $conf['mod_gis_center_y'];
+    }
 ?>
 	<br /><h3><?php echo _("Main Configuration"); ?></h3>
 <?php
@@ -143,8 +157,8 @@ function shn_gis_adm_show_mods() {
     $lon_help = _("Longitude is West - East (sideways). 
 	Longitude is zero on the prime meridian (Greenwich Mean Time) and is positive to the east, across Europe and Asia.  Longitude is negative to the west, 
 	across the Atlantic and the Americas. a.k.a X value");
-    shn_form_text(_("Center Latitude"), "y_center", null, array("value" => $conf['mod_gis_center_y'], "help" => $lat_help));
-    shn_form_text(_("Center Longitude "), "x_center", null, array("value" => $conf['mod_gis_center_x'], "help" => $lon_help));
+    shn_form_text(_("Center Latitude"), "y_center", null, array("value" => $y_center, "help" => $lat_help));
+    shn_form_text(_("Center Longitude "), "x_center", null, array("value" => $x_center, "help" => $lon_help));
     shn_form_fsclose();
 ?>
 	<ul>
@@ -158,7 +172,7 @@ refer to the documentation within the mod/gis subdirectory"); ?> </li>
     //shn_form_fclose();
     $query_mod = "SELECT value FROM config WHERE module_id='gis' AND confkey='mod_gis_dflt'";
     $result = $db->Execute($query_mod);
-    if (isset($res) && !$res->EOF) {
+    if (isset($result) && !$result->EOF) {
         $mod_name = $result->fields['value'];
     }
     $count = 1;
