@@ -40,7 +40,7 @@ function _shn_admin_mainmenu() {
     //include $global['approot']."/mod/admin/mmc_menus.inc";
     //shn_sub_mod_menuclose();
     shn_sub_mod_menuopen(_("System Security"));
-    if (isset($conf['acl_enabled']) && $conf['acl_enabled']) {
+    if (shn_acl_is_enabled()) {
         shn_sub_mod_menuitem("acl_user_roles", _("User Management"), 'admin');
         shn_sub_mod_menuitem("acl_enable_mods", _("Module Access Control"), 'admin');
         shn_sub_mod_menuitem("acl_privacy", _("Data Classification"), 'admin');
