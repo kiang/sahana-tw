@@ -1317,12 +1317,12 @@ function _shn_rms_display_location_array($loc) {
     shn_form_fsopen(_("Existing Location"));
     //============================New==================================
     foreach($loc as $loc_id) {
-        if (_shn_rms_is_location($loc_id)) {
-            $bsda_village = _shn_org_location_string($loc_id);
-        } elseif (_shn_rms_is_camp($loc_id)) {;
+        if (_shn_rms_is_camp($loc_id)) {
             $bsda_village = _shn_rms_get_camp_name($loc_id);
         } elseif (_shn_rms_is_org($loc_id)) {
             $bsda_village = _shn_rms_get_org_name($loc_id);
+        } elseif (_shn_rms_is_location($loc_id)) {
+            $bsda_village = _shn_org_location_string($loc_id);
         }
         $locations_array[$loc_id] = $bsda_village;
     }
