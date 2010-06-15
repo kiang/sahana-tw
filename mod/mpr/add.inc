@@ -288,7 +288,7 @@ function shn_mpr_addmp_reporter($errors = false) {
 >
 <?php
     $opt_status = isset($_SESSION['mpr_reporter']['opt_status']) ? $_SESSION['mpr_reporter']['opt_status'] : '';
-    shn_form_opt_select('opt_status', _('If you are a victim, Please specify the status'), '', array('value' => $opt_status));
+    shn_form_opt_select('opt_status', _('If you are a victim, Please specify the status'), '', array('value' => $opt_status), array('dec'));
 ?>
 </div>
 </div>
