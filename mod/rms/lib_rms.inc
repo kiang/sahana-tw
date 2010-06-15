@@ -1207,15 +1207,27 @@ function _shn_rms_check_catalog_item($itm) {
 function _shn_rms_requester_add_new_loc_() {
     global $global;
     $p_uuid = $_SESSION['rms_reqstr_id'];
-    if (($_POST['camps'] != 0) || ($_POST['orgs'] != 0)) {
-        $location_id = ($_POST['camps'] != 0) ? $_POST['camps'] : $_POST['orgs'];
-        if (_shn_rms_requester_search_loc_($location_id, $p_uuid)) { //if location already exists
-            add_error(_("Location already exists"));
-        } else {
-            $sql = "INSERT INTO ext_location( p_uuid, loc_uuid) VALUES ('$p_uuid', '$location_id')";
-            if ($global['db']->Execute($sql) === false) {
-                $msg = $global['db']->ErrorMsg();
-                add_error($msg . '<br />' . $sql);
+    $location_id = '';
+    if(!empty($_POST['loc'])) {
+        switch($_POST['loc']) {
+            case 'loc_camp':
+                if(!empty($_POST['camps'])) {
+                    $location_id = trim($_POST['camps']);
+                }
+                break;
+            case 'loc_org':
+                if(!empty($_POST['orgs'])) {
+                    $location_id = trim($_POST['orgs']);
+                }
+                break;
+        }
+        if(!empty($location_id)) {
+            $sql = "INSERT INTO ext_location(p_uuid, loc_uuid) VALUES ('$p_uuid', '$location_id')";
+            if(_shn_rms_requester_search_loc_($location_id, $p_uuid)) {
+                add_error(_("Location already exists"));
+                return false;
+            } elseif (false === $global['db']->Execute($sql)) {
+                add_error($global['db']->ErrorMsg() . '<br />' . $sql);
                 display_errors();
                 return false;
             } else {
@@ -1223,76 +1235,34 @@ function _shn_rms_requester_add_new_loc_() {
                 return true;
             }
         }
-    } else {
-        if (isset($_POST['loc_select_1']) == true && strlen($_POST['loc_select_1']) > 0 && $_POST['loc_select_1'] != "0") { //if a location is selected
-            $lvl = 1;
-            $range = shn_get_range();
-            while ($lvl != ($range["end"]) + 1) {
-                $var1 = 'rms_' . $lvl;
-                $var2 = 'loc_select_' . $lvl;
-                $_SESSION[$var1] = $_POST[$var2];
-                $lvl++;
-            }
-            $location_id = _shn_rms_get_locid($range["end"]);
-            if (_shn_rms_requester_search_loc_($location_id, $p_uuid)) { //if location already exists
-                add_error(_("Location already exists"));
-            } else {
-                $sql = "INSERT INTO ext_location( p_uuid, loc_uuid) VALUES ('$p_uuid', '$location_id')";
-                if ($global['db']->Execute($sql) === false) {
-                    $msg = $global['db']->ErrorMsg();
-                    add_error($msg . '<br />' . $sql);
-                    display_errors();
-                    return false;
+    }
+
+    if(!empty($_POST['levels'])) {
+        for($i = $_POST['levels']; $i > 0; $i--) {
+            $key = 'loc_select_' . $i;
+            if(!empty($_POST[$key])) {
+                $location_id = $_POST[$key];
+                if (_shn_rms_requester_search_loc_($location_id, $p_uuid)) {
+                    add_error(_("Location already exists"));
                 } else {
-                    add_confirmation(_("Location added successfully"));
-                    return true;
+                    $sql = "INSERT INTO ext_location( p_uuid, loc_uuid) VALUES ('$p_uuid', '$location_id')";
+                    if (false === $global['db']->Execute($sql)) {
+                        add_error($global['db']->ErrorMsg() . '<br />' . $sql);
+                        display_errors();
+                        return false;
+                    } else {
+                        add_confirmation(_("Location added successfully"));
+                        return true;
+                    }
                 }
+                break;
             }
-            //------------------ORG---------------------------------------------------------
-            //if an organization is selected, but it does not belong to any location
-            
-        } elseif ((isset($_POST['loc_select_1']) == false || strlen($_POST['loc_select_1']) < 0 || $_POST['loc_select_1'] == "0") && $_POST['loc'] == 'loc_org' && (isset($_POST['orgs']) == true && strlen($_POST['orgs']) > 0 && $_POST['orgs'] != "0")) {
-            $location_id = $_POST['orgs'];
-            if (_shn_rms_requester_search_loc_($location_id, $p_uuid)) {
-                add_error(_("Location already exists"));
-            } else {
-                $sql = "INSERT INTO ext_location( p_uuid, loc_uuid) VALUES ('$p_uuid', '$location_id')";
-                if ($global['db']->Execute($sql) === false) {
-                    $msg = $global['db']->ErrorMsg();
-                    add_error($msg . '<br />' . $sql);
-                    display_errors();
-                    return false;
-                } else {
-                    add_confirmation(_("Location added successfully"));
-                    return true;
-                }
-            }
-            //------------------camp--------------------------------------------------------
-            //if a camp is selected, but it does not belong to any location
-            
-        } elseif ((isset($_POST['loc_select_1']) == false || strlen($_POST['loc_select_1']) < 0 || $_POST['loc_select_1'] == "0") && $_POST['loc'] == 'loc_camp' && (isset($_POST['camps']) == true && strlen($_POST['camps']) > 0 && $_POST['camps'] != "0")) {
-            $location_id = $_POST['camps'];
-            if (_shn_rms_requester_search_loc_($location_id, $p_uuid)) {
-                add_error(_("Location already exists"));
-            } else {
-                $sql = "INSERT INTO ext_location( p_uuid, loc_uuid) VALUES ('$p_uuid', '$location_id')";
-                if ($global['db']->Execute($sql) === false) {
-                    $msg = $global['db']->ErrorMsg();
-                    add_error($msg . '<br />' . $sql);
-                    display_errors();
-                    return false;
-                } else {
-                    add_confirmation(_("Location added successfully"));
-                    return true;
-                }
-            }
-            //-------else-------------------------------------------------------
-            
-        } else { //if any location or camp or organization is not selected..
-            add_warning(_("Select the location first"));
         }
     }
+    add_warning(_("Select the location first"));
+    return false;
 }
+
 function _shn_rms_requester_search_loc_($loc_id, $p_uuid) {
     global $global;
     $sql = "SELECT loc_uuid FROM ext_location WHERE loc_uuid ='$loc_id' AND p_uuid='$p_uuid'";
@@ -1608,6 +1578,9 @@ function _shn_rms_get_camp_name($id) {
         return false;
     } else {
         $name = $rs->fields['name'];
+        if(!empty($rs->fields['location_id'])) {
+            $name .= ' ( ' . _shn_org_location_string($rs->fields['location_id']) . ' )';
+        }
         return $name;
     }
 }
@@ -1617,7 +1590,9 @@ function _shn_rms_get_camp_name($id) {
  */
 function _shn_rms_get_org_name($id) {
     global $global;
-    $sql = "SELECT * FROM org_main WHERE o_uuid='$id'";
+    $sql = "SELECT OM.name, LD.location_id FROM org_main AS OM
+    LEFT JOIN location_details AS LD ON LD.poc_uuid = OM.o_uuid
+    WHERE OM.o_uuid='$id'";
     $rs = $global['db']->Execute($sql);
     if ($rs === false) {
         $msg = $global['db']->ErrorMsg();
@@ -1626,6 +1601,9 @@ function _shn_rms_get_org_name($id) {
         return false;
     } else {
         $name = $rs->fields['name'];
+        if(!empty($rs->fields['location_id'])) {
+            $name .= ' ( ' . _shn_org_location_string($rs->fields['location_id']) . ' )';
+        }
         return $name;
     }
 }

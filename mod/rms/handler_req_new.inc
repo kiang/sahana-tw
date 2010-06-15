@@ -418,8 +418,6 @@ switch ($seq) {
     case 'add_loc':
         _shn_rms_requester_add_new_loc_();
         _shn_rms_location();
-        //shn_form_hidden(array('seq'=>''));
-        //_shn_rms_location_add();
         break;
     case 'get_loc':
         // $loc = shn_location_get_form_submit_loc();

@@ -667,6 +667,10 @@ function shn_location($range = null, $value = null, $parent = null, $extra_opts 
         shn_form_select($options, _('Organizations'), 'orgs', $select_opts, $extra_opts);
         echo '</div>';
     }
+    if ($count > 0) {
+        $options = array("loc_manually" => _("Select a Location"));
+        shn_form_radio($options, null, "loc");
+    }
     shn_form_hidden(array('levels' => $range['end']));
     $start = '1';
     if (($value != NULL) && ($value != UNKNOWN)) {
