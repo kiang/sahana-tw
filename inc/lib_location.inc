@@ -192,7 +192,7 @@ function shn_location_get_x_uuid_loc_range() {
  * @access public
  * @return array
  */
-function shn_get_parents($child, $loc_arr) {
+function shn_get_parents($child, &$loc_arr) {
     global $global;
     include_once $global['approot'] . "/inc/lib_validate.inc";
     if (shn_is_null($child)) {

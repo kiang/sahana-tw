@@ -130,14 +130,15 @@ function _shn_org_location_string($loc) {
     } else {
         $max = count($loc_arr) - 1;
         array_pop($loc_arr);
+        $location = '';
         for ($count = 0;$count < $max;$count++) {
             $x = array_pop($loc_arr);
             $q = "select name from location where loc_uuid='{$x}'";
             $res = $db->Execute($q);
             if ($count == 0) {
-                $location = $location . $res->Fields("name");
+                $location = $location . $res->fields["name"];
             } else {
-                $location = $location . " -->" . $res->Fields("name");
+                $location = $location . " -->" . $res->fields["name"];
             }
         }
     }

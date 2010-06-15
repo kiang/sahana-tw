@@ -84,8 +84,8 @@ function _shn_rms_location($id = null) {
     if ($id == null) $id = $_SESSION['rms_reqstr_id'];
     _shn_rms_view_requester($id, true);
     print '<br />';
-    if (_shn_rms_get_location_array($id)) {
-        $loc = _shn_rms_get_location_array($id);
+    $loc = _shn_rms_get_location_array($id);
+    if (!empty($loc)) {
         _shn_rms_display_location_array($loc);
     }
     shn_form_fopen("req_new", null, array('req_message' => false));
