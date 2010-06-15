@@ -156,7 +156,7 @@ function _shn_rms_shn_get_schresults() {
     $cat_qry = "SELECT serial FROM ct_catalogue WHERE ct_uuid='" . $cat . "'";
     $res1 = $db->Execute($cat_qry);
     $res1->MoveFirst();
-    $cat_serial = $res1->Fields('serial');
+    $cat_serial = $res1->fields['serial'];
     $cat_qry2 = "SELECT ct.ct_uuid,req.loc_uuid,rrm.quantity,rrm.pri_uuid,req.reqstr_uuid,req.status,req.req_uuid,req.req_date FROM ct_catalogue as ct
                  JOIN rms_req_item as rrm ON rrm.item_uuid = ct.ct_uuid 
                  JOIN rms_request as req ON req.req_uuid=rrm.req_uuid
@@ -213,21 +213,18 @@ function _shn_rms_sch_results() {
         $req_id = '';
         $view_url = '<a href=index.php?mod=rms&amp;act=req_sch' .
         //'&amp;keywords=' . $kws .
-        '&amp;seq=view_req&amp;req_id=' . ($results->Fields('req_uuid')) . '>' . _("Details") . '</a>';
+        '&amp;seq=view_req&amp;req_id=' . ($results->fields['req_uuid']) . '>' . _("Details") . '</a>';
         $i = 0;
         while (!$results->EOF) {
             if ($_SESSION['isadmin'] == TRUE) {
-                $_reqstr = _shn_rms_get_person($results->Fields('reqstr_uuid'));
+                $_reqstr = _shn_rms_get_person($results->fields['reqstr_uuid']);
                 $tbl_arr[$i] = array($_reqstr['name'],
-                //_shn_rms_get_cataloguename(_shn_rms_get_parent_catalogue($results->Fields('ct_uuid'))),
-                _shn_rms_get_cat_name($results->Fields('ct_uuid')), _shn_rms_get_name($results->Fields('loc_uuid')),
-                //$results->Fields('quantity'),
-                $results->Fields('req_date'), $results->Fields('status'), _shn_rms_get_priorityname($results->Fields('pri_uuid')), $view_url);
+                _shn_rms_get_cat_name($results->fields['ct_uuid']), _shn_rms_get_name($results->fields['loc_uuid']),
+                $results->fields['req_date'], $results->fields['status'], _shn_rms_get_priorityname($results->fields['pri_uuid']), $view_url);
             } else {
-                $tbl_arr[$i] = array( //_shn_rms_get_cataloguename(_shn_rms_get_parent_catalogue($results->Fields('ct_uuid'))),
-                _shn_rms_get_cat_name($results->Fields('ct_uuid')), _shn_rms_get_name($results->Fields('loc_uuid')),
-                //$results->Fields('quantity'),
-                $results->Fields('req_date'), $results->Fields('status'), _shn_rms_get_priorityname($results->Fields('pri_uuid')), $view_url);
+                $tbl_arr[$i] = array(
+                _shn_rms_get_cat_name($results->fields['ct_uuid']), _shn_rms_get_name($results->fields['loc_uuid']),
+                $results->fields['req_date'], $results->fields['status'], _shn_rms_get_priorityname($results->fields['pri_uuid']), $view_url);
             }
             $results->MoveNext();
             $i++;

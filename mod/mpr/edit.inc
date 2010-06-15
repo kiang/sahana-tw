@@ -691,7 +691,7 @@ function shn_mpr_editmp_commit() {
             echo "<br/>UUID for x_uuid : ".$_SESSION['mpr_edit']['entry']['p_uuid'];
             echo "</pre>";*/
             $res->MoveFirst();
-            $img_id = $res->Fields('image_id');
+            $img_id = $res->fields['image_id'];
             if (!empty($_SESSION['mpr']['entry']['image'])) {
                 shn_image_to_db_ex($_SESSION['mpr_edit']['entry']['p_uuid'], $_SESSION['mpr']['entry']['image'], $_SESSION['mpr']['entry']['image_type'], $_SESSION['mpr']['entry']['image_height'], $_SESSION['mpr']['entry']['image_width'], $img_id, 'person');
             }

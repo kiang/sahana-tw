@@ -82,7 +82,7 @@ function _shn_rms_shn_get_results() {
     //var_dump($cat_qry);
     $res1 = $db->Execute($cat_qry);
     $res1->MoveFirst();
-    $cat_serial = $res1->Fields('serial');
+    $cat_serial = $res1->fields['serial'];
     $cat_qry2 = "SELECT ct.ct_uuid,rpm.status,rpm.inventory,rpm.quantity,plg.donor_uuid,plg.plg_date FROM ct_catalogue as ct
                  JOIN rms_plg_item as rpm ON rpm.item_uuid = ct.ct_uuid 
                  JOIN rms_pledge as plg ON plg.plg_uuid=rpm.plg_uuid
@@ -292,10 +292,10 @@ function _shn_rms_sch_results() {
         $i = 0;
         while (!$res->EOF) {
             if ($_SESSION['isadmin'] == TRUE) {
-                $_pdata = _shn_rms_get_donor($res->Fields('donor_uuid'));
-                $tbl_arr[$i] = array($_pdata['name'], _shn_rms_get_cat_name(_shn_rms_get_parent_catalogue($res->Fields('ct_uuid'))), _shn_rms_get_cat_name($res->Fields('ct_uuid')), $res->Fields('quantity'), $res->Fields('plg_date'), $res->Fields('status'), _shn_rms_get_inventory_name($res->Fields('inventory')));
+                $_pdata = _shn_rms_get_donor($res->fields['donor_uuid']);
+                $tbl_arr[$i] = array($_pdata['name'], _shn_rms_get_cat_name(_shn_rms_get_parent_catalogue($res->fields['ct_uuid'])), _shn_rms_get_cat_name($res->fields['ct_uuid']), $res->fields['quantity'], $res->fields['plg_date'], $res->fields['status'], _shn_rms_get_inventory_name($res->fields['inventory']));
             } else {
-                $tbl_arr[$i] = array(_shn_rms_get_cat_name(_shn_rms_get_parent_catalogue($res->Fields('ct_uuid'))), _shn_rms_get_cat_name($res->Fields('ct_uuid')), $res->Fields('quantity'), $res->Fields('plg_date'), $res->Fields('status'), _shn_rms_get_inventory_name($res->Fields('inventory')));
+                $tbl_arr[$i] = array(_shn_rms_get_cat_name(_shn_rms_get_parent_catalogue($res->fields['ct_uuid'])), _shn_rms_get_cat_name($res->fields['ct_uuid']), $res->fields['quantity'], $res->fields['plg_date'], $res->fields['status'], _shn_rms_get_inventory_name($res->fields['inventory']));
             }
             $res->MoveNext();
             $i++;

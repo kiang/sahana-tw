@@ -175,12 +175,12 @@ function _shn_or_regconfirm_org() {
         $q = "SELECT option_description FROM field_options WHERE field_name='opt_org_sub_type' and option_code='{$_SESSION['org']['type']}'";
     }
     $res = $db->Execute($q);
-    shn_form_label(_("Organization Type"), $res->Fields("option_description"));
+    shn_form_label(_("Organization Type"), $res->fields["option_description"]);
     $count = 1;
     foreach($_SESSION['org']['sector'] as $i) {
         $q = "SELECT option_description FROM field_options WHERE field_name='opt_sector_type' and option_code='{$i}'";
         $res = $db->Execute($q);
-        $sector = $sector . " " . $count . "." . $res->Fields("option_description");
+        $sector = $sector . " " . $count . "." . $res->fields["option_description"];
         $count++;
     }
     shn_form_label(_("Organization Sector"), $sector);
@@ -190,7 +190,7 @@ function _shn_or_regconfirm_org() {
     AND option_code IN ('" . implode('\', \'', $_SESSION['org']['services']) . "')";
     $res = $db->Execute($q);
     while(!$res->EOF) {
-        $services .= $res->Fields("option_description") . ', ';
+        $services .= $res->fields["option_description"] . ', ';
         $res->MoveNext();
     }
     shn_form_label(_("Other services : "), $services);
@@ -243,7 +243,7 @@ function _shn_or_regform_operation($error = false, $parent_org = null) {
     $q = "SELECT name FROM org_main WHERE o_uuid='{$parent_org}'";
     $res = $db->Execute($q);
 ?>
-<h2><?php echo _("Add an Operation/Branch under the Organization ") . $res->Fields("name") ?> </h2>
+<h2><?php echo _("Add an Operation/Branch under the Organization ") . $res->fields["name"] ?> </h2>
 <div id="note">
 <?php echo _("Your Organization might be having branches or carrying out relief operations in this disaster. Then information of those operations is usefull "); ?>
 </div>

@@ -112,9 +112,9 @@ function _shn_org_get_incident_string($org_id) {
         $q = "select name from incident where incident_id='{$x}'";
         $res = $db->Execute($q);
         //if($count==0 ){
-        $str = $str . $res->Fields("name");
+        $str = $str . $res->fields["name"];
         //	}else{
-        //	$location=$location."-->".$res->Fields("name");
+        //	$location=$location."-->".$res->fields["name"];
         //}
         
     }

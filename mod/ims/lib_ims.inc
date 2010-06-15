@@ -1472,9 +1472,9 @@ function _shn_ims_location_string($loc) {
             $q = "select name from location where loc_uuid='{$x}'";
             $res = $db->Execute($q);
             if ($count == 0) {
-                $location = $location . $res->Fields("name");
+                $location = $location . $res->fields["name"];
             } else {
-                $location = $location . " -->" . $res->Fields("name");
+                $location = $location . " -->" . $res->fields["name"];
             }
         }
     }

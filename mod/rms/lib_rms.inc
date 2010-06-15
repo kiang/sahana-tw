@@ -1404,7 +1404,7 @@ function _shn_rms_location_string($loc) {
         display_errors();
         return false;
     } else {
-        $location = $location . $res->Fields("name");
+        $location = $location . $res->fields["name"];
         return $location;
     }
 }

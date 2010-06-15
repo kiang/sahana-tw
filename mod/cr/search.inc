@@ -49,7 +49,7 @@ function _shn_cr_srch_rst_address($camp_name, $type = 'all') {
 	<?php
     while (!$res_cmp->EOF) {
         $location_name = "";
-        $loc_uuid = $res_cmp->Fields('location_id');
+        $loc_uuid = $res_cmp->fields['location_id'];
         if ($loc_uuid != '-1') {
             $sub_query = "SELECT loc.name AS loc_name FROM location AS loc WHERE loc.loc_uuid='" . $loc_uuid . "'";
             $sub_res = $db->Execute($sub_query);
@@ -136,7 +136,7 @@ function _shn_cr_srch_rst($camp_name, $type) {
 	<?php
     while (!$res_cmp->EOF) {
         $location_name = "";
-        $loc_uuid = $res_cmp->Fields('location_id');
+        $loc_uuid = $res_cmp->fields['location_id'];
         if ($loc_uuid != '-1') {
             $sub_query = "SELECT loc.name AS loc_name FROM location AS loc WHERE loc.loc_uuid='" . $loc_uuid . "'";
             $sub_res = $db->Execute($sub_query);

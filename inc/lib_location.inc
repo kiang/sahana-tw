@@ -109,9 +109,9 @@ function shn_location_string($loc) {
             $q = "SELECT name FROM location WHERE loc_uuid='{$x}'";
             $res = $db->Execute($q);
             if ($count == 0) {
-                $location = $location . $res->Fields("name");
+                $location = $location . $res->fields["name"];
             } else {
-                $location = $location . " -->" . $res->Fields("name");
+                $location = $location . " -->" . $res->fields["name"];
             }
         }
     }

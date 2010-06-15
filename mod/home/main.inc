@@ -129,7 +129,7 @@ function shn_home_about() {
         $about['database_collation'] = $res->fields['Value'];
         $sql = "SELECT VERSION()";
         $res = $global['db']->Execute($sql);
-        $about['mysql_version'] = $res->Fields(0);
+        $about['mysql_version'] = $res->fields[0];
 ?>
 		<table border="0" class="about-sahana">
 		  <tr>
