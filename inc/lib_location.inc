@@ -582,10 +582,25 @@ function shn_location_init_jscript($start, $end) {
  * @return void
  */
 function shn_location($range = null, $value = null, $parent = null, $extra_opts = null) {
+    global $global;
     if (isset($extra_opts['req']) && $extra_opts['req'] == true) {
         shn_form_label(null, "Please Select a location", array("req" => true));
-?> <br />
-	<?
+        echo '<br />';
+    }
+    if (isset($extra_opts["camps"]) && $extra_opts["camps"] == true) {
+        $showCamps = true;
+    } else {
+        $showCamps = false;
+    }
+    if (isset($extra_opts["inv"]) && $extra_opts["inv"] == true) {
+        $showInv = true;
+    } else {
+        $showInv = false;
+    }
+    if (isset($extra_opts["org"]) && $extra_opts["org"] == true) {
+        $showOrg = true;
+    } else {
+        $showOrg = false;
     }
     // if a location is selected in post values use it, if the value is not given
     // this will set the location as it is when a submision fails of a form.
@@ -599,27 +614,23 @@ function shn_location($range = null, $value = null, $parent = null, $extra_opts 
     $count = 0;
     $keepparent = false;
     $info = _("If you know any of the following, please select Only one of them first") . _(" , the selection will populate the set of Location select boxes ") . "<br />";
-    if (isset($extra_opts["camps"]) && $extra_opts["camps"] == true) {
+    if ($showCamps) {
         $info.= _("* Camp/Shelter ") . "<br /> ";
-        $count = $count + 1;
+        ++$count;
     }
-    if (isset($extra_opts["inv"]) && $extra_opts["inv"] == true) {
+    if ($showInv) {
         $info.= _("* an Inventory ") . "<br /> ";
-        $count = $count + 1;
+        ++$count;
     }
-    if (isset($extra_opts["org"]) && $extra_opts["org"] == true) {
+    if ($showOrg) {
         $info.= _("* an Organization ") . "<br /> ";
-        $count = $count + 1;
+        ++$count;
     }
-    if ((isset($extra_opts["camps"]) && $extra_opts["camps"] == true)
-            or (isset($extra_opts["inv"]) && $extra_opts["inv"] == true)
-            or (isset($extra_opts["org"]) && $extra_opts["org"] == true)) {
-        //$info.=_("a Location ");
-        
-?><div class="info"><?php echo $info; ?></div><br /><?
+    if ($count > 0) {
+        echo '<div class="info">' . $info . '</div><br />';
     }
-    if (isset($extra_opts["camps"]) && $extra_opts["camps"] == true) {
-        if ($count >= 1) {
+    if ($showCamps) {
+        if ($count > 0) {
             $options = array("loc_camp" => _("Select a Camp/Shelter"));
             $select_opts = 'onclick=radio_click("loc_camp")';
             shn_form_radio($options, null, "loc", $select_opts);
@@ -631,42 +642,30 @@ function shn_location($range = null, $value = null, $parent = null, $extra_opts 
             $options[$id] = $name;
         }
         if (!empty($extra_opts["camp_id"])) {
-            $q = "select location_id from camp_general where c_uuid='" . $extra_opts["camp_id"] . "'";
-            global $global;
-            $db = $global["db"];
-            $res = $db->Execute($q);
-            if (($res == NULL) || ($res->EOF)) {
-                $value = UNKNOWN;
-            } else {
-                $value = $res->fields["location_id"];
-            }
             $extra_opts["value"] = $extra_opts["camp_id"];
         }
-?><div id='loc_camp'><?
+        echo '<div id="loc_camp">';
         $select_opts = 'onChange=update_location(this.options[this.selectedIndex].value,"camp")';
         shn_form_select($options, _('Shelter/Camp'), 'camps', $select_opts, $extra_opts);
-?>	</div><?
+        echo '</div>';
     }
-    if (isset($extra_opts["org"]) && $extra_opts["org"] == true) {
-        global $global;
+    if ($showOrg) {
         include_once $global['approot'] . "/mod/or/api.inc";
         $orgs = shn_or_organization_list();
-        if ($count >= 1) {
+        if ($count > 0) {
             $options = array("loc_org" => _("Select an Organization"));
             $select_opts = 'onclick=radio_click("loc_org")';
             shn_form_radio($options, null, "loc", $select_opts);
         }
         $options = array();
         $options[0] = "";
-        if ($orgs != null) {
-            foreach($orgs as $org => $org_details) {
-                $options[$org_details["id"]] = $org_details["name"];
-            }
+        foreach ($orgs as $org => $org_details) {
+            $options[$org_details["id"]] = $org_details["name"];
         }
-?><div id='loc_org'><?
+        echo '<div id="loc_org">';
         $select_opts = 'onChange=update_location(this.options[this.selectedIndex].value,"poc")';
         shn_form_select($options, _('Organizations'), 'orgs', $select_opts, $extra_opts);
-?>	</div><?
+        echo '</div>';
     }
     shn_form_hidden(array('levels' => $range['end']));
     $start = '1';
@@ -676,8 +675,6 @@ function shn_location($range = null, $value = null, $parent = null, $extra_opts 
     } else {
         if ($parent == null) {
             _shn_location_form($range);
-            //$start='1';
-            
         } else {
             _shn_location_form_parent($range, $parent);
             $keepparent = true;

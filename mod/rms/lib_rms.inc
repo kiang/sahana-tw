@@ -1312,10 +1312,9 @@ function _shn_rms_display_location_array($loc) {
 ?>
 <div class="info"><?php echo $info; ?></div>
 <br />
-	<?
+	<?php
     shn_form_hidden(array('seq' => 'get_loc'));
     shn_form_fsopen(_("Existing Location"));
-    //============================New==================================
     foreach($loc as $loc_id) {
         if (_shn_rms_is_camp($loc_id)) {
             $bsda_village = _shn_rms_get_camp_name($loc_id);
@@ -1326,13 +1325,6 @@ function _shn_rms_display_location_array($loc) {
         }
         $locations_array[$loc_id] = $bsda_village;
     }
-    //====================old=======================================
-    //	foreach($loc as $loc_id)
-    //	{
-    //		$bsda_village = _shn_org_location_string($loc_id);   //return the location
-    //		$locations_array[$loc_id]= $bsda_village;
-    //	}
-    //=========================================================================
     shn_form_select($locations_array, _("Location"), 'loc');
     shn_form_fsclose();
     shn_form_submit(_("Next"));
