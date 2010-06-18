@@ -2,9 +2,13 @@
 <p>_("The Volunteer Management module keeps track of projects and volunteers.")</p>
 <h3>_("Volunteer Portal")</h3><br/>
 <ul style="margin-left: 1em;">
-	<li><a href="?mod=vm&amp;act=default&amp;vm_action=display_single&amp;p_uuid={$p_uuid}"><b>_("My information page")</b></a><br/>_("Personal information and time logging.")  </li>
 	{if $vol_assign}
+                <li><a href="?mod=vm&amp;act=default&amp;vm_action=display_single&amp;p_uuid={$p_uuid}"><b>_("My information page")</b></a><br/>_("Personal information and time logging.")  </li>
 		<li><a href="?mod=vm&amp;act=project&amp;vm_action=display_select_project"><b>_("Assign to Project")</b></a><br>_("Manage volunteer assignments")</li>
+        {else}
+            {if $outbox}
+		<li><a href="?mod=vm&amp;act=volunteer&vm_action=display_add"><b>_("Register to VM")</b></a><br />_("Register yourself in Volunteer Management module")</li>
+            {/if}
 	{/if}
 
 	{if $showAssigned}
@@ -33,10 +37,6 @@
 
 	{if $inbox}
 		<li><a href="?mod=vm&amp;act=volunteer&vm_action=display_custom_report_select"><b>_("Generate report")</b></a><br/>_("Generate customized report on volunteers and projects")</li>
-	{/if}
-
-	{if $outbox}
-		<li><a href="?mod=vm&amp;act=volunteer&vm_action=display_add"><b>_("Register to VM")</b></a><br />_("Register yourself in Volunteer Management module")</li>
 	{/if}
 
 	{if $sendMessage}

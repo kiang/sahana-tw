@@ -100,17 +100,13 @@ function shn_vm_mainmenu() {
     global $global, $dao, $conf;
     $ac = new AccessController($_REQUEST);
     shn_mod_menuopen(_("Volunteer Management"));
-    $ac->addMenuItem(_('Home'), $ac->buildURLParams('volunteer', 'display_portal'));
+    $ac->addMenuItem(_('Home'), $ac->buildURLParams('default'));
     //shn_vm_home_submenu();
     shn_vm_volunteer_submenu();
     shn_vm_project_submenu();
     shn_vm_messaging_submenu();
     shn_vm_reports_submenu();
     shn_vm_management_submenu();
-    if ($dao->isVolunteer($_SESSION['user_id'])) $ac->addMenuItem(_('Edit Your Details'), $ac->buildURLParams('volunteer', 'display_edit', array('p_uuid' => $_SESSION['user_id'])), true);
-    else $ac->addMenuItem(_('Register to Volunteer'), $ac->buildURLParams('volunteer', 'display_add'), true);
-    //$ac->addMenuItem('Change Password', $ac->buildURLParams('volunteer', 'display_change_pass'));
     shn_mod_menuclose();
     include $global['approot'] . "/inc/handler_mainmenu.inc";
 }
-?>
