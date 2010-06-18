@@ -273,7 +273,6 @@ class VolunteerView extends View {
         $this->engine->assign('vol_assign', $ac->isAuthorized(false, $ac->buildURLParams('project', 'display_select_project')));
         $this->engine->assign('showAssigned', $ac->isAuthorized(false, $ac->buildURLParams('volunteer', 'display_list_assigned')));
         $this->engine->assign('listVolunteers', $ac->isAuthorized(false, $ac->buildURLParams('volunteer', 'display_list_all')));
-        $this->engine->assign('registerVM', $ac->isAuthorized(false, $ac->buildURLParams('volunteer', 'display_add')));
         $this->engine->assign('search', $ac->isAuthorized(false, $ac->buildURLParams('volunteer', 'display_search')));
         $this->engine->assign('add_proj', $ac->isAuthorized(false, $ac->buildURLParams('project', 'display_add')));
         $this->engine->assign('listMyProjects', $ac->isAuthorized(false, $ac->buildURLParams('project', 'display_my_list')));

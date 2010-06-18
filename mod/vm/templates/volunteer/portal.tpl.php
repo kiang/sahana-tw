@@ -2,11 +2,13 @@
 <p>_("The Volunteer Management module keeps track of projects and volunteers.")</p>
 <h3>_("Volunteer Portal")</h3><br/>
 <ul style="margin-left: 1em;">
-        {if $registerVM}
-		<li><a href="?mod=vm&amp;act=volunteer&vm_action=display_add"><b>_("Register to VM")</b></a><br />_("Register yourself in Volunteer Management module")</li>
+	{if $listMyProjects}
+                <li><a href="?mod=vm&amp;act=default&amp;vm_action=display_single&amp;p_uuid={$p_uuid}"><b>_("My information page")</b></a><br/>_("Personal information and time logging.")  </li>
+		<li><a href="?mod=vm&amp;act=project&amp;vm_action=display_my_list"><b>_("View My Projects")</b></a><br/>_("View all projects you are currently assigned to")
         {else}
                 <li><a href="?mod=vm&amp;act=default&amp;vm_action=display_single&amp;p_uuid={$p_uuid}"><b>_("My information page")</b></a><br/>_("Personal information and time logging.")  </li>
         {/if}
+
 	{if $vol_assign}
 		<li><a href="?mod=vm&amp;act=project&amp;vm_action=display_select_project"><b>_("Assign to Project")</b></a><br>_("Manage volunteer assignments")</li>
 	{/if}
@@ -25,10 +27,6 @@
 
 	{if $add_proj}
 		<li><a href="?mod=vm&amp;act=project&amp;vm_action=display_add"><b>_("Add New Project")</b></a><br/>_("Start a new project")</li>
-	{/if}
-
-	{if $listMyProjects}
-		<li><a href="?mod=vm&amp;act=project&amp;vm_action=display_my_list"><b>_("View My Projects")</b></a><br/>_("View all projects you are currently assigned to")
 	{/if}
 
 	{if $listAllProjects}
