@@ -58,8 +58,6 @@ class VolunteerView extends View {
             $org_info = $dao->getOrganizationInfo($info['affiliation']);
             $this->engine->assign('affiliation', $org_info['name']);
             $this->engine->assign('special_needs', $info['special_needs']);
-            $contact_types = $dao->getContactTypes();
-            $this->engine->assign('contact_types', $contact_types);
             if ($img_uuid = $this->model->getPictureID()) $this->engine->assign('pictureID', $img_uuid);
             $this->engine->assign('dob', ($info['dob'] == '0000-00-00') ? '' : ($info['dob']));
             $this->engine->assign('date_start', ($info['date_start'] == '0000-00-00') ? '' : ($info['date_start']));

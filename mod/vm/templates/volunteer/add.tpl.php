@@ -74,7 +74,7 @@ shn_form_fopen('default&vm_action=process_add', null, array('enctype' => 'enctyp
     			$contact_medium[$code] = $name;
 			}
 		}
-		shn_form_radio($contact_medium, _('Prefered medium confirmation :'), 'prefered_confirm_medium',null, array('req'=>true));
+		shn_form_radio($contact_medium, _('Prefered medium confirmation :'), 'prefered_confirm_medium',null, array('req'=>true, 'value' => isset($info['contact']['prefer']) ? $info['contact']['prefer'] : ''));
 
 		foreach($contact_types as $code => $name)
 		{

@@ -81,6 +81,7 @@ class VolunteerController extends VolunteerView implements Controller {
                         $v->info['contact'][substr($key, strlen('contact_')) ] = $value;
                     }
                 }
+                $v->info['contact_prefer'] = $getvars['prefered_confirm_medium'];
                 //add skills information
                 $v_skills = array();
                 $skill_ids = $dao->getSkillIDs();

@@ -90,16 +90,18 @@
 <br />
 
 <h2>_("Work Details")</h2>
-<table align="center" border="0">
 	{if !empty($occupation)}
+        <table align="center" border="0">
 	<tr>
 		<td><b>_("Occupation:")</b></td>
 		<td>{$occupation}</td>
 	</tr>
+        </table>
 	{/if}
 
 
 	{if !empty($affiliation)}
+        <table align="center" border="0">
 	<tr>
 		<td><b>_("Affiliation:")</b></td>
 		<td>{$affiliation}</td>
@@ -107,7 +109,7 @@
 	</table>
 	{/if}
 			{if count($projects) > 0}
-	<table align= "center">
+	<table align="center" border="0">
 		<thead>
 			<tr>
 				<td> _("Project") </td>
@@ -140,19 +142,19 @@
 			(none)
 			{/if}
 
-
-</table>
 <br />
 <h2>_("Skills and Work Restrictions")</h2>
-<?
-$vol_skills->display();
-?>
+<?php $vol_skills->display(); ?>
 {if !empty($special_needs)}
+<table align="center" border="0">
 	<tr>
-	<br>
 		<td><b>_("Special Needs:") </b></td>
 		<td>{$special_needs}</td>
-	<br />
 	</tr>
+</table>
 {/if}
-
+{if $edit_auth}
+    <div align="center"><br />
+    <a href = '?mod=vm&act=volunteer&vm_action=display_edit&p_uuid={$p_uuid}'>_("Edit")</a>
+    </div>
+{/if}

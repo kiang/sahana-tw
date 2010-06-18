@@ -460,6 +460,7 @@ class DAO {
             foreach($v->info['contact'] as $key => $value) {
                 if (trim($value != '')) $this->execute("insert into contact (pgoc_uuid, opt_contact_type, contact_value) values ('{$v->p_uuid}', '$key', '$value')");
             }
+            $this->execute("insert into contact (pgoc_uuid, opt_contact_type, contact_value) values ('{$v->p_uuid}', 'prefer', '{$v->info['contact_prefer']}')");
             //get rid of any pre-existing skills and replace them with the new
             $this->execute("DELETE FROM vm_vol_skills WHERE p_uuid = '{$v->p_uuid}'");
             foreach($v->info['skills'] as $skill) {
