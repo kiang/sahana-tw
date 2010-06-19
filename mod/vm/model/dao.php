@@ -1774,5 +1774,32 @@ class DAO {
         $this->db->SetFetchMode(3);
         return $result;
     }
+
+    function getProjectManager($projectId) {
+        $q = "SELECT PU.full_name, FO.option_description, CM.contact_value
+            FROM vm_vol_assignment_active AS VVAA
+            LEFT JOIN person_uuid AS PU ON PU.p_uuid = VVAA.p_uuid
+            LEFT JOIN contact AS CF ON CF.pgoc_uuid = VVAA.p_uuid
+                AND CF.opt_contact_type = 'prefer'
+            LEFT JOIN contact AS CM ON CM.pgoc_uuid = VVAA.p_uuid
+                AND CM.opt_contact_type = CF.contact_value
+            LEFT JOIN field_options AS FO ON FO.field_name = 'opt_contact_type'
+                AND FO.option_code = CF.contact_value
+            WHERE VVAA.proj_id = {$projectId}
+            AND VVAA.ptype_id = 'smgr'";
+        $result = $this->execute($q);
+        if (is_object($result) && !$result->EOF) {
+            return $result->fields;
+        }
+        return false;
+    }
+
+    function getRequiredVolunteers($proj_id) {
+        $result = $this->execute("SELECT SUM(slots) as num FROM vm_position_full WHERE proj_id = '$proj_id'");
+        if ($result->EOF) {
+            return 0;
+        } else {
+            return $result->fields['num'];
+        }
+    }
 }
-?>

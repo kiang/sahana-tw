@@ -1,4 +1,4 @@
-<h2 style="text-align: center;">{$info.name}</h2>
+<h2 style="text-align: center;">_("Project Information")</h2>
 
 {if $showVolunteersAssigned && ($edit_auth || $delete_auth || $assign_auth)}
 	<div id="submenu_v">
@@ -15,7 +15,7 @@
 	</div>
 {/if}
 
-<table align=center>
+<table align="center" width="85%">
     <tbody>
         <tr>
         	<td><b>_("Project Name :")</b></td>
@@ -26,24 +26,31 @@
         	{/if}
         </tr>
         <tr>
-        	<td><b>_("Start Date :")</b></td>
-        	<td>{$start_date}</td>
-        </tr>
-        <tr>
-        	<td><b>_("End Date :")</b></td>
-        	<td>{$end_date}</td>
+        	<td><b>_("Date :")</b></td>
+        	<td>{$start_date} ~ {$end_date}</td>
         </tr>
         <tr>
         	<td><b>_("Location :")</b></td>
         	<td>{$location}</td>
         </tr>
         <tr>
+        	<td><b>_("Project manager :")</b></td>
+        	<td>{$projectManager}</td>
+        </tr>
+        <tr>
+        	<td><b>_("Volunteers required :")</b></td>
+        	<td>{$requiredVolunteers}</td>
+        </tr>
+        <tr>
         	<td><b>_("Volunteers assigned :")</b></td>
         	<td>{$numVolunteers}</td>
         </tr>
+        <tr>
+        	<td><b>_("Description")</b></td>
+        	<td>{$info.description}</td>
+        </tr>
     </tbody>
  </table>
-<br />
 <br />
 
 {if count($positions) > 0}
@@ -134,27 +141,11 @@
 <br />
 
 {if $showVolunteersAssigned}
-<h3>_("Description")</h3>
-{$info.description}
-<br /><br />
-
-<!--
-Projects now have positions
-<h3>_("Specialties needed")</h3>
-<br />
-<?php
-//$skills->display();
-?>
-
-<br />
-<br />
--->
-
 <div align="center">
 	{if $numVolunteers > 0}
-		_("Volunteers working on") {$info.name}:
+            <h3 style="text-align: center;">{$info.name} &nbsp; _("Volunteers working on"):</h3>
 	{else}
-		_("No volunteers are currently assigned to") {$info.name}.
+            <h3 style="text-align: center;">_("No volunteers are currently assigned to") {$info.name}.</h3>
 	{/if}
 </div>
 {/if}

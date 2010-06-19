@@ -36,15 +36,23 @@ class ProjectView extends View {
             $loc = $dao->getLocation($loc_id);
             $locations[] = $loc['name'];
         }
-        $locations = join("<br />\n", $locations);
+        /*
+         * The sorting here just for using in Taiwan.
+         */
+        krsort($locations);
+        $locations = join("-->", $locations);
+
+        $projectManager = $dao->getProjectManager($p->proj_id);
         $this->engine->assign('info', $p->info);
         $this->engine->assign('start_date', ($p->info['start_date'] == '0000-00-00') ? '' : $p->info['start_date']);
         $this->engine->assign('end_date', ($p->info['end_date'] == '0000-00-00') ? '' : $p->info['end_date']);
         $this->engine->assign('location', $locations);
         $this->engine->assign('skills', $dao->getVolSkillsTree($p->proj_id, true));
+        $this->engine->assign('requiredVolunteers', $dao->getRequiredVolunteers($p->proj_id));
         $this->engine->assign('numVolunteers', $numVolunteers);
         $this->engine->assign('showVolunteersAssigned', $showVolunteersAssigned);
         $this->engine->assign('proj_id', $p->proj_id);
+        $this->engine->assign('projectManager', $projectManager['full_name'] . '(' . (!empty($projectManager['option_description']) ? _($projectManager['option_description']) : '') . ':' . $projectManager['contact_value'] . ')');
         $this->engine->assign('position_title', $p->ptype_title);
         $this->engine->assign('positions', $p->positions);
         $ac = new AccessController();
