@@ -275,7 +275,7 @@ class VolunteerView extends View {
         $this->engine->assign('add_proj', $ac->isAuthorized(false, $ac->buildURLParams('project', 'display_add')));
         $this->engine->assign('listMyProjects', $ac->isAuthorized(false, $ac->buildURLParams('project', 'display_my_list')));
         $this->engine->assign('listAllProjects', $ac->isAuthorized(false, $ac->buildURLParams('project', 'default')));
-        $this->engine->assign('inbox', $ac->isAuthorized(false, $ac->buildURLParams('volunteer', 'display_mailbox')));
+        $this->engine->assign('displayReport', $ac->isAuthorized(false, $ac->buildURLParams('volunteer', 'display_custom_report_select')));
         $this->engine->assign('sendMessage', $ac->isAuthorized(false, $ac->buildURLParams('volunteer', 'display_send_message')));
         $this->engine->assign('projects', $this->model->proj_id);
         $this->engine->assign('p_uuid', $this->model->p_uuid);

@@ -33,7 +33,7 @@
 		<li><a href="?mod=vm&amp;act=project"><b>_("View All Projects")</b></a><br/>_("View all projects being tracked")</li>
 	{/if}
 
-	{if $inbox}
+	{if $displayReport}
 		<li><a href="?mod=vm&amp;act=volunteer&vm_action=display_custom_report_select"><b>_("Generate report")</b></a><br/>_("Generate customized report on volunteers and projects")</li>
 	{/if}
 
