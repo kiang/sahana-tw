@@ -84,7 +84,7 @@
             {/php}
 			<td style="margin: 0; padding: 0; text-align: center;">
 				{if !empty($pictureID)}
-					<img  style="margin: 0; padding: 0;" src="?mod=vm&amp;act=display_image&amp;stream=image&amp;size=thumb&amp;id={$pictureID}" />
+					<img  style="margin: 0; padding: 0; width: 70px;" src="?mod=vm&amp;act=display_image&amp;stream=image&amp;size=thumb&amp;id={$pictureID}" />
 				{/if}
 			</td>
 			{/if}
@@ -154,7 +154,7 @@
             {if $showLocation && $view_auth >= VM_ACCESS_PARTIAL}
 	            <td>
 	            	{foreach $vol->info['location_names'] as $loc}
-	            		{$loc}<br />
+	            		{$loc}
 	            	{/foreach}
 	            </td>
             {/if}

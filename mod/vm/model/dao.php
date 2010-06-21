@@ -117,6 +117,12 @@ class DAO {
             }
             while ($lastId != NULL && $lastId != 'NULL' && !$result->EOF);
         }
+        /*
+         * The sorting here just for using in Taiwan.
+         */
+        krsort($locations);
+        krsort($location_names);
+
         $info['locations'] = $locations;
         $info['location_names'] = $location_names;
         // get project[s] to which they are assigned

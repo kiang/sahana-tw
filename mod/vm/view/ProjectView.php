@@ -42,7 +42,18 @@ class ProjectView extends View {
         krsort($locations);
         $locations = join("-->", $locations);
 
+        $projectExpired = false;
+        if($p->info['end_date'] == '0000-00-00') {
+            $endDate = '';
+        } else {
+            $endDate = $p->info['end_date'];
+            if(strtotime($p->info['end_date'] . ' 23:59:59') < mktime()) {
+                $projectExpired = true;
+            }
+        }
+
         $projectManager = $dao->getProjectManager($p->proj_id);
+        $this->engine->assign('projectExpired', $projectExpired);
         $this->engine->assign('info', $p->info);
         $this->engine->assign('start_date', ($p->info['start_date'] == '0000-00-00') ? '' : $p->info['start_date']);
         $this->engine->assign('end_date', ($p->info['end_date'] == '0000-00-00') ? '' : $p->info['end_date']);
@@ -63,7 +74,13 @@ class ProjectView extends View {
         $this->engine->assign('assign_auth', $ac->isAuthorized(false, $ac->buildURLParams('project', 'display_assign', array('proj_id' => $p->proj_id))));
         $this->engine->display('project/display.tpl.php');
         if ($showVolunteersAssigned && $numVolunteers > 0) {
-            $extra_opts = array('showPictures' => true, 'showLocation' => true, 'showRemove' => true, 'modifyProjId' => $p->proj_id, 'showPositions' => true, 'showHours' => true);
+            $extra_opts = array(
+                'showPictures' => true,
+                'showLocation' => true,
+                'showRemove' => !$projectExpired,
+                'modifyProjId' => $p->proj_id,
+                'showPositions' => true,
+                'showHours' => true);
             $vView = new VolunteerView();
             $vView->listVolunteers($volunteers, $extra_opts);
             $this->showPagingNavigation("index.php?mod=vm&amp;act=project&amp;vm_action=display_single&amp;proj_id={$p->proj_id}");
