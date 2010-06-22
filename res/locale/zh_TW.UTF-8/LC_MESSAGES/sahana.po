@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-08 17:57+0800\n"
-"PO-Revision-Date: 2010-06-08 17:57+0800\n"
+"POT-Creation-Date: 2010-06-22 11:15+0800\n"
+"PO-Revision-Date: 2010-06-22 11:18+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -20,8 +20,8 @@ msgstr ""
 "X-Poedit-Country: TAIWAN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: mod/vm/view/VolunteerView.php:317
-#: mod/vm/view/VolunteerView.php:353
+#: mod/vm/view/VolunteerView.php:314
+#: mod/vm/view/VolunteerView.php:350
 msgid "System Message"
 msgstr "系統訊息"
 
@@ -233,96 +233,96 @@ msgstr "版型錯誤：暫存版型錯誤："
 msgid "Template error: could not write to template cache directory."
 msgstr "版型錯誤：無法正確寫入版本暫存目錄。"
 
-#: mod/vm/model/dao.php:789
+#: mod/vm/model/dao.php:840
 msgid "You have been removed from Project"
 msgstr "您已經從此專案裡移除。"
 
-#: mod/vm/model/dao.php:789
-#: mod/vm/model/dao.php:1053
-#: mod/vm/model/dao.php:1057
-#: mod/vm/model/dao.php:1058
-#: mod/vm/model/dao.php:1063
-#: mod/vm/model/dao.php:1398
+#: mod/vm/model/dao.php:840
+#: mod/vm/model/dao.php:1104
+#: mod/vm/model/dao.php:1108
+#: mod/vm/model/dao.php:1109
+#: mod/vm/model/dao.php:1114
+#: mod/vm/model/dao.php:1449
 msgid "This is an automated message"
 msgstr "這是一個自動訊息。"
 
-#: mod/vm/model/dao.php:823
-#: mod/vm/model/dao.php:883
-#: tools/tpl_languages.php:116
+#: mod/vm/model/dao.php:874
+#: mod/vm/model/dao.php:934
+#: tools/tpl_languages.php:119
 msgid "Skills and Work Restrictions"
 msgstr "技能與工作限制"
 
-#: mod/vm/model/dao.php:1053
-#: mod/vm/model/dao.php:1057
+#: mod/vm/model/dao.php:1104
+#: mod/vm/model/dao.php:1108
 msgid "Your ability status for"
 msgstr "你的能力狀態 for"
 
-#: mod/vm/model/dao.php:1053
+#: mod/vm/model/dao.php:1104
 msgid "has been approved"
 msgstr "已經審核通過"
 
-#: mod/vm/model/dao.php:1057
+#: mod/vm/model/dao.php:1108
 msgid "has been revoked"
 msgstr "已經被駁回"
 
-#: mod/vm/model/dao.php:1058
+#: mod/vm/model/dao.php:1109
 msgid "Your ability status request for"
 msgstr "Your ability status request for"
 
-#: mod/vm/model/dao.php:1058
+#: mod/vm/model/dao.php:1109
 msgid "has been denied"
 msgstr "已經被拒絕"
 
-#: mod/vm/model/dao.php:1063
+#: mod/vm/model/dao.php:1114
 msgid "You have been given an approved ability status for"
 msgstr "You have been given an approved ability status for"
 
-#: mod/vm/model/dao.php:1398
+#: mod/vm/model/dao.php:1449
 msgid "You have been assigned to"
 msgstr "您已被分派到"
 
-#: mod/vm/controller/VolunteerController.php:112
+#: mod/vm/controller/VolunteerController.php:113
 msgid "The image file is invalid, or is not of a supported type."
 msgstr "圖檔不正確，或是不被支援的格式"
 
-#: mod/vm/controller/VolunteerController.php:114
+#: mod/vm/controller/VolunteerController.php:115
 msgid "Changes saved."
 msgstr "已儲存改變"
 
-#: mod/vm/controller/VolunteerController.php:158
+#: mod/vm/controller/VolunteerController.php:159
 msgid "Your Password has been updated"
 msgstr "你的密碼已更新"
 
-#: mod/vm/controller/VolunteerController.php:211
+#: mod/vm/controller/VolunteerController.php:212
 msgid "Message Sent"
 msgstr "消息已送出"
 
-#: mod/vm/controller/VolunteerController.php:322
+#: mod/vm/controller/VolunteerController.php:323
 msgid "Please specify both a skill description and skill code"
 msgstr "請輸入技能說明與編碼"
 
-#: mod/vm/controller/VolunteerController.php:326
+#: mod/vm/controller/VolunteerController.php:327
 msgid "Skill code should be 4 - 5 letters"
 msgstr ""
 
-#: mod/vm/controller/VolunteerController.php:333
+#: mod/vm/controller/VolunteerController.php:334
 msgid "The specified skill code already exists. Please choose another"
 msgstr "技能編碼已經存在，請另選一個"
 
-#: mod/vm/controller/VolunteerController.php:358
-#: mod/vm/controller/VolunteerController.php:364
+#: mod/vm/controller/VolunteerController.php:359
+#: mod/vm/controller/VolunteerController.php:365
 msgid "Approval information has been updated"
 msgstr "核准資訊已更新"
 
-#: mod/vm/controller/VolunteerController.php:380
+#: mod/vm/controller/VolunteerController.php:381
 msgid "There was a problem logging your time. Please go back and try again."
 msgstr "記錄你的時間發生了錯誤。請返回再試一次"
 
-#: mod/vm/controller/VolunteerController.php:382
+#: mod/vm/controller/VolunteerController.php:383
 msgid "Error logging time:"
 msgstr "錯誤的登錄/記錄時間："
 
-#: mod/vm/controller/VolunteerController.php:639
+#: mod/vm/controller/VolunteerController.php:640
 msgid "Volunteer Management Report"
 msgstr "志工管理報告"
 
@@ -346,62 +346,70 @@ msgstr "ACL 設定已更新。"
 msgid "Volunteer has been successfully assigned"
 msgstr "已經成功地指派志工"
 
+#: mod/vm/controller/ProjectController.php:126
+msgid "The items listed below are projects that will start from today or after today."
+msgstr ""
+
+#: mod/vm/controller/ProjectController.php:127
+msgid "View all projects"
+msgstr "檢視所有專案"
+
 #: mod/vm/templates/volunteer/adv_search.tpl.php:10
-#: tools/tpl_languages.php:206
-#: tools/tpl_languages.php:222
+#: tools/tpl_languages.php:210
+#: tools/tpl_languages.php:226
 msgid "Personal Information"
 msgstr "個人資訊"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:13
-#: tools/tpl_languages.php:207
-#: tools/tpl_languages.php:223
+#: tools/tpl_languages.php:211
+#: tools/tpl_languages.php:227
 msgid "Any ID Number:"
 msgstr "任意編號："
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:14
-#: tools/tpl_languages.php:100
-#: tools/tpl_languages.php:208
-#: tools/tpl_languages.php:224
+#: tools/tpl_languages.php:103
+#: tools/tpl_languages.php:212
+#: tools/tpl_languages.php:228
 msgid "Name:"
-msgstr "名稱："
+msgstr "姓名"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:15
-#: tools/tpl_languages.php:209
-#: tools/tpl_languages.php:227
+#: tools/tpl_languages.php:213
+#: tools/tpl_languages.php:231
 msgid "Loose Name Matching"
-msgstr "模糊名稱查詢"
+msgstr "模糊查詢"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:15
 msgid "(May return many unrelated results)"
 msgstr "(也許傳回了許多不相關的結果)"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:18
-#: tools/tpl_languages.php:188
-#: tools/tpl_languages.php:210
-#: tools/tpl_languages.php:231
+#: tools/tpl_languages.php:192
+#: tools/tpl_languages.php:214
+#: tools/tpl_languages.php:235
 msgid "Skills"
 msgstr "技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
-#: tools/tpl_languages.php:211
-#: tools/tpl_languages.php:232
+#: tools/tpl_languages.php:215
+#: tools/tpl_languages.php:236
 msgid "Require ALL skills below"
 msgstr "需要下面所有技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
-#: tools/tpl_languages.php:212
-#: tools/tpl_languages.php:233
+#: tools/tpl_languages.php:216
+#: tools/tpl_languages.php:237
 msgid "Require ANY skills below"
 msgstr "需要下面任意技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
-#: tools/tpl_languages.php:213
+#: tools/tpl_languages.php:217
 msgid "Skills Matching:"
 msgstr "查詢技能："
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:24
-#: tools/tpl_languages.php:143
-#: tools/tpl_languages.php:214
+#: tools/tpl_languages.php:151
+#: tools/tpl_languages.php:218
 #: mod/or/search.inc:49
 #: mod/or/main.inc:34
 #: mod/ims/search.inc:24
@@ -435,28 +443,28 @@ msgid "Search"
 msgstr "搜尋"
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:46
-#: tools/tpl_languages.php:245
+#: tools/tpl_languages.php:249
 #: inc/lib_paging.inc:129
 msgid "Go to Page No "
 msgstr "前往頁碼："
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:61
-#: tools/tpl_languages.php:246
+#: tools/tpl_languages.php:250
 #: inc/lib_paging.inc:137
 msgid "Go to Last Page"
 msgstr "前往最後一頁"
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:62
-#: tools/tpl_languages.php:247
+#: tools/tpl_languages.php:251
 #: inc/lib_paging.inc:139
 msgid "Go to Next Page"
 msgstr "前往下一頁"
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:62
-#: tools/tpl_languages.php:248
+#: tools/tpl_languages.php:252
 #: mod/or/reg_org.inc:114
 #: mod/or/reg_org.inc:315
-#: mod/or/lib_or.inc:795
+#: mod/or/lib_or.inc:796
 #: mod/ws/reg.inc:52
 #: mod/ims/reg_inv.inc:59
 #: mod/ims/reg_inv.inc:111
@@ -480,7 +488,7 @@ msgstr "前往下一頁"
 #: mod/admin/location.inc:58
 #: mod/cr/edit.inc:86
 #: mod/cr/edit.inc:240
-#: mod/cr/edit.inc:657
+#: mod/cr/edit.inc:621
 #: mod/cr/camp.inc:92
 #: mod/cr/camp.inc:113
 #: mod/cr/camp.inc:182
@@ -503,7 +511,7 @@ msgstr "前往下一頁"
 #: mod/rms/handler_plg_new.inc:65
 #: mod/rms/handler_mng_ff.inc:115
 #: mod/rms/handler_mng_ff.inc:260
-#: mod/rms/lib_rms.inc:1338
+#: mod/rms/lib_rms.inc:1300
 #: mod/msg/handler_cap_new.inc:99
 #: mod/msg/handler_cap_new.inc:167
 #: mod/msg/handler_cap_new.inc:187
@@ -527,19 +535,19 @@ msgstr "系統設置"
 
 #: tools/tpl_languages.php:5
 #: tools/tpl_languages.php:16
-#: tools/tpl_languages.php:58
-#: tools/tpl_languages.php:72
+#: tools/tpl_languages.php:61
+#: tools/tpl_languages.php:75
 #: mod/rms/handler_mng_ff.inc:267
 #: mod/rms/lib_rms.inc:490
 msgid "Cancel"
 msgstr "取消"
 
 #: tools/tpl_languages.php:6
-#: tools/tpl_languages.php:24
-#: tools/tpl_languages.php:73
-#: tools/tpl_languages.php:99
-#: tools/tpl_languages.php:343
-#: tools/tpl_languages.php:375
+#: tools/tpl_languages.php:29
+#: tools/tpl_languages.php:76
+#: tools/tpl_languages.php:102
+#: tools/tpl_languages.php:347
+#: tools/tpl_languages.php:379
 #: mod/or/view_org.inc:449
 #: mod/or/view_org.inc:735
 #: mod/or/admin.inc:133
@@ -567,8 +575,9 @@ msgid "Delete"
 msgstr "刪除"
 
 #: tools/tpl_languages.php:7
-#: tools/tpl_languages.php:23
-#: tools/tpl_languages.php:98
+#: tools/tpl_languages.php:28
+#: tools/tpl_languages.php:101
+#: tools/tpl_languages.php:121
 #: mod/or/process_org.inc:33
 #: mod/or/process_org.inc:41
 #: mod/or/view_org.inc:734
@@ -578,7 +587,7 @@ msgstr "刪除"
 #: mod/mpr/search.inc:255
 #: mod/cr/edit.inc:193
 #: mod/cr/edit.inc:282
-#: mod/cr/edit.inc:594
+#: mod/cr/edit.inc:558
 #: mod/cr/camp.inc:515
 #: mod/msg/handler_cap_edit.inc:46
 msgid "Edit"
@@ -593,10 +602,9 @@ msgid "Position Information"
 msgstr "職位資訊"
 
 #: tools/tpl_languages.php:10
-#: tools/tpl_languages.php:34
 #: mod/rs/search.inc:138
 msgid "Title"
-msgstr "標題"
+msgstr "職位名稱"
 
 #: tools/tpl_languages.php:11
 msgid "Position Type :"
@@ -611,12 +619,10 @@ msgid "Target Number of Volunteers"
 msgstr "預計志工人數"
 
 #: tools/tpl_languages.php:14
-#: tools/tpl_languages.php:21
-#: tools/tpl_languages.php:35
-#: tools/tpl_languages.php:46
-#: tools/tpl_languages.php:55
-#: tools/tpl_languages.php:358
-#: tools/tpl_languages.php:364
+#: tools/tpl_languages.php:37
+#: tools/tpl_languages.php:58
+#: tools/tpl_languages.php:362
+#: tools/tpl_languages.php:368
 #: mod/or/admin.inc:132
 #: mod/or/admin.inc:161
 #: mod/rs/sample.inc:167
@@ -639,7 +645,7 @@ msgid "Description"
 msgstr "描述"
 
 #: tools/tpl_languages.php:15
-#: tools/tpl_languages.php:57
+#: tools/tpl_languages.php:60
 #: mod/ims/add_item.inc:156
 #: mod/ims/search.inc:107
 #: mod/ims/optimize.inc:238
@@ -660,8 +666,8 @@ msgid "Task"
 msgstr "任務"
 
 #: tools/tpl_languages.php:19
-#: tools/tpl_languages.php:250
-#: tools/tpl_languages.php:342
+#: tools/tpl_languages.php:254
+#: tools/tpl_languages.php:346
 #: mod/or/admin.inc:92
 #: mod/or/admin.inc:126
 #: mod/or/admin.inc:156
@@ -687,11 +693,128 @@ msgid "Update"
 msgstr "更新"
 
 #: tools/tpl_languages.php:20
+msgid "Project name"
+msgstr "專案名稱"
+
+#: tools/tpl_languages.php:21
+msgid "Project time"
+msgstr "專案時間"
+
+#: tools/tpl_languages.php:22
+msgid "Project location"
+msgstr "專案位置"
+
+#: tools/tpl_languages.php:23
+msgid "Project manager"
+msgstr "專案負責人"
+
+#: tools/tpl_languages.php:24
+#: tools/tpl_languages.php:35
+#: tools/tpl_languages.php:41
+msgid "Volunteers need"
+msgstr "志工需求數量"
+
+#: tools/tpl_languages.php:25
+#: tools/tpl_languages.php:36
+#: tools/tpl_languages.php:42
+msgid "Volunteers assigned"
+msgstr "志工已指派數量"
+
+#: tools/tpl_languages.php:26
+msgid "no projects"
+msgstr "無專案"
+
+#: tools/tpl_languages.php:27
+#: tools/tpl_languages.php:54
+msgid "Project Information"
+msgstr "專案資訊"
+
+#: tools/tpl_languages.php:30
+#: tools/tpl_languages.php:62
+msgid "Assign Volunteers"
+msgstr "指派志工"
+
+#: tools/tpl_languages.php:31
+msgid "Project Name :"
+msgstr "專案名稱"
+
+#: tools/tpl_languages.php:32
+#: mod/ims/transfer_inv.inc:605
+msgid "Date :"
+msgstr "日期："
+
+#: tools/tpl_languages.php:33
+msgid "Location :"
+msgstr "地點："
+
+#: tools/tpl_languages.php:34
+msgid "Project manager :"
+msgstr "專案負責人："
+
+#: tools/tpl_languages.php:38
+#: tools/tpl_languages.php:48
+#: tools/tpl_languages.php:323
+msgid "Positions"
+msgstr "各項任務主責資料"
+
+#: tools/tpl_languages.php:39
+msgid "Position title"
+msgstr "任務主責名稱"
+
+#: tools/tpl_languages.php:40
+msgid "Position description"
+msgstr "任務說明"
+
+#: tools/tpl_languages.php:43
+#: mod/ims/optimize.inc:500
+#: mod/ims/view_inv.inc:66
+#: mod/mpr/search.inc:243
+msgid "Actions"
+msgstr "編輯"
+
+#: tools/tpl_languages.php:44
+msgid "Pay Rate"
+msgstr "薪資方案"
+
+#: tools/tpl_languages.php:45
+#: mod/or/view_org.inc:199
+#: mod/cr/search.inc:66
+#: mod/cr/search.inc:153
+msgid "edit"
+msgstr "編輯"
+
+#: tools/tpl_languages.php:46
+msgid "remove"
+msgstr "刪除"
+
+#: tools/tpl_languages.php:47
+#: tools/tpl_languages.php:50
+msgid "Add a position"
+msgstr "新增任務主責"
+
+#: tools/tpl_languages.php:49
+msgid "There are no positions assigned to"
+msgstr "沒有任何職位指派給"
+
+#: tools/tpl_languages.php:51
+msgid "Volunteers working on"
+msgstr "--已指派志工列表"
+
 #: tools/tpl_languages.php:52
-#: tools/tpl_languages.php:75
-#: tools/tpl_languages.php:252
-#: tools/tpl_languages.php:299
-#: mod/or/lib_or.inc:640
+msgid "No volunteers are currently assigned to"
+msgstr "沒有志工被指派到"
+
+#: tools/tpl_languages.php:53
+#: tools/tpl_languages.php:115
+#: tools/tpl_languages.php:257
+msgid "Project"
+msgstr "專案"
+
+#: tools/tpl_languages.php:55
+#: tools/tpl_languages.php:78
+#: tools/tpl_languages.php:256
+#: tools/tpl_languages.php:303
+#: mod/or/lib_or.inc:641
 #: mod/rs/sample.inc:166
 #: mod/rs/sample.inc:225
 #: mod/rs/sample.inc:280
@@ -720,127 +843,20 @@ msgstr "更新"
 #: mod/dvr/search_group.inc:136
 #: mod/dvr/search_group.inc:137
 msgid "Name"
-msgstr "名稱"
+msgstr "姓名"
 
-#: tools/tpl_languages.php:22
-msgid "no projects"
-msgstr "無專案"
-
-#: tools/tpl_languages.php:25
-#: tools/tpl_languages.php:59
-msgid "Assign Volunteers"
-msgstr "指派志工"
-
-#: tools/tpl_languages.php:26
-msgid "Refresh"
-msgstr "更新"
-
-#: tools/tpl_languages.php:27
-msgid "Project Name :"
-msgstr "專案名稱"
-
-#: tools/tpl_languages.php:28
-#: tools/tpl_languages.php:196
-msgid "Start Date :"
-msgstr "開始日期："
-
-#: tools/tpl_languages.php:29
-#: tools/tpl_languages.php:197
-msgid "End Date :"
-msgstr "結束日期："
-
-#: tools/tpl_languages.php:30
-msgid "Location :"
-msgstr "地點："
-
-#: tools/tpl_languages.php:31
-msgid "Volunteers assigned :"
-msgstr "志工已指派至"
-
-#: tools/tpl_languages.php:32
-#: tools/tpl_languages.php:43
-#: tools/tpl_languages.php:319
-msgid "Positions"
-msgstr "職位"
-
-#: tools/tpl_languages.php:33
-msgid "# Volunteers"
-msgstr "志工人數"
-
-#: tools/tpl_languages.php:36
-msgid "Pay Rate"
-msgstr "薪資方案"
-
-#: tools/tpl_languages.php:37
-msgid "Target"
-msgstr "目標"
-
-#: tools/tpl_languages.php:38
-#: tools/tpl_languages.php:90
-msgid "Assigned"
-msgstr "指派"
-
-#: tools/tpl_languages.php:39
-#: mod/ims/optimize.inc:500
-#: mod/ims/view_inv.inc:66
-#: mod/mpr/search.inc:243
-msgid "Actions"
-msgstr "狀態/動作"
-
-#: tools/tpl_languages.php:40
-#: mod/or/view_org.inc:199
-#: mod/cr/search.inc:66
-#: mod/cr/search.inc:153
-msgid "edit"
-msgstr "編輯"
-
-#: tools/tpl_languages.php:41
-msgid "remove"
-msgstr "移除"
-
-#: tools/tpl_languages.php:42
-#: tools/tpl_languages.php:45
-msgid "Add a position"
-msgstr "新增一個職位"
-
-#: tools/tpl_languages.php:44
-msgid "There are no positions assigned to"
-msgstr "沒有任何職位指派給"
-
-#: tools/tpl_languages.php:47
-msgid "Specialties needed"
-msgstr "特殊專長需求"
-
-#: tools/tpl_languages.php:48
-msgid "Volunteers working on"
-msgstr "正在此專案執行任務的志工"
-
-#: tools/tpl_languages.php:49
-msgid "No volunteers are currently assigned to"
-msgstr "沒有志工被指派到"
-
-#: tools/tpl_languages.php:50
-#: tools/tpl_languages.php:112
-#: tools/tpl_languages.php:253
-msgid "Project"
-msgstr "專案"
-
-#: tools/tpl_languages.php:51
-msgid "Project Information"
-msgstr "專案資訊"
-
-#: tools/tpl_languages.php:53
-#: tools/tpl_languages.php:238
+#: tools/tpl_languages.php:56
+#: tools/tpl_languages.php:242
 msgid "Start date :"
 msgstr "開始日期："
 
-#: tools/tpl_languages.php:54
-#: tools/tpl_languages.php:239
+#: tools/tpl_languages.php:57
+#: tools/tpl_languages.php:243
 msgid "End date :"
 msgstr "結束日期："
 
-#: tools/tpl_languages.php:56
-#: tools/tpl_languages.php:198
+#: tools/tpl_languages.php:59
+#: tools/tpl_languages.php:202
 #: mod/or/search.inc:40
 #: mod/or/reg_org.inc:85
 #: mod/or/reg_org.inc:203
@@ -849,71 +865,71 @@ msgstr "結束日期："
 #: mod/or/view_org.inc:699
 #: mod/ims/reg_inv.inc:92
 #: mod/ims/view_inv.inc:202
-#: inc/lib_location.inc:1061
+#: inc/lib_location.inc:1062
 msgid "Base Location"
 msgstr "所在位置與地址"
 
-#: tools/tpl_languages.php:60
+#: tools/tpl_languages.php:63
 msgid "You are currently not assigned as a site manager to any projects."
-msgstr "你目前沒有被指派為任何專案的網站管理者"
+msgstr "你目前沒有被指派為任何專案的負責人"
 
-#: tools/tpl_languages.php:61
+#: tools/tpl_languages.php:64
 msgid "First please select a project to assign to:"
 msgstr "請選擇一個專案進行指派"
 
-#: tools/tpl_languages.php:62
+#: tools/tpl_languages.php:65
 msgid "Project to assign to"
-msgstr "本專案指派給"
+msgstr "請選擇欲指派人力的專案"
 
-#: tools/tpl_languages.php:63
-#: tools/tpl_languages.php:337
+#: tools/tpl_languages.php:66
+#: tools/tpl_languages.php:341
 #: mod/or/process_org.inc:33
 #: mod/or/process_org.inc:38
 #: inc/lib_security/acl_form.inc:250
 msgid "Continue"
 msgstr "繼續"
 
-#: tools/tpl_languages.php:64
-#: tools/tpl_languages.php:66
+#: tools/tpl_languages.php:67
+#: tools/tpl_languages.php:69
 msgid "Date:"
 msgstr "日期："
 
-#: tools/tpl_languages.php:65
-#: tools/tpl_languages.php:67
+#: tools/tpl_languages.php:68
+#: tools/tpl_languages.php:70
 msgid "Time:"
 msgstr "時間"
 
-#: tools/tpl_languages.php:68
+#: tools/tpl_languages.php:71
 msgid "now"
 msgstr "現在"
 
-#: tools/tpl_languages.php:69
+#: tools/tpl_languages.php:72
 msgid "or # hours:"
 msgstr "時數"
 
-#: tools/tpl_languages.php:70
+#: tools/tpl_languages.php:73
 msgid "Delete Volunteer"
 msgstr "刪除志工"
 
-#: tools/tpl_languages.php:71
+#: tools/tpl_languages.php:74
 #, fuzzy
 msgid "Are you sure you want to retire"
 msgstr "您確定要登出？"
 
-#: tools/tpl_languages.php:74
+#: tools/tpl_languages.php:77
 msgid "Volunteers to Assign"
 msgstr "可進行指派的志工"
 
-#: tools/tpl_languages.php:76
-#: tools/tpl_languages.php:201
+#: tools/tpl_languages.php:79
+#: tools/tpl_languages.php:205
 #: mod/mpr/search.inc:360
 #: mod/mpr/edit.inc:509
 msgid "Picture"
-msgstr "圖片"
+msgstr "照片"
 
-#: tools/tpl_languages.php:77
-#: tools/tpl_languages.php:300
-#: tools/tpl_languages.php:315
+#: tools/tpl_languages.php:80
+#: tools/tpl_languages.php:304
+#: tools/tpl_languages.php:319
 #: mod/ims/search.inc:142
 #: mod/ims/search.inc:215
 #: mod/mpr/search.inc:362
@@ -934,45 +950,43 @@ msgstr "圖片"
 msgid "Status"
 msgstr "狀態"
 
-#: tools/tpl_languages.php:78
-#: tools/tpl_languages.php:301
-#: tools/tpl_languages.php:318
-#, fuzzy
+#: tools/tpl_languages.php:81
+#: tools/tpl_languages.php:305
+#: tools/tpl_languages.php:322
 msgid "Affiliation"
-msgstr "會籍："
+msgstr "所屬組織"
 
-#: tools/tpl_languages.php:79
-msgid "Project - Position"
-msgstr "專案 - 職位"
-
-#: tools/tpl_languages.php:80
 #: tools/tpl_languages.php:82
-#: tools/tpl_languages.php:104
-#: tools/tpl_languages.php:195
-#: tools/tpl_languages.php:235
-#: mod/cr/edit.inc:471
+msgid "Project - Position"
+msgstr "專案 - 任務主責"
+
+#: tools/tpl_languages.php:83
+#: tools/tpl_languages.php:85
+#: tools/tpl_languages.php:107
+#: tools/tpl_languages.php:199
+#: tools/tpl_languages.php:239
 msgid "Availability"
 msgstr "可利用性"
 
-#: tools/tpl_languages.php:81
+#: tools/tpl_languages.php:84
 #, fuzzy
 msgid "Start"
 msgstr "開始日期"
 
-#: tools/tpl_languages.php:83
+#: tools/tpl_languages.php:86
 msgid "End"
 msgstr "結束"
 
-#: tools/tpl_languages.php:84
+#: tools/tpl_languages.php:87
 msgid "Hours"
 msgstr "時數"
 
-#: tools/tpl_languages.php:85
+#: tools/tpl_languages.php:88
 msgid "Identification"
 msgstr "身份識別"
 
-#: tools/tpl_languages.php:86
-#: tools/tpl_languages.php:230
+#: tools/tpl_languages.php:89
+#: tools/tpl_languages.php:234
 #: mod/or/report.inc:465
 #: mod/or/view_org.inc:91
 #: mod/or/view_org.inc:484
@@ -980,7 +994,7 @@ msgstr "身份識別"
 #: mod/admin/location.inc:38
 #: mod/cr/search.inc:42
 #: mod/cr/search.inc:129
-#: mod/cr/edit.inc:537
+#: mod/cr/edit.inc:501
 #: mod/cr/reports.inc:62
 #: mod/cr/reports.inc:116
 #: mod/dvr/add_new_grp.inc:406
@@ -990,418 +1004,429 @@ msgstr "身份識別"
 #: mod/rms/handler_req_sch.inc:209
 #: mod/rms/handler_mng_ff.inc:200
 #: mod/rms/lib_rms.inc:843
-#: mod/rms/lib_rms.inc:1336
+#: mod/rms/lib_rms.inc:1298
 msgid "Location"
 msgstr "地點"
 
-#: tools/tpl_languages.php:87
+#: tools/tpl_languages.php:90
 msgid "Specialties"
 msgstr "特殊專長"
 
-#: tools/tpl_languages.php:88
+#: tools/tpl_languages.php:91
 msgid "Assign"
 msgstr "指派"
 
-#: tools/tpl_languages.php:89
+#: tools/tpl_languages.php:92
 msgid "Remove From Project"
 msgstr "從本專案移除"
 
-#: tools/tpl_languages.php:91
+#: tools/tpl_languages.php:93
+msgid "Assigned"
+msgstr "已指派"
+
+#: tools/tpl_languages.php:94
 msgid "Unassigned"
 msgstr "未指派"
 
-#: tools/tpl_languages.php:92
-#: tools/tpl_languages.php:308
+#: tools/tpl_languages.php:95
+#: tools/tpl_languages.php:312
 msgid "Position:"
 msgstr "職位"
 
-#: tools/tpl_languages.php:93
+#: tools/tpl_languages.php:96
 msgid "Assign this Volunteer"
-msgstr "指定本位志工"
+msgstr "指派本位志工"
 
-#: tools/tpl_languages.php:94
+#: tools/tpl_languages.php:97
 msgid "To assign another volunteer, you must perform another search because no other volunteers match the current search criteria"
 msgstr "如果要指派其他志工，請再次查詢"
 
-#: tools/tpl_languages.php:95
+#: tools/tpl_languages.php:98
 msgid "No volunteers were found. Please refine your criteria and try again"
 msgstr "沒有符合條件的志工，請調整您的查詢條件並再次查詢"
 
-#: tools/tpl_languages.php:96
+#: tools/tpl_languages.php:99
 msgid "Alternatively, you can try the"
 msgstr "其他選擇如下，請再次嘗試"
 
-#: tools/tpl_languages.php:97
+#: tools/tpl_languages.php:100
 msgid "specifying 'Loose Name Matching'"
 msgstr "確定的模糊名稱查詢"
 
-#: tools/tpl_languages.php:101
-#: mod/or/lib_or.inc:565
+#: tools/tpl_languages.php:104
+#: mod/or/lib_or.inc:566
 #: mod/ims/lib_ims.inc:297
 msgid "Gender:"
 msgstr "性別："
 
-#: tools/tpl_languages.php:102
+#: tools/tpl_languages.php:105
 msgid "Date of Birth:"
 msgstr "生日："
 
-#: tools/tpl_languages.php:103
+#: tools/tpl_languages.php:106
 msgid "Contact Info"
 msgstr "連絡資訊"
 
-#: tools/tpl_languages.php:105
+#: tools/tpl_languages.php:108
 msgid "Work Begin:"
 msgstr "工作開始："
 
-#: tools/tpl_languages.php:106
+#: tools/tpl_languages.php:109
 msgid "Work End:"
 msgstr "工作結束："
 
-#: tools/tpl_languages.php:107
+#: tools/tpl_languages.php:110
 msgid "Work Hour Begin:"
 msgstr "工作開始時間："
 
-#: tools/tpl_languages.php:108
+#: tools/tpl_languages.php:111
 msgid "Work Hour End:"
 msgstr "工作結束時間："
 
-#: tools/tpl_languages.php:109
-#: tools/tpl_languages.php:184
+#: tools/tpl_languages.php:112
+#: tools/tpl_languages.php:188
 msgid "Work Details"
 msgstr "工作細節"
 
-#: tools/tpl_languages.php:110
+#: tools/tpl_languages.php:113
 msgid "Occupation:"
-msgstr "職業："
+msgstr "負責事務（或職稱）："
 
-#: tools/tpl_languages.php:111
+#: tools/tpl_languages.php:114
 msgid "Affiliation:"
 msgstr "所屬單位"
 
-#: tools/tpl_languages.php:113
-#: tools/tpl_languages.php:254
+#: tools/tpl_languages.php:116
+#: tools/tpl_languages.php:258
 msgid "Position"
 msgstr "職稱"
 
-#: tools/tpl_languages.php:114
+#: tools/tpl_languages.php:117
 msgid "Log Time"
 msgstr "記錄時間"
 
-#: tools/tpl_languages.php:115
+#: tools/tpl_languages.php:118
 msgid "Log time"
 msgstr "記錄時間"
 
-#: tools/tpl_languages.php:117
+#: tools/tpl_languages.php:120
 msgid "Special Needs:"
 msgstr "特殊需求："
 
-#: tools/tpl_languages.php:118
+#: tools/tpl_languages.php:122
 msgid "Approve Site Managers"
-msgstr "核准網站管理者"
+msgstr "核准專案負責人"
 
-#: tools/tpl_languages.php:119
+#: tools/tpl_languages.php:123
 msgid "Current or Previous Applicants"
 msgstr "現在或是之前的應用"
 
-#: tools/tpl_languages.php:120
+#: tools/tpl_languages.php:124
 msgid "There are no managers to approve or revoke manager approval from."
 msgstr ""
 
-#: tools/tpl_languages.php:121
+#: tools/tpl_languages.php:125
 msgid "Current Status"
 msgstr "現況"
 
-#: tools/tpl_languages.php:122
+#: tools/tpl_languages.php:126
 msgid "Approve"
 msgstr "核准"
 
-#: tools/tpl_languages.php:123
+#: tools/tpl_languages.php:127
 msgid "Deny / Revoke"
 msgstr "拒絕/撤銷"
 
-#: tools/tpl_languages.php:124
+#: tools/tpl_languages.php:128
 msgid "Volunteer"
 msgstr "志工"
 
-#: tools/tpl_languages.php:125
+#: tools/tpl_languages.php:129
 msgid "Approved"
 msgstr "已核准"
 
-#: tools/tpl_languages.php:126
+#: tools/tpl_languages.php:130
 msgid "Denied"
 msgstr "拒絕"
 
-#: tools/tpl_languages.php:127
+#: tools/tpl_languages.php:131
 msgid "Unapproved"
 msgstr "未核准"
 
-#: tools/tpl_languages.php:128
+#: tools/tpl_languages.php:132
 msgid "Revoke"
 msgstr "已拒絕"
 
-#: tools/tpl_languages.php:129
+#: tools/tpl_languages.php:133
 msgid "Deny"
 msgstr "拒絕"
 
-#: tools/tpl_languages.php:130
+#: tools/tpl_languages.php:134
 #, fuzzy
 msgid "Upgrade Non-Applicants"
 msgstr "不存在項目"
 
-#: tools/tpl_languages.php:131
+#: tools/tpl_languages.php:135
 msgid "Upgrade this Volunteer to Site Manager Status"
-msgstr "將這個志工升級為網站管理者權限"
+msgstr "將這個志工升級為專案負責人權限"
 
-#: tools/tpl_languages.php:132
+#: tools/tpl_languages.php:136
 #: mod/vm/conf.inc:27
-#: mod/vm/menu.inc:102
+#: mod/vm/menu.inc:103
 msgid "Volunteer Management"
 msgstr "志工管理"
 
-#: tools/tpl_languages.php:133
+#: tools/tpl_languages.php:137
 msgid "The Volunteer Management module keeps track of projects and volunteers."
 msgstr "志工管理模組用來追蹤專案與志工"
 
-#: tools/tpl_languages.php:134
+#: tools/tpl_languages.php:138
 msgid "Volunteer Portal"
 msgstr "志工站"
 
-#: tools/tpl_languages.php:135
+#: tools/tpl_languages.php:139
 msgid "My information page"
 msgstr "我的資訊"
 
-#: tools/tpl_languages.php:136
+#: tools/tpl_languages.php:140
 msgid "Personal information and time logging."
 msgstr "個人資訊與時間記錄"
 
-#: tools/tpl_languages.php:137
-#: mod/vm/menu.inc:35
-msgid "Assign to Project"
-msgstr "指派到專案"
-
-#: tools/tpl_languages.php:138
-msgid "Manage volunteer assignments"
-msgstr "管理志工分派"
-
-#: tools/tpl_languages.php:139
-#: mod/vm/menu.inc:36
-msgid "Show Assigned"
-msgstr "顯示指派狀況"
-
-#: tools/tpl_languages.php:140
-msgid "View all volunteers assigned to projects"
-msgstr "檢視所有已分派專案的志工"
-
 #: tools/tpl_languages.php:141
-msgid "View All Volunteers"
-msgstr "檢視所有志工"
-
-#: tools/tpl_languages.php:142
-msgid "View all registered volunteers"
-msgstr "檢視所有註冊的志工"
-
-#: tools/tpl_languages.php:144
-msgid "Search for a volunteer"
-msgstr "搜尋志工"
-
-#: tools/tpl_languages.php:145
-msgid "Add New Project"
-msgstr "新增專案"
-
-#: tools/tpl_languages.php:146
-msgid "Start a new project"
-msgstr "開始一個新專案"
-
-#: tools/tpl_languages.php:147
 #: mod/vm/menu.inc:50
 msgid "View My Projects"
 msgstr "檢視我的專案"
 
-#: tools/tpl_languages.php:148
+#: tools/tpl_languages.php:142
 msgid "View all projects you are currently assigned to"
 msgstr "檢視所有參與的專案"
 
-#: tools/tpl_languages.php:149
-msgid "View All Projects"
-msgstr "檢視所有專案"
-
-#: tools/tpl_languages.php:150
-msgid "View all projects being tracked"
-msgstr "檢視所有被追蹤的專案"
-
-#: tools/tpl_languages.php:151
-msgid "Generate report"
-msgstr "產生報表"
-
-#: tools/tpl_languages.php:152
-msgid "Generate customized report on volunteers and projects"
-msgstr "產生志工與專案的自訂報表"
-
-#: tools/tpl_languages.php:153
+#: tools/tpl_languages.php:143
 msgid "Register to VM"
 msgstr "註冊到志工管理"
 
-#: tools/tpl_languages.php:154
+#: tools/tpl_languages.php:144
 msgid "Register yourself in Volunteer Management module"
 msgstr "在志工管理模組註冊你自己"
 
+#: tools/tpl_languages.php:145
+#: mod/vm/menu.inc:35
+msgid "Assign to Project"
+msgstr "專案人力分派"
+
+#: tools/tpl_languages.php:146
+msgid "Manage volunteer assignments"
+msgstr "管理志工分派"
+
+#: tools/tpl_languages.php:147
+#: mod/vm/menu.inc:36
+msgid "Show Assigned"
+msgstr "顯示指派狀況"
+
+#: tools/tpl_languages.php:148
+msgid "View all volunteers assigned to projects"
+msgstr "檢視所有已分派專案的志工"
+
+#: tools/tpl_languages.php:149
+msgid "View All Volunteers"
+msgstr "檢視所有志工"
+
+#: tools/tpl_languages.php:150
+msgid "View all registered volunteers"
+msgstr "檢視所有註冊的志工"
+
+#: tools/tpl_languages.php:152
+msgid "Search for a volunteer"
+msgstr "搜尋志工"
+
+#: tools/tpl_languages.php:153
+msgid "Add New Project"
+msgstr "新增專案"
+
+#: tools/tpl_languages.php:154
+msgid "Start a new project"
+msgstr "開始一個新專案"
+
 #: tools/tpl_languages.php:155
+msgid "View All Projects"
+msgstr "檢視所有專案"
+
+#: tools/tpl_languages.php:156
+msgid "View all projects being tracked"
+msgstr "檢視所有被追蹤的專案"
+
+#: tools/tpl_languages.php:157
+msgid "Generate report"
+msgstr "產生報表"
+
+#: tools/tpl_languages.php:158
+msgid "Generate customized report on volunteers and projects"
+msgstr "產生志工與專案的自訂報表"
+
+#: tools/tpl_languages.php:159
 msgid "Send messages"
 msgstr "發送訊息"
 
-#: tools/tpl_languages.php:156
+#: tools/tpl_languages.php:160
 msgid "Send messages to other users"
 msgstr "發送訊息給其他使用者"
 
-#: tools/tpl_languages.php:157
+#: tools/tpl_languages.php:161
 msgid "Current projects"
 msgstr "目前專案"
 
-#: tools/tpl_languages.php:158
+#: tools/tpl_languages.php:162
 msgid "You are not assigned to any project."
 msgstr "你目前沒有被指派任何專案"
 
-#: tools/tpl_languages.php:159
+#: tools/tpl_languages.php:163
 msgid "Click here"
 msgstr "點選這裡"
 
-#: tools/tpl_languages.php:160
+#: tools/tpl_languages.php:164
 msgid "to view your projects"
 msgstr "檢視你的專案"
 
-#: tools/tpl_languages.php:161
+#: tools/tpl_languages.php:165
 #: mod/or/home.inc:43
 #: mod/cr/main_fns.inc:29
 msgid "Current features include:"
 msgstr "目前的功能包括： "
 
-#: tools/tpl_languages.php:162
+#: tools/tpl_languages.php:166
 msgid "Manage volunteer assignment"
 msgstr "管理志工分派"
 
-#: tools/tpl_languages.php:163
+#: tools/tpl_languages.php:167
 msgid "Start and view projects"
 msgstr "開始與檢視專案"
 
-#: tools/tpl_languages.php:164
+#: tools/tpl_languages.php:168
 msgid "Search volunteers"
 msgstr "搜尋志工"
 
-#: tools/tpl_languages.php:165
+#: tools/tpl_languages.php:169
 msgid "Send and receive messages"
 msgstr "發送與接收訊息"
 
-#: tools/tpl_languages.php:166
+#: tools/tpl_languages.php:170
 #: mod/admin/mmc_main.inc:12
 msgid "Version"
 msgstr "版本"
 
-#: tools/tpl_languages.php:167
+#: tools/tpl_languages.php:171
 msgid "Last Modified"
 msgstr "最後更新"
 
-#: tools/tpl_languages.php:168
+#: tools/tpl_languages.php:172
 msgid "Volunteer Registry - Thank you for your help!"
 msgstr "志工登錄--感謝您的協助"
 
-#: tools/tpl_languages.php:169
+#: tools/tpl_languages.php:173
 msgid "To register, fill in as many of the below fields as possible. When you are finished, click \"Submit\". Your registration will be confirmed via phone or email."
 msgstr "如欲登錄，請盡可能填寫以下的欄位。填寫完畢請按「送出」，您的登錄將會透過電話或電子郵件確認。"
 
-#: tools/tpl_languages.php:170
+#: tools/tpl_languages.php:174
 msgid "Edit details"
 msgstr "編輯詳細資料"
 
-#: tools/tpl_languages.php:171
+#: tools/tpl_languages.php:175
 msgid "Personal Details"
 msgstr "個人資料"
 
-#: tools/tpl_languages.php:172
+#: tools/tpl_languages.php:176
 msgid "Name in Full :"
 msgstr "全名"
 
-#: tools/tpl_languages.php:173
+#: tools/tpl_languages.php:177
 msgid "Date of Birth :"
 msgstr "出生日期"
 
-#: tools/tpl_languages.php:174
+#: tools/tpl_languages.php:178
 msgid "Male"
 msgstr "男性"
 
-#: tools/tpl_languages.php:175
+#: tools/tpl_languages.php:179
 msgid "Female"
 msgstr "女性"
 
-#: tools/tpl_languages.php:176
+#: tools/tpl_languages.php:180
 msgid "Gender :"
 msgstr "性別："
 
-#: tools/tpl_languages.php:177
+#: tools/tpl_languages.php:181
 msgid "Type of Identification :"
 msgstr "身份證件類型"
 
-#: tools/tpl_languages.php:178
+#: tools/tpl_languages.php:182
 msgid "Identification Number :"
 msgstr "身份證件號碼"
 
-#: tools/tpl_languages.php:179
+#: tools/tpl_languages.php:183
 msgid "Create a Sahana account"
 msgstr "建立一個sahanaTW帳號"
 
-#: tools/tpl_languages.php:180
+#: tools/tpl_languages.php:184
 msgid "Remember this information, because you will use it to log into Sahana."
 msgstr "請記住以下資訊，未來您將會以此資訊登入SahanaTW系統"
 
-#: tools/tpl_languages.php:181
+#: tools/tpl_languages.php:185
 msgid "Username :"
 msgstr "帳號："
 
-#: tools/tpl_languages.php:182
+#: tools/tpl_languages.php:186
 msgid "Password :"
 msgstr "密碼："
 
-#: tools/tpl_languages.php:183
+#: tools/tpl_languages.php:187
 msgid "Re-Type Password :"
 msgstr "重新輸入密碼"
 
-#: tools/tpl_languages.php:185
-#, fuzzy
+#: tools/tpl_languages.php:189
 msgid "Affiliation :"
-msgstr "會籍："
+msgstr "所屬單位"
 
-#: tools/tpl_languages.php:186
+#: tools/tpl_languages.php:190
 msgid "Organizations are populated through the Organization Registry module. Contact an administrator if you do not see your organization."
 msgstr "如果您無法找到您所服務的組織，請您聯絡網站管理者將您的組織加入本系統。"
 
-#: tools/tpl_languages.php:187
+#: tools/tpl_languages.php:191
 msgid "Occupation :"
 msgstr "職業："
 
-#: tools/tpl_languages.php:189
+#: tools/tpl_languages.php:193
 msgid "Please select your skills and limitations below."
 msgstr "請選擇你的技能與限制"
 
-#: tools/tpl_languages.php:190
+#: tools/tpl_languages.php:194
 msgid "NOTE: Selecting a category will select all options below it."
-msgstr ""
+msgstr "說明：勾選一個分類將會同時勾選其下所有的選項。"
 
-#: tools/tpl_languages.php:191
+#: tools/tpl_languages.php:195
 msgid "When you select a checkbox that has a "
 msgstr ""
 
-#: tools/tpl_languages.php:192
+#: tools/tpl_languages.php:196
 msgid " next to it, you are selecting all options that fall under that category. For this reason, make sure that you review the options you select by expanding until you see a "
 msgstr ""
 
-#: tools/tpl_languages.php:193
+#: tools/tpl_languages.php:197
 msgid "Optionally, you may enter any special needs. Please use commas to separate multiple needs:"
 msgstr "如果您欲輸入一個以上的需求，請以「,」分開。"
 
-#: tools/tpl_languages.php:194
+#: tools/tpl_languages.php:198
 msgid "Special needs:"
-msgstr "特殊需求"
+msgstr "與技能或限制有關的其他說明"
 
-#: tools/tpl_languages.php:199
+#: tools/tpl_languages.php:200
+msgid "Start Date :"
+msgstr "開始日期："
+
+#: tools/tpl_languages.php:201
+msgid "End Date :"
+msgstr "結束日期："
+
+#: tools/tpl_languages.php:203
 #: mod/or/reg_org.inc:103
 #: mod/or/reg_org.inc:211
 #: mod/or/reg_org.inc:303
@@ -1415,95 +1440,93 @@ msgstr "特殊需求"
 msgid "Contact Information"
 msgstr "聯絡資訊"
 
-#: tools/tpl_languages.php:200
-#, fuzzy
+#: tools/tpl_languages.php:204
 msgid "Prefered medium confirmation :"
-msgstr "返回確認派送"
+msgstr "期待的聯絡方式（請點選其中一項）"
 
-#: tools/tpl_languages.php:202
+#: tools/tpl_languages.php:206
 msgid "Optionally, you may upload a picture to identify yourself."
-msgstr "您可以上傳一張能代表自己的照片"
+msgstr "上傳一張自己的照片"
 
-#: tools/tpl_languages.php:203
+#: tools/tpl_languages.php:207
 msgid "Image file:"
 msgstr "圖片檔案："
 
-#: tools/tpl_languages.php:204
+#: tools/tpl_languages.php:208
 msgid "Current picture"
 msgstr "最近的照片"
 
-#: tools/tpl_languages.php:205
-#: tools/tpl_languages.php:220
+#: tools/tpl_languages.php:209
+#: tools/tpl_languages.php:224
 msgid "Please enter at least one field below:"
 msgstr "請輸入至少一個欄位"
 
-#: tools/tpl_languages.php:215
+#: tools/tpl_languages.php:219
 msgid "Advanced Search Criteria"
 msgstr "進階搜尋條件"
 
-#: tools/tpl_languages.php:216
+#: tools/tpl_languages.php:220
 msgid "Back to Basic Search"
 msgstr "返回搜尋頁面"
 
-#: tools/tpl_languages.php:217
+#: tools/tpl_languages.php:221
 msgid "Basic Search Criteria"
 msgstr "搜尋條件"
 
-#: tools/tpl_languages.php:218
+#: tools/tpl_languages.php:222
 #: mod/mpr/search.inc:67
 #: mod/dvr/search_individual.inc:124
 #: mod/dvr/search_group.inc:111
 msgid "Advanced Search"
 msgstr "進階搜尋"
 
-#: tools/tpl_languages.php:219
+#: tools/tpl_languages.php:223
 msgid "Search results are returned only if they match ALL selected fields."
 msgstr "只有全部條件都符合的結果才會被顯示出來"
 
-#: tools/tpl_languages.php:221
+#: tools/tpl_languages.php:225
 msgid "Filter volunteer results by any one of the following fields:"
 msgstr "請以下列任一欄位過濾志工查詢結果"
 
-#: tools/tpl_languages.php:225
+#: tools/tpl_languages.php:229
 #, fuzzy
 msgid "advanced"
 msgstr "進階搜尋"
 
-#: tools/tpl_languages.php:226
+#: tools/tpl_languages.php:230
 msgid "Options"
 msgstr "選項"
 
-#: tools/tpl_languages.php:228
+#: tools/tpl_languages.php:232
 msgid "Find similar sounding names"
 msgstr "尋找任何發音相似的名字"
 
-#: tools/tpl_languages.php:229
+#: tools/tpl_languages.php:233
 msgid "Show only unassigned"
 msgstr "僅顯示為指派"
 
-#: tools/tpl_languages.php:234
+#: tools/tpl_languages.php:238
 msgid "and_skills"
 msgstr "以及技巧"
 
-#: tools/tpl_languages.php:236
+#: tools/tpl_languages.php:240
 msgid "Volunteer must be available for the ENTIRE time specified below"
 msgstr ""
 
-#: tools/tpl_languages.php:237
+#: tools/tpl_languages.php:241
 msgid "Volunteer must be available for ANY PORTION of the time specified below"
 msgstr ""
 
-#: tools/tpl_languages.php:240
-#, fuzzy
+#: tools/tpl_languages.php:244
 msgid "Page"
 msgstr "頁"
 
-#: tools/tpl_languages.php:241
+#: tools/tpl_languages.php:245
 #: inc/lib_paging.inc:117
 msgid "Go to Previous Page"
 msgstr "到前一頁"
 
-#: tools/tpl_languages.php:242
+#: tools/tpl_languages.php:246
 #: mod/mpr/search.inc:207
 #: mod/rms/handler_req_ls.inc:54
 #: mod/rms/handler_plg_ls.inc:48
@@ -1512,160 +1535,160 @@ msgstr "到前一頁"
 msgid "Previous"
 msgstr "前一筆"
 
-#: tools/tpl_languages.php:243
+#: tools/tpl_languages.php:247
 #: inc/lib_paging.inc:118
 msgid "Go to First Page"
 msgstr "前往第一頁"
 
-#: tools/tpl_languages.php:244
+#: tools/tpl_languages.php:248
 #: inc/lib_paging.inc:118
 msgid "1"
 msgstr "1"
 
-#: tools/tpl_languages.php:249
+#: tools/tpl_languages.php:253
 #: inc/lib_paging.inc:147
 #: inc/lib_paging.inc:227
 msgid "Records per page"
 msgstr "每頁資料筆數"
 
-#: tools/tpl_languages.php:251
+#: tools/tpl_languages.php:255
 msgid "hours for review on"
 msgstr "審視的時數"
 
-#: tools/tpl_languages.php:255
+#: tools/tpl_languages.php:259
 msgid "Pay Rate "
 msgstr "時薪"
 
-#: tools/tpl_languages.php:256
+#: tools/tpl_languages.php:260
 #, fuzzy
 msgid "Start "
 msgstr "開始日期"
 
-#: tools/tpl_languages.php:257
+#: tools/tpl_languages.php:261
 msgid "End "
 msgstr "結束日期"
 
-#: tools/tpl_languages.php:258
+#: tools/tpl_languages.php:262
 msgid "Approved:"
 msgstr "已核准"
 
-#: tools/tpl_languages.php:259
+#: tools/tpl_languages.php:263
 msgid "Denied:"
 msgstr "已拒絕"
 
-#: tools/tpl_languages.php:260
+#: tools/tpl_languages.php:264
 msgid "Report on My Projects"
 msgstr "我的專案報表"
 
-#: tools/tpl_languages.php:261
+#: tools/tpl_languages.php:265
 #: mod/rs/sample.inc:49
 #: mod/rs/sample.inc:117
 msgid "Create Report"
 msgstr "建立報表"
 
-#: tools/tpl_languages.php:262
+#: tools/tpl_languages.php:266
 msgid "Create Custom Report"
 msgstr "建立客制化報表"
 
-#: tools/tpl_languages.php:263
+#: tools/tpl_languages.php:267
 msgid "Filter by Project, Organization, or Both"
 msgstr "以「專案」、「組織」或是兩者兼取進行過濾"
 
-#: tools/tpl_languages.php:264
+#: tools/tpl_languages.php:268
 msgid "By Project:"
 msgstr "依專案"
 
-#: tools/tpl_languages.php:265
+#: tools/tpl_languages.php:269
 msgid "By Organization:"
 msgstr "依組織"
 
-#: tools/tpl_languages.php:266
+#: tools/tpl_languages.php:270
 msgid "Create Project or Organization Report"
 msgstr "建立專案或組織報告"
 
-#: tools/tpl_languages.php:267
+#: tools/tpl_languages.php:271
 msgid "Report by Specific Volunteers"
 msgstr "由特定志工回報"
 
-#: tools/tpl_languages.php:268
+#: tools/tpl_languages.php:272
 msgid "To add a volunteer to the list, select one in the 'List of Volunteers' below and click on 'Add'."
 msgstr "如欲增加一個志工，請點選下列志工清單中的任一位，再點選「增加」"
 
-#: tools/tpl_languages.php:269
+#: tools/tpl_languages.php:273
 msgid "To remove a volunteer from the list, click on the remove link next to his name."
 msgstr "如欲移除任一志工，請點選志工名字旁邊的「移除」按鈕"
 
-#: tools/tpl_languages.php:270
-#: tools/tpl_languages.php:391
+#: tools/tpl_languages.php:274
+#: tools/tpl_languages.php:395
 msgid "List of Volunteers :"
 msgstr "志工清單"
 
-#: tools/tpl_languages.php:271
+#: tools/tpl_languages.php:275
 msgid "Create Custom Report for these Volunteers"
 msgstr "建立這群志工的客制化報表"
 
-#: tools/tpl_languages.php:272
+#: tools/tpl_languages.php:276
 #, fuzzy
 msgid "You must select at least one volunteer if reporting by volunteer."
 msgstr "請選擇將訊息至少傳給一個志願者"
 
-#: tools/tpl_languages.php:273
 #: tools/tpl_languages.php:277
+#: tools/tpl_languages.php:281
 #: mod/pref/ims_menu.inc:9
 #: inc/lib_security/auth_form.inc:204
 msgid "Change Password"
 msgstr "變更密碼"
 
-#: tools/tpl_languages.php:274
+#: tools/tpl_languages.php:278
 msgid "Current Password :"
 msgstr "原有密碼"
 
-#: tools/tpl_languages.php:275
+#: tools/tpl_languages.php:279
 msgid "New Password :"
 msgstr "新密碼："
 
-#: tools/tpl_languages.php:276
+#: tools/tpl_languages.php:280
 msgid "Re-Type New Password :"
 msgstr "重新輸入密碼"
 
-#: tools/tpl_languages.php:278
+#: tools/tpl_languages.php:282
 msgid "Pending Hours Approval"
 msgstr "核准延後服務時數"
 
-#: tools/tpl_languages.php:279
+#: tools/tpl_languages.php:283
 msgid "Name :"
 msgstr "名稱："
 
-#: tools/tpl_languages.php:280
+#: tools/tpl_languages.php:284
 msgid "Project :"
 msgstr "專案："
 
-#: tools/tpl_languages.php:281
+#: tools/tpl_languages.php:285
 msgid "View Hours"
 msgstr "檢視時數"
 
-#: tools/tpl_languages.php:282
+#: tools/tpl_languages.php:286
 msgid "Skills Modifications"
 msgstr "編輯技能資訊"
 
-#: tools/tpl_languages.php:283
+#: tools/tpl_languages.php:287
 msgid "Add a new skill"
 msgstr "新增技能項目"
 
-#: tools/tpl_languages.php:284
+#: tools/tpl_languages.php:288
 msgid "Skill Description :"
 msgstr "技能描述"
 
-#: tools/tpl_languages.php:285
+#: tools/tpl_languages.php:289
 msgid "Code [4-5 letter unique abbreviation] : "
 msgstr ""
 
-#: tools/tpl_languages.php:286
-#: tools/tpl_languages.php:359
-#: tools/tpl_languages.php:360
-#: tools/tpl_languages.php:371
-#: tools/tpl_languages.php:372
-#: tools/tpl_languages.php:392
+#: tools/tpl_languages.php:290
+#: tools/tpl_languages.php:363
+#: tools/tpl_languages.php:364
+#: tools/tpl_languages.php:375
+#: tools/tpl_languages.php:376
+#: tools/tpl_languages.php:396
 #: mod/cs/add.inc:114
 #: mod/cs/add.inc:295
 #: mod/cs/add.inc:375
@@ -1676,12 +1699,12 @@ msgstr ""
 msgid "Add"
 msgstr "增加"
 
-#: tools/tpl_languages.php:287
+#: tools/tpl_languages.php:291
 msgid "No skills defined."
 msgstr "沒有被定義的技能"
 
-#: tools/tpl_languages.php:288
-#: tools/tpl_languages.php:366
+#: tools/tpl_languages.php:292
+#: tools/tpl_languages.php:370
 #: mod/or/admin_forms.inc:131
 #: mod/or/admin_forms.inc:189
 #: mod/mpr/edit.inc:725
@@ -1696,61 +1719,61 @@ msgstr "沒有被定義的技能"
 msgid "Remove"
 msgstr "刪除"
 
-#: tools/tpl_languages.php:289
+#: tools/tpl_languages.php:293
 msgid "In order to begin, please log in using the Sahana account you just created."
 msgstr "請以SahanaTW帳戶資料登入，以便開始。"
 
-#: tools/tpl_languages.php:290
-#: tools/tpl_languages.php:291
+#: tools/tpl_languages.php:294
+#: tools/tpl_languages.php:295
 msgid "View Printer Friendly Version"
 msgstr "瀏覽友善列印版本"
 
-#: tools/tpl_languages.php:292
+#: tools/tpl_languages.php:296
 msgid "Viewing Report For"
 msgstr "瀏覽報表"
 
-#: tools/tpl_languages.php:293
+#: tools/tpl_languages.php:297
 msgid "Specific Volunteers"
 msgstr "定義志工"
 
-#: tools/tpl_languages.php:294
+#: tools/tpl_languages.php:298
 msgid "All Volunteers Part of Organization:"
 msgstr "組織內所有志工"
 
-#: tools/tpl_languages.php:295
+#: tools/tpl_languages.php:299
 msgid "Restricting Results by Project:"
 msgstr "專案的限制說明"
 
-#: tools/tpl_languages.php:296
-#: tools/tpl_languages.php:313
+#: tools/tpl_languages.php:300
+#: tools/tpl_languages.php:317
 msgid "Project:"
 msgstr "專案："
 
-#: tools/tpl_languages.php:297
+#: tools/tpl_languages.php:301
 msgid "Organization:"
 msgstr "組織："
 
-#: tools/tpl_languages.php:298
+#: tools/tpl_languages.php:302
 msgid "All Volunteers that Ever Worked on any Projects"
 msgstr "所有服務過任一專案的志工"
 
-#: tools/tpl_languages.php:302
+#: tools/tpl_languages.php:306
 msgid "Total Positions Held"
 msgstr "現有職位"
 
-#: tools/tpl_languages.php:303
-#: tools/tpl_languages.php:320
-#: tools/tpl_languages.php:323
+#: tools/tpl_languages.php:307
+#: tools/tpl_languages.php:324
+#: tools/tpl_languages.php:327
 msgid "Total Hours"
 msgstr "總時數"
 
-#: tools/tpl_languages.php:304
-#: tools/tpl_languages.php:324
+#: tools/tpl_languages.php:308
+#: tools/tpl_languages.php:328
 #, fuzzy
 msgid "Total Monetary Value"
 msgstr "最後總計價值"
 
-#: tools/tpl_languages.php:305
+#: tools/tpl_languages.php:309
 #: mod/mpr/view.inc:26
 #: mod/mpr/search.inc:240
 #: mod/rms/handler_req_ls.inc:94
@@ -1760,212 +1783,212 @@ msgstr "最後總計價值"
 msgid "Details"
 msgstr "細節"
 
-#: tools/tpl_languages.php:306
-#: tools/tpl_languages.php:316
+#: tools/tpl_languages.php:310
+#: tools/tpl_languages.php:320
 #: inc/lib_security/acl_form.inc:377
 #: inc/lib_security/acl_form.inc:442
 msgid "Active"
 msgstr "活動中"
 
-#: tools/tpl_languages.php:307
-#: tools/tpl_languages.php:317
+#: tools/tpl_languages.php:311
+#: tools/tpl_languages.php:321
 msgid "Retired"
 msgstr "已退休"
 
-#: tools/tpl_languages.php:309
+#: tools/tpl_languages.php:313
 msgid "Position Status:"
 msgstr "職位狀態"
 
-#: tools/tpl_languages.php:310
+#: tools/tpl_languages.php:314
 msgid "Hours:"
 msgstr "時數"
 
-#: tools/tpl_languages.php:311
+#: tools/tpl_languages.php:315
 msgid "Hourly Rate:"
 msgstr "時薪"
 
-#: tools/tpl_languages.php:312
+#: tools/tpl_languages.php:316
 #, fuzzy
 msgid "Monetary Value:"
 msgstr "總價值"
 
-#: tools/tpl_languages.php:314
+#: tools/tpl_languages.php:318
 msgid "no positions held"
 msgstr "沒有職位被保留"
 
-#: tools/tpl_languages.php:321
+#: tools/tpl_languages.php:325
 msgid "Total Payment"
 msgstr "付款總金額"
 
-#: tools/tpl_languages.php:322
+#: tools/tpl_languages.php:326
 msgid "none"
 msgstr "無"
 
-#: tools/tpl_languages.php:325
+#: tools/tpl_languages.php:329
 msgid "Administrative Functions"
 msgstr "管理功能"
 
-#: tools/tpl_languages.php:326
+#: tools/tpl_languages.php:330
 msgid "The following is a description of each administrative function for the VM module"
 msgstr ""
 
-#: tools/tpl_languages.php:327
-#: tools/tpl_languages.php:350
+#: tools/tpl_languages.php:331
+#: tools/tpl_languages.php:354
 msgid "Access Control Modifications"
 msgstr "權限控管調整"
 
-#: tools/tpl_languages.php:328
+#: tools/tpl_languages.php:332
 msgid "Modify how access to the VM module is handled"
 msgstr ""
 
-#: tools/tpl_languages.php:329
-#: tools/tpl_languages.php:351
+#: tools/tpl_languages.php:333
+#: tools/tpl_languages.php:355
 msgid "Update Search Registry"
 msgstr "更新搜尋登錄"
 
-#: tools/tpl_languages.php:330
+#: tools/tpl_languages.php:334
 msgid "Since a volunteer's name may change in other places in Sahana, you may have to periodically update the search registry with current sounds-like name matching for volunteer searching"
 msgstr ""
 
-#: tools/tpl_languages.php:331
-#: tools/tpl_languages.php:352
+#: tools/tpl_languages.php:335
+#: tools/tpl_languages.php:356
 msgid "Clear Template Cache"
 msgstr "清除範本快取記憶"
 
-#: tools/tpl_languages.php:332
+#: tools/tpl_languages.php:336
 msgid "Delete all PHP templates that have been cached"
 msgstr "刪除所有已經快取的 PHP 樣板"
 
-#: tools/tpl_languages.php:333
-#: tools/tpl_languages.php:353
+#: tools/tpl_languages.php:337
+#: tools/tpl_languages.php:357
 #, fuzzy
 msgid "Audit ACL"
 msgstr "稽核"
 
-#: tools/tpl_languages.php:334
+#: tools/tpl_languages.php:338
 msgid "Verify that all 'act' and 'vm_action' combinations in the VM code are under access control and that all VM tables/views are classified"
 msgstr ""
 
-#: tools/tpl_languages.php:335
-#: tools/tpl_languages.php:338
+#: tools/tpl_languages.php:339
+#: tools/tpl_languages.php:342
 #: inst/setup.inc:299
 msgid "Access Control"
 msgstr "權限控制"
 
-#: tools/tpl_languages.php:336
+#: tools/tpl_languages.php:340
 #, fuzzy
 msgid "Please select a situation below to modify access to:"
 msgstr "請指定一個情境，以修改存取"
 
-#: tools/tpl_languages.php:339
+#: tools/tpl_languages.php:343
 #: mod/sync/lib_report.inc:46
 #: mod/admin/lc_db.inc:81
 msgid "Table Name"
 msgstr "資料表名稱"
 
-#: tools/tpl_languages.php:340
+#: tools/tpl_languages.php:344
 #: inc/lib_security/acl_form.inc:276
 msgid "Create"
 msgstr "新建"
 
-#: tools/tpl_languages.php:341
+#: tools/tpl_languages.php:345
 #: inc/lib_security/acl_form.inc:276
 msgid "Read"
 msgstr "讀取"
 
-#: tools/tpl_languages.php:344
+#: tools/tpl_languages.php:348
 msgid "Remove From List"
 msgstr "從清單中移除"
 
-#: tools/tpl_languages.php:345
+#: tools/tpl_languages.php:349
 #, fuzzy
 msgid "Special Constraints"
 msgstr "特殊訂單"
 
-#: tools/tpl_languages.php:346
+#: tools/tpl_languages.php:350
 #, fuzzy
 msgid "on"
 msgstr "於"
 
-#: tools/tpl_languages.php:347
+#: tools/tpl_languages.php:351
 msgid "Save Changes"
 msgstr "儲存修改"
 
-#: tools/tpl_languages.php:348
+#: tools/tpl_languages.php:352
 msgid "Cancel Changes"
 msgstr "取消修改"
 
-#: tools/tpl_languages.php:349
+#: tools/tpl_languages.php:353
 msgid "VM Admin Home"
 msgstr "志工管理首頁"
 
-#: tools/tpl_languages.php:354
+#: tools/tpl_languages.php:358
 #, fuzzy
 msgid "ACL Audit"
 msgstr "稽核"
 
-#: tools/tpl_languages.php:355
+#: tools/tpl_languages.php:359
 msgid "All access requests in the database and in the VM code match."
 msgstr ""
 
-#: tools/tpl_languages.php:356
+#: tools/tpl_languages.php:360
 msgid "Warning:"
 msgstr "提醒："
 
-#: tools/tpl_languages.php:357
+#: tools/tpl_languages.php:361
 msgid "The following requests in the VM code are not under access control:"
 msgstr ""
 
-#: tools/tpl_languages.php:361
+#: tools/tpl_languages.php:365
 msgid "Please enter a description"
 msgstr "請輸入描述"
 
-#: tools/tpl_languages.php:362
-#: tools/tpl_languages.php:367
+#: tools/tpl_languages.php:366
+#: tools/tpl_languages.php:371
 #: inc/lib_stream_html.inc:80
 msgid "Warning"
 msgstr "提醒"
 
-#: tools/tpl_languages.php:363
+#: tools/tpl_languages.php:367
 #, fuzzy
 msgid "The following requests in the database are never referenced"
 msgstr "在資料庫中沒有符合您條件的需求"
 
-#: tools/tpl_languages.php:365
+#: tools/tpl_languages.php:369
 msgid "Remove From Database"
 msgstr "從資料庫移除"
 
-#: tools/tpl_languages.php:368
+#: tools/tpl_languages.php:372
 msgid "The following database tables/views have not been given any classification level"
 msgstr ""
 
-#: tools/tpl_languages.php:369
+#: tools/tpl_languages.php:373
 #, fuzzy
 msgid "Table"
 msgstr "啟用"
 
-#: tools/tpl_languages.php:370
+#: tools/tpl_languages.php:374
 #, fuzzy
 msgid "Classification Level"
 msgstr "活躍層次"
 
-#: tools/tpl_languages.php:373
-#: mod/vm/menu.inc:62
-msgid "Inbox"
-msgstr "收信箱"
-
-#: tools/tpl_languages.php:374
+#: tools/tpl_languages.php:377
 #: mod/vm/menu.inc:63
-msgid "Outbox"
-msgstr "寄信箱"
+msgid "Inbox"
+msgstr "收信匣"
 
-#: tools/tpl_languages.php:376
+#: tools/tpl_languages.php:378
+#: mod/vm/menu.inc:64
+msgid "Outbox"
+msgstr "寄件匣"
+
+#: tools/tpl_languages.php:380
 #, fuzzy
 msgid "From"
 msgstr "由"
 
-#: tools/tpl_languages.php:377
-#: tools/tpl_languages.php:388
+#: tools/tpl_languages.php:381
+#: tools/tpl_languages.php:392
 #: mod/ims/optimize.inc:577
 #: mod/ims/optimize.inc:662
 #: mod/ims/optimize.inc:829
@@ -1974,69 +1997,67 @@ msgstr "由"
 #: mod/ims/ims_report.inc:680
 #: mod/ims/transfer_inv.inc:462
 msgid "To"
-msgstr "到"
+msgstr "收件人"
 
-#: tools/tpl_languages.php:378
+#: tools/tpl_languages.php:382
 #: mod/ims/ims_report.inc:681
 #: mod/ims/transfer_inv.inc:463
 msgid "Date Sent"
 msgstr "發送日期"
 
-#: tools/tpl_languages.php:379
+#: tools/tpl_languages.php:383
 msgid "Preview"
 msgstr "預覽"
 
-#: tools/tpl_languages.php:380
-#: tools/tpl_languages.php:386
+#: tools/tpl_languages.php:384
+#: tools/tpl_languages.php:390
 msgid "Are you sure you want to delete this message?"
 msgstr "您確定要刪除這個訊息？"
 
-#: tools/tpl_languages.php:381
+#: tools/tpl_languages.php:385
 #, fuzzy
 msgid "Your"
 msgstr "您的參考號"
 
-#: tools/tpl_languages.php:382
+#: tools/tpl_languages.php:386
 msgid "is empty"
 msgstr "空白"
 
-#: tools/tpl_languages.php:383
+#: tools/tpl_languages.php:387
 msgid "Message not found."
 msgstr "沒有訊息"
 
-#: tools/tpl_languages.php:384
-#, fuzzy
+#: tools/tpl_languages.php:388
 msgid "Back to Inbox"
-msgstr "返回目錄"
+msgstr "回到收件匣"
 
-#: tools/tpl_languages.php:385
-#, fuzzy
+#: tools/tpl_languages.php:389
 msgid "Back to Outbox"
-msgstr "返回目錄"
+msgstr "返回寄件匣"
 
-#: tools/tpl_languages.php:387
+#: tools/tpl_languages.php:391
 msgid "Delete this message"
 msgstr "刪除這則訊息"
 
-#: tools/tpl_languages.php:389
+#: tools/tpl_languages.php:393
 msgid "To List:"
 msgstr "收件者清單"
 
-#: tools/tpl_languages.php:390
+#: tools/tpl_languages.php:394
 msgid "To add a volunteer to the 'To' list, select one in the 'List of Volunteers' below and click on 'Add'. To remove a volunteer from the 'To' list, click on the remove link next to his name."
 msgstr "如欲將任一志工加入收件者清單，先點選志工清單中的名字，再點選「增加」。如欲將志工名字自收件者移除，點選志工姓名旁邊的移除連結。"
 
-#: tools/tpl_languages.php:393
+#: tools/tpl_languages.php:397
 #: mod/msg/handler_cap_edit.inc:109
 #: mod/msg/handler_cap_new.inc:372
 msgid "Message"
 msgstr "訊息"
 
-#: tools/tpl_languages.php:394
+#: tools/tpl_languages.php:398
 msgid "Message :"
 msgstr "訊息："
 
-#: tools/tpl_languages.php:395
+#: tools/tpl_languages.php:399
 #: mod/ims/transfer_inv.inc:336
 #: mod/msg/message_forms.inc:446
 msgid "Send"
@@ -2120,7 +2141,7 @@ msgstr "組織服務內容"
 #: mod/or/view_org.inc:92
 #: mod/or/view_org.inc:403
 #: mod/or/view_org.inc:485
-#: mod/or/lib_or.inc:641
+#: mod/or/lib_or.inc:642
 #: mod/ims/search.inc:381
 #: mod/ims/search.inc:498
 #: mod/ims/ims_report.inc:436
@@ -2136,8 +2157,8 @@ msgstr "組織服務內容"
 #: mod/cr/search.inc:130
 #: mod/cr/edit.inc:39
 #: mod/cr/edit.inc:153
-#: mod/cr/edit.inc:533
-#: mod/cr/edit.inc:605
+#: mod/cr/edit.inc:497
+#: mod/cr/edit.inc:569
 #: mod/cr/reports.inc:61
 #: mod/cr/reports.inc:164
 #: mod/cr/camp.inc:40
@@ -2283,7 +2304,7 @@ msgid "You could only select 3 options in this field."
 msgstr "這個欄位只能選擇 3 個項目"
 
 #: mod/or/reg_org.inc:149
-#: mod/cr/edit.inc:525
+#: mod/cr/edit.inc:489
 #: mod/cr/camp.inc:450
 msgid "Confirm Registration Details of "
 msgstr "確認登錄細節"
@@ -2321,8 +2342,8 @@ msgstr "組織位置地址"
 #: mod/ims/view_inv.inc:206
 #: mod/gis/gis_fns.inc:177
 #: mod/cr/edit.inc:44
-#: mod/cr/edit.inc:539
-#: mod/cr/edit.inc:615
+#: mod/cr/edit.inc:503
+#: mod/cr/edit.inc:579
 #: mod/cr/camp.inc:49
 msgid "Map Location"
 msgstr "地圖位置"
@@ -2381,11 +2402,11 @@ msgstr "編輯細節"
 
 #: mod/or/reg_org.inc:246
 msgid "Add an Operation/Branch under the Organization "
-msgstr "在組織之下加入作業/分支 "
+msgstr "登錄既存組織的分支機構"
 
 #: mod/or/reg_org.inc:248
 msgid "Your Organization might be having branches or carrying out relief operations in this disaster. Then information of those operations is usefull "
-msgstr "您的組織在這場災難中也許正有分支或是進行著救援作業。因此這些作業的資訊是很有用的。"
+msgstr "您的組織中也許有分支或是單位也正在進行著救援作業。登錄這些參與救援作業的分支機構，對整體救援工作是有幫助的。"
 
 #: mod/or/reg_org.inc:255
 msgid "Holding Company"
@@ -2447,7 +2468,7 @@ msgstr "過濾器"
 #: mod/or/report.inc:461
 #: mod/or/view_org.inc:87
 #: mod/or/view_org.inc:480
-#: mod/or/lib_or.inc:911
+#: mod/or/lib_or.inc:912
 #: mod/ims/ims_report.inc:432
 msgid "Organization Name"
 msgstr "組織名稱"
@@ -2521,7 +2542,7 @@ msgstr "登記字號："
 #: mod/ims/view_inv.inc:208
 #: mod/gis/gis_fns.inc:179
 #: mod/cr/edit.inc:46
-#: mod/cr/edit.inc:617
+#: mod/cr/edit.inc:581
 #: mod/cr/camp.inc:51
 msgid "Click on the button \"Update the location\" will update the map location if you did manually modify the values of position."
 msgstr "重新輸入經緯度，點選「重新定位」，下方地圖座標即會更新"
@@ -2530,8 +2551,8 @@ msgstr "重新輸入經緯度，點選「重新定位」，下方地圖座標即
 #: mod/or/view_org.inc:704
 #: mod/ims/view_inv.inc:217
 #: mod/cr/edit.inc:50
-#: mod/cr/edit.inc:540
-#: mod/cr/edit.inc:621
+#: mod/cr/edit.inc:504
+#: mod/cr/edit.inc:585
 #: mod/cr/camp.inc:53
 msgid "Latitude : "
 msgstr "緯度："
@@ -2540,8 +2561,8 @@ msgstr "緯度："
 #: mod/or/view_org.inc:705
 #: mod/ims/view_inv.inc:224
 #: mod/cr/edit.inc:52
-#: mod/cr/edit.inc:541
-#: mod/cr/edit.inc:623
+#: mod/cr/edit.inc:505
+#: mod/cr/edit.inc:587
 #: mod/cr/camp.inc:54
 msgid "Longitude : "
 msgstr "經度："
@@ -2550,7 +2571,7 @@ msgstr "經度："
 #: mod/ims/view_inv.inc:225
 #: mod/gis/gis_fns.inc:187
 #: mod/cr/edit.inc:53
-#: mod/cr/edit.inc:624
+#: mod/cr/edit.inc:588
 #: mod/cr/camp.inc:55
 msgid "Update the location"
 msgstr "重新定位"
@@ -2559,7 +2580,7 @@ msgstr "重新定位"
 #: mod/ims/view_inv.inc:235
 #: mod/gis/gis_fns.inc:197
 #: mod/cr/edit.inc:61
-#: mod/cr/edit.inc:632
+#: mod/cr/edit.inc:596
 #: mod/cr/camp.inc:63
 msgid ""
 "You can move around and enlarge/reduce the size of the area you want using\n"
@@ -2584,44 +2605,44 @@ msgid "Close"
 msgstr "關閉"
 
 #: mod/or/view_org.inc:634
-#: mod/or/lib_or.inc:686
+#: mod/or/lib_or.inc:687
 #: mod/ims/lib_ims.inc:360
 msgid "Name : "
 msgstr "姓名："
 
 #: mod/or/view_org.inc:638
 #: mod/or/view_org.inc:700
-#: mod/or/lib_or.inc:689
+#: mod/or/lib_or.inc:690
 #: mod/ims/lib_ims.inc:363
 msgid "Address : "
 msgstr "地址："
 
 #: mod/or/view_org.inc:642
-#: mod/or/lib_or.inc:692
+#: mod/or/lib_or.inc:693
 #: mod/ims/lib_ims.inc:365
 msgid "Phone : "
 msgstr "電話："
 
 #: mod/or/view_org.inc:646
-#: mod/or/lib_or.inc:695
+#: mod/or/lib_or.inc:696
 #: mod/ims/lib_ims.inc:367
 msgid "Mobile No : "
 msgstr "手機號碼："
 
 #: mod/or/view_org.inc:650
-#: mod/or/lib_or.inc:698
+#: mod/or/lib_or.inc:699
 #: mod/ims/lib_ims.inc:369
 msgid "Fax : "
 msgstr "傳真："
 
 #: mod/or/view_org.inc:654
-#: mod/or/lib_or.inc:701
+#: mod/or/lib_or.inc:702
 #: mod/ims/lib_ims.inc:371
 msgid "Email : "
 msgstr "電子郵件："
 
 #: mod/or/view_org.inc:658
-#: mod/or/lib_or.inc:704
+#: mod/or/lib_or.inc:705
 #: mod/ims/lib_ims.inc:373
 msgid "Website : "
 msgstr "網址："
@@ -2640,7 +2661,7 @@ msgid "Organization Sector : "
 msgstr "組織服務內容："
 
 #: mod/or/view_org.inc:725
-#: mod/or/lib_or.inc:710
+#: mod/or/lib_or.inc:711
 #: mod/ims/search.inc:383
 #: mod/ims/search.inc:500
 #: mod/ims/ims_report.inc:438
@@ -2650,7 +2671,7 @@ msgid "Man Power"
 msgstr "人力"
 
 #: mod/or/view_org.inc:726
-#: mod/or/lib_or.inc:711
+#: mod/or/lib_or.inc:712
 #: mod/ims/search.inc:384
 #: mod/ims/search.inc:501
 #: mod/ims/ims_report.inc:439
@@ -2659,7 +2680,7 @@ msgid "Equipment"
 msgstr "設備"
 
 #: mod/or/view_org.inc:727
-#: mod/or/lib_or.inc:712
+#: mod/or/lib_or.inc:713
 msgid "Resources"
 msgstr "資源"
 
@@ -2726,25 +2747,25 @@ msgstr "請輸入超過最大限制-100字的數值。"
 msgid "The number of characters available in Registration number field should be lower than 100"
 msgstr "登入號碼欄位的字數需手於100字"
 
-#: mod/or/lib_or.inc:585
+#: mod/or/lib_or.inc:586
 msgid "Please specify the type of your organization. That is whether you are a government organization,multinational NGO, private organization ect."
 msgstr "請選擇您的組織的類型。例如政府單位、跨國非政府組織、私人機構…等等"
 
-#: mod/or/lib_or.inc:611
+#: mod/or/lib_or.inc:612
 msgid "please select whether you are Department,Branch,ect of the parent organization"
 msgstr "請選擇您是否是上層組織的部門、分會…等等"
 
-#: mod/or/lib_or.inc:627
+#: mod/or/lib_or.inc:628
 msgid "Select the services your organization provides, that is what you do as an organization or services your organization can provide in a disaster. e.g. if you offer medical services select it. This field could accept up to 3 options be selected. You could hold Ctrl key with mouse click to select multiple options."
 msgstr "主要服務：選擇您的組織在災難中所提供的最主要服務，例如醫療服務。這個欄位最多可以選擇 3 個項目，請按壓 Ctrl 鍵加上滑鼠點選來選取多個項目。"
 
-#: mod/or/lib_or.inc:642
+#: mod/or/lib_or.inc:643
 #: mod/mpr/add.inc:322
 #: mod/mpr/add.inc:543
 msgid "Phone"
 msgstr "電話"
 
-#: mod/or/lib_or.inc:643
+#: mod/or/lib_or.inc:644
 #: mod/mpr/view.inc:81
 #: mod/mpr/edit.inc:197
 #: mod/mpr/edit.inc:488
@@ -2765,13 +2786,13 @@ msgstr "電話"
 msgid "Mobile"
 msgstr "行動電話"
 
-#: mod/or/lib_or.inc:644
+#: mod/or/lib_or.inc:645
 msgid "Fax"
 msgstr "傳真"
 
-#: mod/or/lib_or.inc:645
+#: mod/or/lib_or.inc:646
 #: mod/home/main.inc:52
-#: mod/home/main.inc:182
+#: mod/home/main.inc:192
 #: mod/mpr/add.inc:323
 #: mod/mpr/add.inc:544
 #: mod/dvr/edt_grp.inc:294
@@ -2785,122 +2806,122 @@ msgstr "傳真"
 msgid "Email"
 msgstr "電子郵件"
 
-#: mod/or/lib_or.inc:646
+#: mod/or/lib_or.inc:647
 msgid "Website"
 msgstr "網站"
 
-#: mod/or/lib_or.inc:649
+#: mod/or/lib_or.inc:650
 msgid "Please provide contact details that can be used to contact your organization in a disaster"
 msgstr "請提供聯絡資訊，以便在發生災難時與您的組織聯絡"
 
-#: mod/or/lib_or.inc:685
+#: mod/or/lib_or.inc:686
 msgid "Name of the person to be contacted in a disaster"
 msgstr "在發生災難時可以聯絡的聯絡人姓名"
 
-#: mod/or/lib_or.inc:688
+#: mod/or/lib_or.inc:689
 msgid "Address of a person to be contacted in a disaster"
 msgstr "在發生災難時可以用來聯絡的聯絡人地址"
 
-#: mod/or/lib_or.inc:691
+#: mod/or/lib_or.inc:692
 msgid "Land line number to be contacted in a disaster"
 msgstr "發生災難時可以用來聯絡的電話號碼"
 
-#: mod/or/lib_or.inc:694
+#: mod/or/lib_or.inc:695
 msgid "Mobile Phone number to be contacted in a disaster"
 msgstr "發生災難時可以用來聯絡的行動電話號碼"
 
-#: mod/or/lib_or.inc:697
+#: mod/or/lib_or.inc:698
 msgid "Fax number to be contacted in a disaster"
 msgstr "發生災難時可以用來聯絡的傳真號碼"
 
-#: mod/or/lib_or.inc:700
+#: mod/or/lib_or.inc:701
 msgid "Email address to be contacted in a disaster"
 msgstr "發生災難時可以用來聯絡的電子郵件位址"
 
-#: mod/or/lib_or.inc:703
+#: mod/or/lib_or.inc:704
 msgid "Website of the Organization"
 msgstr "組織的網站"
 
-#: mod/or/lib_or.inc:707
+#: mod/or/lib_or.inc:708
 msgid "Please document the facilities available in your organization. This information  should provide a rough idea of the resources available in your organization and is useful to plan relief operations"
 msgstr "請說明您的組織可供運用的的設施。此訊息應該包括您的組織可供運用的資源，這對於制定救災計畫非常有幫助。"
 
-#: mod/or/lib_or.inc:732
+#: mod/or/lib_or.inc:733
 msgid "Specify the workforce(Men/Women) in your organization. This amount would be useful in identifying the potential number of volunteers in the event of a disaster"
 msgstr "詳細說明您的組織的人力資源（男/女）。這對於災難發生時尋找志工的可能數量非常重要。"
 
-#: mod/or/lib_or.inc:733
+#: mod/or/lib_or.inc:734
 msgid "You can specify the man power as a number or give details up to 100 characters."
 msgstr "您可以指定人力資源的數量，或是提供詳細資訊（50字以內）。"
 
-#: mod/or/lib_or.inc:734
+#: mod/or/lib_or.inc:735
 #: mod/ims/lib_ims.inc:389
 msgid "Man Power : "
 msgstr "人力："
 
-#: mod/or/lib_or.inc:736
+#: mod/or/lib_or.inc:737
 msgid "Specify the kind of equipment you have,that will be useful in Disaster Relief Operations"
 msgstr "詳細說明您擁有的設備類型，這在請在救災行動（Disaster Relief Operations）中非常重要"
 
-#: mod/or/lib_or.inc:737
+#: mod/or/lib_or.inc:738
 #: mod/ims/lib_ims.inc:391
 msgid "Equipment : "
 msgstr "設備："
 
-#: mod/or/lib_or.inc:739
+#: mod/or/lib_or.inc:740
 msgid "Specify any other resource that you think might be useful in Disaster Relief Operations"
 msgstr "請在救災行動（Disaster Relief Operations）裡詳細說明您認為會有幫助的任何資源"
 
-#: mod/or/lib_or.inc:740
+#: mod/or/lib_or.inc:741
 #: mod/ims/lib_ims.inc:393
 msgid "Other relevant resources : "
 msgstr "其他相關資源："
 
-#: mod/or/lib_or.inc:744
+#: mod/or/lib_or.inc:745
 #: mod/ims/lib_ims.inc:399
 msgid "Account Name : "
 msgstr "帳號名稱："
 
-#: mod/or/lib_or.inc:744
+#: mod/or/lib_or.inc:745
 #: mod/ims/lib_ims.inc:399
 msgid "* User Name for Login: "
 msgstr "* 使用者登入名稱："
 
-#: mod/or/lib_or.inc:744
+#: mod/or/lib_or.inc:745
 #: mod/ims/lib_ims.inc:399
 msgid "* Password for Login: "
 msgstr "* 登入密碼："
 
-#: mod/or/lib_or.inc:744
+#: mod/or/lib_or.inc:745
 #: mod/ims/lib_ims.inc:399
 msgid "* Confirm Password: "
 msgstr "* 確認密碼："
 
-#: mod/or/lib_or.inc:774
+#: mod/or/lib_or.inc:775
 msgid "Select the Disaster/event/incident"
 msgstr "選取災難/事件/事故"
 
-#: mod/or/lib_or.inc:776
+#: mod/or/lib_or.inc:777
 msgid "Since there are multiple incidents you required to select relevant incidents "
 msgstr "由於有多個事故，您必須選擇最有關的事故 "
 
-#: mod/or/lib_or.inc:786
+#: mod/or/lib_or.inc:787
 msgid "Choose related incidents:The Default Incident is Highlighted"
 msgstr "選擇相關事故：預設事故是反白/加亮的"
 
-#: mod/or/lib_or.inc:837
+#: mod/or/lib_or.inc:838
 msgid "select related incidents"
 msgstr "選取相關的事故"
 
-#: mod/or/lib_or.inc:841
+#: mod/or/lib_or.inc:842
 msgid "Add Operation"
 msgstr "新增作業"
 
-#: mod/or/lib_or.inc:841
+#: mod/or/lib_or.inc:842
 msgid "(Your Organization might be having branches or carrying out relief operations in this disaster. Then information of those operations is usefull : )"
 msgstr "（您的組織在這場災難中也許有分支機構或是進行救援作業。因此這些運作的資訊是很有幫助的。）"
 
-#: mod/or/lib_or.inc:915
+#: mod/or/lib_or.inc:916
 msgid "Operation/Branch "
 msgstr "辦事處/分公司"
 
@@ -3068,7 +3089,7 @@ msgstr "最近登錄的組織"
 #: mod/ims/main.inc:43
 #: mod/rs/menu.inc:30
 #: mod/vm/menu.inc:29
-#: mod/vm/menu.inc:103
+#: mod/vm/menu.inc:104
 #: mod/cs/main.inc:43
 #: mod/gis/main.inc:27
 #: mod/mpr/main.inc:55
@@ -3224,7 +3245,7 @@ msgstr ""
 "在這裡，你會得到一個 API Key、密碼、和秘密存取碼。API Key 和密碼與你的帳號相連的，用來識別該請求的來源。"
 
 #: mod/ws/reg.inc:104
-#: mod/cr/edit.inc:593
+#: mod/cr/edit.inc:557
 #: mod/cr/camp.inc:514
 #: mod/dvr/edt_grp.inc:450
 #: mod/dvr/add_new_grp.inc:355
@@ -3469,7 +3490,7 @@ msgid "Administrator: "
 msgstr "管理者："
 
 #: mod/home/main.inc:55
-#: mod/home/main.inc:186
+#: mod/home/main.inc:196
 #: mod/dvr/edt_grp.inc:291
 #: mod/dvr/edt_grp.inc:491
 #: mod/dvr/add_new_grp.inc:227
@@ -3481,19 +3502,19 @@ msgstr "管理者："
 msgid "Telephone"
 msgstr "電話"
 
-#: mod/home/main.inc:76
+#: mod/home/main.inc:86
 msgid "<h2>Welcome to the Sahana FOSS Disaster Management System</h2>"
 msgstr "<h2>歡迎來到 Sahana FOSS 災難管理系統</h2>"
 
-#: mod/home/main.inc:78
+#: mod/home/main.inc:88
 msgid "Congratulations !. You have successfully installed Sahana."
 msgstr "恭喜！ 您已經成功地安裝 Sahana。"
 
-#: mod/home/main.inc:79
+#: mod/home/main.inc:89
 msgid "You may need to customize sahana according to your requirements."
 msgstr "您可以根據需求設定 sahana。"
 
-#: mod/home/main.inc:91
+#: mod/home/main.inc:101
 msgid ""
 "Please login by entering the administrator username and password in the respective text boxes on the left side\n"
 "\t\tpanel to proceed customizing sahana."
@@ -3501,86 +3522,86 @@ msgstr ""
 "請在左欄裡的輸入管理者的帳號和密碼\n"
 "以進行 Sahana 的客製化設定。"
 
-#: mod/home/main.inc:104
+#: mod/home/main.inc:114
 msgid "<h2>About Sahana</h2>"
 msgstr "<h2>關於 Sahana</h2>"
 
-#: mod/home/main.inc:111
+#: mod/home/main.inc:121
 msgid "Unable to determine Apache HTTPD version."
 msgstr "無法判定 Apache httpd 的版本。"
 
-#: mod/home/main.inc:129
+#: mod/home/main.inc:139
 msgid "Sahana Version"
 msgstr "Sahana 版本"
 
-#: mod/home/main.inc:133
+#: mod/home/main.inc:143
 msgid "Release"
 msgstr "發行"
 
-#: mod/home/main.inc:137
+#: mod/home/main.inc:147
 msgid "Release Information"
 msgstr "發行資訊"
 
-#: mod/home/main.inc:141
+#: mod/home/main.inc:151
 msgid "Release Date"
 msgstr "發行日期"
 
-#: mod/home/main.inc:148
+#: mod/home/main.inc:158
 #: inst/setup.inc:251
 #: inst/setup.inc:260
 msgid "Database Name"
 msgstr "資料庫名稱"
 
-#: mod/home/main.inc:152
+#: mod/home/main.inc:162
 msgid "Database Character Set"
 msgstr "資料庫字元集"
 
-#: mod/home/main.inc:156
+#: mod/home/main.inc:166
 msgid "Database Collation"
 msgstr "資料庫校對(collation)"
 
-#: mod/home/main.inc:163
+#: mod/home/main.inc:173
 msgid "Apache HTTPD Version"
 msgstr "Apache httpd 版本:"
 
-#: mod/home/main.inc:167
+#: mod/home/main.inc:177
 #: inst/setup.inc:141
 #: inst/setup.inc:143
 msgid "PHP Version"
 msgstr "PHP 版本"
 
-#: mod/home/main.inc:171
+#: mod/home/main.inc:181
 msgid "MySQL Version"
 msgstr "MySQL 版本"
 
-#: mod/home/main.inc:178
+#: mod/home/main.inc:188
 #: inst/setup.inc:294
 msgid "Administrator Name"
 msgstr "管理者名稱"
 
-#: mod/home/main.inc:179
-#: mod/home/main.inc:183
-#: mod/home/main.inc:187
+#: mod/home/main.inc:189
+#: mod/home/main.inc:193
+#: mod/home/main.inc:197
 msgid "Information not available"
 msgstr "找無資訊"
 
-#: mod/home/main.inc:211
+#: mod/home/main.inc:221
 msgid "Show/Hide Readme"
 msgstr "顯示/隱藏說明檔案"
 
-#: mod/home/main.inc:217
+#: mod/home/main.inc:227
 msgid "Hide Readme"
 msgstr "隱藏說明檔案"
 
-#: mod/home/main.inc:221
+#: mod/home/main.inc:231
 msgid "View License"
 msgstr "檢視授權"
 
-#: mod/home/main.inc:225
+#: mod/home/main.inc:235
 msgid "About page information cannot be generated."
 msgstr "無法產生關於網頁的資訊。"
 
-#: mod/home/main.inc:232
+#: mod/home/main.inc:242
 msgid "About Sahana"
 msgstr "關於 Sahana"
 
@@ -3809,7 +3830,7 @@ msgstr "總數"
 #: mod/ims/mini_quantity.inc:247
 #: mod/cs/search.inc:23
 #: mod/cs/search.inc:159
-#: mod/rms/handler_req_new.inc:457
+#: mod/rms/handler_req_new.inc:455
 #: mod/rms/handler_plg_new.inc:207
 msgid "Unit"
 msgstr "單位"
@@ -4860,10 +4881,6 @@ msgstr "從："
 msgid "To : "
 msgstr "到："
 
-#: mod/ims/transfer_inv.inc:605
-msgid "Date :"
-msgstr "日期："
-
 #: mod/ims/transfer_inv.inc:606
 msgid "Authorized Person : "
 msgstr "授權者："
@@ -5393,7 +5410,7 @@ msgid "Volunteers"
 msgstr "志工"
 
 #: mod/vm/menu.inc:37
-#: mod/vm/menu.inc:51
+#: mod/vm/menu.inc:52
 msgid "View All"
 msgstr "檢視所有"
 
@@ -5413,45 +5430,42 @@ msgstr "專案"
 msgid "Add New"
 msgstr "新增"
 
-#: mod/vm/menu.inc:61
+#: mod/vm/menu.inc:51
+#, fuzzy
+msgid "View Coming Projects"
+msgstr "檢視這檔案"
+
+#: mod/vm/menu.inc:62
 msgid "Messaging"
 msgstr "傳訊"
 
-#: mod/vm/menu.inc:64
+#: mod/vm/menu.inc:65
 msgid "Send Message"
 msgstr "發送訊息"
 
-#: mod/vm/menu.inc:74
+#: mod/vm/menu.inc:75
 msgid "Reporting"
 msgstr "報告"
 
-#: mod/vm/menu.inc:76
+#: mod/vm/menu.inc:77
 msgid "Custom Report"
 msgstr "客製化報表"
 
-#: mod/vm/menu.inc:77
+#: mod/vm/menu.inc:78
 msgid "Report On My Projects"
 msgstr "回報我的專案"
 
-#: mod/vm/menu.inc:87
+#: mod/vm/menu.inc:88
 msgid "Management"
 msgstr "管理"
 
-#: mod/vm/menu.inc:88
+#: mod/vm/menu.inc:89
 msgid "Modify Abilities/Limitations"
 msgstr "修改能力/限制"
 
-#: mod/vm/menu.inc:89
+#: mod/vm/menu.inc:90
 msgid "Approve Abilities"
 msgstr "核准能力"
-
-#: mod/vm/menu.inc:110
-msgid "Edit Your Details"
-msgstr "編輯你的詳細資訊"
-
-#: mod/vm/menu.inc:111
-msgid "Register to Volunteer"
-msgstr "登錄到志工"
 
 #: mod/cs/supplier_report.inc:21
 msgid "Supplier Report"
@@ -6200,19 +6214,20 @@ msgstr "名稱欄位不得空白"
 
 #: mod/gis/wm_fns.inc:198
 msgid "Add Situation Detail"
-msgstr "新增狀態詳情"
+msgstr "新增地圖標記"
 
 #: mod/gis/wm_fns.inc:201
 msgid "Main Details"
 msgstr "主要細節"
 
+# 為使欄位名稱符合使用狀態，因此中文修改為狀態標題
 #: mod/gis/wm_fns.inc:203
 msgid "Name of Detail"
-msgstr "細節名稱"
+msgstr "狀態標題"
 
 #: mod/gis/wm_fns.inc:204
 msgid "Wiki Type"
-msgstr "Wiki 類型"
+msgstr "狀態類型"
 
 #: mod/gis/wm_fns.inc:205
 #: mod/gis/wm_fns.inc:238
@@ -6233,21 +6248,21 @@ msgstr "事件日期"
 
 #: mod/gis/wm_fns.inc:212
 msgid "Wikimap Options"
-msgstr "Wiki地圖選項"
+msgstr "地圖標記選項"
 
 #: mod/gis/wm_fns.inc:213
-#: mod/gis/plugins/google_maps/handler_google_maps.inc:253
+#: mod/gis/plugins/google_maps/handler_google_maps.inc:259
 #: mod/admin/mmc_main.inc:13
 msgid "Author"
 msgstr "原始訊息發送者"
 
 #: mod/gis/wm_fns.inc:214
 msgid "Publicly Editable"
-msgstr "可公開編輯的"
+msgstr "可公開編輯"
 
 #: mod/gis/wm_fns.inc:215
 msgid "Publicly Viewable"
-msgstr "可公開查看的"
+msgstr "可公開查看"
 
 #: mod/gis/wm_fns.inc:217
 msgid "Add Detail"
@@ -6274,11 +6289,11 @@ msgstr "已成功更新說明"
 msgid "Succesfully added wiki item "
 msgstr "已成功新增wiki項目"
 
-#: mod/gis/plugins/google_maps/handler_google_maps.inc:236
+#: mod/gis/plugins/google_maps/handler_google_maps.inc:242
 msgid "Date: "
 msgstr "日期："
 
-#: mod/gis/plugins/google_maps/handler_google_maps.inc:240
+#: mod/gis/plugins/google_maps/handler_google_maps.inc:246
 msgid "anonymous"
 msgstr "匿名"
 
@@ -6310,8 +6325,8 @@ msgstr "輸入Google Maps API key"
 #: mod/gis/admin.inc:175
 #: mod/gis/admin.inc:201
 #: mod/gis/admin_bk.inc:207
-#: mod/admin/gis_admin.inc:184
-#: mod/admin/gis_admin.inc:216
+#: mod/admin/gis_admin.inc:198
+#: mod/admin/gis_admin.inc:230
 msgid "Done"
 msgstr "完成"
 
@@ -6320,8 +6335,8 @@ msgstr "完成"
 #: mod/gis/admin.inc:229
 #: mod/gis/admin_bk.inc:227
 #: mod/gis/admin_bk.inc:235
-#: mod/admin/gis_admin.inc:236
-#: mod/admin/gis_admin.inc:247
+#: mod/admin/gis_admin.inc:250
+#: mod/admin/gis_admin.inc:261
 msgid "Changes were saved"
 msgstr "已儲存改變"
 
@@ -6352,7 +6367,7 @@ msgstr "地圖標示了災難的發展狀況，標記出事件、地點和物件
 
 #: mod/gis/main_fns.inc:38
 msgid "Add Situation Markers"
-msgstr "增加狀態標記"
+msgstr "增加地圖標記"
 
 #: mod/gis/main_fns.inc:38
 msgid "Add markers on the map of incidents and objects with pictures"
@@ -6499,7 +6514,7 @@ msgstr "一般定位"
 
 #: mod/gis/admin.inc:128
 #: mod/gis/admin_bk.inc:128
-#: mod/admin/gis_admin.inc:127
+#: mod/admin/gis_admin.inc:141
 msgid "Main Configuration"
 msgstr "主要設定"
 
@@ -6507,8 +6522,8 @@ msgstr "主要設定"
 #: mod/gis/admin.inc:188
 #: mod/gis/admin_bk.inc:134
 #: mod/gis/admin_bk.inc:194
-#: mod/admin/gis_admin.inc:133
-#: mod/admin/gis_admin.inc:198
+#: mod/admin/gis_admin.inc:147
+#: mod/admin/gis_admin.inc:212
 msgid "GIS Maps in Sahana can be set to display a default region"
 msgstr "Sahana 的 GIS 地圖可以設定為顯示預設的區域"
 
@@ -6516,7 +6531,7 @@ msgstr "Sahana 的 GIS 地圖可以設定為顯示預設的區域"
 #: mod/gis/admin.inc:189
 #: mod/gis/admin_bk.inc:135
 #: mod/gis/admin_bk.inc:195
-#: mod/admin/gis_admin.inc:134
+#: mod/admin/gis_admin.inc:148
 msgid "In order to set the map display for a particular region, you should know the Longitude and the Latitude of that region"
 msgstr "為了設定地圖顯示某一區域，必須知道該區域的緯度與經度。"
 
@@ -6524,8 +6539,8 @@ msgstr "為了設定地圖顯示某一區域，必須知道該區域的緯度與
 #: mod/gis/admin.inc:190
 #: mod/gis/admin_bk.inc:136
 #: mod/gis/admin_bk.inc:196
-#: mod/admin/gis_admin.inc:135
-#: mod/admin/gis_admin.inc:201
+#: mod/admin/gis_admin.inc:149
+#: mod/admin/gis_admin.inc:215
 msgid "If these values are known, you can set them below:"
 msgstr "如果您知道這些數值，可以填入下表："
 
@@ -6533,8 +6548,8 @@ msgstr "如果您知道這些數值，可以填入下表："
 #: mod/gis/admin.inc:195
 #: mod/gis/admin_bk.inc:141
 #: mod/gis/admin_bk.inc:201
-#: mod/admin/gis_admin.inc:140
-#: mod/admin/gis_admin.inc:206
+#: mod/admin/gis_admin.inc:154
+#: mod/admin/gis_admin.inc:220
 msgid "Default Center Coordinates"
 msgstr "預設的中心座標"
 
@@ -6556,8 +6571,8 @@ msgstr "經度為東西向（即向側面的）。本初子午線（格林威治
 #: mod/gis/admin.inc:198
 #: mod/gis/admin_bk.inc:144
 #: mod/gis/admin_bk.inc:204
-#: mod/admin/gis_admin.inc:147
-#: mod/admin/gis_admin.inc:213
+#: mod/admin/gis_admin.inc:161
+#: mod/admin/gis_admin.inc:227
 msgid "Center Longitude "
 msgstr "中央經度"
 
@@ -6565,26 +6580,26 @@ msgstr "中央經度"
 #: mod/gis/admin.inc:199
 #: mod/gis/admin_bk.inc:145
 #: mod/gis/admin_bk.inc:205
-#: mod/admin/gis_admin.inc:146
-#: mod/admin/gis_admin.inc:214
+#: mod/admin/gis_admin.inc:160
+#: mod/admin/gis_admin.inc:228
 msgid "Center Latitude"
 msgstr "中央緯度"
 
 #: mod/gis/admin.inc:145
 #: mod/gis/admin_bk.inc:149
-#: mod/admin/gis_admin.inc:151
+#: mod/admin/gis_admin.inc:165
 msgid "Sahana supports a modular GIS plugin architecture "
 msgstr "Sahana 提供了模組化的 GIS 外掛程式架構"
 
 #: mod/gis/admin.inc:146
 #: mod/gis/admin_bk.inc:150
-#: mod/admin/gis_admin.inc:152
+#: mod/admin/gis_admin.inc:166
 msgid "You can select which GIS plugin to use as your default GIS"
 msgstr "您可以選擇要用哪個 GIS 外掛程式做為預設值"
 
 #: mod/gis/admin.inc:147
 #: mod/gis/admin_bk.inc:151
-#: mod/admin/gis_admin.inc:153
+#: mod/admin/gis_admin.inc:167
 msgid "Select the default GIS plugin from the detected plugins below:"
 msgstr "從以下偵測到的 GIS 外掛程式中選擇一個做為預設："
 
@@ -6595,13 +6610,13 @@ msgstr "有關新增自訂外掛程式的詳情，請參閱 mod/gis 裡的文件
 
 #: mod/gis/admin.inc:170
 #: mod/gis/admin_bk.inc:176
-#: mod/admin/gis_admin.inc:179
+#: mod/admin/gis_admin.inc:193
 msgid "Detected GIS module plugins"
 msgstr "檢測到的GIS模組外掛"
 
 #: mod/gis/admin.inc:173
 #: mod/gis/admin_bk.inc:179
-#: mod/admin/gis_admin.inc:182
+#: mod/admin/gis_admin.inc:196
 msgid "Select GIS module"
 msgstr "選擇GIS模組"
 
@@ -6767,8 +6782,8 @@ msgstr "基本細節"
 #: mod/mpr/add.inc:476
 #: mod/cr/edit.inc:70
 #: mod/cr/edit.inc:166
-#: mod/cr/edit.inc:544
-#: mod/cr/edit.inc:641
+#: mod/cr/edit.inc:508
+#: mod/cr/edit.inc:605
 #: mod/cr/camp.inc:72
 #: mod/cr/camp.inc:465
 #: mod/cr/camp.inc:544
@@ -8200,9 +8215,8 @@ msgstr "請從\"選擇事故\"裡選擇一個項目"
 
 #: mod/pref/ims_config.inc:75
 #: mod/pref/ims_menu.inc:10
-#, fuzzy
 msgid "Change OpenID"
-msgstr "更改供應商"
+msgstr "更改 OpenID"
 
 #: mod/pref/ims_config.inc:78
 #: inc/handler_login.inc:47
@@ -8215,9 +8229,8 @@ msgid "The OpenID had been used by another user."
 msgstr ""
 
 #: mod/pref/ims_config.inc:114
-#, fuzzy
 msgid "The OpenId was succesfully updated"
-msgstr "保安身份內容已更新"
+msgstr "OpenId 內容已更新"
 
 #: mod/pref/stream.inc:69
 #: mod/pref/main.inc:99
@@ -8491,8 +8504,8 @@ msgstr "標有 * 的是必要欄位（必須填寫）"
 
 #: mod/admin/location.inc:85
 #: mod/cr/edit.inc:41
-#: mod/cr/edit.inc:535
-#: mod/cr/edit.inc:612
+#: mod/cr/edit.inc:499
+#: mod/cr/edit.inc:576
 #: mod/cr/camp.inc:46
 #: mod/cr/camp.inc:460
 #: mod/cr/camp.inc:539
@@ -9019,12 +9032,13 @@ msgid "Edit Roles of an User"
 msgstr "編輯使用者的角色"
 
 #: mod/admin/menu.inc:93
+#, fuzzy
 msgid "Reset Password of a User"
-msgstr "重設使用者密碼"
+msgstr "使用者名稱/密碼組合"
 
 #: mod/admin/menu.inc:94
 msgid "Change OpenID of a User"
-msgstr "修改使用者 OpenID"
+msgstr "修改使用者的 OpenID"
 
 #: mod/admin/menu.inc:95
 #: mod/admin/menu.inc:109
@@ -9467,7 +9481,7 @@ msgstr "新增/移除語系"
 msgid "Language Name and Folder Name cannot be blank"
 msgstr "語言名稱及資料夾名稱不可為空白"
 
-#: mod/admin/gis_admin.inc:141
+#: mod/admin/gis_admin.inc:155
 msgid ""
 "Latitude is North-South (Up-Down). Latitude is zero on the equator and positive\n"
 "\t in the northern hemisphere and negative in the southern hemisphere. a.k.a Y value"
@@ -9475,7 +9489,7 @@ msgstr ""
 "緯度以南北記（由上而下）。赤道的緯度是零度，正的\n"
 "\t在北半球，負的在南半球。也稱作：Y值"
 
-#: mod/admin/gis_admin.inc:143
+#: mod/admin/gis_admin.inc:157
 msgid ""
 "Longitude is West - East (sideways). \n"
 "\tLongitude is zero on the prime meridian (Greenwich Mean Time) and is positive to the east, across Europe and Asia.  Longitude is negative to the west, \n"
@@ -9485,25 +9499,25 @@ msgstr ""
 "\t本初子午線（格林威治標準時間）的緯度是零度，而且它的東側為正，跨越歐洲和亞洲。西側為負\n"
 "\t跨越大西洋洲和美洲。緯度也稱作：X值"
 
-#: mod/admin/gis_admin.inc:154
+#: mod/admin/gis_admin.inc:168
 msgid ""
 "For more information on adding custom plugins, \n"
 "refer to the documentation within the mod/gis subdirectory"
 msgstr "有關新增自訂外掛程式的詳細資訊，請參閱 mod/gis 次目錄的文件"
 
-#: mod/admin/gis_admin.inc:199
+#: mod/admin/gis_admin.inc:213
 msgid ""
 "In order to set the map display for a particular region, \n"
 "you should know the Longitude and the Latitude of that region"
 msgstr "為了設定某一區域的地圖顯示，必須知道該區域的緯度與經度"
 
-#: mod/admin/gis_admin.inc:207
+#: mod/admin/gis_admin.inc:221
 msgid ""
 "Latitude is North-South (Up-Down). Latitude is zero on the equator\n"
 "\t and positive in the northern hemisphere and negative in the southern hemisphere"
 msgstr "緯度為南北向（即上下）。赤道的緯度是零度，而且正的在北半球，負的在南半球。"
 
-#: mod/admin/gis_admin.inc:209
+#: mod/admin/gis_admin.inc:223
 msgid ""
 "Longitude is West - East (sideways). Longitude is zero on the \n"
 "\tprime meridian (Greenwich Mean Time) and is positive to the east, \n"
@@ -9514,7 +9528,7 @@ msgstr ""
 "\t本初子午線（格林威治標準時間）的經度是零度，而且它的東側為正，跨越歐洲和亞洲。西側為負\n"
 "\t跨越大西洋洲和美洲。"
 
-#: mod/admin/gis_admin.inc:271
+#: mod/admin/gis_admin.inc:285
 msgid "Coordinates invalid: should be between -180 & 180"
 msgstr "座標無效：應為-180到180之間"
 
@@ -9531,8 +9545,8 @@ msgstr "新模組翻譯合併成功"
 #: mod/cr/search.inc:128
 #: mod/cr/edit.inc:37
 #: mod/cr/edit.inc:123
-#: mod/cr/edit.inc:529
-#: mod/cr/edit.inc:603
+#: mod/cr/edit.inc:493
+#: mod/cr/edit.inc:567
 #: mod/cr/reports.inc:59
 #: mod/cr/reports.inc:162
 #: mod/cr/reports.inc:212
@@ -9547,8 +9561,8 @@ msgstr "庇護所名稱"
 #: mod/cr/search.inc:193
 #: mod/cr/edit.inc:38
 #: mod/cr/edit.inc:124
-#: mod/cr/edit.inc:532
-#: mod/cr/edit.inc:604
+#: mod/cr/edit.inc:496
+#: mod/cr/edit.inc:568
 #: mod/cr/reports.inc:60
 #: mod/cr/reports.inc:163
 #: mod/cr/admin.inc:22
@@ -9561,7 +9575,7 @@ msgstr "庇護所類型"
 #: mod/cr/search.inc:45
 #: mod/cr/search.inc:132
 #: mod/cr/edit.inc:176
-#: mod/cr/edit.inc:554
+#: mod/cr/edit.inc:518
 #: mod/cr/reports.inc:67
 #: mod/cr/camp.inc:475
 msgid "Total Count"
@@ -9571,8 +9585,8 @@ msgstr "總數"
 #: mod/cr/search.inc:133
 #: mod/cr/edit.inc:76
 #: mod/cr/edit.inc:172
-#: mod/cr/edit.inc:550
-#: mod/cr/edit.inc:647
+#: mod/cr/edit.inc:514
+#: mod/cr/edit.inc:611
 #: mod/cr/edit_ppl.inc:42
 #: mod/cr/camp.inc:78
 #: mod/cr/camp.inc:471
@@ -9612,8 +9626,8 @@ msgstr "更新現有的庇護所"
 
 #: mod/cr/edit.inc:34
 #: mod/cr/edit.inc:114
-#: mod/cr/edit.inc:528
-#: mod/cr/edit.inc:600
+#: mod/cr/edit.inc:492
+#: mod/cr/edit.inc:564
 #: mod/cr/edit_ppl.inc:34
 #: mod/cr/camp.inc:29
 #: mod/cr/camp.inc:453
@@ -9623,8 +9637,8 @@ msgstr "一般詳情"
 
 #: mod/cr/edit.inc:69
 #: mod/cr/edit.inc:165
-#: mod/cr/edit.inc:543
-#: mod/cr/edit.inc:640
+#: mod/cr/edit.inc:507
+#: mod/cr/edit.inc:604
 #: mod/cr/camp.inc:71
 #: mod/cr/camp.inc:464
 #: mod/cr/camp.inc:543
@@ -9633,8 +9647,8 @@ msgstr "聯絡人的詳細資訊"
 
 #: mod/cr/edit.inc:71
 #: mod/cr/edit.inc:167
-#: mod/cr/edit.inc:545
-#: mod/cr/edit.inc:642
+#: mod/cr/edit.inc:509
+#: mod/cr/edit.inc:606
 #: mod/cr/camp.inc:73
 #: mod/cr/camp.inc:466
 #: mod/cr/camp.inc:545
@@ -9643,8 +9657,8 @@ msgstr "電話號碼"
 
 #: mod/cr/edit.inc:72
 #: mod/cr/edit.inc:168
-#: mod/cr/edit.inc:546
-#: mod/cr/edit.inc:643
+#: mod/cr/edit.inc:510
+#: mod/cr/edit.inc:607
 #: mod/cr/camp.inc:74
 #: mod/cr/camp.inc:467
 #: mod/cr/camp.inc:546
@@ -9653,8 +9667,8 @@ msgstr "手機號碼"
 
 #: mod/cr/edit.inc:73
 #: mod/cr/edit.inc:169
-#: mod/cr/edit.inc:547
-#: mod/cr/edit.inc:644
+#: mod/cr/edit.inc:511
+#: mod/cr/edit.inc:608
 #: mod/cr/camp.inc:75
 #: mod/cr/camp.inc:468
 #: mod/cr/camp.inc:547
@@ -9663,8 +9677,8 @@ msgstr "職業"
 
 #: mod/cr/edit.inc:75
 #: mod/cr/edit.inc:171
-#: mod/cr/edit.inc:549
-#: mod/cr/edit.inc:646
+#: mod/cr/edit.inc:513
+#: mod/cr/edit.inc:610
 #: mod/cr/camp.inc:77
 #: mod/cr/camp.inc:470
 #: mod/cr/camp.inc:549
@@ -9673,8 +9687,8 @@ msgstr "庇護所人數"
 
 #: mod/cr/edit.inc:77
 #: mod/cr/edit.inc:173
-#: mod/cr/edit.inc:551
-#: mod/cr/edit.inc:648
+#: mod/cr/edit.inc:515
+#: mod/cr/edit.inc:612
 #: mod/cr/edit_ppl.inc:50
 #: mod/cr/camp.inc:79
 #: mod/cr/camp.inc:472
@@ -9684,8 +9698,8 @@ msgstr "男性"
 
 #: mod/cr/edit.inc:78
 #: mod/cr/edit.inc:174
-#: mod/cr/edit.inc:552
-#: mod/cr/edit.inc:649
+#: mod/cr/edit.inc:516
+#: mod/cr/edit.inc:613
 #: mod/cr/edit_ppl.inc:57
 #: mod/cr/camp.inc:80
 #: mod/cr/camp.inc:473
@@ -9695,19 +9709,19 @@ msgstr "女性"
 
 #: mod/cr/edit.inc:79
 #: mod/cr/edit.inc:175
-#: mod/cr/edit.inc:553
-#: mod/cr/edit.inc:650
+#: mod/cr/edit.inc:517
+#: mod/cr/edit.inc:614
 #: mod/cr/edit_ppl.inc:65
 #: mod/cr/camp.inc:81
 #: mod/cr/camp.inc:474
 #: mod/cr/camp.inc:553
 msgid "Children( 1 ~ 12 years old )"
-msgstr ""
+msgstr "兒童（1~12歲）"
 
 #: mod/cr/edit.inc:81
 #: mod/cr/edit.inc:178
-#: mod/cr/edit.inc:556
-#: mod/cr/edit.inc:652
+#: mod/cr/edit.inc:520
+#: mod/cr/edit.inc:616
 #: mod/cr/camp.inc:83
 #: mod/cr/camp.inc:477
 #: mod/cr/camp.inc:555
@@ -9716,8 +9730,8 @@ msgstr "感染人數"
 
 #: mod/cr/edit.inc:82
 #: mod/cr/edit.inc:179
-#: mod/cr/edit.inc:557
-#: mod/cr/edit.inc:653
+#: mod/cr/edit.inc:521
+#: mod/cr/edit.inc:617
 #: mod/cr/edit_ppl.inc:81
 #: mod/cr/camp.inc:84
 #: mod/cr/camp.inc:478
@@ -9738,7 +9752,7 @@ msgid "Available services"
 msgstr "可提供的服務"
 
 #: mod/cr/edit.inc:227
-#: mod/cr/edit.inc:565
+#: mod/cr/edit.inc:529
 #: mod/cr/camp.inc:173
 #: mod/cr/camp.inc:485
 msgid "Services / Facilities Available"
@@ -9749,6 +9763,7 @@ msgid "Deleted Shelter Succesfully"
 msgstr "成功刪除庇護所"
 
 #: mod/cr/edit.inc:278
+#: mod/cr/edit.inc:470
 #: mod/cr/camp.inc:433
 #: mod/cr/main.inc:34
 msgid "Edit Shelter"
@@ -9832,25 +9847,33 @@ msgstr "您成功地編輯了庇護所資訊。"
 msgid "The availability of Services & Facilities of the shelter are as follows"
 msgstr "庇護所可提供的服務和設備如下"
 
-#: mod/cr/edit.inc:470
-msgid "Service Type"
-msgstr "服務類型"
+#: mod/cr/edit.inc:466
+#: mod/cr/edit.inc:468
+#: mod/cr/camp.inc:429
+#: mod/cr/camp.inc:431
+#: mod/cr/main.inc:33
+msgid "Add Shelter"
+msgstr "新增庇護所"
 
-#: mod/cr/edit.inc:489
-#: mod/cr/edit.inc:579
+#: mod/cr/edit.inc:472
+#: mod/cr/main_fns.inc:48
+#: mod/cr/camp.inc:435
+msgid "Search by Name"
+msgstr "依名稱搜尋"
+
+#: mod/cr/edit.inc:473
+#: mod/cr/main_fns.inc:49
+#: mod/cr/camp.inc:436
+#: mod/cr/main.inc:31
+msgid "Search by address"
+msgstr "依地址搜尋"
+
+#: mod/cr/edit.inc:543
 #: mod/cr/camp.inc:499
 msgid "Available"
 msgstr "可使用"
 
-#: mod/cr/edit.inc:496
-msgid "NOT AVAILABLE"
-msgstr "不可使用"
-
-#: mod/cr/edit.inc:512
-msgid "Use the Navigation Menu to Continue"
-msgstr "用導覽選單繼續操作"
-
-#: mod/cr/edit.inc:585
+#: mod/cr/edit.inc:549
 #: mod/cr/camp.inc:505
 msgid "Not Available"
 msgstr "不可使用"
@@ -9897,19 +9920,8 @@ msgid "GIS Reports of Shelter"
 msgstr "庇護所的GIS報表"
 
 #: mod/cr/main_fns.inc:48
-#: mod/cr/camp.inc:435
-msgid "Search by Name"
-msgstr "依名稱搜尋"
-
-#: mod/cr/main_fns.inc:48
 msgid "Search for shelter by name or type of the shelter"
 msgstr "以庇護所名稱或類型進行搜尋"
-
-#: mod/cr/main_fns.inc:49
-#: mod/cr/camp.inc:436
-#: mod/cr/main.inc:31
-msgid "Search by address"
-msgstr "依地址搜尋"
 
 #: mod/cr/main_fns.inc:49
 msgid "Search the shelter by its location"
@@ -10256,12 +10268,6 @@ msgstr "婦產科床位不是有效的數字"
 #: mod/cr/camp.inc:425
 msgid "You have succesfully registered shelter "
 msgstr "您成功登錄了庇護所"
-
-#: mod/cr/camp.inc:429
-#: mod/cr/camp.inc:431
-#: mod/cr/main.inc:33
-msgid "Add Shelter"
-msgstr "新增庇護所"
 
 #: mod/cr/camp.inc:462
 msgid "Location : "
@@ -11030,7 +11036,7 @@ msgstr "請輸入有效的生日資料。"
 
 #: mod/dvr/edt_indv.inc:393
 msgid "Confirm  Details of"
-msgstr "確認  詳細資料（Confirm  Details of）"
+msgstr "確認  詳細資料"
 
 #: mod/dvr/edt_indv.inc:397
 #: mod/dvr/add_new_indv.inc:374
@@ -11346,7 +11352,7 @@ msgstr "請從列表裡選擇群組負責人"
 
 #: mod/dvr/add_new_indv.inc:370
 msgid "Confirm  Details of "
-msgstr "確認詳細諮詢of"
+msgstr "確認詳細資料"
 
 #: mod/dvr/add_new_indv.inc:375
 msgid "Group type "
@@ -11405,17 +11411,17 @@ msgid "Add Location"
 msgstr "新增位置"
 
 #: mod/rms/handler_req_new.inc:119
-#: mod/rms/lib_rms.inc:1310
+#: mod/rms/lib_rms.inc:1280
 msgid "Select a location where the request is related."
 msgstr "選擇一個跟需求相關的地點。"
 
 #: mod/rms/handler_req_new.inc:120
-#: mod/rms/lib_rms.inc:1311
+#: mod/rms/lib_rms.inc:1281
 msgid "If you want to make the request for a new location, add the location first."
 msgstr "如果你需要為此需求建立一個新的位置，請先增加該位置。"
 
 #: mod/rms/handler_req_new.inc:124
-#: mod/rms/lib_rms.inc:1317
+#: mod/rms/lib_rms.inc:1287
 msgid "Existing Location"
 msgstr "現有的位置"
 
@@ -11497,7 +11503,7 @@ msgstr "請填入卡片編號"
 msgid "Please enter a valid Requester Id"
 msgstr "請輸入一個有效的需求者編碼"
 
-#: mod/rms/handler_req_new.inc:507
+#: mod/rms/handler_req_new.inc:505
 msgid "The Request was successfully submitted"
 msgstr "已成功送出需求。"
 
@@ -11569,7 +11575,7 @@ msgstr "在資料庫中沒有符合您條件的需求"
 
 #: mod/rms/handler_req_ls.inc:219
 #: mod/rms/handler_req_ls.inc:236
-#: mod/rms/handler_req_sch.inc:284
+#: mod/rms/handler_req_sch.inc:281
 #: mod/rms/handler_plg_ls.inc:142
 #: mod/rms/handler_plg_ls.inc:198
 #: mod/rms/handler_plg_ls.inc:206
@@ -11592,12 +11598,12 @@ msgstr "需求搜尋：搜尋需求者、位置和需求"
 msgid "No requests found"
 msgstr "找不到需求"
 
-#: mod/rms/handler_req_sch.inc:239
+#: mod/rms/handler_req_sch.inc:236
 #: mod/rms/handler_plg_sch.inc:307
 msgid "There are no results that match your search criteria."
 msgstr "沒有符合您的搜尋條件的資料。"
 
-#: mod/rms/handler_req_sch.inc:284
+#: mod/rms/handler_req_sch.inc:281
 msgid "Back to Request Search"
 msgstr "回到需求搜尋"
 
@@ -11663,7 +11669,7 @@ msgstr "透過本系統捐贈物資"
 #: mod/rms/handler_home.inc:63
 #: mod/rms/main.inc:56
 msgid "List Pledges"
-msgstr "捐贈物資清單"
+msgstr "捐贈物資狀態列表"
 
 #: mod/rms/handler_home.inc:63
 msgid "List all the donations done through the system"
@@ -11700,7 +11706,7 @@ msgstr "需求/捐贈物資統計"
 
 #: mod/rms/handler_plg_ls.inc:19
 msgid "Pledge List"
-msgstr "允諾清單"
+msgstr "捐贈清單"
 
 #: mod/rms/handler_plg_ls.inc:83
 #: mod/rms/handler_plg_sch.inc:48
@@ -11854,10 +11860,9 @@ msgstr "列出擁有所選擇的物資的捐贈者列表，"
 msgid "Please select a pledge from the request to be fulfilled."
 msgstr "請從要滿足的需求裡選擇一個捐贈者。"
 
-# 尚待確認context
 #: mod/rms/handler_mng_ff.inc:178
 msgid "No Pledges have been registered !!!"
-msgstr "尚未有捐贈物資被登錄!!!"
+msgstr "尚未有符合需求的捐贈物資"
 
 #: mod/rms/handler_mng_ff.inc:248
 msgid "Allocate items from a pledge to fulfill a request, "
@@ -12051,21 +12056,17 @@ msgstr "選擇主目錄"
 msgid "Select the sub category"
 msgstr "選擇次目錄"
 
-#: mod/rms/lib_rms.inc:1213
-#: mod/rms/lib_rms.inc:1238
-#: mod/rms/lib_rms.inc:1257
-#: mod/rms/lib_rms.inc:1276
+#: mod/rms/lib_rms.inc:1227
+#: mod/rms/lib_rms.inc:1246
 msgid "Location already exists"
 msgstr "位置已經存在"
 
-#: mod/rms/lib_rms.inc:1222
-#: mod/rms/lib_rms.inc:1247
-#: mod/rms/lib_rms.inc:1266
-#: mod/rms/lib_rms.inc:1285
+#: mod/rms/lib_rms.inc:1234
+#: mod/rms/lib_rms.inc:1254
 msgid "Location added successfully"
 msgstr "成功新增位置"
 
-#: mod/rms/lib_rms.inc:1292
+#: mod/rms/lib_rms.inc:1262
 msgid "Select the location first"
 msgstr "請先選擇位置"
 
@@ -13524,7 +13525,7 @@ msgstr "編輯 OpenID"
 
 #: inc/lib_security/auth_form.inc:361
 msgid "New OpenID"
-msgstr "新 OpenID"
+msgstr "新增 OpenID"
 
 #: inc/lib_security/auth_form.inc:365
 msgid "Save OpenID"
@@ -13534,68 +13535,73 @@ msgstr "儲存 OpenID"
 msgid "The OpenID was succesfully updated"
 msgstr "OpenID 內容已更新"
 
-#: inc/lib_location.inc:601
+#: inc/lib_location.inc:616
 msgid "If you know any of the following, please select Only one of them first"
 msgstr "請只選擇一筆資料"
 
-#: inc/lib_location.inc:601
+#: inc/lib_location.inc:616
 msgid " , the selection will populate the set of Location select boxes "
 msgstr "，選擇的項目會計算出位置"
 
-#: inc/lib_location.inc:603
+#: inc/lib_location.inc:618
 msgid "* Camp/Shelter "
 msgstr "* 營地/避難所"
 
-#: inc/lib_location.inc:607
+#: inc/lib_location.inc:622
 msgid "* an Inventory "
 msgstr "* 存貨"
 
-#: inc/lib_location.inc:611
+#: inc/lib_location.inc:626
 msgid "* an Organization "
 msgstr "* 組織"
 
-#: inc/lib_location.inc:623
+#: inc/lib_location.inc:634
 msgid "Select a Camp/Shelter"
 msgstr "選擇營地/庇護所"
 
-#: inc/lib_location.inc:647
+#: inc/lib_location.inc:649
 msgid "Shelter/Camp"
 msgstr "避難所/營地"
 
-#: inc/lib_location.inc:655
+#: inc/lib_location.inc:656
 msgid "Select an Organization"
 msgstr "選擇組織"
 
-#: inc/lib_location.inc:668
+#: inc/lib_location.inc:667
 msgid "Organizations"
 msgstr "組織"
 
-#: inc/lib_location.inc:728
+#: inc/lib_location.inc:671
+#, fuzzy
+msgid "Select a Location"
+msgstr "選取要接收到地點"
+
+#: inc/lib_location.inc:729
 #, fuzzy
 msgid "This location name is already in the database. Do you want to add anyway?  &nbsp&nbsp&nbsp<b><a href='#' onclick='_shn_loc_val_name();'>Add anyway</a></b> or else you can change the \"Location Name\" textbox and submit the form again."
 msgstr "該位置名稱已經存在資料庫。你還是想要新增嗎？    <b><a href='#' onclick='_shn_loc_val_name();'>我要新增</a></b> 。或者你可以修改位置名稱的欄位，重新送出此表單。"
 
-#: inc/lib_location.inc:738
+#: inc/lib_location.inc:739
 msgid "Containts numbers. These are not allowed. Please remove them and try again."
 msgstr "內含數量。These are not allowed. Please remove them and try again."
 
-#: inc/lib_location.inc:783
+#: inc/lib_location.inc:784
 msgid "Location was succesfully deleted"
 msgstr "地點刪除成功"
 
-#: inc/lib_location.inc:785
+#: inc/lib_location.inc:786
 msgid "The location you are trying to delete is in use. If you want to delete it, please remove related data first."
 msgstr ""
 
-#: inc/lib_location.inc:821
+#: inc/lib_location.inc:822
 msgid "Select the location based at.  This is hierarchical. For example think you are based  in the country 'Sri lanka' ,district 'Colombo' ,and village 'dehiwala'.  start by selecting the country ,once you select country"
 msgstr "選擇所在的位置。這是階層式的。舉例來說，位置是台灣、高雄縣、甲仙鄉，請先選擇國家，然後再選擇縣市、鄉鎮。"
 
-#: inc/lib_location.inc:907
+#: inc/lib_location.inc:908
 msgid "Select the location based at.  This is hierarchical. For example think you are based  in the  'Sri lanka' ,district 'Colombo' ,and village 'dehiwala'.  start by selecting the  ,once you select all the divisions of that country will populate the next select box.  therefore in this case all the districts in 'Sri lanka' appear . From those select a district which will populate the village list in the next select box. So select 'dehiwala' and you have done it!please note that the levels can be customized, therefore it does not need to be 'country'->'district'->'village' ,always. Its configurable from the 'administration' section."
 msgstr "請選擇「台灣 Taiwan」"
 
-#: inc/lib_location.inc:969
+#: inc/lib_location.inc:970
 msgid ""
 "Select the location based at.  This is hierarchical. For example think you are based  in the country 'Sri lanka' ,district 'Colombo' ,and village 'dehiwala'.  start by selecting the country ,once you select country \n"
 "all the divisions of that country will populate the next select box.  therefore in this case all the districts in 'Sri lanka' appear . From those select a district which will populate the village list in the next select box. So select 'dehiwala' and you have done it! \n"
@@ -14729,7 +14735,7 @@ msgstr "限制-身心障礙"
 
 #: field_options/option_description,
 msgid "Site Manager"
-msgstr "專案管理員"
+msgstr "專案負責人"
 
 #: ct_unit/name,
 msgid "kl"
@@ -14840,6 +14846,24 @@ msgstr "多方面的"
 msgid "Medical"
 msgstr "醫療"
 
+#~ msgid "Refresh"
+#~ msgstr "更新"
+#~ msgid "# Volunteers"
+#~ msgstr "志工人數"
+#~ msgid "Target"
+#~ msgstr "目標"
+#~ msgid "Specialties needed"
+#~ msgstr "特殊專長需求"
+#~ msgid "Edit Your Details"
+#~ msgstr "編輯你的詳細資訊"
+#~ msgid "Register to Volunteer"
+#~ msgstr "登錄到志工"
+#~ msgid "Service Type"
+#~ msgstr "服務類型"
+#~ msgid "NOT AVAILABLE"
+#~ msgstr "不可使用"
+#~ msgid "Use the Navigation Menu to Continue"
+#~ msgstr "用導覽選單繼續操作"
 #~ msgid "User does not exist"
 #~ msgstr "使用者不存在"
 #~ msgid "Organisation Registry Configuration."
