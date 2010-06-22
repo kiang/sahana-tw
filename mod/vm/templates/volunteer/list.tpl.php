@@ -1,5 +1,5 @@
 {if count($volunteers) > 0}
-<table align=center>
+<table align="center" width="85%">
     <thead>
         <tr>
             <td>_("Name")</td>

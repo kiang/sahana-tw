@@ -37,11 +37,11 @@
         	<td>{$projectManager}</td>
         </tr>
         <tr>
-        	<td><b>_("Volunteers required :")</b></td>
+        	<td><b>_("Volunteers need")</b></td>
         	<td>{$requiredVolunteers}</td>
         </tr>
         <tr>
-        	<td><b>_("Volunteers assigned :")</b></td>
+        	<td><b>_("Volunteers assigned")</b></td>
         	<td>{$numVolunteers}</td>
         </tr>
         <tr>
@@ -53,26 +53,23 @@
 <br />
 
 {if count($positions) > 0}
-<table align=center>
-    <h3 style="text-align: center;">_("Positions")</h3>
-    <tbody>
-    	<tr>
-			<th colspan="3"></th>
-			<th colspan="2">_("# Volunteers")</th>
-			<th></th>
-    	</tr>
-		<tr>
-        	<th>_("Title")</th>
-        	<th>_("Description")</th>
-        	<th style="padding-right: 1em; text-align: center;">_("Target")</th>
-        	<th>_("Assigned")</th>
+<h3 style="text-align: center;">_("Positions")</h3>
+<table align="center" width="85%">
+    <thead>
+        <tr>
+            <td>_("Position title")</td>
+            <td>_("Position description")</td>
+            <td style="padding-right: 1em; text-align: center;">_("Volunteers need")</td>
+            <td>_("Volunteers assigned")</td>
         	{if $add_pos_auth || $delete_pos_auth}
-            <th>_("Actions")</th>
+            <td>_("Actions")</td>
         	{/if}
         	{if $assign_auth}
-        		<th>_("Pay Rate")</th>
+            <td>_("Pay Rate")</td>
         	{/if}
         </tr>
+    </thead>
+    <tbody>
 		{foreach $positions as $p}
         <tr>
         	<td>{$p.title}</td>
