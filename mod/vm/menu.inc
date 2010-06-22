@@ -48,6 +48,7 @@ function shn_vm_project_submenu() {
         shn_sub_mod_menuopen(_("Projects"));
         $ac->addMenuItem(_('Add New'), $ac->buildURLParams('project', 'display_add'), true);
         $ac->addMenuItem(_('View My Projects'), $ac->buildURLParams('project', 'display_my_list'), true);
+        $ac->addMenuItem(_('View Coming Projects'), $ac->buildURLParams('project', 'display_coming_list'), true);
         $ac->addMenuItem(_('View All'), $ac->buildURLParams('project', 'default'), true);
         shn_sub_mod_menuclose();
     }

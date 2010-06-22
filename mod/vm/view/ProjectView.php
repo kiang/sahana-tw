@@ -99,6 +99,12 @@ class ProjectView extends View {
         $this->engine->assign('projects', $p->getProjects($p_uuid, false, false, true));
         $this->engine->display('project/list.tpl.php');
     }
+
+    function listComingProjects() {
+        $p = new Project();
+        $this->engine->assign('projects', $p->getProjects(null, false, false, true, true));
+        $this->engine->display('project/list.tpl.php');
+    }
     /**
      * Add a new Project
      */

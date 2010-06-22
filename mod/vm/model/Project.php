@@ -64,8 +64,8 @@ class Project extends Model {
      * 		'description'	=> the project's description
      * 	)
      */
-    function getProjects($p_uuid = null, $mgr = false, $simple = false, $paging = false) {
-        return $this->dao->listProjects($p_uuid, $mgr, $simple, $paging);
+    function getProjects($p_uuid = null, $mgr = false, $simple = false, $paging = false, $onlyComing = false) {
+        return $this->dao->listProjects($p_uuid, $mgr, $simple, $paging, $onlyComing);
     }
     /**
      * A function to delete a project

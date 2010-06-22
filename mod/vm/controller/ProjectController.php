@@ -122,6 +122,12 @@ class ProjectController extends ProjectView implements Controller {
                 $this->listProjects($_SESSION['user_id']);
                 $this->showPagingNavigation("index.php?mod=vm&amp;act=project&amp;vm_action=display_my_list");
                 break;
+            case 'display_coming_list':
+                echo _('The items listed below are projects that will start from today or after today.');
+                echo '<div align="right"><a href="?mod=vm&act=project">' . _('View all projects') . '</a></div>';
+                $this->listComingProjects();
+                $this->showPagingNavigation("index.php?mod=vm&amp;act=project&amp;vm_action=display_coming_list");
+                break;
             case 'process_add_position':
                 if ($getvars['pos_id'] != null) $p = new Position($getvars['pos_id']);
                 else $p = new Position();

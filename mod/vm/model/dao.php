@@ -690,13 +690,23 @@ class DAO {
      * 		'description'	=> the project's description
      * 	)
      */
-    function listProjects($p_uuid = null, $mgr = false, $simple = false, $paged = false) {
+    function listProjects($p_uuid = null, $mgr = false, $simple = false, $paged = false, $onlyComing = false) {
+        global $global;
         //build the query
-        $query = "SELECT proj_id, name, description FROM vm_projects_active";
+        $query = "SELECT proj_id, name, location_id, start_date, end_date
+            FROM vm_projects_active";
+        $conditions = array();
         if (!is_null($p_uuid)) {
-            if ($mgr) $query.= " WHERE proj_id IN (SELECT proj_id FROM vm_vol_assignment_active WHERE p_uuid = '$p_uuid' AND ptype_id = 'smgr')";
-            else $query.= " WHERE proj_id IN (SELECT proj_id FROM vm_vol_assignment_active WHERE p_uuid = '$p_uuid') OR proj_id IN (SELECT proj_id FROM vm_vol_assignment_active WHERE p_uuid = '$p_uuid' AND ptype_id = 'smgr')";
+            if ($mgr) $conditions[] = "proj_id IN (SELECT proj_id FROM vm_vol_assignment_active WHERE p_uuid = '$p_uuid' AND ptype_id = 'smgr')";
+            else $conditions[] = "proj_id IN (SELECT proj_id FROM vm_vol_assignment_active WHERE p_uuid = '$p_uuid') OR proj_id IN (SELECT proj_id FROM vm_vol_assignment_active WHERE p_uuid = '$p_uuid' AND ptype_id = 'smgr')";
         }
+        if($onlyComing) {
+            $conditions[] = 'start_date > now()';
+        }
+        if(!empty($conditions)) {
+            $query .= ' WHERE ' . implode(' AND ', $conditions);
+        }
+        require_once ($global['approot'] . 'inc/lib_location.inc');
         //store the info
         if ($paged) {
             $result = $this->getCurrentPage($query);
@@ -705,8 +715,42 @@ class DAO {
         }
         $projects = array();
         while (is_object($result) && !$result->EOF) {
-            if ($simple) $projects[$result->fields['proj_id']] = $result->fields['name'];
-            else $projects[$result->fields['proj_id']] = array('name' => $result->fields['name'], 'description' => $result->fields['description']);
+            if ($simple) {
+                $projects[$result->fields['proj_id']] = $result->fields['name'];
+            } else {
+                if(!empty($result->fields['location_id'])) {
+                    $parents = array();
+                    shn_get_parents($result->fields['location_id'], $parents);
+                    $locations = array();
+                    if (!empty($parents))
+                        foreach ($parents as $loc_id)
+                            if ($loc_id != 'NULL') {
+                                $loc = $this->getLocation($loc_id);
+                                $locations[] = $loc['name'];
+                            }
+                    krsort($locations);
+                    $locations = implode("-->", $locations);
+                } else {
+                    $locations = '';
+                }
+                $projectManager = $this->getProjectManager($result->fields['proj_id']);
+                
+                $projects[$result->fields['proj_id']] = array(
+                    'name' => $result->fields['name'],
+                    'time' => implode(' ~ ', array(
+                        $result->fields['start_date'],
+                        $result->fields['end_date']
+                    )),
+                    'location' => $locations,
+                    'projectManager' => $projectManager['full_name'] .
+                        '(' . (!empty($projectManager['option_description'])
+                            ? _($projectManager['option_description']) : '') .
+                        ':' . $projectManager['contact_value'] . ')',
+                    'numVolunteers' => $this->getVolunteersInProject($result->fields['proj_id']),
+                    'requiredVolunteers' => $this->getRequiredVolunteers($result->fields['proj_id']),
+                    'description' => $result->fields['description'],
+                );
+            }
             $result->moveNext();
         }
         return $projects;
