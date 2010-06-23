@@ -737,6 +737,7 @@ class DAO {
                 $projectManager = $this->getProjectManager($result->fields['proj_id']);
                 
                 $projects[$result->fields['proj_id']] = array(
+                    'id' => $result->fields['proj_id'],
                     'name' => $result->fields['name'],
                     'time' => implode(' ~ ', array(
                         $result->fields['start_date'],
