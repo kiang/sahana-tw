@@ -706,6 +706,7 @@ class DAO {
         if(!empty($conditions)) {
             $query .= ' WHERE ' . implode(' AND ', $conditions);
         }
+        $query .= ' ORDER BY start_date DESC';
         require_once ($global['approot'] . 'inc/lib_location.inc');
         //store the info
         if ($paged) {
