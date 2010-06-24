@@ -46,16 +46,22 @@ class ProjectController extends ProjectView implements Controller {
         switch ($vm_action) {
             case 'display_single':
                 $p = new Project($getvars['proj_id']);
-                View::View($p);
                 $this->displayProject($p);
             break;
             case 'display_add':
-                View::View();
                 $this->addProject();
             break;
             case 'display_edit':
-                View::View();
                 $this->addProject(new Project($getvars['proj_id']));
+            break;
+            case 'display_closure_edit':
+                if($dao->isSiteManagerForProject($_SESSION['user_id'], $getvars['proj_id'])) {
+                    if (!empty($_POST)) {
+                        $dao->saveClosureReport($getvars['proj_id'], $_POST);
+                        $this->displayConfirmation(_('Changes Saved.'));
+                    }
+                    $this->editClosure($getvars['proj_id']);
+                }
             break;
             case 'process_add':
                 $p = new Project($getvars['proj_id']);
@@ -68,11 +74,9 @@ class ProjectController extends ProjectView implements Controller {
                 shn_get_parents(shn_location_get_form_submit_loc(), $p->info['locations']);
                 if ($this->validateAddForm($getvars)) {
                     $p->save();
-                    View::View($p);
-                    $this->displayConfirmation('Changes Saved.');
+                    $this->displayConfirmation(_('Changes Saved.'));
                     $this->displayProject($p);
                 } else {
-                    View::View($p);
                     $this->addProject();
                 }
             break;

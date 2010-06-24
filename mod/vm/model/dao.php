@@ -764,6 +764,63 @@ class DAO {
         }
         return $projects;
     }
+
+    function getProjectClosureReport($proj_id) {
+        global $global;
+        $query = 'SELECT P.name,P.start_date, P.end_date, VPR.*
+            FROM vm_projects_active AS P
+            LEFT JOIN vm_project_reports AS VPR ON VPR.proj_id = P.proj_id
+            WHERE P.proj_id = ' . $proj_id;
+        $result = $this->execute($query);
+        $project = array();
+        if(is_object($result) && !$result->EOF) {
+            $project = $result->fields;
+            $project['proj_id'] = $proj_id;
+            $project['manager'] = $this->getProjectManager($proj_id);
+        }
+        $project['positions'] = array();
+        $query = 'SELECT VVP.pos_id, VVP.p_uuid, VP.title, VVP.hours, PU.full_name
+            FROM vm_position AS VP
+            LEFT JOIN vm_vol_position AS VVP ON VVP.pos_id = VP.pos_id
+            LEFT JOIN person_uuid AS PU ON PU.p_uuid = VVP.p_uuid
+            WHERE VP.ptype_id != \'smgr\' AND VP.status = \'active\'
+                AND PU.p_uuid IS NOT NULL AND VP.proj_id = ' . $proj_id;
+        $result = $this->execute($query);
+        while(is_object($result) && !$result->EOF) {
+            $project['positions'][] = $result->fields;
+            $result->moveNext();
+        }
+        return $project;
+    }
+
+    function saveClosureReport($proj_id, $data) {
+        //$_SESSION['user_id']
+        if(!empty($data['hours'])) {
+            foreach($data['hours'] AS $pos_id => $p_uuids) {
+                foreach($p_uuids AS $p_uuid => $hours) {
+                    $this->execute('UPDATE vm_vol_position
+                        SET hours = \'' . $hours . '\'
+                        WHERE p_uuid = \'' . $p_uuid . '\' AND pos_id = \'' . $pos_id . '\'');
+                }
+            }
+        }
+        $result = $this->execute('SELECT proj_id FROM vm_project_reports WHERE proj_id = ' . $proj_id);
+        if(is_object($result) && !$result->EOF) {
+            $this->execute('UPDATE vm_project_reports
+                SET p_uuid = \'' . $_SESSION['user_id'] . '\',
+                    description = \'' . $data['description']. '\',
+                    suggestion1 = \'' . $data['description']. '\',
+                    suggestion2 = \'' . $data['description']. '\',
+                    modified = now()
+                WHERE proj_id = ' . $proj_id);
+        } else {
+            $this->execute('INSERT INTO vm_project_reports VALUES(
+                \'' . $proj_id . '\', \'' . $_SESSION['user_id'] . '\',
+                \'' . $data['description']. '\', \'' . $data['description']. '\',
+                \'' . $data['description']. '\', now())');
+        }
+    }
+
     /**
      * Retrieves information about a single project.
      *

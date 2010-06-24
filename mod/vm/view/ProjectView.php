@@ -131,6 +131,12 @@ class ProjectView extends View {
         $this->engine->assign('hidden', $hidden);
         $this->engine->display('project/add.tpl.php');
     }
+
+    function editClosure($proj_id) {
+        global $dao;
+        $this->engine->assign('project', $dao->getProjectClosureReport($proj_id));
+        $this->engine->display('project/edit_closure.tpl.php');
+    }
     /**
      * Displays a form for assigning volunteers to a project
      */
