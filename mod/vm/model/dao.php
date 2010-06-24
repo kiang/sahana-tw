@@ -693,7 +693,12 @@ class DAO {
     function listProjects($p_uuid = null, $mgr = false, $simple = false, $paged = false, $onlyComing = false) {
         global $global;
         //build the query
-        $query = "SELECT proj_id, name, location_id, start_date, end_date
+        $query = "SELECT proj_id, name, location_id, start_date, end_date,
+            (SELECT COUNT(*) FROM vm_position AS VP
+                INNER JOIN vm_vol_position AS VVP ON VVP.pos_id = VP.pos_id
+                    AND VVP.hours IS NOT NULL AND VVP.hours > 0
+                WHERE VP.proj_id = vm_projects_active.proj_id
+            ) AS attended_count
             FROM vm_projects_active";
         $conditions = array();
         if (!is_null($p_uuid)) {
@@ -748,6 +753,7 @@ class DAO {
                         '(' . (!empty($projectManager['option_description'])
                             ? _($projectManager['option_description']) : '') .
                         ':' . $projectManager['contact_value'] . ')',
+                    'attended_count' => $result->fields['attended_count'],
                     'numVolunteers' => $this->getVolunteersInProject($result->fields['proj_id']),
                     'requiredVolunteers' => $this->getRequiredVolunteers($result->fields['proj_id']),
                     'description' => $result->fields['description'],

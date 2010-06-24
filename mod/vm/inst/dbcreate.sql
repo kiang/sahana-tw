@@ -5,6 +5,7 @@
 DROP TABLE IF EXISTS vm_vol_skills;
 DROP TABLE IF EXISTS vm_vol_details;
 DROP TABLE IF EXISTS vm_projects;
+DROP TABLE IF EXISTS vm_project_reports;
 DROP TABLE IF EXISTS vm_vol_position;
 DROP TABLE IF EXISTS vm_positiontype;
 DROP TABLE IF EXISTS vm_position;
@@ -154,6 +155,16 @@ CREATE TABLE IF NOT EXISTS vm_projects (
   end_date date default NULL,
   description text NOT NULL,
   status set('active','completed') NOT NULL default 'active',
+  PRIMARY KEY  (proj_id)
+);
+
+CREATE TABLE IF NOT EXISTS vm_project_reports (
+  proj_id bigint(20) NOT NULL,
+  p_uuid varchar(60) NOT NULL,
+  description text default NULL,
+  suggestion1 text default NULL,
+  suggestion2 text default NULL,
+  modified datetime NOT NULL,
   PRIMARY KEY  (proj_id)
 );
 
