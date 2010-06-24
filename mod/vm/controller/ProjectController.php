@@ -115,7 +115,6 @@ class ProjectController extends ProjectView implements Controller {
             case 'process_remove_from_project':
                 $dao->deleteFromProject($getvars['p_uuid'], $getvars['proj_id']);
                 $p = new Project($getvars['proj_id']);
-                View::View($p);
                 $this->displayProject($p);
                 break;
             case 'display_my_list':

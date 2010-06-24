@@ -753,6 +753,7 @@ class DAO {
                         '(' . (!empty($projectManager['option_description'])
                             ? _($projectManager['option_description']) : '') .
                         ':' . $projectManager['contact_value'] . ')',
+                    'p_uuid' => $projectManager['p_uuid'],
                     'attended_count' => $result->fields['attended_count'],
                     'numVolunteers' => $this->getVolunteersInProject($result->fields['proj_id']),
                     'requiredVolunteers' => $this->getRequiredVolunteers($result->fields['proj_id']),
@@ -1834,7 +1835,7 @@ class DAO {
     }
 
     function getProjectManager($projectId) {
-        $q = "SELECT PU.full_name, FO.option_description, CM.contact_value
+        $q = "SELECT PU.p_uuid, PU.full_name, FO.option_description, CM.contact_value
             FROM vm_vol_assignment_active AS VVAA
             LEFT JOIN person_uuid AS PU ON PU.p_uuid = VVAA.p_uuid
             LEFT JOIN contact AS CF ON CF.pgoc_uuid = VVAA.p_uuid

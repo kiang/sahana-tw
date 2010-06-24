@@ -100,6 +100,7 @@ class ProjectView extends View {
         if(empty($p_uuid)) {
             $this->engine->display('project/list_all.tpl.php');
         } else {
+            $this->engine->assign('p_uuid', $p_uuid);
             $this->engine->display('project/list.tpl.php');
         }
     }
