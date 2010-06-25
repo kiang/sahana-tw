@@ -51,3 +51,9 @@
 <h3>_("Suggestion of this project")</h3>
 <div>{$project.suggestion1}</div><br />
 <div>{$project.suggestion2}</div><br />
+
+<div align="center">
+<a href='?mod=vm&act=project&vm_action=display_closure_reports'>_("Back to closure report list")</a>
+&nbsp; &nbsp;
+<a href='?mod=vm&act=default'>_("Back to index of volunteer module")</a>
+</div>
