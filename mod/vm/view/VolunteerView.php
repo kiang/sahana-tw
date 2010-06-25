@@ -468,23 +468,6 @@ class VolunteerView extends View {
         $this->engine->assign('volunteers', $vols);
         $this->engine->display('volunteer/approve.tpl.php');
     }
-    function showLogTime($p_uuid, $pos_id) {
-        if (!empty($p_uuid) && !empty($pos_id)) {
-            $v = new Volunteer($p_uuid);
-            $p = new Position($pos_id);
-            $this->engine->assign('p_uuid', $p_uuid);
-            $this->engine->assign('pos_id', $pos_id);
-            $this->engine->assign('info', $v->info);
-            $this->engine->assign('pos_title', $p->title);
-            $this->engine->assign('proj_name', $p->proj_name);
-            $this->engine->assign('nowDate', date('Y/m/d'));
-            $this->engine->assign('startTime', date('g:00 a'));
-            $this->engine->assign('nowTime', date('g:i a'));
-            $this->engine->display('volunteer/log_time.tpl.php');
-        } else {
-            echo "Invalid user or position.";
-        }
-    }
     function displayReviewHours($proj_id) {
         if (!empty($proj_id)) {
             $this->engine->assign('proj_id', $proj_id);
@@ -495,4 +478,3 @@ class VolunteerView extends View {
         $this->engine->display('volunteer/showListHours.tpl.php');
     }
 }
-?>

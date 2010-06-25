@@ -365,9 +365,6 @@ class VolunteerController extends VolunteerView implements Controller {
                 add_confirmation(_('Approval information has been updated'));
                 $this->displayApprovalForm($dao->getVolunteerNames(), $dao->getVolunteersByAbility('MGR'));
                 break;
-            case 'display_log_time_form':
-                $this->showLogTime($getvars['p_uuid'], $getvars['pos_id']);
-                break;
             case 'process_log_time':
                 $start = strtotime($getvars['startDate'] . ' ' . $getvars['startTime']);
                 if (empty($getvars['numHours'])) $end = strtotime($getvars['endDate'] . ' ' . $getvars['endTime']);

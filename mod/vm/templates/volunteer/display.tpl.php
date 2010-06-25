@@ -114,7 +114,6 @@
 			<tr>
 				<td> _("Project") </td>
 				<td>_("Position")</td>
-				<td>_("Log Time")</td>
 			</tr>
 		</thead>
 		<tbody>
@@ -123,16 +122,6 @@
 			<tr>
 				<td><a href="?mod=vm&amp;act=project&amp;vm_action=display_single&amp;proj_id={$position.proj_id}">{$position.project_name}</a></td>
 				<td>{$position.title}</td>
-				<td style="text-align: center">
-					{php}
-						if($ac->isAuthorized(false, $ac->buildURLParams('volunteer', 'display_log_time_form', array('pos_id' => $position['pos_id'], 'p_uuid' => $p_uuid))))
-						{
-					{/php}
-						<a href="?mod=vm&amp;act=volunteer&amp;vm_action=display_log_time_form&amp;p_uuid={$p_uuid}&amp;pos_id={$position.pos_id}">_("Log time")</a>
-					{else}
-						---
-					{/if}
-				</td>
 			</tr>
 		{/foreach}
 
