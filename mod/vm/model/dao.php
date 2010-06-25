@@ -767,7 +767,8 @@ class DAO {
 
     function getProjectClosureReport($proj_id) {
         global $global;
-        $query = 'SELECT P.name,P.start_date, P.end_date, VPR.*
+        $query = 'SELECT P.name, P.start_date, P.end_date,
+            P.description AS projectDescription, VPR.*
             FROM vm_projects_active AS P
             LEFT JOIN vm_project_reports AS VPR ON VPR.proj_id = P.proj_id
             WHERE P.proj_id = ' . $proj_id;

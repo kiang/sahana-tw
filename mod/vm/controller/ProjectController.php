@@ -63,6 +63,9 @@ class ProjectController extends ProjectView implements Controller {
                     $this->editClosure($getvars['proj_id']);
                 }
             break;
+            case 'display_closure_report':
+                $this->viewClosure($getvars['proj_id']);
+            break;
             case 'process_add':
                 $p = new Project($getvars['proj_id']);
                 $p->info['name'] = $getvars['name'];
