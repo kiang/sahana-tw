@@ -108,7 +108,13 @@ class ProjectView extends View {
     function listComingProjects() {
         $p = new Project();
         $this->engine->assign('projects', $p->getProjects(null, false, false, true, true));
-        $this->engine->display('project/list.tpl.php');
+        $this->engine->display('project/list_all.tpl.php');
+    }
+
+    function listClosureReports() {
+        $p = new Project();
+        $this->engine->assign('projects', $p->getProjects(null, false, false, true));
+        $this->engine->display('project/list_closure.tpl.php');
     }
     /**
      * Add a new Project

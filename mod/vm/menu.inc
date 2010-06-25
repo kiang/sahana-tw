@@ -76,6 +76,7 @@ function shn_vm_reports_submenu() {
         //$ac->addMenuItem('Report All Volunteers', $ac->buildURLParams('volunteer', 'display_report_all'), true);
         $ac->addMenuItem(_('Custom Report'), $ac->buildURLParams('volunteer', 'display_custom_report_select'), true);
         $ac->addMenuItem(_('Report On My Projects'), $ac->buildURLParams('volunteer', 'display_custom_report_select_for_mgrs'), true);
+        $ac->addMenuItem(_('Closure Reports'), $ac->buildURLParams('project', 'display_closure_reports'), true);
         shn_sub_mod_menuclose();
     }
 }
