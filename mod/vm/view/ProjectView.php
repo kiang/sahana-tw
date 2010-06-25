@@ -113,6 +113,7 @@ class ProjectView extends View {
 
     function listClosureReports() {
         $p = new Project();
+        $this->engine->assign('p_uuid', $_SESSION['user_id']);
         $this->engine->assign('projects', $p->getProjects(null, false, false, true));
         $this->engine->display('project/list_closure.tpl.php');
     }
@@ -146,6 +147,7 @@ class ProjectView extends View {
 
     function viewClosure($proj_id) {
         global $dao;
+        $this->engine->assign('p_uuid', $_SESSION['user_id']);
         $this->engine->assign('project', $dao->getProjectClosureReport($proj_id));
         $this->engine->display('project/view_closure.tpl.php');
     }

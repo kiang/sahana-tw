@@ -1,7 +1,9 @@
 <h2>_("Project Closure Report")</h2>
+{if $p_uuid == $project['manager']['p_uuid']}
 <div id="submenu_v">
     <a href='?mod=vm&act=project&vm_action=display_closure_edit&proj_id={$project.proj_id}'>_("Edit")</a>
 </div>
+{/if}
 
 <table align="center" width="85%">
     <tbody>

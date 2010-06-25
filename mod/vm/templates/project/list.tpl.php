@@ -15,7 +15,7 @@
         <tr>
             <td>
                 <a href='?mod=vm&act=project&vm_action=display_single&proj_id={$project.id}'>{$project.name}</a>
-                {if $p_uuid = $project.p_uuid}
+                {if $p_uuid == $project['p_uuid']}
                 <br /><a href='?mod=vm&act=project&vm_action=display_closure_edit&proj_id={$project.id}'>[_("Edit closure report")]</a>
                 {/if}
             </td>
