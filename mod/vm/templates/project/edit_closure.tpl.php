@@ -12,6 +12,7 @@ shn_form_fopen('project&vm_action=display_closure_edit&proj_id=' . $project['pro
         <tr>
             <td>' . _('Volunteer name') . '</td>
             <td>' . _('Volunteer position') . '</td>
+            <td>' . _('Attended or absence') . '</td>
             <td>' . _('Attended hours') . '</td>
         </tr>
             </thead><tbody>';
@@ -19,6 +20,14 @@ shn_form_fopen('project&vm_action=display_closure_edit&proj_id=' . $project['pro
                 echo '<tr>
             <td>' . $position['full_name'] . '</td>
             <td>' . $position['title'] . '</td>
+            <td>
+                <input type="radio" name="attended[' . $position['pos_id'] . '][' . $position['p_uuid'] . ']" value="1"
+                ' . (($position['is_attended'] == 1) ? 'checked="checked"' : '') . ' />
+                ' . _('Attended') . '
+                <input type="radio" name="attended[' . $position['pos_id'] . '][' . $position['p_uuid'] . ']" value="0"
+                ' . (($position['is_attended'] == 1) ? '' : 'checked="checked"') . ' />
+                ' . _('Absence') . '
+            </td>
             <td><input type="text" name="hours[' . $position['pos_id'] . '][' . $position['p_uuid'] . ']" value="' . $position['hours'] . '" /></td>
         </tr>';
             }

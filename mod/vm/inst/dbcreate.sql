@@ -134,6 +134,7 @@ CREATE TABLE vm_vol_position (
   p_uuid varchar(60) NOT NULL default '',
   pos_id varchar(60) NOT NULL,
   status set('active','retired') default 'active',
+  is_attended TINYINT( 1 ) NOT NULL,
   payrate double default NULL,
   hours bigint(20) default NULL,
   task varchar(20) default NULL,

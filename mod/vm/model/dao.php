@@ -780,7 +780,8 @@ class DAO {
             $project['manager'] = $this->getProjectManager($proj_id);
         }
         $project['positions'] = array();
-        $query = 'SELECT VVP.pos_id, VVP.p_uuid, VP.title, VVP.hours, PU.full_name
+        $query = 'SELECT VVP.pos_id, VVP.p_uuid, VP.title, VVP.hours,
+            VVP.is_attended, PU.full_name
             FROM vm_position AS VP
             LEFT JOIN vm_vol_position AS VVP ON VVP.pos_id = VP.pos_id
             LEFT JOIN person_uuid AS PU ON PU.p_uuid = VVP.p_uuid
@@ -795,12 +796,15 @@ class DAO {
     }
 
     function saveClosureReport($proj_id, $data) {
-        //$_SESSION['user_id']
         if(!empty($data['hours'])) {
             foreach($data['hours'] AS $pos_id => $p_uuids) {
                 foreach($p_uuids AS $p_uuid => $hours) {
                     $this->execute('UPDATE vm_vol_position
-                        SET hours = \'' . $hours . '\'
+                        SET hours = \'' . $hours . '\',
+                            is_attended = \'' . (
+                            !empty($data['attended'][$pos_id][$p_uuid]) ?
+                                '1' : '0'
+                            ) . '\'
                         WHERE p_uuid = \'' . $p_uuid . '\' AND pos_id = \'' . $pos_id . '\'');
                 }
             }

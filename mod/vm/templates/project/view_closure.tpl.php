@@ -35,6 +35,7 @@
         <tr>
             <td>_("Volunteer name")</td>
             <td>_("Volunteer position")</td>
+            <td>_("Attended or absence")</td>
             <td>_("Attended hours")</td>
         </tr>
     </thead>
@@ -43,6 +44,13 @@
         <tr>
             <td>{$position.full_name}</td>
             <td>{$position.title}</td>
+            <td>
+                {if $position['is_attended'] == 1}
+                _("Attended")
+                {else}
+                _("Absence")
+                {/if}
+            </td>
             <td>{$position.hours}</td>
         </tr>
         {/foreach}
