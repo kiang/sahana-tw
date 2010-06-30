@@ -814,15 +814,13 @@ class DAO {
             $this->execute('UPDATE vm_project_reports
                 SET p_uuid = \'' . $_SESSION['user_id'] . '\',
                     description = \'' . $data['description']. '\',
-                    suggestion1 = \'' . $data['description']. '\',
-                    suggestion2 = \'' . $data['description']. '\',
+                    suggestion = \'' . $data['suggestion']. '\',
                     modified = now()
                 WHERE proj_id = ' . $proj_id);
         } else {
             $this->execute('INSERT INTO vm_project_reports VALUES(
                 \'' . $proj_id . '\', \'' . $_SESSION['user_id'] . '\',
-                \'' . $data['description']. '\', \'' . $data['description']. '\',
-                \'' . $data['description']. '\', now())');
+                \'' . $data['description']. '\', \'' . $data['suggestion']. '\', now())');
         }
     }
 

@@ -43,12 +43,8 @@ shn_form_fopen('project&vm_action=display_closure_edit&proj_id=' . $project['pro
 	shn_form_fsclose();
 
 	shn_form_fsopen(_('Suggestion of this project'));
-        shn_form_textarea('', "suggestion1", '', array(
-            'value'=>$project['suggestion1'],
-            'cols' => 60, 'rows' => 6,
-        ));
-        shn_form_textarea('', "suggestion2", '', array(
-            'value'=>$project['suggestion2'],
+        shn_form_textarea('', "suggestion", '', array(
+            'value'=>$project['suggestion'],
             'cols' => 60, 'rows' => 6,
         ));
 	shn_form_fsclose();

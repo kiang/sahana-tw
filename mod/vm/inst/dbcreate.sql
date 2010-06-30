@@ -163,8 +163,7 @@ CREATE TABLE IF NOT EXISTS vm_project_reports (
   proj_id bigint(20) NOT NULL,
   p_uuid varchar(60) NOT NULL,
   description text default NULL,
-  suggestion1 text default NULL,
-  suggestion2 text default NULL,
+  suggestion text default NULL,
   modified datetime NOT NULL,
   PRIMARY KEY  (proj_id)
 );
