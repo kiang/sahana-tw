@@ -785,7 +785,7 @@ class DAO {
             FROM vm_position AS VP
             LEFT JOIN vm_vol_position AS VVP ON VVP.pos_id = VP.pos_id
             LEFT JOIN person_uuid AS PU ON PU.p_uuid = VVP.p_uuid
-            WHERE VP.ptype_id != \'smgr\' AND VP.status = \'active\'
+            WHERE VP.status = \'active\'
                 AND PU.p_uuid IS NOT NULL AND VP.proj_id = ' . $proj_id;
         $result = $this->execute($query);
         while(is_object($result) && !$result->EOF) {
