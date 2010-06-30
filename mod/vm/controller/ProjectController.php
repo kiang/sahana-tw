@@ -59,8 +59,12 @@ class ProjectController extends ProjectView implements Controller {
                     if (!empty($_POST)) {
                         $dao->saveClosureReport($getvars['proj_id'], $_POST);
                         $this->displayConfirmation(_('Changes Saved.'));
+                        echo '<script type="text/javascript">';
+                        echo 'setTimeout(\'location.href="?mod=vm&act=project&vm_action=display_closure_report&proj_id=' . $getvars['proj_id'] . '"\',1500);';
+                        echo '</script>';
+                    } else {
+                        $this->editClosure($getvars['proj_id']);
                     }
-                    $this->editClosure($getvars['proj_id']);
                 }
             break;
             case 'display_closure_report':
