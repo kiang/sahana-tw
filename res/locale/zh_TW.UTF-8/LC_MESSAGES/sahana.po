@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-06-22 11:15+0800\n"
-"PO-Revision-Date: 2010-06-22 11:18+0800\n"
+"PO-Revision-Date: 2010-06-30 10:15+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -364,7 +364,7 @@ msgstr "個人資訊"
 #: tools/tpl_languages.php:211
 #: tools/tpl_languages.php:227
 msgid "Any ID Number:"
-msgstr "任意編號："
+msgstr "身份證件、駕照或護照號碼："
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:14
 #: tools/tpl_languages.php:103
@@ -377,11 +377,11 @@ msgstr "姓名"
 #: tools/tpl_languages.php:213
 #: tools/tpl_languages.php:231
 msgid "Loose Name Matching"
-msgstr "模糊查詢"
+msgstr "進階模糊查詢"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:15
 msgid "(May return many unrelated results)"
-msgstr "(也許傳回了許多不相關的結果)"
+msgstr "(搜尋結果將不完全精準)"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:18
 #: tools/tpl_languages.php:192
@@ -394,13 +394,13 @@ msgstr "技能"
 #: tools/tpl_languages.php:215
 #: tools/tpl_languages.php:236
 msgid "Require ALL skills below"
-msgstr "需要下面所有技能"
+msgstr "符合下面所有技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
 #: tools/tpl_languages.php:216
 #: tools/tpl_languages.php:237
 msgid "Require ANY skills below"
-msgstr "需要下面任意技能"
+msgstr "符合下面任一技能"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
 #: tools/tpl_languages.php:217
@@ -452,7 +452,7 @@ msgstr "前往頁碼："
 #: tools/tpl_languages.php:250
 #: inc/lib_paging.inc:137
 msgid "Go to Last Page"
-msgstr "前往最後一頁"
+msgstr "前往最末頁"
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:62
 #: tools/tpl_languages.php:251
@@ -1486,7 +1486,7 @@ msgstr "只有全部條件都符合的結果才會被顯示出來"
 
 #: tools/tpl_languages.php:225
 msgid "Filter volunteer results by any one of the following fields:"
-msgstr "請以下列任一欄位過濾志工查詢結果"
+msgstr "請以下列任一條件查詢所需志工"
 
 #: tools/tpl_languages.php:229
 #, fuzzy
@@ -1503,7 +1503,7 @@ msgstr "尋找任何發音相似的名字"
 
 #: tools/tpl_languages.php:233
 msgid "Show only unassigned"
-msgstr "僅顯示為指派"
+msgstr "僅顯示未指派"
 
 #: tools/tpl_languages.php:238
 msgid "and_skills"
@@ -1511,11 +1511,11 @@ msgstr "以及技巧"
 
 #: tools/tpl_languages.php:240
 msgid "Volunteer must be available for the ENTIRE time specified below"
-msgstr ""
+msgstr "篩選出符合以下完整時間區段的志工"
 
 #: tools/tpl_languages.php:241
 msgid "Volunteer must be available for ANY PORTION of the time specified below"
-msgstr ""
+msgstr "篩選出符合以下部分時間區段的志工"
 
 #: tools/tpl_languages.php:244
 msgid "Page"
@@ -2415,7 +2415,7 @@ msgstr "所屬組織"
 #: mod/or/reg_org.inc:260
 #: mod/ims/reg_inv.inc:86
 msgid "Operation/Branch Name : "
-msgstr "營運/分支機構名稱："
+msgstr "分支機構名稱"
 
 #: mod/or/reg_org.inc:262
 #: mod/or/admin.inc:23
@@ -2426,11 +2426,11 @@ msgstr "與所屬組織的關係"
 #: mod/or/report.inc:271
 #: mod/ims/ims_report.inc:305
 msgid "Organization Report By "
-msgstr "組織報告是由 "
+msgstr "組織列表依"
 
 #: mod/or/report.inc:160
 msgid "This table covers the number of organizations that provide a particular service in a area as a geographical drill down. You may view  a sub-location by clicking on a parent-location and the organization details by clicking on the appropriate number. Please give attention to all services Not covered."
-msgstr "這個表格包括了在某一個區域（按地域排列）提供特殊服務的組織數量你可通過點擊上一級區域來查看子區域，點擊相應的數字來查看組織詳細資訊。請注意不是所有的服務都涵蓋在內。"
+msgstr "這個表格包括了在某一個區域（按地域排列）提供特殊服務的組織數量，你可點選上某層級名稱以查看其所屬區域，點擊相應的數字來查看組織詳細資訊。請注意不是所有的服務都涵蓋在內。"
 
 #: mod/or/report.inc:260
 msgid "Organization Report for "
@@ -2458,7 +2458,7 @@ msgstr "未涵蓋"
 #: mod/or/report.inc:432
 #: mod/ims/ims_report.inc:428
 msgid "Organization Report by Sector"
-msgstr "依領域區分的組織報表"
+msgstr "組織列表-依服務內容篩選"
 
 #: mod/or/report.inc:447
 #: mod/gis/wm_fns.inc:39
@@ -3126,15 +3126,15 @@ msgstr "報表"
 
 #: mod/or/main.inc:41
 msgid "Drill down Location Coverage"
-msgstr "位置涵蓋範圍"
+msgstr "組織服務統計列表-依行政區"
 
 #: mod/or/main.inc:42
 msgid "Drill down Organization Coverage"
-msgstr "組織涵蓋範圍"
+msgstr "依地理層級瀏覽組織"
 
 #: mod/or/main.inc:44
 msgid "Organizations by Sector"
-msgstr "根據領域區分組織"
+msgstr "組織列表-依服務內容"
 
 #: mod/or/main.inc:190
 msgid "Branches or departments are registerd with the Organization. Please remove them first"
@@ -3385,7 +3385,7 @@ msgstr "查看結果..."
 
 #: mod/home/conf.inc:2
 msgid "Sahana Home"
-msgstr "Sahana 首頁"
+msgstr "SahanaTW 首頁"
 
 #: mod/home/stream.inc:9
 msgid ""
@@ -3964,7 +3964,7 @@ msgstr "已成功加入物資"
 
 #: mod/ims/conf.inc:18
 msgid "Inventory Management"
-msgstr "庫存管理"
+msgstr "物資庫存與倉庫管理"
 
 #: mod/ims/optimize.inc:31
 msgid "Select Relative Item/Items"
@@ -4375,7 +4375,7 @@ msgstr "授權者"
 #: mod/ims/view_edit_item.inc:155
 #: mod/ims/transfer_inv.inc:465
 msgid "Transit Item"
-msgstr "物資移倉紀錄"
+msgstr "物資發送/運送紀錄"
 
 #: mod/ims/lib_ims.inc:395
 msgid "Inventory Space : "
@@ -4430,11 +4430,11 @@ msgstr "需要"
 
 #: mod/ims/lib_ims_rss.inc:65
 msgid "Transit item List"
-msgstr "移倉物資清單"
+msgstr "物資發送/運送紀錄"
 
 #: mod/ims/lib_ims_rss.inc:65
 msgid "Items which are in transit."
-msgstr "在移倉中途的物資。"
+msgstr "在發送/運送中途的物資。"
 
 #: mod/ims/lib_ims_rss.inc:75
 msgid "An amount of "
@@ -4489,7 +4489,7 @@ msgstr "前往頁面："
 
 #: mod/ims/view_edit_item.inc:147
 msgid "Inventory Transfer"
-msgstr "物資運送/移倉"
+msgstr "物資運送/發送"
 
 #: mod/ims/view_edit_item.inc:154
 msgid "Send Item"
@@ -4681,7 +4681,7 @@ msgstr "庫存登錄資訊"
 
 #: mod/ims/transfer_inv.inc:25
 msgid "Send Items between Inventories"
-msgstr "在倉庫之間移動物資"
+msgstr "發送/運送 物資"
 
 #: mod/ims/transfer_inv.inc:26
 msgid "Please select the Item to be sent"
@@ -4697,7 +4697,7 @@ msgstr "頁面編號"
 #: mod/ims/transfer_inv.inc:67
 #: mod/ims/transfer_inv.inc:221
 msgid "Send Item between Inventories"
-msgstr "在倉庫之間移動物資"
+msgstr "發送 / 運送物資"
 
 #: mod/ims/transfer_inv.inc:100
 #: mod/ims/transfer_inv.inc:154
@@ -4706,11 +4706,11 @@ msgstr "狀態"
 
 #: mod/ims/transfer_inv.inc:229
 msgid "Item Send : "
-msgstr "發送物資："
+msgstr "發送物資"
 
 #: mod/ims/transfer_inv.inc:231
 msgid "Amount Send: "
-msgstr "發送總數："
+msgstr "發送總數"
 
 #: mod/ims/transfer_inv.inc:245
 msgid "Select the Measurement unit for entered amount. If this box does not contain the desired measurement unit please go back to the catalogue system and add"
@@ -4854,11 +4854,11 @@ msgstr "頁碼編號"
 
 #: mod/ims/transfer_inv.inc:427
 msgid "Item Transit"
-msgstr "移倉物資清單"
+msgstr "物資發送/運送紀錄"
 
 #: mod/ims/transfer_inv.inc:528
 msgid "Item Transit "
-msgstr "移倉物資"
+msgstr "物資發送/運送紀錄"
 
 #: mod/ims/transfer_inv.inc:578
 msgid "Received Item"
@@ -4903,15 +4903,15 @@ msgstr "目的地是必需的。請提供完整訊息再重新送出。"
 
 #: mod/ims/home.inc:22
 msgid "Inventory Management System Home"
-msgstr "庫存管理系統首頁"
+msgstr "物資庫存與倉庫管理系統首頁"
 
 #: mod/ims/home.inc:26
 msgid "The Sahana Inventory Management System is a database to keep track of all aid items and supplies kept in your organization's inventories. It not only keeps track of the location and quantities of items available, but it also tracks expiry dates, re-order levels and items in transit. The system is designed to be simple to a diverse groups of users to interact and manage stocks in inventories located around the region"
-msgstr "Sahana庫存管理系統是一個用來掌握您的救援物資庫存及供貨情況的資料庫。它不僅追蹤可用物資的位置和數量，而且可以掌握物資過期時間，再訂購水平上以及在中途物資運送的數量。該系統的設計目標，是讓不同的使用者能夠方便地進行互動，並對某個地區內的多個庫存進行管理。"
+msgstr "Sahana物資庫存與倉庫管理系統是一個用來掌握您的救援物資庫存及供貨情況的資料庫。它不僅追蹤可用物資的位置和數量，而且可以掌握物資過期時間，再訂購水平上以及在中途物資運送的數量。該系統的設計目標，是讓不同的使用者能夠方便地進行互動，並對某個地區內的多個庫存進行管理。"
 
 #: mod/ims/home.inc:31
 msgid "Find Items:"
-msgstr "尋找物資："
+msgstr "尋找物資"
 
 #: mod/ims/home.inc:31
 msgid " Enables end user to search items available in ware houses. End-User is also allowed to search available items, expired items and already destroyed items. "
@@ -4935,7 +4935,7 @@ msgstr "使用者可以增加、管理或刪除物資，也可以在倉庫間進
 
 #: mod/ims/home.inc:34
 msgid "Re-Order Level:"
-msgstr "最低庫存標準："
+msgstr "最低庫存標準"
 
 #: mod/ims/home.inc:34
 msgid " Enables end-user to add,edit or delete defined Re-Order Level for an inventory for  particular items "
@@ -4943,7 +4943,7 @@ msgstr "使用者可以為特定庫存的物資，增加、管理或刪除最低
 
 #: mod/ims/home.inc:35
 msgid "Reports:"
-msgstr "報表："
+msgstr "報表"
 
 #: mod/ims/home.inc:35
 msgid " Generate reports about expired items, destroyed items and also generates report about the items in which the total amount is lower than the Re-Order Level "
@@ -4951,7 +4951,7 @@ msgstr "產生過期的、已銷毀的物資報告，並且產出有關總數低
 
 #: mod/ims/home.inc:36
 msgid "Optimization:"
-msgstr "最佳化："
+msgstr "最佳化"
 
 #: mod/ims/home.inc:36
 msgid " Forecasts the amount of items which have been sent to another inventory, received from another inventory and also forecasts already available item amounts in a particular inventory. On the other hand under this section, the end user is allowed to set relationships among items and track items which can be used as alternatives for particular items"
@@ -4967,7 +4967,7 @@ msgstr "低於最低庫存標準的物資"
 
 #: mod/ims/home.inc:116
 msgid "Transit Item List"
-msgstr "移倉物資清單"
+msgstr "物資發送/運送清單"
 
 #: mod/ims/main.inc:45
 msgid "Inventories"
@@ -4992,7 +4992,7 @@ msgstr "物資運送/發送"
 
 #: mod/ims/main.inc:52
 msgid "Transit Items"
-msgstr "物資移倉"
+msgstr "物資發送/運送記錄"
 
 #: mod/ims/main.inc:58
 msgid "Items to Re-order"
@@ -5000,9 +5000,8 @@ msgstr "最低庫存物資品項"
 
 #: mod/ims/main.inc:59
 #: mod/ims/main.inc:164
-#, fuzzy
 msgid "Transit Item Report"
-msgstr "年度供應商報表"
+msgstr "物資發送/運送報表"
 
 #: mod/ims/main.inc:61
 #: mod/ims/main.inc:760
@@ -5412,7 +5411,7 @@ msgstr "志工"
 #: mod/vm/menu.inc:37
 #: mod/vm/menu.inc:52
 msgid "View All"
-msgstr "檢視所有"
+msgstr "檢視全部"
 
 #: mod/vm/menu.inc:38
 msgid "Search for a Volunteer"
@@ -5431,9 +5430,8 @@ msgid "Add New"
 msgstr "新增"
 
 #: mod/vm/menu.inc:51
-#, fuzzy
 msgid "View Coming Projects"
-msgstr "檢視這檔案"
+msgstr "檢視即將執行的專案"
 
 #: mod/vm/menu.inc:62
 msgid "Messaging"
@@ -5715,7 +5713,7 @@ msgstr "說明："
 
 #: mod/cs/edit.inc:303
 msgid "Operation failed. You can not Delete this Catalog/ Item. Because there are sub catalogs/Items under this catalog OR it has been used by the INVENTORY MANAGEMENT SYSTEM."
-msgstr "操作失敗。您不能刪除此目錄/物資品。因為有子目錄/物資在此目錄下，或者它已被庫存管理系統使用。"
+msgstr "操作失敗。您不能刪除此目錄/物資品。因為有子目錄/物資在此目錄下，或者它已被物資庫存與倉庫管理使用。"
 
 #: mod/cs/edit.inc:308
 msgid "Item/Catalog was deleted"
@@ -5752,7 +5750,7 @@ msgstr "指定該單位和同種類的基本單位之間的乘數"
 
 #: mod/cs/edit.inc:492
 msgid "Operation failed. You can not Delete this Unit. Because it has been used in INVENTORY MANAGEMENT SYSTEM."
-msgstr "操作失敗。您不能刪除此單位。因為它已被庫存管理系統使用。"
+msgstr "操作失敗。您不能刪除此單位。因為它已被物資庫存與倉庫管理系統使用。"
 
 #: mod/cs/edit.inc:497
 msgid "Unit was Deleted"
@@ -5876,7 +5874,7 @@ msgstr "救援物資目錄和分類系統"
 
 #: mod/cs/home.inc:20
 msgid "The Aid Catalog is used by the Inventory and the Request Management System as a reference classification of all aid item types. Item types are classified and grouped by type (e.g. food, medical) and units are associated to aid types for quantifying purposes by the other modules. The quantities of Aid is not kept in this module but for example in the Inventory and Request / Pledge Management Modules"
-msgstr "救援物資目錄是庫存管理系統提供援助物資的分類參考。物資按照類型進行分類和分組（例如：食品，藥品），並附有單位，以便其他模組指定數量。物資的數量訊息存放在其它模組裡，例如在庫存和請求及援助管理模組。"
+msgstr "救援物資目錄是物資庫存與倉庫管理系統提供援助物資的分類參考。物資按照類型進行分類和分組（例如：食品，藥品），並附有單位，以便其他模組指定數量。物資的數量訊息存放在其它模組裡，例如在庫存和請求及援助管理模組。"
 
 #: mod/cs/home.inc:25
 msgid "Classification or categorization of items to any level of depth"
@@ -5960,7 +5958,7 @@ msgstr "新增子目錄"
 
 #: mod/cs/main.inc:51
 msgid "Add Measurement Unit Type"
-msgstr "新增度量單位"
+msgstr "新增度量單位類型"
 
 #: mod/cs/main.inc:75
 msgid "Select the Search Type in the select box that you need to search. By selecting catalog/Item, you are able to Search for a Item or a catalog and by selecting Unit, you are able to search for Units."
@@ -7323,7 +7321,7 @@ msgstr "新增追蹤者"
 #: mod/mpr/home.inc:21
 #: mod/mpr/main.inc:54
 msgid "Missing Person Registry"
-msgstr "失蹤者登錄"
+msgstr "失蹤者與災民登錄"
 
 #: mod/mpr/stream.inc:11
 msgid "Welcome to the Sahana FOSS Disaster Management System Sahana is an integrated set of pluggable, web based disaster management applications that pr ovide solutions to large-scale humanitarian problems in the aftermath of a disaster. These applications a nd problems they address are as follows:"
@@ -7431,7 +7429,7 @@ msgstr "管理皮膚顏色"
 
 #: mod/mpr/admin.inc:57
 msgid "Welcome to the Missing Person Registry admin page"
-msgstr "歡迎來到失蹤者登錄管理頁面"
+msgstr "歡迎來到失蹤者與災民登錄管理頁面"
 
 #: mod/mpr/admin.inc:58
 msgid "Please use the navigation menu above to configure each field."
@@ -7489,7 +7487,7 @@ msgstr "顯示管理頁面"
 
 #: mod/mpr/admin.inc:239
 msgid "Add Person"
-msgstr "新增人員"
+msgstr "新增群組成員"
 
 #: mod/mpr/admin.inc:240
 msgid "Edit Person"
@@ -7506,19 +7504,19 @@ msgid ""
 "of people finding each other. For example if two members of the a family unit is\n"
 "looking for the head of the family, we can use this data at least to connect those two\n"
 "family members."
-msgstr "失蹤者登錄為針對失蹤者與倖存者的線上佈告欄。這個布告欄可以清楚收集並整理關於失蹤者與倖存者的資訊，以及正在尋找他們的親人或朋友資訊，這樣能夠增加彼此互相找到的機會。"
+msgstr "失蹤者與災民登錄管理為針對失蹤者與倖存者的線上佈告欄。這個怖告欄可以清楚收集並整理關於失蹤者與倖存者的資訊，以及正在尋找他們的親人或朋友資訊，這樣能夠增加彼此互相找到的機會。"
 
 #: mod/mpr/home.inc:46
 msgid "Submitting information about the individual such as identification numbers, physical appearance, last seen location, status, etc"
-msgstr "登錄與失蹤者有關的的資訊，例如：身份證字號、外貌、上一次看到他的地點、現在狀態…等等"
+msgstr "登錄與失蹤者或災民有關的的資訊，例如：身份證字號、外貌、上一次看到他的地點、現在狀態…等等"
 
 #: mod/mpr/home.inc:47
 msgid "'Sounds-like' name search allowing search even the spelling of the name is not known exactly"
-msgstr "『聽起來類似』的姓名搜尋，可以尋找不確定姓名寫法的人"
+msgstr "『聽起來類似』的姓名搜尋，可以尋找不確定完整姓名的人"
 
 #: mod/mpr/home.inc:48
 msgid "Facilitate uploading of missing person's photograph"
-msgstr "上傳失蹤者的照片"
+msgstr "上傳失蹤者或災民的照片"
 
 #: mod/mpr/home.inc:49
 msgid "Grouping by 'Family Unit' or other group category"
@@ -7538,11 +7536,11 @@ msgstr "通報失蹤人口，回報關於失蹤人口的各項細節，讓其他
 
 #: mod/mpr/home.inc:56
 msgid "Edit missing person"
-msgstr "編輯失蹤者資料"
+msgstr "編輯失蹤者或災民資料"
 
 #: mod/mpr/home.inc:56
 msgid "Update the details of missing person entered to the database previously"
-msgstr "針對既存的失蹤人口詳細資訊進行編輯與更新"
+msgstr "針對既存的失蹤者或災民詳細資訊進行編輯與更新"
 
 #: mod/mpr/home.inc:57
 msgid "Report information if the displaced person is found"
@@ -7554,7 +7552,7 @@ msgstr "失蹤者名單"
 
 #: mod/mpr/home.inc:58
 msgid "List all the missing person information available in the database"
-msgstr "列出目前資料庫中所有既存的失蹤人口"
+msgstr "列出目前資料庫中所有已登錄的失蹤人口"
 
 #: mod/mpr/home.inc:59
 msgid "List found people"
@@ -7641,7 +7639,7 @@ msgstr "編輯倖存者資料"
 
 #: mod/mpr/main.inc:274
 msgid "View Person"
-msgstr "檢視人員"
+msgstr "檢視災民"
 
 #: mod/mpr/main.inc:365
 msgid "Found Person Entry"
@@ -7649,7 +7647,7 @@ msgstr "倖存者清單"
 
 #: mod/mpr/main.inc:371
 msgid "Missing Person Entry"
-msgstr "通報失蹤者"
+msgstr "通報失蹤者/災民"
 
 #: mod/mpr/main.inc:381
 #: mod/mpr/main.inc:391
@@ -7661,7 +7659,7 @@ msgstr "通報者"
 
 #: mod/mpr/main.inc:385
 msgid "Person Details"
-msgstr "人員細節"
+msgstr "失蹤者/災民 個人資料"
 
 #: mod/mpr/main.inc:398
 #: mod/mpr/main.inc:425
@@ -7683,40 +7681,40 @@ msgstr "請先進行搜尋，以確認您所要找的人是否已經存在本系
 
 #: mod/mpr/add.inc:61
 msgid "Please enter any of the following details on the person:"
-msgstr "請輸入該失蹤者的詳細資訊："
+msgstr "請輸入該失蹤者/災民的詳細資訊："
 
 #: mod/mpr/add.inc:63
 #: mod/dvr/add_new_indv.inc:87
 msgid "Family name, or the surname could be specified for matching of people with similar Family names"
-msgstr "請填入此失蹤者姓氏"
+msgstr "請填入此失蹤者/災民姓氏"
 
 #: mod/mpr/add.inc:73
 #: mod/dvr/add_new_indv.inc:91
 msgid "You may also specify the local name, even in different script than English"
-msgstr "本失蹤者的暱稱或大家習慣稱呼他的方式"
+msgstr "本失蹤者/災民的暱稱或大家習慣稱呼他的方式"
 
 #: mod/mpr/add.inc:84
 msgid "If you have any information about missing person's identity numbers, Please include them since it will be helpful for finding the person. Otherwise please ignore."
-msgstr "如果您有失蹤者的身份證字號的資訊，請提供，因為這將有助於尋找失蹤者。若無可忽略。"
+msgstr "如果您有失蹤者/災民的身份證字號的資訊，請提供，因為這將有助於尋找他/她。若無可忽略。"
 
 #: mod/mpr/add.inc:88
 #: mod/dvr/edt_indv.inc:179
 msgid "Specify the Identity card Number, Although this is not required this will be useful in searching for the person"
-msgstr "填寫身份證字號，雖然這並非必要，但在搜尋失蹤/受難者時會很有用處"
+msgstr "填寫身份證字號，雖然這並非必要，但在搜尋失蹤者/災民時會很有用處"
 
 #: mod/mpr/add.inc:92
 #: mod/dvr/edt_indv.inc:182
 msgid "Please Specify the passport number, Although this is not required this will be useful in searching for the person"
-msgstr "請填寫護照號碼，雖然這並非必要，但在搜尋失蹤/受難者 時會很有用處"
+msgstr "請填寫護照號碼，雖然這並非必要，但在搜尋失蹤者/災民 時會很有用處"
 
 #: mod/mpr/add.inc:94
 #: mod/dvr/edt_indv.inc:185
 msgid "Please Specify the driving License number, Although this is not required this will be useful in searching for the person"
-msgstr "請填寫駕照號碼，雖然這並非必要，但在搜尋失蹤/受難者 時會很有用處"
+msgstr "請填寫駕照號碼，雖然這並非必要，但在搜尋失蹤者/災民 時會很有用處"
 
 #: mod/mpr/add.inc:98
 msgid "If you have a picture of the missing person, please upload the picture. So, that it will be easy for us to identify the person. <br />It is not required, so if you don't have a picture no need to upload."
-msgstr "如果您有失蹤者的照片，請上傳照片。這樣有助於我們進行辨別。<br>如果您沒有照片就請略過本步驟。"
+msgstr "如果您有失蹤者/災民的照片，請上傳照片。這樣有助於我們進行辨別。<br>如果您沒有照片就請略過本步驟。"
 
 #: mod/mpr/add.inc:102
 msgid "Missing Person's Contact Information"
@@ -7732,11 +7730,11 @@ msgstr "可聯絡到你的地址之郵遞區號"
 
 #: mod/mpr/add.inc:120
 msgid "Select Missing Person's Origin"
-msgstr "選擇失蹤者的所在地"
+msgstr "選擇失蹤者/災民的所在地"
 
 #: mod/mpr/add.inc:127
 msgid "Enter the value in centimeters(cm)"
-msgstr "輸入失蹤者的身高（公分）"
+msgstr "輸入失蹤者/災民的身高（公分）"
 
 #: mod/mpr/add.inc:129
 msgid "Other Distinctive Features"
@@ -7748,11 +7746,11 @@ msgstr "最後看到的地點"
 
 #: mod/mpr/add.inc:134
 msgid "Description of clothing and appearance when last seen"
-msgstr "描述失蹤者最後一次出現的衣著和外貌"
+msgstr "描述失蹤者/災民最後一次出現的衣著和外貌"
 
 #: mod/mpr/add.inc:135
 msgid "Other information that would help us to find this person"
-msgstr "其他能夠幫助我們找到這名失蹤者的資訊"
+msgstr "其他能夠幫助我們找到這名失蹤者/災民的資訊"
 
 #: mod/mpr/add.inc:172
 #: mod/pref/ims_config.inc:48
@@ -7766,7 +7764,7 @@ msgstr "您尚未填完這份表單"
 
 #: mod/mpr/add.inc:254
 msgid "We are collecting the information on the person who is reporting the missing person due to the following reasons."
-msgstr "根據下列原因，我們正在收集通報此失蹤者的通報者的訊息。"
+msgstr "根據下列原因，我們正在收集通報此失蹤者/災民的通報者的訊息。"
 
 #: mod/mpr/add.inc:254
 msgid "To inform back on finding the missing person"
@@ -7790,7 +7788,7 @@ msgstr "您曾經回報過嗎？"
 
 #: mod/mpr/add.inc:275
 msgid "Are you a disaster victim too? "
-msgstr "您也是災難受災者？"
+msgstr "您也是受災者？"
 
 #: mod/mpr/add.inc:291
 msgid "If you are a victim, Please specify the status"
@@ -7806,7 +7804,7 @@ msgstr "注意：如果您之前通報過，我們將使用下列資訊來進行
 
 #: mod/mpr/add.inc:319
 msgid "IMPORTANT : At least one of the following contact method is required"
-msgstr "重要：至少需要下列聯絡方法之一"
+msgstr "重要：至少需要填寫一種聯絡方式"
 
 #: mod/mpr/add.inc:350
 msgid "Please enter the full name of the reporting person"
@@ -7822,11 +7820,11 @@ msgstr "請輸入任何可以聯絡通報者的聯絡方式"
 
 #: mod/mpr/add.inc:389
 msgid "If you have a picture of the missing person, please upload the picture. So, that it will be easy for us to identify the person. <br />If you don't have a picture to upload just click the \"Next\" button."
-msgstr "如果您有失蹤者的照片，請上傳照片。這樣將有助於找出失蹤者。<br />如果您沒有此位失蹤者的照片，請點選'下一步'。"
+msgstr "如果您有失蹤者/災民的照片，請上傳照片。這樣將有助於找出失蹤者/災民。<br />如果您沒有此位失蹤者/災民的照片，請點選'下一步'。"
 
 #: mod/mpr/add.inc:451
 msgid "Missing Person"
-msgstr "失蹤者"
+msgstr "失蹤者/災民"
 
 #: mod/mpr/add.inc:454
 #: mod/mpr/add.inc:555
@@ -10101,7 +10099,7 @@ msgstr "依地點列出庇護所資訊"
 
 #: mod/cr/reports.inc:117
 msgid "Total Number of Victims in Shelters"
-msgstr "庇護所裡的受難者總數"
+msgstr "目前該區域收容人數"
 
 #: mod/cr/reports.inc:155
 msgid "Shelter Information by Location Drilled"
@@ -10303,7 +10301,7 @@ msgstr "依地點瀏覽"
 
 #: mod/cr/main.inc:38
 msgid "View Admin Details"
-msgstr "查看管理詳情"
+msgstr "瀏覽庇護所管理者資訊"
 
 #: mod/cr/main.inc:40
 msgid "Map by Location"
@@ -10445,7 +10443,7 @@ msgstr "NIC"
 
 #: mod/dvr/reporting.inc:80
 msgid "Disaster Victim Report by Shelter"
-msgstr "依庇護所列出災難受災者報告"
+msgstr "依庇護所列出受災者"
 
 #: mod/dvr/reporting.inc:85
 msgid "Camp Id"
@@ -10457,7 +10455,7 @@ msgstr "營區名稱"
 
 #: mod/dvr/reporting.inc:114
 msgid "Disaster Victim Report by Incident"
-msgstr "按事故區分受災人員報告"
+msgstr "按事故列出受災者"
 
 #: mod/dvr/reporting.inc:119
 msgid "Incident Id"
@@ -10583,7 +10581,7 @@ msgstr "如果有的話，請輸入身份證字號（選填）"
 #: mod/dvr/edt_grp.inc:247
 #: mod/dvr/add_new_grp.inc:206
 msgid "NIC No"
-msgstr "證件號碼"
+msgstr "身份證號碼"
 
 #: mod/dvr/edt_grp.inc:261
 #: mod/dvr/edt_grp.inc:271
@@ -10720,7 +10718,7 @@ msgstr "康復"
 #: mod/dvr/add_new_indv.inc:171
 #: mod/dvr/add_new_indv.inc:410
 msgid "Displaced Location"
-msgstr "安置位置"
+msgstr "所在位置"
 
 #: mod/dvr/edt_grp.inc:342
 msgid "Edit Location Check Details"
@@ -10832,12 +10830,12 @@ msgstr "成功地更新群組"
 #: mod/dvr/home.inc:22
 #: mod/dvr/main.inc:43
 msgid "Disaster Victim Registry"
-msgstr "災難受災者登錄"
+msgstr "災民群組登錄"
 
 #: mod/dvr/main_fns.inc:220
 #: mod/dvr/main.inc:51
 msgid "Search and Edit Individual"
-msgstr "搜尋和編輯個人資訊"
+msgstr "搜尋與編輯群組成員資訊"
 
 #: mod/dvr/main_fns.inc:240
 #: mod/dvr/main.inc:50
@@ -10875,7 +10873,7 @@ msgstr "群組類型"
 #: mod/dvr/home.inc:59
 #: mod/dvr/main.inc:46
 msgid "Add New Group"
-msgstr "新增新群組"
+msgstr "新增群組"
 
 #: mod/dvr/add_new_grp.inc:50
 msgid "Invalid email entered"
@@ -10887,7 +10885,7 @@ msgstr "無效的圖片類型。請再試一次。"
 
 #: mod/dvr/add_new_grp.inc:177
 msgid "Please select a group that describes you well"
-msgstr "請選擇最適合描述你的群組"
+msgstr "請選擇群組類型"
 
 #: mod/dvr/add_new_grp.inc:182
 msgid "Disaster victims are classified according to groups. Please Select the 'group type' from the drop down menu"
@@ -11016,7 +11014,7 @@ msgstr "提供行動電話號碼，如果有的話"
 #: mod/dvr/edt_indv.inc:236
 #: mod/dvr/add_new_indv.inc:163
 msgid "Displaced Location of the Victim"
-msgstr "災民的安置位置"
+msgstr "災民的所在位置"
 
 #: mod/dvr/edt_indv.inc:241
 #: mod/dvr/edt_indv.inc:512
@@ -11140,7 +11138,7 @@ msgstr "其他相關資訊"
 
 #: mod/dvr/admin.inc:27
 msgid "Welcome to the Disaster Victim Registry admin page"
-msgstr "歡迎來到失蹤者登錄管理頁面"
+msgstr "歡迎來到災民群組登錄管理頁面"
 
 #: mod/dvr/admin.inc:33
 msgid "Welcome to the DVR administration  page"
@@ -11148,7 +11146,7 @@ msgstr "歡迎來到DVR管理頁面"
 
 #: mod/dvr/admin.inc:35
 msgid "Follow above links to administer the disaster victim registry"
-msgstr "使用以上方連結，以管理受災人員登錄系統"
+msgstr "使用以上方連結，以管理災民群組登錄管理系統"
 
 #: mod/dvr/admin.inc:43
 msgid "Manage Checklist"
@@ -11188,7 +11186,7 @@ msgstr "群組成員"
 
 #: mod/dvr/home.inc:25
 msgid "The Disaster Victim Registry is a central online repository where information on all the disaster victims and families, especially identified casualties, evacuees and displaced people can be stored. Information like name, age, contact number, identity card number, displaced location, and other details are captured. People picture and finger print details can be uploaded to the system. People can also be captured rather by group for effeciency and convenience"
-msgstr "受災者登錄是一個集中式的線上資料庫，可以儲存所有受災者及其家人的資訊，特別是已辨明身份的傷亡者和災民。諸如姓名、年齡、電話、身份證號碼、安置位置等等的資訊，都可以存入這個資料庫。也可以儲存照片和指紋。此外，還可以透過分組的方式，方便而有效地獲取資訊。"
+msgstr "受災者群組登錄是一個集中式的線上資料庫，可以儲存受災者與其鄰近生活的人（如家人、部落、社區等）以分組的方式登錄，方便而有效地獲取資訊，作為後續處理的重要參考。"
 
 #: mod/dvr/home.inc:30
 msgid "Features include:"
@@ -11196,7 +11194,7 @@ msgstr "功能包括："
 
 #: mod/dvr/home.inc:34
 msgid "Capture Information on Disaster Victim groups (Tourists, Passengers, Families, etc.)"
-msgstr "按災民群組獲取資訊（遊客、乘客、家庭成員等等）"
+msgstr "按災民群組獲取資訊（公司、遊客、乘客、家庭成員等等）"
 
 #: mod/dvr/home.inc:38
 msgid "Capture Information on each disaster victim"
@@ -11224,27 +11222,27 @@ msgstr "根據統計進行預估"
 
 #: mod/dvr/home.inc:59
 msgid "Adding a new disaster victim group"
-msgstr "新增一個新的災難受災者群組"
+msgstr "新增受災者群組"
 
 #: mod/dvr/home.inc:60
 msgid "Add New Individuals"
-msgstr "新增人員"
+msgstr "新增群組成員"
 
 #: mod/dvr/home.inc:60
 msgid "Adding a disaster victim under each and every victim group"
-msgstr "在每個受災群組裡新增受災者"
+msgstr "在受災群組中新增成員"
 
 #: mod/dvr/home.inc:61
 msgid "Search & Edit Group"
-msgstr "搜尋&編輯群組"
+msgstr "搜尋與編輯群組"
 
 #: mod/dvr/home.inc:61
 msgid "Searching and editing a victim group"
-msgstr "搜尋和編輯受災群組"
+msgstr "搜尋和編輯群組"
 
 #: mod/dvr/home.inc:62
 msgid "Search & Edit Individuals"
-msgstr "搜尋和編輯個人"
+msgstr "搜尋和編輯成員"
 
 #: mod/dvr/home.inc:62
 msgid "Searching and editing a victim"
@@ -11265,7 +11263,7 @@ msgstr "依據群組排列 "
 
 #: mod/dvr/home.inc:64
 msgid "Drill down by disaster victim group report"
-msgstr "依據受災者群組報表來排列"
+msgstr "依據受災者群組排列檢視報表"
 
 #: mod/dvr/home.inc:65
 #: mod/dvr/main.inc:62
@@ -11274,45 +11272,45 @@ msgstr "依據庇護所排列"
 
 #: mod/dvr/home.inc:65
 msgid "Drill down by shelter report"
-msgstr "按庇護所報表排列"
+msgstr "依庇護所排列"
 
 #: mod/dvr/home.inc:66
 msgid "Drill Down By Incident"
-msgstr "按事件排列"
+msgstr "依事件排列"
 
 #: mod/dvr/home.inc:66
 msgid "Drill down by incident report"
-msgstr "按事件報表排列"
+msgstr "依事件報表排列"
 
 #: mod/dvr/home.inc:79
 msgid "Latest updates on Reported  Victims"
-msgstr "已回報的災民的最近更新"
+msgstr "已登錄災民的最近更新"
 
 #: mod/dvr/main.inc:45
 msgid "Add Disaster Victim(s)"
-msgstr "新增災難受災者"
+msgstr "新增受災者"
 
 #: mod/dvr/main.inc:47
 #: mod/dvr/add_new_indv.inc:30
 #: mod/dvr/add_new_indv.inc:466
 msgid "Add New Individual"
-msgstr "新增新的個人檔案"
+msgstr "新增成員資料"
 
 #: mod/dvr/main.inc:49
 msgid "Edit Disaster Victim(s)"
-msgstr "編輯災難受災者"
+msgstr "編輯受災者資料"
 
 #: mod/dvr/main.inc:56
 msgid "List groups "
-msgstr "列出小組"
+msgstr "列出群組"
 
 #: mod/dvr/main.inc:57
 msgid "List groups/View members "
-msgstr "群組列表/查看成員"
+msgstr "群組列表 / 查看成員"
 
 #: mod/dvr/main.inc:63
 msgid "Drill Down By Incident "
-msgstr "按事故排列"
+msgstr "依事故排列"
 
 #: mod/dvr/add_new_indv.inc:37
 msgid "Select Group"
@@ -11324,23 +11322,23 @@ msgstr "輸入前面幾個字母，然後選擇小組的領導人名稱。載入
 
 #: mod/dvr/add_new_indv.inc:83
 msgid "Enter your Full Name here(Required)"
-msgstr "輸入您的全名（必填）"
+msgstr "請輸入全名（必填）"
 
 #: mod/dvr/add_new_indv.inc:104
 msgid "You can specify the gender"
-msgstr "您可以指定性別"
+msgstr "選擇登錄對象的性別"
 
 #: mod/dvr/add_new_indv.inc:107
 msgid "You can specify the marital status"
-msgstr "您可以設定婚姻狀況"
+msgstr "選擇登錄對象的婚姻狀況"
 
 #: mod/dvr/add_new_indv.inc:110
 msgid "You may also specify the religion"
-msgstr "你可以指定宗教信仰"
+msgstr "選擇登錄對象的宗教信仰"
 
 #: mod/dvr/add_new_indv.inc:113
 msgid "You can also so specify the race"
-msgstr "你可以指定種族"
+msgstr "選擇登錄對象的種族"
 
 #: mod/dvr/add_new_indv.inc:319
 msgid "Please select the Group Head"
@@ -11862,7 +11860,7 @@ msgstr "請從要滿足的需求裡選擇一個捐贈者。"
 
 #: mod/rms/handler_mng_ff.inc:178
 msgid "No Pledges have been registered !!!"
-msgstr "尚未有符合需求的捐贈物資"
+msgstr "目前沒有符合需求的捐贈物資"
 
 #: mod/rms/handler_mng_ff.inc:248
 msgid "Allocate items from a pledge to fulfill a request, "
@@ -13921,7 +13919,7 @@ msgstr "主選單"
 
 #: inc/lib_menu.inc:44
 msgid "Sahana Main"
-msgstr "Sahana 主選單"
+msgstr "SahanaTW 主選單"
 
 #: inc/lib_menu.inc:237
 msgid "Switch back to"
