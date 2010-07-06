@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-22 11:15+0800\n"
+"POT-Creation-Date: 2010-07-06 17:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -235,46 +235,46 @@ msgstr ""
 msgid "Template error: could not write to template cache directory."
 msgstr ""
 
-#: mod/vm/model/dao.php:840
+#: mod/vm/model/dao.php:909
 msgid "You have been removed from Project"
 msgstr ""
 
-#: mod/vm/model/dao.php:840 mod/vm/model/dao.php:1104
-#: mod/vm/model/dao.php:1108 mod/vm/model/dao.php:1109
-#: mod/vm/model/dao.php:1114 mod/vm/model/dao.php:1449
+#: mod/vm/model/dao.php:909 mod/vm/model/dao.php:1173
+#: mod/vm/model/dao.php:1177 mod/vm/model/dao.php:1178
+#: mod/vm/model/dao.php:1183 mod/vm/model/dao.php:1518
 msgid "This is an automated message"
 msgstr ""
 
-#: mod/vm/model/dao.php:874 mod/vm/model/dao.php:934
+#: mod/vm/model/dao.php:943 mod/vm/model/dao.php:1003
 #: tools/tpl_languages.php:119
 msgid "Skills and Work Restrictions"
 msgstr ""
 
-#: mod/vm/model/dao.php:1104 mod/vm/model/dao.php:1108
+#: mod/vm/model/dao.php:1173 mod/vm/model/dao.php:1177
 msgid "Your ability status for"
 msgstr ""
 
-#: mod/vm/model/dao.php:1104
+#: mod/vm/model/dao.php:1173
 msgid "has been approved"
 msgstr ""
 
-#: mod/vm/model/dao.php:1108
+#: mod/vm/model/dao.php:1177
 msgid "has been revoked"
 msgstr ""
 
-#: mod/vm/model/dao.php:1109
+#: mod/vm/model/dao.php:1178
 msgid "Your ability status request for"
 msgstr ""
 
-#: mod/vm/model/dao.php:1109
+#: mod/vm/model/dao.php:1178
 msgid "has been denied"
 msgstr ""
 
-#: mod/vm/model/dao.php:1114
+#: mod/vm/model/dao.php:1183
 msgid "You have been given an approved ability status for"
 msgstr ""
 
-#: mod/vm/model/dao.php:1449
+#: mod/vm/model/dao.php:1518
 msgid "You have been assigned to"
 msgstr ""
 
@@ -311,15 +311,15 @@ msgstr ""
 msgid "Approval information has been updated"
 msgstr ""
 
-#: mod/vm/controller/VolunteerController.php:381
+#: mod/vm/controller/VolunteerController.php:378
 msgid "There was a problem logging your time. Please go back and try again."
 msgstr ""
 
-#: mod/vm/controller/VolunteerController.php:383
+#: mod/vm/controller/VolunteerController.php:380
 msgid "Error logging time:"
 msgstr ""
 
-#: mod/vm/controller/VolunteerController.php:640
+#: mod/vm/controller/VolunteerController.php:637
 msgid "Volunteer Management Report"
 msgstr ""
 
@@ -339,18 +339,27 @@ msgstr ""
 msgid "ACL settings have been updated."
 msgstr ""
 
-#: mod/vm/controller/ProjectController.php:109
+#: mod/vm/controller/ProjectController.php:61
+#: mod/vm/controller/ProjectController.php:88
+msgid "Changes Saved."
+msgstr ""
+
+#: mod/vm/controller/ProjectController.php:124
 msgid "Volunteer has been successfully assigned"
 msgstr ""
 
-#: mod/vm/controller/ProjectController.php:126
+#: mod/vm/controller/ProjectController.php:140
 msgid ""
 "The items listed below are projects that will start from today or after "
 "today."
 msgstr ""
 
-#: mod/vm/controller/ProjectController.php:127
+#: mod/vm/controller/ProjectController.php:141
 msgid "View all projects"
+msgstr ""
+
+#: mod/vm/controller/ProjectController.php:174
+msgid "View coming projects"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:10
@@ -797,7 +806,7 @@ msgid "Identification"
 msgstr ""
 
 #: tools/tpl_languages.php:89 tools/tpl_languages.php:234
-#: mod/or/report.inc:465 mod/or/view_org.inc:91 mod/or/view_org.inc:484
+#: mod/or/report.inc:464 mod/or/view_org.inc:91 mod/or/view_org.inc:484
 #: mod/ims/reg_inv.inc:43 mod/admin/location.inc:38 mod/cr/search.inc:42
 #: mod/cr/search.inc:129 mod/cr/edit.inc:501 mod/cr/reports.inc:62
 #: mod/cr/reports.inc:116 mod/dvr/add_new_grp.inc:406
@@ -966,7 +975,7 @@ msgstr ""
 msgid "Upgrade this Volunteer to Site Manager Status"
 msgstr ""
 
-#: tools/tpl_languages.php:136 mod/vm/conf.inc:27 mod/vm/menu.inc:103
+#: tools/tpl_languages.php:136 mod/vm/conf.inc:27 mod/vm/menu.inc:104
 msgid "Volunteer Management"
 msgstr ""
 
@@ -1533,7 +1542,7 @@ msgstr ""
 
 #: tools/tpl_languages.php:309 mod/mpr/view.inc:26 mod/mpr/search.inc:240
 #: mod/rms/handler_req_ls.inc:94 mod/rms/handler_req_sch.inc:216
-#: mod/rms/handler_plg_ls.inc:95 mod/rms/handler_plg_sch.inc:291
+#: mod/rms/handler_plg_sch.inc:291
 msgid "Details"
 msgstr ""
 
@@ -1837,7 +1846,7 @@ msgid ""
 msgstr ""
 
 #: mod/or/search.inc:35 mod/or/reg_org.inc:49 mod/or/reg_org.inc:178
-#: mod/or/report.inc:464 mod/or/view_org.inc:90 mod/or/view_org.inc:367
+#: mod/or/report.inc:463 mod/or/view_org.inc:90 mod/or/view_org.inc:367
 #: mod/or/view_org.inc:483 mod/ims/ims_report.inc:434
 msgid "Organization Type"
 msgstr ""
@@ -1854,7 +1863,7 @@ msgid "Organization Sector"
 msgstr ""
 
 #: mod/or/search.inc:42 mod/or/reg_org.inc:96 mod/or/reg_org.inc:297
-#: mod/or/report.inc:466 mod/or/view_org.inc:92 mod/or/view_org.inc:403
+#: mod/or/report.inc:465 mod/or/view_org.inc:92 mod/or/view_org.inc:403
 #: mod/or/view_org.inc:485 mod/or/lib_or.inc:642 mod/ims/search.inc:381
 #: mod/ims/search.inc:498 mod/ims/ims_report.inc:436 mod/ims/view_inv.inc:60
 #: mod/mpr/view.inc:78 mod/mpr/edit.inc:191 mod/mpr/edit.inc:471
@@ -2084,7 +2093,7 @@ msgstr ""
 msgid "Relationship to the Holding Company"
 msgstr ""
 
-#: mod/or/report.inc:152 mod/or/report.inc:271 mod/ims/ims_report.inc:305
+#: mod/or/report.inc:152 mod/or/report.inc:270 mod/ims/ims_report.inc:305
 msgid "Organization Report By "
 msgstr ""
 
@@ -2100,11 +2109,7 @@ msgstr ""
 msgid "Organization Report for "
 msgstr ""
 
-#: mod/or/report.inc:271
-msgid " for "
-msgstr ""
-
-#: mod/or/report.inc:288
+#: mod/or/report.inc:287
 msgid ""
 "This table covers the services provided by organizations in a geographical "
 "drill down. Thus you may view a sub-location by clicking on a parent-"
@@ -2112,36 +2117,36 @@ msgid ""
 "service. Please give attention to all locations not covered."
 msgstr ""
 
-#: mod/or/report.inc:335 mod/ims/ims_report.inc:357
+#: mod/or/report.inc:334 mod/ims/ims_report.inc:357
 msgid "Covered"
 msgstr ""
 
-#: mod/or/report.inc:339 mod/or/report.inc:350 mod/ims/ims_report.inc:360
+#: mod/or/report.inc:338 mod/or/report.inc:349 mod/ims/ims_report.inc:360
 msgid "Not Covered"
 msgstr ""
 
-#: mod/or/report.inc:432 mod/ims/ims_report.inc:428
+#: mod/or/report.inc:431 mod/ims/ims_report.inc:428
 msgid "Organization Report by Sector"
 msgstr ""
 
-#: mod/or/report.inc:447 mod/gis/wm_fns.inc:39
+#: mod/or/report.inc:446 mod/gis/wm_fns.inc:39
 msgid "Filter"
 msgstr ""
 
-#: mod/or/report.inc:461 mod/or/view_org.inc:87 mod/or/view_org.inc:480
+#: mod/or/report.inc:460 mod/or/view_org.inc:87 mod/or/view_org.inc:480
 #: mod/or/lib_or.inc:912 mod/ims/ims_report.inc:432
 msgid "Organization Name"
 msgstr ""
 
-#: mod/or/report.inc:462 mod/or/view_org.inc:88 mod/or/view_org.inc:481
+#: mod/or/report.inc:461 mod/or/view_org.inc:88 mod/or/view_org.inc:481
 msgid "Incidents"
 msgstr ""
 
-#: mod/or/report.inc:463 mod/ims/ims_report.inc:433
+#: mod/or/report.inc:462 mod/ims/ims_report.inc:433
 msgid "Services Offered"
 msgstr ""
 
-#: mod/or/report.inc:467 mod/ims/ims_report.inc:437 mod/ims/main.inc:458
+#: mod/or/report.inc:466 mod/ims/ims_report.inc:437 mod/ims/main.inc:458
 msgid "Contact Number"
 msgstr ""
 
@@ -2671,7 +2676,7 @@ msgid "Recently Registered organizations"
 msgstr ""
 
 #: mod/or/main.inc:33 mod/ims/main.inc:43 mod/rs/menu.inc:30
-#: mod/vm/menu.inc:29 mod/vm/menu.inc:104 mod/cs/main.inc:43
+#: mod/vm/menu.inc:29 mod/vm/menu.inc:105 mod/cs/main.inc:43
 #: mod/gis/main.inc:27 mod/mpr/main.inc:55 mod/sync/main.inc:37
 #: mod/pref/stream.inc:45 mod/pref/main.inc:75 mod/cr/main.inc:28
 #: mod/dvr/main.inc:44 mod/rms/main.inc:48
@@ -4949,15 +4954,19 @@ msgstr ""
 msgid "Report On My Projects"
 msgstr ""
 
-#: mod/vm/menu.inc:88
-msgid "Management"
+#: mod/vm/menu.inc:79
+msgid "Closure Reports"
 msgstr ""
 
 #: mod/vm/menu.inc:89
-msgid "Modify Abilities/Limitations"
+msgid "Management"
 msgstr ""
 
 #: mod/vm/menu.inc:90
+msgid "Modify Abilities/Limitations"
+msgstr ""
+
+#: mod/vm/menu.inc:91
 msgid "Approve Abilities"
 msgstr ""
 
@@ -9674,8 +9683,9 @@ msgid "Select Group Type"
 msgstr ""
 
 #: mod/dvr/edt_grp.inc:215 mod/dvr/search_group.inc:33
-#: mod/dvr/search_group.inc:114 mod/dvr/edt_indv.inc:120
-msgid "Please select a Group that describes you well"
+#: mod/dvr/search_group.inc:114 mod/dvr/add_new_grp.inc:177
+#: mod/dvr/edt_indv.inc:120
+msgid "Please select a group that you are going to search"
 msgstr ""
 
 #: mod/dvr/edt_grp.inc:223
@@ -9950,10 +9960,6 @@ msgstr ""
 
 #: mod/dvr/add_new_grp.inc:106
 msgid "Invalid image type.Please try again"
-msgstr ""
-
-#: mod/dvr/add_new_grp.inc:177
-msgid "Please select a group that describes you well"
 msgstr ""
 
 #: mod/dvr/add_new_grp.inc:182
@@ -10740,6 +10746,10 @@ msgstr ""
 #: mod/rms/handler_plg_ls.inc:83 mod/rms/handler_plg_sch.inc:48
 #: mod/rms/handler_plg_sch.inc:54 mod/rms/handler_plg_sch.inc:287
 msgid "Donor"
+msgstr ""
+
+#: mod/rms/handler_plg_ls.inc:95
+msgid "Pledges details"
 msgstr ""
 
 #: mod/rms/handler_plg_ls.inc:106

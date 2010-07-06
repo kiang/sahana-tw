@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-22 11:15+0800\n"
-"PO-Revision-Date: 2010-06-30 10:15+0800\n"
+"POT-Creation-Date: 2010-07-06 17:37+0800\n"
+"PO-Revision-Date: 2010-07-06 17:40+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -233,51 +233,51 @@ msgstr "版型錯誤：暫存版型錯誤："
 msgid "Template error: could not write to template cache directory."
 msgstr "版型錯誤：無法正確寫入版本暫存目錄。"
 
-#: mod/vm/model/dao.php:840
+#: mod/vm/model/dao.php:909
 msgid "You have been removed from Project"
 msgstr "您已經從此專案裡移除。"
 
-#: mod/vm/model/dao.php:840
-#: mod/vm/model/dao.php:1104
-#: mod/vm/model/dao.php:1108
-#: mod/vm/model/dao.php:1109
-#: mod/vm/model/dao.php:1114
-#: mod/vm/model/dao.php:1449
+#: mod/vm/model/dao.php:909
+#: mod/vm/model/dao.php:1173
+#: mod/vm/model/dao.php:1177
+#: mod/vm/model/dao.php:1178
+#: mod/vm/model/dao.php:1183
+#: mod/vm/model/dao.php:1518
 msgid "This is an automated message"
 msgstr "這是一個自動訊息。"
 
-#: mod/vm/model/dao.php:874
-#: mod/vm/model/dao.php:934
+#: mod/vm/model/dao.php:943
+#: mod/vm/model/dao.php:1003
 #: tools/tpl_languages.php:119
 msgid "Skills and Work Restrictions"
 msgstr "技能與工作限制"
 
-#: mod/vm/model/dao.php:1104
-#: mod/vm/model/dao.php:1108
+#: mod/vm/model/dao.php:1173
+#: mod/vm/model/dao.php:1177
 msgid "Your ability status for"
 msgstr "你的能力狀態 for"
 
-#: mod/vm/model/dao.php:1104
+#: mod/vm/model/dao.php:1173
 msgid "has been approved"
 msgstr "已經審核通過"
 
-#: mod/vm/model/dao.php:1108
+#: mod/vm/model/dao.php:1177
 msgid "has been revoked"
 msgstr "已經被駁回"
 
-#: mod/vm/model/dao.php:1109
+#: mod/vm/model/dao.php:1178
 msgid "Your ability status request for"
 msgstr "Your ability status request for"
 
-#: mod/vm/model/dao.php:1109
+#: mod/vm/model/dao.php:1178
 msgid "has been denied"
 msgstr "已經被拒絕"
 
-#: mod/vm/model/dao.php:1114
+#: mod/vm/model/dao.php:1183
 msgid "You have been given an approved ability status for"
 msgstr "You have been given an approved ability status for"
 
-#: mod/vm/model/dao.php:1449
+#: mod/vm/model/dao.php:1518
 msgid "You have been assigned to"
 msgstr "您已被分派到"
 
@@ -314,15 +314,15 @@ msgstr "技能編碼已經存在，請另選一個"
 msgid "Approval information has been updated"
 msgstr "核准資訊已更新"
 
-#: mod/vm/controller/VolunteerController.php:381
+#: mod/vm/controller/VolunteerController.php:378
 msgid "There was a problem logging your time. Please go back and try again."
 msgstr "記錄你的時間發生了錯誤。請返回再試一次"
 
-#: mod/vm/controller/VolunteerController.php:383
+#: mod/vm/controller/VolunteerController.php:380
 msgid "Error logging time:"
 msgstr "錯誤的登錄/記錄時間："
 
-#: mod/vm/controller/VolunteerController.php:640
+#: mod/vm/controller/VolunteerController.php:637
 msgid "Volunteer Management Report"
 msgstr "志工管理報告"
 
@@ -342,17 +342,26 @@ msgstr "已清除版型快取"
 msgid "ACL settings have been updated."
 msgstr "ACL 設定已更新。"
 
-#: mod/vm/controller/ProjectController.php:109
+#: mod/vm/controller/ProjectController.php:61
+#: mod/vm/controller/ProjectController.php:88
+msgid "Changes Saved."
+msgstr "異動已經儲存"
+
+#: mod/vm/controller/ProjectController.php:124
 msgid "Volunteer has been successfully assigned"
 msgstr "已經成功地指派志工"
 
-#: mod/vm/controller/ProjectController.php:126
+#: mod/vm/controller/ProjectController.php:140
 msgid "The items listed below are projects that will start from today or after today."
 msgstr ""
 
-#: mod/vm/controller/ProjectController.php:127
+#: mod/vm/controller/ProjectController.php:141
 msgid "View all projects"
 msgstr "檢視所有專案"
+
+#: mod/vm/controller/ProjectController.php:174
+msgid "View coming projects"
+msgstr "檢視即將開始專案"
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:10
 #: tools/tpl_languages.php:210
@@ -987,7 +996,7 @@ msgstr "身份識別"
 
 #: tools/tpl_languages.php:89
 #: tools/tpl_languages.php:234
-#: mod/or/report.inc:465
+#: mod/or/report.inc:464
 #: mod/or/view_org.inc:91
 #: mod/or/view_org.inc:484
 #: mod/ims/reg_inv.inc:43
@@ -1172,7 +1181,7 @@ msgstr "將這個志工升級為專案負責人權限"
 
 #: tools/tpl_languages.php:136
 #: mod/vm/conf.inc:27
-#: mod/vm/menu.inc:103
+#: mod/vm/menu.inc:104
 msgid "Volunteer Management"
 msgstr "志工管理"
 
@@ -1778,7 +1787,6 @@ msgstr "最後總計價值"
 #: mod/mpr/search.inc:240
 #: mod/rms/handler_req_ls.inc:94
 #: mod/rms/handler_req_sch.inc:216
-#: mod/rms/handler_plg_ls.inc:95
 #: mod/rms/handler_plg_sch.inc:291
 msgid "Details"
 msgstr "細節"
@@ -2114,7 +2122,7 @@ msgstr "請選擇您是否是政府單位、跨國組織…等等"
 #: mod/or/search.inc:35
 #: mod/or/reg_org.inc:49
 #: mod/or/reg_org.inc:178
-#: mod/or/report.inc:464
+#: mod/or/report.inc:463
 #: mod/or/view_org.inc:90
 #: mod/or/view_org.inc:367
 #: mod/or/view_org.inc:483
@@ -2137,7 +2145,7 @@ msgstr "組織服務內容"
 #: mod/or/search.inc:42
 #: mod/or/reg_org.inc:96
 #: mod/or/reg_org.inc:297
-#: mod/or/report.inc:466
+#: mod/or/report.inc:465
 #: mod/or/view_org.inc:92
 #: mod/or/view_org.inc:403
 #: mod/or/view_org.inc:485
@@ -2423,7 +2431,7 @@ msgid "Relationship to the Holding Company"
 msgstr "與所屬組織的關係"
 
 #: mod/or/report.inc:152
-#: mod/or/report.inc:271
+#: mod/or/report.inc:270
 #: mod/ims/ims_report.inc:305
 msgid "Organization Report By "
 msgstr "組織列表依"
@@ -2436,36 +2444,32 @@ msgstr "這個表格包括了在某一個區域（按地域排列）提供特殊
 msgid "Organization Report for "
 msgstr "組織報表 for"
 
-#: mod/or/report.inc:271
-msgid " for "
-msgstr "至"
-
-#: mod/or/report.inc:288
+#: mod/or/report.inc:287
 msgid "This table covers the services provided by organizations in a geographical drill down. Thus you may view a sub-location by clicking on a parent-location. Percentage is based on sub-location coverage of that particular service. Please give attention to all locations not covered."
 msgstr "本表格包括了按地理區域排列的組織所提供的服務因此，你可以點選上一級區域來查看子區域。百分比是基於某項服務覆蓋區域的範圍來決定的。請注意，並不是所有的區域都涵蓋在內。"
 
-#: mod/or/report.inc:335
+#: mod/or/report.inc:334
 #: mod/ims/ims_report.inc:357
 msgid "Covered"
 msgstr "已涵蓋"
 
-#: mod/or/report.inc:339
-#: mod/or/report.inc:350
+#: mod/or/report.inc:338
+#: mod/or/report.inc:349
 #: mod/ims/ims_report.inc:360
 msgid "Not Covered"
 msgstr "未涵蓋"
 
-#: mod/or/report.inc:432
+#: mod/or/report.inc:431
 #: mod/ims/ims_report.inc:428
 msgid "Organization Report by Sector"
 msgstr "組織列表-依服務內容篩選"
 
-#: mod/or/report.inc:447
+#: mod/or/report.inc:446
 #: mod/gis/wm_fns.inc:39
 msgid "Filter"
 msgstr "過濾器"
 
-#: mod/or/report.inc:461
+#: mod/or/report.inc:460
 #: mod/or/view_org.inc:87
 #: mod/or/view_org.inc:480
 #: mod/or/lib_or.inc:912
@@ -2473,18 +2477,18 @@ msgstr "過濾器"
 msgid "Organization Name"
 msgstr "組織名稱"
 
-#: mod/or/report.inc:462
+#: mod/or/report.inc:461
 #: mod/or/view_org.inc:88
 #: mod/or/view_org.inc:481
 msgid "Incidents"
 msgstr "事故"
 
-#: mod/or/report.inc:463
+#: mod/or/report.inc:462
 #: mod/ims/ims_report.inc:433
 msgid "Services Offered"
 msgstr "提供服務"
 
-#: mod/or/report.inc:467
+#: mod/or/report.inc:466
 #: mod/ims/ims_report.inc:437
 #: mod/ims/main.inc:458
 msgid "Contact Number"
@@ -3089,7 +3093,7 @@ msgstr "最近登錄的組織"
 #: mod/ims/main.inc:43
 #: mod/rs/menu.inc:30
 #: mod/vm/menu.inc:29
-#: mod/vm/menu.inc:104
+#: mod/vm/menu.inc:105
 #: mod/cs/main.inc:43
 #: mod/gis/main.inc:27
 #: mod/mpr/main.inc:55
@@ -5453,15 +5457,19 @@ msgstr "客製化報表"
 msgid "Report On My Projects"
 msgstr "回報我的專案"
 
-#: mod/vm/menu.inc:88
+#: mod/vm/menu.inc:79
+msgid "Closure Reports"
+msgstr "結案報告"
+
+#: mod/vm/menu.inc:89
 msgid "Management"
 msgstr "管理"
 
-#: mod/vm/menu.inc:89
+#: mod/vm/menu.inc:90
 msgid "Modify Abilities/Limitations"
 msgstr "修改能力/限制"
 
-#: mod/vm/menu.inc:90
+#: mod/vm/menu.inc:91
 msgid "Approve Abilities"
 msgstr "核准能力"
 
@@ -10540,9 +10548,11 @@ msgstr "選擇群組類型"
 #: mod/dvr/edt_grp.inc:215
 #: mod/dvr/search_group.inc:33
 #: mod/dvr/search_group.inc:114
+#: mod/dvr/add_new_grp.inc:177
 #: mod/dvr/edt_indv.inc:120
-msgid "Please select a Group that describes you well"
-msgstr "請選擇一個可以描述你的群組"
+#, fuzzy
+msgid "Please select a group that you are going to search"
+msgstr "請選擇群組類型"
 
 #: mod/dvr/edt_grp.inc:223
 msgid "Please Select the group type if you want to change the type"
@@ -10882,10 +10892,6 @@ msgstr "輸入了無效的 email"
 #: mod/dvr/add_new_grp.inc:106
 msgid "Invalid image type.Please try again"
 msgstr "無效的圖片類型。請再試一次。"
-
-#: mod/dvr/add_new_grp.inc:177
-msgid "Please select a group that describes you well"
-msgstr "請選擇群組類型"
 
 #: mod/dvr/add_new_grp.inc:182
 msgid "Disaster victims are classified according to groups. Please Select the 'group type' from the drop down menu"
@@ -11712,6 +11718,10 @@ msgstr "捐贈清單"
 #: mod/rms/handler_plg_sch.inc:287
 msgid "Donor"
 msgstr "捐贈者"
+
+#: mod/rms/handler_plg_ls.inc:95
+msgid "Pledges details"
+msgstr "庇護所詳細資料"
 
 #: mod/rms/handler_plg_ls.inc:106
 msgid "Donors"
@@ -14844,6 +14854,10 @@ msgstr "多方面的"
 msgid "Medical"
 msgstr "醫療"
 
+#~ msgid " for "
+#~ msgstr "至"
+#~ msgid "Please select a Group that describes you well"
+#~ msgstr "請選擇一個可以描述你的群組"
 #~ msgid "Refresh"
 #~ msgstr "更新"
 #~ msgid "# Volunteers"
