@@ -212,7 +212,7 @@ function shn_dvr_grouptype_and_head_details($errors = false) {
     //select the group type
     shn_form_fsopen(_("Select Group Type"));
     print '<div class="info">';
-    print _("Please select a Group that describes you well");
+    print _("Please select a group that you are going to search");
     print '<br />';
     //echo $_SESSION['dvr']['group']['displaced_loc'];
     print '<br />';

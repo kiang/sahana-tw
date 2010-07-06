@@ -30,7 +30,7 @@ function shn_dvr_search_default() {
     shn_form_hidden(array('seq' => 'search'));
     shn_form_fsopen(_("General Search"));
     print '<div class="info">';
-    print _("Please select a Group that describes you well");
+    print _("Please select a group that you are going to search");
     print '<br />';
     print '<br />';
     print '</div>';
@@ -111,7 +111,7 @@ function shn_dvr_advanced_search_group() {
     shn_form_fsopen(_('Advanced Search'));
     shn_form_fsopen(_("General Search"));
     print '<div class="info">';
-    print _("Please select a Group that describes you well");
+    print _("Please select a group that you are going to search");
     print '<br />';
     print '<br />';
     print '</div>';

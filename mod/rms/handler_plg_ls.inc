@@ -92,7 +92,7 @@ function _shn_rms_plg_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
         $plg_date = $r['plg_date'];
         $plg_stat = $r['status'];
         $shn_usr = $r['user_id'];
-        $view_url = '<a href=index.php?mod=rms&amp;act=plg_ls&amp;seq=view_plg&amp;plg_id=' . $plg_id . '>' . _("Details") . '</a>';
+        $view_url = '<a href=index.php?mod=rms&amp;act=plg_ls&amp;seq=view_plg&amp;plg_id=' . $plg_id . '>' . _("Pledges details") . '</a>';
         //$tb_res[] = array ($plg_id, $donor_d, $plg_date, $plg_stat, $view_url);
         $tb_res[] = array($donor_d, $plg_date, $plg_stat, $view_url);
     }

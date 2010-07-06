@@ -261,14 +261,13 @@ function _shn_or_drill_loc($parent = null) {
     <div class="note">
     <?
         $tmp = shn_get_last_level();
-        $child_type = $tmp[1];
         //echo	_("Each Row is a ".$child_type." ,Column is a  Service.");
         
 ?>
  	</div><?
     } else {
 ?>
- 	<h2><?php echo _("Organization Report By ") . $child_type . _(" for ") . $parent_type; ?></h2>
+ 	<h2><?php echo _("Organization Report By ") . $parent_type; ?></h2>
     <p>
  
 <?php

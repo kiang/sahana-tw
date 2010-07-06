@@ -36,7 +36,7 @@ function shn_dvr_add_new_individual($errors = false) {
     shn_form_hidden(array('seq' => 'add_new_individual'));
     shn_form_fsopen(_("Select Group"));
     print '<div class="info">';
-    //print _("Please select a Group that describes you well");
+    //print _("Please select a group that you are going to search");
     print '<br />';
     print '</div>';
     print '<br />';
