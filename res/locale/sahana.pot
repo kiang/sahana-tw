@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-06 17:37+0800\n"
+"POT-Creation-Date: 2010-07-06 18:36+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -235,6 +235,10 @@ msgstr ""
 msgid "Template error: could not write to template cache directory."
 msgstr ""
 
+#: mod/vm/model/dao.php:657
+msgid "Manage the entire project"
+msgstr ""
+
 #: mod/vm/model/dao.php:909
 msgid "You have been removed from Project"
 msgstr ""
@@ -246,7 +250,7 @@ msgid "This is an automated message"
 msgstr ""
 
 #: mod/vm/model/dao.php:943 mod/vm/model/dao.php:1003
-#: tools/tpl_languages.php:119
+#: tools/tpl_languages.php:156
 msgid "Skills and Work Restrictions"
 msgstr ""
 
@@ -363,53 +367,55 @@ msgid "View coming projects"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:10
-#: tools/tpl_languages.php:210 tools/tpl_languages.php:226
+#: tools/tpl_languages.php:238 tools/tpl_languages.php:255
 msgid "Personal Information"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:13
-#: tools/tpl_languages.php:211 tools/tpl_languages.php:227
+#: tools/tpl_languages.php:239 tools/tpl_languages.php:256
 msgid "Any ID Number:"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:14
-#: tools/tpl_languages.php:103 tools/tpl_languages.php:212
-#: tools/tpl_languages.php:228
+#: tools/tpl_languages.php:142 tools/tpl_languages.php:240
+#: tools/tpl_languages.php:257
 msgid "Name:"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:15
-#: tools/tpl_languages.php:213 tools/tpl_languages.php:231
+#: tools/tpl_languages.php:241 tools/tpl_languages.php:260
 msgid "Loose Name Matching"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:15
+#: tools/tpl_languages.php:242 tools/tpl_languages.php:261
+#: tools/tpl_languages.php:263
 msgid "(May return many unrelated results)"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:18
-#: tools/tpl_languages.php:192 tools/tpl_languages.php:214
-#: tools/tpl_languages.php:235
+#: tools/tpl_languages.php:218 tools/tpl_languages.php:243
+#: tools/tpl_languages.php:266
 msgid "Skills"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
-#: tools/tpl_languages.php:215 tools/tpl_languages.php:236
+#: tools/tpl_languages.php:244 tools/tpl_languages.php:267
 msgid "Require ALL skills below"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
-#: tools/tpl_languages.php:216 tools/tpl_languages.php:237
+#: tools/tpl_languages.php:245 tools/tpl_languages.php:268
 msgid "Require ANY skills below"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:19
-#: tools/tpl_languages.php:217
+#: tools/tpl_languages.php:246
 msgid "Skills Matching:"
 msgstr ""
 
 #: mod/vm/templates/volunteer/adv_search.tpl.php:24
-#: tools/tpl_languages.php:151 tools/tpl_languages.php:218
+#: tools/tpl_languages.php:186 tools/tpl_languages.php:247
 #: mod/or/search.inc:49 mod/or/main.inc:34 mod/ims/search.inc:24
 #: mod/ims/search.inc:34 mod/ims/search.inc:333 mod/ims/search.inc:343
 #: mod/ims/search.inc:565 mod/ims/main.inc:44 mod/rs/search.inc:23
@@ -424,29 +430,29 @@ msgid "Search"
 msgstr ""
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:46
-#: tools/tpl_languages.php:249 inc/lib_paging.inc:129
+#: inc/lib_paging.inc:129
 msgid "Go to Page No "
 msgstr ""
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:61
-#: tools/tpl_languages.php:250 inc/lib_paging.inc:137
+#: inc/lib_paging.inc:137
 msgid "Go to Last Page"
 msgstr ""
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:62
-#: tools/tpl_languages.php:251 inc/lib_paging.inc:139
+#: inc/lib_paging.inc:139
 msgid "Go to Next Page"
 msgstr ""
 
 #: mod/vm/templates/volunteer/paging_navigation.tpl.php:62
-#: tools/tpl_languages.php:252 mod/or/reg_org.inc:114 mod/or/reg_org.inc:315
-#: mod/or/lib_or.inc:796 mod/ws/reg.inc:52 mod/ims/reg_inv.inc:59
-#: mod/ims/reg_inv.inc:111 mod/cs/lib_cs.inc:193 mod/gis/wm_fns.inc:120
-#: mod/gis/wm_fns.inc:149 mod/gis/main_fns.inc:88 mod/gis/main_fns.inc:115
-#: mod/mpr/search.inc:82 mod/mpr/search.inc:212 mod/mpr/edit.inc:236
-#: mod/mpr/edit.inc:351 mod/mpr/edit.inc:752 mod/mpr/images.inc:26
-#: mod/mpr/add.inc:137 mod/mpr/add.inc:329 mod/mpr/add.inc:395
-#: mod/mpr/add.inc:456 mod/mpr/add.inc:557 mod/sync/handler_upload.inc:71
+#: mod/or/reg_org.inc:114 mod/or/reg_org.inc:315 mod/or/lib_or.inc:796
+#: mod/ws/reg.inc:52 mod/ims/reg_inv.inc:59 mod/ims/reg_inv.inc:111
+#: mod/cs/lib_cs.inc:193 mod/gis/wm_fns.inc:120 mod/gis/wm_fns.inc:149
+#: mod/gis/main_fns.inc:88 mod/gis/main_fns.inc:115 mod/mpr/search.inc:82
+#: mod/mpr/search.inc:212 mod/mpr/edit.inc:236 mod/mpr/edit.inc:351
+#: mod/mpr/edit.inc:752 mod/mpr/images.inc:26 mod/mpr/add.inc:137
+#: mod/mpr/add.inc:329 mod/mpr/add.inc:395 mod/mpr/add.inc:456
+#: mod/mpr/add.inc:557 mod/sync/handler_upload.inc:71
 #: mod/admin/location.inc:58 mod/cr/edit.inc:86 mod/cr/edit.inc:240
 #: mod/cr/edit.inc:621 mod/cr/camp.inc:92 mod/cr/camp.inc:113
 #: mod/cr/camp.inc:182 mod/cr/camp.inc:560 mod/dvr/edt_grp.inc:395
@@ -478,14 +484,15 @@ msgid "from the system?"
 msgstr ""
 
 #: tools/tpl_languages.php:5 tools/tpl_languages.php:16
-#: tools/tpl_languages.php:61 tools/tpl_languages.php:75
-#: mod/rms/handler_mng_ff.inc:267 mod/rms/lib_rms.inc:490
+#: tools/tpl_languages.php:71 tools/tpl_languages.php:96
+#: tools/tpl_languages.php:117 mod/rms/handler_mng_ff.inc:267
+#: mod/rms/lib_rms.inc:490
 msgid "Cancel"
 msgstr ""
 
-#: tools/tpl_languages.php:6 tools/tpl_languages.php:29
-#: tools/tpl_languages.php:76 tools/tpl_languages.php:102
-#: tools/tpl_languages.php:347 tools/tpl_languages.php:379
+#: tools/tpl_languages.php:6 tools/tpl_languages.php:30
+#: tools/tpl_languages.php:118 tools/tpl_languages.php:141
+#: tools/tpl_languages.php:356 tools/tpl_languages.php:388
 #: mod/or/view_org.inc:449 mod/or/view_org.inc:735 mod/or/admin.inc:133
 #: mod/ims/view_edit_item.inc:66 mod/ims/view_inv.inc:257
 #: mod/ims/mini_quantity.inc:250 mod/cs/edit.inc:285 mod/cs/edit.inc:465
@@ -493,18 +500,22 @@ msgstr ""
 #: mod/admin/ims_level.inc:175 mod/admin/ims_level.inc:358
 #: mod/admin/ims_assign.inc:18 mod/admin/ims_assign.inc:35
 #: mod/admin/location.inc:100 mod/cr/edit.inc:194 mod/cr/admin.inc:203
-#: mod/dvr/admin.inc:57 mod/rms/handler_req_ls.inc:98 mod/rms/lib_rms.inc:489
+#: mod/dvr/search_individual.inc:92 mod/dvr/search_individual.inc:108
+#: mod/dvr/search_group.inc:94 mod/dvr/admin.inc:57
+#: mod/rms/handler_req_ls.inc:98 mod/rms/lib_rms.inc:489
 #: mod/msg/message_forms.inc:233 inc/lib_security/acl_form.inc:276
 msgid "Delete"
 msgstr ""
 
-#: tools/tpl_languages.php:7 tools/tpl_languages.php:28
-#: tools/tpl_languages.php:101 tools/tpl_languages.php:121
-#: mod/or/process_org.inc:33 mod/or/process_org.inc:41 mod/or/view_org.inc:734
+#: tools/tpl_languages.php:7 tools/tpl_languages.php:29
+#: tools/tpl_languages.php:98 tools/tpl_languages.php:140
+#: tools/tpl_languages.php:158 mod/or/process_org.inc:33
+#: mod/or/process_org.inc:41 mod/or/view_org.inc:734
 #: mod/ims/view_edit_item.inc:65 mod/ims/mini_quantity.inc:249
 #: mod/gis/wm_fns.inc:56 mod/mpr/search.inc:255 mod/cr/edit.inc:193
 #: mod/cr/edit.inc:282 mod/cr/edit.inc:558 mod/cr/camp.inc:515
-#: mod/msg/handler_cap_edit.inc:46
+#: mod/dvr/search_individual.inc:91 mod/dvr/search_individual.inc:106
+#: mod/dvr/list.inc:78 mod/msg/handler_cap_edit.inc:46
 msgid "Edit"
 msgstr ""
 
@@ -532,23 +543,24 @@ msgstr ""
 msgid "Target Number of Volunteers"
 msgstr ""
 
-#: tools/tpl_languages.php:14 tools/tpl_languages.php:37
-#: tools/tpl_languages.php:58 tools/tpl_languages.php:362
-#: tools/tpl_languages.php:368 mod/or/admin.inc:132 mod/or/admin.inc:161
-#: mod/rs/sample.inc:167 mod/rs/sample.inc:281 mod/cs/supplier_report.inc:30
-#: mod/cs/search.inc:82 mod/cs/search.inc:221 mod/cs/edit.inc:526
-#: mod/cs/add.inc:428 mod/mpr/admin.inc:354 mod/mpr/admin.inc:383
-#: mod/cr/admin.inc:202 mod/cr/admin.inc:231 mod/dvr/edt_grp.inc:449
-#: mod/dvr/edt_grp.inc:524 mod/dvr/add_new_grp.inc:354 mod/dvr/admin.inc:56
+#: tools/tpl_languages.php:14 tools/tpl_languages.php:38
+#: tools/tpl_languages.php:67 tools/tpl_languages.php:103
+#: tools/tpl_languages.php:371 tools/tpl_languages.php:377
+#: mod/or/admin.inc:132 mod/or/admin.inc:161 mod/rs/sample.inc:167
+#: mod/rs/sample.inc:281 mod/cs/supplier_report.inc:30 mod/cs/search.inc:82
+#: mod/cs/search.inc:221 mod/cs/edit.inc:526 mod/cs/add.inc:428
+#: mod/mpr/admin.inc:354 mod/mpr/admin.inc:383 mod/cr/admin.inc:202
+#: mod/cr/admin.inc:231 mod/dvr/edt_grp.inc:449 mod/dvr/edt_grp.inc:524
+#: mod/dvr/add_new_grp.inc:354 mod/dvr/admin.inc:56
 #: mod/msg/handler_cap_new.inc:134
 msgid "Description"
 msgstr ""
 
-#: tools/tpl_languages.php:15 tools/tpl_languages.php:60
-#: mod/ims/add_item.inc:156 mod/ims/search.inc:107 mod/ims/optimize.inc:238
-#: mod/ims/mini_quantity.inc:138 mod/admin/location.inc:411
-#: mod/rms/handler_mng_ff.inc:291 inc/lib_security/auth_form.inc:102
-#: inc/lib_security/auth_form.inc:150
+#: tools/tpl_languages.php:15 tools/tpl_languages.php:70
+#: tools/tpl_languages.php:95 mod/ims/add_item.inc:156 mod/ims/search.inc:107
+#: mod/ims/optimize.inc:238 mod/ims/mini_quantity.inc:138
+#: mod/admin/location.inc:411 mod/rms/handler_mng_ff.inc:291
+#: inc/lib_security/auth_form.inc:102 inc/lib_security/auth_form.inc:150
 msgid "Submit"
 msgstr ""
 
@@ -560,8 +572,8 @@ msgstr ""
 msgid "Task"
 msgstr ""
 
-#: tools/tpl_languages.php:19 tools/tpl_languages.php:254
-#: tools/tpl_languages.php:346 mod/or/admin.inc:92 mod/or/admin.inc:126
+#: tools/tpl_languages.php:19 tools/tpl_languages.php:281
+#: tools/tpl_languages.php:355 mod/or/admin.inc:92 mod/or/admin.inc:126
 #: mod/or/admin.inc:156 mod/or/admin_forms.inc:142 mod/or/admin_forms.inc:200
 #: mod/mpr/admin.inc:206 mod/mpr/admin.inc:314 mod/mpr/admin.inc:348
 #: mod/mpr/admin.inc:378 mod/pref/ims_config.inc:39 mod/pref/ims_config.inc:83
@@ -573,116 +585,231 @@ msgstr ""
 msgid "Update"
 msgstr ""
 
-#: tools/tpl_languages.php:20
+#: tools/tpl_languages.php:20 tools/tpl_languages.php:54
+#: tools/tpl_languages.php:64 tools/tpl_languages.php:72
 msgid "Project name"
 msgstr ""
 
-#: tools/tpl_languages.php:21
+#: tools/tpl_languages.php:21 tools/tpl_languages.php:55
+#: tools/tpl_languages.php:73
 msgid "Project time"
 msgstr ""
 
-#: tools/tpl_languages.php:22
+#: tools/tpl_languages.php:22 tools/tpl_languages.php:56
+#: tools/tpl_languages.php:69 tools/tpl_languages.php:74
 msgid "Project location"
 msgstr ""
 
-#: tools/tpl_languages.php:23
+#: tools/tpl_languages.php:23 tools/tpl_languages.php:57
+#: tools/tpl_languages.php:68 tools/tpl_languages.php:75
 msgid "Project manager"
 msgstr ""
 
-#: tools/tpl_languages.php:24 tools/tpl_languages.php:35
-#: tools/tpl_languages.php:41
+#: tools/tpl_languages.php:24 tools/tpl_languages.php:36
+#: tools/tpl_languages.php:42 tools/tpl_languages.php:58
+#: tools/tpl_languages.php:76
 msgid "Volunteers need"
 msgstr ""
 
-#: tools/tpl_languages.php:25 tools/tpl_languages.php:36
-#: tools/tpl_languages.php:42
+#: tools/tpl_languages.php:25 tools/tpl_languages.php:37
+#: tools/tpl_languages.php:43 tools/tpl_languages.php:59
 msgid "Volunteers assigned"
 msgstr ""
 
-#: tools/tpl_languages.php:26
+#: tools/tpl_languages.php:26 tools/tpl_languages.php:60
+msgid "Edit closure report"
+msgstr ""
+
+#: tools/tpl_languages.php:27 tools/tpl_languages.php:61
+#: tools/tpl_languages.php:78
 msgid "no projects"
 msgstr ""
 
-#: tools/tpl_languages.php:27 tools/tpl_languages.php:54
+#: tools/tpl_languages.php:28 tools/tpl_languages.php:63
 msgid "Project Information"
 msgstr ""
 
-#: tools/tpl_languages.php:30 tools/tpl_languages.php:62
+#: tools/tpl_languages.php:31 tools/tpl_languages.php:79
 msgid "Assign Volunteers"
 msgstr ""
 
-#: tools/tpl_languages.php:31
+#: tools/tpl_languages.php:32 tools/tpl_languages.php:99
 msgid "Project Name :"
 msgstr ""
 
-#: tools/tpl_languages.php:32 mod/ims/transfer_inv.inc:605
+#: tools/tpl_languages.php:33 tools/tpl_languages.php:100
+#: mod/ims/transfer_inv.inc:605
 msgid "Date :"
 msgstr ""
 
-#: tools/tpl_languages.php:33
+#: tools/tpl_languages.php:34
 msgid "Location :"
 msgstr ""
 
-#: tools/tpl_languages.php:34
+#: tools/tpl_languages.php:35 tools/tpl_languages.php:101
 msgid "Project manager :"
 msgstr ""
 
-#: tools/tpl_languages.php:38 tools/tpl_languages.php:48
-#: tools/tpl_languages.php:323
+#: tools/tpl_languages.php:39 tools/tpl_languages.php:49
 msgid "Positions"
 msgstr ""
 
-#: tools/tpl_languages.php:39
+#: tools/tpl_languages.php:40
 msgid "Position title"
 msgstr ""
 
-#: tools/tpl_languages.php:40
+#: tools/tpl_languages.php:41
 msgid "Position description"
 msgstr ""
 
-#: tools/tpl_languages.php:43 mod/ims/optimize.inc:500 mod/ims/view_inv.inc:66
+#: tools/tpl_languages.php:44 mod/ims/optimize.inc:500 mod/ims/view_inv.inc:66
 #: mod/mpr/search.inc:243
 msgid "Actions"
 msgstr ""
 
-#: tools/tpl_languages.php:44
+#: tools/tpl_languages.php:45
 msgid "Pay Rate"
 msgstr ""
 
-#: tools/tpl_languages.php:45 mod/or/view_org.inc:199 mod/cr/search.inc:66
+#: tools/tpl_languages.php:46 mod/or/view_org.inc:199 mod/cr/search.inc:66
 #: mod/cr/search.inc:153
 msgid "edit"
 msgstr ""
 
-#: tools/tpl_languages.php:46
+#: tools/tpl_languages.php:47
 msgid "remove"
 msgstr ""
 
-#: tools/tpl_languages.php:47 tools/tpl_languages.php:50
+#: tools/tpl_languages.php:48 tools/tpl_languages.php:51
 msgid "Add a position"
 msgstr ""
 
-#: tools/tpl_languages.php:49
+#: tools/tpl_languages.php:50
 msgid "There are no positions assigned to"
 msgstr ""
 
-#: tools/tpl_languages.php:51
+#: tools/tpl_languages.php:52
 msgid "Volunteers working on"
 msgstr ""
 
-#: tools/tpl_languages.php:52
+#: tools/tpl_languages.php:53
 msgid "No volunteers are currently assigned to"
 msgstr ""
 
-#: tools/tpl_languages.php:53 tools/tpl_languages.php:115
-#: tools/tpl_languages.php:257
+#: tools/tpl_languages.php:62 tools/tpl_languages.php:154
+#: tools/tpl_languages.php:284
 msgid "Project"
 msgstr ""
 
-#: tools/tpl_languages.php:55 tools/tpl_languages.php:78
-#: tools/tpl_languages.php:256 tools/tpl_languages.php:303
-#: mod/or/lib_or.inc:641 mod/rs/sample.inc:166 mod/rs/sample.inc:225
-#: mod/rs/sample.inc:280 mod/cs/supplier_report.inc:29
+#: tools/tpl_languages.php:65 tools/tpl_languages.php:273
+msgid "Start date :"
+msgstr ""
+
+#: tools/tpl_languages.php:66 tools/tpl_languages.php:274
+msgid "End date :"
+msgstr ""
+
+#: tools/tpl_languages.php:77
+msgid "Volunteers attended"
+msgstr ""
+
+#: tools/tpl_languages.php:80
+msgid "You are currently not assigned as a site manager to any projects."
+msgstr ""
+
+#: tools/tpl_languages.php:81
+msgid "First please select a project to assign to:"
+msgstr ""
+
+#: tools/tpl_languages.php:82
+msgid "Project to assign to"
+msgstr ""
+
+#: tools/tpl_languages.php:83 tools/tpl_languages.php:350
+#: mod/or/process_org.inc:33 mod/or/process_org.inc:38
+#: inc/lib_security/acl_form.inc:250
+msgid "Continue"
+msgstr ""
+
+#: tools/tpl_languages.php:84
+msgid "Project name:"
+msgstr ""
+
+#: tools/tpl_languages.php:85
+msgid "Project manager:"
+msgstr ""
+
+#: tools/tpl_languages.php:86
+msgid "How many hours the volunteers had attended"
+msgstr ""
+
+#: tools/tpl_languages.php:87 tools/tpl_languages.php:105
+msgid "Volunteer name"
+msgstr ""
+
+#: tools/tpl_languages.php:88 tools/tpl_languages.php:106
+msgid "Volunteer position"
+msgstr ""
+
+#: tools/tpl_languages.php:89 tools/tpl_languages.php:107
+msgid "Attended or absence"
+msgstr ""
+
+#: tools/tpl_languages.php:90 tools/tpl_languages.php:108
+msgid "Attended hours"
+msgstr ""
+
+#: tools/tpl_languages.php:91 tools/tpl_languages.php:109
+msgid "Attended"
+msgstr ""
+
+#: tools/tpl_languages.php:92 tools/tpl_languages.php:110
+msgid "Absence"
+msgstr ""
+
+#: tools/tpl_languages.php:93 tools/tpl_languages.php:111
+msgid "Description of the progress"
+msgstr ""
+
+#: tools/tpl_languages.php:94 tools/tpl_languages.php:112
+msgid "Suggestion of this project"
+msgstr ""
+
+#: tools/tpl_languages.php:97
+msgid "Project Closure Report"
+msgstr ""
+
+#: tools/tpl_languages.php:102
+msgid "Last modified"
+msgstr ""
+
+#: tools/tpl_languages.php:104
+msgid "Volunteers attending status"
+msgstr ""
+
+#: tools/tpl_languages.php:113
+msgid "Back to closure report list"
+msgstr ""
+
+#: tools/tpl_languages.php:114
+msgid "Back to index of volunteer module"
+msgstr ""
+
+#: tools/tpl_languages.php:115
+msgid "Delete Volunteer"
+msgstr ""
+
+#: tools/tpl_languages.php:116
+msgid "Are you sure you want to retire"
+msgstr ""
+
+#: tools/tpl_languages.php:119
+msgid "Volunteers to Assign"
+msgstr ""
+
+#: tools/tpl_languages.php:120 tools/tpl_languages.php:283
+#: tools/tpl_languages.php:326 mod/or/lib_or.inc:641 mod/rs/sample.inc:166
+#: mod/rs/sample.inc:225 mod/rs/sample.inc:280 mod/cs/supplier_report.inc:29
 #: mod/cs/drill_down.inc:51 mod/cs/edit.inc:177 mod/cs/edit.inc:404
 #: mod/cs/edit.inc:525 mod/cs/add.inc:427 mod/mpr/search.inc:74
 #: mod/mpr/search.inc:75 mod/mpr/search.inc:361 mod/mpr/edit.inc:510
@@ -696,116 +823,54 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: tools/tpl_languages.php:56 tools/tpl_languages.php:242
-msgid "Start date :"
-msgstr ""
-
-#: tools/tpl_languages.php:57 tools/tpl_languages.php:243
-msgid "End date :"
-msgstr ""
-
-#: tools/tpl_languages.php:59 tools/tpl_languages.php:202 mod/or/search.inc:40
-#: mod/or/reg_org.inc:85 mod/or/reg_org.inc:203 mod/or/reg_org.inc:283
-#: mod/or/view_org.inc:395 mod/or/view_org.inc:699 mod/ims/reg_inv.inc:92
-#: mod/ims/view_inv.inc:202 inc/lib_location.inc:1062
-msgid "Base Location"
-msgstr ""
-
-#: tools/tpl_languages.php:63
-msgid "You are currently not assigned as a site manager to any projects."
-msgstr ""
-
-#: tools/tpl_languages.php:64
-msgid "First please select a project to assign to:"
-msgstr ""
-
-#: tools/tpl_languages.php:65
-msgid "Project to assign to"
-msgstr ""
-
-#: tools/tpl_languages.php:66 tools/tpl_languages.php:341
-#: mod/or/process_org.inc:33 mod/or/process_org.inc:38
-#: inc/lib_security/acl_form.inc:250
-msgid "Continue"
-msgstr ""
-
-#: tools/tpl_languages.php:67 tools/tpl_languages.php:69
-msgid "Date:"
-msgstr ""
-
-#: tools/tpl_languages.php:68 tools/tpl_languages.php:70
-msgid "Time:"
-msgstr ""
-
-#: tools/tpl_languages.php:71
-msgid "now"
-msgstr ""
-
-#: tools/tpl_languages.php:72
-msgid "or # hours:"
-msgstr ""
-
-#: tools/tpl_languages.php:73
-msgid "Delete Volunteer"
-msgstr ""
-
-#: tools/tpl_languages.php:74
-msgid "Are you sure you want to retire"
-msgstr ""
-
-#: tools/tpl_languages.php:77
-msgid "Volunteers to Assign"
-msgstr ""
-
-#: tools/tpl_languages.php:79 tools/tpl_languages.php:205
+#: tools/tpl_languages.php:121 tools/tpl_languages.php:233
 #: mod/mpr/search.inc:360 mod/mpr/edit.inc:509
 msgid "Picture"
 msgstr ""
 
-#: tools/tpl_languages.php:80 tools/tpl_languages.php:304
-#: tools/tpl_languages.php:319 mod/ims/search.inc:142 mod/ims/search.inc:215
-#: mod/mpr/search.inc:362 mod/mpr/edit.inc:143 mod/mpr/add.inc:51
-#: mod/mpr/add.inc:52 mod/rms/handler_req_ls.inc:135
-#: mod/rms/handler_req_ls.inc:175 mod/rms/handler_req_sch.inc:99
-#: mod/rms/handler_req_sch.inc:205 mod/rms/handler_req_sch.inc:211
-#: mod/rms/handler_plg_ls.inc:118 mod/rms/handler_plg_ls.inc:156
-#: mod/rms/handler_plg_sch.inc:63 mod/rms/handler_mng_ff.inc:199
-#: mod/msg/handler_cap_edit.inc:90 mod/msg/handler_cap_new.inc:81
+#: tools/tpl_languages.php:122 tools/tpl_languages.php:327
+#: mod/ims/search.inc:142 mod/ims/search.inc:215 mod/mpr/search.inc:362
+#: mod/mpr/edit.inc:143 mod/mpr/add.inc:51 mod/mpr/add.inc:52
+#: mod/rms/handler_req_ls.inc:135 mod/rms/handler_req_ls.inc:175
+#: mod/rms/handler_req_sch.inc:99 mod/rms/handler_req_sch.inc:205
+#: mod/rms/handler_req_sch.inc:211 mod/rms/handler_plg_ls.inc:118
+#: mod/rms/handler_plg_ls.inc:156 mod/rms/handler_plg_sch.inc:63
+#: mod/rms/handler_mng_ff.inc:199 mod/msg/handler_cap_edit.inc:90
+#: mod/msg/handler_cap_new.inc:81
 msgid "Status"
 msgstr ""
 
-#: tools/tpl_languages.php:81 tools/tpl_languages.php:305
-#: tools/tpl_languages.php:322
+#: tools/tpl_languages.php:123 tools/tpl_languages.php:328
 msgid "Affiliation"
 msgstr ""
 
-#: tools/tpl_languages.php:82
+#: tools/tpl_languages.php:124
 msgid "Project - Position"
 msgstr ""
 
-#: tools/tpl_languages.php:83 tools/tpl_languages.php:85
-#: tools/tpl_languages.php:107 tools/tpl_languages.php:199
-#: tools/tpl_languages.php:239
+#: tools/tpl_languages.php:125 tools/tpl_languages.php:127
+#: tools/tpl_languages.php:146 tools/tpl_languages.php:225
+#: tools/tpl_languages.php:270
 msgid "Availability"
 msgstr ""
 
-#: tools/tpl_languages.php:84
+#: tools/tpl_languages.php:126
 msgid "Start"
 msgstr ""
 
-#: tools/tpl_languages.php:86
+#: tools/tpl_languages.php:128
 msgid "End"
 msgstr ""
 
-#: tools/tpl_languages.php:87
+#: tools/tpl_languages.php:129
 msgid "Hours"
 msgstr ""
 
-#: tools/tpl_languages.php:88
+#: tools/tpl_languages.php:130
 msgid "Identification"
 msgstr ""
 
-#: tools/tpl_languages.php:89 tools/tpl_languages.php:234
+#: tools/tpl_languages.php:131 tools/tpl_languages.php:265
 #: mod/or/report.inc:464 mod/or/view_org.inc:91 mod/or/view_org.inc:484
 #: mod/ims/reg_inv.inc:43 mod/admin/location.inc:38 mod/cr/search.inc:42
 #: mod/cr/search.inc:129 mod/cr/edit.inc:501 mod/cr/reports.inc:62
@@ -817,671 +882,599 @@ msgstr ""
 msgid "Location"
 msgstr ""
 
-#: tools/tpl_languages.php:90
+#: tools/tpl_languages.php:132
 msgid "Specialties"
 msgstr ""
 
-#: tools/tpl_languages.php:91
+#: tools/tpl_languages.php:133
 msgid "Assign"
 msgstr ""
 
-#: tools/tpl_languages.php:92
+#: tools/tpl_languages.php:134
 msgid "Remove From Project"
 msgstr ""
 
-#: tools/tpl_languages.php:93
+#: tools/tpl_languages.php:135
 msgid "Assigned"
 msgstr ""
 
-#: tools/tpl_languages.php:94
+#: tools/tpl_languages.php:136
 msgid "Unassigned"
 msgstr ""
 
-#: tools/tpl_languages.php:95 tools/tpl_languages.php:312
+#: tools/tpl_languages.php:137
 msgid "Position:"
 msgstr ""
 
-#: tools/tpl_languages.php:96
+#: tools/tpl_languages.php:138
 msgid "Assign this Volunteer"
 msgstr ""
 
-#: tools/tpl_languages.php:97
-msgid ""
-"To assign another volunteer, you must perform another search because no "
-"other volunteers match the current search criteria"
+#: tools/tpl_languages.php:139
+msgid "(none)"
 msgstr ""
 
-#: tools/tpl_languages.php:98
-msgid "No volunteers were found. Please refine your criteria and try again"
-msgstr ""
-
-#: tools/tpl_languages.php:99
-msgid "Alternatively, you can try the"
-msgstr ""
-
-#: tools/tpl_languages.php:100
-msgid "specifying 'Loose Name Matching'"
-msgstr ""
-
-#: tools/tpl_languages.php:104 mod/or/lib_or.inc:566 mod/ims/lib_ims.inc:297
+#: tools/tpl_languages.php:143 mod/or/lib_or.inc:566 mod/ims/lib_ims.inc:297
 msgid "Gender:"
 msgstr ""
 
-#: tools/tpl_languages.php:105
+#: tools/tpl_languages.php:144
 msgid "Date of Birth:"
 msgstr ""
 
-#: tools/tpl_languages.php:106
+#: tools/tpl_languages.php:145
 msgid "Contact Info"
 msgstr ""
 
-#: tools/tpl_languages.php:108
+#: tools/tpl_languages.php:147
 msgid "Work Begin:"
 msgstr ""
 
-#: tools/tpl_languages.php:109
+#: tools/tpl_languages.php:148
 msgid "Work End:"
 msgstr ""
 
-#: tools/tpl_languages.php:110
+#: tools/tpl_languages.php:149
 msgid "Work Hour Begin:"
 msgstr ""
 
-#: tools/tpl_languages.php:111
+#: tools/tpl_languages.php:150
 msgid "Work Hour End:"
 msgstr ""
 
-#: tools/tpl_languages.php:112 tools/tpl_languages.php:188
+#: tools/tpl_languages.php:151 tools/tpl_languages.php:214
 msgid "Work Details"
 msgstr ""
 
-#: tools/tpl_languages.php:113
+#: tools/tpl_languages.php:152
 msgid "Occupation:"
 msgstr ""
 
-#: tools/tpl_languages.php:114
+#: tools/tpl_languages.php:153
 msgid "Affiliation:"
 msgstr ""
 
-#: tools/tpl_languages.php:116 tools/tpl_languages.php:258
+#: tools/tpl_languages.php:155 tools/tpl_languages.php:285
 msgid "Position"
 msgstr ""
 
-#: tools/tpl_languages.php:117
-msgid "Log Time"
-msgstr ""
-
-#: tools/tpl_languages.php:118
-msgid "Log time"
-msgstr ""
-
-#: tools/tpl_languages.php:120
+#: tools/tpl_languages.php:157
 msgid "Special Needs:"
 msgstr ""
 
-#: tools/tpl_languages.php:122
+#: tools/tpl_languages.php:159
 msgid "Approve Site Managers"
 msgstr ""
 
-#: tools/tpl_languages.php:123
+#: tools/tpl_languages.php:160
 msgid "Current or Previous Applicants"
 msgstr ""
 
-#: tools/tpl_languages.php:124
+#: tools/tpl_languages.php:161
 msgid "There are no managers to approve or revoke manager approval from."
 msgstr ""
 
-#: tools/tpl_languages.php:125
+#: tools/tpl_languages.php:162
 msgid "Current Status"
 msgstr ""
 
-#: tools/tpl_languages.php:126
+#: tools/tpl_languages.php:163
 msgid "Approve"
 msgstr ""
 
-#: tools/tpl_languages.php:127
+#: tools/tpl_languages.php:164
 msgid "Deny / Revoke"
 msgstr ""
 
-#: tools/tpl_languages.php:128
+#: tools/tpl_languages.php:165
 msgid "Volunteer"
 msgstr ""
 
-#: tools/tpl_languages.php:129
+#: tools/tpl_languages.php:166
 msgid "Approved"
 msgstr ""
 
-#: tools/tpl_languages.php:130
+#: tools/tpl_languages.php:167
 msgid "Denied"
 msgstr ""
 
-#: tools/tpl_languages.php:131
+#: tools/tpl_languages.php:168
 msgid "Unapproved"
 msgstr ""
 
-#: tools/tpl_languages.php:132
-msgid "Revoke"
-msgstr ""
-
-#: tools/tpl_languages.php:133
-msgid "Deny"
-msgstr ""
-
-#: tools/tpl_languages.php:134
+#: tools/tpl_languages.php:169
 msgid "Upgrade Non-Applicants"
 msgstr ""
 
-#: tools/tpl_languages.php:135
+#: tools/tpl_languages.php:170
 msgid "Upgrade this Volunteer to Site Manager Status"
 msgstr ""
 
-#: tools/tpl_languages.php:136 mod/vm/conf.inc:27 mod/vm/menu.inc:104
+#: tools/tpl_languages.php:171 mod/vm/conf.inc:27 mod/vm/menu.inc:104
 msgid "Volunteer Management"
 msgstr ""
 
-#: tools/tpl_languages.php:137
+#: tools/tpl_languages.php:172
 msgid "The Volunteer Management module keeps track of projects and volunteers."
 msgstr ""
 
-#: tools/tpl_languages.php:138
+#: tools/tpl_languages.php:173
 msgid "Volunteer Portal"
 msgstr ""
 
-#: tools/tpl_languages.php:139
+#: tools/tpl_languages.php:174
 msgid "My information page"
 msgstr ""
 
-#: tools/tpl_languages.php:140
+#: tools/tpl_languages.php:175
 msgid "Personal information and time logging."
 msgstr ""
 
-#: tools/tpl_languages.php:141 mod/vm/menu.inc:50
+#: tools/tpl_languages.php:176 mod/vm/menu.inc:50
 msgid "View My Projects"
 msgstr ""
 
-#: tools/tpl_languages.php:142
+#: tools/tpl_languages.php:177
 msgid "View all projects you are currently assigned to"
 msgstr ""
 
-#: tools/tpl_languages.php:143
+#: tools/tpl_languages.php:178
 msgid "Register to VM"
 msgstr ""
 
-#: tools/tpl_languages.php:144
+#: tools/tpl_languages.php:179
 msgid "Register yourself in Volunteer Management module"
 msgstr ""
 
-#: tools/tpl_languages.php:145 mod/vm/menu.inc:35
+#: tools/tpl_languages.php:180 mod/vm/menu.inc:35
 msgid "Assign to Project"
 msgstr ""
 
-#: tools/tpl_languages.php:146
+#: tools/tpl_languages.php:181
 msgid "Manage volunteer assignments"
 msgstr ""
 
-#: tools/tpl_languages.php:147 mod/vm/menu.inc:36
+#: tools/tpl_languages.php:182 mod/vm/menu.inc:36
 msgid "Show Assigned"
 msgstr ""
 
-#: tools/tpl_languages.php:148
+#: tools/tpl_languages.php:183
 msgid "View all volunteers assigned to projects"
 msgstr ""
 
-#: tools/tpl_languages.php:149
+#: tools/tpl_languages.php:184
 msgid "View All Volunteers"
 msgstr ""
 
-#: tools/tpl_languages.php:150
+#: tools/tpl_languages.php:185
 msgid "View all registered volunteers"
 msgstr ""
 
-#: tools/tpl_languages.php:152
+#: tools/tpl_languages.php:187
 msgid "Search for a volunteer"
 msgstr ""
 
-#: tools/tpl_languages.php:153
+#: tools/tpl_languages.php:188
 msgid "Add New Project"
 msgstr ""
 
-#: tools/tpl_languages.php:154
+#: tools/tpl_languages.php:189
 msgid "Start a new project"
 msgstr ""
 
-#: tools/tpl_languages.php:155
+#: tools/tpl_languages.php:190
 msgid "View All Projects"
 msgstr ""
 
-#: tools/tpl_languages.php:156
+#: tools/tpl_languages.php:191
 msgid "View all projects being tracked"
 msgstr ""
 
-#: tools/tpl_languages.php:157
+#: tools/tpl_languages.php:192
 msgid "Generate report"
 msgstr ""
 
-#: tools/tpl_languages.php:158
+#: tools/tpl_languages.php:193
 msgid "Generate customized report on volunteers and projects"
 msgstr ""
 
-#: tools/tpl_languages.php:159
+#: tools/tpl_languages.php:194
 msgid "Send messages"
 msgstr ""
 
-#: tools/tpl_languages.php:160
+#: tools/tpl_languages.php:195
 msgid "Send messages to other users"
 msgstr ""
 
-#: tools/tpl_languages.php:161
+#: tools/tpl_languages.php:196
 msgid "Current projects"
 msgstr ""
 
-#: tools/tpl_languages.php:162
+#: tools/tpl_languages.php:197
 msgid "You are not assigned to any project."
 msgstr ""
 
-#: tools/tpl_languages.php:163
+#: tools/tpl_languages.php:198
 msgid "Click here"
 msgstr ""
 
-#: tools/tpl_languages.php:164
+#: tools/tpl_languages.php:199
 msgid "to view your projects"
 msgstr ""
 
-#: tools/tpl_languages.php:165 mod/or/home.inc:43 mod/cr/main_fns.inc:29
+#: tools/tpl_languages.php:200 mod/or/home.inc:43 mod/cr/main_fns.inc:29
 msgid "Current features include:"
 msgstr ""
 
-#: tools/tpl_languages.php:166
+#: tools/tpl_languages.php:201
 msgid "Manage volunteer assignment"
 msgstr ""
 
-#: tools/tpl_languages.php:167
+#: tools/tpl_languages.php:202
 msgid "Start and view projects"
 msgstr ""
 
-#: tools/tpl_languages.php:168
+#: tools/tpl_languages.php:203
 msgid "Search volunteers"
 msgstr ""
 
-#: tools/tpl_languages.php:169
+#: tools/tpl_languages.php:204
 msgid "Send and receive messages"
 msgstr ""
 
-#: tools/tpl_languages.php:170 mod/admin/mmc_main.inc:12
+#: tools/tpl_languages.php:205 mod/admin/mmc_main.inc:12
 msgid "Version"
 msgstr ""
 
-#: tools/tpl_languages.php:171
+#: tools/tpl_languages.php:206
 msgid "Last Modified"
 msgstr ""
 
-#: tools/tpl_languages.php:172
+#: tools/tpl_languages.php:207
 msgid "Volunteer Registry - Thank you for your help!"
 msgstr ""
 
-#: tools/tpl_languages.php:173
+#: tools/tpl_languages.php:208
 msgid ""
 "To register, fill in as many of the below fields as possible. When you are "
 "finished, click \"Submit\". Your registration will be confirmed via phone or "
 "email."
 msgstr ""
 
-#: tools/tpl_languages.php:174
+#: tools/tpl_languages.php:209
 msgid "Edit details"
 msgstr ""
 
-#: tools/tpl_languages.php:175
-msgid "Personal Details"
-msgstr ""
-
-#: tools/tpl_languages.php:176
-msgid "Name in Full :"
-msgstr ""
-
-#: tools/tpl_languages.php:177
-msgid "Date of Birth :"
-msgstr ""
-
-#: tools/tpl_languages.php:178
-msgid "Male"
-msgstr ""
-
-#: tools/tpl_languages.php:179
-msgid "Female"
-msgstr ""
-
-#: tools/tpl_languages.php:180
-msgid "Gender :"
-msgstr ""
-
-#: tools/tpl_languages.php:181
-msgid "Type of Identification :"
-msgstr ""
-
-#: tools/tpl_languages.php:182
-msgid "Identification Number :"
-msgstr ""
-
-#: tools/tpl_languages.php:183
-msgid "Create a Sahana account"
-msgstr ""
-
-#: tools/tpl_languages.php:184
+#: tools/tpl_languages.php:210
 msgid "Remember this information, because you will use it to log into Sahana."
 msgstr ""
 
-#: tools/tpl_languages.php:185
+#: tools/tpl_languages.php:211
 msgid "Username :"
 msgstr ""
 
-#: tools/tpl_languages.php:186
+#: tools/tpl_languages.php:212
 msgid "Password :"
 msgstr ""
 
-#: tools/tpl_languages.php:187
+#: tools/tpl_languages.php:213
 msgid "Re-Type Password :"
 msgstr ""
 
-#: tools/tpl_languages.php:189
+#: tools/tpl_languages.php:215
 msgid "Affiliation :"
 msgstr ""
 
-#: tools/tpl_languages.php:190
+#: tools/tpl_languages.php:216
 msgid ""
 "Organizations are populated through the Organization Registry module. "
 "Contact an administrator if you do not see your organization."
 msgstr ""
 
-#: tools/tpl_languages.php:191
+#: tools/tpl_languages.php:217
 msgid "Occupation :"
 msgstr ""
 
-#: tools/tpl_languages.php:193
+#: tools/tpl_languages.php:219
 msgid "Please select your skills and limitations below."
 msgstr ""
 
-#: tools/tpl_languages.php:194
+#: tools/tpl_languages.php:220
 msgid "NOTE: Selecting a category will select all options below it."
 msgstr ""
 
-#: tools/tpl_languages.php:195
+#: tools/tpl_languages.php:221
 msgid "When you select a checkbox that has a "
 msgstr ""
 
-#: tools/tpl_languages.php:196
+#: tools/tpl_languages.php:222
 msgid ""
 " next to it, you are selecting all options that fall under that category. "
 "For this reason, make sure that you review the options you select by "
 "expanding until you see a "
 msgstr ""
 
-#: tools/tpl_languages.php:197
+#: tools/tpl_languages.php:223
 msgid ""
 "Optionally, you may enter any special needs. Please use commas to separate "
 "multiple needs:"
 msgstr ""
 
-#: tools/tpl_languages.php:198
+#: tools/tpl_languages.php:224
 msgid "Special needs:"
 msgstr ""
 
-#: tools/tpl_languages.php:200
+#: tools/tpl_languages.php:226
 msgid "Start Date :"
 msgstr ""
 
-#: tools/tpl_languages.php:201
+#: tools/tpl_languages.php:227
 msgid "End Date :"
 msgstr ""
 
-#: tools/tpl_languages.php:203 mod/or/reg_org.inc:103 mod/or/reg_org.inc:211
+#: tools/tpl_languages.php:228
+msgid "Start Hours (e.g. 08:00) :"
+msgstr ""
+
+#: tools/tpl_languages.php:229
+msgid "End Hours (e.g. 17:00) :"
+msgstr ""
+
+#: tools/tpl_languages.php:230 mod/or/search.inc:40 mod/or/reg_org.inc:85
+#: mod/or/reg_org.inc:203 mod/or/reg_org.inc:283 mod/or/view_org.inc:395
+#: mod/or/view_org.inc:699 mod/ims/reg_inv.inc:92 mod/ims/view_inv.inc:202
+#: inc/lib_location.inc:1062
+msgid "Base Location"
+msgstr ""
+
+#: tools/tpl_languages.php:231 mod/or/reg_org.inc:103 mod/or/reg_org.inc:211
 #: mod/or/reg_org.inc:303 mod/or/view_org.inc:435 mod/or/view_org.inc:719
 #: mod/ims/reg_inv.inc:47 mod/ims/reg_inv.inc:97 mod/ims/view_inv.inc:242
 #: mod/dvr/edt_indv.inc:424 mod/dvr/add_new_indv.inc:402
 msgid "Contact Information"
 msgstr ""
 
-#: tools/tpl_languages.php:204
+#: tools/tpl_languages.php:232
 msgid "Prefered medium confirmation :"
 msgstr ""
 
-#: tools/tpl_languages.php:206
+#: tools/tpl_languages.php:234
 msgid "Optionally, you may upload a picture to identify yourself."
 msgstr ""
 
-#: tools/tpl_languages.php:207
+#: tools/tpl_languages.php:235
 msgid "Image file:"
 msgstr ""
 
-#: tools/tpl_languages.php:208
+#: tools/tpl_languages.php:236
 msgid "Current picture"
 msgstr ""
 
-#: tools/tpl_languages.php:209 tools/tpl_languages.php:224
+#: tools/tpl_languages.php:237 tools/tpl_languages.php:253
 msgid "Please enter at least one field below:"
 msgstr ""
 
-#: tools/tpl_languages.php:219
+#: tools/tpl_languages.php:248
 msgid "Advanced Search Criteria"
 msgstr ""
 
-#: tools/tpl_languages.php:220
+#: tools/tpl_languages.php:249
 msgid "Back to Basic Search"
 msgstr ""
 
-#: tools/tpl_languages.php:221
+#: tools/tpl_languages.php:250
 msgid "Basic Search Criteria"
 msgstr ""
 
-#: tools/tpl_languages.php:222 mod/mpr/search.inc:67
+#: tools/tpl_languages.php:251 mod/mpr/search.inc:67
 #: mod/dvr/search_individual.inc:124 mod/dvr/search_group.inc:111
 msgid "Advanced Search"
 msgstr ""
 
-#: tools/tpl_languages.php:223
+#: tools/tpl_languages.php:252
 msgid "Search results are returned only if they match ALL selected fields."
 msgstr ""
 
-#: tools/tpl_languages.php:225
+#: tools/tpl_languages.php:254
 msgid "Filter volunteer results by any one of the following fields:"
 msgstr ""
 
-#: tools/tpl_languages.php:229
+#: tools/tpl_languages.php:258
 msgid "advanced"
 msgstr ""
 
-#: tools/tpl_languages.php:230
+#: tools/tpl_languages.php:259
 msgid "Options"
 msgstr ""
 
-#: tools/tpl_languages.php:232
+#: tools/tpl_languages.php:262
 msgid "Find similar sounding names"
 msgstr ""
 
-#: tools/tpl_languages.php:233
+#: tools/tpl_languages.php:264
 msgid "Show only unassigned"
 msgstr ""
 
-#: tools/tpl_languages.php:238
+#: tools/tpl_languages.php:269
 msgid "and_skills"
 msgstr ""
 
-#: tools/tpl_languages.php:240
+#: tools/tpl_languages.php:271
 msgid "Volunteer must be available for the ENTIRE time specified below"
 msgstr ""
 
-#: tools/tpl_languages.php:241
+#: tools/tpl_languages.php:272
 msgid "Volunteer must be available for ANY PORTION of the time specified below"
 msgstr ""
 
-#: tools/tpl_languages.php:244
+#: tools/tpl_languages.php:275
 msgid "Page"
 msgstr ""
 
-#: tools/tpl_languages.php:245 inc/lib_paging.inc:117
+#: tools/tpl_languages.php:276 inc/lib_paging.inc:117
 msgid "Go to Previous Page"
 msgstr ""
 
-#: tools/tpl_languages.php:246 mod/mpr/search.inc:207
+#: tools/tpl_languages.php:277 mod/mpr/search.inc:207
 #: mod/rms/handler_req_ls.inc:54 mod/rms/handler_plg_ls.inc:48
 #: inc/lib_paging.inc:117 inc/lib_paging.inc:208
 msgid "Previous"
 msgstr ""
 
-#: tools/tpl_languages.php:247 inc/lib_paging.inc:118
+#: tools/tpl_languages.php:278 inc/lib_paging.inc:118
 msgid "Go to First Page"
 msgstr ""
 
-#: tools/tpl_languages.php:248 inc/lib_paging.inc:118
+#: tools/tpl_languages.php:279 inc/lib_paging.inc:118
 msgid "1"
 msgstr ""
 
-#: tools/tpl_languages.php:253 inc/lib_paging.inc:147 inc/lib_paging.inc:227
+#: tools/tpl_languages.php:280 inc/lib_paging.inc:147 inc/lib_paging.inc:227
 msgid "Records per page"
 msgstr ""
 
-#: tools/tpl_languages.php:255
+#: tools/tpl_languages.php:282
 msgid "hours for review on"
 msgstr ""
 
-#: tools/tpl_languages.php:259
+#: tools/tpl_languages.php:286
 msgid "Pay Rate "
 msgstr ""
 
-#: tools/tpl_languages.php:260
+#: tools/tpl_languages.php:287
 msgid "Start "
 msgstr ""
 
-#: tools/tpl_languages.php:261
+#: tools/tpl_languages.php:288
 msgid "End "
 msgstr ""
 
-#: tools/tpl_languages.php:262
+#: tools/tpl_languages.php:289
 msgid "Approved:"
 msgstr ""
 
-#: tools/tpl_languages.php:263
+#: tools/tpl_languages.php:290
 msgid "Denied:"
 msgstr ""
 
-#: tools/tpl_languages.php:264
+#: tools/tpl_languages.php:291
 msgid "Report on My Projects"
 msgstr ""
 
-#: tools/tpl_languages.php:265 mod/rs/sample.inc:49 mod/rs/sample.inc:117
+#: tools/tpl_languages.php:292 mod/rs/sample.inc:49 mod/rs/sample.inc:117
 msgid "Create Report"
 msgstr ""
 
-#: tools/tpl_languages.php:266
+#: tools/tpl_languages.php:293
 msgid "Create Custom Report"
 msgstr ""
 
-#: tools/tpl_languages.php:267
+#: tools/tpl_languages.php:294
 msgid "Filter by Project, Organization, or Both"
 msgstr ""
 
-#: tools/tpl_languages.php:268
+#: tools/tpl_languages.php:295
 msgid "By Project:"
 msgstr ""
 
-#: tools/tpl_languages.php:269
+#: tools/tpl_languages.php:296
 msgid "By Organization:"
 msgstr ""
 
-#: tools/tpl_languages.php:270
+#: tools/tpl_languages.php:297
 msgid "Create Project or Organization Report"
 msgstr ""
 
-#: tools/tpl_languages.php:271
+#: tools/tpl_languages.php:298
 msgid "Report by Specific Volunteers"
 msgstr ""
 
-#: tools/tpl_languages.php:272
+#: tools/tpl_languages.php:299
 msgid ""
 "To add a volunteer to the list, select one in the 'List of Volunteers' below "
 "and click on 'Add'."
 msgstr ""
 
-#: tools/tpl_languages.php:273
+#: tools/tpl_languages.php:300
 msgid ""
 "To remove a volunteer from the list, click on the remove link next to his "
 "name."
 msgstr ""
 
-#: tools/tpl_languages.php:274 tools/tpl_languages.php:395
+#: tools/tpl_languages.php:301 tools/tpl_languages.php:403
 msgid "List of Volunteers :"
 msgstr ""
 
-#: tools/tpl_languages.php:275
+#: tools/tpl_languages.php:302
 msgid "Create Custom Report for these Volunteers"
 msgstr ""
 
-#: tools/tpl_languages.php:276
+#: tools/tpl_languages.php:303
 msgid "You must select at least one volunteer if reporting by volunteer."
 msgstr ""
 
-#: tools/tpl_languages.php:277 tools/tpl_languages.php:281
+#: tools/tpl_languages.php:304 tools/tpl_languages.php:308
 #: mod/pref/ims_menu.inc:9 inc/lib_security/auth_form.inc:204
 msgid "Change Password"
 msgstr ""
 
-#: tools/tpl_languages.php:278
+#: tools/tpl_languages.php:305
 msgid "Current Password :"
 msgstr ""
 
-#: tools/tpl_languages.php:279
+#: tools/tpl_languages.php:306
 msgid "New Password :"
 msgstr ""
 
-#: tools/tpl_languages.php:280
+#: tools/tpl_languages.php:307
 msgid "Re-Type New Password :"
 msgstr ""
 
-#: tools/tpl_languages.php:282
+#: tools/tpl_languages.php:309
 msgid "Pending Hours Approval"
 msgstr ""
 
-#: tools/tpl_languages.php:283
+#: tools/tpl_languages.php:310
 msgid "Name :"
 msgstr ""
 
-#: tools/tpl_languages.php:284
+#: tools/tpl_languages.php:311
 msgid "Project :"
 msgstr ""
 
-#: tools/tpl_languages.php:285
+#: tools/tpl_languages.php:312
 msgid "View Hours"
 msgstr ""
 
-#: tools/tpl_languages.php:286
+#: tools/tpl_languages.php:313
 msgid "Skills Modifications"
 msgstr ""
 
-#: tools/tpl_languages.php:287
-msgid "Add a new skill"
-msgstr ""
-
-#: tools/tpl_languages.php:288
-msgid "Skill Description :"
-msgstr ""
-
-#: tools/tpl_languages.php:289
-msgid "Code [4-5 letter unique abbreviation] : "
-msgstr ""
-
-#: tools/tpl_languages.php:290 tools/tpl_languages.php:363
-#: tools/tpl_languages.php:364 tools/tpl_languages.php:375
-#: tools/tpl_languages.php:376 tools/tpl_languages.php:396 mod/cs/add.inc:114
-#: mod/cs/add.inc:295 mod/cs/add.inc:375 mod/admin/ims_assign.inc:78
-#: mod/admin/location.inc:133 mod/rms/handler_req_new.inc:301
-#: mod/rms/handler_plg_new.inc:127
-msgid "Add"
-msgstr ""
-
-#: tools/tpl_languages.php:291
+#: tools/tpl_languages.php:314
 msgid "No skills defined."
 msgstr ""
 
-#: tools/tpl_languages.php:292 tools/tpl_languages.php:370
+#: tools/tpl_languages.php:315 tools/tpl_languages.php:379
 #: mod/or/admin_forms.inc:131 mod/or/admin_forms.inc:189 mod/mpr/edit.inc:725
 #: mod/mpr/edit.inc:737 mod/admin/location.inc:141 mod/admin/lc_db.inc:95
 #: mod/admin/lc_add_new_language.inc:36 mod/msg/class_cap_alert.inc:417
@@ -1490,315 +1483,295 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: tools/tpl_languages.php:293
+#: tools/tpl_languages.php:316
 msgid ""
 "In order to begin, please log in using the Sahana account you just created."
 msgstr ""
 
-#: tools/tpl_languages.php:294 tools/tpl_languages.php:295
+#: tools/tpl_languages.php:317 tools/tpl_languages.php:318
 msgid "View Printer Friendly Version"
 msgstr ""
 
-#: tools/tpl_languages.php:296
+#: tools/tpl_languages.php:319
 msgid "Viewing Report For"
 msgstr ""
 
-#: tools/tpl_languages.php:297
+#: tools/tpl_languages.php:320
 msgid "Specific Volunteers"
 msgstr ""
 
-#: tools/tpl_languages.php:298
+#: tools/tpl_languages.php:321
 msgid "All Volunteers Part of Organization:"
 msgstr ""
 
-#: tools/tpl_languages.php:299
+#: tools/tpl_languages.php:322
 msgid "Restricting Results by Project:"
 msgstr ""
 
-#: tools/tpl_languages.php:300 tools/tpl_languages.php:317
+#: tools/tpl_languages.php:323
 msgid "Project:"
 msgstr ""
 
-#: tools/tpl_languages.php:301
+#: tools/tpl_languages.php:324
 msgid "Organization:"
 msgstr ""
 
-#: tools/tpl_languages.php:302
+#: tools/tpl_languages.php:325
 msgid "All Volunteers that Ever Worked on any Projects"
 msgstr ""
 
-#: tools/tpl_languages.php:306
+#: tools/tpl_languages.php:329
 msgid "Total Positions Held"
 msgstr ""
 
-#: tools/tpl_languages.php:307 tools/tpl_languages.php:324
-#: tools/tpl_languages.php:327
+#: tools/tpl_languages.php:330 tools/tpl_languages.php:336
 msgid "Total Hours"
 msgstr ""
 
-#: tools/tpl_languages.php:308 tools/tpl_languages.php:328
+#: tools/tpl_languages.php:331 tools/tpl_languages.php:337
 msgid "Total Monetary Value"
 msgstr ""
 
-#: tools/tpl_languages.php:309 mod/mpr/view.inc:26 mod/mpr/search.inc:240
+#: tools/tpl_languages.php:332 mod/mpr/view.inc:26 mod/mpr/search.inc:240
 #: mod/rms/handler_req_ls.inc:94 mod/rms/handler_req_sch.inc:216
 #: mod/rms/handler_plg_sch.inc:291
 msgid "Details"
 msgstr ""
 
-#: tools/tpl_languages.php:310 tools/tpl_languages.php:320
-#: inc/lib_security/acl_form.inc:377 inc/lib_security/acl_form.inc:442
+#: tools/tpl_languages.php:333 inc/lib_security/acl_form.inc:377
+#: inc/lib_security/acl_form.inc:442
 msgid "Active"
 msgstr ""
 
-#: tools/tpl_languages.php:311 tools/tpl_languages.php:321
+#: tools/tpl_languages.php:334
 msgid "Retired"
 msgstr ""
 
-#: tools/tpl_languages.php:313
-msgid "Position Status:"
-msgstr ""
-
-#: tools/tpl_languages.php:314
-msgid "Hours:"
-msgstr ""
-
-#: tools/tpl_languages.php:315
-msgid "Hourly Rate:"
-msgstr ""
-
-#: tools/tpl_languages.php:316
-msgid "Monetary Value:"
-msgstr ""
-
-#: tools/tpl_languages.php:318
-msgid "no positions held"
-msgstr ""
-
-#: tools/tpl_languages.php:325
-msgid "Total Payment"
-msgstr ""
-
-#: tools/tpl_languages.php:326
+#: tools/tpl_languages.php:335
 msgid "none"
 msgstr ""
 
-#: tools/tpl_languages.php:329
+#: tools/tpl_languages.php:338
 msgid "Administrative Functions"
 msgstr ""
 
-#: tools/tpl_languages.php:330
+#: tools/tpl_languages.php:339
 msgid ""
 "The following is a description of each administrative function for the VM "
 "module"
 msgstr ""
 
-#: tools/tpl_languages.php:331 tools/tpl_languages.php:354
+#: tools/tpl_languages.php:340 tools/tpl_languages.php:363
 msgid "Access Control Modifications"
 msgstr ""
 
-#: tools/tpl_languages.php:332
+#: tools/tpl_languages.php:341
 msgid "Modify how access to the VM module is handled"
 msgstr ""
 
-#: tools/tpl_languages.php:333 tools/tpl_languages.php:355
+#: tools/tpl_languages.php:342 tools/tpl_languages.php:364
 msgid "Update Search Registry"
 msgstr ""
 
-#: tools/tpl_languages.php:334
+#: tools/tpl_languages.php:343
 msgid ""
 "Since a volunteer's name may change in other places in Sahana, you may have "
 "to periodically update the search registry with current sounds-like name "
 "matching for volunteer searching"
 msgstr ""
 
-#: tools/tpl_languages.php:335 tools/tpl_languages.php:356
+#: tools/tpl_languages.php:344 tools/tpl_languages.php:365
 msgid "Clear Template Cache"
 msgstr ""
 
-#: tools/tpl_languages.php:336
+#: tools/tpl_languages.php:345
 msgid "Delete all PHP templates that have been cached"
 msgstr ""
 
-#: tools/tpl_languages.php:337 tools/tpl_languages.php:357
+#: tools/tpl_languages.php:346 tools/tpl_languages.php:366
 msgid "Audit ACL"
 msgstr ""
 
-#: tools/tpl_languages.php:338
+#: tools/tpl_languages.php:347
 msgid ""
 "Verify that all 'act' and 'vm_action' combinations in the VM code are under "
 "access control and that all VM tables/views are classified"
 msgstr ""
 
-#: tools/tpl_languages.php:339 tools/tpl_languages.php:342 inst/setup.inc:299
+#: tools/tpl_languages.php:348 tools/tpl_languages.php:351 inst/setup.inc:299
 msgid "Access Control"
 msgstr ""
 
-#: tools/tpl_languages.php:340
+#: tools/tpl_languages.php:349
 msgid "Please select a situation below to modify access to:"
 msgstr ""
 
-#: tools/tpl_languages.php:343 mod/sync/lib_report.inc:46
+#: tools/tpl_languages.php:352 mod/sync/lib_report.inc:46
 #: mod/admin/lc_db.inc:81
 msgid "Table Name"
 msgstr ""
 
-#: tools/tpl_languages.php:344 inc/lib_security/acl_form.inc:276
+#: tools/tpl_languages.php:353 inc/lib_security/acl_form.inc:276
 msgid "Create"
 msgstr ""
 
-#: tools/tpl_languages.php:345 inc/lib_security/acl_form.inc:276
+#: tools/tpl_languages.php:354 inc/lib_security/acl_form.inc:276
 msgid "Read"
 msgstr ""
 
-#: tools/tpl_languages.php:348
+#: tools/tpl_languages.php:357
 msgid "Remove From List"
 msgstr ""
 
-#: tools/tpl_languages.php:349
+#: tools/tpl_languages.php:358
 msgid "Special Constraints"
 msgstr ""
 
-#: tools/tpl_languages.php:350
+#: tools/tpl_languages.php:359
 msgid "on"
 msgstr ""
 
-#: tools/tpl_languages.php:351
+#: tools/tpl_languages.php:360
 msgid "Save Changes"
 msgstr ""
 
-#: tools/tpl_languages.php:352
+#: tools/tpl_languages.php:361
 msgid "Cancel Changes"
 msgstr ""
 
-#: tools/tpl_languages.php:353
+#: tools/tpl_languages.php:362
 msgid "VM Admin Home"
 msgstr ""
 
-#: tools/tpl_languages.php:358
+#: tools/tpl_languages.php:367
 msgid "ACL Audit"
 msgstr ""
 
-#: tools/tpl_languages.php:359
+#: tools/tpl_languages.php:368
 msgid "All access requests in the database and in the VM code match."
 msgstr ""
 
-#: tools/tpl_languages.php:360
+#: tools/tpl_languages.php:369
 msgid "Warning:"
 msgstr ""
 
-#: tools/tpl_languages.php:361
+#: tools/tpl_languages.php:370
 msgid "The following requests in the VM code are not under access control:"
 msgstr ""
 
-#: tools/tpl_languages.php:365
+#: tools/tpl_languages.php:372 tools/tpl_languages.php:373
+#: tools/tpl_languages.php:384 tools/tpl_languages.php:385
+#: tools/tpl_languages.php:404 mod/cs/add.inc:114 mod/cs/add.inc:295
+#: mod/cs/add.inc:375 mod/admin/ims_assign.inc:78 mod/admin/location.inc:133
+#: mod/rms/handler_req_new.inc:301 mod/rms/handler_plg_new.inc:127
+msgid "Add"
+msgstr ""
+
+#: tools/tpl_languages.php:374
 msgid "Please enter a description"
 msgstr ""
 
-#: tools/tpl_languages.php:366 tools/tpl_languages.php:371
+#: tools/tpl_languages.php:375 tools/tpl_languages.php:380
 #: inc/lib_stream_html.inc:80
 msgid "Warning"
 msgstr ""
 
-#: tools/tpl_languages.php:367
+#: tools/tpl_languages.php:376
 msgid "The following requests in the database are never referenced"
 msgstr ""
 
-#: tools/tpl_languages.php:369
+#: tools/tpl_languages.php:378
 msgid "Remove From Database"
 msgstr ""
 
-#: tools/tpl_languages.php:372
+#: tools/tpl_languages.php:381
 msgid ""
 "The following database tables/views have not been given any classification "
 "level"
 msgstr ""
 
-#: tools/tpl_languages.php:373
+#: tools/tpl_languages.php:382
 msgid "Table"
 msgstr ""
 
-#: tools/tpl_languages.php:374
+#: tools/tpl_languages.php:383
 msgid "Classification Level"
 msgstr ""
 
-#: tools/tpl_languages.php:377 mod/vm/menu.inc:63
+#: tools/tpl_languages.php:386 mod/vm/menu.inc:63
 msgid "Inbox"
 msgstr ""
 
-#: tools/tpl_languages.php:378 mod/vm/menu.inc:64
+#: tools/tpl_languages.php:387 mod/vm/menu.inc:64
 msgid "Outbox"
 msgstr ""
 
-#: tools/tpl_languages.php:380
+#: tools/tpl_languages.php:389
 msgid "From"
 msgstr ""
 
-#: tools/tpl_languages.php:381 tools/tpl_languages.php:392
+#: tools/tpl_languages.php:390 tools/tpl_languages.php:400
 #: mod/ims/optimize.inc:577 mod/ims/optimize.inc:662 mod/ims/optimize.inc:829
 #: mod/ims/optimize.inc:841 mod/ims/optimize.inc:1051
 #: mod/ims/ims_report.inc:680 mod/ims/transfer_inv.inc:462
 msgid "To"
 msgstr ""
 
-#: tools/tpl_languages.php:382 mod/ims/ims_report.inc:681
+#: tools/tpl_languages.php:391 mod/ims/ims_report.inc:681
 #: mod/ims/transfer_inv.inc:463
 msgid "Date Sent"
 msgstr ""
 
-#: tools/tpl_languages.php:383
+#: tools/tpl_languages.php:392
 msgid "Preview"
 msgstr ""
 
-#: tools/tpl_languages.php:384 tools/tpl_languages.php:390
+#: tools/tpl_languages.php:393 tools/tpl_languages.php:398
 msgid "Are you sure you want to delete this message?"
 msgstr ""
 
-#: tools/tpl_languages.php:385
+#: tools/tpl_languages.php:394
 msgid "Your"
 msgstr ""
 
-#: tools/tpl_languages.php:386
+#: tools/tpl_languages.php:395
 msgid "is empty"
 msgstr ""
 
-#: tools/tpl_languages.php:387
-msgid "Message not found."
-msgstr ""
-
-#: tools/tpl_languages.php:388
+#: tools/tpl_languages.php:396
 msgid "Back to Inbox"
 msgstr ""
 
-#: tools/tpl_languages.php:389
+#: tools/tpl_languages.php:397
 msgid "Back to Outbox"
 msgstr ""
 
-#: tools/tpl_languages.php:391
+#: tools/tpl_languages.php:399
 msgid "Delete this message"
 msgstr ""
 
-#: tools/tpl_languages.php:393
+#: tools/tpl_languages.php:401
 msgid "To List:"
 msgstr ""
 
-#: tools/tpl_languages.php:394
+#: tools/tpl_languages.php:402
 msgid ""
 "To add a volunteer to the 'To' list, select one in the 'List of Volunteers' "
 "below and click on 'Add'. To remove a volunteer from the 'To' list, click on "
 "the remove link next to his name."
 msgstr ""
 
-#: tools/tpl_languages.php:397 mod/msg/handler_cap_edit.inc:109
+#: tools/tpl_languages.php:405 mod/msg/handler_cap_edit.inc:109
 #: mod/msg/handler_cap_new.inc:372
 msgid "Message"
 msgstr ""
 
-#: tools/tpl_languages.php:398
+#: tools/tpl_languages.php:406
 msgid "Message :"
 msgstr ""
 
-#: tools/tpl_languages.php:399 mod/ims/transfer_inv.inc:336
+#: tools/tpl_languages.php:407 mod/ims/transfer_inv.inc:129
+#: mod/ims/transfer_inv.inc:192 mod/ims/transfer_inv.inc:336
 #: mod/msg/message_forms.inc:446
 msgid "Send"
 msgstr ""
@@ -2001,6 +1974,11 @@ msgid ""
 "the organization here. "
 msgstr ""
 
+#: mod/or/reg_org.inc:98 mod/or/reg_org.inc:299 mod/gis/wm_fns.inc:148
+#: mod/gis/main_fns.inc:114 mod/gis/gis_fns.inc:156 mod/gis/gis_fns.inc:179
+msgid "Area Map"
+msgstr ""
+
 #: mod/or/reg_org.inc:106 mod/ims/view_inv.inc:245
 msgid "Facilities Available"
 msgstr ""
@@ -2039,7 +2017,7 @@ msgid "Organization Location Address"
 msgstr ""
 
 #: mod/or/reg_org.inc:208 mod/or/view_org.inc:407 mod/or/view_org.inc:703
-#: mod/ims/view_inv.inc:206 mod/gis/gis_fns.inc:177 mod/cr/edit.inc:44
+#: mod/ims/view_inv.inc:206 mod/gis/gis_fns.inc:183 mod/cr/edit.inc:44
 #: mod/cr/edit.inc:503 mod/cr/edit.inc:579 mod/cr/camp.inc:49
 msgid "Map Location"
 msgstr ""
@@ -2191,7 +2169,7 @@ msgstr ""
 msgid "Registration Number : "
 msgstr ""
 
-#: mod/or/view_org.inc:409 mod/ims/view_inv.inc:208 mod/gis/gis_fns.inc:179
+#: mod/or/view_org.inc:409 mod/ims/view_inv.inc:208 mod/gis/gis_fns.inc:185
 #: mod/cr/edit.inc:46 mod/cr/edit.inc:581 mod/cr/camp.inc:51
 msgid ""
 "Click on the button \"Update the location\" will update the map location if "
@@ -2210,12 +2188,12 @@ msgstr ""
 msgid "Longitude : "
 msgstr ""
 
-#: mod/or/view_org.inc:418 mod/ims/view_inv.inc:225 mod/gis/gis_fns.inc:187
+#: mod/or/view_org.inc:418 mod/ims/view_inv.inc:225 mod/gis/gis_fns.inc:193
 #: mod/cr/edit.inc:53 mod/cr/edit.inc:588 mod/cr/camp.inc:55
 msgid "Update the location"
 msgstr ""
 
-#: mod/or/view_org.inc:428 mod/ims/view_inv.inc:235 mod/gis/gis_fns.inc:197
+#: mod/or/view_org.inc:428 mod/ims/view_inv.inc:235 mod/gis/gis_fns.inc:203
 #: mod/cr/edit.inc:61 mod/cr/edit.inc:596 mod/cr/camp.inc:63
 msgid ""
 "You can move around and enlarge/reduce the size of the area you want using\n"
@@ -3412,9 +3390,11 @@ msgstr ""
 #: mod/ims/optimize.inc:255 mod/ims/optimize.inc:496 mod/ims/optimize.inc:694
 #: mod/ims/optimize.inc:1210 mod/ims/ims_report.inc:56
 #: mod/ims/ims_report.inc:158 mod/ims/ims_report.inc:239
-#: mod/ims/ims_report.inc:503 mod/ims/ims_report.inc:582 mod/ims/home.inc:55
-#: mod/ims/mini_quantity.inc:248 mod/rms/handler_plg_sch.inc:287
-#: mod/rms/handler_plg_sch.inc:289 mod/rms/handler_mng_ff.inc:198
+#: mod/ims/ims_report.inc:503 mod/ims/ims_report.inc:582
+#: mod/ims/transfer_inv.inc:251 mod/ims/transfer_inv.inc:454
+#: mod/ims/home.inc:55 mod/ims/mini_quantity.inc:248
+#: mod/rms/handler_plg_sch.inc:287 mod/rms/handler_plg_sch.inc:289
+#: mod/rms/handler_mng_ff.inc:198
 msgid "Inventory"
 msgstr ""
 
@@ -4183,6 +4163,10 @@ msgstr ""
 msgid "Other <br /> Facilities"
 msgstr ""
 
+#: mod/ims/view_inv.inc:158
+msgid "Review items"
+msgstr ""
+
 #: mod/ims/view_inv.inc:188
 msgid "Inventory Registration Information of "
 msgstr ""
@@ -4208,6 +4192,10 @@ msgstr ""
 msgid "state"
 msgstr ""
 
+#: mod/ims/transfer_inv.inc:143
+msgid "Alternate Items Table"
+msgstr ""
+
 #: mod/ims/transfer_inv.inc:229
 msgid "Item Send : "
 msgstr ""
@@ -4224,6 +4212,18 @@ msgstr ""
 
 #: mod/ims/transfer_inv.inc:248
 msgid "Inventory From : "
+msgstr ""
+
+#: mod/ims/transfer_inv.inc:251 mod/ims/transfer_inv.inc:454 mod/cr/conf.inc:8
+msgid "Shelter"
+msgstr ""
+
+#: mod/ims/transfer_inv.inc:251 mod/ims/transfer_inv.inc:454
+msgid "Organization"
+msgstr ""
+
+#: mod/ims/transfer_inv.inc:251 mod/ims/transfer_inv.inc:454
+msgid "Victim"
 msgstr ""
 
 #: mod/ims/transfer_inv.inc:252
@@ -5998,15 +5998,15 @@ msgstr ""
 msgid "Coordinates Added"
 msgstr ""
 
-#: mod/gis/gis_fns.inc:181
+#: mod/gis/gis_fns.inc:187
 msgid "Northing / Latitude"
 msgstr ""
 
-#: mod/gis/gis_fns.inc:184
+#: mod/gis/gis_fns.inc:190
 msgid "Easting / Longitude"
 msgstr ""
 
-#: mod/gis/gis_fns.inc:255
+#: mod/gis/gis_fns.inc:261
 msgid ""
 "Please configure GIS module plugins as Google Maps, Because Openlayers Map "
 "is not available in the 0.6 stable release"
@@ -7212,8 +7212,8 @@ msgstr ""
 msgid "Select All"
 msgstr ""
 
-#: mod/sync/handler_download.inc:48 mod/msg/message_forms.inc:47
-#: mod/msg/message_forms.inc:447
+#: mod/sync/handler_download.inc:48 mod/rms/handler_req_new.inc:99
+#: mod/msg/message_forms.inc:47 mod/msg/message_forms.inc:447
 msgid "Clear"
 msgstr ""
 
@@ -8861,6 +8861,11 @@ msgstr ""
 msgid "eplcnt"
 msgstr ""
 
+#: mod/cr/search.inc:187
+#, php-format
+msgid "Search for %s by Name"
+msgstr ""
+
 #: mod/cr/search.inc:192
 msgid "Name of Shelter"
 msgstr ""
@@ -9055,10 +9060,6 @@ msgstr ""
 msgid "Shelter Registry"
 msgstr ""
 
-#: mod/cr/conf.inc:8
-msgid "Shelter"
-msgstr ""
-
 #: mod/cr/main_fns.inc:27
 msgid ""
 "This module tracks all shelters and stores basic details regarding them. It "
@@ -9195,6 +9196,14 @@ msgstr ""
 
 #: mod/cr/main_fns.inc:325
 msgid "Filled"
+msgstr ""
+
+#: mod/cr/main_fns.inc:344
+msgid "Map of Shelters by Population / Capacity percentage"
+msgstr ""
+
+#: mod/cr/main_fns.inc:497
+msgid "Shelter information by Shelter Administrator"
 msgstr ""
 
 #: mod/cr/acl.inc:22
@@ -9941,6 +9950,10 @@ msgstr ""
 msgid "General Search"
 msgstr ""
 
+#: mod/dvr/search_individual.inc:141
+msgid "Simple Search"
+msgstr ""
+
 #: mod/dvr/search_group.inc:38 mod/dvr/add_new_indv.inc:47
 msgid "Please Select the group type"
 msgstr ""
@@ -10038,6 +10051,10 @@ msgstr ""
 
 #: mod/dvr/add_new_grp.inc:447
 msgid " Group was succesfully registered"
+msgstr ""
+
+#: mod/dvr/list.inc:54
+msgid "View Members"
 msgstr ""
 
 #: mod/dvr/edt_indv.inc:115 mod/dvr/edt_indv.inc:485
@@ -10246,6 +10263,10 @@ msgstr ""
 msgid "Group Members"
 msgstr ""
 
+#: mod/dvr/view_members.inc:59
+msgid "Group Head"
+msgstr ""
+
 #: mod/dvr/home.inc:25
 msgid ""
 "The Disaster Victim Registry is a central online repository where "
@@ -10391,6 +10412,10 @@ msgid ""
 "and the Address in comma seperated order."
 msgstr ""
 
+#: mod/dvr/add_new_indv.inc:70
+msgid "Group head"
+msgstr ""
+
 #: mod/dvr/add_new_indv.inc:83
 msgid "Enter your Full Name here(Required)"
 msgstr ""
@@ -10521,6 +10546,14 @@ msgstr ""
 msgid "No items (left) for this category please select another category"
 msgstr ""
 
+#: mod/rms/handler_req_new.inc:326
+msgid "Select item"
+msgstr ""
+
+#: mod/rms/handler_req_new.inc:332
+msgid "Select Category"
+msgstr ""
+
 #: mod/rms/handler_req_new.inc:336 mod/rms/handler_plg_new.inc:179
 msgid "Sub Category"
 msgstr ""
@@ -10557,6 +10590,19 @@ msgstr ""
 
 #: mod/rms/handler_req_new.inc:505
 msgid "The Request was successfully submitted"
+msgstr ""
+
+#: mod/rms/handler_req_new.inc:507 mod/rms/handler_req_ls.inc:219
+#: mod/rms/handler_req_ls.inc:236 mod/rms/handler_req_sch.inc:281
+#: mod/rms/handler_plg_ls.inc:142 mod/rms/handler_plg_ls.inc:198
+#: mod/rms/handler_plg_ls.inc:206 mod/rms/handler_plg_sch.inc:348
+#: mod/rms/handler_mng_ff.inc:32 mod/rms/handler_mng_ff.inc:323
+#: mod/rms/handler_mng_ff.inc:400 mod/rms/lib_rms.inc:517
+msgid "RMS Home"
+msgstr ""
+
+#: mod/rms/handler_req_new.inc:507
+msgid "New Request"
 msgstr ""
 
 #: mod/rms/handler_req_ls.inc:19
@@ -10613,19 +10659,16 @@ msgid "There are no requests on the Database that matches your criteria"
 msgstr ""
 
 #: mod/rms/handler_req_ls.inc:219 mod/rms/handler_req_ls.inc:236
-#: mod/rms/handler_req_sch.inc:281 mod/rms/handler_plg_ls.inc:142
-#: mod/rms/handler_plg_ls.inc:198 mod/rms/handler_plg_ls.inc:206
-#: mod/rms/handler_plg_sch.inc:348 mod/rms/lib_rms.inc:517
-msgid "RMS Home"
-msgstr ""
-
-#: mod/rms/handler_req_ls.inc:219 mod/rms/handler_req_ls.inc:236
 #: mod/rms/lib_rms.inc:517
 msgid "Back to Request List"
 msgstr ""
 
 #: mod/rms/handler_req_sch.inc:19
 msgid "Request Search: Search for Requesters, Locations and Requests"
+msgstr ""
+
+#: mod/rms/handler_req_sch.inc:83 mod/rms/handler_plg_sch.inc:45
+msgid "Select Criteria"
 msgstr ""
 
 #: mod/rms/handler_req_sch.inc:108
@@ -10854,6 +10897,11 @@ msgstr ""
 msgid "Fulfil Requests"
 msgstr ""
 
+#: mod/rms/handler_mng_ff.inc:32 mod/rms/handler_mng_ff.inc:323
+#: mod/rms/handler_mng_ff.inc:400
+msgid "Fullfil Other Request"
+msgstr ""
+
 #: mod/rms/handler_mng_ff.inc:38
 msgid ""
 "You have completly fulfill the request, Do you want to close the request?"
@@ -10899,6 +10947,10 @@ msgstr ""
 msgid "No Pledges have been registered !!!"
 msgstr ""
 
+#: mod/rms/handler_mng_ff.inc:194
+msgid "Items from inventories"
+msgstr ""
+
 #: mod/rms/handler_mng_ff.inc:248
 msgid "Allocate items from a pledge to fulfill a request, "
 msgstr ""
@@ -10935,6 +10987,10 @@ msgstr ""
 
 #: mod/rms/handler_mng_ff.inc:288
 msgid "Quantity : "
+msgstr ""
+
+#: mod/rms/handler_mng_ff.inc:323 mod/rms/handler_mng_ff.inc:400
+msgid "Fullfil Another Item From the Same Request"
 msgstr ""
 
 #: mod/rms/handler_mng_ff.inc:372
@@ -11040,6 +11096,10 @@ msgstr ""
 
 #: mod/rms/lib_rms.inc:754
 msgid "Requester Information"
+msgstr ""
+
+#: mod/rms/lib_rms.inc:775
+msgid "Requester Name"
 msgstr ""
 
 #: mod/rms/lib_rms.inc:785
