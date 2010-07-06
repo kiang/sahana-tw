@@ -111,7 +111,7 @@ function shn_gis_amap() {
     $db = $global['db'];
     global $conf;
     include $global['approot'] . "/mod/gis/gis_fns.inc";
-    shn_gis_add_marker_map_form("Area Map", $_POST['location_name']);
+    shn_gis_add_marker_map_form(_("Area Map"), $_POST['location_name']);
     shn_form_submit(_("Next"));
     shn_form_fclose();
 }

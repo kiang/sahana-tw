@@ -88,8 +88,8 @@ function shn_dvr_individual_search_results() {
             <td><?php echo _("Family Name") ?></td>
           	<td><?php echo _("NIC") ?></td>
             <td><?php echo _("Address") ?></td>
-         <td>Edit</td>
-          <td>Delete</td>
+         <td><?php echo _('Edit'); ?></td>
+          <td><?php echo _('Delete'); ?></td>
         </thead>
         <?php
     while (!$results->EOF) {
@@ -103,9 +103,9 @@ function shn_dvr_individual_search_results() {
         <td><?=$results->fields['family_name'] ?></td>
         <td><?=$results->fields['serial'] ?></td>
         <td><?=$results->fields['address'] ?></td>
-        <td><a href='index.php?mod=dvr&act=edit_individual&p_uuid=<?=$results->fields['pid'] ?>'>Edit</a></td>
+        <td><a href='index.php?mod=dvr&act=edit_individual&p_uuid=<?=$results->fields['pid'] ?>'><?php echo _('Edit'); ?></a></td>
       
-        <td><a href='index.php?mod=dvr&act=delete_individual&p_uuid=<?=$results->fields['pid'] ?>' onClick="javascript: return confirmdelete('<?=$results->fields['full_name'] ?>')">Delete</a></td>
+        <td><a href='index.php?mod=dvr&act=delete_individual&p_uuid=<?=$results->fields['pid'] ?>' onClick="javascript: return confirmdelete('<?=$results->fields['full_name'] ?>')"><?php echo _('Delete'); ?></a></td>
       
         </tr>
         <?php
@@ -138,9 +138,7 @@ function shn_dvr_search_advance() {
     shn_form_fsclose();
     shn_form_submit(_('Next'));
     shn_form_fsclose();
-?>
-     <a href="index.php?mod=dvr&act=search_individual">Simple Search</a>
-    <?php
+    echo '<a href="index.php?mod=dvr&act=search_individual">' . _('Simple Search') . '</a>';
     shn_form_fclose();
 }
 ?>

@@ -654,7 +654,7 @@ class DAO {
             $pos->title = 'Site Manager';
             $pos->proj_id = $proj_id;
             $pos->ptype_id = 'smgr';
-            $pos->description = 'Manage the entire project';
+            $pos->description = _('Manage the entire project');
             $pos->numSlots = 1;
             $pos->payrate = 20.00;
             $this->savePosition($pos);

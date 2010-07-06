@@ -29,7 +29,7 @@ function _shn_mng_set_close($req_id) {
         return false;
     } else {
         add_confirmation("Close request successfully");
-        print '<br />[ <a href="index.php?mod=rms">RMS Home</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_ls">Fullfil Other Request</a> ]';
+        echo '<br />[ <a href="index.php?mod=rms">' . _('RMS Home') . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_ls">' . _('Fullfil Other Request') . '</a> ]';
     }
 }
 function _shn_rms_mng_change_status($req_id) {
@@ -191,7 +191,7 @@ function _shn_rms_mng_select_pledge() {
 <div id="result"> 
  
     <table>
-    <caption>Items from inventories</caption>
+    <caption><?php echo _('Items from inventories'); ?></caption>
     <thead>
         <td><?php echo _("Item") ?></td>
         <td><?php echo _("Amount") ?></td>
@@ -320,7 +320,7 @@ function _shn_rms_item_allocation_db() {
                 _shn_rms_mng_change_status($_SESSION['rms_req_id']);
             }
             _shn_rms_view_reqff($_SESSION['rms_req_id']);
-            print '<br />[ <a href="index.php?mod=rms">RMS Home</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_ls&amp;seq=view_req&amp;req_id=' . $_SESSION['rms_req_id'] . '">Fullfil Another Item From the Same Request</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_ls">Fullfil Other Request</a> ]';
+            echo '<br />[ <a href="index.php?mod=rms">' . _('RMS Home') . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_ls&amp;seq=view_req&amp;req_id=' . $_SESSION['rms_req_id'] . '">' . _('Fullfil Another Item From the Same Request') . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_ls">' . _('Fullfil Other Request') . '</a> ]';
         }
     }
 }
@@ -397,7 +397,7 @@ switch ($seq) {
             _shn_rms_mng_change_status($_SESSION['rms_req_id']);
         }
     }
-    print '<br />[ <a href="index.php?mod=rms">RMS Home</a> ] :: [ <a href="index.php?mod=rms&amp;act=mng_ff&amp;seq=get_req&amp;req_id=' . $_SESSION['rms_req_id'] . '">Fullfil Another Item From the Same Request</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_ls">Fullfil Other Request</a> ]';
+    echo '<br />[ <a href="index.php?mod=rms">' . _('RMS Home') . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=mng_ff&amp;seq=get_req&amp;req_id=' . $_SESSION['rms_req_id'] . '">' . _('Fullfil Another Item From the Same Request') . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_ls">' . _('Fullfil Other Request') . '</a> ]';
 break;
 break;
 }

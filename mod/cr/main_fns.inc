@@ -341,12 +341,12 @@ function shn_cr_acmp() {
             //show_map_with_custom_markers($map_array);
             
 ?>
-	<h1><?=("Map of Shelters by Population / Capacity percentage") ?></h1>
+	<h1><?php echo _('Map of Shelters by Population / Capacity percentage'); ?>?></h1>
 <?php
             shn_gis_density_map($map_array);
 ?>
 <br>
-<h3><?php echo _("Legend") ?></h3>
+<h3><?php echo _("Legend"); ?></h3>
 
 <div id="result">
 <table>
@@ -494,7 +494,7 @@ function shn_cr_acmp() {
     function shn_cr_contact() {
         global $global;
         include ($global['approot'] . '/mod/cr/reports.inc');
-        print ("<h2>Shelter information by Shelter Administrator</h2>");
+        echo '<h2>' . _('Shelter information by Shelter Administrator') . '</h2>';
         _shn_cr_contact();
     }
     function shn_cr_lrpt() {

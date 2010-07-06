@@ -145,7 +145,7 @@ function show_wiki_add_map($errors = false) {
     shn_form_fopen('awik', null, array('req' => false));
     shn_form_hidden(array('seq' => 'img'));
     //call gis api
-    shn_gis_add_marker_map_form("Area Map", $_POST['location_name'], null, array('marker' => 'single'));
+    shn_gis_add_marker_map_form(_("Area Map"), $_POST['location_name'], null, array('marker' => 'single'));
     shn_form_submit(_("Next"));
     shn_form_fclose();
 }

@@ -126,7 +126,7 @@ function _shn_ims_send_item_table_view_($catalog_id, $Limit, $page_number) {
         <td><?php print ($expire_date); ?></td>
         <td><?php print ($inventory_name); ?></td>
         <td><?php print ($state); ?></td>
-        <td><a href="index.php?mod=ims&act=send_item_data_collectpage&item_id=<?php echo $item_id; ?>&parent_id=<?php echo $parent_id; ?>&unit_id=<?php echo $unit; ?>"><?php print ("Send"); ?></a></td>        
+        <td><a href="index.php?mod=ims&act=send_item_data_collectpage&item_id=<?php echo $item_id; ?>&parent_id=<?php echo $parent_id; ?>&unit_id=<?php echo $unit; ?>"><?php echo _("Send"); ?></a></td>        
         </tr>
 
 <?php
@@ -140,7 +140,7 @@ function _shn_ims_send_item_table_view_($catalog_id, $Limit, $page_number) {
     </table>
 </div>
 
-    <div><b><em><h3><?php print ("Alternate Items Table"); ?></h3></em></b></div>
+    <div><b><em><h3><?php echo _("Alternate Items Table"); ?></h3></em></b></div>
     
     <div id="result">
     <table>
@@ -189,7 +189,7 @@ function _shn_ims_send_item_table_view_($catalog_id, $Limit, $page_number) {
         <td><?php print ($expire_date); ?></td>
         <td><?php print ($inventory_name); ?></td>
         <td><?php print ($state); ?></td>
-        <td><a href="index.php?mod=ims&act=send_item_data_collectpage&item_id=<?php echo $item_id; ?>&parent_id=<?php echo $parent_id; ?>&unit_id=<?php echo $unit; ?>"><?php print ("Send"); ?></a></td>        
+        <td><a href="index.php?mod=ims&act=send_item_data_collectpage&item_id=<?php echo $item_id; ?>&parent_id=<?php echo $parent_id; ?>&unit_id=<?php echo $unit; ?>"><?php echo _("Send"); ?></a></td>        
         </tr>
 
 <?php
@@ -248,7 +248,7 @@ function _shn_ims_send($item_id, $parent_id, $unit_id_send) {
     shn_form_text(_("Inventory From : "), 'inv_from', 'size="50" readonly=true', $extra_opts);
     //******************
     echo "<br />";
-    $destination_array = array('inventory' => 'Inventory', 'shelter' => 'Shelter', 'organization' => 'Organization', 'victim' => 'Victim');
+    $destination_array = array('inventory' => _('Inventory'), 'shelter' => _('Shelter'), 'organization' => _('Organization'), 'victim' => _('Victim'));
     shn_form_radio($destination_array, _('Destination : '), 'destination', 'onClick="change_action_des(this.value)"', $extra_opts);
     $opt = _shn_admin_set_option_javascript();
     echo "<br />";
@@ -451,7 +451,7 @@ function _shn_ims_receive($Limit, $page_number = null) {
     $sql1 = "SELECT transit_id,item_id,amount_send,unit,inv_id_to,destination_type,person_send,date_send FROM ims_transfer_item WHERE received_item_id='$state' and destination_type='inventory' LIMIT $page_number,$Limit;";
     $ims1 = $db->Execute($sql1);
     // print $sql1;
-    
+    $destination_array = array('inventory' => _('Inventory'), 'shelter' => _('Shelter'), 'organization' => _('Organization'), 'victim' => _('Victim'));
 ?>
     <table>
         <thead>
@@ -508,7 +508,7 @@ function _shn_ims_receive($Limit, $page_number = null) {
         <td><?php print ($amount_send); ?></td>
         <td><?php print ($unit_name); ?></td>
         <td><?php print ($inventory_from); ?></td>
-        <td><?php print ($destination_type); ?><br><?php print ($inventory_to); ?></td>
+        <td><?php print ($destination_array[$destination_type]); ?><br><?php print ($inventory_to); ?></td>
         <td><?php print ($date_send); ?></td>
         <td><?php print ($person_send); ?></td>
         <td><a href="index.php?mod=ims&act=receive_item_page&transit_id=<?php echo $transit_id; ?>&suplier_id=<?php echo $suplier_id; ?>"><?php print ("Received"); ?></a></td>

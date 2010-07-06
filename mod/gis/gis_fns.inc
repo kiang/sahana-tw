@@ -151,7 +151,10 @@ function shn_gis_dbinsert_feature($uuid, $latcoord, $loncoord, $time = null) {
  * @param mixed  $name_of_map Custom Map Name
  * @param $nameOfPoint Assign name to point
  */
-function shn_gis_add_marker_map($name_of_map = "Area Map", $name = null) {
+function shn_gis_add_marker_map($name_of_map = '', $name = null) {
+    if(empty($name_of_map)) {
+        $name_of_map = _("Area Map");
+    }
     global $global;
     global $conf;
     if ($conf['gis']) {
@@ -171,7 +174,10 @@ function shn_gis_add_marker_map($name_of_map = "Area Map", $name = null) {
  * @access public
  * @return void
  */
-function shn_gis_add_marker_map_form($name_of_map = "Area Map", $nameOfPoint = "", $button_submit_opts = null, $extra_opts = array()) {
+function shn_gis_add_marker_map_form($name_of_map = '', $nameOfPoint = "", $button_submit_opts = null, $extra_opts = array()) {
+    if(empty($name_of_map)) {
+        $name_of_map = _("Area Map");
+    }
     global $global, $conf;
     include_once ($global['approot'] . '/inc/lib_form.inc');
     shn_form_fsopen(_("Map Location"));

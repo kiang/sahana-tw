@@ -91,7 +91,7 @@ function shn_dvr_group_search_results() {
             <td><?=$results->fields['address'] ?></td>
             
             <td><a href='index.php?mod=dvr&act=edit_group&groupid=<?=$results->fields['group_id'] ?>'>Edit</a></td>
- <td><a href='index.php?mod=dvr&act=delete_group&groupid=<?=$results->fields['group_id'] ?>' onClick="javascript: return confirmdelete('<?=$results->fields['full_name'] ?>')">Delete</a></td>
+ <td><a href='index.php?mod=dvr&act=delete_group&groupid=<?=$results->fields['group_id'] ?>' onClick="javascript: return confirmdelete('<?=$results->fields['full_name'] ?>')"><?php echo _('Delete'); ?></a></td>
         
         </tr>
  <?php

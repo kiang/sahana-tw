@@ -67,7 +67,7 @@ function shn_dvr_add_new_individual($errors = false) {
     //shn_ajax_initiate_request_famaily();
     //shn_ajax_add_suggest_family('family_name','familyHint','family_id');
     //shn_form_text(_('Group head'),'family_name',"size=\"30\" autocomplete=off onkeyup=\"get_family(this.value,'familyHint','index.php?mod=dvr&act=get_family&stream=text')\"" ,$extra_opts);
-    shn_ajax_text_look_up(array('Group head'), array('group_id'), array('familyHint'), 'index.php?mod=dvr&act=get_family&stream=text', array((isset($_SESSION['dvr']['person']['gruop_name']) ? $_SESSION['dvr']['person']['gruop_name'] : '')), true, $extra_opts);
+    shn_ajax_text_look_up(array(_('Group head')), array('group_id'), array('familyHint'), 'index.php?mod=dvr&act=get_family&stream=text', array((isset($_SESSION['dvr']['person']['gruop_name']) ? $_SESSION['dvr']['person']['gruop_name'] : '')), true, $extra_opts);
     //echo '<div id="familyHint"></div>';
     if (isset($_POST['group_id'])) {
         _shn_dvr_set_ajax_group_id();

@@ -56,9 +56,9 @@ $_SESSION['group_head'] = $headid;
 $headname = _shn_dvr_get_person_full_name($headid);
 shn_show_thumb_url($headid, 'database', 'dvr', 'addvictim_img', false);
 print '<br />';
-echo 'Group Head<br /><a href="index.php?mod=' . $global['module'] . '&act=edit_individual&p_uuid=' . $headid . '">' . $headname . '</a><br />';
+echo _('Group Head') . '<br /><a href="index.php?mod=' . $global['module'] . '&act=edit_individual&p_uuid=' . $headid . '">' . $headname . '</a><br />';
 ?>
-<center>
+</center>
 <?php
 shn_dvr_home_show_dvr();
 ?>

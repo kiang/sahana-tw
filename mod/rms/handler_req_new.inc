@@ -96,7 +96,7 @@ function _shn_rms_location($id = null) {
     shn_location(null, null, null, $extra_opts);
     shn_form_fsclose();
     print '<br />';
-    echo '<input type="reset" value="Clear">';
+    echo '<input type="reset" value="' . _('Clear') . '">';
     shn_form_submit(_("Add Location"));
     shn_form_fclose();
 }
@@ -323,13 +323,13 @@ function _shn_rms_get_subcat($cat_id) {
             print "<div class=info>" . _("No items (left) for this category please select another category") . "</div>";
             return false;
         } else {
-            array_push($items, '-- Select item --');
+            array_push($items, '-- ' . _('Select item') . ' --');
             array_reverse($items);
             shn_form_select($items, _("Item"), 'item', "onChange='makeRequest(\"stream.php?mod=rms&amp;act=req_new&amp;seq=ax_unit_itm\",this.value,\"item\",showUnit)'", array('req' => true));
             return true;
         }
     } else {
-        $categories[''] = '-- Select Category --';
+        $categories[''] = '-- ' . _('Select Category') . ' --';
         foreach($car_arr as $cat) {
             $categories[$cat['ct_uuid']] = $cat['name'];
         }
@@ -504,7 +504,7 @@ switch ($seq) {
         }
         add_confirmation(_("The Request was successfully submitted"));
         _shn_rms_view_request($_SESSION['rms_req_id']);
-        print '<br />[ <a href="index.php?mod=rms">RMS Home</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_new">New Request</a> ]';
+        echo '<br />[ <a href="index.php?mod=rms">' . _('RMS Home') . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=req_new">' . _('New Request') . '</a> ]';
         break;
     }
 ?>

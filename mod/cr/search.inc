@@ -184,7 +184,7 @@ function _shn_cr_srch_rst($camp_name, $type) {
 function _shn_cr_srch($edit = false) {
     global $conf;
 ?>
-<h1><?php echo _("Search for {$conf['mod_cr_alt']} by Name") ?></h1>
+<h1><?php echo sprintf(_("Search for %s by Name"), $conf['mod_cr_alt']); ?></h1>
 	<?php
     shn_form_fopen("srch", null, array('req_message' => false));
     shn_form_fsopen(_("Search"));

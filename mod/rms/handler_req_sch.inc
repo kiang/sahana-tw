@@ -80,7 +80,7 @@ function _shn_rms_sch_getkeywords() {
         //shn_html_td_close();
         //shn_html_td_open();
         shn_form_fopen("req_sch", null, array('req_message' => false, 'style' => 'form_blank'));
-        shn_form_fsopen("Select Criteria");
+        shn_form_fsopen(_('Select Criteria'));
         shn_form_hidden(array('seq' => 'get_keywords'));
         if ($_SESSION['isadmin'] == true) {
             shn_form_select($reqstr_name, _("Requester"), 'reqstr_id', null, array('br' => false));

@@ -51,7 +51,7 @@ function list_all_groups() {
           	<td><?=$results->fields['serial'] ?></td>
             <td><?=$results->fields['address'] ?></td>
             
-            <td><a href='index.php?mod=dvr&act=view_members&groupid=<?=$results->fields['group_id'] ?>'>View Members</a></td>
+            <td><a href='index.php?mod=dvr&act=view_members&groupid=<?=$results->fields['group_id'] ?>'><?php echo _('View Members'); ?></a></td>
 
         
         </tr>
@@ -75,7 +75,7 @@ function list_all_individuals() {
             <td><?php echo _("Local Name") ?></td>
           	<td><?php echo _("NIC") ?></td>
             <td><?php echo _("Address") ?></td>
-         <td><a href='index.php?mod=dvr&act=add_new_indv'>Edit</a></td>
+         <td><a href='index.php?mod=dvr&act=add_new_indv'><?php echo _('Edit'); ?></a></td>
         </thead>
         </table>
         </div>

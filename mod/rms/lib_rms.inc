@@ -772,7 +772,7 @@ function _shn_rms_view_requester($reqstr_id, $summary = false) {
 ?>
 
 
-<strong>Requester Name</strong>
+<strong><?php echo _('Requester Name'); ?></strong>
 :
 		<?=$requester['name'] ?>
 		<?php
