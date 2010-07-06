@@ -10,10 +10,20 @@ $allMatches = array();
 foreach($files AS $file) {
     if(empty($file)) continue;
     $matches = array();
+    $offset = 0;
     $content = file_get_contents($file);
-    preg_match_all('/_\([\'"][^\)]*[\'"]\)/', $content, $matches);
+    while($pos = strpos($content, '_("', $offset)) {
+        $length = strpos($content, '")', $pos) + 2 - $pos;
+        $matches[] = substr($content, $pos, $length);
+        $offset = $pos + $length;
+    }
+    while($pos = strpos($content, '_(\'', $offset)) {
+        $length = strpos($content, '\')', $pos) + 2 - $pos;
+        $matches[] = substr($content, $pos, $length);
+        $offset = $pos + $length;
+    }
     if(!empty($matches)) {
-        $allMatches = array_merge($allMatches, $matches[0]);
+        $allMatches = array_merge($allMatches, $matches);
     }
 }
 if(!empty($allMatches)) {
