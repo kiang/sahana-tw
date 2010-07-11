@@ -979,6 +979,53 @@ function _shn_rms_pledge_setstat($plg_id, $stat) {
             display_errors();
             return false;
         } else {
+            if($stat == 'delivered') {
+                include_once $global['approot'] . '/mod/cs/lib_cs.inc';
+                /*
+                * Get all rms_plg_item and push the items into
+                */
+                $result = $global['db']->Execute('SELECT * FROM rms_plg_item
+                    WHERE plg_uuid = \'' . $plg_id . '\'');
+                $date = date('Y-m-d');
+                while(!$result->EOF) {
+                    $total_amount = _shn_ims_sum_amount($parent_id, $inv_id);
+                    $base_unit = convert_to_base_unit($result->fields['unit']);
+                    $converted_amount = $result->fields['quantity'] * unit_converter($base_unit, $result->fields['unit']);
+                    $total_amount = $total_amount + $converted_amount;
+                    $categories = array();
+                    $categories = _shn_cs_recursive_parent_search($categories, $result->fields['item_uuid']);
+                    $itemNames = array();
+                    if(!empty($categories)) {
+                        foreach($categories AS $category_id) {
+                            if($category_id == '0') {
+                                continue;
+                            }
+                            $query = "SELECT name FROM ct_catalogue WHERE ct_uuid ='$category_id'";
+                            $res = $global['db']->Execute($query);
+                            if(!empty($res->fields["name"])) {
+                                $itemNames[] = $res->fields["name"];
+                            }
+                        }
+                    }
+                    if(!empty($itemNames)) {
+                        rsort($itemNames);
+                        $item = implode('-&gt;', $itemNames);
+                    } else {
+                        $item = ' -- ';
+                    }
+                    $sql = "INSERT INTO ims_item_records (
+                        catalog_id,inv_id,item_name,amount,unit,
+                        state,inserted_date,total_amount,predict_amount
+                    ) VALUES (
+                        '{$result->fields['item_uuid']}',
+                        '{$result->fields['inventory']}','$item',
+                        '{$result->fields['quantity']}',
+                        '{$result->fields['unit']}',
+                        'available','$date','$total_amount', '0');";
+                    $global['db']->Execute($sql);
+                    $result->MoveNext();
+                }
+            }
             return true;
         }
     }
