@@ -34,7 +34,7 @@ if (file_exists($global['approot'] . 'conf/sysconf.inc')) {
         $global['action'] = (NULL == $_REQUEST['act']) ? "default" : $_REQUEST['act'];
         $global['module'] = (NULL == $_REQUEST['mod']) ? "home" : $_REQUEST['mod'];
     }
-    $global['stream_type'] = $_GET['stream_type'];
+    $global['stream_type'] = isset($_GET['stream_type']) ? $_GET['stream_type'] : '';
     // hack to stop the disabling of the Sahna ACL via the streaming module
     if (strpos($_GET['act'], "acl_enable") > - 1) {
         die();

@@ -142,10 +142,8 @@ function _shn_rms_plg_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
         print '<br />[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=plg_ls">' . _("Back to Pledge List") . '</a> ]';
     }
 }
-function _shn_rms_stat_pledge($plg_id) {
-    $plg = _shn_rms_get_pledge($plg_id);
+function _shn_rms_stat_pledge($plg_id, $status = 'not_confirmed') {
     if (!$plg_id) return false;
-    $status = $plg['status'];
     $stat['not_confirmed'] = _("Not Confirmed");
     $stat['confirmed'] = _("Confirmed");
     $stat['delivered'] = _("Delivered");
@@ -193,8 +191,11 @@ switch ($seq) {
     break;
     case 'view_plg':
         $plg_id = $_REQUEST['plg_id'];
+        $plg = _shn_rms_get_pledge($plg_id);
         _shn_rms_view_pledge($plg_id);
-        _shn_rms_stat_pledge($plg_id);
+        if(!in_array($plg['status'], array('delivered', 'discarded'))) {
+            _shn_rms_stat_pledge($plg_id, $plg['status']);
+        }
         print '<br />[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=plg_ls">' . _("Back to Pledge List") . '</a> ]';
     break;
     case 'chg_stat':
@@ -202,7 +203,9 @@ switch ($seq) {
         $stat = $_POST['status'];
         _shn_rms_pledge_setstat($plg_id, $stat);
         _shn_rms_view_pledge($plg_id);
-        _shn_rms_stat_pledge($plg_id);
+        if(!in_array($stat, array('delivered', 'discarded'))) {
+            _shn_rms_stat_pledge($plg_id, $stat);
+        }
         print '<br />[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=plg_ls">' . _("Back to Pledge List") . '</a> ]';
     break;
 }

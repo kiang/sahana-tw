@@ -89,7 +89,7 @@ CREATE TABLE rms_pledge (           -- rms_pledge table
 CREATE TABLE rms_plg_item (         -- rms_plg_item table
     item_uuid VARCHAR(60) NOT NULL, -- unique id
     quantity INTEGER NOT NULL,      -- quantity
-    status VARCHAR(255) DEFAULT 'Not Confirmed', -- status
+    status VARCHAR(255) DEFAULT 'not_confirmed', -- status
     plg_uuid VARCHAR(60) NOT NULL,  -- plg uuid
     unit VARCHAR(60),               -- units
     inventory VARCHAR(20),
