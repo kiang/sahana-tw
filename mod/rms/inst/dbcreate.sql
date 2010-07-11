@@ -108,7 +108,6 @@ CREATE TABLE rms_fulfil (          -- rms_fulfil table
     user_id VARCHAR(60) DEFAULT '1',
     PRIMARY KEY (req_uuid, item_uuid, plg_uuid, quantity, ff_date),
     FOREIGN KEY (item_uuid) REFERENCES ct_catalogue (ct_uuid),
-    FOREIGN KEY (plg_uuid) REFERENCES rms_pledge (plg_uuid),
     FOREIGN KEY (req_uuid) REFERENCES rms_request (req_uuid),
     FOREIGN KEY (user_id) REFERENCES users (p_uuid)
 );
