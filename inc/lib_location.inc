@@ -124,7 +124,7 @@ function shn_location_string($loc) {
  * @access public
  * @return void
  */
-function shn_location_get_descendants($loc, $loc_arr) {
+function shn_location_get_descendants($loc, &$loc_arr) {
     global $global;
     $db = $global["db"];
     $q = "select loc_uuid from location where parent_id='{$loc}'";
