@@ -606,6 +606,12 @@ function _shn_auth_del_user_cr() {
                 add_error($db->ErrorMsg());
                 return;
             }
+            $q = 'DELETE FROM ext_location WHERE p_uuid = \'' . $user . '\'';
+            $res = $db->Execute($q);
+            if ($res == false) {
+                add_error($db->ErrorMsg());
+                return;
+            }
             $q = 'DELETE FROM alt_logins WHERE p_uuid = \'' . $user . '\'';
             $res = $db->Execute($q);
             if ($res == false) {
