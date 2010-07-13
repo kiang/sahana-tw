@@ -187,6 +187,7 @@ function shn_mpr_search_navigation_bottom($rs) {
 function shn_mpr_search_nav() {
     global $global;
     global $conf;
+    $notice = true;
     $limit = $conf['mod_mpr_search_limit'];
     $offset = isset($_GET['offset']) ? $_GET['offset'] : 0;
     $total = $_SESSION['mpr']['search']['record_count'];
@@ -194,6 +195,9 @@ function shn_mpr_search_nav() {
     $reportLink = '<a href="index.php?mod=' . $global['module'] . '&act=addmp&type=missing">' . _("Report a Missing Person") . '</a>';
     if ($_SESSION['mpr']['search']['type'] == 'found') {
         $reportLink = '<a href="index.php?mod=' . $global['module'] . '&act=addmp&type=found">' . _("Report a Found Person") . '</a>';
+    }
+    if(!empty($_POST['rep_full_name'])) {
+        $notice = false;
     }
     echo '<br /><strong>' . _('Total') . ' ' . $total . ' ' . _('Records were found') . '</strong><br />';
 ?>  
@@ -216,8 +220,10 @@ function shn_mpr_search_nav() {
 ?>
 </ul>
 <?php
-    echo sprintf(_('If you found the person you would like to report is existed in the system. Please click the name of the person in the list above, and set yourself as tracker for him. Or click %s'),
+    if($notice) {
+        echo sprintf(_('If you found the person you would like to report is existed in the system. Please click the name of the person in the list above, and set yourself as tracker for him. Or click %s'),
             $reportLink);
+    }
 }
 /* }}} */
 /* {{{ Display Results  (OLD) */
