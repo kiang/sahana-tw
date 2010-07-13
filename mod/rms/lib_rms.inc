@@ -880,6 +880,29 @@ function _shn_rms_view_plgitems($plg_id) {
     print '<br />';
 }
 function _shn_rms_view_pledge($plg_id) {
+    $receiptStatuses = array(
+            'receipt_taken' => _("Receipt taken"),
+            'send_receipt' => _("Need to send receipt"),
+            'send_appreciation' => _("Need to send certificate of appreciation"),
+        );
+    $statuses = array(
+            'not_confirmed' => _("Not Confirmed"),
+            'confirmed' => _("Confirmed"),
+            'delivered' => _("Delivered"),
+        );
+    $pledge = _shn_rms_get_pledge($plg_id);
+    shn_form_fopen('donor', null, array('req_message' => false));
+    shn_form_fsopen(_("Donor Information"));
+    shn_form_label(_("Date : "), $pledge['plg_date']);
+    shn_form_label(_("Organization Name : "), $pledge['organization']);
+    shn_form_label(_("Organization Owner : "), $pledge['organization_owner']);
+    shn_form_label(_("Donor Name : "), $pledge['donor_name']);
+    shn_form_label(_("Donor Phone : "), $pledge['donor_phone']);
+    shn_form_label(_("Donor Address : "), $pledge['donor_address']);
+    shn_form_label(_("Receipt :"), $receiptStatuses[$pledge['receipt_status']]);
+    shn_form_label(_("Status :"), $statuses[$pledge['status']]);
+    shn_form_fsclose();
+    shn_form_fclose();
     _shn_rms_view_plgitems($plg_id);
 }
 function _shn_rms_request_setstat($req_id, $stat) {

@@ -59,9 +59,17 @@ function _shn_rms_plg_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
     //print $sql;
     $rs_arr = $rs->GetArray();
     $th_res[] = array(_("Donor"), _("Date"), _("status"), '');
+    $statuses = array(
+            'not_confirmed' => _("Not Confirmed"),
+            'confirmed' => _("Confirmed"),
+            'delivered' => _("Delivered"),
+        );
     foreach($rs_arr as $r) {
         $view_url = '<a href=index.php?mod=rms&amp;act=plg_ls&amp;seq=view_plg&amp;plg_id=' . $r['plg_uuid'] . '>' . _("Pledges details") . '</a>';
-        $tb_res[] = array($r['donor_name'], $r['plg_date'], $r['status'], $view_url);
+        if(!empty($r['organization'])) {
+            $r['donor_name'] = $r['donor_name'] . ' ( ' . $r['organization'] . ' )';
+        }
+        $tb_res[] = array($r['donor_name'], $r['plg_date'], $statuses[$r['status']], $view_url);
     }
     if (1 <= count($rs_arr)) {
         shn_html_table_open(array('class' => 'layout'));
