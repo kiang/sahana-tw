@@ -25,13 +25,9 @@ function _shn_rms_plg_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
     // apply filters if any
     $fstr = ''; //filter string
     if ($filter != null) {
-        $donor = $filter['donor'];
         $status = $filter['status'];
         if ($filter['status'] == '' || !_shn_rms_is_plgstatus($status)) $status = false;
-        if ($filter['donor']) {
-            $fstr = " WHERE donor_uuid='$donor'";
-            if ($status) $fstr.= " AND status='$status'";
-        } elseif ($status) {
+        if ($status) {
             $fstr = " WHERE status='$status'";
         }
         $sql.= $fstr;
@@ -62,50 +58,15 @@ function _shn_rms_plg_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
     $rs = $db->PageExecute($sql, $rows, $page);
     //print $sql;
     $rs_arr = $rs->GetArray();
-    //create the filter list
-    $donors = array();
-    foreach($rs_arr as $r) {
-        //        $donor = _shn_rms_get_donor($r['donor_uuid']);
-        //        $donors[$r['donor_uuid']] = $donor['name'];
-        $donors = _shn_rms_get_donors();
-        //print_r($donors);
-        
-    }
-    $donors[''] = 'All';
-    //Result table hedder
-    /*$th_res[] = array (
-    _("ID"),
-    _("Donor"),
-    _("Date"),
-    _("status"),
-    ''
-    );*/
     $th_res[] = array(_("Donor"), _("Date"), _("status"), '');
     foreach($rs_arr as $r) {
-        $plg_id = $r['plg_uuid'];
-        //$donor_id = $r['donor_uuid'];
-        //print $donor_id;
-        $donor = _shn_rms_get_donor($r['donor_uuid']);
-        //$donor = _shn_rms_get_donor($donor_id);
-        //print $donor;
-        $donor_d = '<strong>' . $donor['name'] . '</strong><br >Contact: <a href="mailto:' . $donor['email'] . '">' . $donor['email'] . '</a> , ' . $donor['mobile'];
-        $plg_date = $r['plg_date'];
-        $plg_stat = $r['status'];
-        $shn_usr = $r['user_id'];
-        $view_url = '<a href=index.php?mod=rms&amp;act=plg_ls&amp;seq=view_plg&amp;plg_id=' . $plg_id . '>' . _("Pledges details") . '</a>';
-        //$tb_res[] = array ($plg_id, $donor_d, $plg_date, $plg_stat, $view_url);
-        $tb_res[] = array($donor_d, $plg_date, $plg_stat, $view_url);
+        $view_url = '<a href=index.php?mod=rms&amp;act=plg_ls&amp;seq=view_plg&amp;plg_id=' . $r['plg_uuid'] . '>' . _("Pledges details") . '</a>';
+        $tb_res[] = array($r['donor_name'], $r['plg_date'], $r['status'], $view_url);
     }
     if (1 <= count($rs_arr)) {
         shn_html_table_open(array('class' => 'layout'));
         shn_html_tbody_open();
         shn_html_tr_open();
-        shn_html_td_open();
-        shn_form_fopen("plg_ls", null, array('req_message' => false, 'style' => 'form_blank'));
-        shn_form_hidden(array('seq' => 'filter'));
-        shn_form_select($donors, _("Donors"), 'donor', 'onChange="submit(this);"', array('br' => false));
-        shn_form_fclose();
-        shn_html_td_close();
         shn_html_td_open();
         shn_form_fopen("plg_ls", null, array('req_message' => false, 'style' => 'form_blank'));
         shn_form_hidden(array('seq' => 'filter'));
@@ -164,10 +125,9 @@ switch ($seq) {
         _shn_rms_plg_showlist($page, $rows);
     break;
     case 'filter':
-        $page = $_REQUEST['page_no'];
-        $rows = $_SESSION['rms_plg_ls_rows'];
-        $_SESSION['rms_plg_filter']['donor'] = $_REQUEST['donor'];
-        $_SESSION['rms_plg_filter']['status'] = $_REQUEST['status'];
+        $page = isset($_REQUEST['page_no']) ? $_REQUEST['page_no'] : 1;
+        $rows = isset($_SESSION['rms_plg_ls_rows']) ? $_SESSION['rms_plg_ls_rows'] : array();
+        $_SESSION['rms_plg_filter']['status'] = isset($_REQUEST['status']) ? $_REQUEST['status'] : 'all';
         _shn_rms_plg_showlist($page, $rows, $_SESSION['rms_plg_filter']);
     break;
     case 'odr_by':
@@ -177,15 +137,15 @@ switch ($seq) {
         _shn_rms_plg_showlist($page, $rows, $_SESSION['rms_plg_filter'], $_SESSION['rms_plg_orderby']);
     break;
     case 'rows':
-        $page = $_REQUEST['page_no'];
-        $_SESSION['rms_plg_ls_rows'] = $_POST['rows'];
-        $rows = $_SESSION['rms_plg_ls_rows'];
-        $_SESSION['rms_plg_orderby'] = $_GET['odr_by'];
+        $page = isset($_REQUEST['page_no']) ? $_REQUEST['page_no'] : 1;
+        $_SESSION['rms_plg_ls_rows'] = isset($_POST['rows']) ? $_POST['rows'] : array();
+        $rows = isset($_SESSION['rms_plg_ls_rows']) ? $_SESSION['rms_plg_ls_rows'] : '';
+        $_SESSION['rms_plg_orderby'] = isset($_GET['odr_by']) ? $_GET['odr_by'] : '';
         _shn_rms_plg_showlist($page, $rows, $_SESSION['rms_plg_filter'], $_SESSION['rms_plg_orderby']);
     break;
     case 'filter_clr':
         $_SESSION['rms_plg_filter'] = null;
-        $page = $_REQUEST['page_no'];
+        $page = isset($_REQUEST['page_no']) ? $_REQUEST['page_no'] : 1;
         $rows = $_SESSION['rms_plg_ls_rows'];
         _shn_rms_plg_showlist($page, $rows, $_SESSION['rms_plg_orderby']);
     break;

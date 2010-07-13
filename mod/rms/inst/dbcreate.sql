@@ -76,12 +76,16 @@ CREATE TABLE rms_status (          -- rms_status table
 
 CREATE TABLE rms_pledge (           -- rms_pledge table
     plg_uuid VARCHAR(60) NOT NULL,  -- unique id
-    donor_uuid VARCHAR(60),         -- donor_uuid  
     plg_date TIMESTAMP,             -- date pledged
     status VARCHAR(20) DEFAULT 'not_confirmed', -- status of the pledge
-    user_id VARCHAR(60),               
+    user_id VARCHAR(60),
+    organization VARCHAR(255) DEFAULT NULL,
+    organization_owner VARCHAR(255) DEFAULT NULL,
+    donor_name VARCHAR(255) DEFAULT NULL,
+    donor_phone VARCHAR(255) DEFAULT NULL,
+    donor_address VARCHAR(255) DEFAULT NULL,
+    receipt_status VARCHAR(20) DEFAULT NULL,
     PRIMARY KEY (plg_uuid),
-    FOREIGN KEY (donor_uuid) REFERENCES person_uuid (p_uuid),
     FOREIGN KEY (user_id) REFERENCES users (p_uuid)
 );
 

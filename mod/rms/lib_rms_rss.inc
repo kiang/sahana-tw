@@ -19,7 +19,7 @@ function shn_xml_rms_new_pledges() {
     require_once ($global['approot'] . "/inc/lib_rss.inc");
     shn_rss_open();
     shn_rss_channel_open(_('Newly made Pledges'), _('This List contains newly made pledges in sahana Request Aid Management system'));
-    $sql = 'SELECT pl.plg_uuid, pl.plg_date , pl.status , p.full_name FROM rms_pledge AS pl left join person_uuid AS p ON p.p_uuid=pl.donor_uuid ORDER BY  pl.plg_date DESC';
+    $sql = 'SELECT pl.plg_uuid, pl.plg_date , pl.status FROM rms_pledge AS pl ORDER BY  pl.plg_date DESC';
     define('ADODB_FETCH_ASSOC', 2);
     $global['db']->SetFetchMode(ADODB_FETCH_ASSOC);
     $res = $global['db']->SelectLimit($sql, 30);

@@ -47,8 +47,7 @@ function shn_rms_new_pledge($item, $amount, $unit) {
     $plg_uuid = shn_create_uuid('pl');
     $status = 'not_delivered';
     $user_id = $_SESSION["user_id"];
-    $donor_uuid = shn_create_uuid('p');
-    $sql1 = "INSERT INTO rms_pledge (plg_uuid, donor_uuid, status, user_id) VALUES ('$plg_uuid', '$donor_uuid', '$status', '$user_id')";
+    $sql1 = "INSERT INTO rms_pledge (plg_uuid, status, user_id) VALUES ('$plg_uuid', '$status', '$user_id')";
     $sql2 = "INSERT INTO rms_plg_item (item_uuid, quantity, plg_uuid, unit) VALUES ('$item', '$amount', '$plg_uuid', '$unit')";
     $res1 = $db->Execute($sql1);
     $res2 = $db->Execute($sql2);

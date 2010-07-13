@@ -577,57 +577,24 @@ function _shn_rms_add_donor($donor) {
         return $p_uuid;
     }
 }
-function _shn_rms_is_donor($id) {
+function _shn_rms_add_pledge() {
     global $global;
-    $sql = "SELECT * FROM rms_pledge WHERE donor_uuid='$id'";
-    $rs = $global['db']->Execute($sql);
-    if ($rs === false) {
-        $msg = $global['db']->ErrorMsg();
-        add_error($msg . '<br />' . $sql);
-        display_errors();
-        return false;
-    } elseif (1 <= $rs->RecordCount()) {
-        return true;
-    }
-    return false;
-}
-function _shn_rms_get_donor($id) {
-    if (_shn_rms_is_donor($id)) {
-        return _shn_rms_get_person($id);
-    }
-    return false;
-}
-function _shn_rms_get_donors() {
-    global $global;
-    $sql = "SELECT psn.p_uuid AS p_uuid, psn.full_name AS fullname FROM rms_pledge plg, person_uuid psn WHERE plg.donor_uuid=psn.p_uuid";
-    $rs = $global['db']->Execute($sql);
-    if ($rs === false) {
-        $msg = $global['db']->ErrorMsg();
-        add_error($msg . '<br />' . $sql);
-        display_errors();
-        return false;
-    } elseif (1 <= $rs->RecordCount()) {
-        $psn_arr = $rs->GetArray();
-        foreach($psn_arr as $psn) {
-            $donors[$psn['p_uuid']] = $psn['fullname'];
-        }
-        return $donors;
-    }
-    return false;
-}
-function _shn_rms_add_pledge($donor_uuid) {
-    global $global;
-    //print $donor_uuid;
     $plg_uuid = shn_create_uuid('pl');
-    $status = 'not_delivered';
-    $user_id = $_SESSION["user_id"];
-    $sql = "INSERT INTO rms_pledge (plg_uuid, donor_uuid, status, user_id) VALUES ('$plg_uuid', '$donor_uuid', '$status', '$user_id')";
+    $sql = "INSERT INTO rms_pledge VALUES ('$plg_uuid', now(),
+    '{$_SESSION['rms_pledge']['status']}',
+    '{$_SESSION['user_id']}', '{$_SESSION['rms_pledge']['organization']}',
+    '{$_SESSION['rms_pledge']['organization_owner']}',
+    '{$_SESSION['rms_pledge']['donor_name']}',
+    '{$_SESSION['rms_pledge']['donor_phone']}',
+    '{$_SESSION['rms_pledge']['donor_address']}',
+    '{$_SESSION['rms_pledge']['receipt_status']}')";
     if ($global['db']->Execute($sql) === false) {
         $msg = $global['db']->ErrorMsg();
         add_error($msg . '<br />' . $sql);
         display_errors();
         return false;
     } else {
+        unset($_SESSION['rms_pledge']);
         _shn_rms_add_plgitems($plg_uuid);
         return $plg_uuid;
     }
@@ -913,14 +880,6 @@ function _shn_rms_view_plgitems($plg_id) {
     print '<br />';
 }
 function _shn_rms_view_pledge($plg_id) {
-    $pledge = _shn_rms_get_pledge($plg_id);
-    $date = $pledge['date'];
-    $status = $pledge['status'];
-    $shn_usr = $pledge['user_id'];
-    //print '<h3>' . _("The Pledge ID: ") . $plg_id . '</h3>';
-    //print '<br />';
-    _shn_rms_view_donor($pledge['donor_uuid']);
-    print '<br />';
     _shn_rms_view_plgitems($plg_id);
 }
 function _shn_rms_request_setstat($req_id, $stat) {

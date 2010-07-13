@@ -140,7 +140,47 @@ function _shn_rms_show_items() {
         shn_form_hidden(array('seq' => 'finish'));
         $msg = _("When all the items are added, Please press 'Finish'");
         _shn_html_print_message($msg);
-        shn_form_submit(_("Finish"));
+        shn_form_fsopen(_('Donor Information'));
+        echo _('Fill out the following information if necessary. If the donor does not belong to any organization, just keep them blank.');
+        echo '<br /><br />';
+        shn_form_text(_("Organization Name : "), 'organization', 'size="40"', array(
+            'value' => isset($_SESSION['rms_pledge']['organization']) ?
+                $_SESSION['rms_pledge']['organization'] : ''
+        ));
+        shn_form_text(_("Organization Owner : "), 'organization_owner', 'size="40"', array(
+            'value' => isset($_SESSION['rms_pledge']['organization_owner']) ?
+                $_SESSION['rms_pledge']['organization_owner'] : ''
+        ));
+        shn_form_text(_("Donor Name : "), 'donor_name', 'size="40"', array(
+            'value' => isset($_SESSION['rms_pledge']['donor_name']) ?
+                $_SESSION['rms_pledge']['donor_name'] : ''
+        ));
+        shn_form_text(_("Donor Phone : "), 'donor_phone', 'size="40"', array(
+            'value' => isset($_SESSION['rms_pledge']['donor_phone']) ?
+                $_SESSION['rms_pledge']['donor_phone'] : ''
+        ));
+        shn_form_text(_("Donor Address : "), 'donor_address', 'size="40"', array(
+            'value' => isset($_SESSION['rms_pledge']['donor_address']) ?
+                $_SESSION['rms_pledge']['donor_address'] : ''
+        ));
+        shn_form_radio(array(
+            'receipt_taken' => _("Receipt taken"),
+            'send_receipt' => _("Need to send receipt"),
+            'send_appreciation' => _("Need to send certificate of appreciation"),
+        ), _('Receipt :'), 'receipt_status', null, array(
+            'value' => isset($_SESSION['rms_pledge']['receipt_status']) ?
+                $_SESSION['rms_pledge']['receipt_status'] : ''
+        ));
+        shn_form_radio(array(
+            'not_confirmed' => _("Not Confirmed"),
+            'confirmed' => _("Confirmed"),
+            'delivered' => _("Delivered"),
+        ), _('Status :'), 'status', null, array(
+            'value' => isset($_SESSION['rms_pledge']['status']) ?
+                $_SESSION['rms_pledge']['status'] : ''
+        ));
+        shn_form_fsclose();
+        shn_form_submit(_('Finish'));
         shn_form_fclose();
     }
 }
@@ -259,6 +299,15 @@ switch ($seq) {
         _shn_rms_show_items();
         break;
     case 'finish':
+        $pledgeFields = array(
+            'organization', 'organization_owner', 'donor_name',
+            'donor_phone', 'donor_address', 'status', 'receipt_status'
+        );
+        foreach($pledgeFields AS $pledgeField) {
+            if(isset($_POST[$pledgeField])) {
+                $_SESSION['rms_pledge'][$pledgeField] = $_POST[$pledgeField];
+            }
+        }
         $d_uuid = $_SESSION['rms_donor_id'];
         if (!$_SESSION['rms_plg_added']) {
             $_SESSION['rms_plg_id'] = _shn_rms_add_pledge($d_uuid);
