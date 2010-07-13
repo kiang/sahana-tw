@@ -779,35 +779,7 @@ function _shn_rms_view_requester($reqstr_id, $summary = false) {
     //}
     print '</div>';
 }
-function _shn_rms_view_donor($donor_id, $summary = false) {
-    print '<div id="note2">';
-    //print '<h4>' . _("Donor Contact Information") . '</h4>';
-    print '<h4>' . _("Donor Information") . '</h4>';
-    $donor = _shn_rms_get_person($donor_id);
-    if (!$summary) {
-        $tmp_str = '<strong>' . _("Donor ID") . '</strong>';
-        //$tb_donor[] = array($tmp_str , $donor_id);
-        $tb_donor[] = array('<strong>' . _("Full Name") . '</strong>', $donor['name']);
-        //$tb_donor[] = array('<strong>' . _("email") . '</strong>', $donor['email']);
-        //$tb_donor[] = array('<strong>' . _("Mobile") . '</strong>', $donor['mobile']);
-        //$tb_donor[] = array('<strong>' . _("Telephone") . '</strong>', $donor['telephone']);
-        //$tb_donor[] = array('<strong>' . _("Address") . '</strong>', $donor['address'])
-        $width = array('20%');
-        shn_html_table($tb_donor, null, null, array('class' => 'layout', 'width' => $width));
-    } else {
-?>
-<strong>Donor ID</strong>
-:
-		<?=$donor_id
-?>
-<br />
-<strong><?php echo _("Donor Name") ?></strong>
-:
-		<?=$donor['name'] ?>
-		<?php
-    }
-    print '</div>';
-}
+
 function _shn_rms_view_location($loc_id, $summary = false) {
     print '<div id="note2">';
     //print '<h4>' . _("Request Location Information") . '</h4>';

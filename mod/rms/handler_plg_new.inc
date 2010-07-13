@@ -187,7 +187,6 @@ switch ($seq) {
         if (shn_acl_is_enabled()) {
             $id = $_SESSION['user_id'];
             $_SESSION['rms_donor_id'] = $_SESSION['user_id'];
-            _shn_rms_donor_display($id);
             _shn_rms_items();
         } else {
             _shn_rms_donor();
@@ -207,7 +206,7 @@ switch ($seq) {
         shn_form_select($units, _("Unit"), 'unit');
         break;
     case 'add_item':
-        _shn_rms_view_donor($_SESSION['rms_donor_id']);
+        //_shn_rms_view_donor($_SESSION['rms_donor_id']);
         if ($_POST['cat_sel'] == 'true') {
             _shn_rms_items($_POST['category']);
         } else {
@@ -244,7 +243,6 @@ switch ($seq) {
             $donor['card_number'] = $_POST['card_number'];
             $_SESSION['rms_donor_id'] = _shn_rms_add_donor($donor);
             $_SESSION['user_id'] = $_SESSION['rms_donor_id'];
-            _shn_rms_donor_display($_SESSION['user_id']);
             _shn_rms_items();
             break;
         } elseif ($_POST['name'] == null && $_POST['card_number'] == null) {
@@ -262,7 +260,7 @@ switch ($seq) {
         }
     case 'del_item':
         _shn_rms_del_itemfromsession($_REQUEST['itm_id']);
-        _shn_rms_view_donor($_SESSION['rms_donor_id']);
+        //_shn_rms_view_donor($_SESSION['rms_donor_id']);
         _shn_rms_items();
         _shn_rms_show_items();
         break;
