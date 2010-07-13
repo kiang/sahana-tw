@@ -594,8 +594,9 @@ function _shn_rms_add_pledge() {
         display_errors();
         return false;
     } else {
-        unset($_SESSION['rms_pledge']);
         _shn_rms_add_plgitems($plg_uuid);
+        _shn_rms_pledge_setstat($plg_uuid, $_SESSION['rms_pledge']['status']);
+        unset($_SESSION['rms_pledge']);
         return $plg_uuid;
     }
 }
