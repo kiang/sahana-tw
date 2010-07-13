@@ -45,10 +45,6 @@ function _shn_rms_donor() {
     shn_form_fclose();
     print '<br />';
 }
-function _shn_rms_donor_display($id) {
-    $donor = _shn_rms_view_donor($id, $summary = false);
-    echo $donor;
-}
 function _shn_rms_donor_conf($id) {
     _shn_html_print_alert(_("New Donor; Please confirm the contact information and enter missing information"));
     $psn = _shn_rms_get_person($id);
@@ -206,7 +202,6 @@ switch ($seq) {
         shn_form_select($units, _("Unit"), 'unit');
         break;
     case 'add_item':
-        //_shn_rms_view_donor($_SESSION['rms_donor_id']);
         if ($_POST['cat_sel'] == 'true') {
             _shn_rms_items($_POST['category']);
         } else {
@@ -260,7 +255,6 @@ switch ($seq) {
         }
     case 'del_item':
         _shn_rms_del_itemfromsession($_REQUEST['itm_id']);
-        //_shn_rms_view_donor($_SESSION['rms_donor_id']);
         _shn_rms_items();
         _shn_rms_show_items();
         break;
