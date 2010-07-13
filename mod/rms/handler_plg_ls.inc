@@ -164,7 +164,9 @@ switch ($seq) {
         if(!in_array($plg['status'], array('delivered', 'discarded'))) {
             _shn_rms_stat_pledge($plg_id, $plg['status']);
         }
-        print '<br />[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ] :: [ <a href="index.php?mod=rms&amp;act=plg_ls">' . _("Back to Pledge List") . '</a> ]';
+        print '<br />[ <a href="index.php?mod=rms">' . _("RMS Home") . '</a> ]
+            :: [ <a href="stream.php?mod=rms&amp;act=plg_print&amp;plg_id=' . $plg_id . '" target="_blank">' . _("Print this") . '</a> ]
+            :: [ <a href="index.php?mod=rms&amp;act=plg_ls">' . _("Back to Pledge List") . '</a> ]';
     break;
     case 'chg_stat':
         $plg_id = $_POST['plg_id'];

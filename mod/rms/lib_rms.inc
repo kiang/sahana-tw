@@ -901,6 +901,8 @@ function _shn_rms_view_pledge($plg_id) {
     shn_form_label(_("Donor Address : "), $pledge['donor_address']);
     shn_form_label(_("Receipt :"), $receiptStatuses[$pledge['receipt_status']]);
     shn_form_label(_("Status :"), $statuses[$pledge['status']]);
+    $user = _shn_rms_get_person($pledge['user_id']);
+    shn_form_label(_("Creator of this record :"), $user['name']);
     shn_form_fsclose();
     shn_form_fclose();
     _shn_rms_view_plgitems($plg_id);

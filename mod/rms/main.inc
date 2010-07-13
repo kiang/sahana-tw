@@ -75,6 +75,9 @@ function shn_rms_req_sch() {
 function shn_rms_plg_new() {
     include_once ('handler_plg_new.inc');
 }
+function shn_rms_plg_print() {
+    include_once ('handler_plg_print.inc');
+}
 function shn_rms_plg_ls() {
     include_once ('handler_plg_ls.inc');
 }
