@@ -53,8 +53,8 @@ function _shn_rms_plg_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
         if ($page_count != $page) $page_list.= '<a href="index.php?mod=rms&amp;act=plg_ls&amp;page_no=' . ($page + 1) . '">' . _("Next") . '</a>';
     }
     //set order-by
-    if ($odr_by != null && $odr_by != '') $sql.= " ORDER BY '$odr_by'";
-    else $sql.= " ORDER BY 'plg_date'";
+    if ($odr_by != null && $odr_by != '') $sql.= " ORDER BY $odr_by";
+    else $sql.= " ORDER BY plg_date DESC";
     $rs = $db->PageExecute($sql, $rows, $page);
     //print $sql;
     $rs_arr = $rs->GetArray();
