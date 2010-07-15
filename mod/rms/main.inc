@@ -55,6 +55,7 @@ function shn_rms_mainmenu() {
     shn_sub_mod_menuitem("plg_new", _("New Pledge"), $module);
     shn_sub_mod_menuitem("plg_ls", _("List Pledges"), $module);
     shn_sub_mod_menuitem("plg_sch", _("Search Pledges"), $module);
+    shn_sub_mod_menuitem("plg_receipt", _("Receipt and appreciation"), $module);
     shn_sub_mod_menuclose();
     shn_sub_mod_menuopen(_("Manage"));
     shn_sub_mod_menuitem("req_ls", _("Fulfill Request"), $module);
@@ -83,6 +84,9 @@ function shn_rms_plg_ls() {
 }
 function shn_rms_plg_sch() {
     include_once ('handler_plg_sch.inc');
+}
+function shn_rms_plg_receipt() {
+    include_once ('handler_plg_receipt.inc');
 }
 function shn_rms_mng_ff() {
     //global $global;
