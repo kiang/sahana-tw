@@ -3,6 +3,9 @@ global $global;
 $page = isset($_REQUEST['page_no']) ? $_REQUEST['page_no'] : 1;
 $db = $global['db'];
 
+if (isset($_POST['donor'])) {
+    $_SESSION['rms_pledge_receipt']['donor'] = $_POST['donor'];
+}
 if (isset($_POST['date_begin'])) {
     $_SESSION['rms_pledge_receipt']['date_begin'] = $_POST['date_begin'];
 }
@@ -16,6 +19,11 @@ if (isset($_POST['appreciation_status'])) {
     $_SESSION['rms_pledge_receipt']['appreciation_status'] = $_POST['appreciation_status'];
 }
 $sql = "SELECT * FROM rms_pledge WHERE 1";
+if(!empty($_SESSION['rms_pledge_receipt']['donor'])) {
+    $sql .= ' AND (organization LIKE \'%' . $_SESSION['rms_pledge_receipt']['donor'] . '%\' OR
+        organization_owner LIKE \'%' . $_SESSION['rms_pledge_receipt']['donor'] . '%\' OR
+        donor_name LIKE \'%' . $_SESSION['rms_pledge_receipt']['donor'] . '%\')';
+}
 if(!empty($_SESSION['rms_pledge_receipt']['date_begin']) && !empty($_SESSION['rms_pledge_receipt']['date_end'])) {
     $sql .= ' AND plg_date >= \'' . $_SESSION['rms_pledge_receipt']['date_begin'] . ' 00:00:00\'';
     $sql .= ' AND plg_date <= \'' . $_SESSION['rms_pledge_receipt']['date_end'] . ' 23:59:59\'';
@@ -120,6 +128,10 @@ foreach ($rs_arr as $r) {
 
 shn_form_fopen('plg_receipt', null, array('req_message' => false));
 shn_form_fsopen(_('Filter'));
+shn_form_text(_('Donor:'), 'donor', array(
+    'value' => isset($_SESSION['rms_pledge_receipt']['donor']) ?
+            $_SESSION['rms_pledge_receipt']['donor'] : ''
+));
 shn_form_date(_('Date begin:'), 'date_begin', array(
     'value' => isset($_SESSION['rms_pledge_receipt']['date_begin']) ?
             $_SESSION['rms_pledge_receipt']['date_begin'] : ''
