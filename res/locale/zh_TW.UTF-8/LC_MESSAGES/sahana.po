@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-06 18:36+0800\n"
-"PO-Revision-Date: 2010-07-06 18:38+0800\n"
+"POT-Creation-Date: 2010-07-15 15:49+0800\n"
+"PO-Revision-Date: 2010-07-15 15:50+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -235,7 +235,7 @@ msgstr "版型錯誤：無法正確寫入版本暫存目錄。"
 
 #: mod/vm/model/dao.php:657
 msgid "Manage the entire project"
-msgstr ""
+msgstr "管理整個專案"
 
 #: mod/vm/model/dao.php:909
 msgid "You have been removed from Project"
@@ -357,7 +357,7 @@ msgstr "已經成功地指派志工"
 
 #: mod/vm/controller/ProjectController.php:140
 msgid "The items listed below are projects that will start from today or after today."
-msgstr ""
+msgstr "以下顯示從今天及今天之後開始的專案"
 
 #: mod/vm/controller/ProjectController.php:141
 msgid "View all projects"
@@ -486,7 +486,7 @@ msgstr "前往下一頁"
 #: mod/gis/main_fns.inc:88
 #: mod/gis/main_fns.inc:115
 #: mod/mpr/search.inc:82
-#: mod/mpr/search.inc:212
+#: mod/mpr/search.inc:216
 #: mod/mpr/edit.inc:236
 #: mod/mpr/edit.inc:351
 #: mod/mpr/edit.inc:752
@@ -518,12 +518,12 @@ msgstr "前往下一頁"
 #: mod/rms/handler_req_new.inc:79
 #: mod/rms/handler_req_new.inc:131
 #: mod/rms/handler_req_ls.inc:63
-#: mod/rms/handler_plg_ls.inc:57
+#: mod/rms/handler_plg_ls.inc:53
 #: mod/rms/handler_plg_new.inc:44
-#: mod/rms/handler_plg_new.inc:65
+#: mod/rms/handler_plg_new.inc:61
 #: mod/rms/handler_mng_ff.inc:115
 #: mod/rms/handler_mng_ff.inc:260
-#: mod/rms/lib_rms.inc:1300
+#: mod/rms/lib_rms.inc:1304
 #: mod/msg/handler_cap_new.inc:99
 #: mod/msg/handler_cap_new.inc:167
 #: mod/msg/handler_cap_new.inc:187
@@ -541,9 +541,8 @@ msgid "Are you sure you want to remove"
 msgstr "您確定要移除？"
 
 #: tools/tpl_languages.php:4
-#, fuzzy
 msgid "from the system?"
-msgstr "系統設置"
+msgstr "來自系統？"
 
 #: tools/tpl_languages.php:5
 #: tools/tpl_languages.php:16
@@ -601,7 +600,7 @@ msgstr "刪除"
 #: mod/ims/view_edit_item.inc:65
 #: mod/ims/mini_quantity.inc:249
 #: mod/gis/wm_fns.inc:56
-#: mod/mpr/search.inc:255
+#: mod/mpr/search.inc:261
 #: mod/cr/edit.inc:193
 #: mod/cr/edit.inc:282
 #: mod/cr/edit.inc:558
@@ -758,9 +757,8 @@ msgstr "志工已指派數量"
 
 #: tools/tpl_languages.php:26
 #: tools/tpl_languages.php:60
-#, fuzzy
 msgid "Edit closure report"
-msgstr "編輯選取的報表"
+msgstr "編輯結案報告"
 
 #: tools/tpl_languages.php:27
 #: tools/tpl_languages.php:61
@@ -814,7 +812,7 @@ msgstr "任務說明"
 #: tools/tpl_languages.php:44
 #: mod/ims/optimize.inc:500
 #: mod/ims/view_inv.inc:66
-#: mod/mpr/search.inc:243
+#: mod/mpr/search.inc:249
 msgid "Actions"
 msgstr "編輯"
 
@@ -867,9 +865,8 @@ msgid "End date :"
 msgstr "結束日期："
 
 #: tools/tpl_languages.php:77
-#, fuzzy
 msgid "Volunteers attended"
-msgstr "志工需求數量"
+msgstr "指派志工人數"
 
 #: tools/tpl_languages.php:80
 msgid "You are currently not assigned as a site manager to any projects."
@@ -892,36 +889,31 @@ msgid "Continue"
 msgstr "繼續"
 
 #: tools/tpl_languages.php:84
-#, fuzzy
 msgid "Project name:"
-msgstr "科目名稱"
+msgstr "專案名稱"
 
 #: tools/tpl_languages.php:85
-#, fuzzy
 msgid "Project manager:"
-msgstr "專案負責人："
+msgstr "專案負責人"
 
 #: tools/tpl_languages.php:86
 msgid "How many hours the volunteers had attended"
-msgstr ""
+msgstr "志工出缺勤與服務時數登錄"
 
 #: tools/tpl_languages.php:87
 #: tools/tpl_languages.php:105
-#, fuzzy
 msgid "Volunteer name"
-msgstr "科目名稱"
+msgstr "志工姓名"
 
 #: tools/tpl_languages.php:88
 #: tools/tpl_languages.php:106
-#, fuzzy
 msgid "Volunteer position"
-msgstr "可進行指派的志工"
+msgstr "主責任務"
 
 #: tools/tpl_languages.php:89
 #: tools/tpl_languages.php:107
-#, fuzzy
 msgid "Attended or absence"
-msgstr "只有或全部"
+msgstr "出缺席狀況"
 
 #: tools/tpl_languages.php:90
 #: tools/tpl_languages.php:108
@@ -930,60 +922,51 @@ msgstr ""
 
 #: tools/tpl_languages.php:91
 #: tools/tpl_languages.php:109
-#, fuzzy
 msgid "Attended"
-msgstr "海拔高度"
+msgstr "出席"
 
 #: tools/tpl_languages.php:92
 #: tools/tpl_languages.php:110
-#, fuzzy
 msgid "Absence"
-msgstr "對象"
+msgstr "缺席"
 
 #: tools/tpl_languages.php:93
 #: tools/tpl_languages.php:111
-#, fuzzy
 msgid "Description of the progress"
-msgstr "科目名稱"
+msgstr "專案執行過程說明"
 
 #: tools/tpl_languages.php:94
 #: tools/tpl_languages.php:112
-#, fuzzy
 msgid "Suggestion of this project"
-msgstr "請補償此"
+msgstr "針對本專案之建議"
 
 #: tools/tpl_languages.php:97
-#, fuzzy
 msgid "Project Closure Report"
-msgstr "年度供應商報表"
+msgstr "結案報告"
 
 #: tools/tpl_languages.php:102
-#, fuzzy
 msgid "Last modified"
-msgstr "最新列印"
+msgstr "最後更新"
 
 #: tools/tpl_languages.php:104
-#, fuzzy
 msgid "Volunteers attending status"
-msgstr "產品狀況"
+msgstr "志工出席狀況"
 
 #: tools/tpl_languages.php:113
-#, fuzzy
 msgid "Back to closure report list"
-msgstr "回到捐贈物資列表清單"
+msgstr "返回結案報告列表"
 
 #: tools/tpl_languages.php:114
 msgid "Back to index of volunteer module"
-msgstr ""
+msgstr "返回志工專案管理模組首頁"
 
 #: tools/tpl_languages.php:115
 msgid "Delete Volunteer"
 msgstr "刪除志工"
 
 #: tools/tpl_languages.php:116
-#, fuzzy
 msgid "Are you sure you want to retire"
-msgstr "您確定要登出？"
+msgstr "您確定要登出？ "
 
 #: tools/tpl_languages.php:119
 msgid "Volunteers to Assign"
@@ -1004,7 +987,7 @@ msgstr "可進行指派的志工"
 #: mod/cs/add.inc:427
 #: mod/mpr/search.inc:74
 #: mod/mpr/search.inc:75
-#: mod/mpr/search.inc:361
+#: mod/mpr/search.inc:367
 #: mod/mpr/edit.inc:510
 #: mod/mpr/edit.inc:723
 #: mod/mpr/add.inc:301
@@ -1025,7 +1008,7 @@ msgstr "姓名"
 
 #: tools/tpl_languages.php:121
 #: tools/tpl_languages.php:233
-#: mod/mpr/search.inc:360
+#: mod/mpr/search.inc:366
 #: mod/mpr/edit.inc:509
 msgid "Picture"
 msgstr "照片"
@@ -1034,7 +1017,7 @@ msgstr "照片"
 #: tools/tpl_languages.php:327
 #: mod/ims/search.inc:142
 #: mod/ims/search.inc:215
-#: mod/mpr/search.inc:362
+#: mod/mpr/search.inc:368
 #: mod/mpr/edit.inc:143
 #: mod/mpr/add.inc:51
 #: mod/mpr/add.inc:52
@@ -1043,8 +1026,8 @@ msgstr "照片"
 #: mod/rms/handler_req_sch.inc:99
 #: mod/rms/handler_req_sch.inc:205
 #: mod/rms/handler_req_sch.inc:211
-#: mod/rms/handler_plg_ls.inc:118
-#: mod/rms/handler_plg_ls.inc:156
+#: mod/rms/handler_plg_ls.inc:87
+#: mod/rms/handler_plg_ls.inc:123
 #: mod/rms/handler_plg_sch.inc:63
 #: mod/rms/handler_mng_ff.inc:199
 #: mod/msg/handler_cap_edit.inc:90
@@ -1070,9 +1053,8 @@ msgid "Availability"
 msgstr "可利用性"
 
 #: tools/tpl_languages.php:126
-#, fuzzy
 msgid "Start"
-msgstr "開始日期"
+msgstr "開始日期 "
 
 #: tools/tpl_languages.php:128
 msgid "End"
@@ -1104,8 +1086,8 @@ msgstr "身份識別"
 #: mod/rms/handler_req_sch.inc:203
 #: mod/rms/handler_req_sch.inc:209
 #: mod/rms/handler_mng_ff.inc:200
-#: mod/rms/lib_rms.inc:843
-#: mod/rms/lib_rms.inc:1298
+#: mod/rms/lib_rms.inc:783
+#: mod/rms/lib_rms.inc:1302
 msgid "Location"
 msgstr "地點"
 
@@ -1138,9 +1120,8 @@ msgid "Assign this Volunteer"
 msgstr "指派本位志工"
 
 #: tools/tpl_languages.php:139
-#, fuzzy
 msgid "(none)"
-msgstr "這是沒有"
+msgstr "目前無資料"
 
 #: tools/tpl_languages.php:143
 #: mod/or/lib_or.inc:566
@@ -1200,7 +1181,7 @@ msgstr "核准專案負責人"
 
 #: tools/tpl_languages.php:160
 msgid "Current or Previous Applicants"
-msgstr "現在或是之前的應用"
+msgstr "專案負責人能力核准現況"
 
 #: tools/tpl_languages.php:161
 msgid "There are no managers to approve or revoke manager approval from."
@@ -1235,9 +1216,8 @@ msgid "Unapproved"
 msgstr "未核准"
 
 #: tools/tpl_languages.php:169
-#, fuzzy
 msgid "Upgrade Non-Applicants"
-msgstr "不存在項目"
+msgstr "核准成員為專案管理者"
 
 #: tools/tpl_languages.php:170
 msgid "Upgrade this Volunteer to Site Manager Status"
@@ -1397,7 +1377,7 @@ msgstr "志工登錄--感謝您的協助"
 
 #: tools/tpl_languages.php:208
 msgid "To register, fill in as many of the below fields as possible. When you are finished, click \"Submit\". Your registration will be confirmed via phone or email."
-msgstr "如欲登錄，請盡可能填寫以下的欄位。填寫完畢請按「送出」，您的登錄將會透過電話或電子郵件確認。"
+msgstr "如欲登錄，請盡可能填寫以下的欄位。填寫完畢請按「送出」。"
 
 #: tools/tpl_languages.php:209
 msgid "Edit details"
@@ -1465,11 +1445,11 @@ msgstr "結束日期："
 
 #: tools/tpl_languages.php:228
 msgid "Start Hours (e.g. 08:00) :"
-msgstr ""
+msgstr "開始時間（例如：08:00）"
 
 #: tools/tpl_languages.php:229
 msgid "End Hours (e.g. 17:00) :"
-msgstr ""
+msgstr "結束時間（例如:17:00）"
 
 #: tools/tpl_languages.php:230
 #: mod/or/search.inc:40
@@ -1585,9 +1565,9 @@ msgid "Go to Previous Page"
 msgstr "到前一頁"
 
 #: tools/tpl_languages.php:277
-#: mod/mpr/search.inc:207
+#: mod/mpr/search.inc:211
 #: mod/rms/handler_req_ls.inc:54
-#: mod/rms/handler_plg_ls.inc:48
+#: mod/rms/handler_plg_ls.inc:44
 #: inc/lib_paging.inc:117
 #: inc/lib_paging.inc:208
 msgid "Previous"
@@ -1686,9 +1666,8 @@ msgid "Create Custom Report for these Volunteers"
 msgstr "建立這群志工的客制化報表"
 
 #: tools/tpl_languages.php:303
-#, fuzzy
 msgid "You must select at least one volunteer if reporting by volunteer."
-msgstr "請選擇將訊息至少傳給一個志願者"
+msgstr "請選擇將訊息至少傳給一個志工"
 
 #: tools/tpl_languages.php:304
 #: tools/tpl_languages.php:308
@@ -1803,10 +1782,11 @@ msgstr "最後總計價值"
 
 #: tools/tpl_languages.php:332
 #: mod/mpr/view.inc:26
-#: mod/mpr/search.inc:240
+#: mod/mpr/search.inc:246
 #: mod/rms/handler_req_ls.inc:94
 #: mod/rms/handler_req_sch.inc:216
-#: mod/rms/handler_plg_sch.inc:291
+#: mod/rms/handler_plg_ls.inc:68
+#: mod/rms/handler_plg_sch.inc:111
 msgid "Details"
 msgstr "細節"
 
@@ -1950,7 +1930,7 @@ msgstr ""
 #: mod/admin/ims_assign.inc:78
 #: mod/admin/location.inc:133
 #: mod/rms/handler_req_new.inc:301
-#: mod/rms/handler_plg_new.inc:127
+#: mod/rms/handler_plg_new.inc:123
 msgid "Add"
 msgstr "增加"
 
@@ -1965,9 +1945,8 @@ msgid "Warning"
 msgstr "提醒"
 
 #: tools/tpl_languages.php:376
-#, fuzzy
 msgid "The following requests in the database are never referenced"
-msgstr "在資料庫中沒有符合您條件的需求"
+msgstr "在資料庫中沒有符合您條件的需求 "
 
 #: tools/tpl_languages.php:378
 msgid "Remove From Database"
@@ -1978,14 +1957,12 @@ msgid "The following database tables/views have not been given any classificatio
 msgstr ""
 
 #: tools/tpl_languages.php:382
-#, fuzzy
 msgid "Table"
-msgstr "啟用"
+msgstr "啟用 "
 
 #: tools/tpl_languages.php:383
-#, fuzzy
 msgid "Classification Level"
-msgstr "活躍層次"
+msgstr "活躍層次 "
 
 #: tools/tpl_languages.php:386
 #: mod/vm/menu.inc:63
@@ -1998,9 +1975,8 @@ msgid "Outbox"
 msgstr "寄件匣"
 
 #: tools/tpl_languages.php:389
-#, fuzzy
 msgid "From"
-msgstr "由"
+msgstr "由 "
 
 #: tools/tpl_languages.php:390
 #: tools/tpl_languages.php:400
@@ -2030,9 +2006,8 @@ msgid "Are you sure you want to delete this message?"
 msgstr "您確定要刪除這個訊息？"
 
 #: tools/tpl_languages.php:394
-#, fuzzy
 msgid "Your"
-msgstr "您的參考號"
+msgstr "您的參考號 "
 
 #: tools/tpl_languages.php:395
 msgid "is empty"
@@ -2117,6 +2092,8 @@ msgstr "主要的細節"
 #: mod/or/reg_org.inc:170
 #: mod/or/view_org.inc:355
 #: mod/or/view_org.inc:690
+#: mod/rms/handler_plg_new.inc:146
+#: mod/rms/lib_rms.inc:898
 msgid "Organization Name : "
 msgstr "組織名稱："
 
@@ -2194,7 +2171,7 @@ msgstr "組織服務內容"
 #: mod/rms/handler_req_new.inc:42
 #: mod/rms/handler_req_new.inc:77
 #: mod/rms/handler_plg_new.inc:41
-#: mod/rms/handler_plg_new.inc:63
+#: mod/rms/handler_plg_new.inc:59
 msgid "Address"
 msgstr "地址"
 
@@ -2313,9 +2290,8 @@ msgstr "除了階層式的位置之外，你也可在此填寫組織的詳細地
 #: mod/gis/main_fns.inc:114
 #: mod/gis/gis_fns.inc:156
 #: mod/gis/gis_fns.inc:179
-#, fuzzy
 msgid "Area Map"
-msgstr "地區編號"
+msgstr "地區地圖"
 
 #: mod/or/reg_org.inc:106
 #: mod/ims/view_inv.inc:245
@@ -2421,7 +2397,7 @@ msgstr "儲存"
 #: mod/dvr/edt_indv.inc:466
 #: mod/dvr/add_new_indv.inc:443
 msgid "Edit Details"
-msgstr "編輯細節"
+msgstr "編輯詳細資料"
 
 #: mod/or/reg_org.inc:246
 msgid "Add an Operation/Branch under the Organization "
@@ -2538,7 +2514,7 @@ msgstr "無記錄"
 #: mod/or/view_org.inc:555
 #: mod/mpr/mpr_lib.inc:50
 #: mod/mpr/mpr_lib.inc:71
-#: mod/mpr/search.inc:281
+#: mod/mpr/search.inc:287
 #: mod/dvr/lib.inc:150
 #: mod/dvr/lib.inc:170
 msgid "Assign to more incidents"
@@ -2667,9 +2643,8 @@ msgid "Website : "
 msgstr "網址："
 
 #: mod/or/view_org.inc:685
-#, fuzzy
 msgid "Organization Registration Information of "
-msgstr "分公司聯繫資料"
+msgstr "公司登記資料--"
 
 #: mod/or/view_org.inc:694
 msgid "Organization Type : "
@@ -2801,7 +2776,7 @@ msgstr "電話"
 #: mod/rms/handler_req_new.inc:37
 #: mod/rms/handler_req_new.inc:74
 #: mod/rms/handler_plg_new.inc:36
-#: mod/rms/handler_plg_new.inc:60
+#: mod/rms/handler_plg_new.inc:56
 msgid "Mobile"
 msgstr "行動電話"
 
@@ -2821,7 +2796,7 @@ msgstr "傳真"
 #: mod/rms/handler_req_new.inc:38
 #: mod/rms/handler_req_new.inc:75
 #: mod/rms/handler_plg_new.inc:37
-#: mod/rms/handler_plg_new.inc:61
+#: mod/rms/handler_plg_new.inc:57
 msgid "Email"
 msgstr "電子郵件"
 
@@ -2983,9 +2958,8 @@ msgstr "新增"
 #: mod/or/admin.inc:112
 #: mod/mpr/admin.inc:334
 #: mod/cr/admin.inc:182
-#, fuzzy
 msgid "Please enter the code"
-msgstr "輸入項目代號"
+msgstr "輸入項目代號 "
 
 #: mod/or/admin.inc:115
 #: mod/mpr/admin.inc:337
@@ -3061,7 +3035,7 @@ msgstr "登錄組織"
 
 #: mod/or/home.inc:57
 msgid "Adds an organization's details to sahana."
-msgstr "增加組織的詳細資訊。"
+msgstr "新增一個組織到本系統"
 
 #: mod/or/home.inc:58
 msgid "Register a branch"
@@ -3069,7 +3043,7 @@ msgstr "登錄分支機構"
 
 #: mod/or/home.inc:60
 msgid "Adds the details of a branch of an organization to sahana."
-msgstr "增加組織的分支機構資訊。"
+msgstr "增加一個既存組織的分支機構到本系統"
 
 #: mod/or/home.inc:61
 msgid "Search organizations"
@@ -3077,7 +3051,7 @@ msgstr "搜尋組織"
 
 #: mod/or/home.inc:62
 msgid "Find the organisation(s) by specifying its details."
-msgstr "根據指定資訊尋找組織"
+msgstr "根據名稱、類型與地點查詢組織資訊"
 
 #: mod/or/home.inc:63
 #: mod/cs/main.inc:249
@@ -3086,7 +3060,7 @@ msgstr "瀏覽與編輯全部組織"
 
 #: mod/or/home.inc:64
 msgid "View a list of registered organizations. Their details can be viewed / edited by clicking on the appropriate links."
-msgstr "瀏覽已登錄的組織的列表。點選組織名稱連結，即可進行瀏覽與編輯。"
+msgstr "瀏覽已登錄的組織的列表，可進行瀏覽與編輯。"
 
 #: mod/or/home.inc:74
 msgid "Service Coverage"
@@ -3233,13 +3207,12 @@ msgid "Sign Up for the SAHANA API Key"
 msgstr "申請 Shahana API Key "
 
 #: mod/ws/reg.inc:26
-#, fuzzy
 msgid ""
 "The API Key allows you to access the web services of this SAHANA instance for the domain you register with us. For each domain you need a separate Key. For the time being only one key per domain is issued. To access SAHANA web services, a developer must have a login(an account).\n"
 "In this section , you are given an API Key,a password and a Secret Access Code. The API Key and password, which is associated with your login, is used in requests to identify the party responsible for the request. However, because both the API Key and password is sent as a request parameter, it is not secret and could be used by anyone sending a request to SAHANA web service. Therefore to improve the security(reduce impersonation attacks), a request signature is calculated using the Secret Access Code. The Secret Access Code is a automatically generated 32-character alphanumeric sequence."
 msgstr ""
 "The API Key allows you to access the web services of this SAHANA instance for the domain you register with us. For each domain you need a separate Key. For the time being only one key per domain is issued. To access SAHANA web services, a developer must have a login(an account).\n"
-"In this section , you are given an API Key,a password and a Secret Access Code. The API Key and password, which is associated with your login, is used in requests to identify the party responsible for the request."
+"In this section , you are given an API Key,a password and a Secret Access Code. The API Key and password, which is associated with your login, is used in requests to identify the party responsible for the request. "
 
 #: mod/ws/reg.inc:44
 msgid "Domain"
@@ -3255,13 +3228,12 @@ msgid "Sign Up for the SAHANA API Key - Step 2"
 msgstr "申請 Shahana API Key - 步驟二"
 
 #: mod/ws/reg.inc:76
-#, fuzzy
 msgid ""
 "The API Key allows you to access the web services of this SAHANA instance for the domain you register with us. For each domain you need a seperate Key. For the time being only one key per domain is issued. To access SAHANA web services, a developer must have a login(an account).\n"
 "In this section , you are given an API Key,a password and a Secret Access Code. The API Key and password, which is associated with your login, is used in requests to identify the party responsible for the request. However, because both the API Key and password is sent as a request parameter, it is not secret and could be used by anyone sending a request to SAHANA web service. Therefore to improve the security(reduce impersonation attacks), a request signature is calculated using the Secret Access Code. The Secret Access Code is a automatically generated 32-character alphanumeric sequence."
 msgstr ""
 "API Key 允許你通過所註冊的網域存取此Sahana的 Web Service。對於任一網域，你需要一個單獨的Key。每個網域只核發一個Key。要存取Sahana的Web Service，開發人員必須先有一個帳號.\n"
-"在這裡，你會得到一個 API Key、密碼、和秘密存取碼。API Key 和密碼與你的帳號相連的，用來識別該請求的來源。"
+"在這裡，你會得到一個 API Key、密碼、和秘密存取碼。API Key 和密碼與你的帳號相連的，用來識別該請求的來源。 "
 
 #: mod/ws/reg.inc:104
 #: mod/cr/edit.inc:557
@@ -3271,7 +3243,7 @@ msgstr ""
 #: mod/dvr/edt_indv.inc:684
 #: mod/dvr/add_new_indv.inc:670
 #: mod/rms/handler_req_new.inc:353
-#: mod/rms/handler_plg_new.inc:147
+#: mod/rms/handler_plg_new.inc:183
 #: mod/msg/handler_cap_new.inc:226
 msgid "Finish"
 msgstr "完成"
@@ -3390,13 +3362,12 @@ msgid "If the web service provider requires authentication ,then switch to secur
 msgstr "如果web service提供者需要認證，則切換到安全模式"
 
 #: mod/ws/main.inc:364
-#, fuzzy
 msgid ""
 "The API Key allows you to access the web services of another SAHANA instance which requires authentication. To access SAHANA web services, a developer must have a login(an account).\n"
 "    That is you should have an API Key,a password and a Secret Access Code. The API Key and password, which is associated with your login, is used in requests to identify the party responsible for the request. However, because both the API Key and password is sent as a request parameter, it is not secret and could be used by anyone sending a request to SAHANA web service. Therefore to improve the security(reduce impersonation attacks), a request signature is calculated using the Secret Access Code. The Secret Access Code is a automatically generated 32-character alphanumeric sequence."
 msgstr ""
 "The API Key allows you to access the web services of another SAHANA instance which requires authentication. To access SAHANA web services, a developer must have a login(an account).\n"
-"    That is you should have an API Key,a password and a Secret Access Code. The API Key and password, which is associated with your login, is used in requests to identify the party responsible for the request."
+"    That is you should have an API Key,a password and a Secret Access Code. The API Key and password, which is associated with your login, is used in requests to identify the party responsible for the request. "
 
 #: mod/ws/main.inc:386
 msgid "View Result ..."
@@ -3422,7 +3393,7 @@ msgstr "歡迎來到 Sahana FOSS 災難管理系統"
 
 #: mod/home/main.inc:22
 msgid "Sahana is a collection of web based disaster management applications that provides solutions to large-scale humanitarian coordination and collaboration in disaster situation and its aftermath. Sahana consists of several modules for following functionalities:"
-msgstr "Sahana 是一套功能可擴充的災難管理網站應用系統，可協助解決災後大規模的人道問題。應用領域和欲解決的問題如下："
+msgstr "SahanaTW 是一套災難管理網站應用系統，可協助解決災後大規模的人道問題，包括受災人口通報統計、物資捐贈、庫存、媒合管理及志工與專案管理等。"
 
 #: mod/home/main.inc:26
 msgid "Allows you to locate activities on a map providing current situation awareness."
@@ -3517,7 +3488,7 @@ msgstr "管理者："
 #: mod/rms/handler_req_new.inc:41
 #: mod/rms/handler_req_new.inc:76
 #: mod/rms/handler_plg_new.inc:40
-#: mod/rms/handler_plg_new.inc:62
+#: mod/rms/handler_plg_new.inc:58
 msgid "Telephone"
 msgstr "電話"
 
@@ -3850,7 +3821,7 @@ msgstr "總數"
 #: mod/cs/search.inc:23
 #: mod/cs/search.inc:159
 #: mod/rms/handler_req_new.inc:455
-#: mod/rms/handler_plg_new.inc:207
+#: mod/rms/handler_plg_new.inc:242
 msgid "Unit"
 msgstr "單位"
 
@@ -3870,8 +3841,8 @@ msgstr "單位"
 #: mod/ims/transfer_inv.inc:454
 #: mod/ims/home.inc:55
 #: mod/ims/mini_quantity.inc:248
-#: mod/rms/handler_plg_sch.inc:287
-#: mod/rms/handler_plg_sch.inc:289
+#: mod/rms/handler_plg_sch.inc:107
+#: mod/rms/handler_plg_sch.inc:109
 #: mod/rms/handler_mng_ff.inc:198
 msgid "Inventory"
 msgstr "倉庫列表"
@@ -3995,7 +3966,7 @@ msgstr "選擇相關的物資"
 #: mod/ims/optimize.inc:226
 #: mod/ims/optimize.inc:361
 #: mod/ims/optimize.inc:894
-#: mod/rms/handler_plg_new.inc:115
+#: mod/rms/handler_plg_new.inc:111
 msgid "Inventory Selection"
 msgstr "庫存選擇"
 
@@ -4029,16 +4000,16 @@ msgstr "相關物資選擇"
 #: mod/rms/handler_req_new.inc:342
 #: mod/rms/handler_req_sch.inc:203
 #: mod/rms/handler_req_sch.inc:209
-#: mod/rms/handler_plg_new.inc:135
-#: mod/rms/handler_plg_new.inc:171
-#: mod/rms/handler_plg_sch.inc:287
-#: mod/rms/handler_plg_sch.inc:289
+#: mod/rms/handler_plg_new.inc:131
+#: mod/rms/handler_plg_new.inc:207
+#: mod/rms/handler_plg_sch.inc:107
+#: mod/rms/handler_plg_sch.inc:109
 #: mod/rms/handler_mng_ff.inc:142
 #: mod/rms/handler_mng_ff.inc:196
 #: mod/rms/handler_mng_ff.inc:257
-#: mod/rms/lib_rms.inc:854
-#: mod/rms/lib_rms.inc:907
-#: mod/rms/lib_rms.inc:935
+#: mod/rms/lib_rms.inc:794
+#: mod/rms/lib_rms.inc:847
+#: mod/rms/lib_rms.inc:875
 msgid "Item"
 msgstr "物資"
 
@@ -4302,6 +4273,7 @@ msgstr "到期日"
 #: mod/ims/transfer_inv.inc:101
 #: mod/ims/transfer_inv.inc:155
 #: mod/admin/conf_admin.inc:128
+#: mod/rms/handler_plg_ls.inc:61
 #: mod/rms/handler_mng_ff.inc:201
 #: mod/msg/message_forms.inc:161
 msgid "Action"
@@ -4697,9 +4669,8 @@ msgid "Other <br /> Facilities"
 msgstr "其他<br/>設施"
 
 #: mod/ims/view_inv.inc:158
-#, fuzzy
 msgid "Review items"
-msgstr "控制項目"
+msgstr "檢視物資"
 
 #: mod/ims/view_inv.inc:188
 msgid "Inventory Registration Information of "
@@ -4731,9 +4702,8 @@ msgid "state"
 msgstr "狀態"
 
 #: mod/ims/transfer_inv.inc:143
-#, fuzzy
 msgid "Alternate Items Table"
-msgstr "撰擇貸方項目"
+msgstr "替代項目"
 
 #: mod/ims/transfer_inv.inc:229
 msgid "Item Send : "
@@ -4759,13 +4729,11 @@ msgstr "庇護所"
 
 #: mod/ims/transfer_inv.inc:251
 #: mod/ims/transfer_inv.inc:454
-#, fuzzy
 msgid "Organization"
-msgstr "組織："
+msgstr "組織"
 
 #: mod/ims/transfer_inv.inc:251
 #: mod/ims/transfer_inv.inc:454
-#, fuzzy
 msgid "Victim"
 msgstr "受災者"
 
@@ -4808,6 +4776,7 @@ msgid "Victim : "
 msgstr "受災者"
 
 #: mod/ims/transfer_inv.inc:312
+#: mod/rms/lib_rms.inc:897
 msgid "Date : "
 msgstr "日期："
 
@@ -5723,7 +5692,7 @@ msgstr "單位"
 #: mod/cr/search.inc:79
 #: mod/rms/handler_req_ls.inc:132
 #: mod/rms/handler_req_sch.inc:70
-#: mod/rms/handler_plg_ls.inc:112
+#: mod/rms/handler_plg_ls.inc:81
 #: mod/rms/handler_plg_sch.inc:36
 msgid "All"
 msgstr "全部"
@@ -5832,7 +5801,7 @@ msgstr "救援物資目錄"
 
 #: mod/cs/lib_cs.inc:173
 #: mod/sync/handler_download.inc:66
-#: mod/rms/lib_rms.inc:1139
+#: mod/rms/lib_rms.inc:1143
 #: mod/msg/handler_cap_new.inc:139
 msgid "None"
 msgstr "無"
@@ -5840,8 +5809,8 @@ msgstr "無"
 #: mod/cs/lib_cs.inc:174
 #: mod/cs/add.inc:163
 #: mod/gis/plugins/google_maps/admin.inc:41
-#: mod/rms/lib_rms.inc:675
-#: mod/rms/lib_rms.inc:1140
+#: mod/rms/lib_rms.inc:643
+#: mod/rms/lib_rms.inc:1144
 msgid "Information"
 msgstr "資訊"
 
@@ -5856,7 +5825,7 @@ msgstr "新增目錄"
 
 #: mod/cs/lib_cs.inc:176
 #: mod/cs/add.inc:165
-#: mod/rms/lib_rms.inc:1143
+#: mod/rms/lib_rms.inc:1147
 msgid " First"
 msgstr " 第一筆"
 
@@ -6328,9 +6297,8 @@ msgid "Commit Detail"
 msgstr "增加細節"
 
 #: mod/gis/wm_fns.inc:252
-#, fuzzy
 msgid "Please enter the description before updating."
-msgstr "請輸入說明"
+msgstr "在更新以前請輸入說明"
 
 #: mod/gis/wm_fns.inc:259
 msgid "Succesfully updated description"
@@ -6431,7 +6399,7 @@ msgstr "一般地圖"
 
 #: mod/gis/main_fns.inc:39
 msgid "Free form map of the location without markers"
-msgstr "沒有標記的地圖（Free form map of the location ）"
+msgstr "沒有標記的地圖"
 
 #: mod/gis/main_fns.inc:70
 msgid "Landmark Specific Details"
@@ -6684,9 +6652,8 @@ msgid "Date of Event Cannot be empty."
 msgstr "活動日期不得空白"
 
 #: mod/gis/main.inc:68
-#, fuzzy
 msgid "Detail Summary Cannot be empty."
-msgstr "借方代號不能空白"
+msgstr "內容摘要不能空白 "
 
 #: mod/gis/admin_bk.inc:42
 #: mod/admin/gis_admin.inc:41
@@ -6848,8 +6815,7 @@ msgstr "基本細節"
 #: mod/rms/handler_req_new.inc:36
 #: mod/rms/handler_req_new.inc:73
 #: mod/rms/handler_plg_new.inc:35
-#: mod/rms/handler_plg_new.inc:59
-#: mod/rms/lib_rms.inc:790
+#: mod/rms/handler_plg_new.inc:55
 #: inc/lib_security/lib_auth.inc:531
 #: inc/lib_security/acl_form.inc:503
 msgid "Full Name"
@@ -6973,7 +6939,7 @@ msgid "Physical Details"
 msgstr "身體特徵細節"
 
 #: mod/mpr/view.inc:66
-#: mod/mpr/search.inc:260
+#: mod/mpr/search.inc:266
 #: mod/mpr/edit.inc:213
 #: mod/mpr/edit.inc:454
 #: mod/mpr/add.inc:124
@@ -6984,7 +6950,7 @@ msgid "Eye Colour"
 msgstr "眼睛顏色"
 
 #: mod/mpr/view.inc:67
-#: mod/mpr/search.inc:260
+#: mod/mpr/search.inc:266
 #: mod/mpr/edit.inc:215
 #: mod/mpr/edit.inc:455
 #: mod/mpr/add.inc:125
@@ -6995,7 +6961,7 @@ msgid "Skin Colour"
 msgstr "皮膚顏色"
 
 #: mod/mpr/view.inc:68
-#: mod/mpr/search.inc:260
+#: mod/mpr/search.inc:266
 #: mod/mpr/edit.inc:217
 #: mod/mpr/edit.inc:456
 #: mod/mpr/add.inc:126
@@ -7006,7 +6972,7 @@ msgid "Hair Colour"
 msgstr "頭髮顏色"
 
 #: mod/mpr/view.inc:69
-#: mod/mpr/search.inc:260
+#: mod/mpr/search.inc:266
 #: mod/mpr/edit.inc:219
 #: mod/mpr/edit.inc:457
 #: mod/mpr/add.inc:127
@@ -7019,7 +6985,7 @@ msgid "Height"
 msgstr "身高"
 
 #: mod/mpr/view.inc:70
-#: mod/mpr/search.inc:260
+#: mod/mpr/search.inc:266
 #: mod/mpr/edit.inc:221
 #: mod/mpr/edit.inc:458
 #: mod/mpr/add.inc:128
@@ -7033,7 +6999,7 @@ msgstr "體重"
 
 #: mod/mpr/view.inc:71
 #: mod/mpr/view.inc:92
-#: mod/mpr/search.inc:272
+#: mod/mpr/search.inc:278
 #: mod/mpr/edit.inc:223
 #: mod/mpr/edit.inc:233
 #: mod/mpr/edit.inc:459
@@ -7083,7 +7049,7 @@ msgid "Blood Type"
 msgstr "血型"
 
 #: mod/mpr/view.inc:90
-#: mod/mpr/search.inc:272
+#: mod/mpr/search.inc:278
 #: mod/mpr/edit.inc:229
 #: mod/mpr/edit.inc:496
 #: mod/mpr/add.inc:533
@@ -7091,7 +7057,7 @@ msgid "Last Seen"
 msgstr "上一次看見他/她 是在"
 
 #: mod/mpr/view.inc:91
-#: mod/mpr/search.inc:272
+#: mod/mpr/search.inc:278
 #: mod/mpr/edit.inc:231
 #: mod/mpr/edit.inc:497
 #: mod/mpr/add.inc:534
@@ -7103,9 +7069,9 @@ msgid "People that are tracking"
 msgstr "追蹤者"
 
 #: mod/mpr/view.inc:97
-#: mod/mpr/search.inc:266
-#: mod/mpr/search.inc:292
-#: mod/mpr/search.inc:376
+#: mod/mpr/search.inc:272
+#: mod/mpr/search.inc:298
+#: mod/mpr/search.inc:382
 #: mod/mpr/edit.inc:733
 #: mod/msg/handler_cap_view.inc:65
 #: mod/msg/handler_cap_view.inc:74
@@ -7118,7 +7084,7 @@ msgid "Click to edit"
 msgstr "點選這裡開始編輯"
 
 #: mod/mpr/view.inc:103
-#: mod/mpr/search.inc:392
+#: mod/mpr/search.inc:398
 #: mod/rms/handler_mng_ff.inc:109
 msgid "Back"
 msgstr "上一步"
@@ -7159,105 +7125,105 @@ msgid "Identity Card"
 msgstr "身分證"
 
 #: mod/mpr/search.inc:184
-#: mod/mpr/search.inc:198
+#: mod/mpr/search.inc:202
 msgid "Total"
 msgstr "總計"
 
 #: mod/mpr/search.inc:184
-#: mod/mpr/search.inc:198
+#: mod/mpr/search.inc:202
 msgid "Records were found"
 msgstr "筆符合搜尋條件的資料"
 
-#: mod/mpr/search.inc:194
+#: mod/mpr/search.inc:195
 #: mod/mpr/home.inc:55
 #: mod/mpr/main.inc:57
 #: mod/mpr/main.inc:458
 msgid "Report a Missing Person"
 msgstr "通報失蹤者"
 
-#: mod/mpr/search.inc:196
+#: mod/mpr/search.inc:197
 #: mod/mpr/home.inc:57
 #: mod/mpr/main.inc:59
 #: mod/mpr/main.inc:461
 msgid "Report a Found Person"
 msgstr "通報倖存者"
 
-#: mod/mpr/search.inc:205
+#: mod/mpr/search.inc:209
 msgid "First"
 msgstr "第一筆"
 
-#: mod/mpr/search.inc:205
-#: mod/mpr/search.inc:207
-#: mod/mpr/search.inc:212
-#: mod/mpr/search.inc:214
+#: mod/mpr/search.inc:209
+#: mod/mpr/search.inc:211
+#: mod/mpr/search.inc:216
+#: mod/mpr/search.inc:218
 #: mod/rms/handler_req_ls.inc:148
-#: mod/rms/handler_plg_ls.inc:131
+#: mod/rms/handler_plg_ls.inc:100
 msgid "Records"
 msgstr "記錄"
 
-#: mod/mpr/search.inc:214
+#: mod/mpr/search.inc:218
 msgid "Last"
 msgstr "最後一筆"
 
-#: mod/mpr/search.inc:219
+#: mod/mpr/search.inc:224
 #, php-format
 msgid "If you found the person you would like to report is existed in the system. Please click the name of the person in the list above, and set yourself as tracker for him. Or click %s"
 msgstr "如果您欲通報的失蹤者已經在本系統中，請點選姓名編輯該失蹤者資料，並且將你自己設為追蹤者。如果以下結果沒有您欲通報的失蹤者，請直接進入 %s"
 
-#: mod/mpr/search.inc:239
+#: mod/mpr/search.inc:245
 #: mod/mpr/edit.inc:415
 msgid "Person"
 msgstr "失蹤/受災者"
 
-#: mod/mpr/search.inc:241
+#: mod/mpr/search.inc:247
 msgid "Associated People"
 msgstr "目前追蹤者"
 
-#: mod/mpr/search.inc:242
+#: mod/mpr/search.inc:248
 msgid "Missing Details"
 msgstr "失蹤時的外觀與其他相關特徵"
 
-#: mod/mpr/search.inc:244
+#: mod/mpr/search.inc:250
 msgid "Reported Person"
 msgstr "報告者"
 
-#: mod/mpr/search.inc:245
-#: mod/mpr/search.inc:298
-#: mod/mpr/search.inc:363
-#: mod/mpr/search.inc:385
+#: mod/mpr/search.inc:251
+#: mod/mpr/search.inc:304
+#: mod/mpr/search.inc:369
+#: mod/mpr/search.inc:391
 #: mod/rms/handler_mng_ff.inc:159
-#: mod/rms/lib_rms.inc:870
+#: mod/rms/lib_rms.inc:810
 msgid "Select"
 msgstr "選取"
 
-#: mod/mpr/search.inc:267
+#: mod/mpr/search.inc:273
 #: mod/mpr/edit.inc:746
 #: mod/mpr/admin.inc:241
 msgid "Add Tracker"
 msgstr "加入追蹤"
 
-#: mod/mpr/search.inc:267
+#: mod/mpr/search.inc:273
 msgid "Associate another person"
 msgstr " 建立其他追蹤者"
 
-#: mod/mpr/search.inc:278
-#: mod/mpr/search.inc:382
+#: mod/mpr/search.inc:284
+#: mod/mpr/search.inc:388
 msgid "Change the status to Alive & Well"
 msgstr "變更狀態為倖存"
 
-#: mod/mpr/search.inc:280
-#: mod/mpr/search.inc:382
+#: mod/mpr/search.inc:286
+#: mod/mpr/search.inc:388
 msgid "Click to change to found"
 msgstr "★點選此處，變更此人為「倖存（且無受傷）」"
 
-#: mod/mpr/search.inc:283
+#: mod/mpr/search.inc:289
 #: mod/mpr/audit.inc:26
 msgid "Audit"
 msgstr "稽核"
 
 #: mod/mpr/list_found.inc:21
 msgid "Found People"
-msgstr "已尋獲名單"
+msgstr "倖存者名單"
 
 #: mod/mpr/edit.inc:144
 #: mod/rms/handler_mng_ff.inc:37
@@ -7382,7 +7348,7 @@ msgstr "歡迎來到 Sahana FOSS 災難管理系統。Sahana 是一套功能可�
 
 #: mod/mpr/list_deceased.inc:19
 msgid "Deceased People"
-msgstr "已故人員"
+msgstr "身故者名單"
 
 #: mod/mpr/audit.inc:51
 msgid "User Making Changes"
@@ -7565,7 +7531,7 @@ msgstr "登錄與失蹤者或災民有關的的資訊，例如：身份證字號
 
 #: mod/mpr/home.inc:47
 msgid "'Sounds-like' name search allowing search even the spelling of the name is not known exactly"
-msgstr "『聽起來類似』的姓名搜尋，可以尋找不確定完整姓名的人"
+msgstr "模糊搜尋，可以尋找姓名不確定的人"
 
 #: mod/mpr/home.inc:48
 msgid "Facilitate uploading of missing person's photograph"
@@ -7573,7 +7539,7 @@ msgstr "上傳失蹤者或災民的照片"
 
 #: mod/mpr/home.inc:49
 msgid "Grouping by 'Family Unit' or other group category"
-msgstr "依據「家庭單位」或其他條件進行分組"
+msgstr "依據「家庭單位」或其他條件進行分組（目前本功能關閉）"
 
 #: mod/mpr/home.inc:54
 msgid "Search for a person"
@@ -7771,7 +7737,7 @@ msgstr "如果您有失蹤者/災民的照片，請上傳照片。這樣有助�
 
 #: mod/mpr/add.inc:102
 msgid "Missing Person's Contact Information"
-msgstr "失蹤者的聯絡資訊"
+msgstr "失蹤者/災民的聯絡資訊"
 
 #: mod/mpr/add.inc:103
 msgid "Your address can be specified to contact you"
@@ -8278,7 +8244,7 @@ msgstr "OpenID"
 #: mod/pref/ims_config.inc:96
 #: inc/lib_security/auth_form.inc:376
 msgid "The OpenID had been used by another user."
-msgstr ""
+msgstr "這個 OpenID已經被別的帳號所使用"
 
 #: mod/pref/ims_config.inc:114
 msgid "The OpenId was succesfully updated"
@@ -8644,9 +8610,8 @@ msgid " is duplicating."
 msgstr "有重複。"
 
 #: mod/admin/location.inc:258
-#, fuzzy
 msgid "In a Disaster, all the location levels might not be important ,set the range here"
-msgstr "地點的層級在有些災難中完全不重要，若是如此，請在此設定範圍。"
+msgstr "地點的層級在有些災難中完全不重要，若是如此，請在此設定範圍。 "
 
 #: mod/admin/location.inc:288
 msgid "Starting level should be a level above the ending level."
@@ -8661,9 +8626,8 @@ msgid "Set the Default Location"
 msgstr "設定預設地點"
 
 #: mod/admin/location.inc:316
-#, fuzzy
 msgid "When a Disaster happens, typically only organizations and people located in a certain region are involved. Therefore, when you select a location it is inefficient to select all locations. For example, if you know the Country, specify it here in this form, and you will only see sub-divisions of that Country. Furthermore, if the Disaster is confined to a smaller geographical area, select the appropriate location to start with - such as the State or Country"
-msgstr "當災難發生時，參與的組織通常會集中在某個區域，所以每次都從國家開始指定地點很浪費時間。如果您知道是哪個國家，也把國家填入這個表中，您就可以從該國的下一級行政區開始。如果災難是侷限在更小的地理區域，可以選擇適當的地點做為起始位置。"
+msgstr "當災難發生時，參與的組織通常會集中在某個區域，所以每次都從國家開始指定地點很浪費時間。如果您知道是哪個國家，也把國家填入這個表中，您就可以從該國的下一級行政區開始。如果災難是侷限在更小的地理區域，可以選擇適當的地點做為起始位置。 "
 
 #: mod/admin/location.inc:323
 msgid "Select the Location"
@@ -8689,9 +8653,8 @@ msgid "Now Select the parent Location"
 msgstr "現在請選擇上層位置"
 
 #: mod/admin/location.inc:387
-#, fuzzy
 msgid "Select the parent or super region (e.g. Country, State, City) of the location you have typed above. If no parent region is given, the location being added will become a top most region (usually a Country)"
-msgstr "選擇您輸入的該地點的上一級、或者最高級的區域（比如：國家，省市等）。如果沒有提供上一級的區域，該地點將會被新增為最高級別的區域（通常是國家）。"
+msgstr "選擇您輸入的該地點的上一級、或者最高級的區域（比如：國家，省市等）。如果沒有提供上一級的區域，該地點將會被新增為最高級別的區域（通常是國家）。 "
 
 #: mod/admin/location.inc:395
 msgid "New Location Details"
@@ -8786,14 +8749,12 @@ msgid "Translation"
 msgstr "翻譯"
 
 #: mod/admin/lc_translate.inc:234
-#, fuzzy
 msgid "Messages successfully compiled"
-msgstr "完成上傳 EDI_INV_"
+msgstr "完成上傳 EDI_INV_ "
 
 #: mod/admin/lc_translate.inc:236
-#, fuzzy
 msgid "Error compiling messages"
-msgstr "錯誤發生在更新這"
+msgstr "錯誤發生在更新這 "
 
 #: mod/admin/lc_translate.inc:273
 msgid "Compile Messages"
@@ -9084,9 +9045,8 @@ msgid "Edit Roles of an User"
 msgstr "編輯使用者的角色"
 
 #: mod/admin/menu.inc:93
-#, fuzzy
 msgid "Reset Password of a User"
-msgstr "使用者名稱/密碼組合"
+msgstr "重設使用者密碼"
 
 #: mod/admin/menu.inc:94
 msgid "Change OpenID of a User"
@@ -9631,7 +9591,7 @@ msgstr "庇護所類型"
 #: mod/cr/reports.inc:67
 #: mod/cr/camp.inc:475
 msgid "Total Count"
-msgstr "總數"
+msgstr "目前收容總數"
 
 #: mod/cr/search.inc:46
 #: mod/cr/search.inc:133
@@ -9661,9 +9621,9 @@ msgid "eplcnt"
 msgstr "eplcnt"
 
 #: mod/cr/search.inc:187
-#, fuzzy, php-format
+#, php-format
 msgid "Search for %s by Name"
-msgstr "搜尋產品"
+msgstr "以%s名稱查詢庇護所"
 
 #: mod/cr/search.inc:192
 msgid "Name of Shelter"
@@ -9740,7 +9700,7 @@ msgstr "職業"
 #: mod/cr/camp.inc:470
 #: mod/cr/camp.inc:549
 msgid "Shelter Population"
-msgstr "庇護所人數"
+msgstr "庇護所可收容人數"
 
 #: mod/cr/edit.inc:77
 #: mod/cr/edit.inc:173
@@ -9751,7 +9711,7 @@ msgstr "庇護所人數"
 #: mod/cr/camp.inc:472
 #: mod/cr/camp.inc:551
 msgid "Men"
-msgstr "男性"
+msgstr "12歲以上男性"
 
 #: mod/cr/edit.inc:78
 #: mod/cr/edit.inc:174
@@ -9762,7 +9722,7 @@ msgstr "男性"
 #: mod/cr/camp.inc:473
 #: mod/cr/camp.inc:552
 msgid "Women"
-msgstr "女性"
+msgstr "12歲以上女性"
 
 #: mod/cr/edit.inc:79
 #: mod/cr/edit.inc:175
@@ -9892,13 +9852,12 @@ msgstr "兒童人數不能是負值"
 #: mod/cr/edit.inc:349
 #: mod/cr/edit_ppl.inc:146
 #: mod/cr/camp.inc:323
-#, fuzzy
 msgid "The capacity should be greater or equal than the total count"
-msgstr "感染人數應少於或等於總人數"
+msgstr "總收容量應大於或等於總人數"
 
 #: mod/cr/edit.inc:461
 msgid "You have succesfully edited shelter "
-msgstr "您成功地編輯了庇護所資訊。"
+msgstr "庇護所資訊已編輯更新"
 
 #: mod/cr/edit.inc:463
 msgid "The availability of Services & Facilities of the shelter are as follows"
@@ -10067,21 +10026,19 @@ msgstr "以GIS地圖顯示各庇護所感染人數"
 #: mod/cr/main_fns.inc:281
 #: mod/cr/main_fns.inc:349
 msgid "Legend"
-msgstr "說明(Legend)"
+msgstr "標註符號說明"
 
 #: mod/cr/main_fns.inc:325
 msgid "Filled"
 msgstr "（據填寫資料顯示）"
 
 #: mod/cr/main_fns.inc:344
-#, fuzzy
 msgid "Map of Shelters by Population / Capacity percentage"
-msgstr "以GIS地圖顯示各庇護所感染人數"
+msgstr "在地圖上依庇護所人數/收容比例 顯示"
 
 #: mod/cr/main_fns.inc:497
-#, fuzzy
 msgid "Shelter information by Shelter Administrator"
-msgstr "依地點列出庇護所資訊"
+msgstr "庇護所管理者資訊"
 
 #: mod/cr/acl.inc:22
 msgid "ACL Base for Camps Registry is already installed"
@@ -10117,9 +10074,8 @@ msgstr "總感染人數"
 
 #: mod/cr/edit_ppl.inc:141
 #: mod/cr/camp.inc:319
-#, fuzzy
 msgid "The Infected count should be less or equal than the total count"
-msgstr "感染人數應少於或等於總人數"
+msgstr "感染人數應少於或等於總人數 "
 
 #: mod/cr/edit_ppl.inc:179
 msgid "You have succesfully edited the people count "
@@ -10607,9 +10563,8 @@ msgstr "選擇群組類型"
 #: mod/dvr/search_group.inc:114
 #: mod/dvr/add_new_grp.inc:177
 #: mod/dvr/edt_indv.inc:120
-#, fuzzy
 msgid "Please select a group that you are going to search"
-msgstr "請選擇群組類型"
+msgstr "請選擇欲查詢的群組"
 
 #: mod/dvr/edt_grp.inc:223
 msgid "Please Select the group type if you want to change the type"
@@ -10926,9 +10881,8 @@ msgid "General Search"
 msgstr "一般搜尋"
 
 #: mod/dvr/search_individual.inc:141
-#, fuzzy
 msgid "Simple Search"
-msgstr "現在搜尋"
+msgstr "簡易搜尋"
 
 #: mod/dvr/search_group.inc:38
 #: mod/dvr/add_new_indv.inc:47
@@ -11029,9 +10983,8 @@ msgid " Group was succesfully registered"
 msgstr "已成功登錄群組"
 
 #: mod/dvr/list.inc:54
-#, fuzzy
 msgid "View Members"
-msgstr "檢視期間"
+msgstr "檢視成員"
 
 #: mod/dvr/edt_indv.inc:115
 #: mod/dvr/edt_indv.inc:485
@@ -11258,9 +11211,8 @@ msgid "Group Members"
 msgstr "群組成員"
 
 #: mod/dvr/view_members.inc:59
-#, fuzzy
 msgid "Group Head"
-msgstr "科目名稱"
+msgstr "群組負責人"
 
 #: mod/dvr/home.inc:25
 msgid "The Disaster Victim Registry is a central online repository where information on all the disaster victims and families, especially identified casualties, evacuees and displaced people can be stored. Information like name, age, contact number, identity card number, displaced location, and other details are captured. People picture and finger print details can be uploaded to the system. People can also be captured rather by group for effeciency and convenience"
@@ -11328,7 +11280,7 @@ msgstr "搜尋和編輯受災者"
 
 #: mod/dvr/home.inc:63
 msgid "List groups/ View members"
-msgstr "群組列表/檢視成員"
+msgstr " 群組列表 / 檢視成員"
 
 #: mod/dvr/home.inc:63
 msgid "List all the groups and view members"
@@ -11399,9 +11351,8 @@ msgid "Type the first few letters and then select the name of the Head of the gr
 msgstr "輸入前面幾個字母，然後選擇小組的領導人名稱。載入的跳出視窗，會包含全名、姓氏、地址等資料。"
 
 #: mod/dvr/add_new_indv.inc:70
-#, fuzzy
 msgid "Group head"
-msgstr "科目名稱"
+msgstr "群組負責人"
 
 #: mod/dvr/add_new_indv.inc:83
 msgid "Enter your Full Name here(Required)"
@@ -11479,7 +11430,7 @@ msgid "You seem to be a new requester, Please confirm the contact information an
 msgstr "您似乎是新的需求者，請確認聯絡資訊，並輸入缺少的資訊。"
 
 #: mod/rms/handler_req_new.inc:72
-#: mod/rms/handler_plg_new.inc:58
+#: mod/rms/handler_plg_new.inc:54
 msgid "Confirm Person Information"
 msgstr "確認人員資訊"
 
@@ -11492,44 +11443,44 @@ msgid "Add Location"
 msgstr "新增位置"
 
 #: mod/rms/handler_req_new.inc:119
-#: mod/rms/lib_rms.inc:1280
+#: mod/rms/lib_rms.inc:1284
 msgid "Select a location where the request is related."
 msgstr "選擇一個跟需求相關的地點。"
 
 #: mod/rms/handler_req_new.inc:120
-#: mod/rms/lib_rms.inc:1281
+#: mod/rms/lib_rms.inc:1285
 msgid "If you want to make the request for a new location, add the location first."
 msgstr "如果你需要為此需求建立一個新的位置，請先增加該位置。"
 
 #: mod/rms/handler_req_new.inc:124
-#: mod/rms/lib_rms.inc:1287
+#: mod/rms/lib_rms.inc:1291
 msgid "Existing Location"
 msgstr "現有的位置"
 
 #: mod/rms/handler_req_new.inc:288
-#: mod/rms/handler_plg_new.inc:99
+#: mod/rms/handler_plg_new.inc:95
 msgid "New Item"
 msgstr "新增物資"
 
 #: mod/rms/handler_req_new.inc:291
 #: mod/rms/handler_req_sch.inc:96
-#: mod/rms/handler_plg_new.inc:102
+#: mod/rms/handler_plg_new.inc:98
 #: mod/rms/handler_plg_sch.inc:60
-#: mod/rms/handler_plg_sch.inc:287
-#: mod/rms/handler_plg_sch.inc:289
+#: mod/rms/handler_plg_sch.inc:107
+#: mod/rms/handler_plg_sch.inc:109
 #: mod/msg/handler_cap_new.inc:122
 msgid "Category"
 msgstr "分類"
 
 #: mod/rms/handler_req_new.inc:298
 #: mod/rms/handler_req_new.inc:342
-#: mod/rms/handler_plg_new.inc:111
-#: mod/rms/handler_plg_new.inc:135
-#: mod/rms/handler_plg_sch.inc:287
-#: mod/rms/handler_plg_sch.inc:289
+#: mod/rms/handler_plg_new.inc:107
+#: mod/rms/handler_plg_new.inc:131
+#: mod/rms/handler_plg_sch.inc:107
+#: mod/rms/handler_plg_sch.inc:109
 #: mod/rms/handler_mng_ff.inc:259
-#: mod/rms/lib_rms.inc:854
-#: mod/rms/lib_rms.inc:935
+#: mod/rms/lib_rms.inc:794
+#: mod/rms/lib_rms.inc:875
 msgid "Quantity"
 msgstr "數量"
 
@@ -11537,37 +11488,35 @@ msgstr "數量"
 #: mod/rms/handler_req_sch.inc:93
 #: mod/rms/handler_req_sch.inc:205
 #: mod/rms/handler_req_sch.inc:211
-#: mod/rms/lib_rms.inc:907
+#: mod/rms/lib_rms.inc:847
 msgid "Priority"
 msgstr "優先順序"
 
 #: mod/rms/handler_req_new.inc:323
-#: mod/rms/handler_plg_new.inc:167
+#: mod/rms/handler_plg_new.inc:203
 msgid "No items (left) for this category please select another category"
 msgstr "本分類裡沒有物資，請選擇其他分類。"
 
 #: mod/rms/handler_req_new.inc:326
-#, fuzzy
 msgid "Select item"
-msgstr "選擇產品"
+msgstr "選擇項目"
 
 #: mod/rms/handler_req_new.inc:332
-#, fuzzy
 msgid "Select Category"
-msgstr "選取存貨類別"
+msgstr "選擇類別"
 
 #: mod/rms/handler_req_new.inc:336
-#: mod/rms/handler_plg_new.inc:179
+#: mod/rms/handler_plg_new.inc:215
 msgid "Sub Category"
 msgstr "次目錄"
 
 #: mod/rms/handler_req_new.inc:342
-#: mod/rms/lib_rms.inc:854
+#: mod/rms/lib_rms.inc:794
 msgid "Item Priority"
-msgstr "物資優先權"
+msgstr "需求急迫性"
 
 #: mod/rms/handler_req_new.inc:344
-#: mod/rms/handler_plg_new.inc:137
+#: mod/rms/handler_plg_new.inc:133
 msgid "Remove Item"
 msgstr "移除物資"
 
@@ -11576,17 +11525,17 @@ msgid "When all the request items are added, Please press 'Finish to complete th
 msgstr "所有需求物資都已加入時，請按下「需求填寫完成」。"
 
 #: mod/rms/handler_req_new.inc:388
-#: mod/rms/handler_plg_new.inc:251
+#: mod/rms/handler_plg_new.inc:284
 msgid "Please fill the 'Name' and 'Card Number'"
 msgstr "請輸入姓名和號碼"
 
 #: mod/rms/handler_req_new.inc:392
-#: mod/rms/handler_plg_new.inc:255
+#: mod/rms/handler_plg_new.inc:288
 msgid "Please fill the 'Name'"
 msgstr "請輸入名稱"
 
 #: mod/rms/handler_req_new.inc:396
-#: mod/rms/handler_plg_new.inc:259
+#: mod/rms/handler_plg_new.inc:292
 msgid "Please fill the 'Card Number'"
 msgstr "請填入卡片編號"
 
@@ -11602,10 +11551,10 @@ msgstr "已成功送出需求。"
 #: mod/rms/handler_req_ls.inc:219
 #: mod/rms/handler_req_ls.inc:236
 #: mod/rms/handler_req_sch.inc:281
-#: mod/rms/handler_plg_ls.inc:142
-#: mod/rms/handler_plg_ls.inc:198
-#: mod/rms/handler_plg_ls.inc:206
-#: mod/rms/handler_plg_sch.inc:348
+#: mod/rms/handler_plg_ls.inc:111
+#: mod/rms/handler_plg_ls.inc:167
+#: mod/rms/handler_plg_ls.inc:179
+#: mod/rms/handler_plg_sch.inc:168
 #: mod/rms/handler_mng_ff.inc:32
 #: mod/rms/handler_mng_ff.inc:323
 #: mod/rms/handler_mng_ff.inc:400
@@ -11614,16 +11563,15 @@ msgid "RMS Home"
 msgstr "需求管理 首頁"
 
 #: mod/rms/handler_req_new.inc:507
-#, fuzzy
 msgid "New Request"
-msgstr "新訂單"
+msgstr "新需求"
 
 #: mod/rms/handler_req_ls.inc:19
 msgid "Request List"
 msgstr "需求列表"
 
 #: mod/rms/handler_req_ls.inc:52
-#: mod/rms/handler_plg_ls.inc:46
+#: mod/rms/handler_plg_ls.inc:42
 msgid ":: "
 msgstr ":: "
 
@@ -11636,10 +11584,10 @@ msgstr "需求者"
 #: mod/rms/handler_req_ls.inc:71
 #: mod/rms/handler_req_sch.inc:205
 #: mod/rms/handler_req_sch.inc:211
-#: mod/rms/handler_plg_ls.inc:83
-#: mod/rms/handler_plg_sch.inc:287
-#: mod/rms/handler_plg_sch.inc:289
-#: mod/rms/lib_rms.inc:907
+#: mod/rms/handler_plg_ls.inc:61
+#: mod/rms/handler_plg_sch.inc:107
+#: mod/rms/handler_plg_sch.inc:109
+#: mod/rms/lib_rms.inc:847
 #: mod/msg/handler_cap_edit.inc:88
 #: mod/msg/handler_cap_new.inc:79
 #: inc/lib_security/acl_form.inc:500
@@ -11647,9 +11595,9 @@ msgid "Date"
 msgstr "日期"
 
 #: mod/rms/handler_req_ls.inc:71
-#: mod/rms/handler_plg_ls.inc:83
-#: mod/rms/handler_plg_sch.inc:287
-#: mod/rms/handler_plg_sch.inc:289
+#: mod/rms/handler_plg_ls.inc:61
+#: mod/rms/handler_plg_sch.inc:107
+#: mod/rms/handler_plg_sch.inc:109
 #: mod/rms/handler_mng_ff.inc:142
 msgid "status"
 msgstr "狀態"
@@ -11676,7 +11624,7 @@ msgid "Closed"
 msgstr "已關閉"
 
 #: mod/rms/handler_req_ls.inc:141
-#: mod/rms/handler_plg_ls.inc:124
+#: mod/rms/handler_plg_ls.inc:93
 msgid "Clear Filter"
 msgstr "清理篩選器"
 
@@ -11696,16 +11644,15 @@ msgstr "需求搜尋：搜尋需求者、位置和需求"
 
 #: mod/rms/handler_req_sch.inc:83
 #: mod/rms/handler_plg_sch.inc:45
-#, fuzzy
 msgid "Select Criteria"
-msgstr "符合條件"
+msgstr "設定條件"
 
 #: mod/rms/handler_req_sch.inc:108
 msgid "No requests found"
 msgstr "找不到需求"
 
 #: mod/rms/handler_req_sch.inc:236
-#: mod/rms/handler_plg_sch.inc:307
+#: mod/rms/handler_plg_sch.inc:127
 msgid "There are no results that match your search criteria."
 msgstr "沒有符合您的搜尋條件的資料。"
 
@@ -11719,7 +11666,7 @@ msgstr "需求/捐贈/資源媒合管理"
 
 #: mod/rms/handler_home.inc:32
 msgid "Sahana Request Management System is a central online repository where all relief organizations, relief workers, government agents and camp sites for displaced personnel can coordinate the supply of aid with their demand. It allows users to allocate the available resources to fulfill the demands effectively and efficiently."
-msgstr "Sahana 需求管理系統，是一個集中式的線上庫存系統，所有救災組織、工作者、政府單位和安置災民的庇護營地，都可以在此根據他們的需求，協調救援物資的供應。讓使用者可以有效率且有效用地，分配可使用的資源，以滿足其需求。"
+msgstr "需求/捐贈/資源媒合管理系統，是一個集中式的線上庫存系統，所有救災組織、工作者、政府單位和安置災民的庇護所，都可以在此根據他們的需求，協調救援物資的供應。讓資源可以更有效率地被分配使用，並且讓需要物資的人也得到滿足。"
 
 #: mod/rms/handler_home.inc:43
 msgid "Basic information on the requests and donations, such as category, the units, contact details and the status."
@@ -11761,7 +11708,7 @@ msgstr "搜尋需求"
 
 #: mod/rms/handler_home.inc:61
 msgid "Search for requests"
-msgstr "需求的搜尋"
+msgstr "搜尋需求"
 
 #: mod/rms/handler_home.inc:62
 #: mod/rms/main.inc:55
@@ -11779,7 +11726,7 @@ msgstr "捐贈物資狀態列表"
 
 #: mod/rms/handler_home.inc:63
 msgid "List all the donations done through the system"
-msgstr "列出所有透過本系統完成的捐贈"
+msgstr "列出全部透過本系統完成的捐贈"
 
 #: mod/rms/handler_home.inc:64
 #: mod/rms/main.inc:57
@@ -11792,11 +11739,11 @@ msgstr "搜尋捐贈物資"
 
 #: mod/rms/handler_home.inc:65
 msgid "Fulfill Requests"
-msgstr "滿足需求"
+msgstr "需求與物資媒合"
 
 #: mod/rms/handler_home.inc:65
 msgid "Match requests and pledges in a disaster"
-msgstr "在災難事件裡媒合需求和捐贈"
+msgstr "在災難事件裡媒合需求和物資與捐贈"
 
 #: mod/rms/handler_home.inc:72
 msgid "New Pledges"
@@ -11804,7 +11751,7 @@ msgstr "新增捐贈物資登錄"
 
 #: mod/rms/handler_home.inc:73
 msgid "New Requests"
-msgstr "新的需求"
+msgstr "新需求"
 
 #: mod/rms/handler_mng_stat.inc:19
 msgid "Request / Pledge Statistics"
@@ -11814,62 +11761,68 @@ msgstr "需求/捐贈物資統計"
 msgid "Pledge List"
 msgstr "捐贈清單"
 
-#: mod/rms/handler_plg_ls.inc:83
+#: mod/rms/handler_plg_ls.inc:61
 #: mod/rms/handler_plg_sch.inc:48
 #: mod/rms/handler_plg_sch.inc:54
-#: mod/rms/handler_plg_sch.inc:287
+#: mod/rms/handler_plg_sch.inc:107
 msgid "Donor"
 msgstr "捐贈者"
 
-#: mod/rms/handler_plg_ls.inc:95
-msgid "Pledges details"
-msgstr "庇護所詳細資料"
-
-#: mod/rms/handler_plg_ls.inc:106
-msgid "Donors"
-msgstr "捐贈者"
-
-#: mod/rms/handler_plg_ls.inc:113
-#: mod/rms/handler_plg_ls.inc:149
+#: mod/rms/handler_plg_ls.inc:63
+#: mod/rms/handler_plg_ls.inc:82
+#: mod/rms/handler_plg_ls.inc:116
+#: mod/rms/handler_plg_new.inc:175
 #: mod/rms/handler_plg_sch.inc:37
+#: mod/rms/lib_rms.inc:890
 msgid "Not Confirmed"
 msgstr "尚未確認"
 
-#: mod/rms/handler_plg_ls.inc:114
-#: mod/rms/handler_plg_ls.inc:150
+#: mod/rms/handler_plg_ls.inc:64
+#: mod/rms/handler_plg_ls.inc:83
+#: mod/rms/handler_plg_ls.inc:117
+#: mod/rms/handler_plg_new.inc:176
 #: mod/rms/handler_plg_sch.inc:38
+#: mod/rms/lib_rms.inc:891
 msgid "Confirmed"
 msgstr "已確認"
 
-#: mod/rms/handler_plg_ls.inc:115
-msgid "Not Delivered"
-msgstr "尚未送達"
-
-#: mod/rms/handler_plg_ls.inc:116
-#: mod/rms/handler_plg_ls.inc:151
+#: mod/rms/handler_plg_ls.inc:65
+#: mod/rms/handler_plg_ls.inc:85
+#: mod/rms/handler_plg_ls.inc:118
+#: mod/rms/handler_plg_new.inc:177
 #: mod/rms/handler_plg_sch.inc:39
+#: mod/rms/lib_rms.inc:892
 msgid "Delivered"
 msgstr "已送達"
 
-#: mod/rms/handler_plg_ls.inc:117
-#: mod/rms/handler_plg_ls.inc:152
+#: mod/rms/handler_plg_ls.inc:84
+msgid "Not Delivered"
+msgstr "尚未送達"
+
+#: mod/rms/handler_plg_ls.inc:86
+#: mod/rms/handler_plg_ls.inc:119
 #: mod/rms/handler_plg_sch.inc:40
 msgid "Discarded"
 msgstr "已廢棄"
 
-#: mod/rms/handler_plg_ls.inc:141
+#: mod/rms/handler_plg_ls.inc:110
 msgid "There are no Pledges on the Database that matches your criteria"
-msgstr "在資料庫裡沒有與您的條件相符的捐贈物資"
+msgstr "在資料庫裡沒有符合條件的捐贈物資"
 
-#: mod/rms/handler_plg_ls.inc:142
-#: mod/rms/handler_plg_ls.inc:198
-#: mod/rms/handler_plg_ls.inc:206
+#: mod/rms/handler_plg_ls.inc:111
+#: mod/rms/handler_plg_ls.inc:169
+#: mod/rms/handler_plg_ls.inc:179
 msgid "Back to Pledge List"
 msgstr "回到捐贈物資列表清單"
 
+#: mod/rms/handler_plg_ls.inc:168
+#, fuzzy
+msgid "Print this"
+msgstr "列印這發票"
+
 #: mod/rms/handler_plg_new.inc:19
 msgid "Enter New Pledge"
-msgstr "輸入新的物資捐贈"
+msgstr "輸入新的捐贈物資"
 
 #: mod/rms/handler_plg_new.inc:25
 msgid "New Donor"
@@ -11877,41 +11830,103 @@ msgstr "新的捐贈者"
 
 #: mod/rms/handler_plg_new.inc:27
 msgid "Create New Donor: "
-msgstr "建立新的捐贈者："
+msgstr "建立新的捐贈者"
 
 #: mod/rms/handler_plg_new.inc:30
 msgid "Only the Full Name is required, But in order to Contact the Donor please add some contact information with this"
-msgstr "只有全名為必要項，但是為了聯絡捐贈者，請在這裡加入一些聯絡資訊。"
+msgstr "只有全名為必要項，但是為了聯絡捐贈者，請在這裡加入一些聯絡資訊"
 
-#: mod/rms/handler_plg_new.inc:53
+#: mod/rms/handler_plg_new.inc:49
 msgid "New Donor; Please confirm the contact information and enter missing information"
 msgstr "新增捐贈者；請確認聯絡資訊，並且輸入缺少的資訊。"
 
-#: mod/rms/handler_plg_new.inc:97
+#: mod/rms/handler_plg_new.inc:93
 msgid "Select an item first"
 msgstr "請先選擇物資"
 
-#: mod/rms/handler_plg_new.inc:113
+#: mod/rms/handler_plg_new.inc:109
 msgid "Select an Inventory"
-msgstr "選擇庫存"
+msgstr "選擇倉庫"
 
-#: mod/rms/handler_plg_new.inc:125
+#: mod/rms/handler_plg_new.inc:121
 msgid "Inventory Selection : "
-msgstr "庫存選擇："
+msgstr "庫存選擇"
 
-#: mod/rms/handler_plg_new.inc:145
+#: mod/rms/handler_plg_new.inc:141
 msgid "When all the items are added, Please press 'Finish'"
-msgstr "當已經加入所有物資時，請按下「完成」。"
+msgstr "當所有物資已經加入時，請按下「完成」。"
 
-#: mod/rms/handler_plg_new.inc:163
+#: mod/rms/handler_plg_new.inc:143
+#: mod/rms/lib_rms.inc:896
+msgid "Donor Information"
+msgstr "捐贈者的資訊"
+
+#: mod/rms/handler_plg_new.inc:144
+msgid "Fill out the following information if necessary. If the donor does not belong to any organization, just keep them blank."
+msgstr ""
+
+#: mod/rms/handler_plg_new.inc:150
+#: mod/rms/lib_rms.inc:899
+#, fuzzy
+msgid "Organization Owner : "
+msgstr "組織服務內容："
+
+#: mod/rms/handler_plg_new.inc:154
+#: mod/rms/lib_rms.inc:900
+#, fuzzy
+msgid "Donor Name : "
+msgstr "科目名稱"
+
+#: mod/rms/handler_plg_new.inc:158
+#: mod/rms/lib_rms.inc:901
+#, fuzzy
+msgid "Donor Phone : "
+msgstr "電話"
+
+#: mod/rms/handler_plg_new.inc:162
+#: mod/rms/lib_rms.inc:902
+#, fuzzy
+msgid "Donor Address : "
+msgstr "銀行地址"
+
+#: mod/rms/handler_plg_new.inc:167
+#: mod/rms/lib_rms.inc:885
+#, fuzzy
+msgid "Receipt taken"
+msgstr "客戶收據(收款)"
+
+#: mod/rms/handler_plg_new.inc:168
+#: mod/rms/lib_rms.inc:886
+#, fuzzy
+msgid "Need to send receipt"
+msgstr "請發出通知單到"
+
+#: mod/rms/handler_plg_new.inc:169
+#: mod/rms/lib_rms.inc:887
+msgid "Need to send certificate of appreciation"
+msgstr ""
+
+#: mod/rms/handler_plg_new.inc:170
+#: mod/rms/lib_rms.inc:903
+#, fuzzy
+msgid "Receipt :"
+msgstr "收款"
+
+#: mod/rms/handler_plg_new.inc:178
+#: mod/rms/lib_rms.inc:904
+#, fuzzy
+msgid "Status :"
+msgstr "狀況"
+
+#: mod/rms/handler_plg_new.inc:199
 #: mod/rms/lib_rms.inc:319
 #: mod/rms/lib_rms.inc:332
 msgid "Please Select a Catalog Item"
 msgstr "請選擇一個目錄項目"
 
-#: mod/rms/handler_plg_new.inc:275
+#: mod/rms/handler_plg_new.inc:316
 msgid "The Pledge was successfully added"
-msgstr "已成功加入允諾捐增資料。"
+msgstr "本次捐增資料已經加入。"
 
 #: mod/rms/handler_plg_sch.inc:19
 msgid "Search for Pledges"
@@ -11921,20 +11936,19 @@ msgstr "搜尋捐贈物資"
 msgid "No pledges found"
 msgstr "沒有找到符合的捐贈物資"
 
-#: mod/rms/handler_plg_sch.inc:348
+#: mod/rms/handler_plg_sch.inc:168
 msgid "Back to Pledge Search"
 msgstr "回到捐贈物資搜尋"
 
 #: mod/rms/handler_mng_ff.inc:20
 msgid "Fulfil Requests"
-msgstr "滿足需求"
+msgstr "需求與物資媒合"
 
 #: mod/rms/handler_mng_ff.inc:32
 #: mod/rms/handler_mng_ff.inc:323
 #: mod/rms/handler_mng_ff.inc:400
-#, fuzzy
 msgid "Fullfil Other Request"
-msgstr "滿足需求"
+msgstr "滿足其他需求"
 
 #: mod/rms/handler_mng_ff.inc:38
 msgid "You have completly fulfill the request, Do you want to close the request?"
@@ -11958,7 +11972,7 @@ msgstr "顯示目前的需求達成狀態，"
 
 #: mod/rms/handler_mng_ff.inc:125
 msgid "Please select an item from the request to be fulfilled."
-msgstr "請從需求裡選擇一個要滿足的項目"
+msgstr "請從需求裡選擇一個要進行媒合的項目"
 
 #: mod/rms/handler_mng_ff.inc:142
 msgid "Qty"
@@ -11975,20 +11989,19 @@ msgstr "列出擁有所選擇的物資的捐贈者列表，"
 
 #: mod/rms/handler_mng_ff.inc:170
 msgid "Please select a pledge from the request to be fulfilled."
-msgstr "請從要滿足的需求裡選擇一個捐贈者。"
+msgstr "請從要媒合的需求裡選擇一個物資。"
 
 #: mod/rms/handler_mng_ff.inc:178
 msgid "No Pledges have been registered !!!"
 msgstr "目前沒有符合需求的捐贈物資"
 
 #: mod/rms/handler_mng_ff.inc:194
-#, fuzzy
 msgid "Items from inventories"
-msgstr "貸方傳票由"
+msgstr "來自庫存的品項"
 
 #: mod/rms/handler_mng_ff.inc:248
 msgid "Allocate items from a pledge to fulfill a request, "
-msgstr "從捐贈物資裡分配物資，以滿足需求，"
+msgstr "從捐贈物資裡分配物資，以媒合需求，"
 
 #: mod/rms/handler_mng_ff.inc:249
 msgid "The 'Maximum Allocatable Quantity' is the maximum you are allowed to allocate."
@@ -12026,7 +12039,7 @@ msgstr "數量："
 #: mod/rms/handler_mng_ff.inc:323
 #: mod/rms/handler_mng_ff.inc:400
 msgid "Fullfil Another Item From the Same Request"
-msgstr ""
+msgstr "在本次需求中滿足其他品項"
 
 #: mod/rms/handler_mng_ff.inc:372
 msgid "Please enter a valid 'Quantity', The 'Quantity' should be equal or less than the Maximum Value"
@@ -12050,7 +12063,7 @@ msgstr "此列表包含了在 Sahana 需求/捐贈/資源媒合管理系統裡�
 
 #: mod/rms/lib_rms_rss.inc:31
 msgid "This pledge was made on "
-msgstr "此允諾捐助是由誰提出"
+msgstr "此捐助是由誰提出"
 
 #: mod/rms/lib_rms_rss.inc:32
 msgid "And the pledged items are"
@@ -12066,7 +12079,7 @@ msgstr "最新的需求"
 
 #: mod/rms/lib_rms_rss.inc:45
 msgid "This List contains the newly made requests in Request Aid Management system"
-msgstr "此列表包含了在 Sahana 需求援助管理系統裡，新增的需求。"
+msgstr "此列表包含了在 Sahana TW 需求/捐贈/資源媒合管理系統裡新增的需求"
 
 #: mod/rms/lib_rms_rss.inc:55
 msgid "This request was made on "
@@ -12098,7 +12111,7 @@ msgstr "管理"
 
 #: mod/rms/main.inc:60
 msgid "Fulfill Request"
-msgstr "滿足需求"
+msgstr "需求與物資媒合"
 
 #: mod/rms/lib_rms.inc:21
 msgid "Welcome to The Sahana "
@@ -12111,94 +12124,86 @@ msgstr "請輸入有效的數量"
 
 #: mod/rms/lib_rms.inc:485
 msgid "Do you really want to delete this request?"
-msgstr "確定要刪除這個請求？"
+msgstr "確定要刪除這個需求？"
 
 #: mod/rms/lib_rms.inc:511
 msgid "Request deleted."
-msgstr "請求已刪除"
+msgstr "需求已刪除"
 
 #: mod/rms/lib_rms.inc:515
 msgid "Action cancelled."
-msgstr "行動取消了"
+msgstr "動作已取消"
 
-#: mod/rms/lib_rms.inc:692
+#: mod/rms/lib_rms.inc:660
 #: inc/lib_misc.inc:23
 msgid "Alert"
 msgstr "警告"
 
-#: mod/rms/lib_rms.inc:754
+#: mod/rms/lib_rms.inc:722
 msgid "Requester Information"
 msgstr "需求者的資訊"
 
-#: mod/rms/lib_rms.inc:775
-#, fuzzy
+#: mod/rms/lib_rms.inc:743
 msgid "Requester Name"
-msgstr "科目名稱"
+msgstr "需求者姓名"
 
-#: mod/rms/lib_rms.inc:785
-msgid "Donor Information"
-msgstr "捐贈者的資訊"
-
-#: mod/rms/lib_rms.inc:788
-msgid "Donor ID"
-msgstr "捐贈者編號"
-
-#: mod/rms/lib_rms.inc:804
-msgid "Donor Name"
-msgstr "捐贈者名稱"
-
-#: mod/rms/lib_rms.inc:854
+#: mod/rms/lib_rms.inc:794
 msgid "fulfilled_quantity"
 msgstr "需滿足數量"
 
-#: mod/rms/lib_rms.inc:854
+#: mod/rms/lib_rms.inc:794
 msgid "Select to fulfill"
-msgstr "Select to fulfill"
+msgstr "選取以進行媒合"
 
-#: mod/rms/lib_rms.inc:874
+#: mod/rms/lib_rms.inc:814
 msgid "Request Items"
 msgstr "需求物資"
 
-#: mod/rms/lib_rms.inc:886
-#: mod/rms/lib_rms.inc:911
+#: mod/rms/lib_rms.inc:826
+#: mod/rms/lib_rms.inc:851
 msgid "Request Fulfilment Status"
-msgstr "需求滿足狀態"
+msgstr "需求媒合進度"
 
-#: mod/rms/lib_rms.inc:907
+#: mod/rms/lib_rms.inc:847
 msgid "Requested"
-msgstr "需求"
+msgstr "已提出需求"
 
-#: mod/rms/lib_rms.inc:907
+#: mod/rms/lib_rms.inc:847
 msgid "Fulfiled"
 msgstr "已滿足"
 
-#: mod/rms/lib_rms.inc:939
+#: mod/rms/lib_rms.inc:879
 msgid "Pledge Items"
 msgstr "捐贈物資的品項"
 
-#: mod/rms/lib_rms.inc:1142
+#: mod/rms/lib_rms.inc:906
+#, fuzzy
+msgid "Creator of this record :"
+msgstr "地點記錄，因為"
+
+#: mod/rms/lib_rms.inc:1146
 msgid "There is no any root catalogue found. "
 msgstr "找不到任何主目錄。"
 
-#: mod/rms/lib_rms.inc:1148
+#: mod/rms/lib_rms.inc:1152
 msgid "Select the root Category"
 msgstr "選擇主目錄"
 
-#: mod/rms/lib_rms.inc:1152
+#: mod/rms/lib_rms.inc:1156
 msgid "Select the sub category"
 msgstr "選擇次目錄"
 
-#: mod/rms/lib_rms.inc:1227
-#: mod/rms/lib_rms.inc:1246
+#: mod/rms/lib_rms.inc:1231
+#: mod/rms/lib_rms.inc:1250
 msgid "Location already exists"
 msgstr "位置已經存在"
 
-#: mod/rms/lib_rms.inc:1234
-#: mod/rms/lib_rms.inc:1254
+#: mod/rms/lib_rms.inc:1238
+#: mod/rms/lib_rms.inc:1258
 msgid "Location added successfully"
 msgstr "成功新增位置"
 
-#: mod/rms/lib_rms.inc:1262
+#: mod/rms/lib_rms.inc:1266
 msgid "Select the location first"
 msgstr "請先選擇位置"
 
@@ -12538,7 +12543,7 @@ msgstr "寄件者姓名"
 
 #: mod/msg/admin_settings.inc:58
 msgid "Sender mail ID"
-msgstr "寄件者 mail ID"
+msgstr "寄件者 信箱 ID"
 
 #: mod/msg/admin_settings.inc:74
 msgid "Please enter the interface"
@@ -12566,11 +12571,11 @@ msgstr "請輸入有效的SMTP伺服器名稱"
 
 #: mod/msg/admin_settings.inc:98
 msgid "Please enter Sender name and Sender mail ID"
-msgstr "請輸入寄件者姓名及寄件者 mail ID"
+msgstr "請輸入寄件者姓名及寄件者 信箱 ID"
 
 #: mod/msg/admin_settings.inc:102
 msgid "Please enter valid Sender mail ID"
-msgstr "請輸入有效的寄件者 mail ID"
+msgstr "請輸入有效的寄件者 信箱 ID"
 
 #: mod/msg/admin_settings.inc:140
 msgid "Kannel Operations"
@@ -12742,14 +12747,12 @@ msgid "Identifies the originator of this alert. Guaranteed by assigner to be uni
 msgstr "識別警訊的發出者。確保唯一性，例如，可以基於一個網域名稱 "
 
 #: mod/msg/lib_cap_help.inc:24
-#, fuzzy
 msgid "Code Values: <br /> 'Actual' - Actionable by all targeted recipients <br /> 'Exercise'- Actionable only by designated exercise participants; exercise identifier should appear in &lt;note&gt; <br />'System' - For messages that support alert network internal functions. <br />'Test' - Technical testing only, all recipients disregard <br />'Draft' - A preliminary template or draft, not actionable in its current form."
-msgstr "代碼如下： <br /> '實際' -採取行動的所有目標收件人<br /> ' Exercise'只能由指定的工作人員參加;行使標識符應該會出現在<note> <br /> '系統' -支持警告網路內部作用的訊息。 <br /> '試驗' -技術測試專用，沒有收件者<br /> '草稿' -一個初步的版型或草案，而其形式式不可操作的。"
+msgstr "代碼如下： <br /> '實際' -採取行動的所有目標收件人<br /> ' Exercise'只能由指定的工作人員參加;行使標識符應該會出現在<note> <br /> '系統' -支持警告網路內部作用的訊息。 <br /> '試驗' -技術測試專用，沒有收件者<br /> '草稿' -一個初步的版型或草案，而其形式式不可操作的。 "
 
 #: mod/msg/lib_cap_help.inc:25
-#, fuzzy
 msgid "Code Values: <br /> 'Alert' - Initial information requiring attention by targeted recipients <br />'Update' - Updates and supercedes the earlier message(s) identified in &lt;references&gt;<br />'Cancel' - Cancels the earlier message(s) identified in &lt;references&gt;<br />'Ack' - Acknowledges receipt and acceptance of the message(s)) identified in &lt;references&gt;<br />'Error' indicates rejection of the message(s) identified in &lt;references&gt; explanation SHOULD appear in &lt;note&gt;"
-msgstr "代碼如下： <br />' 警示'代碼值如下：初始信息，需要注意的有針對性的接受者<br /> '更新' -更新和取代早先消息中確定的<references> <br /> '取消' -取消早先的消息中確定的<references> <br /> '確認' -確認收到並接受消息<references> <br /> '錯誤'表明拒絕消息中確定的<references>解釋應該會出現在<note>。"
+msgstr "代碼如下： <br />' 警示'代碼值如下：初始信息，需要注意的有針對性的接受者<br /> '更新' -更新和取代早先消息中確定的<references> <br /> '取消' -取消早先的消息中確定的<references> <br /> '確認' -確認收到並接受消息<references> <br /> '錯誤'表明拒絕消息中確定的<references>解釋應該會出現在<note>。 "
 
 #: mod/msg/lib_cap_help.inc:26
 msgid "The particular source of this alert; e.g., an operator or a specific device."
@@ -13381,7 +13384,7 @@ msgstr "為必填欄位。"
 msgid "Full name is a required field. Please enter a value."
 msgstr "名字為必填欄位，請輸入。"
 
-#: inc/lib_security/lib_auth.inc:623
+#: inc/lib_security/lib_auth.inc:629
 msgid "User was successfully removed"
 msgstr "成功地刪除了使用者"
 
@@ -13704,14 +13707,12 @@ msgid "Organizations"
 msgstr "組織"
 
 #: inc/lib_location.inc:671
-#, fuzzy
 msgid "Select a Location"
-msgstr "選取要接收到地點"
+msgstr "選擇一個地點"
 
 #: inc/lib_location.inc:729
-#, fuzzy
 msgid "This location name is already in the database. Do you want to add anyway?  &nbsp&nbsp&nbsp<b><a href='#' onclick='_shn_loc_val_name();'>Add anyway</a></b> or else you can change the \"Location Name\" textbox and submit the form again."
-msgstr "該位置名稱已經存在資料庫。你還是想要新增嗎？    <b><a href='#' onclick='_shn_loc_val_name();'>我要新增</a></b> 。或者你可以修改位置名稱的欄位，重新送出此表單。"
+msgstr "該位置名稱已經存在資料庫。你還是想要新增嗎？     <b><a href='#' onclick='_shn_loc_val_name();'>我要新增</a></b> 。或者你可以修改位置名稱的欄位，重新送出此表單。"
 
 #: inc/lib_location.inc:739
 msgid "Containts numbers. These are not allowed. Please remove them and try again."
@@ -14008,9 +14009,8 @@ msgstr ".Field 大小是"
 
 #: inc/lib_validate.inc:365
 #: inc/lib_validate.inc:373
-#, fuzzy
 msgid "Required field can not be empty! You have to select a value from the list box"
-msgstr "您必須從列表裡選擇一項"
+msgstr "必填欄位不得為空白，請選擇"
 
 #: inc/lib_validate.inc:394
 msgid "User already exists"
@@ -14153,7 +14153,7 @@ msgstr "朋友"
 
 #: field_options/option_description,
 msgid "Home(permanent address)"
-msgstr "家裡永久住址"
+msgstr "住家永久住址"
 
 #: field_options/option_description,
 msgid "Contact Person"
@@ -14185,7 +14185,7 @@ msgstr "即時通"
 
 #: field_options/option_description,
 msgid "Permanent home address)"
-msgstr "永久住家地址"
+msgstr "住家永久地址"
 
 #: field_options/option_description,
 msgid "Impact location"
@@ -14333,11 +14333,11 @@ msgstr "臨時庇護所"
 
 #: field_options/option_description,
 msgid "Government Evacuation Center"
-msgstr ""
+msgstr "政府災民疏散中心"
 
 #: field_options/option_description,
 msgid "Administrative Facilities"
-msgstr ""
+msgstr "管理設備"
 
 #: field_options/option_description,
 msgid "Sanitation Facilities"
@@ -14377,7 +14377,7 @@ msgstr "部門"
 
 #: field_options/option_description,
 msgid "Subsidiary"
-msgstr ""
+msgstr "附屬單位"
 
 #: field_options/option_description,
 msgid "Branch"
@@ -14420,9 +14420,8 @@ msgid "depth"
 msgstr "深度"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "number of page records"
-msgstr "顯示記錄數目上限"
+msgstr "紀錄數量"
 
 #: field_options/option_description,
 msgid "the frequency of report update"
@@ -14813,9 +14812,8 @@ msgid "Resources-Warehouse-Forklift"
 msgstr "資源-倉庫-堆高機"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Resources-Warehouse-General"
-msgstr "一般設定選項"
+msgstr "一般設定選項 "
 
 #: field_options/option_description,
 msgid "General Skills-Warehouse-Management"
@@ -14902,9 +14900,8 @@ msgid "Piece"
 msgstr ""
 
 #: ct_unit/name,
-#, fuzzy
 msgid "Kit"
-msgstr "套裝"
+msgstr "套裝 "
 
 #: ct_unit/name,
 msgid "Ration"
@@ -14978,6 +14975,12 @@ msgstr "多方面的"
 msgid "Medical"
 msgstr "醫療"
 
+#~ msgid "Pledges details"
+#~ msgstr "捐贈物資詳細資料"
+#~ msgid "Donors"
+#~ msgstr "捐贈者"
+#~ msgid "Donor ID"
+#~ msgstr "捐贈者編號"
 #~ msgid "Date:"
 #~ msgstr "日期："
 #~ msgid "Time:"

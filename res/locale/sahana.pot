@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-06 18:36+0800\n"
+"POT-Creation-Date: 2010-07-15 15:49+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -449,7 +449,7 @@ msgstr ""
 #: mod/ws/reg.inc:52 mod/ims/reg_inv.inc:59 mod/ims/reg_inv.inc:111
 #: mod/cs/lib_cs.inc:193 mod/gis/wm_fns.inc:120 mod/gis/wm_fns.inc:149
 #: mod/gis/main_fns.inc:88 mod/gis/main_fns.inc:115 mod/mpr/search.inc:82
-#: mod/mpr/search.inc:212 mod/mpr/edit.inc:236 mod/mpr/edit.inc:351
+#: mod/mpr/search.inc:216 mod/mpr/edit.inc:236 mod/mpr/edit.inc:351
 #: mod/mpr/edit.inc:752 mod/mpr/images.inc:26 mod/mpr/add.inc:137
 #: mod/mpr/add.inc:329 mod/mpr/add.inc:395 mod/mpr/add.inc:456
 #: mod/mpr/add.inc:557 mod/sync/handler_upload.inc:71
@@ -462,9 +462,9 @@ msgstr ""
 #: mod/dvr/edt_indv.inc:268 mod/dvr/add_new_indv.inc:536
 #: mod/rms/handler_req_new.inc:45 mod/rms/handler_req_new.inc:79
 #: mod/rms/handler_req_new.inc:131 mod/rms/handler_req_ls.inc:63
-#: mod/rms/handler_plg_ls.inc:57 mod/rms/handler_plg_new.inc:44
-#: mod/rms/handler_plg_new.inc:65 mod/rms/handler_mng_ff.inc:115
-#: mod/rms/handler_mng_ff.inc:260 mod/rms/lib_rms.inc:1300
+#: mod/rms/handler_plg_ls.inc:53 mod/rms/handler_plg_new.inc:44
+#: mod/rms/handler_plg_new.inc:61 mod/rms/handler_mng_ff.inc:115
+#: mod/rms/handler_mng_ff.inc:260 mod/rms/lib_rms.inc:1304
 #: mod/msg/handler_cap_new.inc:99 mod/msg/handler_cap_new.inc:167
 #: mod/msg/handler_cap_new.inc:187 inc/lib_paging.inc:139
 #: inc/lib_paging.inc:222
@@ -512,7 +512,7 @@ msgstr ""
 #: tools/tpl_languages.php:158 mod/or/process_org.inc:33
 #: mod/or/process_org.inc:41 mod/or/view_org.inc:734
 #: mod/ims/view_edit_item.inc:65 mod/ims/mini_quantity.inc:249
-#: mod/gis/wm_fns.inc:56 mod/mpr/search.inc:255 mod/cr/edit.inc:193
+#: mod/gis/wm_fns.inc:56 mod/mpr/search.inc:261 mod/cr/edit.inc:193
 #: mod/cr/edit.inc:282 mod/cr/edit.inc:558 mod/cr/camp.inc:515
 #: mod/dvr/search_individual.inc:91 mod/dvr/search_individual.inc:106
 #: mod/dvr/list.inc:78 mod/msg/handler_cap_edit.inc:46
@@ -663,7 +663,7 @@ msgid "Position description"
 msgstr ""
 
 #: tools/tpl_languages.php:44 mod/ims/optimize.inc:500 mod/ims/view_inv.inc:66
-#: mod/mpr/search.inc:243
+#: mod/mpr/search.inc:249
 msgid "Actions"
 msgstr ""
 
@@ -812,7 +812,7 @@ msgstr ""
 #: mod/rs/sample.inc:225 mod/rs/sample.inc:280 mod/cs/supplier_report.inc:29
 #: mod/cs/drill_down.inc:51 mod/cs/edit.inc:177 mod/cs/edit.inc:404
 #: mod/cs/edit.inc:525 mod/cs/add.inc:427 mod/mpr/search.inc:74
-#: mod/mpr/search.inc:75 mod/mpr/search.inc:361 mod/mpr/edit.inc:510
+#: mod/mpr/search.inc:75 mod/mpr/search.inc:367 mod/mpr/edit.inc:510
 #: mod/mpr/edit.inc:723 mod/mpr/add.inc:301 mod/mpr/add.inc:540
 #: mod/sync/handler_upload.inc:90 mod/admin/ims_level.inc:30
 #: mod/admin/ims_level.inc:61 mod/admin/ims_level.inc:173
@@ -824,17 +824,17 @@ msgid "Name"
 msgstr ""
 
 #: tools/tpl_languages.php:121 tools/tpl_languages.php:233
-#: mod/mpr/search.inc:360 mod/mpr/edit.inc:509
+#: mod/mpr/search.inc:366 mod/mpr/edit.inc:509
 msgid "Picture"
 msgstr ""
 
 #: tools/tpl_languages.php:122 tools/tpl_languages.php:327
-#: mod/ims/search.inc:142 mod/ims/search.inc:215 mod/mpr/search.inc:362
+#: mod/ims/search.inc:142 mod/ims/search.inc:215 mod/mpr/search.inc:368
 #: mod/mpr/edit.inc:143 mod/mpr/add.inc:51 mod/mpr/add.inc:52
 #: mod/rms/handler_req_ls.inc:135 mod/rms/handler_req_ls.inc:175
 #: mod/rms/handler_req_sch.inc:99 mod/rms/handler_req_sch.inc:205
-#: mod/rms/handler_req_sch.inc:211 mod/rms/handler_plg_ls.inc:118
-#: mod/rms/handler_plg_ls.inc:156 mod/rms/handler_plg_sch.inc:63
+#: mod/rms/handler_req_sch.inc:211 mod/rms/handler_plg_ls.inc:87
+#: mod/rms/handler_plg_ls.inc:123 mod/rms/handler_plg_sch.inc:63
 #: mod/rms/handler_mng_ff.inc:199 mod/msg/handler_cap_edit.inc:90
 #: mod/msg/handler_cap_new.inc:81
 msgid "Status"
@@ -877,8 +877,8 @@ msgstr ""
 #: mod/cr/reports.inc:116 mod/dvr/add_new_grp.inc:406
 #: mod/rms/handler_req_new.inc:129 mod/rms/handler_req_ls.inc:71
 #: mod/rms/handler_req_sch.inc:203 mod/rms/handler_req_sch.inc:209
-#: mod/rms/handler_mng_ff.inc:200 mod/rms/lib_rms.inc:843
-#: mod/rms/lib_rms.inc:1298
+#: mod/rms/handler_mng_ff.inc:200 mod/rms/lib_rms.inc:783
+#: mod/rms/lib_rms.inc:1302
 msgid "Location"
 msgstr ""
 
@@ -1335,8 +1335,8 @@ msgstr ""
 msgid "Go to Previous Page"
 msgstr ""
 
-#: tools/tpl_languages.php:277 mod/mpr/search.inc:207
-#: mod/rms/handler_req_ls.inc:54 mod/rms/handler_plg_ls.inc:48
+#: tools/tpl_languages.php:277 mod/mpr/search.inc:211
+#: mod/rms/handler_req_ls.inc:54 mod/rms/handler_plg_ls.inc:44
 #: inc/lib_paging.inc:117 inc/lib_paging.inc:208
 msgid "Previous"
 msgstr ""
@@ -1532,9 +1532,9 @@ msgstr ""
 msgid "Total Monetary Value"
 msgstr ""
 
-#: tools/tpl_languages.php:332 mod/mpr/view.inc:26 mod/mpr/search.inc:240
+#: tools/tpl_languages.php:332 mod/mpr/view.inc:26 mod/mpr/search.inc:246
 #: mod/rms/handler_req_ls.inc:94 mod/rms/handler_req_sch.inc:216
-#: mod/rms/handler_plg_sch.inc:291
+#: mod/rms/handler_plg_ls.inc:68 mod/rms/handler_plg_sch.inc:111
 msgid "Details"
 msgstr ""
 
@@ -1663,7 +1663,7 @@ msgstr ""
 #: tools/tpl_languages.php:384 tools/tpl_languages.php:385
 #: tools/tpl_languages.php:404 mod/cs/add.inc:114 mod/cs/add.inc:295
 #: mod/cs/add.inc:375 mod/admin/ims_assign.inc:78 mod/admin/location.inc:133
-#: mod/rms/handler_req_new.inc:301 mod/rms/handler_plg_new.inc:127
+#: mod/rms/handler_req_new.inc:301 mod/rms/handler_plg_new.inc:123
 msgid "Add"
 msgstr ""
 
@@ -1810,6 +1810,7 @@ msgstr ""
 
 #: mod/or/search.inc:31 mod/or/reg_org.inc:41 mod/or/reg_org.inc:170
 #: mod/or/view_org.inc:355 mod/or/view_org.inc:690
+#: mod/rms/handler_plg_new.inc:146 mod/rms/lib_rms.inc:898
 msgid "Organization Name : "
 msgstr ""
 
@@ -1852,7 +1853,7 @@ msgstr ""
 #: mod/dvr/edt_indv.inc:224 mod/dvr/edt_indv.inc:425
 #: mod/dvr/add_new_indv.inc:151 mod/dvr/add_new_indv.inc:403
 #: mod/rms/handler_req_new.inc:42 mod/rms/handler_req_new.inc:77
-#: mod/rms/handler_plg_new.inc:41 mod/rms/handler_plg_new.inc:63
+#: mod/rms/handler_plg_new.inc:41 mod/rms/handler_plg_new.inc:59
 msgid "Address"
 msgstr ""
 
@@ -2150,7 +2151,7 @@ msgid "No Records"
 msgstr ""
 
 #: mod/or/view_org.inc:206 mod/or/view_org.inc:555 mod/mpr/mpr_lib.inc:50
-#: mod/mpr/mpr_lib.inc:71 mod/mpr/search.inc:281 mod/dvr/lib.inc:150
+#: mod/mpr/mpr_lib.inc:71 mod/mpr/search.inc:287 mod/dvr/lib.inc:150
 #: mod/dvr/lib.inc:170
 msgid "Assign to more incidents"
 msgstr ""
@@ -2369,7 +2370,7 @@ msgstr ""
 #: mod/dvr/edt_indv.inc:428 mod/dvr/add_new_indv.inc:161
 #: mod/dvr/add_new_indv.inc:406 mod/rms/handler_req_new.inc:37
 #: mod/rms/handler_req_new.inc:74 mod/rms/handler_plg_new.inc:36
-#: mod/rms/handler_plg_new.inc:60
+#: mod/rms/handler_plg_new.inc:56
 msgid "Mobile"
 msgstr ""
 
@@ -2382,7 +2383,7 @@ msgstr ""
 #: mod/dvr/edt_grp.inc:492 mod/dvr/add_new_grp.inc:230
 #: mod/dvr/add_new_grp.inc:392 mod/rms/handler_req_new.inc:38
 #: mod/rms/handler_req_new.inc:75 mod/rms/handler_plg_new.inc:37
-#: mod/rms/handler_plg_new.inc:61
+#: mod/rms/handler_plg_new.inc:57
 msgid "Email"
 msgstr ""
 
@@ -2819,7 +2820,7 @@ msgstr ""
 #: mod/ws/reg.inc:104 mod/cr/edit.inc:557 mod/cr/camp.inc:514
 #: mod/dvr/edt_grp.inc:450 mod/dvr/add_new_grp.inc:355
 #: mod/dvr/edt_indv.inc:684 mod/dvr/add_new_indv.inc:670
-#: mod/rms/handler_req_new.inc:353 mod/rms/handler_plg_new.inc:147
+#: mod/rms/handler_req_new.inc:353 mod/rms/handler_plg_new.inc:183
 #: mod/msg/handler_cap_new.inc:226
 msgid "Finish"
 msgstr ""
@@ -3093,7 +3094,7 @@ msgstr ""
 #: mod/dvr/edt_grp.inc:491 mod/dvr/add_new_grp.inc:227
 #: mod/dvr/add_new_grp.inc:391 mod/rms/handler_req_new.inc:41
 #: mod/rms/handler_req_new.inc:76 mod/rms/handler_plg_new.inc:40
-#: mod/rms/handler_plg_new.inc:62
+#: mod/rms/handler_plg_new.inc:58
 msgid "Telephone"
 msgstr ""
 
@@ -3382,7 +3383,7 @@ msgstr ""
 #: mod/ims/transfer_inv.inc:96 mod/ims/transfer_inv.inc:150
 #: mod/ims/transfer_inv.inc:460 mod/ims/home.inc:52
 #: mod/ims/mini_quantity.inc:247 mod/cs/search.inc:23 mod/cs/search.inc:159
-#: mod/rms/handler_req_new.inc:455 mod/rms/handler_plg_new.inc:207
+#: mod/rms/handler_req_new.inc:455 mod/rms/handler_plg_new.inc:242
 msgid "Unit"
 msgstr ""
 
@@ -3393,7 +3394,7 @@ msgstr ""
 #: mod/ims/ims_report.inc:503 mod/ims/ims_report.inc:582
 #: mod/ims/transfer_inv.inc:251 mod/ims/transfer_inv.inc:454
 #: mod/ims/home.inc:55 mod/ims/mini_quantity.inc:248
-#: mod/rms/handler_plg_sch.inc:287 mod/rms/handler_plg_sch.inc:289
+#: mod/rms/handler_plg_sch.inc:107 mod/rms/handler_plg_sch.inc:109
 #: mod/rms/handler_mng_ff.inc:198
 msgid "Inventory"
 msgstr ""
@@ -3508,7 +3509,7 @@ msgid "Select Relative Item/Items"
 msgstr ""
 
 #: mod/ims/optimize.inc:56 mod/ims/optimize.inc:226 mod/ims/optimize.inc:361
-#: mod/ims/optimize.inc:894 mod/rms/handler_plg_new.inc:115
+#: mod/ims/optimize.inc:894 mod/rms/handler_plg_new.inc:111
 msgid "Inventory Selection"
 msgstr ""
 
@@ -3531,11 +3532,11 @@ msgstr ""
 #: mod/cs/search.inc:43 mod/cs/edit.inc:201 mod/cs/add.inc:451
 #: mod/rms/handler_req_new.inc:328 mod/rms/handler_req_new.inc:342
 #: mod/rms/handler_req_sch.inc:203 mod/rms/handler_req_sch.inc:209
-#: mod/rms/handler_plg_new.inc:135 mod/rms/handler_plg_new.inc:171
-#: mod/rms/handler_plg_sch.inc:287 mod/rms/handler_plg_sch.inc:289
+#: mod/rms/handler_plg_new.inc:131 mod/rms/handler_plg_new.inc:207
+#: mod/rms/handler_plg_sch.inc:107 mod/rms/handler_plg_sch.inc:109
 #: mod/rms/handler_mng_ff.inc:142 mod/rms/handler_mng_ff.inc:196
-#: mod/rms/handler_mng_ff.inc:257 mod/rms/lib_rms.inc:854
-#: mod/rms/lib_rms.inc:907 mod/rms/lib_rms.inc:935
+#: mod/rms/handler_mng_ff.inc:257 mod/rms/lib_rms.inc:794
+#: mod/rms/lib_rms.inc:847 mod/rms/lib_rms.inc:875
 msgid "Item"
 msgstr ""
 
@@ -3758,7 +3759,8 @@ msgstr ""
 
 #: mod/ims/ims_report.inc:160 mod/ims/transfer_inv.inc:101
 #: mod/ims/transfer_inv.inc:155 mod/admin/conf_admin.inc:128
-#: mod/rms/handler_mng_ff.inc:201 mod/msg/message_forms.inc:161
+#: mod/rms/handler_plg_ls.inc:61 mod/rms/handler_mng_ff.inc:201
+#: mod/msg/message_forms.inc:161
 msgid "Action"
 msgstr ""
 
@@ -4263,7 +4265,7 @@ msgstr ""
 msgid "Victim : "
 msgstr ""
 
-#: mod/ims/transfer_inv.inc:312
+#: mod/ims/transfer_inv.inc:312 mod/rms/lib_rms.inc:897
 msgid "Date : "
 msgstr ""
 
@@ -5152,7 +5154,7 @@ msgstr ""
 
 #: mod/cs/edit.inc:51 mod/cs/edit.inc:69 mod/cr/search.inc:79
 #: mod/rms/handler_req_ls.inc:132 mod/rms/handler_req_sch.inc:70
-#: mod/rms/handler_plg_ls.inc:112 mod/rms/handler_plg_sch.inc:36
+#: mod/rms/handler_plg_ls.inc:81 mod/rms/handler_plg_sch.inc:36
 msgid "All"
 msgstr ""
 
@@ -5258,13 +5260,13 @@ msgid "Aid Catalog"
 msgstr ""
 
 #: mod/cs/lib_cs.inc:173 mod/sync/handler_download.inc:66
-#: mod/rms/lib_rms.inc:1139 mod/msg/handler_cap_new.inc:139
+#: mod/rms/lib_rms.inc:1143 mod/msg/handler_cap_new.inc:139
 msgid "None"
 msgstr ""
 
 #: mod/cs/lib_cs.inc:174 mod/cs/add.inc:163
-#: mod/gis/plugins/google_maps/admin.inc:41 mod/rms/lib_rms.inc:675
-#: mod/rms/lib_rms.inc:1140
+#: mod/gis/plugins/google_maps/admin.inc:41 mod/rms/lib_rms.inc:643
+#: mod/rms/lib_rms.inc:1144
 msgid "Information"
 msgstr ""
 
@@ -5276,7 +5278,7 @@ msgstr ""
 msgid "Add Catalog"
 msgstr ""
 
-#: mod/cs/lib_cs.inc:176 mod/cs/add.inc:165 mod/rms/lib_rms.inc:1143
+#: mod/cs/lib_cs.inc:176 mod/cs/add.inc:165 mod/rms/lib_rms.inc:1147
 msgid " First"
 msgstr ""
 
@@ -6223,9 +6225,8 @@ msgstr ""
 #: mod/dvr/search_group.inc:138 mod/dvr/add_new_grp.inc:194
 #: mod/dvr/edt_indv.inc:146 mod/dvr/add_new_indv.inc:85
 #: mod/rms/handler_req_new.inc:36 mod/rms/handler_req_new.inc:73
-#: mod/rms/handler_plg_new.inc:35 mod/rms/handler_plg_new.inc:59
-#: mod/rms/lib_rms.inc:790 inc/lib_security/lib_auth.inc:531
-#: inc/lib_security/acl_form.inc:503
+#: mod/rms/handler_plg_new.inc:35 mod/rms/handler_plg_new.inc:55
+#: inc/lib_security/lib_auth.inc:531 inc/lib_security/acl_form.inc:503
 msgid "Full Name"
 msgstr ""
 
@@ -6295,39 +6296,39 @@ msgstr ""
 msgid "Physical Details"
 msgstr ""
 
-#: mod/mpr/view.inc:66 mod/mpr/search.inc:260 mod/mpr/edit.inc:213
+#: mod/mpr/view.inc:66 mod/mpr/search.inc:266 mod/mpr/edit.inc:213
 #: mod/mpr/edit.inc:454 mod/mpr/add.inc:124 mod/mpr/add.inc:491
 #: mod/dvr/edt_indv.inc:654 mod/dvr/add_new_indv.inc:640
 msgid "Eye Colour"
 msgstr ""
 
-#: mod/mpr/view.inc:67 mod/mpr/search.inc:260 mod/mpr/edit.inc:215
+#: mod/mpr/view.inc:67 mod/mpr/search.inc:266 mod/mpr/edit.inc:215
 #: mod/mpr/edit.inc:455 mod/mpr/add.inc:125 mod/mpr/add.inc:492
 #: mod/dvr/edt_indv.inc:656 mod/dvr/add_new_indv.inc:642
 msgid "Skin Colour"
 msgstr ""
 
-#: mod/mpr/view.inc:68 mod/mpr/search.inc:260 mod/mpr/edit.inc:217
+#: mod/mpr/view.inc:68 mod/mpr/search.inc:266 mod/mpr/edit.inc:217
 #: mod/mpr/edit.inc:456 mod/mpr/add.inc:126 mod/mpr/add.inc:493
 #: mod/dvr/edt_indv.inc:658 mod/dvr/add_new_indv.inc:644
 msgid "Hair Colour"
 msgstr ""
 
-#: mod/mpr/view.inc:69 mod/mpr/search.inc:260 mod/mpr/edit.inc:219
+#: mod/mpr/view.inc:69 mod/mpr/search.inc:266 mod/mpr/edit.inc:219
 #: mod/mpr/edit.inc:457 mod/mpr/add.inc:127 mod/mpr/add.inc:494
 #: mod/dvr/edt_indv.inc:453 mod/dvr/edt_indv.inc:661
 #: mod/dvr/add_new_indv.inc:430 mod/dvr/add_new_indv.inc:647
 msgid "Height"
 msgstr ""
 
-#: mod/mpr/view.inc:70 mod/mpr/search.inc:260 mod/mpr/edit.inc:221
+#: mod/mpr/view.inc:70 mod/mpr/search.inc:266 mod/mpr/edit.inc:221
 #: mod/mpr/edit.inc:458 mod/mpr/add.inc:128 mod/mpr/add.inc:495
 #: mod/dvr/edt_indv.inc:454 mod/dvr/edt_indv.inc:668
 #: mod/dvr/add_new_indv.inc:431 mod/dvr/add_new_indv.inc:654
 msgid "Weight"
 msgstr ""
 
-#: mod/mpr/view.inc:71 mod/mpr/view.inc:92 mod/mpr/search.inc:272
+#: mod/mpr/view.inc:71 mod/mpr/view.inc:92 mod/mpr/search.inc:278
 #: mod/mpr/edit.inc:223 mod/mpr/edit.inc:233 mod/mpr/edit.inc:459
 #: mod/mpr/edit.inc:498 mod/mpr/add.inc:496 mod/mpr/add.inc:535
 msgid "Comments"
@@ -6357,12 +6358,12 @@ msgstr ""
 msgid "Blood Type"
 msgstr ""
 
-#: mod/mpr/view.inc:90 mod/mpr/search.inc:272 mod/mpr/edit.inc:229
+#: mod/mpr/view.inc:90 mod/mpr/search.inc:278 mod/mpr/edit.inc:229
 #: mod/mpr/edit.inc:496 mod/mpr/add.inc:533
 msgid "Last Seen"
 msgstr ""
 
-#: mod/mpr/view.inc:91 mod/mpr/search.inc:272 mod/mpr/edit.inc:231
+#: mod/mpr/view.inc:91 mod/mpr/search.inc:278 mod/mpr/edit.inc:231
 #: mod/mpr/edit.inc:497 mod/mpr/add.inc:534
 msgid "Last Clothing"
 msgstr ""
@@ -6371,8 +6372,8 @@ msgstr ""
 msgid "People that are tracking"
 msgstr ""
 
-#: mod/mpr/view.inc:97 mod/mpr/search.inc:266 mod/mpr/search.inc:292
-#: mod/mpr/search.inc:376 mod/mpr/edit.inc:733 mod/msg/handler_cap_view.inc:65
+#: mod/mpr/view.inc:97 mod/mpr/search.inc:272 mod/mpr/search.inc:298
+#: mod/mpr/search.inc:382 mod/mpr/edit.inc:733 mod/msg/handler_cap_view.inc:65
 #: mod/msg/handler_cap_view.inc:74 mod/msg/handler_cap_view.inc:85
 msgid "View"
 msgstr ""
@@ -6381,7 +6382,7 @@ msgstr ""
 msgid "Click to edit"
 msgstr ""
 
-#: mod/mpr/view.inc:103 mod/mpr/search.inc:392 mod/rms/handler_mng_ff.inc:109
+#: mod/mpr/view.inc:103 mod/mpr/search.inc:398 mod/rms/handler_mng_ff.inc:109
 msgid "Back"
 msgstr ""
 
@@ -6416,39 +6417,39 @@ msgstr ""
 msgid "Identity Card"
 msgstr ""
 
-#: mod/mpr/search.inc:184 mod/mpr/search.inc:198
+#: mod/mpr/search.inc:184 mod/mpr/search.inc:202
 msgid "Total"
 msgstr ""
 
-#: mod/mpr/search.inc:184 mod/mpr/search.inc:198
+#: mod/mpr/search.inc:184 mod/mpr/search.inc:202
 msgid "Records were found"
 msgstr ""
 
-#: mod/mpr/search.inc:194 mod/mpr/home.inc:55 mod/mpr/main.inc:57
+#: mod/mpr/search.inc:195 mod/mpr/home.inc:55 mod/mpr/main.inc:57
 #: mod/mpr/main.inc:458
 msgid "Report a Missing Person"
 msgstr ""
 
-#: mod/mpr/search.inc:196 mod/mpr/home.inc:57 mod/mpr/main.inc:59
+#: mod/mpr/search.inc:197 mod/mpr/home.inc:57 mod/mpr/main.inc:59
 #: mod/mpr/main.inc:461
 msgid "Report a Found Person"
 msgstr ""
 
-#: mod/mpr/search.inc:205
+#: mod/mpr/search.inc:209
 msgid "First"
 msgstr ""
 
-#: mod/mpr/search.inc:205 mod/mpr/search.inc:207 mod/mpr/search.inc:212
-#: mod/mpr/search.inc:214 mod/rms/handler_req_ls.inc:148
-#: mod/rms/handler_plg_ls.inc:131
+#: mod/mpr/search.inc:209 mod/mpr/search.inc:211 mod/mpr/search.inc:216
+#: mod/mpr/search.inc:218 mod/rms/handler_req_ls.inc:148
+#: mod/rms/handler_plg_ls.inc:100
 msgid "Records"
 msgstr ""
 
-#: mod/mpr/search.inc:214
+#: mod/mpr/search.inc:218
 msgid "Last"
 msgstr ""
 
-#: mod/mpr/search.inc:219
+#: mod/mpr/search.inc:224
 #, php-format
 msgid ""
 "If you found the person you would like to report is existed in the system. "
@@ -6456,45 +6457,45 @@ msgid ""
 "tracker for him. Or click %s"
 msgstr ""
 
-#: mod/mpr/search.inc:239 mod/mpr/edit.inc:415
+#: mod/mpr/search.inc:245 mod/mpr/edit.inc:415
 msgid "Person"
 msgstr ""
 
-#: mod/mpr/search.inc:241
+#: mod/mpr/search.inc:247
 msgid "Associated People"
 msgstr ""
 
-#: mod/mpr/search.inc:242
+#: mod/mpr/search.inc:248
 msgid "Missing Details"
 msgstr ""
 
-#: mod/mpr/search.inc:244
+#: mod/mpr/search.inc:250
 msgid "Reported Person"
 msgstr ""
 
-#: mod/mpr/search.inc:245 mod/mpr/search.inc:298 mod/mpr/search.inc:363
-#: mod/mpr/search.inc:385 mod/rms/handler_mng_ff.inc:159
-#: mod/rms/lib_rms.inc:870
+#: mod/mpr/search.inc:251 mod/mpr/search.inc:304 mod/mpr/search.inc:369
+#: mod/mpr/search.inc:391 mod/rms/handler_mng_ff.inc:159
+#: mod/rms/lib_rms.inc:810
 msgid "Select"
 msgstr ""
 
-#: mod/mpr/search.inc:267 mod/mpr/edit.inc:746 mod/mpr/admin.inc:241
+#: mod/mpr/search.inc:273 mod/mpr/edit.inc:746 mod/mpr/admin.inc:241
 msgid "Add Tracker"
 msgstr ""
 
-#: mod/mpr/search.inc:267
+#: mod/mpr/search.inc:273
 msgid "Associate another person"
 msgstr ""
 
-#: mod/mpr/search.inc:278 mod/mpr/search.inc:382
+#: mod/mpr/search.inc:284 mod/mpr/search.inc:388
 msgid "Change the status to Alive & Well"
 msgstr ""
 
-#: mod/mpr/search.inc:280 mod/mpr/search.inc:382
+#: mod/mpr/search.inc:286 mod/mpr/search.inc:388
 msgid "Click to change to found"
 msgstr ""
 
-#: mod/mpr/search.inc:283 mod/mpr/audit.inc:26
+#: mod/mpr/search.inc:289 mod/mpr/audit.inc:26
 msgid "Audit"
 msgstr ""
 
@@ -10492,7 +10493,7 @@ msgid ""
 "enter missing information"
 msgstr ""
 
-#: mod/rms/handler_req_new.inc:72 mod/rms/handler_plg_new.inc:58
+#: mod/rms/handler_req_new.inc:72 mod/rms/handler_plg_new.inc:54
 msgid "Confirm Person Information"
 msgstr ""
 
@@ -10504,45 +10505,45 @@ msgstr ""
 msgid "Add Location"
 msgstr ""
 
-#: mod/rms/handler_req_new.inc:119 mod/rms/lib_rms.inc:1280
+#: mod/rms/handler_req_new.inc:119 mod/rms/lib_rms.inc:1284
 msgid "Select a location where the request is related."
 msgstr ""
 
-#: mod/rms/handler_req_new.inc:120 mod/rms/lib_rms.inc:1281
+#: mod/rms/handler_req_new.inc:120 mod/rms/lib_rms.inc:1285
 msgid ""
 "If you want to make the request for a new location, add the location first."
 msgstr ""
 
-#: mod/rms/handler_req_new.inc:124 mod/rms/lib_rms.inc:1287
+#: mod/rms/handler_req_new.inc:124 mod/rms/lib_rms.inc:1291
 msgid "Existing Location"
 msgstr ""
 
-#: mod/rms/handler_req_new.inc:288 mod/rms/handler_plg_new.inc:99
+#: mod/rms/handler_req_new.inc:288 mod/rms/handler_plg_new.inc:95
 msgid "New Item"
 msgstr ""
 
 #: mod/rms/handler_req_new.inc:291 mod/rms/handler_req_sch.inc:96
-#: mod/rms/handler_plg_new.inc:102 mod/rms/handler_plg_sch.inc:60
-#: mod/rms/handler_plg_sch.inc:287 mod/rms/handler_plg_sch.inc:289
+#: mod/rms/handler_plg_new.inc:98 mod/rms/handler_plg_sch.inc:60
+#: mod/rms/handler_plg_sch.inc:107 mod/rms/handler_plg_sch.inc:109
 #: mod/msg/handler_cap_new.inc:122
 msgid "Category"
 msgstr ""
 
 #: mod/rms/handler_req_new.inc:298 mod/rms/handler_req_new.inc:342
-#: mod/rms/handler_plg_new.inc:111 mod/rms/handler_plg_new.inc:135
-#: mod/rms/handler_plg_sch.inc:287 mod/rms/handler_plg_sch.inc:289
-#: mod/rms/handler_mng_ff.inc:259 mod/rms/lib_rms.inc:854
-#: mod/rms/lib_rms.inc:935
+#: mod/rms/handler_plg_new.inc:107 mod/rms/handler_plg_new.inc:131
+#: mod/rms/handler_plg_sch.inc:107 mod/rms/handler_plg_sch.inc:109
+#: mod/rms/handler_mng_ff.inc:259 mod/rms/lib_rms.inc:794
+#: mod/rms/lib_rms.inc:875
 msgid "Quantity"
 msgstr ""
 
 #: mod/rms/handler_req_new.inc:299 mod/rms/handler_req_sch.inc:93
 #: mod/rms/handler_req_sch.inc:205 mod/rms/handler_req_sch.inc:211
-#: mod/rms/lib_rms.inc:907
+#: mod/rms/lib_rms.inc:847
 msgid "Priority"
 msgstr ""
 
-#: mod/rms/handler_req_new.inc:323 mod/rms/handler_plg_new.inc:167
+#: mod/rms/handler_req_new.inc:323 mod/rms/handler_plg_new.inc:203
 msgid "No items (left) for this category please select another category"
 msgstr ""
 
@@ -10554,15 +10555,15 @@ msgstr ""
 msgid "Select Category"
 msgstr ""
 
-#: mod/rms/handler_req_new.inc:336 mod/rms/handler_plg_new.inc:179
+#: mod/rms/handler_req_new.inc:336 mod/rms/handler_plg_new.inc:215
 msgid "Sub Category"
 msgstr ""
 
-#: mod/rms/handler_req_new.inc:342 mod/rms/lib_rms.inc:854
+#: mod/rms/handler_req_new.inc:342 mod/rms/lib_rms.inc:794
 msgid "Item Priority"
 msgstr ""
 
-#: mod/rms/handler_req_new.inc:344 mod/rms/handler_plg_new.inc:137
+#: mod/rms/handler_req_new.inc:344 mod/rms/handler_plg_new.inc:133
 msgid "Remove Item"
 msgstr ""
 
@@ -10572,15 +10573,15 @@ msgid ""
 "request'"
 msgstr ""
 
-#: mod/rms/handler_req_new.inc:388 mod/rms/handler_plg_new.inc:251
+#: mod/rms/handler_req_new.inc:388 mod/rms/handler_plg_new.inc:284
 msgid "Please fill the 'Name' and 'Card Number'"
 msgstr ""
 
-#: mod/rms/handler_req_new.inc:392 mod/rms/handler_plg_new.inc:255
+#: mod/rms/handler_req_new.inc:392 mod/rms/handler_plg_new.inc:288
 msgid "Please fill the 'Name'"
 msgstr ""
 
-#: mod/rms/handler_req_new.inc:396 mod/rms/handler_plg_new.inc:259
+#: mod/rms/handler_req_new.inc:396 mod/rms/handler_plg_new.inc:292
 msgid "Please fill the 'Card Number'"
 msgstr ""
 
@@ -10594,8 +10595,8 @@ msgstr ""
 
 #: mod/rms/handler_req_new.inc:507 mod/rms/handler_req_ls.inc:219
 #: mod/rms/handler_req_ls.inc:236 mod/rms/handler_req_sch.inc:281
-#: mod/rms/handler_plg_ls.inc:142 mod/rms/handler_plg_ls.inc:198
-#: mod/rms/handler_plg_ls.inc:206 mod/rms/handler_plg_sch.inc:348
+#: mod/rms/handler_plg_ls.inc:111 mod/rms/handler_plg_ls.inc:167
+#: mod/rms/handler_plg_ls.inc:179 mod/rms/handler_plg_sch.inc:168
 #: mod/rms/handler_mng_ff.inc:32 mod/rms/handler_mng_ff.inc:323
 #: mod/rms/handler_mng_ff.inc:400 mod/rms/lib_rms.inc:517
 msgid "RMS Home"
@@ -10609,7 +10610,7 @@ msgstr ""
 msgid "Request List"
 msgstr ""
 
-#: mod/rms/handler_req_ls.inc:52 mod/rms/handler_plg_ls.inc:46
+#: mod/rms/handler_req_ls.inc:52 mod/rms/handler_plg_ls.inc:42
 msgid ":: "
 msgstr ""
 
@@ -10619,15 +10620,15 @@ msgid "Requester"
 msgstr ""
 
 #: mod/rms/handler_req_ls.inc:71 mod/rms/handler_req_sch.inc:205
-#: mod/rms/handler_req_sch.inc:211 mod/rms/handler_plg_ls.inc:83
-#: mod/rms/handler_plg_sch.inc:287 mod/rms/handler_plg_sch.inc:289
-#: mod/rms/lib_rms.inc:907 mod/msg/handler_cap_edit.inc:88
+#: mod/rms/handler_req_sch.inc:211 mod/rms/handler_plg_ls.inc:61
+#: mod/rms/handler_plg_sch.inc:107 mod/rms/handler_plg_sch.inc:109
+#: mod/rms/lib_rms.inc:847 mod/msg/handler_cap_edit.inc:88
 #: mod/msg/handler_cap_new.inc:79 inc/lib_security/acl_form.inc:500
 msgid "Date"
 msgstr ""
 
-#: mod/rms/handler_req_ls.inc:71 mod/rms/handler_plg_ls.inc:83
-#: mod/rms/handler_plg_sch.inc:287 mod/rms/handler_plg_sch.inc:289
+#: mod/rms/handler_req_ls.inc:71 mod/rms/handler_plg_ls.inc:61
+#: mod/rms/handler_plg_sch.inc:107 mod/rms/handler_plg_sch.inc:109
 #: mod/rms/handler_mng_ff.inc:142
 msgid "status"
 msgstr ""
@@ -10650,7 +10651,7 @@ msgstr ""
 msgid "Closed"
 msgstr ""
 
-#: mod/rms/handler_req_ls.inc:141 mod/rms/handler_plg_ls.inc:124
+#: mod/rms/handler_req_ls.inc:141 mod/rms/handler_plg_ls.inc:93
 msgid "Clear Filter"
 msgstr ""
 
@@ -10675,7 +10676,7 @@ msgstr ""
 msgid "No requests found"
 msgstr ""
 
-#: mod/rms/handler_req_sch.inc:236 mod/rms/handler_plg_sch.inc:307
+#: mod/rms/handler_req_sch.inc:236 mod/rms/handler_plg_sch.inc:127
 msgid "There are no results that match your search criteria."
 msgstr ""
 
@@ -10786,50 +10787,49 @@ msgstr ""
 msgid "Pledge List"
 msgstr ""
 
-#: mod/rms/handler_plg_ls.inc:83 mod/rms/handler_plg_sch.inc:48
-#: mod/rms/handler_plg_sch.inc:54 mod/rms/handler_plg_sch.inc:287
+#: mod/rms/handler_plg_ls.inc:61 mod/rms/handler_plg_sch.inc:48
+#: mod/rms/handler_plg_sch.inc:54 mod/rms/handler_plg_sch.inc:107
 msgid "Donor"
 msgstr ""
 
-#: mod/rms/handler_plg_ls.inc:95
-msgid "Pledges details"
-msgstr ""
-
-#: mod/rms/handler_plg_ls.inc:106
-msgid "Donors"
-msgstr ""
-
-#: mod/rms/handler_plg_ls.inc:113 mod/rms/handler_plg_ls.inc:149
-#: mod/rms/handler_plg_sch.inc:37
+#: mod/rms/handler_plg_ls.inc:63 mod/rms/handler_plg_ls.inc:82
+#: mod/rms/handler_plg_ls.inc:116 mod/rms/handler_plg_new.inc:175
+#: mod/rms/handler_plg_sch.inc:37 mod/rms/lib_rms.inc:890
 msgid "Not Confirmed"
 msgstr ""
 
-#: mod/rms/handler_plg_ls.inc:114 mod/rms/handler_plg_ls.inc:150
-#: mod/rms/handler_plg_sch.inc:38
+#: mod/rms/handler_plg_ls.inc:64 mod/rms/handler_plg_ls.inc:83
+#: mod/rms/handler_plg_ls.inc:117 mod/rms/handler_plg_new.inc:176
+#: mod/rms/handler_plg_sch.inc:38 mod/rms/lib_rms.inc:891
 msgid "Confirmed"
 msgstr ""
 
-#: mod/rms/handler_plg_ls.inc:115
-msgid "Not Delivered"
-msgstr ""
-
-#: mod/rms/handler_plg_ls.inc:116 mod/rms/handler_plg_ls.inc:151
-#: mod/rms/handler_plg_sch.inc:39
+#: mod/rms/handler_plg_ls.inc:65 mod/rms/handler_plg_ls.inc:85
+#: mod/rms/handler_plg_ls.inc:118 mod/rms/handler_plg_new.inc:177
+#: mod/rms/handler_plg_sch.inc:39 mod/rms/lib_rms.inc:892
 msgid "Delivered"
 msgstr ""
 
-#: mod/rms/handler_plg_ls.inc:117 mod/rms/handler_plg_ls.inc:152
+#: mod/rms/handler_plg_ls.inc:84
+msgid "Not Delivered"
+msgstr ""
+
+#: mod/rms/handler_plg_ls.inc:86 mod/rms/handler_plg_ls.inc:119
 #: mod/rms/handler_plg_sch.inc:40
 msgid "Discarded"
 msgstr ""
 
-#: mod/rms/handler_plg_ls.inc:141
+#: mod/rms/handler_plg_ls.inc:110
 msgid "There are no Pledges on the Database that matches your criteria"
 msgstr ""
 
-#: mod/rms/handler_plg_ls.inc:142 mod/rms/handler_plg_ls.inc:198
-#: mod/rms/handler_plg_ls.inc:206
+#: mod/rms/handler_plg_ls.inc:111 mod/rms/handler_plg_ls.inc:169
+#: mod/rms/handler_plg_ls.inc:179
 msgid "Back to Pledge List"
+msgstr ""
+
+#: mod/rms/handler_plg_ls.inc:168
+msgid "Print this"
 msgstr ""
 
 #: mod/rms/handler_plg_new.inc:19
@@ -10850,34 +10850,80 @@ msgid ""
 "some contact information with this"
 msgstr ""
 
-#: mod/rms/handler_plg_new.inc:53
+#: mod/rms/handler_plg_new.inc:49
 msgid ""
 "New Donor; Please confirm the contact information and enter missing "
 "information"
 msgstr ""
 
-#: mod/rms/handler_plg_new.inc:97
+#: mod/rms/handler_plg_new.inc:93
 msgid "Select an item first"
 msgstr ""
 
-#: mod/rms/handler_plg_new.inc:113
+#: mod/rms/handler_plg_new.inc:109
 msgid "Select an Inventory"
 msgstr ""
 
-#: mod/rms/handler_plg_new.inc:125
+#: mod/rms/handler_plg_new.inc:121
 msgid "Inventory Selection : "
 msgstr ""
 
-#: mod/rms/handler_plg_new.inc:145
+#: mod/rms/handler_plg_new.inc:141
 msgid "When all the items are added, Please press 'Finish'"
 msgstr ""
 
-#: mod/rms/handler_plg_new.inc:163 mod/rms/lib_rms.inc:319
+#: mod/rms/handler_plg_new.inc:143 mod/rms/lib_rms.inc:896
+msgid "Donor Information"
+msgstr ""
+
+#: mod/rms/handler_plg_new.inc:144
+msgid ""
+"Fill out the following information if necessary. If the donor does not "
+"belong to any organization, just keep them blank."
+msgstr ""
+
+#: mod/rms/handler_plg_new.inc:150 mod/rms/lib_rms.inc:899
+msgid "Organization Owner : "
+msgstr ""
+
+#: mod/rms/handler_plg_new.inc:154 mod/rms/lib_rms.inc:900
+msgid "Donor Name : "
+msgstr ""
+
+#: mod/rms/handler_plg_new.inc:158 mod/rms/lib_rms.inc:901
+msgid "Donor Phone : "
+msgstr ""
+
+#: mod/rms/handler_plg_new.inc:162 mod/rms/lib_rms.inc:902
+msgid "Donor Address : "
+msgstr ""
+
+#: mod/rms/handler_plg_new.inc:167 mod/rms/lib_rms.inc:885
+msgid "Receipt taken"
+msgstr ""
+
+#: mod/rms/handler_plg_new.inc:168 mod/rms/lib_rms.inc:886
+msgid "Need to send receipt"
+msgstr ""
+
+#: mod/rms/handler_plg_new.inc:169 mod/rms/lib_rms.inc:887
+msgid "Need to send certificate of appreciation"
+msgstr ""
+
+#: mod/rms/handler_plg_new.inc:170 mod/rms/lib_rms.inc:903
+msgid "Receipt :"
+msgstr ""
+
+#: mod/rms/handler_plg_new.inc:178 mod/rms/lib_rms.inc:904
+msgid "Status :"
+msgstr ""
+
+#: mod/rms/handler_plg_new.inc:199 mod/rms/lib_rms.inc:319
 #: mod/rms/lib_rms.inc:332
 msgid "Please Select a Catalog Item"
 msgstr ""
 
-#: mod/rms/handler_plg_new.inc:275
+#: mod/rms/handler_plg_new.inc:316
 msgid "The Pledge was successfully added"
 msgstr ""
 
@@ -10889,7 +10935,7 @@ msgstr ""
 msgid "No pledges found"
 msgstr ""
 
-#: mod/rms/handler_plg_sch.inc:348
+#: mod/rms/handler_plg_sch.inc:168
 msgid "Back to Pledge Search"
 msgstr ""
 
@@ -11090,79 +11136,71 @@ msgstr ""
 msgid "Action cancelled."
 msgstr ""
 
-#: mod/rms/lib_rms.inc:692 inc/lib_misc.inc:23
+#: mod/rms/lib_rms.inc:660 inc/lib_misc.inc:23
 msgid "Alert"
 msgstr ""
 
-#: mod/rms/lib_rms.inc:754
+#: mod/rms/lib_rms.inc:722
 msgid "Requester Information"
 msgstr ""
 
-#: mod/rms/lib_rms.inc:775
+#: mod/rms/lib_rms.inc:743
 msgid "Requester Name"
 msgstr ""
 
-#: mod/rms/lib_rms.inc:785
-msgid "Donor Information"
-msgstr ""
-
-#: mod/rms/lib_rms.inc:788
-msgid "Donor ID"
-msgstr ""
-
-#: mod/rms/lib_rms.inc:804
-msgid "Donor Name"
-msgstr ""
-
-#: mod/rms/lib_rms.inc:854
+#: mod/rms/lib_rms.inc:794
 msgid "fulfilled_quantity"
 msgstr ""
 
-#: mod/rms/lib_rms.inc:854
+#: mod/rms/lib_rms.inc:794
 msgid "Select to fulfill"
 msgstr ""
 
-#: mod/rms/lib_rms.inc:874
+#: mod/rms/lib_rms.inc:814
 msgid "Request Items"
 msgstr ""
 
-#: mod/rms/lib_rms.inc:886 mod/rms/lib_rms.inc:911
+#: mod/rms/lib_rms.inc:826 mod/rms/lib_rms.inc:851
 msgid "Request Fulfilment Status"
 msgstr ""
 
-#: mod/rms/lib_rms.inc:907
+#: mod/rms/lib_rms.inc:847
 msgid "Requested"
 msgstr ""
 
-#: mod/rms/lib_rms.inc:907
+#: mod/rms/lib_rms.inc:847
 msgid "Fulfiled"
 msgstr ""
 
-#: mod/rms/lib_rms.inc:939
+#: mod/rms/lib_rms.inc:879
 msgid "Pledge Items"
 msgstr ""
 
-#: mod/rms/lib_rms.inc:1142
+#: mod/rms/lib_rms.inc:906
+msgid "Creator of this record :"
+msgstr ""
+
+#: mod/rms/lib_rms.inc:1146
 msgid "There is no any root catalogue found. "
 msgstr ""
 
-#: mod/rms/lib_rms.inc:1148
+#: mod/rms/lib_rms.inc:1152
 msgid "Select the root Category"
 msgstr ""
 
-#: mod/rms/lib_rms.inc:1152
+#: mod/rms/lib_rms.inc:1156
 msgid "Select the sub category"
 msgstr ""
 
-#: mod/rms/lib_rms.inc:1227 mod/rms/lib_rms.inc:1246
+#: mod/rms/lib_rms.inc:1231 mod/rms/lib_rms.inc:1250
 msgid "Location already exists"
 msgstr ""
 
-#: mod/rms/lib_rms.inc:1234 mod/rms/lib_rms.inc:1254
+#: mod/rms/lib_rms.inc:1238 mod/rms/lib_rms.inc:1258
 msgid "Location added successfully"
 msgstr ""
 
-#: mod/rms/lib_rms.inc:1262
+#: mod/rms/lib_rms.inc:1266
 msgid "Select the location first"
 msgstr ""
 
@@ -12363,7 +12401,7 @@ msgstr ""
 msgid "Full name is a required field. Please enter a value."
 msgstr ""
 
-#: inc/lib_security/lib_auth.inc:623
+#: inc/lib_security/lib_auth.inc:629
 msgid "User was successfully removed"
 msgstr ""
 
