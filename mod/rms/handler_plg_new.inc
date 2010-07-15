@@ -166,10 +166,16 @@ function _shn_rms_show_items() {
         shn_form_radio(array(
             'receipt_taken' => _("Receipt taken"),
             'send_receipt' => _("Need to send receipt"),
-            'send_appreciation' => _("Need to send certificate of appreciation"),
         ), _('Receipt :'), 'receipt_status', null, array(
             'value' => isset($_SESSION['rms_pledge']['receipt_status']) ?
                 $_SESSION['rms_pledge']['receipt_status'] : ''
+        ));
+        shn_form_radio(array(
+            'appreciation_taken' => _("Certificate of appreciation taken"),
+            'send_appreciation' => _("Need to send certificate of appreciation"),
+        ), _('Certificate of appreciation :'), 'appreciation_status', null, array(
+            'value' => isset($_SESSION['rms_pledge']['appreciation_status']) ?
+                $_SESSION['rms_pledge']['appreciation_status'] : ''
         ));
         shn_form_radio(array(
             'not_confirmed' => _("Not Confirmed"),
@@ -301,7 +307,8 @@ switch ($seq) {
     case 'finish':
         $pledgeFields = array(
             'organization', 'organization_owner', 'donor_name',
-            'donor_phone', 'donor_address', 'status', 'receipt_status'
+            'donor_phone', 'donor_address', 'status', 'receipt_status',
+            'appreciation_status'
         );
         foreach($pledgeFields AS $pledgeField) {
             if(isset($_POST[$pledgeField])) {

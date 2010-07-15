@@ -18,5 +18,6 @@ td {
 $plg_id = $_REQUEST['plg_id'];
 $plg = _shn_rms_get_pledge($plg_id);
 _shn_rms_view_pledge($plg_id);
+echo '<div align="center"> ~ ' . _('Blank below') . ' ~ </div>';
 ?>
 </body></html>

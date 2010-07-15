@@ -85,6 +85,7 @@ CREATE TABLE rms_pledge (           -- rms_pledge table
     donor_phone VARCHAR(255) DEFAULT NULL,
     donor_address VARCHAR(255) DEFAULT NULL,
     receipt_status VARCHAR(20) DEFAULT NULL,
+    appreciation_status VARCHAR(20) DEFAULT NULL,
     PRIMARY KEY (plg_uuid),
     FOREIGN KEY (user_id) REFERENCES users (p_uuid)
 );

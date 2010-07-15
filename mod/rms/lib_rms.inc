@@ -587,7 +587,8 @@ function _shn_rms_add_pledge() {
     '{$_SESSION['rms_pledge']['donor_name']}',
     '{$_SESSION['rms_pledge']['donor_phone']}',
     '{$_SESSION['rms_pledge']['donor_address']}',
-    '{$_SESSION['rms_pledge']['receipt_status']}')";
+    '{$_SESSION['rms_pledge']['receipt_status']}',
+    '{$_SESSION['rms_pledge']['appreciation_status']}')";
     if ($global['db']->Execute($sql) === false) {
         $msg = $global['db']->ErrorMsg();
         add_error($msg . '<br />' . $sql);
@@ -884,6 +885,7 @@ function _shn_rms_view_pledge($plg_id) {
     $receiptStatuses = array(
             'receipt_taken' => _("Receipt taken"),
             'send_receipt' => _("Need to send receipt"),
+            'appreciation_taken' => _("Certificate of appreciation taken"),
             'send_appreciation' => _("Need to send certificate of appreciation"),
         );
     $statuses = array(
@@ -901,6 +903,7 @@ function _shn_rms_view_pledge($plg_id) {
     shn_form_label(_("Donor Phone : "), $pledge['donor_phone']);
     shn_form_label(_("Donor Address : "), $pledge['donor_address']);
     shn_form_label(_("Receipt :"), $receiptStatuses[$pledge['receipt_status']]);
+    shn_form_label(_('Certificate of appreciation :'), $receiptStatuses[$pledge['appreciation_status']]);
     shn_form_label(_("Status :"), $statuses[$pledge['status']]);
     $user = _shn_rms_get_person($pledge['user_id']);
     shn_form_label(_("Creator of this record :"), $user['name']);
