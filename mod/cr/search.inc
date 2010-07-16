@@ -239,6 +239,7 @@ function _shn_cr_form_search() {
     shn_form_fsopen(_("Base Location"));
     shn_location();
     shn_form_text(_("Address"), 'loc_txt', 'size="40"', NULL);
+    shn_form_label('', _('Please input the name of road to search in address field. If you would like to search by city or area, please choose the location in the fields above.'));
     shn_form_fsclose();
 ?>
 <br />
