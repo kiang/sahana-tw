@@ -180,6 +180,14 @@ function shn_cr_srch_address() {
         break;
     }
 }
+function shn_cr_search() {
+    include_once "search.inc";
+    _shn_cr_form_search();
+}
+function shn_cr_search_cr() {
+    include_once "search.inc";
+    shn_cr_search_process();
+}
 function shn_cr_acmp() {
     global $global;
     global $conf;

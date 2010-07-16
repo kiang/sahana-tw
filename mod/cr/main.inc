@@ -26,10 +26,14 @@ function shn_cr_mainmenu() {
     $module = $global['module'];
     shn_mod_menuopen(_($conf['mod_cr_name']));
     shn_mod_menuitem("default", _("Home"), $module);
+    shn_mod_menuitem("search", _("Search"), $module);
+    /*
     shn_sub_mod_menuopen(_("Search"));
     shn_mod_menuitem("srch", _("Search by name"), $module);
     shn_mod_menuitem("srch_address", _("Search by address"), $module);
     shn_sub_mod_menuclose();
+     * 
+     */
     shn_mod_menuitem("acmp", _("Add Shelter"), $module);
     shn_mod_menuitem("ecmp", _("Edit Shelter"), $module);
     shn_sub_mod_menuopen(_("Reports"));
