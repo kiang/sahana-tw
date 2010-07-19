@@ -38,8 +38,11 @@ function shn_or_mainmenu() {
     shn_sub_mod_menuclose();
     shn_mod_menuitem("view_org", _("View and Edit"), $module);
     shn_sub_mod_menuopen(_("Reports"));
+    /*
     shn_mod_menuitem("drill_report_loc", _("Drill down Location Coverage"), $module);
     shn_mod_menuitem("drill_report_org", _("Drill down Organization Coverage"), $module);
+     * 
+     */
     //  shn_mod_menuitem("org_incident","Organizations by Incident",$module);
     shn_mod_menuitem("org_sector", _("Organizations by Sector"), $module);
     shn_sub_mod_menuclose();

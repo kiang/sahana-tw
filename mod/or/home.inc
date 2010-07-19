@@ -65,25 +65,7 @@ if (!$res->EOF) {
 
 </ul>
 <br />
-
-
 </div>
-	<?php
-if ($org_no > 0) {
-?>
-<div align=center><?php echo _('Service Coverage') ?></div>
-<br />
-<div align=center><?php
-    print ("<table align=center><tr><td>");
-    shn_chart_display("shn_or_service_coverage_chart");
-    print ("</td></tr></table><p></p>");
-?></div>
-<?php
-}
-?>
-
-
-
 <div><a href="index.php?mod=or&act=view_org">
 <center><strong> <?php echo $org_no ?>
 </strong>
