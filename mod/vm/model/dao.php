@@ -1468,7 +1468,13 @@ class DAO {
         }
         //get only unassigned
         if ($unassigned) {
-            $query.= " AND person_uuid.p_uuid NOT IN (SELECT DISTINCT p_uuid FROM vm_vol_assignment_active) ";
+            $pidQuery = 'SELECT DISTINCT VA.p_uuid FROM vm_vol_assignment_active AS VA';
+            if(!empty($end_date) && !empty($start_date)) {
+                $pidQuery .= ' INNER JOIN vm_projects_active AS VP ON VP.proj_id = VA.proj_id WHERE';
+                $pidQuery .= "(VP.start_date >= '{$start_date}' AND VP.start_date <= '{$end_date}')
+                OR (VP.end_date >= '{$start_date}' AND VP.end_date <= '{$end_date}')";
+            }
+            $query.= " AND person_uuid.p_uuid NOT IN ($pidQuery) ";
         }
         //if we are assigning to a project, exclude results from the project we are assigning to
         if ($assigning_proj != null) {

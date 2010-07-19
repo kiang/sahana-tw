@@ -233,8 +233,8 @@ class VolunteerController extends VolunteerView implements Controller {
                 //print_r($getvars);
                 $vol_name = $getvars['vol_name']; //name to search by
                 $vol_id = $getvars['vol_iden']; //Identification number to search by
-                $loose = $getvars['loose'] == 'true'; //true to use loose name matching
-                $soundslike = $getvars['soundslike'] == 'true'; //true to use soundex name matching
+                $loose = false;
+                $soundslike = false;
                 $start_date = $getvars['start_date']; //availability start
                 $end_date = $getvars['end_date']; //availability end
                 $skills_matching = ($getvars['skills_matching'] == 'and_skills') ? VM_SKILLS_ALL : VM_SKILLS_ANY; //search for all or any of the skills present

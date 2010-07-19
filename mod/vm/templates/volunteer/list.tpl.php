@@ -214,7 +214,7 @@
 		{php}
 			add_warning(_('No volunteers were found. Please refine your criteria and try again'));
 			if($_REQUEST['vol_name'] != '' && !$advanced)
-				add_warning(_('Alternatively, you can try the') . '<a href="index.php?mod=vm&act=volunteer&vm_action=display_search&advanced=true">Advanced Search</a>,' . _('specifying \'Loose Name Matching\''));
+				add_warning(_('Alternatively, you can try the') . '<a href="index.php?mod=vm&act=volunteer&vm_action=display_search&advanced=true">Advanced Search</a>');
 		{/php}
 	{else}
 		<center>_("(none)")</center>

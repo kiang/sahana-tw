@@ -12,7 +12,6 @@
 <?php
     shn_form_text(_('Any ID Number:'),'vol_id','size="30"');
     shn_form_text(_('Name:'),'vol_name','size="30"');
-    shn_form_checkbox(_('Loose Name Matching') . ' <br />' . _('(May return many unrelated results)'), 'loose', null, array('value' => 'true'));
 	shn_form_fsclose();
 
 	shn_form_fsopen(_('Skills'));

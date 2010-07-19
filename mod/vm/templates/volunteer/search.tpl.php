@@ -29,11 +29,7 @@
     	shn_form_hidden(array(_('advanced') => 'true'));
 
     	shn_form_fsopen(_('Options'));
-	    	shn_form_checkbox(_('Loose Name Matching') . '<br />' . _('(May return many unrelated results)'), 'loose', ($_POST['loose']=='true')?'checked':'', array('value' => 'true'));
-	    	echo '<br /><br /><br />';
-	    	shn_form_checkbox(_('Find similar sounding names') . '<br />' . _('(May return many unrelated results)'), 'soundslike', ($_POST['soundslike']=='true')?'checked':'', array('value' => 'true'));
-	    	echo '<br /><br /><br />';
-	    	shn_form_checkbox(_('Show only unassigned'), 'unassigned', ($_POST['unassigned']=='true')?'checked':'', array('value' => 'true'));
+	    	shn_form_checkbox(_('Show only unassigned'), 'unassigned', ($_POST['unassigned']=='true')?'checked="checked"':'', array('value' => 'true'));
 		shn_form_fsclose();
 
 		shn_form_fsopen(_('Location'));
