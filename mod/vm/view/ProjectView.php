@@ -160,7 +160,19 @@ class ProjectView extends View {
         $this->displayProject($p, false);
         $this->engine->display('volunteer/assign_header.tpl.php');
         $this->engine->assign('proj_name', $p->info['name']);
-        $getvars = array_merge($_REQUEST, array('act' => 'volunteer', 'vm_action' => 'process_search', 'assigning' => true, 'proj_id' => $p->proj_id, 'positions' => $positions));
+        $getvars = array_merge($_REQUEST, array(
+            'act' => 'volunteer',
+            'vm_action' => 'process_search',
+            'assigning' => true,
+            'unassigned' => 'true',
+            'proj_id' => $p->proj_id,
+            'positions' => $positions));
+        if(empty($getvars['start_date']) && !empty($p->info['start_date'])) {
+            $getvars['start_date'] = $p->info['start_date'];
+        }
+        if(empty($getvars['end_date']) && !empty($p->info['end_date'])) {
+            $getvars['end_date'] = $p->info['end_date'];
+        }
         $vc = new VolunteerController();
         $vc->controlHandler($getvars);
     }

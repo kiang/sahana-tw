@@ -10,7 +10,7 @@
 			{/if}
 
 {* Volunteer's status *}
-			{if $showStatus && $view_auth >= VM_ACCESS_PARTIAL}
+			{if !$showAssignButton && $showStatus && $view_auth >= VM_ACCESS_PARTIAL}
 	            <td>_("Status")</td>
 	        {/if}
 
@@ -90,7 +90,7 @@
 			{/if}
 
 {* Volunteer's status *}
-        	{if $showStatus && $view_auth >= VM_ACCESS_PARTIAL}
+        	{if !$showAssignButton && $showStatus && $view_auth >= VM_ACCESS_PARTIAL}
 	            <td>
 	            	{php}
 	            		$num_projs = count($vol->proj_id);

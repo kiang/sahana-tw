@@ -1478,7 +1478,7 @@ class DAO {
         }
         //if we are assigning to a project, exclude results from the project we are assigning to
         if ($assigning_proj != null) {
-            $query.= " AND person_uuid.p_uuid NOT IN (SELECT p_uuid FROM vm_vol_assignment_active WHERE proj_id = '$assigning_proj') AND person_uuid.p_uuid NOT IN (SELECT p_uuid FROM vm_vol_assignment_active WHERE proj_id = '$assigning_proj' AND ptype_id = 'smgr') ";
+            $query.= " AND person_uuid.p_uuid NOT IN (SELECT p_uuid FROM vm_vol_assignment_active WHERE proj_id = '$assigning_proj')";
         }
         //get the results and format them into the resulting array
         $result = $this->getCurrentPage($query);
