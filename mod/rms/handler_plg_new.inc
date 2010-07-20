@@ -322,7 +322,9 @@ switch ($seq) {
         }
         add_confirmation(_("The Pledge was successfully added"));
         _shn_rms_view_pledge($_SESSION['rms_plg_id']);
-        print '<br />[ <a href="index.php?mod=rms">RMS Home</a> ] :: [ <a href="index.php?mod=rms&amp;act=plg_new">New Pledge</a> ]';
+        print '<br />[ <a href="index.php?mod=rms">' . _('RMS Home') . '</a> ]
+            :: [ <a href="stream.php?mod=rms&amp;act=plg_print&amp;plg_id=' . $_SESSION['rms_plg_id'] . '" target="_blank">' . _("Print this") . '</a> ]
+            :: [ <a href="index.php?mod=rms&amp;act=plg_new">' . _('New Pledge') . '</a> ]';
         break;
     }
 ?>
