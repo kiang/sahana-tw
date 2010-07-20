@@ -74,9 +74,11 @@ function _shn_cr_rpt_all() {
         $res_maincmp = $db->Execute($qdetails);
         $qcamp = "select * from camp_general where c_uuid='{$c_uuid}'";
         $res_camp = $db->Execute($qcamp);
-        $loc = $res_camp->fields['location_id'];
-        $qloc = "select * from location where loc_uuid='{$loc}'";
-        $res_loc = $db->Execute($qloc);
+        $locationName = '';
+        if(!empty($res_camp->fields['location_id'])) {
+            $locationName = _shn_cr_location_string($res_camp->fields['location_id']);
+        }
+        
         $type = $res_camp->fields['opt_camp_type'];
         $qtype = "select * from field_options where option_code='{$type}'";
         $res_type = $db->Execute($qtype);
@@ -85,7 +87,7 @@ function _shn_cr_rpt_all() {
 					<td><a href="index.php?mod=cr&act=ecmp&seq=view&cmp_id=<?php echo $res_camp->fields['c_uuid'] ?>"><?php echo $res_camp->fields['name'] ?></a></td>
 					<td><?php echo $res_type->fields['option_description'] ?></td>
   					<td><?php echo $res_camp->fields['address'] ?></td>
-  					<td><?php echo $res_loc->fields['name'] ?></td>
+  					<td><?php echo $locationName; ?></td>
     				<!--<td><?php echo $res_cmp->fields['family'] ?></td>-->
     				<td><?php echo $res_cmp->fields['men'] ?></td>
     				<td><?php echo $res_cmp->fields['women'] ?></td>
@@ -297,6 +299,7 @@ function _shn_cr_location_string($loc) {
     } else {
         $max = count($loc_arr) - 1;
         array_pop($loc_arr);
+        $location = '';
         for ($count = 0;$count < $max;$count++) {
             $x = array_pop($loc_arr);
             $q = "select name from location where loc_uuid='{$x}'";
