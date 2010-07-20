@@ -102,7 +102,7 @@ $receiptStatuses = array(
     'send_appreciation' => _("Need to send certificate of appreciation"),
 );
 foreach ($rs_arr as $r) {
-    $view_url = '<a href=index.php?mod=rms&amp;act=plg_receipt&amp;seq=view_plg&amp;plg_id=' . $r['plg_uuid'] . '>' . _("Details") . '</a>';
+    $view_url = '<a href="index.php?mod=rms&amp;act=plg_ls&amp;seq=view_plg&amp;plg_id=' . $r['plg_uuid'] . '" target="_blank">' . _("Details") . '</a>';
     if (!empty($r['organization'])) {
         $r['donor_name'] = $r['donor_name'] . ' ( ' . $r['organization'] . ' )';
     }
@@ -165,7 +165,7 @@ if (1 <= count($rs_arr)) {
         print $page_list;
     echo '<form method="POST" action="index.php?mod=rms&amp;act=plg_receipt&amp;page_no=' . $page . '">';
     shn_html_table($tb_res, $th_res, null, array('class' => 'wide'));
-    echo '<input type="submit"></form>';
+    echo '<input type="submit" value="' . _('Save') . '"></form>';
 } else {
     _shn_html_print_alert(_("There are no Pledges on the Database that matches your criteria"));
 }
