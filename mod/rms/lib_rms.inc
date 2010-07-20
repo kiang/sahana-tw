@@ -883,12 +883,14 @@ function _shn_rms_view_plgitems($plg_id) {
 }
 function _shn_rms_view_pledge($plg_id) {
     $receiptStatuses = array(
+            '' => '',
             'receipt_taken' => _("Receipt taken"),
             'send_receipt' => _("Need to send receipt"),
             'appreciation_taken' => _("Certificate of appreciation taken"),
             'send_appreciation' => _("Need to send certificate of appreciation"),
         );
     $statuses = array(
+            '' => '',
             'not_confirmed' => _("Not Confirmed"),
             'confirmed' => _("Confirmed"),
             'delivered' => _("Delivered"),
