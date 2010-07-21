@@ -727,6 +727,35 @@ function shn_mpr_addmp_commit() {
     if (isset($_SESSION['mpr_add']['entry']['opt_religion'])) $insert_array['opt_religion'] = $_SESSION['mpr_add']['entry']['opt_religion'];
     if (isset($_SESSION['mpr_add']['entry']['opt_race'])) $insert_array['opt_race'] = $_SESSION['mpr_add']['entry']['opt_race'];
     shn_db_insert($insert_array, 'person_details', true, 'p_uuid');
+    /*
+     * Deal with the status Other(oth)
+     */
+    if($_SESSION['mpr_add']['entry']['opt_status'] == 'oth') {
+        if(!empty($_SESSION['mpr_add']['entry']['status_name'])) {
+            // 48 ~ 126
+            $res = $global['db']->Execute('SELECT option_code FROM field_options
+                WHERE field_name = \'opt_status\' AND option_code != \'oth\'
+                AND option_code LIKE \'o%\'
+                ORDER BY option_code DESC LIMIT 1');
+            if(!empty($res->fields['option_code'])) {
+                $optionCode = $res->fields['option_code'];
+                $asciiNumber = ord(substr($optionCode, -1, 1));
+                if($asciiNumber < 126) {
+                    $optionCode = substr($optionCode, 0, 2) . chr($asciiNumber + 1);
+                } else {
+                    $optionCode = 'o' . ord(substr($optionCode, 1, 1)) . '0';
+                }
+            } else {
+                $optionCode = 'o00';
+            }
+            shn_db_insert(array(
+                'field_name' => 'opt_status',
+                'option_code' => $optionCode,
+                'option_description' => $_SESSION['mpr_add']['entry']['status_name'],
+            ), 'field_options');
+            $_SESSION['mpr_add']['entry']['opt_status'] = $optionCode;
+        }
+    }
     //reset $insert_array
     $insert_array = array();
     $insert_array['p_uuid'] = $_SESSION['mpr_add']['entry']['p_uuid'];

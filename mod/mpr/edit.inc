@@ -727,6 +727,35 @@ function shn_mpr_editmp_commit() {
         $insert_array['opt_contact_type'] = 'zip';
     }
     shn_db_insert($insert_array, 'contact', true, 'pgoc_uuid');
+    /*
+     * Deal with the status Other(oth)
+     */
+    if($_SESSION['mpr_edit']['entry']['opt_status'] == 'oth') {
+        if(!empty($_SESSION['mpr_edit']['entry']['status_name'])) {
+            // 48 ~ 126
+            $res = $global['db']->Execute('SELECT option_code FROM field_options
+                WHERE field_name = \'opt_status\' AND option_code != \'oth\'
+                AND option_code LIKE \'o%\'
+                ORDER BY option_code DESC LIMIT 1');
+            if(!empty($res->fields['option_code'])) {
+                $optionCode = $res->fields['option_code'];
+                $asciiNumber = ord(substr($optionCode, -1, 1));
+                if($asciiNumber < 126) {
+                    $optionCode = substr($optionCode, 0, 2) . chr($asciiNumber + 1);
+                } else {
+                    $optionCode = 'o' . ord(substr($optionCode, 1, 1)) . '0';
+                }
+            } else {
+                $optionCode = 'o00';
+            }
+            shn_db_insert(array(
+                'field_name' => 'opt_status',
+                'option_code' => $optionCode,
+                'option_description' => $_SESSION['mpr_edit']['entry']['status_name'],
+            ), 'field_options');
+            $_SESSION['mpr_edit']['entry']['opt_status'] = $optionCode;
+        }
+    }
     //flush and refill baby
     $global['db']->Execute("DELETE FROM person_status WHERE p_uuid = '{$_SESSION['mpr_edit']['entry']['p_uuid']}'");
     //reset $insert_array
