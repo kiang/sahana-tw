@@ -316,7 +316,7 @@ function shn_get_range() {
  * @access public
  * @return void
  */
-function shn_location_jscript($start, $to, $parent = false) {
+function shn_location_jscript($start, $to, $parent = false, $extra = '') {
     global $global;
     $fetch_server = "xml.php?";
 ?>           
@@ -550,7 +550,7 @@ function shn_location_jscript($start, $to, $parent = false) {
     var y=document.getElementById("loc_camp");
     if(y)
         y.style.display='none';
-
+<?php echo $extra; ?>
 </script>
 <?php
 }
@@ -583,6 +583,11 @@ function shn_location_init_jscript($start, $end) {
  */
 function shn_location($range = null, $value = null, $parent = null, $extra_opts = null) {
     global $global;
+    if(isset($extra_opts['type'])) {
+        $type = $extra_opts['type'];
+    } else {
+        $type = 'loc_manually';
+    }
     if (isset($extra_opts['req']) && $extra_opts['req'] == true) {
         shn_form_label(null, "Please Select a location", array("req" => true));
         echo '<br />';
@@ -633,7 +638,9 @@ function shn_location($range = null, $value = null, $parent = null, $extra_opts 
         if ($count > 0) {
             $options = array("loc_camp" => _("Select a Camp/Shelter"));
             $select_opts = 'onclick=radio_click("loc_camp")';
-            shn_form_radio($options, null, "loc", $select_opts);
+            shn_form_radio($options, null, "loc", $select_opts, array(
+                'value' => $type,
+            ));
         }
         $camps = _shn_location_camp_list();
         $options = array();
@@ -655,12 +662,17 @@ function shn_location($range = null, $value = null, $parent = null, $extra_opts 
         if ($count > 0) {
             $options = array("loc_org" => _("Select an Organization"));
             $select_opts = 'onclick=radio_click("loc_org")';
-            shn_form_radio($options, null, "loc", $select_opts);
+            shn_form_radio($options, null, "loc", $select_opts, array(
+                'value' => $type,
+            ));
         }
         $options = array();
         $options[0] = "";
         foreach ($orgs as $org => $org_details) {
             $options[$org_details["id"]] = $org_details["name"];
+        }
+        if (!empty($extra_opts["org_id"])) {
+            $extra_opts["value"] = $extra_opts["org_id"];
         }
         echo '<div id="loc_org">';
         $select_opts = 'onChange=update_location(this.options[this.selectedIndex].value,"poc")';
@@ -669,7 +681,9 @@ function shn_location($range = null, $value = null, $parent = null, $extra_opts 
     }
     if ($count > 0) {
         $options = array("loc_manually" => _("Select a Location"));
-        shn_form_radio($options, null, "loc");
+        shn_form_radio($options, null, "loc", '', array(
+                'value' => $type,
+            ));
     }
     shn_form_hidden(array('levels' => $range['end']));
     $start = '1';
@@ -684,7 +698,7 @@ function shn_location($range = null, $value = null, $parent = null, $extra_opts 
             $keepparent = true;
         }
     }
-    shn_location_jscript($start, $range["end"], $keepparent);
+    shn_location_jscript($start, $range["end"], $keepparent, 'radio_click(\'' . $type . '\')');
 }
 /**
  * Retrieves a list of camps

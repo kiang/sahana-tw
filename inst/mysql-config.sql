@@ -13,11 +13,14 @@ INSERT INTO field_options VALUES('opt_id_type','dln','Driving License Number');
 INSERT INTO field_options VALUES('opt_id_type','oth','Other');
 
 -- PERSON STATUS VALUES
-INSERT INTO field_options VALUES ('opt_status','ali','Alive & Well');
+INSERT INTO field_options VALUES ('opt_status','ali','Alive and placed');
 INSERT INTO field_options VALUES ('opt_status','mis','Missing');
-INSERT INTO field_options VALUES ('opt_status','inj','Injured');
+INSERT INTO field_options VALUES ('opt_status','inj','Injured and placed');
 INSERT INTO field_options VALUES ('opt_status','dec','Deceased');
-
+INSERT INTO field_options VALUES ('opt_status','anp','Alive and not placed');
+INSERT INTO field_options VALUES ('opt_status','inh','Injured and in hospital');
+INSERT INTO field_options VALUES ('opt_status','inp','Injured and not placed');
+INSERT INTO field_options VALUES ('opt_status','oth','Other');
 
 -- PERSON GENDER 
 -- INSERT INTO field_options VALUES ('opt_gender','unk','Unknown');

@@ -489,6 +489,8 @@ CREATE TABLE person_status (
     updated TIMESTAMP DEFAULT NOW(),
     isvictim BOOL DEFAULT 1,
     istracker BOOL DEFAULT 0,
+    location_type VARCHAR(32),
+    location_value VARCHAR(32),
     PRIMARY KEY (p_uuid)
 );
 

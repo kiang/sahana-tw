@@ -15,6 +15,7 @@
  * @subpackage mpr
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  */
+include_once ($global['approot'] . "/inc/lib_location.inc");
 /**
  * Generate Tabbs
  *
@@ -52,11 +53,12 @@ function shn_generate_tabs($selected = '') {
 function shn_mpr_editmp_load($p_uuid) {
     global $global;
     //@todo: check existance
-    $_SESSION['mpr_edit']['entry']['p_uuid'] = $p_uuid;
+    
     //Status
-    $sql = "SELECT opt_status FROM person_status WHERE p_uuid = '$p_uuid'";
+    $sql = "SELECT * FROM person_status WHERE p_uuid = '$p_uuid'";
     $rs = $global['db']->Execute($sql);
-    $_SESSION['mpr_edit']['entry']['opt_status'] = $rs->fields[0];
+    $_SESSION['mpr_edit']['entry'] = $rs->fields;
+    $_SESSION['mpr_edit']['entry']['p_uuid'] = $p_uuid;
     //identity_to_person
     //identity card
     $sql = "SELECT serial FROM identity_to_person WHERE p_uuid = '$p_uuid' AND opt_id_type = 'nic'";
@@ -138,12 +140,51 @@ function shn_mpr_editmp_load($p_uuid) {
 function shn_mpr_editmp_entry($errors = false) {
     //if($errors)
     // display_errors();
+    global $global, $conf;
     shn_form_fopen("editmp", null, array('enctype' => 'enctype="multipart/form-data"', 'req_message' => true));
     shn_form_hidden(array('seq' => 'entry'));
     shn_form_fsopen(_('Status'));
-    shn_form_opt_select('opt_status', _('Change the status'), '', array(
-        'value' => isset($_SESSION['mpr_edit']['entry']['opt_status']) ? $_SESSION['mpr_edit']['entry']['opt_status'] : ''));
+    $extra_opts = array(
+        'value' => 'ali',
+    );
+    if(!empty($_SESSION['mpr_edit']['entry']['opt_status'])) {
+        $extra_opts['value'] = $_SESSION['mpr_edit']['entry']['opt_status'];
+    }
+    shn_form_opt_select('opt_status', _('Change the status'), 'id="mprOptStatus"', $extra_opts);
     shn_form_fsclose();
+    /* This hack should be integrated with
+    the lib_location
+    */
+    //Starts
+    $i = $conf['mod_mpr_location_lower_limit'];
+    while ((!isset($_POST[$i])) && $i > $conf['mod_mpr_location_upper_limit']) $i--;
+    //Ends
+    $selected_loc_id = isset($_POST[$i]) ? $_POST[$i] : '';
+    $extra_opts = array(
+        'camps' => true,
+        'org' => true,
+    );
+    if(!empty($_SESSION['mpr_edit']['entry']['location_type'])) {
+        $extra_opts['type'] = $_SESSION['mpr_edit']['entry']['location_type'];
+        switch($_SESSION['mpr_edit']['entry']['location_type']) {
+            case 'loc_camp':
+                $extra_opts['camp_id'] = $_SESSION['mpr_edit']['entry']['location_value'];
+                break;
+            case 'loc_org':
+                $extra_opts['org_id'] = $_SESSION['mpr_edit']['entry']['location_value'];
+                break;
+            case 'loc_manually':
+                if(empty($selected_loc_id)) {
+                    $selected_loc_id = $_SESSION['mpr_edit']['entry']['location_value'];
+                }
+                break;
+        }
+    }
+    $range['start'] = $conf['mod_mpr_location_upper_limit'];
+    $range['end'] = $conf['mod_mpr_location_lower_limit'];
+    echo '<fieldset id="locationToPlace" style="display:none;"><legend>' . _('Select Missing Person\'s Origin') . '</legend>';
+    shn_location($range, $selected_loc_id, null, $extra_opts);
+    echo '</fieldset>';
     shn_form_fsopen(_("Basic Details"));
 ?>
 <p><?php echo _('Please enter any of the following details on the person'); ?>:</p>
@@ -197,18 +238,6 @@ function shn_mpr_editmp_entry($errors = false) {
     shn_form_text(_('Mobile'), 'mobile', 'size="10"', array(
         'value' => isset($_SESSION['mpr_edit']['entry']['mobile']) ? $_SESSION['mpr_edit']['entry']['mobile'] : ''));
     shn_form_fsclose();
-    global $global;
-    global $conf;
-    include_once ($global['approot'] . "/inc/lib_location.inc");
-    /* This hack should be integrated with
-    the lib_location
-    */
-    //Starts
-    $i = $conf['mod_mpr_location_lower_limit'];
-    while ((!isset($_POST[$i])) && $i > $conf['mod_mpr_location_upper_limit']) $i--;
-    //Ends
-    $selected_loc_id = (isset($_POST[$i]) ? $_POST[$i] : (isset($_SESSION['mpr_edit']['entry']['location_id']) ? $_SESSION['mpr_edit']['entry']['location_id'] : ''));
-    _shn_location_form($conf['mod_mpr_location_upper_limit'], $conf['mod_mpr_location_lower_limit'], $selected_loc_id);
     shn_form_fsopen(_("Physical Details"));
     shn_form_opt_select("opt_eye_color", _("Eye Colour"), '', array(
         'value' => isset($_SESSION['mpr_edit']['entry']['opt_eye_color']) ? $_SESSION['mpr_edit']['entry']['opt_eye_color'] : ''));
@@ -235,6 +264,31 @@ function shn_mpr_editmp_entry($errors = false) {
     shn_form_fsclose();
     shn_form_submit(_('Next'));
     shn_form_fclose();
+    echo '<script type="text/javascript">
+        $(function() {
+            $(\'#mprOptStatus\').change(function() {
+                var selected = $(this).val();
+                switch(selected) {
+                    case \'oth\':
+                        if($(\'#statusName\').length == 0) {
+                            $(this).after(\'<input type="text" name="status_name" id="statusName"></input>\');
+                        }
+                        $(\'#locationToPlace\').hide();
+                        $(\'#statusName\').show();
+                        break;
+                    case \'ali\':
+                    case \'inj\':
+                    case \'inh\':
+                        $(\'#locationToPlace\').show();
+                        $(\'#statusName\').hide();
+                        break;
+                    default:
+                        $(\'#locationToPlace\').hide();
+                        $(\'#statusName\').hide();
+                }
+            }).trigger(\'change\');
+        })
+        </script>';
 }
 /* }}} */
 /* {{{ Edit Validation */
@@ -673,13 +727,46 @@ function shn_mpr_editmp_commit() {
         $insert_array['opt_contact_type'] = 'zip';
     }
     shn_db_insert($insert_array, 'contact', true, 'pgoc_uuid');
-    $insert_array = null;
-    $update_array['p_uuid'] = $_SESSION['mpr_edit']['entry']['p_uuid'];
     //flush and refill baby
-    $global['db']->Execute("DELETE FROM person_status WHERE p_uuid = '{$update_array['p_uuid']}'");
+    $global['db']->Execute("DELETE FROM person_status WHERE p_uuid = '{$_SESSION['mpr_edit']['entry']['p_uuid']}'");
+    //reset $insert_array
+    $insert_array = array();
+    $insert_array['p_uuid'] = $_SESSION['mpr_edit']['entry']['p_uuid'];
     //Insert Into person_status mis
-    $update_array['opt_status'] = $_SESSION['mpr_edit']['entry']['opt_status'];
-    shn_db_insert($update_array, 'person_status');
+    $insert_array['opt_status'] = $_SESSION['mpr_edit']['entry']['opt_status'];
+    $insert_array['isvictim'] = 'TRUE';
+    if(!empty($_SESSION['mpr_edit']['entry']['loc'])) {
+        switch($_SESSION['mpr_edit']['entry']['loc']) {
+            case 'loc_camp':
+                if(!empty($_SESSION['mpr_edit']['entry']['camps'])) {
+                    $insert_array['location_type'] = 'loc_camp';
+                    $insert_array['location_value'] = $_SESSION['mpr_edit']['entry']['camps'];
+                }
+                break;
+            case 'loc_org':
+                if(!empty($_SESSION['mpr_edit']['entry']['orgs'])) {
+                    $insert_array['location_type'] = 'loc_org';
+                    $insert_array['location_value'] = $_SESSION['mpr_edit']['entry']['orgs'];
+                }
+                break;
+            case 'loc_manually':
+                if(!empty($_SESSION['mpr_edit']['entry']['levels'])) {
+                    $_POST["levels"] = $_SESSION['mpr_edit']['entry']['levels'];
+                    for($i = 1; $i <=4; $i++) {
+                        if(!empty($_SESSION['mpr_edit']['entry']['loc_select_' . $i])) {
+                            $_POST['loc_select_' . $i] = $_SESSION['mpr_edit']['entry']['loc_select_' . $i];
+                        }
+                    }
+                    $location = shn_location_get_form_submit_loc();
+                    if($location != -1) {
+                        $insert_array['location_type'] = 'loc_manually';
+                        $insert_array['location_value'] = $location;
+                    }
+                }
+                break;
+        }
+    }
+    shn_db_insert($insert_array, 'person_status', true, 'p_uuid');
     //reset $update_array
     $update_array = null;
     //Insert Image if image save handler is set to database
