@@ -1,6 +1,6 @@
 <?php
 /* $Id: list_found.inc,v 1.4.26.2 2008/05/20 09:20:44 ishanul Exp $ */
-/** 
+/**
  * List Missing Persons with paging support
  *
  * PHP version 4 and 5
@@ -18,72 +18,57 @@
 ?>
 
 <div id="home_recent">
-<h1><?php echo _('Found People'); ?></h1>
-<?php
-global $global;
-global $conf;
-require ($global['approot'] . 'mod/mpr/mpr_lib.inc');
-$limit = $conf['mod_mpr_pictures_per_page'];
-$type = "found";
-$offset = isset($_GET['offset']) ? $_GET['offset'] : 0;
-$count = shn_mpr_home_show_mpr($type, $limit, $offset);
-if ($count > $limit) {
-    $tmp = $count % $limit;
-    if ($tmp > 0) $no_of_pages_required = floor($count / $limit) + 1;
-    else $no_of_pages_required = round($count / $limit);
-    //print $no_of_pages_required;
-    if ($offset > 0) {
-        $previous = $offset - $limit;
-?>
-	<a href="index.php?mod=mpr&act=list_found&offset=<?=$next
-?>" class="hideprint">Previous</a>
-<?php
+    <h1><?php echo _('Found People'); ?></h1>
+    <?php
+    global $global;
+    global $conf;
+    require ($global['approot'] . 'mod/mpr/mpr_lib.inc');
+    //$limit = $conf['mod_mpr_pictures_per_page'];
+    $limit = 20;
+    $type = "found";
+    $offset = isset($_GET['offset']) ? $_GET['offset'] : 0;
+    $count = shn_mpr_search_process($type, $limit, $offset);
+    if ($count > $limit) {
+        $tmp = $count % $limit;
+        if ($tmp > 0)
+            $no_of_pages_required = floor($count / $limit) + 1;
+        else
+            $no_of_pages_required = round($count / $limit);
+        if ($offset > 0) {
+            $previous = $offset - $limit;
+            echo '<a href="index.php?mod=mpr&act=list_found&offset=' . $previous .
+            '" class="hideprint">' . _('Previous') . '</a>';
+        } else {
+            $previous = 0;
+        }
+        for ($i = 0; $i < $no_of_pages_required; $i++) {
+            echo ' <a href="index.php?mod=mpr&act=list_found&offset=' . ($limit * $i) .
+            '" class="hideprint">' . ($i + 1) . '</a> ';
+        }
+        if ($count > $offset + $limit) {
+            $next = $limit + $offset;
+            echo '<a href="index.php?mod=mpr&act=list_found&offset=' . $next .
+            '" class="hideprint">' . _('Next') . '</a>';
+        } else {
+            $next = 0;
+        }
+        shn_mpr_search_result_list($_SESSION['result']);
+        if ($offset > 0) {
+            echo '<a href="index.php?mod=mpr&act=list_found&offset=' . $previous .
+            '" class="hideprint">' . _('Previous') . '</a>';
+        }
+        for ($i = 0; $i < $no_of_pages_required; $i++) {
+            echo ' <a href="index.php?mod=mpr&act=list_found&offset=' . ($limit * $i) .
+            '" class="hideprint">' . ($i + 1) . '</a> ';
+        }
+        if ($next > 0) {
+            echo '<a href="index.php?mod=mpr&act=list_found&offset=' . $next .
+            '" class="hideprint">' . _('Next') . '</a>';
+        }
+    } else {
+        shn_mpr_search_result_list($_SESSION['result']);
     }
-    for ($i = 0;$i < $no_of_pages_required;$i++) {
-?>
-<!--<div class="hide">-->
-<a href="index.php?mod=mpr&act=list_found&offset=<?=$limit * $i ?>" class="hideprint"><?=$i + 1 ?></a>
-
-<?php
-    }
-    if ($count >= $offset + $limit) $next = $limit + $offset;
-    else $next = 0;
-?>
-
-<a href="index.php?mod=mpr&act=list_found&offset=<?=$next
-?>" class="hideprint">Next</a>
-
-<?php
-    shn_mpr_search_show_verticle($_SESSION['result']);
-    if ($offset > 0) {
-        $previous = $offset - $limit;
-?>
-	<a href="index.php?mod=mpr&act=list_found&offset=<?=$next
-?>" class="hideprint">Previous</a>
-<?php
-    }
-    for ($i = 0;$i < $no_of_pages_required;$i++) {
-?>
-<a href="index.php?mod=mpr&act=list_found&offset=<?=$limit * $i ?>" class="hideprint"><?=$i + 1 ?></a>
-
-<?php
-    }
-?>
-<a href="index.php?mod=mpr&act=list_found&offset=<?=$next
-?>" class="hideprint">Next</a>
-
-<?php
-} else {
-    shn_mpr_search_show_verticle($_SESSION['result']);
-}
-print '<BR/><BR/>';
-?>
-
-<input type="button"  value="Print Current Page" onClick="self.print()" class="hideprint"/>
-  
- </div>
-  
-
-
-
-
+    echo '<br /><br />';
+    echo '<input type="button"  value="' . _('Print Current Page') . '" onClick="self.print()" class="hideprint"/>';
+    ?>
+</div>

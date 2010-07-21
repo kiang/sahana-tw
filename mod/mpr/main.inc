@@ -63,6 +63,7 @@ function shn_mpr_mainmenu() {
     shn_mod_menuitem("list_found", _("List Found People"), $module);
     shn_mod_menuitem("list_injured", _("List Injured People"), $module);
     shn_mod_menuitem("list_deceased", _("List Deceased People"), $module);
+    shn_mod_menuitem("list_other", _("List Other People"), $module);
     //  shn_mod_menuitem("org_incident","Organizations by Incident",$module);
     // shn_mod_menuitem("org_sector","Organizations by Sector",$module);
     shn_sub_mod_menuclose();
@@ -104,6 +105,10 @@ function shn_mpr_list_injured() {
 function shn_mpr_list_deceased() {
     global $global;
     require ($global['approot'] . 'mod/mpr/list_deceased.inc');
+}
+function shn_mpr_list_other() {
+    global $global;
+    require ($global['approot'] . 'mod/mpr/list_other.inc');
 }
 /* }}} */
 /* {{{ Action: Tmp Manage Image*/

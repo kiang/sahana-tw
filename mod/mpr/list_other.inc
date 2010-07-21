@@ -17,14 +17,14 @@
  */
 ?>
 <div id="home_recent">
-    <h1><?php echo _('Missing People'); ?></h1>
+    <h1><?php echo _('Other People'); ?></h1>
     <?php
     global $global;
     global $conf;
     require ($global['approot'] . 'mod/mpr/mpr_lib.inc');
     //$limit = $conf['mod_mpr_pictures_per_page'];
     $limit = 20;
-    $type = "missing";
+    $type = "other";
     $offset = isset($_GET['offset']) ? $_GET['offset'] : 0;
     $count = shn_mpr_search_process($type, $limit, $offset);
     if ($count > $limit) {

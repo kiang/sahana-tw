@@ -139,3 +139,94 @@ function shn_mpr_home_show_mpr($type = "missing", $limit = 5, $offset = 0) {
     }
     return $count;
 }
+
+function shn_mpr_search_process($type = "missing", $limit = 5, $offset = 0) {
+    global $global;
+    $fields = 'pu.p_uuid, pu.full_name, pd.opt_gender, foa.option_description AS age,
+        ps.location_type, ps.location_value, fos.option_description AS status';
+    $sql = 'SELECT %s FROM person_uuid AS pu
+        INNER JOIN person_details AS pd ON pd.p_uuid = pu.p_uuid
+        INNER JOIN person_status AS ps ON ps.p_uuid = pu.p_uuid
+        INNER JOIN resource_to_incident ri ON ri.x_uuid = pu.p_uuid
+        LEFT JOIN field_options AS fos ON fos.option_code = ps.opt_status
+            AND fos.field_name = \'opt_status\'
+        LEFT JOIN field_options AS foa ON foa.option_code = pd.opt_age_group
+            AND foa.field_name = \'opt_age_group\'
+        WHERE ri.incident_id = \'' . $_SESSION['user_pref_ims_incident_id'] . '\'';
+    switch($type) {
+        case 'found':
+            $sql .= ' AND ps.opt_status IN (\'inj\',\'inh\',\'inp\',\'ali\',\'anp\')';
+            break;
+        case 'injured':
+            $sql .= ' AND ps.opt_status IN (\'inj\',\'inh\',\'inp\')';
+            break;
+        case 'deceased':
+            $sql .= ' AND ps.opt_status = \'dec\'';
+            break;
+        case 'other':
+            $sql .= ' AND ps.opt_status NOT IN (\'ali\',\'anp\',\'inj\',\'inh\',
+                \'inp\',\'mis\',\'dec\')';
+            break;
+        case 'missing':
+        default:
+            $sql .= ' AND ps.opt_status = \'mis\'';
+    }
+    $sql .= " ORDER BY pu.p_uuid DESC";
+    $rs = $global['db']->SelectLimit(sprintf($sql, $fields), $limit, $offset);
+    if ($rs) {
+        $arr = $rs->GetAll();
+        foreach($arr AS $key => $item) {
+            if($item['opt_gender'] == 'mal' || $item['opt_gender'] == 'M') {
+                $arr[$key]['opt_gender'] = _('Male');
+            } else {
+                $arr[$key]['opt_gender'] = _('Female');
+            }
+            switch($item['location_type']) {
+                case 'loc_camp':
+                    $rs = $global['db']->Execute('SELECT name FROM camp_general
+                        WHERE c_uuid = \'' . $item['location_value'] . '\'');
+                    $arr[$key]['location'] = $rs->fields['name'];
+                    break;
+                case 'loc_org':
+                    $rs = $global['db']->Execute('SELECT name FROM org_main
+                        WHERE o_uuid = \'' . $item['location_value'] . '\'');
+                    $arr[$key]['location'] = $rs->fields['name'];
+                    break;
+                case 'loc_manually':
+                    $rs = $global['db']->Execute('SELECT name FROM location
+                        WHERE loc_uuid = \'' . $item['location_value'] . '\'');
+                    $arr[$key]['location'] = $rs->fields['name'];
+                    break;
+                default:
+                    $arr[$key]['location'] = '--';
+            }
+        }
+        $_SESSION['result'] = $arr;
+    }
+    $rs1 = $global['db']->Execute(sprintf($sql, 'COUNT(*) AS count'));
+    $count = 0;
+    if(!empty($rs1->fields['count'])) {
+        $count = $rs1->fields['count'];
+    }
+    return $count;
+}
+
+function shn_mpr_search_result_list($details) {
+    if(!empty($details)) {
+        echo '<br /><br /><table style="width: 90%; margin: auto;">';
+        echo '<tr><td><strong>' . _('Full name') . '</strong></td>
+            <td><strong>' . _('Gender') . '</strong></td>
+            <td><strong>' . _('Age Group') . '</strong></td>
+            <td><strong>' . _('Location') . '</strong></td>
+            <td><strong>' . _('Status') . '</strong></td></tr>';
+        foreach($details AS $item) {
+            echo '<tr><td><a href="index.php?mod=mpr&act=editmp&id=' .
+            $item['p_uuid'] . '">' . $item['full_name'] . '</a></td>
+            <td>' . $item['opt_gender'] . '</td>
+            <td>' . $item['age'] . '</td>
+            <td>' . $item['location'] . '</td>
+            <td>' . $item['status'] . '</td></tr>';
+        }
+        echo '</table><br />';
+    }
+}
