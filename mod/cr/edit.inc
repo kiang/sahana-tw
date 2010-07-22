@@ -110,7 +110,7 @@ function shn_cr_all_view() {
     $editid = $_REQUEST['cmp_id'];
     $_SESSION['editid'] = $editid;
     _shn_cr_get_session($editid);
-    shn_form_fopen(crch);
+    shn_form_fopen('crch');
     shn_form_fsopen(_("General Details"));
     shn_form_hidden(array('seq' => 'show'));
     $sql = "SELECT option_description FROM field_options WHERE field_name = 'opt_camp_type' AND option_code = '{$_SESSION['opt_camp_type']}'";
@@ -151,15 +151,22 @@ function shn_cr_all_view() {
     include $global['approot'] . "/mod/or/lib_or.inc";
     //-----------------------------------------
     shn_form_label(_("Address"), $_SESSION['camp_address']);
-    //Starts
-    $i = 1 - 1;
-    while ($i < 5) {
-        $i++;
-        $sql = " SELECT location.name , field_options.option_description FROM location  INNER JOIN field_options ON field_options.option_code = location.opt_location_type  WHERE location.opt_location_type = '$i' AND  location.loc_uuid = '{$_SESSION['opt_location_type']}' ";
-        $result = $global['db']->GetRow($sql);
-        shn_form_label($result['option_description'], $result['name']);
+    $leaf = $_SESSION['opt_location_type'];
+    $sql = 'SELECT location.name, location.parent_id, field_options.option_description
+            FROM location
+            INNER JOIN field_options ON field_options.option_code = location.opt_location_type
+            WHERE location.loc_uuid = \'%s\'';
+    $counter = 0;
+    $result = array(
+        'parent_id' => '1'
+    );
+    while(!empty($result['parent_id'])) {
+        $result = $global['db']->GetRow(sprintf($sql, $leaf));
+        if(!empty($result)) {
+            shn_form_label($result['option_description'], $result['name']);
+            $leaf = $result['parent_id'];
+        }
     }
-    //Ends
     shn_form_fsclose();
     //shn_location_form_view(1,4,$_SESSION['opt_location_type']);
     shn_form_fsopen(_("Contact Person Details"));
@@ -621,29 +628,3 @@ mark your location with a pointer.");
     shn_form_submit(_("Next"));
     shn_form_fclose();
 }
-//this is redundant function
-function _shn_cr_location_string($loc) {
-    global $global;
-    $db = $global["db"];
-    $loc_arr = array();
-    shn_get_parents($loc, $loc_arr);
-    if ($loc_arr[0] == 'unknown') {
-        //shn_form_label(_("Organization Location"),"Unknown");
-        
-    } else {
-        $max = count($loc_arr) - 1;
-        array_pop($loc_arr);
-        for ($count = 0;$count < $max;$count++) {
-            $x = array_pop($loc_arr);
-            $q = "select name from location where loc_uuid='{$x}'";
-            $res = $db->Execute($q);
-            if ($count == 0) {
-                $location = $location . $res->fields["name"];
-            } else {
-                $location = $location . " -->" . $res->fields["name"];
-            }
-        }
-    }
-    return $location;
-}
-?>
