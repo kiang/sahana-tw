@@ -64,11 +64,11 @@ function _shn_rms_req_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
     }
     //set order-by
     if ($odr_by != null && $odr_by != '') $sql.= " ORDER BY '$odr_by'";
-    else $sql.= " ORDER BY 'req_date'";
+    else $sql.= " ORDER BY req_date DESC";
     $rs = $db->PageExecute($sql, $rows, $page);
     $rs_arr = $rs->GetArray();
     //Result table hedder
-    $th_res[] = array(_("Requester"), _("Location"), _("Date"), _("status"), '');
+    $th_res[] = array(_("Recoder"), _("Location of request"), _("Date"), _("status"), '');
     foreach($rs_arr as $r) {
         $req_id = $r['req_uuid'];
         $reqstr = _shn_rms_get_requester($r['reqstr_uuid']);
@@ -117,13 +117,13 @@ function _shn_rms_req_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
         shn_html_td_open();
         shn_form_fopen("req_ls", null, array('req_message' => false, 'style' => 'form_blank'));
         shn_form_hidden(array('seq' => 'filter'));
-        shn_form_select($requesters, _("Requesters"), 'reqstr', 'onChange="submit(this);"', array('br' => false));
+        shn_form_select($requesters, _("Recoder"), 'reqstr', 'onChange="submit(this);"', array('br' => false));
         shn_form_fclose();
         shn_html_td_close();
         shn_html_td_open();
         shn_form_fopen("req_ls", null, array('req_message' => false, 'style' => 'form_blank'));
         shn_form_hidden(array('seq' => 'filter'));
-        shn_form_select($location, _("Locations"), 'loc_id', 'onChange="submit(this);"', array('br' => false));
+        shn_form_select($location, _("Location of request"), 'loc_id', 'onChange="submit(this);"', array('br' => false));
         shn_form_fclose();
         shn_html_td_close();
         shn_html_td_open();

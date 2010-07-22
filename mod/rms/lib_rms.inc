@@ -741,7 +741,7 @@ function _shn_rms_view_requester($reqstr_id, $summary = false) {
 ?>
 
 
-<strong><?php echo _('Requester Name'); ?></strong>
+<strong><?php echo _('Recoder'); ?></strong>
 :
 		<?=$requester['name'] ?>
 		<?php
@@ -781,7 +781,7 @@ function _shn_rms_view_location($loc_id, $summary = false) {
     $location = _shn_rms_get_name($loc_id);
 ?>
 
-<strong><?php echo _("Location") ?></strong>
+<strong><?php echo _("Location of request") ?></strong>
 :
 		<?=$location
 ?>

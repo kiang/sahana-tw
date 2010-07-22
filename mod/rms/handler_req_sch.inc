@@ -83,11 +83,11 @@ function _shn_rms_sch_getkeywords() {
         shn_form_fsopen(_('Select Criteria'));
         shn_form_hidden(array('seq' => 'get_keywords'));
         if ($_SESSION['isadmin'] == true) {
-            shn_form_select($reqstr_name, _("Requester"), 'reqstr_id', null, array('br' => false));
+            shn_form_select($reqstr_name, _("Recoder"), 'reqstr_id', null, array('br' => false));
             print '<br/>';
             print '<br/>';
         }
-        shn_form_select($location, _("Locations"), 'loc_id', null, array('br' => false));
+        shn_form_select($location, _("Location of request"), 'loc_id', null, array('br' => false));
         print '<br />';
         print '<br />';
         shn_form_select($priority, _("Priority"), 'priority', null, array('br' => false));
@@ -184,8 +184,7 @@ function _shn_rms_shn_get_schresults() {
     if ($stat != 'all') {
         $cat_qry2.= "AND req.status='$stat' ";
     }
-    //$res2 = $db->Execute($cat_qry2);
-    global $global;
+    $cat_qry2 .= ' ORDER BY req_date DESC';
     include_once $global['approot'] . "/inc/lib_paging.inc";
     $res2 = shn_paging_get_report($cat_qry2, '10', $headers, array('post' => true, 'return' => true));
     return $res2;
@@ -198,9 +197,9 @@ function _shn_rms_sch_results() {
     $tbl_hd_arr = array();
     if (!$results->EOF) {
         if ($_SESSION['isadmin'] == TRUE) {
-            $tbl_hd_arr[0] = array(_("Requester"),
+            $tbl_hd_arr[0] = array(_("Recoder"),
             //_("Category"),
-            _("Item"), _("Location"),
+            _("Item"), _("Location of request"),
             //_("Quantity"),
             _("Date"), _("Status"), _("Priority"), '');
         } else {
