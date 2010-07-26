@@ -319,7 +319,8 @@ function _shn_rms_mng_select_pledge_alternates() {
     $db = $global['db'];
     $sql = "SELECT item.item_id AS item_id, item.amount AS amount,
     item.state AS state, inventory.inv_uuid AS inv_uuid,
-    inventory.inventory_name AS inventory_name
+    inventory.inventory_name AS inventory_name,
+    item.catalog_id
     FROM ims_item_records as item, ims_inventory_records AS inventory
     WHERE item.inv_id=inventory.inv_uuid
     AND item.state='available' AND item.amount!=0
@@ -327,7 +328,7 @@ function _shn_rms_mng_select_pledge_alternates() {
         OR item.catalog_id IN (SELECT catalog_id FROM ims_alternate WHERE alternate = '{$itm}'))";
     $res = $db->Execute($sql);
     while (!$res == NULL && !$res->EOF) {
-        $sql2 = "SELECT name FROM ct_catalogue WHERE ct_uuid='$itm';";
+        $sql2 = "SELECT name FROM ct_catalogue WHERE ct_uuid='{$res->fields['catalog_id']}';";
         $res2 = $global['db']->Execute($sql2);
         $item_name = $res2->fields['name'];
         $amount = $res->fields['amount'];
