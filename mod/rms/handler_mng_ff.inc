@@ -134,9 +134,7 @@ function _shn_rms_mng_select_pledge() {
     $sql2 = "SELECT plg_uuid, item_uuid, quantity AS plg_qty, status
     FROM rms_plg_item
     WHERE status IN ('delivered', 'confirmed')
-    AND (item_uuid = '{$itm}'
-        OR item_uuid IN (SELECT alternate FROM ims_alternate WHERE catalog_id = '{$itm}')
-        OR item_uuid IN (SELECT catalog_id FROM ims_alternate WHERE alternate = '{$itm}'))";
+    AND item_uuid = '{$itm}'";
     $rs2 = $global['db']->Execute($sql2);
     if ($rs2 === false) {
         $msg = $global['db']->ErrorMsg();
@@ -204,16 +202,129 @@ function _shn_rms_mng_select_pledge() {
         <td><?php echo _('Status') ?></td>
         <td><?php echo _('Location') ?></td>
         <td><?php echo _("Action") ?></td>
-            
-            
     </thead>
     <tbody>
     <?php
-    $state = "available";
-    // $ignore_amount=0;
     $db = $global['db'];
-    $sql = "SELECT item.item_id AS item_id, item.amount AS amount, item.state AS state, inventory.inv_uuid AS inv_uuid, inventory.inventory_name AS inventory_name FROM ims_item_records as item, ims_inventory_records AS inventory WHERE item.inv_id=inventory.inv_uuid AND item.catalog_id='$itm' AND item.state='$state' AND item.amount!=0;";
+    $sql = "SELECT item.item_id AS item_id, item.amount AS amount,
+    item.state AS state, inventory.inv_uuid AS inv_uuid,
+    inventory.inventory_name AS inventory_name
+    FROM ims_item_records as item, ims_inventory_records AS inventory
+    WHERE item.inv_id=inventory.inv_uuid
+    AND item.catalog_id='$itm' AND item.state='available' AND item.amount!=0;";
     // print $sql;
+    $res = $db->Execute($sql);
+    while (!$res == NULL && !$res->EOF) {
+        $sql2 = "SELECT name FROM ct_catalogue WHERE ct_uuid='$itm';";
+        $res2 = $global['db']->Execute($sql2);
+        $item_name = $res2->fields['name'];
+        $amount = $res->fields['amount'];
+        $inventory_name = $res->fields['inventory_name'];
+        $state = $res->fields['state'];
+        $inv_id = $res->fields['inv_uuid'];
+        $item_id = $res->fields['item_id'];
+        $sql3 = "SELECT location_id FROM location_details WHERE poc_uuid = '" . $res->fields['inv_uuid'] . "'";
+        $res3 = $global['db']->Execute($sql3);
+        $location = _shn_rms_get_name($res3->fields['location_id']);
+?>
+        <tr>
+        <td><?php print $item_name; ?></td>
+        <td><?php print $amount; ?></td>
+        <td><?php print $inventory_name; ?></td>
+        <td><?php print $state; ?></td>
+        <td><?php print $location; ?></td>
+        <td><a href="index.php?mod=rms&act=fullfill_from_inventory&seq=<?php echo 'mng_ff_inventory'; ?>&item_id=<?php echo $item_id; ?>&inv_id=<?php echo $inv_id; ?>&ct_uuid=<?php echo $itm; ?>"><?php print ("Select"); ?></a></td>
+        </tr>
+    <?php
+        $res->MoveNext();
+    }
+?>
+    </tbody>
+    </table>
+    </div>
+    <?php
+    _shn_rms_mng_select_pledge_alternates();
+}
+function _shn_rms_mng_select_pledge_alternates() {
+    global $global;
+    echo '<div><h3><b><em>' . _("Alternate Items:") . '</em></b></h3></div>';
+    $_SESSION['rms_plg_id'] = null;
+    $itm = $_SESSION['rms_req_item'];
+    $sql2 = "SELECT plg_uuid, item_uuid, quantity AS plg_qty, status
+    FROM rms_plg_item
+    WHERE status IN ('delivered', 'confirmed')
+    AND (item_uuid IN (SELECT alternate FROM ims_alternate WHERE catalog_id = '{$itm}')
+        OR item_uuid IN (SELECT catalog_id FROM ims_alternate WHERE alternate = '{$itm}'))";
+    $rs2 = $global['db']->Execute($sql2);
+    if ($rs2 === false) {
+        $msg = $global['db']->ErrorMsg();
+        add_error($msg . ' <br> ' . $sql2);
+        display_errors();
+    } else {
+        $res_array = $rs2->GetArray();
+        $th_plg[] = array(_("Item"), _("Qty"), _("Used"), _('status'), '');
+        if ($rs2->RecordCount() > 0) {
+            foreach($res_array as $res) {
+                $sql3 = "SELECT SUM(quantity) AS ff_qty FROM rms_fulfil WHERE plg_uuid = '" . $res['plg_uuid'] . "' AND item_uuid = '" . $res['item_uuid'] . "' ";
+                $rs3 = $global['db']->Execute($sql3);
+                if ($rs3 === false) {
+                    $msg = $global['db']->ErrorMsg();
+                    add_error($msg . ' <br> ' . $sql2);
+                    display_errors();
+                } else {
+                    if ($rs3->RecordCount() > 0) {
+                        $max_qty = $res['plg_qty'] - $rs3->fields['ff_qty'];
+                        $used = $rs3->fields['ff_qty'];
+                    } else {
+                        $max_qty = $res['plg_qty'];
+                        $used = 0;
+                    }
+                    $sel_url = '<a href=index.php?mod=rms&amp;act=mng_ff&amp;seq=add_ff&amp;max_qty=' . $max_qty . '&amp;plg_id=' . $res['plg_uuid'] . '>' . _("Select") . '</a>';
+                    if ($max_qty > 0) {
+                        $tb_plg[] = array(_shn_rms_get_itemname($res['item_uuid']), $res['plg_qty'], $used, $res['status'], $sel_url);
+                    }
+                }
+            }
+            /**
+             * Display the list of pledges
+             */
+            print '<div class="info">';
+            print _("This shows the list of pledges that have the selected item, ");
+            print _("Please select a pledge from the request to be fulfilled.");
+            print '<br />';
+            print '</div>';
+            print '<br />';
+            shn_html_table($tb_plg, $th_plg, null, array('class' => 'wide'));
+        }
+    }
+    print '<br>';
+    print '<br>';
+    //**************************** Inventory Items ************************
+
+?>
+<div id="result">
+
+    <table>
+    <caption><?php echo _('Items from inventories'); ?></caption>
+    <thead>
+        <td><?php echo _("Item") ?></td>
+        <td><?php echo _("Amount") ?></td>
+        <td><?php echo _("Inventory") ?></td>
+        <td><?php echo _('Status') ?></td>
+        <td><?php echo _('Location') ?></td>
+        <td><?php echo _("Action") ?></td>
+    </thead>
+    <tbody>
+    <?php
+    $db = $global['db'];
+    $sql = "SELECT item.item_id AS item_id, item.amount AS amount,
+    item.state AS state, inventory.inv_uuid AS inv_uuid,
+    inventory.inventory_name AS inventory_name
+    FROM ims_item_records as item, ims_inventory_records AS inventory
+    WHERE item.inv_id=inventory.inv_uuid
+    AND item.state='available' AND item.amount!=0
+    AND (item.catalog_id IN (SELECT alternate FROM ims_alternate WHERE catalog_id = '{$itm}')
+        OR item.catalog_id IN (SELECT catalog_id FROM ims_alternate WHERE alternate = '{$itm}'))";
     $res = $db->Execute($sql);
     while (!$res == NULL && !$res->EOF) {
         $sql2 = "SELECT name FROM ct_catalogue WHERE ct_uuid='$itm';";
