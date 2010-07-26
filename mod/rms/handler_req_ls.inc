@@ -69,6 +69,10 @@ function _shn_rms_req_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
     $rs_arr = $rs->GetArray();
     //Result table hedder
     $th_res[] = array(_("Recoder"), _("Location of request"), _("Date"), _("status"), '');
+    $statuses = array(
+            'open' => _('Open'),
+            'closed' => _('Closed'),
+        );
     foreach($rs_arr as $r) {
         $req_id = $r['req_uuid'];
         $reqstr = _shn_rms_get_requester($r['reqstr_uuid']);
@@ -89,7 +93,7 @@ function _shn_rms_req_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
             $loc_d = '<strong>' . $location_name . '</strong> [' . $req_loc['opt_person_loc_type'] . ']';
         }
         $req_date = $r['req_date'];
-        $req_stat = $r['status'];
+        $req_stat = $statuses[$r['status']];
         $req_usr = $r['user_id'];
         $view_url = '<a href=index.php?mod=rms&amp;act=req_ls&amp;seq=view_req&amp;req_id=' . $req_id . '>' . _("Details") . '</a>';
         // added by dominic
@@ -109,8 +113,8 @@ function _shn_rms_req_showlist($page = 1, $rows = 10, $filter = null, $odr_by = 
         for ($i = 0;$i < count($loc);$i++) {
             $location[$loc[$i]] = _shn_rms_get_name($loc[$i]);
         }
-        $requesters[''] = 'All';
-        $location[''] = 'All';
+        $requesters[0] = _('All');
+        $location[0] = _('All');
         shn_html_table_open(array('class' => 'layout'));
         shn_html_tbody_open();
         shn_html_tr_open();

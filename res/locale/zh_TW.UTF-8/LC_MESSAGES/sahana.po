@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-21 17:17+0800\n"
-"PO-Revision-Date: 2010-07-26 15:46+0800\n"
+"POT-Creation-Date: 2010-07-26 16:20+0800\n"
+"PO-Revision-Date: 2010-07-26 16:21+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -443,7 +443,7 @@ msgstr "查詢技能："
 #: mod/cr/main.inc:29
 #: mod/rms/handler_plg_receipt.inc:160
 #: mod/rms/handler_req_sch.inc:103
-#: mod/rms/handler_plg_sch.inc:68
+#: mod/rms/handler_plg_sch.inc:47
 msgid "Search"
 msgstr "搜尋"
 
@@ -498,8 +498,8 @@ msgstr "前往下一頁"
 #: mod/sync/handler_upload.inc:71
 #: mod/admin/location.inc:58
 #: mod/cr/edit.inc:86
-#: mod/cr/edit.inc:240
-#: mod/cr/edit.inc:621
+#: mod/cr/edit.inc:247
+#: mod/cr/edit.inc:628
 #: mod/cr/camp.inc:92
 #: mod/cr/camp.inc:113
 #: mod/cr/camp.inc:182
@@ -522,11 +522,12 @@ msgstr "前往下一頁"
 #: mod/rms/handler_plg_new.inc:44
 #: mod/rms/handler_plg_new.inc:61
 #: mod/rms/handler_mng_ff.inc:115
-#: mod/rms/handler_mng_ff.inc:260
-#: mod/rms/lib_rms.inc:1309
+#: mod/rms/handler_mng_ff.inc:265
+#: mod/rms/lib_rms.inc:1313
 #: mod/msg/handler_cap_new.inc:99
 #: mod/msg/handler_cap_new.inc:167
 #: mod/msg/handler_cap_new.inc:187
+#: inc/lib_paging.inc:58
 #: inc/lib_paging.inc:139
 #: inc/lib_paging.inc:222
 msgid "Next"
@@ -549,8 +550,8 @@ msgstr "來自系統？"
 #: tools/tpl_languages.php:71
 #: tools/tpl_languages.php:96
 #: tools/tpl_languages.php:117
-#: mod/rms/handler_mng_ff.inc:267
-#: mod/rms/lib_rms.inc:490
+#: mod/rms/handler_mng_ff.inc:272
+#: mod/rms/lib_rms.inc:494
 msgid "Cancel"
 msgstr "取消"
 
@@ -566,9 +567,9 @@ msgstr "取消"
 #: mod/ims/view_edit_item.inc:66
 #: mod/ims/view_inv.inc:257
 #: mod/ims/mini_quantity.inc:250
-#: mod/cs/edit.inc:285
-#: mod/cs/edit.inc:465
-#: mod/cs/edit.inc:581
+#: mod/cs/edit.inc:283
+#: mod/cs/edit.inc:463
+#: mod/cs/edit.inc:579
 #: mod/mpr/admin.inc:355
 #: mod/admin/ims_level.inc:31
 #: mod/admin/ims_level.inc:175
@@ -576,14 +577,14 @@ msgstr "取消"
 #: mod/admin/ims_assign.inc:18
 #: mod/admin/ims_assign.inc:35
 #: mod/admin/location.inc:100
-#: mod/cr/edit.inc:194
+#: mod/cr/edit.inc:201
 #: mod/cr/admin.inc:203
 #: mod/dvr/search_individual.inc:92
 #: mod/dvr/search_individual.inc:108
 #: mod/dvr/search_group.inc:94
 #: mod/dvr/admin.inc:57
-#: mod/rms/handler_req_ls.inc:98
-#: mod/rms/lib_rms.inc:489
+#: mod/rms/handler_req_ls.inc:102
+#: mod/rms/lib_rms.inc:493
 #: mod/msg/message_forms.inc:233
 #: inc/lib_security/acl_form.inc:276
 msgid "Delete"
@@ -601,9 +602,9 @@ msgstr "刪除"
 #: mod/ims/mini_quantity.inc:249
 #: mod/gis/wm_fns.inc:56
 #: mod/mpr/search.inc:261
-#: mod/cr/edit.inc:193
-#: mod/cr/edit.inc:282
-#: mod/cr/edit.inc:558
+#: mod/cr/edit.inc:200
+#: mod/cr/edit.inc:289
+#: mod/cr/edit.inc:565
 #: mod/cr/camp.inc:515
 #: mod/dvr/search_individual.inc:91
 #: mod/dvr/search_individual.inc:106
@@ -650,7 +651,7 @@ msgstr "預計志工人數"
 #: mod/cs/supplier_report.inc:30
 #: mod/cs/search.inc:82
 #: mod/cs/search.inc:221
-#: mod/cs/edit.inc:526
+#: mod/cs/edit.inc:524
 #: mod/cs/add.inc:428
 #: mod/mpr/admin.inc:354
 #: mod/mpr/admin.inc:383
@@ -672,7 +673,7 @@ msgstr "描述"
 #: mod/ims/optimize.inc:238
 #: mod/ims/mini_quantity.inc:138
 #: mod/admin/location.inc:411
-#: mod/rms/handler_mng_ff.inc:291
+#: mod/rms/handler_mng_ff.inc:296
 #: inc/lib_security/auth_form.inc:102
 #: inc/lib_security/auth_form.inc:150
 msgid "Submit"
@@ -982,9 +983,9 @@ msgstr "可進行指派的志工"
 #: mod/rs/sample.inc:280
 #: mod/cs/supplier_report.inc:29
 #: mod/cs/drill_down.inc:51
-#: mod/cs/edit.inc:177
-#: mod/cs/edit.inc:404
-#: mod/cs/edit.inc:525
+#: mod/cs/edit.inc:175
+#: mod/cs/edit.inc:402
+#: mod/cs/edit.inc:523
 #: mod/cs/add.inc:427
 #: mod/mpr/search.inc:74
 #: mod/mpr/search.inc:75
@@ -1023,15 +1024,15 @@ msgstr "照片"
 #: mod/mpr/edit.inc:146
 #: mod/mpr/add.inc:55
 #: mod/mpr/add.inc:56
-#: mod/rms/handler_req_ls.inc:135
-#: mod/rms/handler_req_ls.inc:175
+#: mod/rms/handler_req_ls.inc:139
+#: mod/rms/handler_req_ls.inc:179
 #: mod/rms/handler_req_sch.inc:99
-#: mod/rms/handler_req_sch.inc:205
-#: mod/rms/handler_req_sch.inc:211
+#: mod/rms/handler_req_sch.inc:204
+#: mod/rms/handler_req_sch.inc:210
 #: mod/rms/handler_plg_ls.inc:87
 #: mod/rms/handler_plg_ls.inc:123
-#: mod/rms/handler_plg_sch.inc:63
-#: mod/rms/handler_mng_ff.inc:199
+#: mod/rms/handler_plg_sch.inc:43
+#: mod/rms/handler_mng_ff.inc:204
 #: mod/msg/handler_cap_edit.inc:90
 #: mod/msg/handler_cap_new.inc:81
 msgid "Status"
@@ -1081,17 +1082,14 @@ msgstr "身份識別"
 #: mod/cr/search.inc:43
 #: mod/cr/search.inc:130
 #: mod/cr/search.inc:302
-#: mod/cr/edit.inc:501
+#: mod/cr/edit.inc:508
 #: mod/cr/reports.inc:62
 #: mod/cr/reports.inc:118
 #: mod/dvr/add_new_grp.inc:406
 #: mod/rms/handler_req_new.inc:129
-#: mod/rms/handler_req_ls.inc:71
-#: mod/rms/handler_req_sch.inc:203
-#: mod/rms/handler_req_sch.inc:209
-#: mod/rms/handler_mng_ff.inc:200
-#: mod/rms/lib_rms.inc:784
-#: mod/rms/lib_rms.inc:1307
+#: mod/rms/handler_req_sch.inc:208
+#: mod/rms/handler_mng_ff.inc:205
+#: mod/rms/lib_rms.inc:1311
 msgid "Location"
 msgstr "地點"
 
@@ -1594,6 +1592,7 @@ msgstr "到前一頁"
 #: mod/rms/handler_plg_receipt.inc:80
 #: mod/rms/handler_req_ls.inc:54
 #: mod/rms/handler_plg_ls.inc:44
+#: inc/lib_paging.inc:61
 #: inc/lib_paging.inc:117
 #: inc/lib_paging.inc:208
 msgid "Previous"
@@ -1808,10 +1807,10 @@ msgstr "最後總計價值 "
 #: mod/mpr/view.inc:26
 #: mod/mpr/search.inc:246
 #: mod/rms/handler_plg_receipt.inc:105
-#: mod/rms/handler_req_ls.inc:94
-#: mod/rms/handler_req_sch.inc:216
+#: mod/rms/handler_req_ls.inc:98
+#: mod/rms/handler_req_sch.inc:215
 #: mod/rms/handler_plg_ls.inc:68
-#: mod/rms/handler_plg_sch.inc:111
+#: mod/rms/handler_plg_sch.inc:87
 msgid "Details"
 msgstr "細節"
 
@@ -2114,7 +2113,7 @@ msgstr "主要的細節"
 #: mod/or/view_org.inc:355
 #: mod/or/view_org.inc:690
 #: mod/rms/handler_plg_new.inc:146
-#: mod/rms/lib_rms.inc:902
+#: mod/rms/lib_rms.inc:906
 msgid "Organization Name : "
 msgstr "組織名稱："
 
@@ -2170,8 +2169,8 @@ msgstr "組織服務內容"
 #: mod/cr/search.inc:303
 #: mod/cr/edit.inc:39
 #: mod/cr/edit.inc:153
-#: mod/cr/edit.inc:497
-#: mod/cr/edit.inc:569
+#: mod/cr/edit.inc:504
+#: mod/cr/edit.inc:576
 #: mod/cr/reports.inc:61
 #: mod/cr/reports.inc:166
 #: mod/cr/camp.inc:40
@@ -2326,7 +2325,7 @@ msgid "You could only select 3 options in this field."
 msgstr "這個欄位只能選擇 3 個項目"
 
 #: mod/or/reg_org.inc:149
-#: mod/cr/edit.inc:489
+#: mod/cr/edit.inc:496
 #: mod/cr/camp.inc:450
 msgid "Confirm Registration Details of "
 msgstr "確認登錄細節"
@@ -2365,8 +2364,8 @@ msgstr "組織地址"
 #: mod/ims/view_inv.inc:206
 #: mod/gis/gis_fns.inc:183
 #: mod/cr/edit.inc:44
-#: mod/cr/edit.inc:503
-#: mod/cr/edit.inc:579
+#: mod/cr/edit.inc:510
+#: mod/cr/edit.inc:586
 #: mod/cr/camp.inc:49
 msgid "Map Location"
 msgstr "地圖位置"
@@ -2387,9 +2386,9 @@ msgstr "可用的設施"
 #: mod/ims/add_item.inc:160
 #: mod/ims/view_inv.inc:256
 #: mod/rs/config.inc:47
-#: mod/cs/edit.inc:284
-#: mod/cs/edit.inc:464
-#: mod/cs/edit.inc:580
+#: mod/cs/edit.inc:282
+#: mod/cs/edit.inc:462
+#: mod/cs/edit.inc:578
 #: mod/cs/_admin.inc:50
 #: mod/cs/_admin.inc:79
 #: mod/cs/add.inc:200
@@ -2563,7 +2562,7 @@ msgstr "登記字號："
 #: mod/ims/view_inv.inc:208
 #: mod/gis/gis_fns.inc:185
 #: mod/cr/edit.inc:46
-#: mod/cr/edit.inc:581
+#: mod/cr/edit.inc:588
 #: mod/cr/camp.inc:51
 msgid "Click on the button \"Update the location\" will update the map location if you did manually modify the values of position."
 msgstr "重新輸入經緯度，點選「重新定位」，下方地圖座標即會更新"
@@ -2572,8 +2571,8 @@ msgstr "重新輸入經緯度，點選「重新定位」，下方地圖座標即
 #: mod/or/view_org.inc:704
 #: mod/ims/view_inv.inc:217
 #: mod/cr/edit.inc:50
-#: mod/cr/edit.inc:504
-#: mod/cr/edit.inc:585
+#: mod/cr/edit.inc:511
+#: mod/cr/edit.inc:592
 #: mod/cr/camp.inc:53
 msgid "Latitude : "
 msgstr "緯度："
@@ -2582,8 +2581,8 @@ msgstr "緯度："
 #: mod/or/view_org.inc:705
 #: mod/ims/view_inv.inc:224
 #: mod/cr/edit.inc:52
-#: mod/cr/edit.inc:505
-#: mod/cr/edit.inc:587
+#: mod/cr/edit.inc:512
+#: mod/cr/edit.inc:594
 #: mod/cr/camp.inc:54
 msgid "Longitude : "
 msgstr "經度："
@@ -2592,7 +2591,7 @@ msgstr "經度："
 #: mod/ims/view_inv.inc:225
 #: mod/gis/gis_fns.inc:193
 #: mod/cr/edit.inc:53
-#: mod/cr/edit.inc:588
+#: mod/cr/edit.inc:595
 #: mod/cr/camp.inc:55
 msgid "Update the location"
 msgstr "重新定位"
@@ -2601,7 +2600,7 @@ msgstr "重新定位"
 #: mod/ims/view_inv.inc:235
 #: mod/gis/gis_fns.inc:203
 #: mod/cr/edit.inc:61
-#: mod/cr/edit.inc:596
+#: mod/cr/edit.inc:603
 #: mod/cr/camp.inc:63
 msgid ""
 "You can move around and enlarge/reduce the size of the area you want using\n"
@@ -2613,11 +2612,11 @@ msgstr "您可以四處拖動並且用左上角的刻度放大/縮小您想看�
 #: mod/or/view_org.inc:733
 #: mod/ims/view_edit_item.inc:153
 #: mod/ims/view_inv.inc:255
-#: mod/cs/edit.inc:283
-#: mod/cs/edit.inc:463
-#: mod/cs/edit.inc:579
+#: mod/cs/edit.inc:281
+#: mod/cs/edit.inc:461
+#: mod/cs/edit.inc:577
 #: mod/admin/location.inc:98
-#: mod/cr/edit.inc:191
+#: mod/cr/edit.inc:198
 #: mod/rms/handler_mng_ff.inc:40
 #: mod/msg/message_forms.inc:234
 msgid "Close"
@@ -3248,7 +3247,7 @@ msgstr ""
 "在這裡，你會得到一個 API Key、密碼、和秘密存取碼。API Key 和密碼與你的帳號相連的，用來識別該請求的來源。 "
 
 #: mod/ws/reg.inc:104
-#: mod/cr/edit.inc:557
+#: mod/cr/edit.inc:564
 #: mod/cr/camp.inc:514
 #: mod/dvr/edt_grp.inc:450
 #: mod/dvr/add_new_grp.inc:355
@@ -3651,7 +3650,7 @@ msgstr "您所選擇物資的單位成本"
 #: mod/ims/optimize.inc:906
 #: mod/ims/mini_quantity.inc:99
 #: mod/ims/mini_quantity.inc:109
-#: mod/rms/handler_mng_ff.inc:287
+#: mod/rms/handler_mng_ff.inc:292
 msgid "Inventory : "
 msgstr "倉庫："
 
@@ -3806,7 +3805,7 @@ msgstr "物資名稱"
 #: mod/ims/transfer_inv.inc:95
 #: mod/ims/transfer_inv.inc:149
 #: mod/ims/home.inc:51
-#: mod/rms/handler_mng_ff.inc:197
+#: mod/rms/handler_mng_ff.inc:202
 msgid "Amount"
 msgstr "總數"
 
@@ -3852,9 +3851,9 @@ msgstr "單位"
 #: mod/ims/transfer_inv.inc:454
 #: mod/ims/home.inc:55
 #: mod/ims/mini_quantity.inc:248
-#: mod/rms/handler_plg_sch.inc:107
-#: mod/rms/handler_plg_sch.inc:109
-#: mod/rms/handler_mng_ff.inc:198
+#: mod/rms/handler_plg_sch.inc:83
+#: mod/rms/handler_plg_sch.inc:85
+#: mod/rms/handler_mng_ff.inc:203
 msgid "Inventory"
 msgstr "倉庫列表"
 
@@ -4005,22 +4004,22 @@ msgstr "選擇相關物資"
 #: mod/ims/mini_quantity.inc:245
 #: mod/cs/drill_down.inc:86
 #: mod/cs/search.inc:43
-#: mod/cs/edit.inc:201
+#: mod/cs/edit.inc:199
 #: mod/cs/add.inc:451
 #: mod/rms/handler_req_new.inc:328
 #: mod/rms/handler_req_new.inc:342
-#: mod/rms/handler_req_sch.inc:203
-#: mod/rms/handler_req_sch.inc:209
+#: mod/rms/handler_req_sch.inc:202
+#: mod/rms/handler_req_sch.inc:208
 #: mod/rms/handler_plg_new.inc:131
 #: mod/rms/handler_plg_new.inc:213
-#: mod/rms/handler_plg_sch.inc:107
-#: mod/rms/handler_plg_sch.inc:109
-#: mod/rms/handler_mng_ff.inc:142
-#: mod/rms/handler_mng_ff.inc:196
-#: mod/rms/handler_mng_ff.inc:257
-#: mod/rms/lib_rms.inc:795
-#: mod/rms/lib_rms.inc:848
-#: mod/rms/lib_rms.inc:876
+#: mod/rms/handler_plg_sch.inc:83
+#: mod/rms/handler_plg_sch.inc:85
+#: mod/rms/handler_mng_ff.inc:147
+#: mod/rms/handler_mng_ff.inc:201
+#: mod/rms/handler_mng_ff.inc:262
+#: mod/rms/lib_rms.inc:799
+#: mod/rms/lib_rms.inc:852
+#: mod/rms/lib_rms.inc:880
 msgid "Item"
 msgstr "物資"
 
@@ -4286,7 +4285,7 @@ msgstr "到期日"
 #: mod/admin/conf_admin.inc:128
 #: mod/rms/handler_plg_receipt.inc:97
 #: mod/rms/handler_plg_ls.inc:61
-#: mod/rms/handler_mng_ff.inc:201
+#: mod/rms/handler_mng_ff.inc:206
 #: mod/msg/message_forms.inc:161
 msgid "Action"
 msgstr "動作"
@@ -4788,7 +4787,7 @@ msgid "Victim : "
 msgstr "受災者"
 
 #: mod/ims/transfer_inv.inc:312
-#: mod/rms/lib_rms.inc:901
+#: mod/rms/lib_rms.inc:905
 msgid "Date : "
 msgstr "日期："
 
@@ -5337,8 +5336,8 @@ msgstr "進行精確搜尋"
 
 #: mod/rs/sample.inc:168
 #: mod/cs/drill_down.inc:53
-#: mod/cs/edit.inc:179
-#: mod/cs/edit.inc:268
+#: mod/cs/edit.inc:177
+#: mod/cs/edit.inc:266
 #: mod/cs/add.inc:29
 #: mod/cs/add.inc:108
 #: mod/cs/add.inc:274
@@ -5354,7 +5353,7 @@ msgstr "增加資料表 & 建立報表"
 
 #: mod/rs/sample.inc:226
 #: mod/cs/search.inc:160
-#: mod/cs/edit.inc:406
+#: mod/cs/edit.inc:404
 msgid "Multiplier"
 msgstr "乘數"
 
@@ -5528,18 +5527,18 @@ msgid "Go to : "
 msgstr "前往："
 
 #: mod/cs/drill_down.inc:52
-#: mod/cs/edit.inc:178
+#: mod/cs/edit.inc:176
 #: mod/cs/add.inc:429
 msgid "Item/catalog"
 msgstr "項目/目錄"
 
 #: mod/cs/drill_down.inc:80
-#: mod/cs/edit.inc:195
+#: mod/cs/edit.inc:193
 msgid "Main catalog"
 msgstr "主目錄"
 
 #: mod/cs/drill_down.inc:83
-#: mod/cs/edit.inc:198
+#: mod/cs/edit.inc:196
 msgid "Sub catalog"
 msgstr "子目錄"
 
@@ -5657,7 +5656,7 @@ msgid "Select Measurement Unit Type"
 msgstr "選擇測量單位的種類"
 
 #: mod/cs/search.inc:127
-#: mod/cs/edit.inc:447
+#: mod/cs/edit.inc:445
 msgid "Unit Name   : "
 msgstr "單位名稱："
 
@@ -5678,8 +5677,8 @@ msgid "Unit Type Name"
 msgstr "單位類型名稱"
 
 #: mod/cs/edit.inc:39
-#: mod/cs/edit.inc:392
-#: mod/cs/edit.inc:513
+#: mod/cs/edit.inc:390
+#: mod/cs/edit.inc:511
 #: mod/cs/report.inc:27
 #: mod/cs/report.inc:52
 #: mod/cs/report.inc:77
@@ -5688,14 +5687,14 @@ msgid "Catalogs and Items"
 msgstr "目錄與項目"
 
 #: mod/cs/edit.inc:40
-#: mod/cs/edit.inc:393
-#: mod/cs/edit.inc:514
+#: mod/cs/edit.inc:391
+#: mod/cs/edit.inc:512
 msgid "Unit Types"
 msgstr "單位類型"
 
 #: mod/cs/edit.inc:41
-#: mod/cs/edit.inc:394
-#: mod/cs/edit.inc:515
+#: mod/cs/edit.inc:392
+#: mod/cs/edit.inc:513
 msgid "Units"
 msgstr "單位"
 
@@ -5704,10 +5703,19 @@ msgstr "單位"
 #: mod/cr/search.inc:80
 #: mod/rms/handler_plg_receipt.inc:144
 #: mod/rms/handler_plg_receipt.inc:152
-#: mod/rms/handler_req_ls.inc:132
+#: mod/rms/handler_req_ls.inc:116
+#: mod/rms/handler_req_ls.inc:117
+#: mod/rms/handler_req_ls.inc:136
+#: mod/rms/handler_req_sch.inc:26
+#: mod/rms/handler_req_sch.inc:37
+#: mod/rms/handler_req_sch.inc:56
+#: mod/rms/handler_req_sch.inc:63
 #: mod/rms/handler_req_sch.inc:70
 #: mod/rms/handler_plg_ls.inc:81
-#: mod/rms/handler_plg_sch.inc:36
+#: mod/rms/handler_plg_sch.inc:23
+#: mod/rms/handler_plg_sch.inc:29
+#: inc/lib_paging.inc:143
+#: inc/lib_paging.inc:199
 msgid "All"
 msgstr "全部"
 
@@ -5715,31 +5723,31 @@ msgstr "全部"
 msgid "Sub Catalogs"
 msgstr "子目錄"
 
-#: mod/cs/edit.inc:242
+#: mod/cs/edit.inc:240
 msgid "Using Delete, you will lose all the records of the particular catalogs, Items, Unit or Unit Types. </b>By deleting a catalog You will lose all the entries under the particular catalog."
 msgstr "若使用刪除動作，您會失去該類別的所有記錄，包括物資、單位或單位種類。刪除一個目錄，你會失去所有目錄裡的項目。"
 
-#: mod/cs/edit.inc:265
+#: mod/cs/edit.inc:263
 msgid "Details Of the catalog/Item"
 msgstr "目錄/物資的細節"
 
-#: mod/cs/edit.inc:267
+#: mod/cs/edit.inc:265
 msgid "Catalog / Item Name   : "
 msgstr "目錄/物資名稱："
 
-#: mod/cs/edit.inc:270
+#: mod/cs/edit.inc:268
 #: mod/cs/add.inc:30
 #: mod/cs/add.inc:82
 msgid "e.g. medical, drugs, health"
 msgstr "例如：醫療，藥品，健康"
 
-#: mod/cs/edit.inc:271
+#: mod/cs/edit.inc:269
 #: mod/cs/add.inc:30
 msgid "Enter a keyword which will help you to search particular catalog/item easily, when you add sub catalogs or items under this main catalog."
 msgstr "當您在主目錄下新增子目錄或子項目時，請輸入一個關鍵字，以助於搜尋特定的目錄/項目。"
 
-#: mod/cs/edit.inc:274
-#: mod/cs/edit.inc:569
+#: mod/cs/edit.inc:272
+#: mod/cs/edit.inc:567
 #: mod/cs/add.inc:27
 #: mod/cs/add.inc:106
 #: mod/cs/add.inc:272
@@ -5747,17 +5755,17 @@ msgstr "當您在主目錄下新增子目錄或子項目時，請輸入一個關
 msgid "Description   : "
 msgstr "說明："
 
-#: mod/cs/edit.inc:303
+#: mod/cs/edit.inc:301
 msgid "Operation failed. You can not Delete this Catalog/ Item. Because there are sub catalogs/Items under this catalog OR it has been used by the INVENTORY MANAGEMENT SYSTEM."
 msgstr "操作失敗。您不能刪除此目錄/物資品。因為有子目錄/物資在此目錄下，或者它已被物資庫存與倉庫管理使用。"
 
-#: mod/cs/edit.inc:308
+#: mod/cs/edit.inc:306
 msgid "Item/Catalog was deleted"
 msgstr "已刪除物資/類別"
 
-#: mod/cs/edit.inc:345
-#: mod/cs/edit.inc:486
-#: mod/cs/edit.inc:602
+#: mod/cs/edit.inc:343
+#: mod/cs/edit.inc:484
+#: mod/cs/edit.inc:600
 #: mod/cs/add.inc:60
 #: mod/cs/add.inc:136
 #: mod/cs/add.inc:219
@@ -5766,45 +5774,45 @@ msgstr "已刪除物資/類別"
 msgid " was successfully saved in the database"
 msgstr "已成功儲存在資料庫裡"
 
-#: mod/cs/edit.inc:405
+#: mod/cs/edit.inc:403
 msgid "Measurement Unit Type"
 msgstr "度量單位類型"
 
-#: mod/cs/edit.inc:445
+#: mod/cs/edit.inc:443
 msgid "Details Of the Unit"
 msgstr "單位的詳細資訊"
 
+#: mod/cs/edit.inc:448
 #: mod/cs/edit.inc:450
-#: mod/cs/edit.inc:452
 msgid "Multiplier   : "
 msgstr "乘數："
 
+#: mod/cs/edit.inc:448
 #: mod/cs/edit.inc:450
-#: mod/cs/edit.inc:452
 msgid "Specify the multiplier of the particular unit to the base unit of the unit type"
 msgstr "指定該單位和同種類的基本單位之間的乘數"
 
-#: mod/cs/edit.inc:492
+#: mod/cs/edit.inc:490
 msgid "Operation failed. You can not Delete this Unit. Because it has been used in INVENTORY MANAGEMENT SYSTEM."
 msgstr "操作失敗。您不能刪除此單位。因為它已被物資庫存與倉庫管理系統使用。"
 
-#: mod/cs/edit.inc:497
+#: mod/cs/edit.inc:495
 msgid "Unit was Deleted"
 msgstr "單位已被刪除"
 
-#: mod/cs/edit.inc:564
+#: mod/cs/edit.inc:562
 msgid "Details Of the Unit Type"
 msgstr "單位類型的詳細資訊"
 
-#: mod/cs/edit.inc:566
+#: mod/cs/edit.inc:564
 msgid "Unit Type Name   : "
 msgstr "單位類型名稱："
 
-#: mod/cs/edit.inc:608
+#: mod/cs/edit.inc:606
 msgid "Operation failed. You can not Delete this Unit type. There are units added under this unit type."
 msgstr "操作失敗。您不能刪除此單位類型。已有單位被新增到此類型下。"
 
-#: mod/cs/edit.inc:613
+#: mod/cs/edit.inc:611
 msgid "Unit type was deleted"
 msgstr "單位類型已被刪除"
 
@@ -5815,7 +5823,7 @@ msgstr "救援物資目錄"
 
 #: mod/cs/lib_cs.inc:173
 #: mod/sync/handler_download.inc:66
-#: mod/rms/lib_rms.inc:1148
+#: mod/rms/lib_rms.inc:1152
 #: mod/msg/handler_cap_new.inc:139
 msgid "None"
 msgstr "無"
@@ -5823,8 +5831,8 @@ msgstr "無"
 #: mod/cs/lib_cs.inc:174
 #: mod/cs/add.inc:163
 #: mod/gis/plugins/google_maps/admin.inc:41
-#: mod/rms/lib_rms.inc:644
-#: mod/rms/lib_rms.inc:1149
+#: mod/rms/lib_rms.inc:648
+#: mod/rms/lib_rms.inc:1153
 msgid "Information"
 msgstr "資訊"
 
@@ -5839,7 +5847,7 @@ msgstr "新增目錄"
 
 #: mod/cs/lib_cs.inc:176
 #: mod/cs/add.inc:165
-#: mod/rms/lib_rms.inc:1152
+#: mod/rms/lib_rms.inc:1156
 msgid " First"
 msgstr " 第一筆"
 
@@ -6867,9 +6875,9 @@ msgstr "基本細節"
 #: mod/mpr/add.inc:82
 #: mod/mpr/add.inc:504
 #: mod/cr/edit.inc:70
-#: mod/cr/edit.inc:166
-#: mod/cr/edit.inc:508
-#: mod/cr/edit.inc:605
+#: mod/cr/edit.inc:173
+#: mod/cr/edit.inc:515
+#: mod/cr/edit.inc:612
 #: mod/cr/camp.inc:72
 #: mod/cr/camp.inc:465
 #: mod/cr/camp.inc:544
@@ -7202,7 +7210,7 @@ msgstr "第一筆"
 #: mod/mpr/search.inc:211
 #: mod/mpr/search.inc:216
 #: mod/mpr/search.inc:218
-#: mod/rms/handler_req_ls.inc:148
+#: mod/rms/handler_req_ls.inc:152
 #: mod/rms/handler_plg_ls.inc:100
 msgid "Records"
 msgstr "記錄"
@@ -7237,8 +7245,8 @@ msgstr "報告者"
 #: mod/mpr/search.inc:304
 #: mod/mpr/search.inc:369
 #: mod/mpr/search.inc:391
-#: mod/rms/handler_mng_ff.inc:159
-#: mod/rms/lib_rms.inc:811
+#: mod/rms/handler_mng_ff.inc:164
+#: mod/rms/lib_rms.inc:815
 msgid "Select"
 msgstr "選取"
 
@@ -8574,8 +8582,8 @@ msgstr "標有 * 的是必要欄位（必須填寫）"
 
 #: mod/admin/location.inc:85
 #: mod/cr/edit.inc:41
-#: mod/cr/edit.inc:499
-#: mod/cr/edit.inc:576
+#: mod/cr/edit.inc:506
+#: mod/cr/edit.inc:583
 #: mod/cr/camp.inc:46
 #: mod/cr/camp.inc:460
 #: mod/cr/camp.inc:539
@@ -9610,8 +9618,8 @@ msgstr "新模組翻譯合併成功"
 #: mod/cr/search.inc:301
 #: mod/cr/edit.inc:37
 #: mod/cr/edit.inc:123
-#: mod/cr/edit.inc:493
-#: mod/cr/edit.inc:567
+#: mod/cr/edit.inc:500
+#: mod/cr/edit.inc:574
 #: mod/cr/reports.inc:59
 #: mod/cr/reports.inc:164
 #: mod/cr/reports.inc:214
@@ -9628,8 +9636,8 @@ msgstr "庇護所名稱"
 #: mod/cr/search.inc:304
 #: mod/cr/edit.inc:38
 #: mod/cr/edit.inc:124
-#: mod/cr/edit.inc:496
-#: mod/cr/edit.inc:568
+#: mod/cr/edit.inc:503
+#: mod/cr/edit.inc:575
 #: mod/cr/reports.inc:60
 #: mod/cr/reports.inc:165
 #: mod/cr/admin.inc:22
@@ -9642,8 +9650,8 @@ msgstr "庇護所類型"
 #: mod/cr/search.inc:46
 #: mod/cr/search.inc:133
 #: mod/cr/search.inc:305
-#: mod/cr/edit.inc:176
-#: mod/cr/edit.inc:518
+#: mod/cr/edit.inc:183
+#: mod/cr/edit.inc:525
 #: mod/cr/reports.inc:67
 #: mod/cr/camp.inc:475
 msgid "Total Count"
@@ -9653,9 +9661,9 @@ msgstr "目前收容總數"
 #: mod/cr/search.inc:134
 #: mod/cr/search.inc:306
 #: mod/cr/edit.inc:76
-#: mod/cr/edit.inc:172
-#: mod/cr/edit.inc:514
-#: mod/cr/edit.inc:611
+#: mod/cr/edit.inc:179
+#: mod/cr/edit.inc:521
+#: mod/cr/edit.inc:618
 #: mod/cr/edit_ppl.inc:42
 #: mod/cr/camp.inc:78
 #: mod/cr/camp.inc:471
@@ -9709,8 +9717,8 @@ msgstr "更新現有的庇護所"
 
 #: mod/cr/edit.inc:34
 #: mod/cr/edit.inc:114
-#: mod/cr/edit.inc:492
-#: mod/cr/edit.inc:564
+#: mod/cr/edit.inc:499
+#: mod/cr/edit.inc:571
 #: mod/cr/edit_ppl.inc:34
 #: mod/cr/camp.inc:29
 #: mod/cr/camp.inc:453
@@ -9719,9 +9727,9 @@ msgid "General Details"
 msgstr "一般詳情"
 
 #: mod/cr/edit.inc:69
-#: mod/cr/edit.inc:165
-#: mod/cr/edit.inc:507
-#: mod/cr/edit.inc:604
+#: mod/cr/edit.inc:172
+#: mod/cr/edit.inc:514
+#: mod/cr/edit.inc:611
 #: mod/cr/camp.inc:71
 #: mod/cr/camp.inc:464
 #: mod/cr/camp.inc:543
@@ -9729,9 +9737,9 @@ msgid "Contact Person Details"
 msgstr "聯絡人的詳細資訊"
 
 #: mod/cr/edit.inc:71
-#: mod/cr/edit.inc:167
-#: mod/cr/edit.inc:509
-#: mod/cr/edit.inc:606
+#: mod/cr/edit.inc:174
+#: mod/cr/edit.inc:516
+#: mod/cr/edit.inc:613
 #: mod/cr/camp.inc:73
 #: mod/cr/camp.inc:466
 #: mod/cr/camp.inc:545
@@ -9739,9 +9747,9 @@ msgid "Phone Number"
 msgstr "電話號碼"
 
 #: mod/cr/edit.inc:72
-#: mod/cr/edit.inc:168
-#: mod/cr/edit.inc:510
-#: mod/cr/edit.inc:607
+#: mod/cr/edit.inc:175
+#: mod/cr/edit.inc:517
+#: mod/cr/edit.inc:614
 #: mod/cr/camp.inc:74
 #: mod/cr/camp.inc:467
 #: mod/cr/camp.inc:546
@@ -9749,9 +9757,9 @@ msgid "Mobile Number"
 msgstr "手機號碼"
 
 #: mod/cr/edit.inc:73
-#: mod/cr/edit.inc:169
-#: mod/cr/edit.inc:511
-#: mod/cr/edit.inc:608
+#: mod/cr/edit.inc:176
+#: mod/cr/edit.inc:518
+#: mod/cr/edit.inc:615
 #: mod/cr/camp.inc:75
 #: mod/cr/camp.inc:468
 #: mod/cr/camp.inc:547
@@ -9759,9 +9767,9 @@ msgid "Occupation"
 msgstr "職業"
 
 #: mod/cr/edit.inc:75
-#: mod/cr/edit.inc:171
-#: mod/cr/edit.inc:513
-#: mod/cr/edit.inc:610
+#: mod/cr/edit.inc:178
+#: mod/cr/edit.inc:520
+#: mod/cr/edit.inc:617
 #: mod/cr/camp.inc:77
 #: mod/cr/camp.inc:470
 #: mod/cr/camp.inc:549
@@ -9769,9 +9777,9 @@ msgid "Shelter Population"
 msgstr "庇護所可收容人數"
 
 #: mod/cr/edit.inc:77
-#: mod/cr/edit.inc:173
-#: mod/cr/edit.inc:515
-#: mod/cr/edit.inc:612
+#: mod/cr/edit.inc:180
+#: mod/cr/edit.inc:522
+#: mod/cr/edit.inc:619
 #: mod/cr/edit_ppl.inc:50
 #: mod/cr/camp.inc:79
 #: mod/cr/camp.inc:472
@@ -9780,9 +9788,9 @@ msgid "Men"
 msgstr "12歲以上男性"
 
 #: mod/cr/edit.inc:78
-#: mod/cr/edit.inc:174
-#: mod/cr/edit.inc:516
-#: mod/cr/edit.inc:613
+#: mod/cr/edit.inc:181
+#: mod/cr/edit.inc:523
+#: mod/cr/edit.inc:620
 #: mod/cr/edit_ppl.inc:57
 #: mod/cr/camp.inc:80
 #: mod/cr/camp.inc:473
@@ -9791,9 +9799,9 @@ msgid "Women"
 msgstr "12歲以上女性"
 
 #: mod/cr/edit.inc:79
-#: mod/cr/edit.inc:175
-#: mod/cr/edit.inc:517
-#: mod/cr/edit.inc:614
+#: mod/cr/edit.inc:182
+#: mod/cr/edit.inc:524
+#: mod/cr/edit.inc:621
 #: mod/cr/edit_ppl.inc:65
 #: mod/cr/camp.inc:81
 #: mod/cr/camp.inc:474
@@ -9802,9 +9810,9 @@ msgid "Children( 1 ~ 12 years old )"
 msgstr "兒童（1~12歲）"
 
 #: mod/cr/edit.inc:81
-#: mod/cr/edit.inc:178
-#: mod/cr/edit.inc:520
-#: mod/cr/edit.inc:616
+#: mod/cr/edit.inc:185
+#: mod/cr/edit.inc:527
+#: mod/cr/edit.inc:623
 #: mod/cr/camp.inc:83
 #: mod/cr/camp.inc:477
 #: mod/cr/camp.inc:555
@@ -9812,9 +9820,9 @@ msgid "Infected Count"
 msgstr "感染人數"
 
 #: mod/cr/edit.inc:82
-#: mod/cr/edit.inc:179
-#: mod/cr/edit.inc:521
-#: mod/cr/edit.inc:617
+#: mod/cr/edit.inc:186
+#: mod/cr/edit.inc:528
+#: mod/cr/edit.inc:624
 #: mod/cr/edit_ppl.inc:81
 #: mod/cr/camp.inc:84
 #: mod/cr/camp.inc:478
@@ -9830,131 +9838,143 @@ msgstr "您確定要刪除？"
 msgid "Shelter Details"
 msgstr "庇護所細節"
 
-#: mod/cr/edit.inc:184
+#: mod/cr/edit.inc:191
 msgid "Available services"
 msgstr "可提供的服務"
 
-#: mod/cr/edit.inc:227
-#: mod/cr/edit.inc:529
+#: mod/cr/edit.inc:234
+#: mod/cr/edit.inc:536
 #: mod/cr/camp.inc:173
 #: mod/cr/camp.inc:485
 msgid "Services / Facilities Available"
 msgstr "可提供的服務/設備"
 
-#: mod/cr/edit.inc:252
+#: mod/cr/edit.inc:259
 msgid "Deleted Shelter Succesfully"
 msgstr "成功刪除庇護所"
 
-#: mod/cr/edit.inc:278
-#: mod/cr/edit.inc:470
+#: mod/cr/edit.inc:285
+#: mod/cr/edit.inc:477
 #: mod/cr/camp.inc:433
 #: mod/cr/main.inc:38
 msgid "Edit Shelter"
 msgstr "編輯庇護所"
 
-#: mod/cr/edit.inc:280
+#: mod/cr/edit.inc:287
 msgid "Name of Shelter to edit"
 msgstr "編輯庇護所名稱"
 
-#: mod/cr/edit.inc:294
+#: mod/cr/edit.inc:301
 msgid "Please enter the shelter  name"
 msgstr "請輸入庇護所名稱"
 
-#: mod/cr/edit.inc:299
+#: mod/cr/edit.inc:306
 #: mod/cr/edit_ppl.inc:111
 #: mod/cr/camp.inc:249
 msgid "The infected count is not a valid number"
 msgstr "感染人數不是有效的數字"
 
-#: mod/cr/edit.inc:302
+#: mod/cr/edit.inc:309
 #: mod/cr/camp.inc:252
 msgid "The infected count cannot be negative"
 msgstr "感染人數不可為負值"
 
-#: mod/cr/edit.inc:308
+#: mod/cr/edit.inc:315
 #: mod/cr/edit_ppl.inc:117
 #: mod/cr/camp.inc:273
 msgid "The capacity is not a valid number"
 msgstr "容量不是有效的數字"
 
-#: mod/cr/edit.inc:311
+#: mod/cr/edit.inc:318
 #: mod/cr/camp.inc:276
 msgid "The capacity cannot be negative"
 msgstr "容量必須大於零"
 
-#: mod/cr/edit.inc:317
+#: mod/cr/edit.inc:324
 #: mod/cr/edit_ppl.inc:123
 #: mod/cr/camp.inc:291
 msgid "The men count is not a valid number"
 msgstr "男性人數不是有效的數字"
 
-#: mod/cr/edit.inc:320
+#: mod/cr/edit.inc:327
 #: mod/cr/camp.inc:294
 msgid "The men count cannot be negative"
 msgstr "男性人數不能是負值"
 
-#: mod/cr/edit.inc:326
+#: mod/cr/edit.inc:333
 #: mod/cr/edit_ppl.inc:129
 #: mod/cr/camp.inc:300
 msgid "The women count is not a valid number"
 msgstr "女性人數不是有效的數字"
 
-#: mod/cr/edit.inc:329
+#: mod/cr/edit.inc:336
 #: mod/cr/camp.inc:303
 msgid "The women count cannot be negative"
 msgstr "女性人數不能是負值"
 
-#: mod/cr/edit.inc:335
+#: mod/cr/edit.inc:342
 #: mod/cr/edit_ppl.inc:135
 #: mod/cr/camp.inc:309
 msgid "The children count is not a valid number"
 msgstr "兒童人數不是有效的數字"
 
-#: mod/cr/edit.inc:338
+#: mod/cr/edit.inc:345
 #: mod/cr/camp.inc:312
 msgid "The children count cannot be negative"
 msgstr "兒童人數不能是負值"
 
-#: mod/cr/edit.inc:349
+#: mod/cr/edit.inc:356
 #: mod/cr/edit_ppl.inc:146
 #: mod/cr/camp.inc:323
 msgid "The capacity should be greater or equal than the total count"
 msgstr "總收容量應大於或等於總人數"
 
-#: mod/cr/edit.inc:461
+#: mod/cr/edit.inc:468
 msgid "You have succesfully edited shelter "
 msgstr "庇護所資訊已編輯更新"
 
-#: mod/cr/edit.inc:463
+#: mod/cr/edit.inc:470
 msgid "The availability of Services & Facilities of the shelter are as follows"
 msgstr "庇護所可提供的服務和設備如下"
 
-#: mod/cr/edit.inc:466
-#: mod/cr/edit.inc:468
+#: mod/cr/edit.inc:473
+#: mod/cr/edit.inc:475
 #: mod/cr/camp.inc:429
 #: mod/cr/camp.inc:431
 #: mod/cr/main.inc:37
 msgid "Add Shelter"
 msgstr "新增庇護所"
 
-#: mod/cr/edit.inc:472
+#: mod/cr/edit.inc:474
+#: mod/cr/camp.inc:430
+#, php-format
+msgid "Please click %s to add another shelter."
+msgstr ""
+
+#: mod/cr/edit.inc:478
+#: mod/cr/camp.inc:434
+#, php-format
+msgid "To edit current shelter, please do a search with %s or %s first to find the shelter you would like to edit."
+msgstr ""
+
+#: mod/cr/edit.inc:479
 #: mod/cr/main_fns.inc:48
 #: mod/cr/camp.inc:435
 msgid "Search by Name"
 msgstr "依名稱搜尋"
 
-#: mod/cr/edit.inc:473
+#: mod/cr/edit.inc:480
 #: mod/cr/main_fns.inc:49
 #: mod/cr/camp.inc:436
 msgid "Search by address"
 msgstr "依地址搜尋"
 
-#: mod/cr/edit.inc:543
+#: mod/cr/edit.inc:550
 #: mod/cr/camp.inc:499
 msgid "Available"
 msgstr "可使用"
 
-#: mod/cr/edit.inc:549
+#: mod/cr/edit.inc:556
 #: mod/cr/camp.inc:505
 msgid "Not Available"
 msgstr "不可使用"
@@ -10354,6 +10374,7 @@ msgid "You have succesfully registered shelter "
 msgstr "您成功登錄了庇護所"
 
 #: mod/cr/camp.inc:462
+#: mod/rms/handler_mng_ff.inc:353
 msgid "Location : "
 msgstr "地點："
 
@@ -11462,20 +11483,18 @@ msgstr "感謝狀"
 
 #: mod/rms/handler_plg_receipt.inc:97
 #: mod/rms/handler_plg_ls.inc:61
-#: mod/rms/handler_plg_sch.inc:48
-#: mod/rms/handler_plg_sch.inc:54
-#: mod/rms/handler_plg_sch.inc:107
+#: mod/rms/handler_plg_sch.inc:83
 msgid "Donor"
 msgstr "捐贈者"
 
 #: mod/rms/handler_plg_receipt.inc:97
 #: mod/rms/handler_req_ls.inc:71
-#: mod/rms/handler_req_sch.inc:205
-#: mod/rms/handler_req_sch.inc:211
+#: mod/rms/handler_req_sch.inc:204
+#: mod/rms/handler_req_sch.inc:210
 #: mod/rms/handler_plg_ls.inc:61
-#: mod/rms/handler_plg_sch.inc:107
-#: mod/rms/handler_plg_sch.inc:109
-#: mod/rms/lib_rms.inc:848
+#: mod/rms/handler_plg_sch.inc:83
+#: mod/rms/handler_plg_sch.inc:85
+#: mod/rms/lib_rms.inc:852
 #: mod/msg/handler_cap_edit.inc:88
 #: mod/msg/handler_cap_new.inc:79
 #: inc/lib_security/acl_form.inc:500
@@ -11485,28 +11504,28 @@ msgstr "日期"
 #: mod/rms/handler_plg_receipt.inc:99
 #: mod/rms/handler_plg_receipt.inc:145
 #: mod/rms/handler_plg_new.inc:167
-#: mod/rms/lib_rms.inc:887
+#: mod/rms/lib_rms.inc:891
 msgid "Receipt taken"
 msgstr "收據已領"
 
 #: mod/rms/handler_plg_receipt.inc:100
 #: mod/rms/handler_plg_receipt.inc:146
 #: mod/rms/handler_plg_new.inc:168
-#: mod/rms/lib_rms.inc:888
+#: mod/rms/lib_rms.inc:892
 msgid "Need to send receipt"
 msgstr "收據待寄送"
 
 #: mod/rms/handler_plg_receipt.inc:101
 #: mod/rms/handler_plg_receipt.inc:153
 #: mod/rms/handler_plg_new.inc:174
-#: mod/rms/lib_rms.inc:889
+#: mod/rms/lib_rms.inc:893
 msgid "Certificate of appreciation taken"
 msgstr "感謝狀已領"
 
 #: mod/rms/handler_plg_receipt.inc:102
 #: mod/rms/handler_plg_receipt.inc:154
 #: mod/rms/handler_plg_new.inc:175
-#: mod/rms/lib_rms.inc:890
+#: mod/rms/lib_rms.inc:894
 msgid "Need to send certificate of appreciation"
 msgstr "需寄送感謝狀"
 
@@ -11529,13 +11548,13 @@ msgstr "結束日期 "
 
 #: mod/rms/handler_plg_receipt.inc:147
 #: mod/rms/handler_plg_new.inc:169
-#: mod/rms/lib_rms.inc:907
+#: mod/rms/lib_rms.inc:911
 msgid "Receipt :"
 msgstr "捐贈收據"
 
 #: mod/rms/handler_plg_receipt.inc:155
 #: mod/rms/handler_plg_new.inc:176
-#: mod/rms/lib_rms.inc:908
+#: mod/rms/lib_rms.inc:912
 msgid "Certificate of appreciation :"
 msgstr "感謝狀"
 
@@ -11546,18 +11565,18 @@ msgstr "在資料庫裡沒有符合條件的捐贈物資"
 
 #: mod/rms/handler_plg_receipt.inc:172
 #: mod/rms/handler_req_new.inc:507
-#: mod/rms/handler_req_ls.inc:219
-#: mod/rms/handler_req_ls.inc:236
-#: mod/rms/handler_req_sch.inc:281
+#: mod/rms/handler_req_ls.inc:223
+#: mod/rms/handler_req_ls.inc:240
+#: mod/rms/handler_req_sch.inc:280
 #: mod/rms/handler_plg_ls.inc:111
 #: mod/rms/handler_plg_ls.inc:167
 #: mod/rms/handler_plg_ls.inc:179
 #: mod/rms/handler_plg_new.inc:325
-#: mod/rms/handler_plg_sch.inc:168
+#: mod/rms/handler_plg_sch.inc:142
 #: mod/rms/handler_mng_ff.inc:32
-#: mod/rms/handler_mng_ff.inc:323
-#: mod/rms/handler_mng_ff.inc:400
-#: mod/rms/lib_rms.inc:517
+#: mod/rms/handler_mng_ff.inc:328
+#: mod/rms/handler_mng_ff.inc:405
+#: mod/rms/lib_rms.inc:521
 msgid "RMS Home"
 msgstr "需求管理 首頁"
 
@@ -11617,17 +11636,17 @@ msgid "Add Location"
 msgstr "新增位置"
 
 #: mod/rms/handler_req_new.inc:119
-#: mod/rms/lib_rms.inc:1289
+#: mod/rms/lib_rms.inc:1293
 msgid "Select a location where the request is related."
 msgstr "選擇一個跟需求相關的地點。"
 
 #: mod/rms/handler_req_new.inc:120
-#: mod/rms/lib_rms.inc:1290
+#: mod/rms/lib_rms.inc:1294
 msgid "If you want to make the request for a new location, add the location first."
 msgstr "如果你需要為此需求建立一個新的位置，請先增加該位置。"
 
 #: mod/rms/handler_req_new.inc:124
-#: mod/rms/lib_rms.inc:1296
+#: mod/rms/lib_rms.inc:1300
 msgid "Existing Location"
 msgstr "現有的位置"
 
@@ -11639,9 +11658,9 @@ msgstr "新增物資"
 #: mod/rms/handler_req_new.inc:291
 #: mod/rms/handler_req_sch.inc:96
 #: mod/rms/handler_plg_new.inc:98
-#: mod/rms/handler_plg_sch.inc:60
-#: mod/rms/handler_plg_sch.inc:107
-#: mod/rms/handler_plg_sch.inc:109
+#: mod/rms/handler_plg_sch.inc:40
+#: mod/rms/handler_plg_sch.inc:83
+#: mod/rms/handler_plg_sch.inc:85
 #: mod/msg/handler_cap_new.inc:122
 msgid "Category"
 msgstr "分類"
@@ -11650,19 +11669,19 @@ msgstr "分類"
 #: mod/rms/handler_req_new.inc:342
 #: mod/rms/handler_plg_new.inc:107
 #: mod/rms/handler_plg_new.inc:131
-#: mod/rms/handler_plg_sch.inc:107
-#: mod/rms/handler_plg_sch.inc:109
-#: mod/rms/handler_mng_ff.inc:259
-#: mod/rms/lib_rms.inc:795
-#: mod/rms/lib_rms.inc:876
+#: mod/rms/handler_plg_sch.inc:83
+#: mod/rms/handler_plg_sch.inc:85
+#: mod/rms/handler_mng_ff.inc:264
+#: mod/rms/lib_rms.inc:799
+#: mod/rms/lib_rms.inc:880
 msgid "Quantity"
 msgstr "數量"
 
 #: mod/rms/handler_req_new.inc:299
 #: mod/rms/handler_req_sch.inc:93
-#: mod/rms/handler_req_sch.inc:205
-#: mod/rms/handler_req_sch.inc:211
-#: mod/rms/lib_rms.inc:848
+#: mod/rms/handler_req_sch.inc:204
+#: mod/rms/handler_req_sch.inc:210
+#: mod/rms/lib_rms.inc:852
 msgid "Priority"
 msgstr "優先順序"
 
@@ -11685,7 +11704,7 @@ msgid "Sub Category"
 msgstr "次目錄"
 
 #: mod/rms/handler_req_new.inc:342
-#: mod/rms/lib_rms.inc:795
+#: mod/rms/lib_rms.inc:799
 msgid "Item Priority"
 msgstr "需求急迫性"
 
@@ -11735,52 +11754,57 @@ msgid ":: "
 msgstr ":: "
 
 #: mod/rms/handler_req_ls.inc:71
+#: mod/rms/handler_req_ls.inc:124
 #: mod/rms/handler_req_sch.inc:86
-#: mod/rms/handler_req_sch.inc:201
-msgid "Requester"
-msgstr "需求者"
+#: mod/rms/handler_req_sch.inc:200
+#: mod/rms/lib_rms.inc:748
+#, fuzzy
+msgid "Recoder"
+msgstr "記錄"
+
+#: mod/rms/handler_req_ls.inc:71
+#: mod/rms/handler_req_ls.inc:130
+#: mod/rms/handler_req_sch.inc:90
+#: mod/rms/handler_req_sch.inc:202
+#: mod/rms/lib_rms.inc:788
+#, fuzzy
+msgid "Location of request"
+msgstr "地點維護"
 
 #: mod/rms/handler_req_ls.inc:71
 #: mod/rms/handler_plg_ls.inc:61
-#: mod/rms/handler_plg_sch.inc:107
-#: mod/rms/handler_plg_sch.inc:109
-#: mod/rms/handler_mng_ff.inc:142
+#: mod/rms/handler_plg_sch.inc:83
+#: mod/rms/handler_plg_sch.inc:85
+#: mod/rms/handler_mng_ff.inc:147
 msgid "status"
 msgstr "狀態"
 
-#: mod/rms/handler_req_ls.inc:120
-msgid "Requesters"
-msgstr "需求者"
-
-#: mod/rms/handler_req_ls.inc:126
-#: mod/rms/handler_req_sch.inc:90
-msgid "Locations"
-msgstr "位置"
-
-#: mod/rms/handler_req_ls.inc:133
-#: mod/rms/handler_req_ls.inc:165
+#: mod/rms/handler_req_ls.inc:73
+#: mod/rms/handler_req_ls.inc:137
+#: mod/rms/handler_req_ls.inc:169
 #: mod/rms/handler_req_sch.inc:71
 msgid "Open"
 msgstr "開啟"
 
-#: mod/rms/handler_req_ls.inc:134
-#: mod/rms/handler_req_ls.inc:166
+#: mod/rms/handler_req_ls.inc:74
+#: mod/rms/handler_req_ls.inc:138
+#: mod/rms/handler_req_ls.inc:170
 #: mod/rms/handler_req_sch.inc:72
 msgid "Closed"
 msgstr "已關閉"
 
-#: mod/rms/handler_req_ls.inc:141
+#: mod/rms/handler_req_ls.inc:145
 #: mod/rms/handler_plg_ls.inc:93
 msgid "Clear Filter"
 msgstr "清理篩選器"
 
-#: mod/rms/handler_req_ls.inc:158
+#: mod/rms/handler_req_ls.inc:162
 msgid "There are no requests on the Database that matches your criteria"
 msgstr "在資料庫中沒有符合您條件的需求"
 
-#: mod/rms/handler_req_ls.inc:219
-#: mod/rms/handler_req_ls.inc:236
-#: mod/rms/lib_rms.inc:517
+#: mod/rms/handler_req_ls.inc:223
+#: mod/rms/handler_req_ls.inc:240
+#: mod/rms/lib_rms.inc:521
 msgid "Back to Request List"
 msgstr "回到需求列表"
 
@@ -11789,7 +11813,7 @@ msgid "Request Search: Search for Requesters, Locations and Requests"
 msgstr "需求搜尋：搜尋需求者、位置和需求"
 
 #: mod/rms/handler_req_sch.inc:83
-#: mod/rms/handler_plg_sch.inc:45
+#: mod/rms/handler_plg_sch.inc:38
 msgid "Select Criteria"
 msgstr "設定條件"
 
@@ -11797,12 +11821,12 @@ msgstr "設定條件"
 msgid "No requests found"
 msgstr "找不到需求"
 
-#: mod/rms/handler_req_sch.inc:236
-#: mod/rms/handler_plg_sch.inc:127
+#: mod/rms/handler_req_sch.inc:235
+#: mod/rms/handler_plg_sch.inc:102
 msgid "There are no results that match your search criteria."
 msgstr "沒有符合您的搜尋條件的資料。"
 
-#: mod/rms/handler_req_sch.inc:281
+#: mod/rms/handler_req_sch.inc:280
 msgid "Back to Request Search"
 msgstr "回到需求搜尋"
 
@@ -11912,8 +11936,8 @@ msgstr "捐贈清單"
 #: mod/rms/handler_plg_ls.inc:82
 #: mod/rms/handler_plg_ls.inc:116
 #: mod/rms/handler_plg_new.inc:181
-#: mod/rms/handler_plg_sch.inc:37
-#: mod/rms/lib_rms.inc:894
+#: mod/rms/handler_plg_sch.inc:30
+#: mod/rms/lib_rms.inc:898
 msgid "Not Confirmed"
 msgstr "尚未確認"
 
@@ -11921,8 +11945,8 @@ msgstr "尚未確認"
 #: mod/rms/handler_plg_ls.inc:83
 #: mod/rms/handler_plg_ls.inc:117
 #: mod/rms/handler_plg_new.inc:182
-#: mod/rms/handler_plg_sch.inc:38
-#: mod/rms/lib_rms.inc:895
+#: mod/rms/handler_plg_sch.inc:31
+#: mod/rms/lib_rms.inc:899
 msgid "Confirmed"
 msgstr "已確認"
 
@@ -11930,8 +11954,8 @@ msgstr "已確認"
 #: mod/rms/handler_plg_ls.inc:85
 #: mod/rms/handler_plg_ls.inc:118
 #: mod/rms/handler_plg_new.inc:183
-#: mod/rms/handler_plg_sch.inc:39
-#: mod/rms/lib_rms.inc:896
+#: mod/rms/handler_plg_sch.inc:32
+#: mod/rms/lib_rms.inc:900
 msgid "Delivered"
 msgstr "已送達"
 
@@ -11941,7 +11965,7 @@ msgstr "尚未送達"
 
 #: mod/rms/handler_plg_ls.inc:86
 #: mod/rms/handler_plg_ls.inc:119
-#: mod/rms/handler_plg_sch.inc:40
+#: mod/rms/handler_plg_sch.inc:33
 msgid "Discarded"
 msgstr "已廢棄"
 
@@ -11987,7 +12011,7 @@ msgid "When all the items are added, Please press 'Finish'"
 msgstr "當所有物資已經加入時，請按下「完成」。"
 
 #: mod/rms/handler_plg_new.inc:143
-#: mod/rms/lib_rms.inc:900
+#: mod/rms/lib_rms.inc:904
 msgid "Donor Information"
 msgstr "捐贈者的資訊"
 
@@ -11996,33 +12020,33 @@ msgid "Fill out the following information if necessary. If the donor does not be
 msgstr "以下為收據與感謝狀所需資料，請依需要填寫。如果捐贈者為個人，並非屬於任一單位，則單位爛為空白即可。"
 
 #: mod/rms/handler_plg_new.inc:150
-#: mod/rms/lib_rms.inc:903
+#: mod/rms/lib_rms.inc:907
 msgid "Organization Owner : "
 msgstr "單位負責人："
 
 #: mod/rms/handler_plg_new.inc:154
-#: mod/rms/lib_rms.inc:904
+#: mod/rms/lib_rms.inc:908
 msgid "Donor Name : "
 msgstr "捐贈者姓名"
 
 #: mod/rms/handler_plg_new.inc:158
-#: mod/rms/lib_rms.inc:905
+#: mod/rms/lib_rms.inc:909
 msgid "Donor Phone : "
 msgstr "捐贈者電話"
 
 #: mod/rms/handler_plg_new.inc:162
-#: mod/rms/lib_rms.inc:906
+#: mod/rms/lib_rms.inc:910
 msgid "Donor Address : "
 msgstr "捐贈者地址"
 
 #: mod/rms/handler_plg_new.inc:184
-#: mod/rms/lib_rms.inc:909
+#: mod/rms/lib_rms.inc:913
 msgid "Status :"
 msgstr "狀態"
 
 #: mod/rms/handler_plg_new.inc:205
-#: mod/rms/lib_rms.inc:319
-#: mod/rms/lib_rms.inc:332
+#: mod/rms/lib_rms.inc:323
+#: mod/rms/lib_rms.inc:336
 msgid "Please Select a Catalog Item"
 msgstr "請選擇一個目錄項目"
 
@@ -12038,11 +12062,7 @@ msgstr "以下空白"
 msgid "Search for Pledges"
 msgstr "搜尋捐贈物資"
 
-#: mod/rms/handler_plg_sch.inc:71
-msgid "No pledges found"
-msgstr "沒有找到符合的捐贈物資"
-
-#: mod/rms/handler_plg_sch.inc:168
+#: mod/rms/handler_plg_sch.inc:142
 msgid "Back to Pledge Search"
 msgstr "回到捐贈物資搜尋"
 
@@ -12051,8 +12071,8 @@ msgid "Fulfil Requests"
 msgstr "需求與物資媒合"
 
 #: mod/rms/handler_mng_ff.inc:32
-#: mod/rms/handler_mng_ff.inc:323
-#: mod/rms/handler_mng_ff.inc:400
+#: mod/rms/handler_mng_ff.inc:328
+#: mod/rms/handler_mng_ff.inc:405
 msgid "Fullfil Other Request"
 msgstr "滿足其他需求"
 
@@ -12080,82 +12100,82 @@ msgstr "顯示目前的需求達成狀態，"
 msgid "Please select an item from the request to be fulfilled."
 msgstr "請從需求裡選擇一個要進行媒合的項目"
 
-#: mod/rms/handler_mng_ff.inc:142
+#: mod/rms/handler_mng_ff.inc:147
 msgid "Qty"
 msgstr "數量"
 
-#: mod/rms/handler_mng_ff.inc:142
+#: mod/rms/handler_mng_ff.inc:147
 msgid "Used"
 msgstr "已使用"
 
 # context confirm needed
-#: mod/rms/handler_mng_ff.inc:169
+#: mod/rms/handler_mng_ff.inc:174
 msgid "This shows the list of pledges that have the selected item, "
 msgstr "列出擁有所選擇的物資的捐贈者列表，"
 
-#: mod/rms/handler_mng_ff.inc:170
+#: mod/rms/handler_mng_ff.inc:175
 msgid "Please select a pledge from the request to be fulfilled."
 msgstr "請從要媒合的需求裡選擇一個物資。"
 
-#: mod/rms/handler_mng_ff.inc:178
+#: mod/rms/handler_mng_ff.inc:183
 msgid "No Pledges have been registered !!!"
 msgstr "目前沒有符合需求的捐贈物資"
 
-#: mod/rms/handler_mng_ff.inc:194
+#: mod/rms/handler_mng_ff.inc:199
 msgid "Items from inventories"
 msgstr "來自庫存的品項"
 
-#: mod/rms/handler_mng_ff.inc:248
+#: mod/rms/handler_mng_ff.inc:253
 msgid "Allocate items from a pledge to fulfill a request, "
 msgstr "從捐贈物資裡分配物資，以媒合需求，"
 
-#: mod/rms/handler_mng_ff.inc:249
+#: mod/rms/handler_mng_ff.inc:254
 msgid "The 'Maximum Allocatable Quantity' is the maximum you are allowed to allocate."
 msgstr "'最大可分配的數量'，是您可分配的數量的最大值。"
 
-#: mod/rms/handler_mng_ff.inc:253
+#: mod/rms/handler_mng_ff.inc:258
 msgid "Allocate items from the selected pledge to the request"
 msgstr "從選擇的捐贈物資裡，分配物資以滿足需求"
 
-#: mod/rms/handler_mng_ff.inc:256
-#: mod/rms/handler_mng_ff.inc:284
+#: mod/rms/handler_mng_ff.inc:261
+#: mod/rms/handler_mng_ff.inc:289
 msgid "Allocate"
 msgstr "分配"
 
-#: mod/rms/handler_mng_ff.inc:258
+#: mod/rms/handler_mng_ff.inc:263
 msgid "Maximum Allocatable Quantity"
 msgstr "最大可分配的數量"
 
-#: mod/rms/handler_mng_ff.inc:266
+#: mod/rms/handler_mng_ff.inc:271
 msgid "Cancel Fulfillment Process"
 msgstr "取消滿足需求的程序"
 
-#: mod/rms/handler_mng_ff.inc:285
+#: mod/rms/handler_mng_ff.inc:290
 msgid "Item : "
 msgstr "物資："
 
-#: mod/rms/handler_mng_ff.inc:286
+#: mod/rms/handler_mng_ff.inc:291
 msgid "Allocatable quantity (Max) : "
 msgstr "可分配的數量（最大值）："
 
-#: mod/rms/handler_mng_ff.inc:288
+#: mod/rms/handler_mng_ff.inc:293
 msgid "Quantity : "
 msgstr "數量："
 
-#: mod/rms/handler_mng_ff.inc:323
-#: mod/rms/handler_mng_ff.inc:400
+#: mod/rms/handler_mng_ff.inc:328
+#: mod/rms/handler_mng_ff.inc:405
 msgid "Fullfil Another Item From the Same Request"
 msgstr "在本次需求中滿足其他品項"
 
-#: mod/rms/handler_mng_ff.inc:372
+#: mod/rms/handler_mng_ff.inc:377
 msgid "Please enter a valid 'Quantity', The 'Quantity' should be equal or less than the Maximum Value"
 msgstr "請輸入一個有效的「數量」，「數量」應該等於或小於最大值。"
 
-#: mod/rms/handler_mng_ff.inc:378
+#: mod/rms/handler_mng_ff.inc:383
 msgid "Please enter a valid 'Quantity', The 'Quantity' should be larger than the 0"
 msgstr "請輸入一個有效的「數量」，「數量」應該大於0。"
 
-#: mod/rms/handler_mng_ff.inc:392
+#: mod/rms/handler_mng_ff.inc:397
 msgid "The Fulfillment Data was successfully added"
 msgstr "已成功新增滿足需求的資料。"
 
@@ -12227,92 +12247,103 @@ msgstr "需求與物資媒合"
 msgid "Welcome to The Sahana "
 msgstr "歡迎來到 Sahana "
 
-#: mod/rms/lib_rms.inc:326
-#: mod/rms/lib_rms.inc:339
+#: mod/rms/lib_rms.inc:330
+#: mod/rms/lib_rms.inc:343
 msgid "Please Enter a valid Quantity"
 msgstr "請輸入有效的數量"
 
-#: mod/rms/lib_rms.inc:485
+#: mod/rms/lib_rms.inc:395
+#, fuzzy
+msgid "Immediate"
+msgstr "編輯"
+
+#: mod/rms/lib_rms.inc:396
+#, fuzzy
+msgid "Moderate"
+msgstr "模組名稱"
+
+#: mod/rms/lib_rms.inc:397
+#, fuzzy
+msgid "Low Priority"
+msgstr "低毛利銷售"
+
+#: mod/rms/lib_rms.inc:489
 msgid "Do you really want to delete this request?"
 msgstr "確定要刪除這個需求？"
 
-#: mod/rms/lib_rms.inc:511
+#: mod/rms/lib_rms.inc:515
 msgid "Request deleted."
 msgstr "需求已刪除"
 
-#: mod/rms/lib_rms.inc:515
+#: mod/rms/lib_rms.inc:519
 msgid "Action cancelled."
 msgstr "動作已取消"
 
-#: mod/rms/lib_rms.inc:661
+#: mod/rms/lib_rms.inc:665
 #: inc/lib_misc.inc:23
 msgid "Alert"
 msgstr "警告"
 
-#: mod/rms/lib_rms.inc:723
+#: mod/rms/lib_rms.inc:727
 msgid "Requester Information"
 msgstr "需求者的資訊"
 
-#: mod/rms/lib_rms.inc:744
-msgid "Requester Name"
-msgstr "需求者姓名"
-
-#: mod/rms/lib_rms.inc:795
+#: mod/rms/lib_rms.inc:799
 msgid "fulfilled_quantity"
 msgstr "需滿足數量"
 
-#: mod/rms/lib_rms.inc:795
+#: mod/rms/lib_rms.inc:799
 msgid "Select to fulfill"
 msgstr "選取以進行媒合"
 
-#: mod/rms/lib_rms.inc:815
+#: mod/rms/lib_rms.inc:819
 msgid "Request Items"
 msgstr "需求物資"
 
-#: mod/rms/lib_rms.inc:827
-#: mod/rms/lib_rms.inc:852
+#: mod/rms/lib_rms.inc:831
+#: mod/rms/lib_rms.inc:856
 msgid "Request Fulfilment Status"
 msgstr "需求媒合進度"
 
-#: mod/rms/lib_rms.inc:848
+#: mod/rms/lib_rms.inc:852
 msgid "Requested"
 msgstr "已提出需求"
 
-#: mod/rms/lib_rms.inc:848
+#: mod/rms/lib_rms.inc:852
 msgid "Fulfiled"
 msgstr "已滿足"
 
-#: mod/rms/lib_rms.inc:880
+#: mod/rms/lib_rms.inc:884
 msgid "Pledge Items"
 msgstr "捐贈物資的品項"
 
-#: mod/rms/lib_rms.inc:911
+#: mod/rms/lib_rms.inc:915
 msgid "Creator of this record :"
 msgstr "紀錄者"
 
-#: mod/rms/lib_rms.inc:1151
+#: mod/rms/lib_rms.inc:1155
 msgid "There is no any root catalogue found. "
 msgstr "找不到任何主目錄。"
 
-#: mod/rms/lib_rms.inc:1157
+#: mod/rms/lib_rms.inc:1161
 msgid "Select the root Category"
 msgstr "選擇主目錄"
 
-#: mod/rms/lib_rms.inc:1161
+#: mod/rms/lib_rms.inc:1165
 msgid "Select the sub category"
 msgstr "選擇次目錄"
 
-#: mod/rms/lib_rms.inc:1236
-#: mod/rms/lib_rms.inc:1255
+#: mod/rms/lib_rms.inc:1240
+#: mod/rms/lib_rms.inc:1259
 msgid "Location already exists"
 msgstr "位置已經存在"
 
-#: mod/rms/lib_rms.inc:1243
-#: mod/rms/lib_rms.inc:1263
+#: mod/rms/lib_rms.inc:1247
+#: mod/rms/lib_rms.inc:1267
 msgid "Location added successfully"
 msgstr "成功新增位置"
 
-#: mod/rms/lib_rms.inc:1271
+#: mod/rms/lib_rms.inc:1275
 msgid "Select the location first"
 msgstr "請先選擇位置"
 
@@ -13927,6 +13958,12 @@ msgstr "找不到資料"
 msgid "Page "
 msgstr "頁"
 
+#: inc/lib_paging.inc:143
+#: inc/lib_paging.inc:199
+#, fuzzy
+msgid "default"
+msgstr "預設載貨紙"
+
 #: inc/handler_db.inc:183
 msgid "Incident"
 msgstr "事故"
@@ -15100,6 +15137,16 @@ msgstr "多方面的"
 msgid "Medical"
 msgstr "醫療"
 
+#~ msgid "Requester"
+#~ msgstr "需求者"
+#~ msgid "Requesters"
+#~ msgstr "需求者"
+#~ msgid "Locations"
+#~ msgstr "位置"
+#~ msgid "No pledges found"
+#~ msgstr "沒有找到符合的捐贈物資"
+#~ msgid "Requester Name"
+#~ msgstr "需求者姓名"
 #~ msgid "Service Coverage"
 #~ msgstr "服務涵蓋範圍"
 #~ msgid "Drill down Location Coverage"

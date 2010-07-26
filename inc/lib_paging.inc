@@ -140,7 +140,7 @@ function _shn_page_draw_navi(&$res, $url, $rpp) {
     
     <?php
     }
-    $options = array('none' => 'default', '1000000' => 'All', '10' => '10', '20' => '20', '30' => '30', '40' => '40', '50' => '50', '100' => '100');
+    $options = array('none' => _('default'), '1000000' => _('All'), '10' => '10', '20' => '20', '30' => '30', '40' => '40', '50' => '50', '100' => '100');
 ?>
 	&nbsp;&nbsp;
 	<?php
@@ -196,7 +196,7 @@ function _shn_page_draw_navi_post(&$res, $url) {
             shn_form_hidden(array($name => $post));
         }
     }
-    $options = array('none' => 'default', '1000000' => 'All', '10' => '10', '20' => '20', '30' => '30', '40' => '40', '50' => '50', '100' => '100');
+    $options = array('none' => _('default'), '1000000' => _('All'), '10' => '10', '20' => '20', '30' => '30', '40' => '40', '50' => '50', '100' => '100');
 ?>
 	<div>
 	<?php

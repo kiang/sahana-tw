@@ -471,11 +471,11 @@ function _shn_cr_cedt_commit() {
 
 	<div id="note" style="text-align: left;">
             <div><?php echo _('Add Shelter'); ?>:<?php
-            echo sprintf('Please click %s to add another shelter.',
+            echo sprintf(_('Please click %s to add another shelter.'),
                     '<a href="index.php?mod=cr&act=acmp"><b>' . _('Add Shelter') . '</b></a>');
             ?></div>
             <div><?php echo _('Edit Shelter'); ?>:<?php
-            echo sprintf('To edit current shelter, please do a search with %s or %s first to find the shelter you would like to edit.',
+            echo sprintf(_('To edit current shelter, please do a search with %s or %s first to find the shelter you would like to edit.'),
                     '<a href="index.php?mod=cr&act=srch"><b>' . _('Search by Name') . '</b></a>',
                     '<a href="index.php?mod=cr&act=srch_address"><b>' . _('Search by address') . '</b></a>');
             ?></div>

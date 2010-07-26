@@ -267,7 +267,11 @@ function _shn_rms_get_priorities() {
         display_errors();
         return false;
     } elseif (1 <= $rs->RecordCount()) {
-        return $rs->GetArray();
+        $result = $rs->GetArray();
+        foreach($result AS $key => $val) {
+            $result[$key]['priority'] = $result[$key][1] = _($result[$key]['priority']);
+        }
+        return $result;
     } else {
         return array();
     }
@@ -387,6 +391,11 @@ function _shn_rms_get_iunit_name($unit_id) {
 }
 function _shn_rms_get_priorityname($pri_id) {
     global $global;
+    $priorities = array(
+        'pri_1' => _('Immediate'),
+        'pri_2' => _('Moderate'),
+        'pri_3' => _('Low Priority'),
+    );
     $sql = "SELECT priority FROM rms_priority WHERE pri_uuid='$pri_id'";
     $rs = $global['db']->Execute($sql);
     if ($rs === false) {
@@ -396,13 +405,8 @@ function _shn_rms_get_priorityname($pri_id) {
         return false;
     } else {
         $res = $rs->fields["priority"];
-        return $res;
+        return _($res);
     }
-    //	elseif (1 <= $rs->RecordCount())
-    //	{
-    //		$rs = $rs->GetArray();
-    //		return $rs[0][0];
-    //	}
     return false;
 }
 /***

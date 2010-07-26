@@ -20,7 +20,7 @@ _shn_rms_print_hedder(_("Search for Pledges"));
 function _shn_rms_sch_getkeywords() {
     $categories = array();
     $cat_arr = _shn_rms_get_categories();
-    array_push($categories, 'All');
+    array_push($categories, _('All'));
     foreach ($cat_arr as $cat) {
         $categories[$cat['ct_uuid']] = $cat['name'];
     }

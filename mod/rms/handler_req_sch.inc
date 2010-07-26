@@ -23,7 +23,7 @@ function _shn_rms_sch_getkeywords() {
     $reqstr_name = _shn_rms_get_requesters();
     if ($reqstr_name != null) {
         $reqstr_name = array_reverse($reqstr_name, TRUE);
-        array_push($reqstr_name, 'All');
+        array_push($reqstr_name, _('All'));
         $reqstr_name = array_reverse($reqstr_name, TRUE);
         //-------------------------------------------------------------
         if ($_SESSION['isadmin'] == true) {
@@ -34,7 +34,7 @@ function _shn_rms_sch_getkeywords() {
             $loc_ids = _shn_rms_get_location_array($_SESSION['user_id']);
         }
         $location = array();
-        $location[0] = 'All';
+        $location[0] = _('All');
         //-----------------------------------------------------
         //        foreach($loc_ids as $loc){
         //            if(_shn_rms_is_location($loc)) {
@@ -53,14 +53,14 @@ function _shn_rms_sch_getkeywords() {
         //------------------------------------------------------------
         $priority = array();
         $pri_arr = array();
-        array_push($priority, 'All');
+        array_push($priority, _('All'));
         $pri_arr = _shn_rms_get_priorities();
         foreach($pri_arr as $pri) {
             $priority[$pri['pri_uuid']] = $pri['priority'];
         }
         //------------------------------------------------------------
         $categories = array();
-        array_push($categories, 'All');
+        array_push($categories, _('All'));
         $cat_arr = _shn_rms_get_categories();
         foreach($cat_arr as $cat) {
             $categories[$cat['ct_uuid']] = $cat['name'];
