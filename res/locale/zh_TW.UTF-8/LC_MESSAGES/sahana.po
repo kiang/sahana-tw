@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-07-21 17:17+0800\n"
-"PO-Revision-Date: 2010-07-21 17:21+0800\n"
+"PO-Revision-Date: 2010-07-26 15:46+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -279,7 +279,7 @@ msgstr "已經被拒絕"
 
 #: mod/vm/model/dao.php:1183
 msgid "You have been given an approved ability status for"
-msgstr "You have been given an approved ability status for"
+msgstr "您已經被核准為"
 
 #: mod/vm/model/dao.php:1524
 msgid "You have been assigned to"
@@ -919,7 +919,7 @@ msgstr "出缺席狀況"
 #: tools/tpl_languages.php:90
 #: tools/tpl_languages.php:108
 msgid "Attended hours"
-msgstr ""
+msgstr "出席時數"
 
 #: tools/tpl_languages.php:91
 #: tools/tpl_languages.php:109
@@ -1453,7 +1453,7 @@ msgstr "開始時間（例如：08:00）"
 
 #: tools/tpl_languages.php:229
 msgid "End Hours (e.g. 17:00) :"
-msgstr "結束時間（例如:17:00）"
+msgstr "結束時間（例如：17:00）"
 
 #: tools/tpl_languages.php:230
 #: mod/or/search.inc:40
@@ -1485,7 +1485,7 @@ msgstr "聯絡資訊"
 
 #: tools/tpl_languages.php:232
 msgid "Prefered medium confirmation :"
-msgstr "期待的聯絡方式（請點選其中一項）"
+msgstr "比較習慣的聯絡方式（請點選其中一項）"
 
 #: tools/tpl_languages.php:234
 msgid "Optionally, you may upload a picture to identify yourself."
@@ -1543,9 +1543,8 @@ msgid "Filter volunteer results by any one of the following fields:"
 msgstr "請以下列任一條件查詢所需志工"
 
 #: tools/tpl_languages.php:258
-#, fuzzy
 msgid "advanced"
-msgstr "進階搜尋"
+msgstr "進階搜尋 "
 
 #: tools/tpl_languages.php:259
 msgid "Options"
@@ -1625,9 +1624,8 @@ msgid "Pay Rate "
 msgstr "時薪"
 
 #: tools/tpl_languages.php:287
-#, fuzzy
 msgid "Start "
-msgstr "開始日期"
+msgstr "開始日期 "
 
 #: tools/tpl_languages.php:288
 msgid "End "
@@ -1803,9 +1801,8 @@ msgstr "總時數"
 
 #: tools/tpl_languages.php:331
 #: tools/tpl_languages.php:337
-#, fuzzy
 msgid "Total Monetary Value"
-msgstr "最後總計價值"
+msgstr "最後總計價值 "
 
 #: tools/tpl_languages.php:332
 #: mod/mpr/view.inc:26
@@ -1869,9 +1866,8 @@ msgstr "刪除所有已經快取的 PHP 樣板"
 
 #: tools/tpl_languages.php:346
 #: tools/tpl_languages.php:366
-#, fuzzy
 msgid "Audit ACL"
-msgstr "稽核"
+msgstr "稽核 "
 
 #: tools/tpl_languages.php:347
 msgid "Verify that all 'act' and 'vm_action' combinations in the VM code are under access control and that all VM tables/views are classified"
@@ -1884,9 +1880,8 @@ msgid "Access Control"
 msgstr "權限控制"
 
 #: tools/tpl_languages.php:349
-#, fuzzy
 msgid "Please select a situation below to modify access to:"
-msgstr "請指定一個情境，以修改存取"
+msgstr "請指定一個情境，以修改存取 "
 
 #: tools/tpl_languages.php:352
 #: mod/sync/lib_report.inc:46
@@ -1909,14 +1904,12 @@ msgid "Remove From List"
 msgstr "從清單中移除"
 
 #: tools/tpl_languages.php:358
-#, fuzzy
 msgid "Special Constraints"
-msgstr "特殊訂單"
+msgstr "特殊訂單 "
 
 #: tools/tpl_languages.php:359
-#, fuzzy
 msgid "on"
-msgstr "於"
+msgstr "於 "
 
 #: tools/tpl_languages.php:360
 msgid "Save Changes"
@@ -1931,9 +1924,8 @@ msgid "VM Admin Home"
 msgstr "志工管理首頁"
 
 #: tools/tpl_languages.php:367
-#, fuzzy
 msgid "ACL Audit"
-msgstr "稽核"
+msgstr "稽核 "
 
 #: tools/tpl_languages.php:368
 msgid "All access requests in the database and in the VM code match."
@@ -2004,7 +1996,7 @@ msgstr "寄件匣"
 
 #: tools/tpl_languages.php:389
 msgid "From"
-msgstr "由 "
+msgstr "寄件者"
 
 #: tools/tpl_languages.php:390
 #: tools/tpl_languages.php:400
@@ -2093,7 +2085,7 @@ msgstr "這是"
 
 #: mod/or/lib_or_rss.inc:39
 msgid " organization located in "
-msgstr "組織位置在"
+msgstr "組織位於"
 
 #: mod/or/lib_or_rss.inc:39
 msgid ". And it provides the following services - "
@@ -2143,7 +2135,7 @@ msgstr "組織型態"
 
 #: mod/or/search.inc:36
 msgid "Select the services your provide ,i.e what you do as an organization. e.g.if you are a supplier select it"
-msgstr "選取您提供的服務，也就是您的組織在做什麼。例如醫療服務供應商。"
+msgstr "選取您提供的服務，也就是您的組織在做什麼。例如醫療服務。"
 
 #: mod/or/search.inc:38
 #: mod/or/reg_org.inc:56
@@ -2246,11 +2238,11 @@ msgstr "你現在可以在下面新增分支機構/部門"
 
 #: mod/or/process_org.inc:131
 msgid "e.g. Health Department,Relief Operations Department. : "
-msgstr "例如：健康部，救災運營部。："
+msgstr "例如：健康部，救災營運部。"
 
 #: mod/or/process_org.inc:132
 msgid "Of course you can add Branches/Departments later on through the Register a Department/Branch link."
-msgstr "當然，你以後可以通過登錄部門/分支機構的連結，來新增分支機構/部門"
+msgstr "當然，你以後可以透過登錄部門/分支機構的連結，來新增分支機構/部門"
 
 #: mod/or/process_org.inc:136
 msgid "Register another Organization"
@@ -2258,7 +2250,7 @@ msgstr "登錄另一個組織"
 
 #: mod/or/process_org.inc:137
 msgid "Instead if you wish to add another organization click the button below "
-msgstr "或者，如果你想新增一個組織，請按下方按鈕"
+msgstr "如果你想新增一個組織，請按下方按鈕"
 
 #: mod/or/process_org.inc:139
 #: mod/or/main.inc:36
@@ -2291,7 +2283,7 @@ msgstr "這些是組織的基本資訊。組織名稱為必填，登記字號為
 
 #: mod/or/reg_org.inc:46
 msgid "If your organization is registered under the government, please enter your Company Registration Number"
-msgstr "如果您的組織有像政府登記，請輸入您的登記字號"
+msgstr "如果您的組織有向政府登記，請輸入登記字號"
 
 #: mod/or/reg_org.inc:47
 #: mod/or/reg_org.inc:172
@@ -2365,7 +2357,7 @@ msgstr "組織位置"
 
 #: mod/or/reg_org.inc:207
 msgid "Organization Location Address"
-msgstr "組織位置地址"
+msgstr "組織地址"
 
 #: mod/or/reg_org.inc:208
 #: mod/or/view_org.inc:407
@@ -2556,11 +2548,11 @@ msgstr "建立與其他事故關聯"
 
 #: mod/or/view_org.inc:338
 msgid "Organization Registration Information of <em>"
-msgstr "組織登錄資訊：<em>"
+msgstr "組織登錄資訊"
 
 #: mod/or/view_org.inc:349
 msgid "These are the basic details of an organization. Organization name is required ,but registration  no is optional"
-msgstr "這是基本的組織資訊。組織名稱為必填，註冊號碼是選填。"
+msgstr "這是基本的組織資訊。組織名稱為必填，登記字號為非必填。"
 
 #: mod/or/view_org.inc:357
 #: mod/or/view_org.inc:692
@@ -2615,9 +2607,7 @@ msgid ""
 "You can move around and enlarge/reduce the size of the area you want using\n"
 "the scale on upper left corner of the map. By clicking on a map you can\n"
 "mark your location with a pointer."
-msgstr ""
-"您可以四處拖動並且用左上角的刻度放大/縮小您想看的地區。\n"
-"重新點擊地圖上任一位置，及改變原來的標記。"
+msgstr "您可以四處拖動並且用左上角的刻度放大/縮小您想看的地區。重新點擊地圖上任一位置，即可改變原來的標記。"
 
 #: mod/or/view_org.inc:447
 #: mod/or/view_org.inc:733
@@ -2678,7 +2668,7 @@ msgstr "網址："
 
 #: mod/or/view_org.inc:685
 msgid "Organization Registration Information of "
-msgstr "公司登記資料--"
+msgstr "組織登記資料"
 
 #: mod/or/view_org.inc:694
 msgid "Organization Type : "
@@ -2715,33 +2705,33 @@ msgstr "資源"
 #: mod/or/errors.inc:15
 #: mod/or/errors.inc:22
 msgid "Organization name is essential for registration. Please complete and submit again"
-msgstr "組織名稱是註冊的必填欄位。請填寫再送出。"
+msgstr "組織名稱為必填欄位。請填寫再送出。"
 
 #: mod/or/errors.inc:16
 msgid "Organization Type is essential for registration. Please complete and submit again"
-msgstr "組織類型是註冊的必填欄位。請填寫再送出。"
+msgstr "組織類型為必填欄位。請填寫再送出。"
 
 #: mod/or/errors.inc:17
 msgid "Organization Sector is essential for registration. Please complete and submit again"
-msgstr "組織領域是註冊的必填欄位。請填寫再送出。"
+msgstr "組織領域為必填欄位。請填寫再送出。"
 
 #: mod/or/errors.inc:18
 msgid "Organization Location is essential for registration. Please complete and submit again"
-msgstr "組織位置是註冊的必填欄位。請填寫再送出。"
+msgstr "組織位置為必填欄位。請填寫再送出。"
 
 #: mod/or/errors.inc:19
 msgid "User Name is essential for registration. Please complete and submit again"
-msgstr "使用者名稱是註冊的必填欄位。請填寫再送出。"
+msgstr "使用者名稱為必填欄位。請填寫再送出。"
 
 #: mod/or/errors.inc:20
 #: mod/ims/errors.inc:21
 msgid "Password is essential for registration. Please complete and submit again"
-msgstr "登錄時必須填寫密碼，請填寫完整並重新送出"
+msgstr "密碼為必填欄位，請填寫完整並重新送出"
 
 #: mod/or/errors.inc:21
 #: mod/ims/errors.inc:22
 msgid "Password confirmation is essential for registration. Please complete and submit again"
-msgstr "登錄時必須填寫確認密碼，請填寫完整並重新送出"
+msgstr "密碼確認為必填欄位，請填寫完整並重新送出"
 
 #: mod/or/errors.inc:23
 #: mod/ims/errors.inc:23
@@ -2765,15 +2755,15 @@ msgstr "電子郵件位址的格式錯誤"
 
 #: mod/or/errors.inc:27
 msgid "You have to enter a Date (yyyy-mm-dd) for Date of Birth"
-msgstr "請輸入出生日期 (yyyy-mm-dd) "
+msgstr "請輸入出生日期 (年年年年-月月-日日) "
 
 #: mod/or/errors.inc:28
 msgid "You have entered a value that exceeds the maximum character length. The maximum character length is 100"
-msgstr "請輸入超過最大限制-100字的數值。"
+msgstr "輸入字串超過最大限制-100字"
 
 #: mod/or/errors.inc:29
 msgid "The number of characters available in Registration number field should be lower than 100"
-msgstr "登入號碼欄位的字數需手於100字"
+msgstr "登入號碼的字數需少於100字"
 
 #: mod/or/lib_or.inc:586
 msgid "Please specify the type of your organization. That is whether you are a government organization,multinational NGO, private organization ect."
@@ -2781,11 +2771,11 @@ msgstr "請選擇您的組織的類型。例如政府單位、跨國非政府組
 
 #: mod/or/lib_or.inc:612
 msgid "please select whether you are Department,Branch,ect of the parent organization"
-msgstr "請選擇您是否是上層組織的部門、分會…等等"
+msgstr "請選擇您是否為某一組織的部門、分會…等等"
 
 #: mod/or/lib_or.inc:628
 msgid "Select the services your organization provides, that is what you do as an organization or services your organization can provide in a disaster. e.g. if you offer medical services select it. This field could accept up to 3 options be selected. You could hold Ctrl key with mouse click to select multiple options."
-msgstr "主要服務：選擇您的組織在災難中所提供的最主要服務，例如醫療服務。這個欄位最多可以選擇 3 個項目，請按壓 Ctrl 鍵加上滑鼠點選來選取多個項目。"
+msgstr "主要服務：選擇您的組織在災難中所提供的最主要服務，例如醫療服務。最多可以選擇 3 個項目，請按壓 Ctrl 鍵加上滑鼠以選取多個項目"
 
 #: mod/or/lib_or.inc:643
 #: mod/mpr/add.inc:350
@@ -2840,7 +2830,7 @@ msgstr "網站"
 
 #: mod/or/lib_or.inc:650
 msgid "Please provide contact details that can be used to contact your organization in a disaster"
-msgstr "請提供聯絡資訊，以便在發生災難時與您的組織聯絡"
+msgstr "請提供聯絡資訊，以便在需要時與您的組織聯絡"
 
 #: mod/or/lib_or.inc:686
 msgid "Name of the person to be contacted in a disaster"
@@ -2868,15 +2858,15 @@ msgstr "發生災難時可以用來聯絡的電子郵件位址"
 
 #: mod/or/lib_or.inc:704
 msgid "Website of the Organization"
-msgstr "組織的網站"
+msgstr "組織的官方網站"
 
 #: mod/or/lib_or.inc:708
 msgid "Please document the facilities available in your organization. This information  should provide a rough idea of the resources available in your organization and is useful to plan relief operations"
-msgstr "請說明您的組織可供運用的的設施。此訊息應該包括您的組織可供運用的資源，這對於制定救災計畫非常有幫助。"
+msgstr "請說明您的組織可供運用的的設施"
 
 #: mod/or/lib_or.inc:733
 msgid "Specify the workforce(Men/Women) in your organization. This amount would be useful in identifying the potential number of volunteers in the event of a disaster"
-msgstr "詳細說明您的組織的人力資源（男/女）。這對於災難發生時尋找志工的可能數量非常重要。"
+msgstr "詳細說明您的組織的人力資源（男/女）。這對於災難發生時預估志工的可能數量非常重要。"
 
 #: mod/or/lib_or.inc:734
 msgid "You can specify the man power as a number or give details up to 100 characters."
@@ -2898,7 +2888,7 @@ msgstr "設備："
 
 #: mod/or/lib_or.inc:740
 msgid "Specify any other resource that you think might be useful in Disaster Relief Operations"
-msgstr "請在救災行動（Disaster Relief Operations）裡詳細說明您認為會有幫助的任何資源"
+msgstr "請說明您認為其他可能對於救災有幫助的任何資源"
 
 #: mod/or/lib_or.inc:741
 #: mod/ims/lib_ims.inc:393
@@ -2978,7 +2968,7 @@ msgstr "已經加入"
 #: mod/cr/admin.inc:142
 #: mod/dvr/admin.inc:158
 msgid "Field was successfully deleted."
-msgstr "已成功刪除欄位。"
+msgstr "欄位已刪除"
 
 #: mod/or/admin.inc:110
 #: mod/or/admin.inc:162
@@ -3042,7 +3032,7 @@ msgstr "了解救難組織的完整資訊，以及他們在此區域裡的所有
 
 #: mod/or/home.inc:47
 msgid "Capturing the essential services each group is providing and where"
-msgstr "擷取每個小組提供的要點服務與何處"
+msgstr "擷取每個小組提供的重點服務及服務區域"
 
 #: mod/or/home.inc:48
 msgid "Reporting on the services and support in the region"
@@ -3186,7 +3176,7 @@ msgstr "設定地點的範圍"
 
 #: mod/or/admin_forms.inc:69
 msgid "In a Disaster,all the location levels might not be important ,set the range here"
-msgstr "地點的層級在有些災難中完全不重要，若是如此，請在此設定範圍。"
+msgstr "地點的層級在有些災難中完全不重要，若是如此，請在此設定範圍"
 
 #: mod/or/admin_forms.inc:80
 #: mod/admin/location.inc:266
@@ -3196,7 +3186,7 @@ msgstr "設定開始等級"
 #: mod/or/admin_forms.inc:81
 #: mod/admin/location.inc:267
 msgid "Set End Level"
-msgstr "設定結束級別"
+msgstr "設定結束等級"
 
 #: mod/or/admin_forms.inc:129
 msgid "Add and Remove Types"
@@ -3218,11 +3208,11 @@ msgstr "回復"
 
 #: mod/or/admin_forms.inc:187
 msgid "Add & Remove Sectors"
-msgstr "新增&移除領域"
+msgstr "新增與移除服務項目"
 
 #: mod/or/admin_forms.inc:190
 msgid "New Organization Sector : "
-msgstr "新的組織領域："
+msgstr "新的組織服務項目："
 
 #: mod/ws/reg.inc:23
 msgid "Sign Up for the SAHANA API Key"
@@ -3407,7 +3397,7 @@ msgid ""
 msgstr ""
 "\n"
 "歡迎來到 Sahana FOSS 災難管理系統\n"
-"Sahana 是一套功能可擴充的災難管理網站應用系統，可協助解決大規模的災後人道問題。應用領域和欲處理的問題如下："
+"Sahana 是一套功能可擴充的災難管理網站應用系統，可協助解決大規模的災後人道問題。"
 
 #: mod/home/main.inc:20
 msgid "Welcome to the Sahana FOSS Disaster Management System"
@@ -3419,7 +3409,7 @@ msgstr "SahanaTW 是一套災難管理網站應用系統，可協助解決災後
 
 #: mod/home/main.inc:26
 msgid "Allows you to locate activities on a map providing current situation awareness."
-msgstr "通過災情標識地圖，更新並掌握目前的救災情況。"
+msgstr "通過災情狀況地圖，更新並掌握目前的救災情況。"
 
 #: mod/home/main.inc:27
 msgid "Helps to report and search missing person."
@@ -3427,7 +3417,7 @@ msgstr "協助通報與搜尋失蹤者"
 
 #: mod/home/main.inc:28
 msgid "Traces internally displaced people (IDPs) and their needs."
-msgstr "追蹤無家可歸者（internally displaced people (IDPs)）的情況，以及他們的需求。"
+msgstr "追蹤無家可歸者的情況，以及他們的需求。"
 
 #: mod/home/main.inc:29
 msgid "Lists 'who is doing what & where'. Allows relief agencies to self organize the activities rendering fine coordination among them."
@@ -3443,7 +3433,7 @@ msgstr "追蹤庇護所的地點、分佈、容納量，以及受災者的訊息
 
 #: mod/home/main.inc:32
 msgid "Effectively and efficiently manage relief aid, enables  transfer of inventory items to different inventories and notify when items are required to refill."
-msgstr "有效率並有效地管理救援物資，讓物資可以配送到各個地點，並通報需要補充物資的時間。"
+msgstr "有效率地管理救援物資，讓物資可以配送到各個地點，並通報需要補充物資的時間。"
 
 #: mod/home/main.inc:33
 msgid "Allows communication by email and SMS text messaging to groups."
@@ -3530,9 +3520,7 @@ msgstr "您可以根據需求設定 sahana。"
 msgid ""
 "Please login by entering the administrator username and password in the respective text boxes on the left side\n"
 "\t\tpanel to proceed customizing sahana."
-msgstr ""
-"請在左欄裡的輸入管理者的帳號和密碼\n"
-"以進行 Sahana 的客製化設定。"
+msgstr "請在左欄裡的輸入管理者的帳號和密碼以進行 Sahana 的客製化設定"
 
 #: mod/home/main.inc:114
 msgid "<h2>About Sahana</h2>"
@@ -3570,7 +3558,7 @@ msgstr "資料庫字元集"
 
 #: mod/home/main.inc:166
 msgid "Database Collation"
-msgstr "資料庫校對(collation)"
+msgstr "資料庫校對"
 
 #: mod/home/main.inc:173
 msgid "Apache HTTPD Version"
@@ -3595,7 +3583,7 @@ msgstr "管理者名稱"
 #: mod/home/main.inc:193
 #: mod/home/main.inc:197
 msgid "Information not available"
-msgstr "找無資訊"
+msgstr "找不到資訊"
 
 #: mod/home/main.inc:221
 msgid "Show/Hide Readme"
@@ -3611,7 +3599,7 @@ msgstr "檢視授權"
 
 #: mod/home/main.inc:235
 msgid "About page information cannot be generated."
-msgstr "無法產生關於網頁的資訊。"
+msgstr "無法產生關於網頁的資訊"
 
 #: mod/home/main.inc:242
 msgid "About Sahana"
@@ -3653,7 +3641,7 @@ msgstr "每單位成本："
 
 #: mod/ims/add_item.inc:126
 msgid "Cost of a unit which you are going to select below "
-msgstr "您要選擇的物資的單位成本"
+msgstr "您所選擇物資的單位成本"
 
 #: mod/ims/add_item.inc:139
 #: mod/ims/search.inc:104
@@ -3669,7 +3657,7 @@ msgstr "倉庫："
 
 #: mod/ims/add_item.inc:139
 msgid "If this box does not contain preferred inventory name  please go through the List Inventories Menu and add an Inventory first"
-msgstr "如果沒有想要的倉庫清單可選，請到倉庫清單來新增倉庫"
+msgstr "如果沒有想要的倉庫清單可選，請先到倉庫管理模組新增倉庫"
 
 #: mod/ims/add_item.inc:141
 msgid "Secondary details"
@@ -3682,7 +3670,7 @@ msgstr "製造日期："
 #: mod/ims/add_item.inc:143
 #: mod/ims/add_item.inc:144
 msgid "Date Should be entered as year-month-date. Only - separator is accepted"
-msgstr "日期要用『年-月-日』表示，只接受短橫線。"
+msgstr "日期要用『年-月-日』表示，只接受 \"-\" 這個符號。"
 
 #: mod/ims/add_item.inc:144
 msgid "Expire Date :"
@@ -3690,32 +3678,32 @@ msgstr "到期日："
 
 #: mod/ims/add_item.inc:150
 msgid "Supplier Organization : "
-msgstr "供應者組織："
+msgstr "供應組織："
 
 #: mod/ims/add_item.inc:150
 msgid "If this box does not contain the organization name please go to the Organization Registry module and get your organization Registered "
-msgstr "如果您要選的組織不在這個清單裡，請到組織註冊模組裡登錄。"
+msgstr "如果您要選的組織不在這個清單裡，請到組織登錄模組先行登錄。"
 
 #: mod/ims/process_inv.inc:161
 msgid " Inventory was successfully added"
-msgstr "成功新增倉庫"
+msgstr "倉庫已新增"
 
 #: mod/ims/process_inv.inc:241
 msgid " Inventory was successfully deleted"
-msgstr "成功刪除倉庫！"
+msgstr "倉庫已刪除"
 
 #: mod/ims/process_inv.inc:245
 #: mod/ims/main.inc:404
 msgid "Inventory Registry"
-msgstr "登錄倉庫"
+msgstr "倉庫登錄"
 
 #: mod/ims/process_inv.inc:363
 msgid " Inventory was successfully updated"
-msgstr "成功更新倉庫"
+msgstr "倉庫已更新"
 
 #: mod/ims/reg_inv.inc:28
 msgid "Add an Inventory"
-msgstr "新增一筆倉庫"
+msgstr "新增倉庫"
 
 #: mod/ims/reg_inv.inc:39
 #: mod/ims/view_inv.inc:199
@@ -3736,11 +3724,11 @@ msgstr "額外資訊"
 
 #: mod/ims/reg_inv.inc:145
 msgid "Inventory Name cannot be empty."
-msgstr "倉庫名稱不能為空的。"
+msgstr "倉庫名稱不能為空白"
 
 #: mod/ims/reg_inv.inc:153
 msgid "Inventory Name already exists."
-msgstr "倉庫名稱已經存在。"
+msgstr "此倉庫名稱已存在"
 
 #: mod/ims/reg_inv.inc:161
 msgid "Invalid contact name"
@@ -3781,7 +3769,7 @@ msgstr "可用的物資"
 
 #: mod/ims/search.inc:87
 msgid "Item to be destroyed"
-msgstr "要銷毀的物資"
+msgstr "將要銷毀的物資"
 
 #: mod/ims/search.inc:88
 msgid "Item already destroyed"
@@ -3877,7 +3865,7 @@ msgstr "倉庫列表"
 #: mod/ims/home.inc:56
 #: mod/cs/supplier_report.inc:32
 msgid "Supplier"
-msgstr "供應商"
+msgstr "供應者"
 
 #: mod/ims/search.inc:192
 #: mod/ims/search.inc:288
@@ -3890,7 +3878,7 @@ msgstr "替代物資"
 
 #: mod/ims/search.inc:277
 msgid "Total Alternate Items Amount"
-msgstr "總替代物資數量"
+msgstr "替代物資總數量"
 
 #: mod/ims/search.inc:318
 msgid "Search for Inventories by name and by Location"
@@ -3902,7 +3890,7 @@ msgstr "以倉庫名稱搜尋："
 
 #: mod/ims/search.inc:323
 msgid "Enter either the name of the inventory or the location of the inventory or both Inventory name and location and click on the search button below"
-msgstr "輸入倉庫的名稱，或者位置，或者兩者，並按下面的搜尋按鈕"
+msgstr "輸入倉庫的名稱、位置，或兩者，並點選搜尋按鈕"
 
 #: mod/ims/search.inc:327
 msgid "Search by Location"
@@ -3910,7 +3898,7 @@ msgstr "依位置搜尋"
 
 #: mod/ims/search.inc:338
 msgid "Search by Inventory Owner's Details"
-msgstr "搜尋倉庫管理者的細節"
+msgstr "搜尋倉庫管理者的資料"
 
 #: mod/ims/search.inc:339
 msgid "Any of the Details of Inventory Owner : "
@@ -3951,7 +3939,7 @@ msgstr "庫存空間"
 
 #: mod/ims/search.inc:413
 msgid "Search criterial was blank. Showing all inventories."
-msgstr "搜尋條件為空。顯示所有項目。"
+msgstr "搜尋條件為空白。顯示所有項目。"
 
 #: mod/ims/search.inc:422
 msgid "There were no results to display."
@@ -3959,7 +3947,7 @@ msgstr "沒有結果可顯示。"
 
 #: mod/ims/search.inc:537
 msgid "Search for Inventories by Location"
-msgstr "依位置搜尋庫存"
+msgstr "依位置搜尋倉庫"
 
 #: mod/ims/search.inc:542
 msgid "Selected Location"
@@ -3975,7 +3963,7 @@ msgstr "選取位置然後選取層級 (省、區、…等等)"
 
 #: mod/ims/add_item_db.inc:49
 msgid " Item was successfully added"
-msgstr "已成功加入物資"
+msgstr "物資已加入"
 
 #: mod/ims/conf.inc:18
 msgid "Inventory Management"
@@ -3996,11 +3984,11 @@ msgstr "庫存選擇"
 #: mod/ims/optimize.inc:65
 #: mod/ims/optimize.inc:369
 msgid "If this box does not contain prefered inventory name  please go through the Multiple Inventory Management Menu and add an Inventory first"
-msgstr "如果沒有倉庫可選，請先使用倉庫管理選單，新增一個倉庫。"
+msgstr "如果沒有倉庫可選，請先使用倉庫管理模組，新增倉庫。"
 
 #: mod/ims/optimize.inc:77
 msgid "Relative Items Selection"
-msgstr "相關物資選擇"
+msgstr "選擇相關物資"
 
 #: mod/ims/optimize.inc:84
 #: mod/ims/optimize.inc:254
@@ -4058,15 +4046,15 @@ msgstr "選擇欲設定替代品之物資項目"
 #: mod/ims/optimize.inc:235
 #: mod/ims/optimize.inc:906
 msgid "If this box does not contain preferred inventory name  please go through the Multiple Inventory Management Menu and add an Inventory first"
-msgstr "如果沒倉庫可選，請先使用多倉庫管理選單，新增一個倉庫。"
+msgstr "如果沒倉庫可選，請先使用倉庫管理模組，新增倉庫"
 
 #: mod/ims/optimize.inc:247
 msgid "Alternative Items Selection"
-msgstr "替代物資選擇"
+msgstr "選擇替代物資"
 
 #: mod/ims/optimize.inc:346
 msgid "Alternate item successfully set"
-msgstr "已成功設置替代物資"
+msgstr "替代物資已設定"
 
 #: mod/ims/optimize.inc:371
 msgid "Prediction Type"
@@ -4096,7 +4084,7 @@ msgstr "時間長度："
 #: mod/ims/optimize.inc:386
 #: mod/ims/optimize.inc:924
 msgid "Time period which you are going to make prediction"
-msgstr "你必須作出預估的時間長度"
+msgstr "你必須設定預估的時間長度"
 
 #: mod/ims/optimize.inc:393
 #: mod/ims/optimize.inc:932
@@ -4108,23 +4096,23 @@ msgstr "客製化報表"
 #: mod/ims/optimize.inc:940
 #: mod/ims/optimize.inc:961
 msgid "Daily Report"
-msgstr "每日報表"
+msgstr "日報表"
 
 #: mod/ims/optimize.inc:403
 #: mod/ims/optimize.inc:941
 #: mod/ims/optimize.inc:983
 msgid "Weekly Report"
-msgstr "每週報表"
+msgstr "週報表"
 
 #: mod/ims/optimize.inc:404
 #: mod/ims/optimize.inc:942
 #: mod/ims/optimize.inc:1002
 msgid "Monthly Report"
-msgstr "每月報表"
+msgstr "月報表"
 
 #: mod/ims/optimize.inc:479
 msgid "Forecasting by Inventory"
-msgstr "根據庫存來預估"
+msgstr "以庫存進行預估"
 
 #: mod/ims/optimize.inc:495
 msgid "Item name"
@@ -4146,13 +4134,13 @@ msgstr "最低庫存標準"
 
 #: mod/ims/optimize.inc:577
 msgid "Pie Chart to forecasting Since "
-msgstr "圓餅圖預測，since"
+msgstr "圓餅圖預測，從"
 
 #: mod/ims/optimize.inc:662
 #: mod/ims/optimize.inc:829
 #: mod/ims/optimize.inc:841
 msgid "Bar Chart to forecasting Since "
-msgstr "柱狀圖預測，since"
+msgstr "柱狀圖預測，從"
 
 #: mod/ims/optimize.inc:676
 msgid "Prediction Report for Relative items"
@@ -4169,11 +4157,11 @@ msgstr "關聯到"
 
 #: mod/ims/optimize.inc:860
 msgid "Select Item to Predict"
-msgstr "選擇物資做預估"
+msgstr "選擇欲進行預估的物資"
 
 #: mod/ims/optimize.inc:884
 msgid "Item Prediction"
-msgstr "物資預估"
+msgstr "預估物資"
 
 #: mod/ims/optimize.inc:891
 msgid "Selected Item"
@@ -4185,11 +4173,11 @@ msgstr "演算法選擇"
 
 #: mod/ims/optimize.inc:922
 msgid "Time Period one to predict"
-msgstr "用來預估的時間長度"
+msgstr "預估的時間長度"
 
 #: mod/ims/optimize.inc:1051
 msgid "Prediction Report Since "
-msgstr "預估報表, since"
+msgstr "預估報表, 從"
 
 #: mod/ims/optimize.inc:1056
 msgid "Prediction Records"
@@ -4220,7 +4208,7 @@ msgstr "相關項目"
 
 #: mod/ims/optimize.inc:1096
 msgid "Re-Order level"
-msgstr "加訂等級"
+msgstr "最低庫存標準"
 
 #: mod/ims/optimize.inc:1209
 msgid "Relational Item"
@@ -4232,7 +4220,7 @@ msgstr "預估"
 
 #: mod/ims/optimize.inc:1377
 msgid "Item_name :"
-msgstr "Item_name："
+msgstr "品項名稱："
 
 #: mod/ims/optimize.inc:1378
 msgid "Inventory :"
@@ -4240,7 +4228,7 @@ msgstr "庫存："
 
 #: mod/ims/optimize.inc:1383
 msgid "Re-order level will not be exceeded in given time period"
-msgstr "在給定時間內，不會超過加訂等級"
+msgstr "在設定時間內，不會低於最低庫存標準"
 
 #: mod/ims/ims_report.inc:39
 #: mod/ims/ims_report.inc:142
@@ -4314,7 +4302,7 @@ msgstr "到期日"
 
 #: mod/ims/ims_report.inc:307
 msgid "Each Row is a "
-msgstr "每個列為 "
+msgstr "每列為 "
 
 #: mod/ims/ims_report.inc:311
 msgid "Intersection shows the precentage of Sub-divisions Covered per each service."
@@ -4949,7 +4937,7 @@ msgstr "物資庫存與倉庫管理系統首頁"
 
 #: mod/ims/home.inc:26
 msgid "The Sahana Inventory Management System is a database to keep track of all aid items and supplies kept in your organization's inventories. It not only keeps track of the location and quantities of items available, but it also tracks expiry dates, re-order levels and items in transit. The system is designed to be simple to a diverse groups of users to interact and manage stocks in inventories located around the region"
-msgstr "Sahana物資庫存與倉庫管理系統是一個用來掌握您的救援物資庫存及供貨情況的資料庫。它不僅追蹤可用物資的位置和數量，而且可以掌握物資過期時間，再訂購水平上以及在中途物資運送的數量。該系統的設計目標，是讓不同的使用者能夠方便地進行互動，並對某個地區內的多個庫存進行管理。"
+msgstr "Sahana物資庫存與倉庫管理系統是一個用來掌握您的救援物資庫存及供貨情況的資料庫。它不僅追蹤可用物資的位置和數量，而且可以掌握物資過期時間，最低庫存標準以及在運送中的物資數量。該系統的設計目標，是讓不同的使用者能夠方便地進行互動，並對某個地區內的多個庫存進行管理。"
 
 #: mod/ims/home.inc:31
 msgid "Find Items:"
@@ -5122,7 +5110,7 @@ msgstr "下載 PDF 報表"
 #: mod/ims/mini_quantity.inc:34
 #: mod/ims/mini_quantity.inc:183
 msgid "Item Selection for Re-Order Level"
-msgstr "最低庫存標準"
+msgstr "列出最低庫存標準物資"
 
 #: mod/ims/mini_quantity.inc:113
 msgid "Item Quantity "
@@ -5249,11 +5237,11 @@ msgstr " 已成功地儲存"
 
 #: mod/rs/config.inc:74
 msgid "Update Failed... There an error occured while updating new frequency of chart creation."
-msgstr "更新失敗...更新圖表產生的頻率時，發生了錯誤。"
+msgstr "更新失敗...更新圖表產生的頻率時，發生了錯誤"
 
 #: mod/rs/config.inc:77
 msgid "You entered value which is not a valid digit. Please enter valid number for report creation frequency."
-msgstr "你輸入的數值不是有效的數字。請重新輸入報表建立頻率的有效數字。"
+msgstr "你輸入的數值不是有效的數字。請重新輸入報表建立頻率的有效數字"
 
 #: mod/rs/config.inc:83
 msgid "Chart creation Frequency of "
@@ -5261,11 +5249,11 @@ msgstr "圖表建立的頻率"
 
 #: mod/rs/config.inc:85
 msgid "Update Failed... There was an Error found in updating new frequency of chart creation."
-msgstr "更新失敗...更新圖表產生的頻率時，發生了錯誤。"
+msgstr "更新失敗...更新圖表產生的頻率時，發生了錯誤"
 
 #: mod/rs/config.inc:88
 msgid "You entered value which is not a valid digit. Please enter valid number for chart creation frequency."
-msgstr "你輸入的數值不是有效的數字。請重新輸入圖表建立頻率的有效數字。"
+msgstr "你輸入的數值不是有效的數字。請重新輸入圖表建立頻率的有效數字"
 
 #: mod/rs/sample.inc:23
 msgid "Sample Reports Generation"
@@ -5505,7 +5493,7 @@ msgstr "管理"
 
 #: mod/vm/menu.inc:90
 msgid "Modify Abilities/Limitations"
-msgstr "修改能力/限制"
+msgstr "修改能力 / 限制"
 
 #: mod/vm/menu.inc:91
 msgid "Approve Abilities"
@@ -5517,7 +5505,7 @@ msgstr "供應商報表"
 
 #: mod/cs/supplier_report.inc:22
 msgid "Here you can have a report on items with supplier details which are having registered suppliers in catalog system."
-msgstr "在此您可以獲得一份有在此系統登記的供應商詳細資訊的物資報告。"
+msgstr "在此您可以獲得一份有在此系統登記的供應商詳細資訊的物資報告"
 
 #: mod/cs/supplier_report.inc:28
 msgid "Item ID"
@@ -5610,7 +5598,7 @@ msgstr "請輸入欲搜尋的單位名稱"
 
 #: mod/cs/search.inc:23
 msgid "-----Select Search-----"
-msgstr "-----選擇搜尋-----"
+msgstr "-----選擇以進行搜尋-----"
 
 #: mod/cs/search.inc:23
 msgid "Item/Catalog"
@@ -5872,7 +5860,7 @@ msgstr "請選擇你需要的類別"
 #: mod/cs/report.inc:78
 #: mod/cs/report.inc:103
 msgid "These are the existing catalogs and items that are stored in sahana database"
-msgstr "這些是 Sahana資料庫中現有的目錄和物資。"
+msgstr "以下是 Sahana資料庫中現有的目錄和物資。"
 
 #: mod/cs/_admin.inc:19
 #: mod/cs/_admin.inc:27
@@ -6038,11 +6026,11 @@ msgstr "新增一個新目錄"
 
 #: mod/cs/main.inc:154
 msgid "The Aid Catolog can be divided in to categories or classified by the type of item. You can create a hierachy of categories. First select the parent category that you wish to place this new category under:"
-msgstr "援助目錄可被按類別或物資類型分類。您可以創建一個分級的類別。首先選擇一個您想要放置此新類別的上級類別："
+msgstr "援助目錄可按類別或物資類型分類。您可以建立一個分級的類別。首先選擇一個您想要放置此新類別的上級類別"
 
 #: mod/cs/main.inc:170
 msgid "Add New Category"
-msgstr "新增新目錄"
+msgstr "新增目錄"
 
 #: mod/cs/main.inc:193
 msgid " This feature allows to add measurement unit/units. Before adding a sub category you have to add the measurement unit/units that is  used by the particular category."
@@ -6328,11 +6316,11 @@ msgstr "在更新以前請輸入說明"
 
 #: mod/gis/wm_fns.inc:259
 msgid "Succesfully updated description"
-msgstr "已成功更新說明"
+msgstr "說明已更新"
 
 #: mod/gis/wm_fns.inc:309
 msgid "Succesfully added wiki item "
-msgstr "已成功新增wiki項目"
+msgstr "wiki項目已新增"
 
 #: mod/gis/plugins/google_maps/handler_google_maps.inc:242
 msgid "Date: "
@@ -6383,7 +6371,7 @@ msgstr "完成"
 #: mod/admin/gis_admin.inc:250
 #: mod/admin/gis_admin.inc:261
 msgid "Changes were saved"
-msgstr "已儲存改變"
+msgstr "已儲存"
 
 #: mod/gis/conf.inc:23
 #: mod/gis/main_fns.inc:21
@@ -6408,7 +6396,7 @@ msgstr "允許使用者共同標註災難情況"
 
 #: mod/gis/main_fns.inc:37
 msgid "Map of the developing situation with markers of incidents, locations and objects displayed on the map"
-msgstr "地圖標示了災難的發展狀況，標記出事件、地點和物件。"
+msgstr "狀態地圖標示災難的發展狀況，內容包括事件名稱、地點和其他資訊。"
 
 #: mod/gis/main_fns.inc:38
 msgid "Add Situation Markers"
@@ -6490,39 +6478,39 @@ msgstr "地點資訊"
 
 #: mod/gis/main_fns.inc:108
 msgid "Plot the Location OR Enter its GPS coordinates "
-msgstr "點選位置或輸入它的 GPS 座標 "
+msgstr "點選位置或輸入其 GPS 座標 "
 
 #: mod/gis/main_fns.inc:145
 msgid "Your Landmark has been succesfully added. "
-msgstr "您已成功加入地標。"
+msgstr "您已成功加入地標"
 
 #: mod/gis/conf_help.inc:22
 msgid "Enter a short descriptive name to describe the situation"
-msgstr "輸入一個描述性的簡短名稱，來描述此狀況"
+msgstr "輸入簡短標題，來描述此狀況"
 
 #: mod/gis/conf_help.inc:26
 msgid "Select the type of the situation. This will be used in filtering."
-msgstr "選擇狀況類型。這可以用於篩選訊息。"
+msgstr "選擇狀況類型。這可以用來篩選訊息"
 
 #: mod/gis/conf_help.inc:30
 msgid "You can provide a URL of a website or a wiki site for more information"
-msgstr "你可以提供一個網站或Wiki網站的網址，以供更多訊息。"
+msgstr "你可以提供本事件的相關網址"
 
 #: mod/gis/conf_help.inc:34
 msgid "If a name is provided here, it will be publicly displayed with the other information. If this is left blank, it would show up as anonymous"
-msgstr "如果有提供姓名，它會與其他資訊一起公開顯示。如果此欄為空白，則會顯示為匿名。"
+msgstr "如果有提供姓名，則會與其他資訊一起公開顯示。如果此欄為空白，則會顯示為匿名。"
 
 #: mod/gis/conf_help.inc:38
 msgid "Enter the date of the situation event"
-msgstr "輸入事件狀態的日期"
+msgstr "輸入事件的日期"
 
 #: mod/gis/gis_fns.inc:31
 msgid "GIS Functionality has been disabled. Please contact your administrator to enable it"
-msgstr "GIS 功能已經關閉。請聯絡管理者以啟用此功能。"
+msgstr "GIS 功能已經關閉。請聯絡管理者以開啟此功能。"
 
 #: mod/gis/gis_fns.inc:52
 msgid "Coordinates Added"
-msgstr "已新增座標"
+msgstr "座標已新增"
 
 #: mod/gis/gis_fns.inc:187
 msgid "Northing / Latitude"
@@ -6640,7 +6628,7 @@ msgstr "Sahana 提供了模組化的 GIS 外掛程式架構"
 #: mod/gis/admin_bk.inc:150
 #: mod/admin/gis_admin.inc:166
 msgid "You can select which GIS plugin to use as your default GIS"
-msgstr "您可以選擇要用哪個 GIS 外掛程式做為預設值"
+msgstr "您可以選擇要用某個 GIS 外掛程式做為預設值"
 
 #: mod/gis/admin.inc:147
 #: mod/gis/admin_bk.inc:151
@@ -7072,7 +7060,7 @@ msgstr "備註"
 #: mod/mpr/edit.inc:523
 #: mod/mpr/add.inc:534
 msgid "Contact Details"
-msgstr "聯絡方式詳細內容"
+msgstr "聯絡方式"
 
 #: mod/mpr/view.inc:79
 #: mod/mpr/edit.inc:234
@@ -7139,7 +7127,7 @@ msgstr "檢視"
 
 #: mod/mpr/view.inc:102
 msgid "Click to edit"
-msgstr "點選這裡開始編輯"
+msgstr "點選，以開始編輯"
 
 #: mod/mpr/view.inc:103
 #: mod/mpr/search.inc:398
@@ -7231,7 +7219,7 @@ msgstr "如果您欲通報的失蹤者已經在本系統中，請點選姓名編
 #: mod/mpr/search.inc:245
 #: mod/mpr/edit.inc:469
 msgid "Person"
-msgstr "失蹤/受災者"
+msgstr "失蹤 / 受災者"
 
 #: mod/mpr/search.inc:247
 msgid "Associated People"
@@ -7262,7 +7250,7 @@ msgstr "加入追蹤"
 
 #: mod/mpr/search.inc:273
 msgid "Associate another person"
-msgstr " 建立其他追蹤者"
+msgstr "建立其他追蹤者"
 
 #: mod/mpr/search.inc:284
 #: mod/mpr/search.inc:388
@@ -7272,7 +7260,7 @@ msgstr "變更狀態為倖存"
 #: mod/mpr/search.inc:286
 #: mod/mpr/search.inc:388
 msgid "Click to change to found"
-msgstr "★點選此處，變更此人為「倖存（且無受傷）」"
+msgstr "★點選此處，變更此人狀態為「倖存（且無受傷）」"
 
 #: mod/mpr/search.inc:289
 #: mod/mpr/audit.inc:26
@@ -7378,7 +7366,7 @@ msgstr "否"
 
 #: mod/mpr/edit.inc:555
 msgid "Reporting People"
-msgstr "通報/追蹤者"
+msgstr "通報者 / 追蹤者"
 
 #: mod/mpr/edit.inc:565
 #: mod/mpr/edit.inc:840
@@ -7387,11 +7375,11 @@ msgstr "關聯性"
 
 #: mod/mpr/edit.inc:833
 msgid "Current Trackers"
-msgstr "目前追蹤者"
+msgstr "目前的追蹤者"
 
 #: mod/mpr/edit.inc:855
 msgid "Click to remove the tracker"
-msgstr "點選此，移除本追蹤者"
+msgstr "點選以移除本追蹤者"
 
 #: mod/mpr/edit.inc:862
 msgid "Add a tracker"
@@ -7407,7 +7395,7 @@ msgstr "失蹤者與災民登錄"
 
 #: mod/mpr/stream.inc:11
 msgid "Welcome to the Sahana FOSS Disaster Management System Sahana is an integrated set of pluggable, web based disaster management applications that pr ovide solutions to large-scale humanitarian problems in the aftermath of a disaster. These applications a nd problems they address are as follows:"
-msgstr "歡迎來到 Sahana FOSS 災難管理系統。Sahana 是一套功能可擴充的災難管理網頁應用程式，可協助解決災後大規模的人道問題。應用領域和欲解決的問題如下："
+msgstr "歡迎來到 Sahana FOSS 災難管理系統。Sahana 是一套功能可擴充的災難管理網頁應用程式，可協助解決災後大規模的人道問題。"
 
 #: mod/mpr/list_deceased.inc:19
 msgid "Deceased People"
@@ -7515,15 +7503,15 @@ msgstr "歡迎來到失蹤者與災民登錄管理頁面"
 
 #: mod/mpr/admin.inc:58
 msgid "Please use the navigation menu above to configure each field."
-msgstr "請使用上方的導覽選單來設定每個欄位。"
+msgstr "請使用上方的導覽選單來設定每個欄位"
 
 #: mod/mpr/admin.inc:70
 msgid "Please enter the no of images per page."
-msgstr "請輸入每頁要顯示的圖片數量。"
+msgstr "請輸入每頁要顯示的圖片數量"
 
 #: mod/mpr/admin.inc:74
 msgid "Search limit should be a number"
-msgstr "搜尋限制應為數字"
+msgstr "搜尋字串應為數字"
 
 #: mod/mpr/admin.inc:108
 msgid "Manage Search"
@@ -7782,7 +7770,7 @@ msgstr "本失蹤者/災民的暱稱或大家習慣稱呼他的方式"
 
 #: mod/mpr/add.inc:102
 msgid "If you have any information about missing person's identity numbers, Please include them since it will be helpful for finding the person. Otherwise please ignore."
-msgstr "如果您有失蹤者/災民的身份證字號的資訊，請提供，因為這將有助於尋找他/她。若無可忽略。"
+msgstr "如果您有失蹤者/災民的身份證字號的資訊，請提供，因為這將有助於尋找他/她。若無可空白。"
 
 #: mod/mpr/add.inc:106
 #: mod/dvr/edt_indv.inc:179
@@ -7978,7 +7966,7 @@ msgstr "XML錯誤：%s at line %d "
 
 #: mod/sync/process_xml_dump.inc:83
 msgid "Error in upload file: Unable to continue importing."
-msgstr "上傳檔案錯誤：無法繼續匯入。"
+msgstr "上傳檔案錯誤：無法繼續匯入"
 
 #: mod/sync/lib_report.inc:46
 msgid "Records Imported"
@@ -8251,7 +8239,7 @@ msgstr "使用者密碼和確認密碼必須相同"
 
 #: mod/pref/ims_main.inc:97
 msgid "You cannot change the password more than once in one day"
-msgstr "對不起，一天之內您只能做一次密碼更改"
+msgstr "對不起，一天只能變更密碼一次"
 
 #: mod/pref/ims_main.inc:123
 msgid "You cannot choose one of the recent four passwords"
@@ -8326,7 +8314,7 @@ msgstr "使用者設定模組可以讓您設定任何想要的配置"
 #: mod/pref/stream.inc:70
 #: mod/pref/main.inc:100
 msgid "Which will help you to customize Sahana to your preference."
-msgstr "它能夠幫助您設定 Sahana 系統，以符合您的需求。"
+msgstr "它能夠幫助您設定 Sahana 系統，以符合您的需求"
 
 #: mod/pref/stream.inc:70
 #: mod/pref/main.inc:100
@@ -9183,7 +9171,7 @@ msgstr "修改角色權限"
 
 #: mod/admin/forms.inc:52
 msgid "New Location Details)"
-msgstr "新地點的詳情）"
+msgstr "新地點的詳情"
 
 #: mod/admin/forms.inc:59
 msgid "Location Type (level)"
@@ -9708,13 +9696,12 @@ msgid " Address "
 msgstr "地址"
 
 #: mod/cr/search.inc:228
-#, fuzzy
 msgid "Search for shelters by name, type, service and location"
-msgstr "依名稱、類型、服務和位置來搜尋組織"
+msgstr "依名稱、類型、服務和位置來搜尋庇護所"
 
 #: mod/cr/search.inc:242
 msgid "Please input the name of road to search in address field. If you would like to search by city or area, please choose the location in the fields above."
-msgstr ""
+msgstr "請輸入路名在地址欄位中進行查詢。如果欲以區域或城市查詢，請以下拉選單選擇欲查詢的區域範圍。"
 
 #: mod/cr/edit.inc:28
 msgid "Update Existing Shelter"
@@ -11463,16 +11450,15 @@ msgstr "衣著和外貌"
 
 #: mod/rms/handler_plg_receipt.inc:63
 msgid "Pledge receipt and certificate of appreciation"
-msgstr ""
+msgstr "收據與感謝狀"
 
 #: mod/rms/handler_plg_receipt.inc:97
-#, fuzzy
 msgid "Receipt"
-msgstr "收款"
+msgstr "收據"
 
 #: mod/rms/handler_plg_receipt.inc:97
 msgid "Certificate of appreciation"
-msgstr ""
+msgstr "感謝狀"
 
 #: mod/rms/handler_plg_receipt.inc:97
 #: mod/rms/handler_plg_ls.inc:61
@@ -11500,65 +11486,58 @@ msgstr "日期"
 #: mod/rms/handler_plg_receipt.inc:145
 #: mod/rms/handler_plg_new.inc:167
 #: mod/rms/lib_rms.inc:887
-#, fuzzy
 msgid "Receipt taken"
-msgstr "客戶收據(收款)"
+msgstr "收據已領"
 
 #: mod/rms/handler_plg_receipt.inc:100
 #: mod/rms/handler_plg_receipt.inc:146
 #: mod/rms/handler_plg_new.inc:168
 #: mod/rms/lib_rms.inc:888
-#, fuzzy
 msgid "Need to send receipt"
-msgstr "請發出通知單到"
+msgstr "收據待寄送"
 
 #: mod/rms/handler_plg_receipt.inc:101
 #: mod/rms/handler_plg_receipt.inc:153
 #: mod/rms/handler_plg_new.inc:174
 #: mod/rms/lib_rms.inc:889
 msgid "Certificate of appreciation taken"
-msgstr ""
+msgstr "感謝狀已領"
 
 #: mod/rms/handler_plg_receipt.inc:102
 #: mod/rms/handler_plg_receipt.inc:154
 #: mod/rms/handler_plg_new.inc:175
 #: mod/rms/lib_rms.inc:890
 msgid "Need to send certificate of appreciation"
-msgstr ""
+msgstr "需寄送感謝狀"
 
 #: mod/rms/handler_plg_receipt.inc:115
 #: mod/rms/handler_plg_receipt.inc:123
-#, fuzzy
 msgid "Sent"
-msgstr "發出"
+msgstr "發出 "
 
 #: mod/rms/handler_plg_receipt.inc:131
-#, fuzzy
 msgid "Donor:"
-msgstr "捐贈者"
+msgstr "捐贈者 "
 
 #: mod/rms/handler_plg_receipt.inc:135
-#, fuzzy
 msgid "Date begin:"
-msgstr "派送日期"
+msgstr "開始日期"
 
 #: mod/rms/handler_plg_receipt.inc:139
-#, fuzzy
 msgid "Date end:"
-msgstr "結束日期"
+msgstr "結束日期 "
 
 #: mod/rms/handler_plg_receipt.inc:147
 #: mod/rms/handler_plg_new.inc:169
 #: mod/rms/lib_rms.inc:907
-#, fuzzy
 msgid "Receipt :"
-msgstr "收款"
+msgstr "捐贈收據"
 
 #: mod/rms/handler_plg_receipt.inc:155
 #: mod/rms/handler_plg_new.inc:176
 #: mod/rms/lib_rms.inc:908
 msgid "Certificate of appreciation :"
-msgstr ""
+msgstr "感謝狀"
 
 #: mod/rms/handler_plg_receipt.inc:170
 #: mod/rms/handler_plg_ls.inc:110
@@ -11968,9 +11947,8 @@ msgstr "已廢棄"
 
 #: mod/rms/handler_plg_ls.inc:168
 #: mod/rms/handler_plg_new.inc:326
-#, fuzzy
 msgid "Print this"
-msgstr "列印這發票"
+msgstr "列印本頁"
 
 #: mod/rms/handler_plg_new.inc:19
 msgid "Enter New Pledge"
@@ -12015,37 +11993,32 @@ msgstr "捐贈者的資訊"
 
 #: mod/rms/handler_plg_new.inc:144
 msgid "Fill out the following information if necessary. If the donor does not belong to any organization, just keep them blank."
-msgstr ""
+msgstr "以下為收據與感謝狀所需資料，請依需要填寫。如果捐贈者為個人，並非屬於任一單位，則單位爛為空白即可。"
 
 #: mod/rms/handler_plg_new.inc:150
 #: mod/rms/lib_rms.inc:903
-#, fuzzy
 msgid "Organization Owner : "
-msgstr "組織服務內容："
+msgstr "單位負責人："
 
 #: mod/rms/handler_plg_new.inc:154
 #: mod/rms/lib_rms.inc:904
-#, fuzzy
 msgid "Donor Name : "
-msgstr "科目名稱"
+msgstr "捐贈者姓名"
 
 #: mod/rms/handler_plg_new.inc:158
 #: mod/rms/lib_rms.inc:905
-#, fuzzy
 msgid "Donor Phone : "
-msgstr "電話"
+msgstr "捐贈者電話"
 
 #: mod/rms/handler_plg_new.inc:162
 #: mod/rms/lib_rms.inc:906
-#, fuzzy
 msgid "Donor Address : "
-msgstr "銀行地址"
+msgstr "捐贈者地址"
 
 #: mod/rms/handler_plg_new.inc:184
 #: mod/rms/lib_rms.inc:909
-#, fuzzy
 msgid "Status :"
-msgstr "狀況"
+msgstr "狀態"
 
 #: mod/rms/handler_plg_new.inc:205
 #: mod/rms/lib_rms.inc:319
@@ -12058,9 +12031,8 @@ msgid "The Pledge was successfully added"
 msgstr "本次捐增資料已經加入。"
 
 #: mod/rms/handler_plg_print.inc:21
-#, fuzzy
 msgid "Blank below"
-msgstr "是空白"
+msgstr "以下空白"
 
 #: mod/rms/handler_plg_sch.inc:19
 msgid "Search for Pledges"
@@ -12240,9 +12212,8 @@ msgid "Pledges"
 msgstr "捐贈物資"
 
 #: mod/rms/main.inc:58
-#, fuzzy
 msgid "Receipt and appreciation"
-msgstr "損益表"
+msgstr "感謝狀"
 
 #: mod/rms/main.inc:60
 msgid "Manage"
@@ -12316,9 +12287,8 @@ msgid "Pledge Items"
 msgstr "捐贈物資的品項"
 
 #: mod/rms/lib_rms.inc:911
-#, fuzzy
 msgid "Creator of this record :"
-msgstr "地點記錄，因為"
+msgstr "紀錄者"
 
 #: mod/rms/lib_rms.inc:1151
 msgid "There is no any root catalogue found. "
