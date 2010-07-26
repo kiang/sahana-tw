@@ -112,11 +112,9 @@ function show_item_cat_table() {
     $num_of_rec_per_page = intval($res->fields["option_code"]);
     if (isset($_REQUEST['page'])) {
         $start_rec = ($_REQUEST['page'] - 1) * $num_of_rec_per_page;
-        $end_rec = $_REQUEST['page'] * $num_of_rec_per_page;
         $page = $_REQUEST['page'];
     } else {
         $start_rec = 0;
-        $end_rec = $num_of_rec_per_page;
         $page = 0;
     }
     if (isset($_POST['filter_main_cat']) && $_POST['filter_main_cat'] != 'all') {
@@ -134,18 +132,18 @@ function show_item_cat_table() {
             } else {
                 $final_flag = '1';
             }
-            $query = "SELECT * FROM ct_catalogue WHERE serial LIKE '$filter_main_cat_serial%' and final_flag='$final_flag' and parentid != '0' ORDER BY serial LIMIT " . $start_rec . "," . $end_rec;
+            $query = "SELECT * FROM ct_catalogue WHERE serial LIKE '$filter_main_cat_serial%' and final_flag='$final_flag' and parentid != '0' ORDER BY serial LIMIT " . $start_rec . "," . $num_of_rec_per_page;
             $res = $db->Execute($query);
             $queryx = "SELECT * FROM ct_catalogue WHERE serial LIKE '$filter_main_cat_serial%' and final_flag='$final_flag' and parentid != '0' ORDER BY serial";
             $resx = $db->Execute($queryx);
         } else {
-            $query = "SELECT * FROM ct_catalogue WHERE serial LIKE '$filter_main_cat_serial%' ORDER BY serial LIMIT " . $start_rec . "," . $end_rec;
+            $query = "SELECT * FROM ct_catalogue WHERE serial LIKE '$filter_main_cat_serial%' ORDER BY serial LIMIT " . $start_rec . "," . $num_of_rec_per_page;
             $res = $db->Execute($query);
             $queryx = "SELECT * FROM ct_catalogue WHERE serial LIKE '$filter_main_cat_serial%' ORDER BY serial";
             $resx = $db->Execute($queryx);
         }
     } else {
-        $query = "SELECT * FROM ct_catalogue ORDER BY serial LIMIT " . $start_rec . "," . $end_rec;
+        $query = "SELECT * FROM ct_catalogue ORDER BY serial LIMIT " . $start_rec . "," . $num_of_rec_per_page;
         $res = $db->Execute($query);
         $queryx = "SELECT COUNT(*) FROM ct_catalogue ORDER BY serial";
         $resx = $db->Execute($queryx);
