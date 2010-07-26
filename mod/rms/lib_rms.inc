@@ -1421,7 +1421,7 @@ function _shn_rms_get_parent_catalogue($item_id) {
     while ($item_id != '0') {
         $q = "SELECT * FROM ct_catalogue WHERE ct_uuid='$item_id'";
         $res_temp = $db->Execute($q);
-        if ($rs === false) {
+        if ($res_temp === false) {
             $msg = $global['db']->ErrorMsg();
             add_error($msg . '<br />' . $sql);
             display_errors();
