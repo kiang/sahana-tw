@@ -55,10 +55,10 @@ function _shn_page_get_rs($query, $rpp) {
         $page = $_REQUEST['page'];
     } else $page = 1;
     //if the page is next or Previous
-    if ('Next' == $page) {
+    if (_('Next') == $page) {
         $page = $_REQUEST['c_page'] + 1;
     }
-    if ('Previous' == $page) {
+    if (_('Previous') == $page) {
         $page = $_REQUEST['c_page'] - 1;
     }
     $global['db']->SetFetchMode(ADODB_FETCH_ASSOC);
