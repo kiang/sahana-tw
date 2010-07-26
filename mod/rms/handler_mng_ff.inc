@@ -131,7 +131,12 @@ function _shn_rms_mng_select_pledge() {
     global $global;
     $_SESSION['rms_plg_id'] = null;
     $itm = $_SESSION['rms_req_item'];
-    $sql2 = "SELECT plg_uuid, item_uuid, quantity AS plg_qty, status FROM rms_plg_item WHERE item_uuid = '$itm' AND (status = 'Delivered' OR status = 'Confirmed')";
+    $sql2 = "SELECT plg_uuid, item_uuid, quantity AS plg_qty, status
+    FROM rms_plg_item
+    WHERE status IN ('delivered', 'confirmed')
+    AND (item_uuid = '{$itm}'
+        OR item_uuid IN (SELECT alternate FROM ims_alternate WHERE catalog_id = '{$itm}')
+        OR item_uuid IN (SELECT catalog_id FROM ims_alternate WHERE alternate = '{$itm}'))";
     $rs2 = $global['db']->Execute($sql2);
     if ($rs2 === false) {
         $msg = $global['db']->ErrorMsg();
@@ -345,7 +350,7 @@ switch ($seq) {
         $_SESSION['rms_req_id'] = $_REQUEST['req_id'];
         $_SESSION['rms_req_item'] = $_REQUEST['itm_id'];
         $req = _shn_rms_get_request($_SESSION['rms_req_id']);
-        echo '<strong>Location : </strong>' . _shn_rms_get_name($req['loc_uuid']);
+        echo '<strong>' . _('Location : ') . '</strong>' . _shn_rms_get_name($req['loc_uuid']);
         _shn_rms_mng_select_pledge();
     break;
     case 'add_ff':
