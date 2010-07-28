@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-07-26 16:20+0800\n"
-"PO-Revision-Date: 2010-07-26 16:21+0800\n"
+"PO-Revision-Date: 2010-07-29 07:55+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -6687,18 +6687,16 @@ msgid "Error Reading RSS Feed"
 msgstr "RSS 讀取錯誤"
 
 #: mod/mpr/list_other.inc:20
-#, fuzzy
 msgid "Other People"
-msgstr "業務員"
+msgstr "其他"
 
 #: mod/mpr/list_other.inc:71
 #: mod/mpr/list_missing.inc:71
 #: mod/mpr/list_found.inc:72
 #: mod/mpr/list_deceased.inc:70
 #: mod/mpr/list_injured.inc:70
-#, fuzzy
 msgid "Print Current Page"
-msgstr "頁分隔於(之後)"
+msgstr "列印本頁"
 
 #: mod/mpr/mpr_lib.inc:41
 #: mod/mpr/mpr_lib.inc:62
@@ -7689,9 +7687,8 @@ msgid "List Deceased People"
 msgstr "身故者名單"
 
 #: mod/mpr/main.inc:66
-#, fuzzy
 msgid "List Other People"
-msgstr "定義業務員"
+msgstr "顯示其他災民"
 
 #: mod/mpr/main.inc:172
 #: mod/mpr/main.inc:178
@@ -9774,7 +9771,7 @@ msgstr "職業"
 #: mod/cr/camp.inc:470
 #: mod/cr/camp.inc:549
 msgid "Shelter Population"
-msgstr "庇護所可收容人數"
+msgstr "庇護所收容量 / 目前收容人數"
 
 #: mod/cr/edit.inc:77
 #: mod/cr/edit.inc:180
@@ -9949,13 +9946,13 @@ msgstr "新增庇護所"
 #: mod/cr/camp.inc:430
 #, php-format
 msgid "Please click %s to add another shelter."
-msgstr ""
+msgstr "請點選%s以新增另一個庇護所資料。"
 
 #: mod/cr/edit.inc:478
 #: mod/cr/camp.inc:434
 #, php-format
 msgid "To edit current shelter, please do a search with %s or %s first to find the shelter you would like to edit."
-msgstr ""
+msgstr "欲編輯現存庇護所，請利用查詢功能%s 或 %s，找到您欲編輯的庇護所資料。"
 
 #: mod/cr/edit.inc:479
 #: mod/cr/main_fns.inc:48
@@ -11758,18 +11755,16 @@ msgstr ":: "
 #: mod/rms/handler_req_sch.inc:86
 #: mod/rms/handler_req_sch.inc:200
 #: mod/rms/lib_rms.inc:748
-#, fuzzy
 msgid "Recoder"
-msgstr "記錄"
+msgstr "資料輸入者"
 
 #: mod/rms/handler_req_ls.inc:71
 #: mod/rms/handler_req_ls.inc:130
 #: mod/rms/handler_req_sch.inc:90
 #: mod/rms/handler_req_sch.inc:202
 #: mod/rms/lib_rms.inc:788
-#, fuzzy
 msgid "Location of request"
-msgstr "地點維護"
+msgstr "需求單位 / 地點"
 
 #: mod/rms/handler_req_ls.inc:71
 #: mod/rms/handler_plg_ls.inc:61
@@ -12233,7 +12228,7 @@ msgstr "捐贈物資"
 
 #: mod/rms/main.inc:58
 msgid "Receipt and appreciation"
-msgstr "感謝狀"
+msgstr "收據與感謝狀"
 
 #: mod/rms/main.inc:60
 msgid "Manage"
@@ -12253,19 +12248,16 @@ msgid "Please Enter a valid Quantity"
 msgstr "請輸入有效的數量"
 
 #: mod/rms/lib_rms.inc:395
-#, fuzzy
 msgid "Immediate"
-msgstr "編輯"
+msgstr "急迫"
 
 #: mod/rms/lib_rms.inc:396
-#, fuzzy
 msgid "Moderate"
-msgstr "模組名稱"
+msgstr "需要但不緊急"
 
 #: mod/rms/lib_rms.inc:397
-#, fuzzy
 msgid "Low Priority"
-msgstr "低毛利銷售"
+msgstr "可稍後處理"
 
 #: mod/rms/lib_rms.inc:489
 msgid "Do you really want to delete this request?"
@@ -13864,7 +13856,7 @@ msgstr "地點刪除成功"
 
 #: inc/lib_location.inc:800
 msgid "The location you are trying to delete is in use. If you want to delete it, please remove related data first."
-msgstr ""
+msgstr "目前欲刪除的地點已經被使用，如遇刪除，請先刪除使用的相關資料。"
 
 #: inc/lib_location.inc:836
 msgid "Select the location based at.  This is hierarchical. For example think you are based  in the country 'Sri lanka' ,district 'Colombo' ,and village 'dehiwala'.  start by selecting the country ,once you select country"
@@ -13960,9 +13952,8 @@ msgstr "頁"
 
 #: inc/lib_paging.inc:143
 #: inc/lib_paging.inc:199
-#, fuzzy
 msgid "default"
-msgstr "預設載貨紙"
+msgstr "預設值"
 
 #: inc/handler_db.inc:183
 msgid "Incident"
@@ -14242,14 +14233,12 @@ msgid "Driving License Number"
 msgstr "駕駛執照"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Alive and placed"
-msgstr "損益表"
+msgstr "倖存安置中"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Injured and placed"
-msgstr "損益表"
+msgstr "受傷安置中"
 
 #: field_options/option_description,
 msgid "Deceased"
@@ -14257,17 +14246,15 @@ msgstr "已故"
 
 #: field_options/option_description,
 msgid "Alive and not placed"
-msgstr ""
+msgstr "倖存未安置"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Injured and in hospital"
-msgstr "只顯示折價交易客戶"
+msgstr "受傷住院中"
 
 #: field_options/option_description,
-#, fuzzy
 msgid "Injured and not placed"
-msgstr "受傷者名單"
+msgstr "受傷未安置"
 
 #: field_options/option_description,
 msgid "Father"
@@ -15031,7 +15018,7 @@ msgstr "專案負責人"
 
 #: ct_unit/name,
 msgid "kl"
-msgstr ""
+msgstr "公升"
 
 #: ct_unit/name,
 msgid "microlitre"
