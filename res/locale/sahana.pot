@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-26 16:20+0800\n"
+"POT-Creation-Date: 2010-07-29 08:03+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -458,7 +458,7 @@ msgstr ""
 #: mod/rms/handler_req_new.inc:79 mod/rms/handler_req_new.inc:131
 #: mod/rms/handler_req_ls.inc:63 mod/rms/handler_plg_ls.inc:53
 #: mod/rms/handler_plg_new.inc:44 mod/rms/handler_plg_new.inc:61
-#: mod/rms/handler_mng_ff.inc:115 mod/rms/handler_mng_ff.inc:265
+#: mod/rms/handler_mng_ff.inc:115 mod/rms/handler_mng_ff.inc:377
 #: mod/rms/lib_rms.inc:1313 mod/msg/handler_cap_new.inc:99
 #: mod/msg/handler_cap_new.inc:167 mod/msg/handler_cap_new.inc:187
 #: inc/lib_paging.inc:58 inc/lib_paging.inc:139 inc/lib_paging.inc:222
@@ -479,7 +479,7 @@ msgstr ""
 
 #: tools/tpl_languages.php:5 tools/tpl_languages.php:16
 #: tools/tpl_languages.php:71 tools/tpl_languages.php:96
-#: tools/tpl_languages.php:117 mod/rms/handler_mng_ff.inc:272
+#: tools/tpl_languages.php:117 mod/rms/handler_mng_ff.inc:384
 #: mod/rms/lib_rms.inc:494
 msgid "Cancel"
 msgstr ""
@@ -553,7 +553,7 @@ msgstr ""
 #: tools/tpl_languages.php:15 tools/tpl_languages.php:70
 #: tools/tpl_languages.php:95 mod/ims/add_item.inc:156 mod/ims/search.inc:107
 #: mod/ims/optimize.inc:238 mod/ims/mini_quantity.inc:138
-#: mod/admin/location.inc:411 mod/rms/handler_mng_ff.inc:296
+#: mod/admin/location.inc:411 mod/rms/handler_mng_ff.inc:408
 #: inc/lib_security/auth_form.inc:102 inc/lib_security/auth_form.inc:150
 msgid "Submit"
 msgstr ""
@@ -829,8 +829,9 @@ msgstr ""
 #: mod/rms/handler_req_ls.inc:179 mod/rms/handler_req_sch.inc:99
 #: mod/rms/handler_req_sch.inc:204 mod/rms/handler_req_sch.inc:210
 #: mod/rms/handler_plg_ls.inc:87 mod/rms/handler_plg_ls.inc:123
-#: mod/rms/handler_plg_sch.inc:43 mod/rms/handler_mng_ff.inc:204
-#: mod/msg/handler_cap_edit.inc:90 mod/msg/handler_cap_new.inc:81
+#: mod/rms/handler_plg_sch.inc:43 mod/rms/handler_mng_ff.inc:202
+#: mod/rms/handler_mng_ff.inc:313 mod/msg/handler_cap_edit.inc:90
+#: mod/msg/handler_cap_new.inc:81
 msgid "Status"
 msgstr ""
 
@@ -870,8 +871,8 @@ msgstr ""
 #: mod/cr/search.inc:43 mod/cr/search.inc:130 mod/cr/search.inc:302
 #: mod/cr/edit.inc:508 mod/cr/reports.inc:62 mod/cr/reports.inc:118
 #: mod/dvr/add_new_grp.inc:406 mod/rms/handler_req_new.inc:129
-#: mod/rms/handler_req_sch.inc:208 mod/rms/handler_mng_ff.inc:205
-#: mod/rms/lib_rms.inc:1311
+#: mod/rms/handler_req_sch.inc:208 mod/rms/handler_mng_ff.inc:203
+#: mod/rms/handler_mng_ff.inc:314 mod/rms/lib_rms.inc:1311
 msgid "Location"
 msgstr ""
 
@@ -1442,7 +1443,8 @@ msgid "You must select at least one volunteer if reporting by volunteer."
 msgstr ""
 
 #: tools/tpl_languages.php:304 tools/tpl_languages.php:308
-#: mod/pref/ims_menu.inc:9 inc/lib_security/auth_form.inc:204
+#: mod/pref/ims_menu.inc:9 inc/lib_security/auth_form.inc:170
+#: inc/lib_security/auth_form.inc:204
 msgid "Change Password"
 msgstr ""
 
@@ -3226,7 +3228,7 @@ msgstr ""
 #: mod/ims/add_item.inc:139 mod/ims/search.inc:104 mod/ims/optimize.inc:65
 #: mod/ims/optimize.inc:235 mod/ims/optimize.inc:369 mod/ims/optimize.inc:906
 #: mod/ims/mini_quantity.inc:99 mod/ims/mini_quantity.inc:109
-#: mod/rms/handler_mng_ff.inc:292
+#: mod/rms/handler_mng_ff.inc:404
 msgid "Inventory : "
 msgstr ""
 
@@ -3369,7 +3371,7 @@ msgstr ""
 #: mod/ims/ims_report.inc:154 mod/ims/ims_report.inc:237
 #: mod/ims/view_edit_item.inc:59 mod/ims/transfer_inv.inc:95
 #: mod/ims/transfer_inv.inc:149 mod/ims/home.inc:51
-#: mod/rms/handler_mng_ff.inc:202
+#: mod/rms/handler_mng_ff.inc:200 mod/rms/handler_mng_ff.inc:311
 msgid "Amount"
 msgstr ""
 
@@ -3394,7 +3396,7 @@ msgstr ""
 #: mod/ims/transfer_inv.inc:251 mod/ims/transfer_inv.inc:454
 #: mod/ims/home.inc:55 mod/ims/mini_quantity.inc:248
 #: mod/rms/handler_plg_sch.inc:83 mod/rms/handler_plg_sch.inc:85
-#: mod/rms/handler_mng_ff.inc:203
+#: mod/rms/handler_mng_ff.inc:201 mod/rms/handler_mng_ff.inc:312
 msgid "Inventory"
 msgstr ""
 
@@ -3408,7 +3410,7 @@ msgstr ""
 msgid "Total Amount"
 msgstr ""
 
-#: mod/ims/search.inc:207
+#: mod/ims/search.inc:207 mod/rms/handler_mng_ff.inc:250
 msgid "Alternate Items:"
 msgstr ""
 
@@ -3533,8 +3535,9 @@ msgstr ""
 #: mod/rms/handler_req_sch.inc:202 mod/rms/handler_req_sch.inc:208
 #: mod/rms/handler_plg_new.inc:131 mod/rms/handler_plg_new.inc:213
 #: mod/rms/handler_plg_sch.inc:83 mod/rms/handler_plg_sch.inc:85
-#: mod/rms/handler_mng_ff.inc:147 mod/rms/handler_mng_ff.inc:201
-#: mod/rms/handler_mng_ff.inc:262 mod/rms/lib_rms.inc:799
+#: mod/rms/handler_mng_ff.inc:145 mod/rms/handler_mng_ff.inc:199
+#: mod/rms/handler_mng_ff.inc:265 mod/rms/handler_mng_ff.inc:310
+#: mod/rms/handler_mng_ff.inc:374 mod/rms/lib_rms.inc:799
 #: mod/rms/lib_rms.inc:852 mod/rms/lib_rms.inc:880
 msgid "Item"
 msgstr ""
@@ -3759,7 +3762,8 @@ msgstr ""
 #: mod/ims/ims_report.inc:160 mod/ims/transfer_inv.inc:101
 #: mod/ims/transfer_inv.inc:155 mod/admin/conf_admin.inc:128
 #: mod/rms/handler_plg_receipt.inc:97 mod/rms/handler_plg_ls.inc:61
-#: mod/rms/handler_mng_ff.inc:206 mod/msg/message_forms.inc:161
+#: mod/rms/handler_mng_ff.inc:204 mod/rms/handler_mng_ff.inc:315
+#: mod/msg/message_forms.inc:161
 msgid "Action"
 msgstr ""
 
@@ -6502,8 +6506,8 @@ msgid "Reported Person"
 msgstr ""
 
 #: mod/mpr/search.inc:251 mod/mpr/search.inc:304 mod/mpr/search.inc:369
-#: mod/mpr/search.inc:391 mod/rms/handler_mng_ff.inc:164
-#: mod/rms/lib_rms.inc:815
+#: mod/mpr/search.inc:391 mod/rms/handler_mng_ff.inc:162
+#: mod/rms/handler_mng_ff.inc:282 mod/rms/lib_rms.inc:815
 msgid "Select"
 msgstr ""
 
@@ -9506,7 +9510,7 @@ msgstr ""
 msgid "You have succesfully registered shelter "
 msgstr ""
 
-#: mod/cr/camp.inc:462 mod/rms/handler_mng_ff.inc:353
+#: mod/cr/camp.inc:462 mod/rms/handler_mng_ff.inc:465
 msgid "Location : "
 msgstr ""
 
@@ -10584,8 +10588,8 @@ msgstr ""
 #: mod/rms/handler_req_sch.inc:280 mod/rms/handler_plg_ls.inc:111
 #: mod/rms/handler_plg_ls.inc:167 mod/rms/handler_plg_ls.inc:179
 #: mod/rms/handler_plg_new.inc:325 mod/rms/handler_plg_sch.inc:142
-#: mod/rms/handler_mng_ff.inc:32 mod/rms/handler_mng_ff.inc:328
-#: mod/rms/handler_mng_ff.inc:405 mod/rms/lib_rms.inc:521
+#: mod/rms/handler_mng_ff.inc:32 mod/rms/handler_mng_ff.inc:440
+#: mod/rms/handler_mng_ff.inc:517 mod/rms/lib_rms.inc:521
 msgid "RMS Home"
 msgstr ""
 
@@ -10669,7 +10673,7 @@ msgstr ""
 #: mod/rms/handler_req_new.inc:298 mod/rms/handler_req_new.inc:342
 #: mod/rms/handler_plg_new.inc:107 mod/rms/handler_plg_new.inc:131
 #: mod/rms/handler_plg_sch.inc:83 mod/rms/handler_plg_sch.inc:85
-#: mod/rms/handler_mng_ff.inc:264 mod/rms/lib_rms.inc:799
+#: mod/rms/handler_mng_ff.inc:376 mod/rms/lib_rms.inc:799
 #: mod/rms/lib_rms.inc:880
 msgid "Quantity"
 msgstr ""
@@ -10756,7 +10760,7 @@ msgstr ""
 
 #: mod/rms/handler_req_ls.inc:71 mod/rms/handler_plg_ls.inc:61
 #: mod/rms/handler_plg_sch.inc:83 mod/rms/handler_plg_sch.inc:85
-#: mod/rms/handler_mng_ff.inc:147
+#: mod/rms/handler_mng_ff.inc:145 mod/rms/handler_mng_ff.inc:265
 msgid "status"
 msgstr ""
 
@@ -11033,8 +11037,8 @@ msgstr ""
 msgid "Fulfil Requests"
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:32 mod/rms/handler_mng_ff.inc:328
-#: mod/rms/handler_mng_ff.inc:405
+#: mod/rms/handler_mng_ff.inc:32 mod/rms/handler_mng_ff.inc:440
+#: mod/rms/handler_mng_ff.inc:517
 msgid "Fullfil Other Request"
 msgstr ""
 
@@ -11063,84 +11067,84 @@ msgstr ""
 msgid "Please select an item from the request to be fulfilled."
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:147
+#: mod/rms/handler_mng_ff.inc:145 mod/rms/handler_mng_ff.inc:265
 msgid "Qty"
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:147
+#: mod/rms/handler_mng_ff.inc:145 mod/rms/handler_mng_ff.inc:265
 msgid "Used"
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:174
+#: mod/rms/handler_mng_ff.inc:172 mod/rms/handler_mng_ff.inc:292
 msgid "This shows the list of pledges that have the selected item, "
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:175
+#: mod/rms/handler_mng_ff.inc:173 mod/rms/handler_mng_ff.inc:293
 msgid "Please select a pledge from the request to be fulfilled."
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:183
+#: mod/rms/handler_mng_ff.inc:181
 msgid "No Pledges have been registered !!!"
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:199
+#: mod/rms/handler_mng_ff.inc:197 mod/rms/handler_mng_ff.inc:308
 msgid "Items from inventories"
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:253
+#: mod/rms/handler_mng_ff.inc:365
 msgid "Allocate items from a pledge to fulfill a request, "
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:254
+#: mod/rms/handler_mng_ff.inc:366
 msgid ""
 "The 'Maximum Allocatable Quantity' is the maximum you are allowed to "
 "allocate."
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:258
+#: mod/rms/handler_mng_ff.inc:370
 msgid "Allocate items from the selected pledge to the request"
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:261 mod/rms/handler_mng_ff.inc:289
+#: mod/rms/handler_mng_ff.inc:373 mod/rms/handler_mng_ff.inc:401
 msgid "Allocate"
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:263
+#: mod/rms/handler_mng_ff.inc:375
 msgid "Maximum Allocatable Quantity"
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:271
+#: mod/rms/handler_mng_ff.inc:383
 msgid "Cancel Fulfillment Process"
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:290
+#: mod/rms/handler_mng_ff.inc:402
 msgid "Item : "
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:291
+#: mod/rms/handler_mng_ff.inc:403
 msgid "Allocatable quantity (Max) : "
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:293
+#: mod/rms/handler_mng_ff.inc:405
 msgid "Quantity : "
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:328 mod/rms/handler_mng_ff.inc:405
+#: mod/rms/handler_mng_ff.inc:440 mod/rms/handler_mng_ff.inc:517
 msgid "Fullfil Another Item From the Same Request"
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:377
+#: mod/rms/handler_mng_ff.inc:489
 msgid ""
 "Please enter a valid 'Quantity', The 'Quantity' should be equal or less than "
 "the Maximum Value"
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:383
+#: mod/rms/handler_mng_ff.inc:495
 msgid ""
 "Please enter a valid 'Quantity', The 'Quantity' should be larger than the 0"
 msgstr ""
 
-#: mod/rms/handler_mng_ff.inc:397
+#: mod/rms/handler_mng_ff.inc:509
 msgid "The Fulfillment Data was successfully added"
 msgstr ""
 
@@ -12734,8 +12738,48 @@ msgstr ""
 msgid "Option to use an OpenID instead of a username/password if you'd like."
 msgstr ""
 
+#: inc/lib_security/auth_form.inc:174
+msgid "Change Passwords"
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:180
+msgid "Password must adhere to following rules:"
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:181
+msgid "Minimum length is 8."
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:182
+msgid "At least one letter in the expression."
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:183
+msgid "At least one character is numeric or special."
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:184
+msgid "Cannot be any of the past four (4) passwords."
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:185
+msgid "Passwords cannot be changed more frequently than once per day."
+msgstr ""
+
 #: inc/lib_security/auth_form.inc:190 inc/lib_security/auth_form.inc:282
 msgid "Old and New Password"
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:193
+msgid "Old Password"
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:194
+msgid "New Password"
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:195
+msgid "Confirm New Password"
 msgstr ""
 
 #: inc/lib_security/auth_form.inc:231 inc/lib_security/auth_form.inc:311

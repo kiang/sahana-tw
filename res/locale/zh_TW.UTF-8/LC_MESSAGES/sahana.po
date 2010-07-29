@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sahana 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-26 16:20+0800\n"
-"PO-Revision-Date: 2010-07-29 07:55+0800\n"
+"POT-Creation-Date: 2010-07-29 08:03+0800\n"
+"PO-Revision-Date: 2010-07-29 08:05+0800\n"
 "Last-Translator: Finjon Kiang <kiang@osobiz.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "MIME-Version: 1.0\n"
@@ -522,7 +522,7 @@ msgstr "前往下一頁"
 #: mod/rms/handler_plg_new.inc:44
 #: mod/rms/handler_plg_new.inc:61
 #: mod/rms/handler_mng_ff.inc:115
-#: mod/rms/handler_mng_ff.inc:265
+#: mod/rms/handler_mng_ff.inc:377
 #: mod/rms/lib_rms.inc:1313
 #: mod/msg/handler_cap_new.inc:99
 #: mod/msg/handler_cap_new.inc:167
@@ -550,7 +550,7 @@ msgstr "來自系統？"
 #: tools/tpl_languages.php:71
 #: tools/tpl_languages.php:96
 #: tools/tpl_languages.php:117
-#: mod/rms/handler_mng_ff.inc:272
+#: mod/rms/handler_mng_ff.inc:384
 #: mod/rms/lib_rms.inc:494
 msgid "Cancel"
 msgstr "取消"
@@ -673,7 +673,7 @@ msgstr "描述"
 #: mod/ims/optimize.inc:238
 #: mod/ims/mini_quantity.inc:138
 #: mod/admin/location.inc:411
-#: mod/rms/handler_mng_ff.inc:296
+#: mod/rms/handler_mng_ff.inc:408
 #: inc/lib_security/auth_form.inc:102
 #: inc/lib_security/auth_form.inc:150
 msgid "Submit"
@@ -1032,7 +1032,8 @@ msgstr "照片"
 #: mod/rms/handler_plg_ls.inc:87
 #: mod/rms/handler_plg_ls.inc:123
 #: mod/rms/handler_plg_sch.inc:43
-#: mod/rms/handler_mng_ff.inc:204
+#: mod/rms/handler_mng_ff.inc:202
+#: mod/rms/handler_mng_ff.inc:313
 #: mod/msg/handler_cap_edit.inc:90
 #: mod/msg/handler_cap_new.inc:81
 msgid "Status"
@@ -1088,7 +1089,8 @@ msgstr "身份識別"
 #: mod/dvr/add_new_grp.inc:406
 #: mod/rms/handler_req_new.inc:129
 #: mod/rms/handler_req_sch.inc:208
-#: mod/rms/handler_mng_ff.inc:205
+#: mod/rms/handler_mng_ff.inc:203
+#: mod/rms/handler_mng_ff.inc:314
 #: mod/rms/lib_rms.inc:1311
 msgid "Location"
 msgstr "地點"
@@ -1696,6 +1698,7 @@ msgstr "請選擇將訊息至少傳給一個志工"
 #: tools/tpl_languages.php:304
 #: tools/tpl_languages.php:308
 #: mod/pref/ims_menu.inc:9
+#: inc/lib_security/auth_form.inc:170
 #: inc/lib_security/auth_form.inc:204
 msgid "Change Password"
 msgstr "變更密碼"
@@ -3650,7 +3653,7 @@ msgstr "您所選擇物資的單位成本"
 #: mod/ims/optimize.inc:906
 #: mod/ims/mini_quantity.inc:99
 #: mod/ims/mini_quantity.inc:109
-#: mod/rms/handler_mng_ff.inc:292
+#: mod/rms/handler_mng_ff.inc:404
 msgid "Inventory : "
 msgstr "倉庫："
 
@@ -3805,7 +3808,8 @@ msgstr "物資名稱"
 #: mod/ims/transfer_inv.inc:95
 #: mod/ims/transfer_inv.inc:149
 #: mod/ims/home.inc:51
-#: mod/rms/handler_mng_ff.inc:202
+#: mod/rms/handler_mng_ff.inc:200
+#: mod/rms/handler_mng_ff.inc:311
 msgid "Amount"
 msgstr "總數"
 
@@ -3853,7 +3857,8 @@ msgstr "單位"
 #: mod/ims/mini_quantity.inc:248
 #: mod/rms/handler_plg_sch.inc:83
 #: mod/rms/handler_plg_sch.inc:85
-#: mod/rms/handler_mng_ff.inc:203
+#: mod/rms/handler_mng_ff.inc:201
+#: mod/rms/handler_mng_ff.inc:312
 msgid "Inventory"
 msgstr "倉庫列表"
 
@@ -3872,6 +3877,7 @@ msgid "Total Amount"
 msgstr "總數"
 
 #: mod/ims/search.inc:207
+#: mod/rms/handler_mng_ff.inc:250
 msgid "Alternate Items:"
 msgstr "替代物資"
 
@@ -4014,9 +4020,11 @@ msgstr "選擇相關物資"
 #: mod/rms/handler_plg_new.inc:213
 #: mod/rms/handler_plg_sch.inc:83
 #: mod/rms/handler_plg_sch.inc:85
-#: mod/rms/handler_mng_ff.inc:147
-#: mod/rms/handler_mng_ff.inc:201
-#: mod/rms/handler_mng_ff.inc:262
+#: mod/rms/handler_mng_ff.inc:145
+#: mod/rms/handler_mng_ff.inc:199
+#: mod/rms/handler_mng_ff.inc:265
+#: mod/rms/handler_mng_ff.inc:310
+#: mod/rms/handler_mng_ff.inc:374
 #: mod/rms/lib_rms.inc:799
 #: mod/rms/lib_rms.inc:852
 #: mod/rms/lib_rms.inc:880
@@ -4285,7 +4293,8 @@ msgstr "到期日"
 #: mod/admin/conf_admin.inc:128
 #: mod/rms/handler_plg_receipt.inc:97
 #: mod/rms/handler_plg_ls.inc:61
-#: mod/rms/handler_mng_ff.inc:206
+#: mod/rms/handler_mng_ff.inc:204
+#: mod/rms/handler_mng_ff.inc:315
 #: mod/msg/message_forms.inc:161
 msgid "Action"
 msgstr "動作"
@@ -7243,7 +7252,8 @@ msgstr "報告者"
 #: mod/mpr/search.inc:304
 #: mod/mpr/search.inc:369
 #: mod/mpr/search.inc:391
-#: mod/rms/handler_mng_ff.inc:164
+#: mod/rms/handler_mng_ff.inc:162
+#: mod/rms/handler_mng_ff.inc:282
 #: mod/rms/lib_rms.inc:815
 msgid "Select"
 msgstr "選取"
@@ -10371,7 +10381,7 @@ msgid "You have succesfully registered shelter "
 msgstr "您成功登錄了庇護所"
 
 #: mod/cr/camp.inc:462
-#: mod/rms/handler_mng_ff.inc:353
+#: mod/rms/handler_mng_ff.inc:465
 msgid "Location : "
 msgstr "地點："
 
@@ -11571,8 +11581,8 @@ msgstr "在資料庫裡沒有符合條件的捐贈物資"
 #: mod/rms/handler_plg_new.inc:325
 #: mod/rms/handler_plg_sch.inc:142
 #: mod/rms/handler_mng_ff.inc:32
-#: mod/rms/handler_mng_ff.inc:328
-#: mod/rms/handler_mng_ff.inc:405
+#: mod/rms/handler_mng_ff.inc:440
+#: mod/rms/handler_mng_ff.inc:517
 #: mod/rms/lib_rms.inc:521
 msgid "RMS Home"
 msgstr "需求管理 首頁"
@@ -11668,7 +11678,7 @@ msgstr "分類"
 #: mod/rms/handler_plg_new.inc:131
 #: mod/rms/handler_plg_sch.inc:83
 #: mod/rms/handler_plg_sch.inc:85
-#: mod/rms/handler_mng_ff.inc:264
+#: mod/rms/handler_mng_ff.inc:376
 #: mod/rms/lib_rms.inc:799
 #: mod/rms/lib_rms.inc:880
 msgid "Quantity"
@@ -11770,7 +11780,8 @@ msgstr "需求單位 / 地點"
 #: mod/rms/handler_plg_ls.inc:61
 #: mod/rms/handler_plg_sch.inc:83
 #: mod/rms/handler_plg_sch.inc:85
-#: mod/rms/handler_mng_ff.inc:147
+#: mod/rms/handler_mng_ff.inc:145
+#: mod/rms/handler_mng_ff.inc:265
 msgid "status"
 msgstr "狀態"
 
@@ -12066,8 +12077,8 @@ msgid "Fulfil Requests"
 msgstr "需求與物資媒合"
 
 #: mod/rms/handler_mng_ff.inc:32
-#: mod/rms/handler_mng_ff.inc:328
-#: mod/rms/handler_mng_ff.inc:405
+#: mod/rms/handler_mng_ff.inc:440
+#: mod/rms/handler_mng_ff.inc:517
 msgid "Fullfil Other Request"
 msgstr "滿足其他需求"
 
@@ -12095,82 +12106,87 @@ msgstr "顯示目前的需求達成狀態，"
 msgid "Please select an item from the request to be fulfilled."
 msgstr "請從需求裡選擇一個要進行媒合的項目"
 
-#: mod/rms/handler_mng_ff.inc:147
+#: mod/rms/handler_mng_ff.inc:145
+#: mod/rms/handler_mng_ff.inc:265
 msgid "Qty"
 msgstr "數量"
 
-#: mod/rms/handler_mng_ff.inc:147
+#: mod/rms/handler_mng_ff.inc:145
+#: mod/rms/handler_mng_ff.inc:265
 msgid "Used"
 msgstr "已使用"
 
 # context confirm needed
-#: mod/rms/handler_mng_ff.inc:174
+#: mod/rms/handler_mng_ff.inc:172
+#: mod/rms/handler_mng_ff.inc:292
 msgid "This shows the list of pledges that have the selected item, "
 msgstr "列出擁有所選擇的物資的捐贈者列表，"
 
-#: mod/rms/handler_mng_ff.inc:175
+#: mod/rms/handler_mng_ff.inc:173
+#: mod/rms/handler_mng_ff.inc:293
 msgid "Please select a pledge from the request to be fulfilled."
 msgstr "請從要媒合的需求裡選擇一個物資。"
 
-#: mod/rms/handler_mng_ff.inc:183
+#: mod/rms/handler_mng_ff.inc:181
 msgid "No Pledges have been registered !!!"
 msgstr "目前沒有符合需求的捐贈物資"
 
-#: mod/rms/handler_mng_ff.inc:199
+#: mod/rms/handler_mng_ff.inc:197
+#: mod/rms/handler_mng_ff.inc:308
 msgid "Items from inventories"
 msgstr "來自庫存的品項"
 
-#: mod/rms/handler_mng_ff.inc:253
+#: mod/rms/handler_mng_ff.inc:365
 msgid "Allocate items from a pledge to fulfill a request, "
 msgstr "從捐贈物資裡分配物資，以媒合需求，"
 
-#: mod/rms/handler_mng_ff.inc:254
+#: mod/rms/handler_mng_ff.inc:366
 msgid "The 'Maximum Allocatable Quantity' is the maximum you are allowed to allocate."
 msgstr "'最大可分配的數量'，是您可分配的數量的最大值。"
 
-#: mod/rms/handler_mng_ff.inc:258
+#: mod/rms/handler_mng_ff.inc:370
 msgid "Allocate items from the selected pledge to the request"
 msgstr "從選擇的捐贈物資裡，分配物資以滿足需求"
 
-#: mod/rms/handler_mng_ff.inc:261
-#: mod/rms/handler_mng_ff.inc:289
+#: mod/rms/handler_mng_ff.inc:373
+#: mod/rms/handler_mng_ff.inc:401
 msgid "Allocate"
 msgstr "分配"
 
-#: mod/rms/handler_mng_ff.inc:263
+#: mod/rms/handler_mng_ff.inc:375
 msgid "Maximum Allocatable Quantity"
 msgstr "最大可分配的數量"
 
-#: mod/rms/handler_mng_ff.inc:271
+#: mod/rms/handler_mng_ff.inc:383
 msgid "Cancel Fulfillment Process"
 msgstr "取消滿足需求的程序"
 
-#: mod/rms/handler_mng_ff.inc:290
+#: mod/rms/handler_mng_ff.inc:402
 msgid "Item : "
 msgstr "物資："
 
-#: mod/rms/handler_mng_ff.inc:291
+#: mod/rms/handler_mng_ff.inc:403
 msgid "Allocatable quantity (Max) : "
 msgstr "可分配的數量（最大值）："
 
-#: mod/rms/handler_mng_ff.inc:293
+#: mod/rms/handler_mng_ff.inc:405
 msgid "Quantity : "
 msgstr "數量："
 
-#: mod/rms/handler_mng_ff.inc:328
-#: mod/rms/handler_mng_ff.inc:405
+#: mod/rms/handler_mng_ff.inc:440
+#: mod/rms/handler_mng_ff.inc:517
 msgid "Fullfil Another Item From the Same Request"
 msgstr "在本次需求中滿足其他品項"
 
-#: mod/rms/handler_mng_ff.inc:377
+#: mod/rms/handler_mng_ff.inc:489
 msgid "Please enter a valid 'Quantity', The 'Quantity' should be equal or less than the Maximum Value"
 msgstr "請輸入一個有效的「數量」，「數量」應該等於或小於最大值。"
 
-#: mod/rms/handler_mng_ff.inc:383
+#: mod/rms/handler_mng_ff.inc:495
 msgid "Please enter a valid 'Quantity', The 'Quantity' should be larger than the 0"
 msgstr "請輸入一個有效的「數量」，「數量」應該大於0。"
 
-#: mod/rms/handler_mng_ff.inc:397
+#: mod/rms/handler_mng_ff.inc:509
 msgid "The Fulfillment Data was successfully added"
 msgstr "已成功新增滿足需求的資料。"
 
@@ -13758,10 +13774,57 @@ msgstr "輸入上面圖片裡的文字"
 msgid "Option to use an OpenID instead of a username/password if you'd like."
 msgstr "你可以使用OpenID來取代帳號/密碼的登錄方式。"
 
+#: inc/lib_security/auth_form.inc:174
+#, fuzzy
+msgid "Change Passwords"
+msgstr "更改供應商"
+
+#: inc/lib_security/auth_form.inc:180
+msgid "Password must adhere to following rules:"
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:181
+#, fuzzy
+msgid "Minimum length is 8."
+msgstr "最低收費 (沒有=0)"
+
+#: inc/lib_security/auth_form.inc:182
+msgid "At least one letter in the expression."
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:183
+msgid "At least one character is numeric or special."
+msgstr ""
+
+#: inc/lib_security/auth_form.inc:184
+#, fuzzy
+msgid "Cannot be any of the past four (4) passwords."
+msgstr "您的密碼已在最近的四次更改中使用過，為了您的安全，請選擇新的密碼"
+
+#: inc/lib_security/auth_form.inc:185
+#, fuzzy
+msgid "Passwords cannot be changed more frequently than once per day."
+msgstr "對不起，一天只能變更密碼一次"
+
 #: inc/lib_security/auth_form.inc:190
 #: inc/lib_security/auth_form.inc:282
 msgid "Old and New Password"
 msgstr "舊密碼和新密碼"
+
+#: inc/lib_security/auth_form.inc:193
+#, fuzzy
+msgid "Old Password"
+msgstr "新密碼"
+
+#: inc/lib_security/auth_form.inc:194
+#, fuzzy
+msgid "New Password"
+msgstr "新密碼"
+
+#: inc/lib_security/auth_form.inc:195
+#, fuzzy
+msgid "Confirm New Password"
+msgstr "FTP 伺服器密碼"
 
 #: inc/lib_security/auth_form.inc:231
 #: inc/lib_security/auth_form.inc:311

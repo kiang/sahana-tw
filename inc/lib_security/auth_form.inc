@@ -167,32 +167,32 @@ function shn_auth_form_user_add($title = "Create Your Account", $mod = "admin", 
  */
 function shn_auth_form_ch_pwd($error = false) {
 ?>
-<center><h2>Change Password</h2></center>
+<center><h2><?php echo _('Change Password'); ?></h2></center>
 <?php
     if ($error) display_errors();
 ?>             
-<h3>Change Passwords</h3>   
+<h3><?php echo _('Change Passwords'); ?></h3>
 <div id="formcontainer">
 <?php
     $act = "ch_passwd_cr";
     $mod = "pref";
 ?>
-	<h4>Password must adhere to following rules:</h4>
-    1. Minimum length is 8.<br />
-    2. At least one letter in the expression.<br />
-    3. At least one character is numeric or special.<br />
-    4. Cannot be any of the past four (4) passwords.<br />
-    5. Passwords cannot be changed more frequently than once per day.<br />
+	<h4><?php echo _('Password must adhere to following rules:'); ?></h4>
+    1. <?php echo _('Minimum length is 8.'); ?><br />
+    2. <?php echo _('At least one letter in the expression.'); ?><br />
+    3. <?php echo _('At least one character is numeric or special.'); ?><br />
+    4. <?php echo _('Cannot be any of the past four (4) passwords.'); ?><br />
+    5. <?php echo _('Passwords cannot be changed more frequently than once per day.'); ?><br />
 	
 	<br />
 	<?php
     shn_form_fopen($act, $mod);
-    shn_form_fsopen(_("Old and New Password"));
+    shn_form_fsopen(_('Old and New Password'));
     $extra_opts['req'] = true;
     //$extra_opts['value']=$_SESSION['user'];
-    shn_form_password("Old Password", "old_password", null, $extra_opts);
-    shn_form_password("New Password", "password", null, $extra_opts);
-    shn_form_password("Confirm New Password", "re_password", null, $extra_opts);
+    shn_form_password(_('Old Password'), "old_password", null, $extra_opts);
+    shn_form_password(_('New Password'), "password", null, $extra_opts);
+    shn_form_password(_('Confirm New Password'), "re_password", null, $extra_opts);
     $user_id = $_SESSION["user_id"];
     shn_form_hidden(array('user' => $user_id));
     shn_form_fsclose();
@@ -201,7 +201,7 @@ function shn_auth_form_ch_pwd($error = false) {
 
 <?php
     //create the submit button
-    shn_form_submit(_("Change Password"));
+    shn_form_submit(_('Change Password'));
 ?>
 
 <br />
