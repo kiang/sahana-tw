@@ -131,65 +131,6 @@ function _shn_rms_mng_select_pledge() {
     global $global;
     $_SESSION['rms_plg_id'] = null;
     $itm = $_SESSION['rms_req_item'];
-    $sql2 = "SELECT plg_uuid, item_uuid, quantity AS plg_qty, status
-    FROM rms_plg_item
-    WHERE status IN ('delivered', 'confirmed')
-    AND item_uuid = '{$itm}'";
-    $rs2 = $global['db']->Execute($sql2);
-    if ($rs2 === false) {
-        $msg = $global['db']->ErrorMsg();
-        add_error($msg . ' <br> ' . $sql2);
-        display_errors();
-    } else {
-        $res_array = $rs2->GetArray();
-        $th_plg[] = array(_("Item"), _("Qty"), _("Used"), _('status'), '');
-        if ($rs2->RecordCount() > 0) {
-            foreach($res_array as $res) {
-                $sql3 = "SELECT SUM(quantity) AS ff_qty FROM rms_fulfil WHERE plg_uuid = '" . $res['plg_uuid'] . "' AND item_uuid = '" . $res['item_uuid'] . "' ";
-                $rs3 = $global['db']->Execute($sql3);
-                if ($rs3 === false) {
-                    $msg = $global['db']->ErrorMsg();
-                    add_error($msg . ' <br> ' . $sql2);
-                    display_errors();
-                } else {
-                    if ($rs3->RecordCount() > 0) {
-                        $max_qty = $res['plg_qty'] - $rs3->fields['ff_qty'];
-                        $used = $rs3->fields['ff_qty'];
-                    } else {
-                        $max_qty = $res['plg_qty'];
-                        $used = 0;
-                    }
-                    $sel_url = '<a href=index.php?mod=rms&amp;act=mng_ff&amp;seq=add_ff&amp;max_qty=' . $max_qty . '&amp;plg_id=' . $res['plg_uuid'] . '>' . _("Select") . '</a>';
-                    if ($max_qty > 0) {
-                        $tb_plg[] = array(_shn_rms_get_itemname($res['item_uuid']), $res['plg_qty'], $used, $res['status'], $sel_url);
-                    }
-                }
-            }
-            /**
-             * Display the list of pledges
-             */
-            print '<div class="info">';
-            print _("This shows the list of pledges that have the selected item, ");
-            print _("Please select a pledge from the request to be fulfilled.");
-            print '<br />';
-            print '</div>';
-            print '<br />';
-            shn_html_table($tb_plg, $th_plg, null, array('class' => 'wide'));
-        } else {
-            print '<div id="reqstr_id">';
-            print '<div class="info">';
-            print _("No Pledges have been registered !!!");
-            print '<br />';
-            print '<br />';
-            print '</div>';
-        }
-        ////
-        
-    }
-    print '<br>';
-    print '<br>';
-    //**************************** Inventory Items ************************
-    
 ?>
 <div id="result"> 
  
@@ -250,57 +191,6 @@ function _shn_rms_mng_select_pledge_alternates() {
     echo '<div><h3><b><em>' . _("Alternate Items:") . '</em></b></h3></div>';
     $_SESSION['rms_plg_id'] = null;
     $itm = $_SESSION['rms_req_item'];
-    $sql2 = "SELECT plg_uuid, item_uuid, quantity AS plg_qty, status
-    FROM rms_plg_item
-    WHERE status IN ('delivered', 'confirmed')
-    AND (item_uuid IN (SELECT alternate FROM ims_alternate WHERE catalog_id = '{$itm}')
-        OR item_uuid IN (SELECT catalog_id FROM ims_alternate WHERE alternate = '{$itm}'))";
-    $rs2 = $global['db']->Execute($sql2);
-    if ($rs2 === false) {
-        $msg = $global['db']->ErrorMsg();
-        add_error($msg . ' <br> ' . $sql2);
-        display_errors();
-    } else {
-        $res_array = $rs2->GetArray();
-        $th_plg[] = array(_("Item"), _("Qty"), _("Used"), _('status'), '');
-        if ($rs2->RecordCount() > 0) {
-            foreach($res_array as $res) {
-                $sql3 = "SELECT SUM(quantity) AS ff_qty FROM rms_fulfil WHERE plg_uuid = '" . $res['plg_uuid'] . "' AND item_uuid = '" . $res['item_uuid'] . "' ";
-                $rs3 = $global['db']->Execute($sql3);
-                if ($rs3 === false) {
-                    $msg = $global['db']->ErrorMsg();
-                    add_error($msg . ' <br> ' . $sql2);
-                    display_errors();
-                } else {
-                    if ($rs3->RecordCount() > 0) {
-                        $max_qty = $res['plg_qty'] - $rs3->fields['ff_qty'];
-                        $used = $rs3->fields['ff_qty'];
-                    } else {
-                        $max_qty = $res['plg_qty'];
-                        $used = 0;
-                    }
-                    $sel_url = '<a href=index.php?mod=rms&amp;act=mng_ff&amp;seq=add_ff&amp;max_qty=' . $max_qty . '&amp;plg_id=' . $res['plg_uuid'] . '>' . _("Select") . '</a>';
-                    if ($max_qty > 0) {
-                        $tb_plg[] = array(_shn_rms_get_itemname($res['item_uuid']), $res['plg_qty'], $used, $res['status'], $sel_url);
-                    }
-                }
-            }
-            /**
-             * Display the list of pledges
-             */
-            print '<div class="info">';
-            print _("This shows the list of pledges that have the selected item, ");
-            print _("Please select a pledge from the request to be fulfilled.");
-            print '<br />';
-            print '</div>';
-            print '<br />';
-            shn_html_table($tb_plg, $th_plg, null, array('class' => 'wide'));
-        }
-    }
-    print '<br>';
-    print '<br>';
-    //**************************** Inventory Items ************************
-
 ?>
 <div id="result">
 
